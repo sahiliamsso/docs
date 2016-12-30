@@ -1,12 +1,12 @@
 site_name: Gluu Docs
-site_description: Documenation for Gluu Server
+site_description: Documenation for the Gluu Server
 site_favicon: '/img/gluu_favicon.ico'
 copyright: Copyright &copy; 2016, Gluu, Inc.
 docs_dir: source
 repo_url: https://github.com/GluuFederation/docs-3
 theme_dir: theme
-extra:
-    version: '3.0.0'
+extra:    
+    version: '3.0.0'    
     logo: 'gluu.jpg'
 markdown_extensions:
 - admonition
