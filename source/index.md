@@ -9,7 +9,7 @@ Organizations use the Gluu Server to achieve:
 - Strong authentication
 - Identity Federation
 
-The code is open source, and available on [Github](https://github.com/GluuFederation/docs-3).
+The code is open source, and available on [Github](https://github.com/GluuFederation/)
 
 # Client Software
 In order for an application to leverage the Gluu Server for authentication and authorization decisions it needs to support either the SAML or OpenID Connect federation standard. If the target application does not already support one of these standards, we highly recommend securing the application with [oxd](http://oxd.gluu.org), our OpenID Connect middleware software. oxd makes its easy to properly secure the sign-in flow for applications with OpenID Connect. 
