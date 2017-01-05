@@ -450,7 +450,7 @@ as a template. The [Wikid forms](https://github.com/GluuFederation/oxAuth/tree/m
 
 The [Wikid authentication](https://github.com/GluuFederation/oxAuth/blob/master/Server/integrations/wikid/WikidExternalAuthenticator.py) script was also looked upon quite a bit for examples on how to process the form.
 
-### Implement methods
+### Implement methods - Using Twilio SMS
 
 Simple example of how to add a custom template and how to pass values between 2 steps of authentication and save the value temporarily for authentication of a user. Our Sample 
 [Twilio script](./twilio2FA.py)
