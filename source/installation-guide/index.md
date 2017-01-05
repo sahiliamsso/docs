@@ -18,10 +18,6 @@ The following ports open for the Gluu Server to run. Please keep the ports open 
 |       80              |       tcp             |
 |       443             |       tcp             |
 
-## Tomcat Memory Heap
-
-The minimum recommended heap for tomcat server is 3GB for a test instance of Gluu Server Community Edition (CE). This estimate is based on the minumum RAM requirements. It is best to keep this ratio when tomcat memory is allocated in production environments as the size will depend on the available RAM; as an example, a 6GB tomcat memory heap in a production server with 8 GB ram is ideal for a small organization running Gluu CE.
-
 ## File Descriptor
 Gluu recommends setting the `file descriptors` to 65k for Gluu Server CE. The following steps will help set the `file descriptor` limit.
 
