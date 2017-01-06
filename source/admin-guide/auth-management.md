@@ -28,3 +28,4 @@ Gluu Server uses oxAuth as the first step of authentication in all kind of SSO p
 * Authentication mode: This mode defines the mode used for general authentication with Service Providers. The mode defined under this tab will not affect the users accessing the oxTrust administrator interface.
 * oxTrust authentication mode: This mode is used when the user is accessing the oxTrust administrator interface using the gluu server hostname.
 * Passport Support: This mode uses third-party authentication e.g. Google+, Twitter, Facebook to authenticate users in Gluu Server.
+* Custom Script Authenticaiton: This mode uses custom script and enabled in the oxTrust Admin UI.

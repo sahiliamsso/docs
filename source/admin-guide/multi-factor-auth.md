@@ -3,6 +3,43 @@ Using the  Gluu Server, you can define the business logic for complex multi-step
 
 A number of multi-factor authentication scripts are shipped in the Gluu Server by default, including support for FIDO U2F tokens, Gluu's free mobile two-factor application [Super Gluu](https://super.gluu.org), certificate authentication, and Duo Security. 
 
+## U2F
+This script enables multi-factor authentication with any FIDO U2F device. Learn more about the U2F standard [here](https://www.gluu.org/resources/documents/standards/fido-u2f/). For a list of U2F compliant devices for sale, [check Amazon](http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=U2F). 
+
+Some well known U2F device manufacturers include:  
+- [Yubico](https://www.yubico.com/)   
+- [HyperFIDO](http://hyperfido.com/)   
+- [Feitian Technologies](http://www.ftsafe.com/)    
+
+### Overview
+The script has the following properties
+
+|	Property	|	Description		|	Example	|
+|-----------------------|-------------------------------|---------------|
+|u2f_server_uri		|URL of the u2f server		|https://idp.gluu.info|
+|u2f_server_metadata_uri|URL of the u2f server metadata|https://idp.gluu.info|
+
+### Installation
+#### Configure oxTrust
+Follow the steps below to configure the [DUO][duo] module in the oxTrust Admin GUI.
+
+1. Go to Manage Custom Scripts
+![custom-script](../img/admin-guide/multi-factor/custom-script.png)
+
+2. Click on the Person Authentication tab
+![person-auth](../img/admin-guide/multi-factor/person-auth.png)
+
+3. Select the U2F script
+![u2f-script](../img/admin-guide/multi-factor/u2f-script.png)
+
+4. Enable the script by ticking the check box
+![enable](../img/admin-guide/enable.png)
+
+5. Click `Update`
+
+6. Change the `Default Authentication Method` to `u2f`
+![u2f](../img/admin-guide/multi-factor/u2f.png)
+
 ## DUO Security
 ### Overview
 There are a few properties in the [DUO][duo] Authentication Script.
@@ -47,44 +84,7 @@ Follow the steps below to configure the [DUO][duo] module in the oxTrust Admin G
 5. Change the dufault authenticaiont method to [DUO][duo]
 ![duo](../img/admin-guide/multi-factor/duo.png)
 
-## U2F
-This script enables multi-factor authentication with any FIDO U2F device. Learn more about the U2F standard [here](https://www.gluu.org/resources/documents/standards/fido-u2f/). For a list of U2F compliant devices for sale, [check Amazon](http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=U2F). 
-
-Some well known U2F device manufacturers include:  
-- [Yubico](https://www.yubico.com/)   
-- [HyperFIDO](http://hyperfido.com/)   
-- [Feitian Technologies](http://www.ftsafe.com/)    
-
-### Overview
-The script has the following properties
-
-|	Property	|	Description		|	Example	|
-|-----------------------|-------------------------------|---------------|
-|u2f_server_uri		|URL of the u2f server		|https://idp.gluu.info|
-|u2f_server_metadata_uri|URL of the u2f server metadata|https://idp.gluu.info|
-
-### Installation
-#### Configure oxTrust
-Follow the steps below to configure the [DUO][duo] module in the oxTrust Admin GUI.
-
-1. Go to Manage Custom Scripts
-![custom-script](../img/admin-guide/multi-factor/custom-script.png)
-
-2. Click on the Person Authentication tab
-![person-auth](../img/admin-guide/multi-factor/person-auth.png)
-
-3. Select the U2F script
-![u2f-script](../img/admin-guide/multi-factor/u2f-script.png)
-
-4. Enable the script by ticking the check box
-![enable](../img/admin-guide/enable.png)
-
-5. Click `Update`
-
-6. Change the `Default Authentication Method` to `u2f`
-![u2f](../img/admin-guide/multi-factor/u2f.png)
-
-## oxPush2
+## oxPush2 - Super Gluu Authenticaion
 #### Overview
 The script has the following properties
 
@@ -112,50 +112,6 @@ The script has the following properties
 
 6. Change the Authentication method to oxPush2
 ![oxpush2](../img/admin-guide/multi-factor/oxpush2.png)
-
-## Wikid Authentication
-### Overview
-The module has the following mandatory properties
-
-|	Peoperty	|	Description			|	Example		|
-|-----------------------|---------------------------------------|-----------------------|
-|wikid_server_host	|IP address of WIKID server		|192.168.1.1		|
-|wikid_server_port	|TCP port for WIKID serve		|[8388][default 8388]	|
-|wikid_cert_path	|Path to the PKCS12 certificate file	|/etc/certs/wikid.p12	|
-|wikid_cert_pass	|Passphrase for  PKCS12 file		|passphrase		|
-|wikid_ca_store_path	|[CA][ca] for WAS server certificate	|/etc/certs/CACertStore.dat|
-|wikid_ca_store_pass	|Passphrase to secure the CA store file	|passphrase		|
-|wikid_server_code	|Server domain 12 digit code		|135711131719		|
-
-### Installation
-### Configure CE Chroot
-The following libraries must be present in the `$TOMCAT_HOME/endorsed` folder.
-
-- https://www.wikidsystems.com/webdemo/wClient-3.5.0.jar
-- http://central.maven.org/maven2/org/jdom/jdom/1.1.3/jdom-1.1.3.jar
-- http://central.maven.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.jar
-- http://central.maven.org/maven2/com/thoughtworks/xstream/xstream/1.4.8/xstream-1.4.8.jar
-
-For more informatiaon about the wClient Library, please see [this page](https://www.wikidsystems.com/downloads/network-clients)
-
-### Token Client
-Wikid Authentication requires [token client](https://www.wikidsystems.com/downloads/token-clients). Please install and configure it for 
-first time use. The [demo](https://www.wikidsystems.com/demo) explains how to do that.
-
-### Configure oxTrust
-1. Go to `Manage Custom Scripts`
-![custom-script](../img/admin-guide/multi-factor/custom-script.png)
-
-2. Click on the `Add custom script configuration` button
-![add-script-button](../img/admin-guide/multi-factor/add-script-button.png)
-
-3. Fill up the form and add the [Wikid Authentication Script](https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/wikid/WikidExternalAuthenticator.py)
-
-4. Enable the script by ticking the check box
-![enable](../img/admin-guide/enable.png)
-
-5. Change the `Default Authentication Method` to `wikid`
-![wikid](../img/admin-guide/multi-factor/wikid.png)
 
 ## Certificate Authentication
 The image below contains the design diagram for this module.
@@ -398,7 +354,7 @@ If things go wrong, it can leave the sessions in your browser in a bad
 state. If things get really weird, remove the cookies in your browser
 for the hostname of your Gluu Server.
 
-## Twilio multi-factor Authentication - OTP using custom script
+## Twilio SMS Authentication - OTP using custom script
 
 ### Writing a Custom Authentication Script
 

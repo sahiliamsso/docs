@@ -2,8 +2,6 @@ Gluu Server supports Security Assertion Markup Language (SAML) and OpenID Connec
 
 ## SAML
 
-![image](https://www.oasis-open.org/committees/download.php/29723/draft-saml-logo-03.png)
-
 Security Assertion Markup Language (SAML) is an authentication and authorization protocol that defines the transaction process for XML-encoded assertions about authentication, authorization and attributes. The protocol is goverened by [Security Assertion Markup Language Core
 (SAML) V2.0](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf "SAML 2.0 Core"). The goal of this protocol is to exchange authentication and authorization data between Service Providers (SP) and the Identity Provider (IDP).
 Gluu Server supports both inbound and outbound flow of SAML transaction. The oxTrutst administrator interface makes it easy to use SAML.

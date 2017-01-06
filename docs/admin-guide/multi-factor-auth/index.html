@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>Multi-Factor Authentication - Gluu Docs</title>
+        <title>User Authentication - Gluu Docs</title>
       
 <link href="../../assets/stylesheets/font.css" rel="stylesheet">
       
@@ -95,7 +95,7 @@
             
           </span>
         
-        Multi-Factor Authentication
+        User Authentication
       </div>
     </div>
     <div class="button button-search" role="button" aria-label="Search">
@@ -222,8 +222,8 @@
       
         
   <li>
-    <a class="" title="Authentication Protocols" href="../auth-protocol/">
-      Authentication Protocols
+    <a class="" title="SSO Protocols" href="../auth-protocol/">
+      SSO Protocols
     </a>
     
   </li>
@@ -240,8 +240,8 @@
       
         
   <li>
-    <a class="current" title="Multi-Factor Authentication" href="./">
-      Multi-Factor Authentication
+    <a class="current" title="User Authentication" href="./">
+      User Authentication
     </a>
     
       
@@ -251,13 +251,32 @@
         <ul>
           
             <li class="anchor">
+              <a title="U2F" href="#u2f">
+                <b>U2F</b>
+              </a>
+            </li>
+            
+              <li class="anchor">
+              <a title="Overview" href="#overview">
+                  <font size=2><i>Overview</i></font>
+              </a>
+            </li>
+             
+              <li class="anchor">
+              <a title="Installation" href="#installation">
+                  <font size=2><i>Installation</i></font>
+              </a>
+            </li>
+             
+          
+            <li class="anchor">
               <a title="DUO Security" href="#duo-security">
                 <b>DUO Security</b>
               </a>
             </li>
             
               <li class="anchor">
-              <a title="Overview" href="#overview">
+              <a title="Overview" href="#overview_1">
                   <font size=2><i>Overview</i></font>
               </a>
             </li>
@@ -275,34 +294,15 @@
             </li>
              
               <li class="anchor">
-              <a title="Configure oxTrust" href="#configure-oxtrust">
+              <a title="Configure oxTrust" href="#configure-oxtrust_1">
                   <font size=2><i>Configure oxTrust</i></font>
               </a>
             </li>
              
           
             <li class="anchor">
-              <a title="U2F" href="#u2f">
-                <b>U2F</b>
-              </a>
-            </li>
-            
-              <li class="anchor">
-              <a title="Overview" href="#overview_1">
-                  <font size=2><i>Overview</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Installation" href="#installation">
-                  <font size=2><i>Installation</i></font>
-              </a>
-            </li>
-             
-          
-            <li class="anchor">
-              <a title="oxPush2" href="#oxpush2">
-                <b>oxPush2</b>
+              <a title="oxPush2 - Super Gluu Authenticaion" href="#oxpush2-super-gluu-authenticaion">
+                <b>oxPush2 - Super Gluu Authenticaion</b>
               </a>
             </li>
             
@@ -320,50 +320,13 @@
              
           
             <li class="anchor">
-              <a title="Wikid Authentication" href="#wikid-authentication">
-                <b>Wikid Authentication</b>
-              </a>
-            </li>
-            
-              <li class="anchor">
-              <a title="Overview" href="#overview_3">
-                  <font size=2><i>Overview</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Installation" href="#installation_1">
-                  <font size=2><i>Installation</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Configure CE Chroot" href="#configure-ce-chroot_1">
-                  <font size=2><i>Configure CE Chroot</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Token Client" href="#token-client">
-                  <font size=2><i>Token Client</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Configure oxTrust" href="#configure-oxtrust_3">
-                  <font size=2><i>Configure oxTrust</i></font>
-              </a>
-            </li>
-             
-          
-            <li class="anchor">
               <a title="Certificate Authentication" href="#certificate-authentication">
                 <b>Certificate Authentication</b>
               </a>
             </li>
             
               <li class="anchor">
-              <a title="Configure oxTrust" href="#configure-oxtrust_4">
+              <a title="Configure oxTrust" href="#configure-oxtrust_3">
                   <font size=2><i>Configure oxTrust</i></font>
               </a>
             </li>
@@ -376,7 +339,7 @@
             </li>
             
               <li class="anchor">
-              <a title="Configure oxTrust" href="#configure-oxtrust_5">
+              <a title="Configure oxTrust" href="#configure-oxtrust_4">
                   <font size=2><i>Configure oxTrust</i></font>
               </a>
             </li>
@@ -389,8 +352,8 @@
              
           
             <li class="anchor">
-              <a title="Twilio multi-factor Authentication - OTP using custom script" href="#twilio-multi-factor-authentication-otp-using-custom-script">
-                <b>Twilio multi-factor Authentication - OTP using custom script</b>
+              <a title="Twilio SMS Authentication - OTP using custom script" href="#twilio-sms-authentication-otp-using-custom-script">
+                <b>Twilio SMS Authentication - OTP using custom script</b>
               </a>
             </li>
             
@@ -625,8 +588,65 @@
           <h1 id="multi-factor-authentication">Multi Factor Authentication<a class="headerlink" href="#multi-factor-authentication" title="Permanent link">#</a></h1>
 <p>Using the  Gluu Server, you can define the business logic for complex multi-step authentication workflows, providing SSO for people using smart cards, tokens, mobile or biometric authentication mechanisms. You don't have to chose one multi-factor authentication technology. You can have multiple authentication mechanisms active at the same time--Web or mobile clients can request a certain authentication type by using standard OpenID Connect request parameters.</p>
 <p>A number of multi-factor authentication scripts are shipped in the Gluu Server by default, including support for FIDO U2F tokens, Gluu's free mobile two-factor application <a href="https://super.gluu.org">Super Gluu</a>, certificate authentication, and Duo Security. </p>
-<h2 id="duo-security">DUO Security<a class="headerlink" href="#duo-security" title="Permanent link">#</a></h2>
+<h2 id="u2f">U2F<a class="headerlink" href="#u2f" title="Permanent link">#</a></h2>
+<p>This script enables multi-factor authentication with any FIDO U2F device. Learn more about the U2F standard <a href="https://www.gluu.org/resources/documents/standards/fido-u2f/">here</a>. For a list of U2F compliant devices for sale, <a href="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords=U2F">check Amazon</a>. </p>
+<p>Some well known U2F device manufacturers include:<br />
+- <a href="https://www.yubico.com/">Yubico</a> <br />
+- <a href="http://hyperfido.com/">HyperFIDO</a> <br />
+- <a href="http://www.ftsafe.com/">Feitian Technologies</a>    </p>
 <h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h3>
+<p>The script has the following properties</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u2f_server_uri</td>
+<td>URL of the u2f server</td>
+<td>https://idp.gluu.info</td>
+</tr>
+<tr>
+<td>u2f_server_metadata_uri</td>
+<td>URL of the u2f server metadata</td>
+<td>https://idp.gluu.info</td>
+</tr>
+</tbody>
+</table>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h3>
+<h4 id="configure-oxtrust">Configure oxTrust<a class="headerlink" href="#configure-oxtrust" title="Permanent link">#</a></h4>
+<p>Follow the steps below to configure the [DUO][duo] module in the oxTrust Admin GUI.</p>
+<ol>
+<li>
+<p>Go to Manage Custom Scripts
+<img alt="custom-script" src="../../img/admin-guide/multi-factor/custom-script.png" /></p>
+</li>
+<li>
+<p>Click on the Person Authentication tab
+<img alt="person-auth" src="../../img/admin-guide/multi-factor/person-auth.png" /></p>
+</li>
+<li>
+<p>Select the U2F script
+<img alt="u2f-script" src="../../img/admin-guide/multi-factor/u2f-script.png" /></p>
+</li>
+<li>
+<p>Enable the script by ticking the check box
+<img alt="enable" src="../../img/admin-guide/enable.png" /></p>
+</li>
+<li>
+<p>Click <code>Update</code></p>
+</li>
+<li>
+<p>Change the <code>Default Authentication Method</code> to <code>u2f</code>
+<img alt="u2f" src="../../img/admin-guide/multi-factor/u2f.png" /></p>
+</li>
+</ol>
+<h2 id="duo-security">DUO Security<a class="headerlink" href="#duo-security" title="Permanent link">#</a></h2>
+<h3 id="overview_1">Overview<a class="headerlink" href="#overview_1" title="Permanent link">#</a></h3>
 <p>There are a few properties in the [DUO][duo] Authentication Script.</p>
 <table>
 <thead>
@@ -696,7 +716,7 @@
 <ol>
 <li>Prepare the DUO credential file <code>/etc/certs/duo_creds.json</code> with <strong>ikey, akey &amp; skey</strong></li>
 </ol>
-<h3 id="configure-oxtrust">Configure oxTrust<a class="headerlink" href="#configure-oxtrust" title="Permanent link">#</a></h3>
+<h3 id="configure-oxtrust_1">Configure oxTrust<a class="headerlink" href="#configure-oxtrust_1" title="Permanent link">#</a></h3>
 <p>Follow the steps below to configure the [DUO][duo] module in the oxTrust Admin GUI.</p>
 <ol>
 <li>
@@ -719,64 +739,7 @@
 <img alt="duo" src="../../img/admin-guide/multi-factor/duo.png" /></p>
 </li>
 </ol>
-<h2 id="u2f">U2F<a class="headerlink" href="#u2f" title="Permanent link">#</a></h2>
-<p>This script enables multi-factor authentication with any FIDO U2F device. Learn more about the U2F standard <a href="https://www.gluu.org/resources/documents/standards/fido-u2f/">here</a>. For a list of U2F compliant devices for sale, <a href="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords=U2F">check Amazon</a>. </p>
-<p>Some well known U2F device manufacturers include:<br />
-- <a href="https://www.yubico.com/">Yubico</a> <br />
-- <a href="http://hyperfido.com/">HyperFIDO</a> <br />
-- <a href="http://www.ftsafe.com/">Feitian Technologies</a>    </p>
-<h3 id="overview_1">Overview<a class="headerlink" href="#overview_1" title="Permanent link">#</a></h3>
-<p>The script has the following properties</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>u2f_server_uri</td>
-<td>URL of the u2f server</td>
-<td>https://idp.gluu.info</td>
-</tr>
-<tr>
-<td>u2f_server_metadata_uri</td>
-<td>URL of the u2f server metadata</td>
-<td>https://idp.gluu.info</td>
-</tr>
-</tbody>
-</table>
-<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h3>
-<h4 id="configure-oxtrust_1">Configure oxTrust<a class="headerlink" href="#configure-oxtrust_1" title="Permanent link">#</a></h4>
-<p>Follow the steps below to configure the [DUO][duo] module in the oxTrust Admin GUI.</p>
-<ol>
-<li>
-<p>Go to Manage Custom Scripts
-<img alt="custom-script" src="../../img/admin-guide/multi-factor/custom-script.png" /></p>
-</li>
-<li>
-<p>Click on the Person Authentication tab
-<img alt="person-auth" src="../../img/admin-guide/multi-factor/person-auth.png" /></p>
-</li>
-<li>
-<p>Select the U2F script
-<img alt="u2f-script" src="../../img/admin-guide/multi-factor/u2f-script.png" /></p>
-</li>
-<li>
-<p>Enable the script by ticking the check box
-<img alt="enable" src="../../img/admin-guide/enable.png" /></p>
-</li>
-<li>
-<p>Click <code>Update</code></p>
-</li>
-<li>
-<p>Change the <code>Default Authentication Method</code> to <code>u2f</code>
-<img alt="u2f" src="../../img/admin-guide/multi-factor/u2f.png" /></p>
-</li>
-</ol>
-<h2 id="oxpush2">oxPush2<a class="headerlink" href="#oxpush2" title="Permanent link">#</a></h2>
+<h2 id="oxpush2-super-gluu-authenticaion">oxPush2 - Super Gluu Authenticaion<a class="headerlink" href="#oxpush2-super-gluu-authenticaion" title="Permanent link">#</a></h2>
 <h4 id="overview_2">Overview<a class="headerlink" href="#overview_2" title="Permanent link">#</a></h4>
 <p>The script has the following properties</p>
 <table>
@@ -829,90 +792,6 @@
 <li>
 <p>Change the Authentication method to oxPush2
 <img alt="oxpush2" src="../../img/admin-guide/multi-factor/oxpush2.png" /></p>
-</li>
-</ol>
-<h2 id="wikid-authentication">Wikid Authentication<a class="headerlink" href="#wikid-authentication" title="Permanent link">#</a></h2>
-<h3 id="overview_3">Overview<a class="headerlink" href="#overview_3" title="Permanent link">#</a></h3>
-<p>The module has the following mandatory properties</p>
-<table>
-<thead>
-<tr>
-<th>Peoperty</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>wikid_server_host</td>
-<td>IP address of WIKID server</td>
-<td>192.168.1.1</td>
-</tr>
-<tr>
-<td>wikid_server_port</td>
-<td>TCP port for WIKID serve</td>
-<td>[8388][default 8388]</td>
-</tr>
-<tr>
-<td>wikid_cert_path</td>
-<td>Path to the PKCS12 certificate file</td>
-<td>/etc/certs/wikid.p12</td>
-</tr>
-<tr>
-<td>wikid_cert_pass</td>
-<td>Passphrase for  PKCS12 file</td>
-<td>passphrase</td>
-</tr>
-<tr>
-<td>wikid_ca_store_path</td>
-<td>[CA][ca] for WAS server certificate</td>
-<td>/etc/certs/CACertStore.dat</td>
-</tr>
-<tr>
-<td>wikid_ca_store_pass</td>
-<td>Passphrase to secure the CA store file</td>
-<td>passphrase</td>
-</tr>
-<tr>
-<td>wikid_server_code</td>
-<td>Server domain 12 digit code</td>
-<td>135711131719</td>
-</tr>
-</tbody>
-</table>
-<h3 id="installation_1">Installation<a class="headerlink" href="#installation_1" title="Permanent link">#</a></h3>
-<h3 id="configure-ce-chroot_1">Configure CE Chroot<a class="headerlink" href="#configure-ce-chroot_1" title="Permanent link">#</a></h3>
-<p>The following libraries must be present in the <code>$TOMCAT_HOME/endorsed</code> folder.</p>
-<ul>
-<li>https://www.wikidsystems.com/webdemo/wClient-3.5.0.jar</li>
-<li>http://central.maven.org/maven2/org/jdom/jdom/1.1.3/jdom-1.1.3.jar</li>
-<li>http://central.maven.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.jar</li>
-<li>http://central.maven.org/maven2/com/thoughtworks/xstream/xstream/1.4.8/xstream-1.4.8.jar</li>
-</ul>
-<p>For more informatiaon about the wClient Library, please see <a href="https://www.wikidsystems.com/downloads/network-clients">this page</a></p>
-<h3 id="token-client">Token Client<a class="headerlink" href="#token-client" title="Permanent link">#</a></h3>
-<p>Wikid Authentication requires <a href="https://www.wikidsystems.com/downloads/token-clients">token client</a>. Please install and configure it for 
-first time use. The <a href="https://www.wikidsystems.com/demo">demo</a> explains how to do that.</p>
-<h3 id="configure-oxtrust_3">Configure oxTrust<a class="headerlink" href="#configure-oxtrust_3" title="Permanent link">#</a></h3>
-<ol>
-<li>
-<p>Go to <code>Manage Custom Scripts</code>
-<img alt="custom-script" src="../../img/admin-guide/multi-factor/custom-script.png" /></p>
-</li>
-<li>
-<p>Click on the <code>Add custom script configuration</code> button
-<img alt="add-script-button" src="../../img/admin-guide/multi-factor/add-script-button.png" /></p>
-</li>
-<li>
-<p>Fill up the form and add the <a href="https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/wikid/WikidExternalAuthenticator.py">Wikid Authentication Script</a></p>
-</li>
-<li>
-<p>Enable the script by ticking the check box
-<img alt="enable" src="../../img/admin-guide/enable.png" /></p>
-</li>
-<li>
-<p>Change the <code>Default Authentication Method</code> to <code>wikid</code>
-<img alt="wikid" src="../../img/admin-guide/multi-factor/wikid.png" /></p>
 </li>
 </ol>
 <h2 id="certificate-authentication">Certificate Authentication<a class="headerlink" href="#certificate-authentication" title="Permanent link">#</a></h2>
@@ -973,7 +852,7 @@ first time use. The <a href="https://www.wikidsystems.com/demo">demo</a> explain
 </tr>
 </tbody>
 </table>
-<h3 id="configure-oxtrust_4">Configure oxTrust<a class="headerlink" href="#configure-oxtrust_4" title="Permanent link">#</a></h3>
+<h3 id="configure-oxtrust_3">Configure oxTrust<a class="headerlink" href="#configure-oxtrust_3" title="Permanent link">#</a></h3>
 <p>Follow the steps below to configure the certificate authentication in the oxTrust Admin GUI.</p>
 <ol>
 <li>
@@ -1048,7 +927,7 @@ valid credentials!):</p>
 <li>Click "Google+ API"</li>
 <li>Click "Enable API" button</li>
 </ul>
-<h3 id="configure-oxtrust_5">Configure oxTrust<a class="headerlink" href="#configure-oxtrust_5" title="Permanent link">#</a></h3>
+<h3 id="configure-oxtrust_4">Configure oxTrust<a class="headerlink" href="#configure-oxtrust_4" title="Permanent link">#</a></h3>
 <p>Follow the steps below to configure the certificate authentication in the oxTrust Admin GUI.</p>
 <ol>
 <li>
@@ -1181,7 +1060,7 @@ password authentication:</p>
 <p>If things go wrong, it can leave the sessions in your browser in a bad
 state. If things get really weird, remove the cookies in your browser
 for the hostname of your Gluu Server.</p>
-<h2 id="twilio-multi-factor-authentication-otp-using-custom-script">Twilio multi-factor Authentication - OTP using custom script<a class="headerlink" href="#twilio-multi-factor-authentication-otp-using-custom-script" title="Permanent link">#</a></h2>
+<h2 id="twilio-sms-authentication-otp-using-custom-script">Twilio SMS Authentication - OTP using custom script<a class="headerlink" href="#twilio-sms-authentication-otp-using-custom-script" title="Permanent link">#</a></h2>
 <h3 id="writing-a-custom-authentication-script">Writing a Custom Authentication Script<a class="headerlink" href="#writing-a-custom-authentication-script" title="Permanent link">#</a></h3>
 <p>In this document we walk through the steps of writing a script to implement OTP authentication using <a href="http://twilio.com">Twilio</a> to send an SMS code for a two-step out-of-band authentication mechanism.</p>
 <p>At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, you can review the completed Twilio custom authentication script <a href="../twilio2FA.py">here</a>. </p>
