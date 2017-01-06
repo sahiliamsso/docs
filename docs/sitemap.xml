@@ -157,6 +157,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>/integration/openidc-rp/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>

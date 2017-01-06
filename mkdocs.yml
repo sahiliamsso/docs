@@ -48,7 +48,7 @@ pages:
 - Integration Guide:
 #    - 'Integration in Gluu Server': 'integration/index.md'
     - 'SAML SP': 'integration/saml-sp.md'
-#    - 'OpenIDC RP': 'integration/openid.md'
+    - 'OpenIDC RP': 'integration/openidc-rp.md'
 #    - 'OXD OAuth2': 'integration/oauth2.md'
 #    - 'Google SSO': 'integration/google.md'
 #    - 'Office 365': 'integration/office.md'
