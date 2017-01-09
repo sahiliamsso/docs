@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>Google SSO - Gluu Docs</title>
+      
+<link href="../../assets/stylesheets/font.css" rel="stylesheet">
+      
+      
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="Gluu Docs">
+    <meta property="og:image" content="None/../../gluu.jpg">
+    <meta name="apple-mobile-web-app-title" content="Gluu Docs">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+      <link rel="apple-touch-icon" href="../../gluu.jpg">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-60feabe0e5.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-60feabe0e5.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-f58e216493.css">
+    
+    <link rel="stylesheet" href="../../assets/stylesheets/zenburn-28d5b94970.css">
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.lug.ustc.edu.cn/css?family=Noto Sans:400,700|Source+Code+Pro">
+      <style>
+        body, input {
+          font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Source Code Pro', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4a5cc7e01e.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class=" ">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                Integration Guide <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        Google SSO
+      </div>
+    </div>
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" placeholder="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+
+  
+  <a href="https://github.com/GluuFederation/docs-3" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="../../gluu.jpg">
+        </div>
+      
+      <div class="name">
+        <strong>Gluu Docs</strong><br>
+        version: 3.0.0
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      <ul class="repo">
+        
+        <li class="home">
+          <a href="/" title="Home">
+            <div class="home-image">
+            <i class="fa fa-home"></i> Doc Home</div>
+          </a>
+        </li>
+        
+        
+        
+        <li class="repo-download">
+          
+          <a href="https://github.com/GluuFederation/docs-3/archive/3.0.0.zip" target="_blank" title="Download" data-action="download">
+            <i class="icon icon-download"></i> Download
+          </a>
+        </li>
+        
+      </ul>
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="../..">
+      Home
+    </a>
+    
+  </li>
+                  
+          
+            
+  <li>
+    <span class="section">Installation Guide</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Preparing VM" href="../../installation-guide/">
+      Preparing VM
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Install Gluu Server" href="../../installation-guide/install/">
+      Install Gluu Server
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Setup Script Options" href="../../installation-guide/setup_py/">
+      Setup Script Options
+    </a>
+    
+  </li>
+                  
+      
+    </ul>
+  </li>
+                  
+          
+            
+  <li>
+    <span class="section">Administration Guide</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Gluu Server UI" href="../../admin-guide/oxtrust-ui/">
+      Gluu Server UI
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="SSO Protocols" href="../../admin-guide/auth-protocol/">
+      SSO Protocols
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Authentication Management" href="../../admin-guide/auth-management/">
+      Authentication Management
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="User Authentication" href="../../admin-guide/multi-factor-auth/">
+      User Authentication
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="User Management" href="../../admin-guide/user-group/">
+      User Management
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Log Management" href="../../admin-guide/logs/">
+      Log Management
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="OpenID Clients" href="../../admin-guide/clients/">
+      OpenID Clients
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="SAML SSO" href="../../admin-guide/saml/">
+      SAML SSO
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="OAuth2 Grants" href="../../admin-guide/oauth2/">
+      OAuth2 Grants
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="OpenID Connect" href="../../admin-guide/openid-connect/">
+      OpenID Connect
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="UMA" href="../../admin-guide/uma/">
+      UMA
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Attribute Management" href="../../admin-guide/attribute/">
+      Attribute Management
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="SCIM protected by UMA" href="../../admin-guide/scim-uma/">
+      SCIM protected by UMA
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Gluu Server APIs" href="../../admin-guide/api/">
+      Gluu Server APIs
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="SCIM API Configuration" href="../../admin-guide/scim/">
+      SCIM API Configuration
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Backup Gluu Server CE" href="../../admin-guide/backup/">
+      Backup Gluu Server CE
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Custom Script in Gluu CE" href="../../admin-guide/custom-script/">
+      Custom Script in Gluu CE
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Certificate Management" href="../../admin-guide/certificate/">
+      Certificate Management
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="FAQ & Troubleshooting" href="../../admin-guide/faq/">
+      FAQ & Troubleshooting
+    </a>
+    
+  </li>
+                  
+      
+    </ul>
+  </li>
+                  
+          
+            
+  <li>
+    <span class="section">Integration Guide</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="SAML SP" href="../saml-sp/">
+      SAML SP
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="OpenIDC RP" href="../openidc-rp/">
+      OpenIDC RP
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="OXD OAuth2" href="../oauth2/">
+      OXD OAuth2
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="current" title="Google SSO" href="./">
+      Google SSO
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Configuring Google Apps With Google Dashboard:" href="#configuring-google-apps-with-google-dashboard">
+                <b>Configuring Google Apps With Google Dashboard:</b>
+              </a>
+            </li>
+            
+          
+            <li class="anchor">
+              <a title="Configuration In Gluu Server:" href="#configuration-in-gluu-server">
+                <b>Configuration In Gluu Server:</b>
+              </a>
+            </li>
+            
+          
+        </ul>
+      
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Office 365" href="../office/">
+      Office 365
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Hobsons Education Sol" href="../hobsons/">
+      Hobsons Education Sol
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Salesforce" href="../salesforce/">
+      Salesforce
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Dropbox" href="../dropbox/">
+      Dropbox
+    </a>
+    
+  </li>
+                  
+      
+    </ul>
+  </li>
+                  
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="using-saml-to-get-sso-with-google-apps">Using SAML To Get SSO With Google Apps<a class="headerlink" href="#using-saml-to-get-sso-with-google-apps" title="Permanent link">#</a></h1>
+<p>Google Apps will work as a Service Provider (SP) and we need to
+"introduce" Gluu Server with Google Apps as Gluu Server so that it can
+work as an Identity Provider (IDP).</p>
+<p>NOTE: It is highly recommended to use Google staging apps setup before
+Google production migration. If you have any question or confusion,
+please feel free to let us know.</p>
+<p>We need to configure Google Apps and Gluu Server so that both parties
+can talk to each other.</p>
+<h2 id="configuring-google-apps-with-google-dashboard">Configuring Google Apps With Google Dashboard:<a class="headerlink" href="#configuring-google-apps-with-google-dashboard" title="Permanent link">#</a></h2>
+<ul>
+<li>Login to dashboard.</li>
+</ul>
+<p><img alt="Image" src="../../img/integration/admin_console.png" /></p>
+<ul>
+<li>
+<p>From the list of options choose the "Security" tab.</p>
+</li>
+<li>
+<p>A new page will open. Select <code>Set up single sign-on(SSO)</code> from the
+options.</p>
+</li>
+</ul>
+<p><img alt="Image" src="../../img/integration/security_setting.png" /></p>
+<ul>
+<li>Finally, the Single Sign-On setting page will appear. </li>
+</ul>
+<p><img alt="Image" src="../../img/integration/final_setup.png" /></p>
+<p>This page contains a number of selection, and entry fields.</p>
+<ul>
+<li>
+<p><strong>Setup SSO with third party Identity Provider</strong>: This
+     refers to your Gluu Server instance. Enable this box.</p>
+</li>
+<li>
+<p><strong>Sign-in Page URL</strong>: Enter the uri of the sign-in page, for
+     example <code>https://idp_hostname/idp/profile/SAML2/Redirect/SSO</code>.</p>
+</li>
+<li>
+<p><strong>Sign-out Page URL</strong>: Enter the uri of the logout page, for
+     example <code>https://idp_hostname/idp/logout.jsp</code>.</p>
+</li>
+<li>
+<p><strong>Change Password URL</strong>: The uri an user is redirected if he wants
+     to change his password. It is recommended that an organization 
+     provides such a link for its end users.</p>
+</li>
+<li>
+<p><strong>Verification certificate</strong>: Upload the SAML certificate of your
+     Gluu Server. The SAML certificates are available in the <code>/etc/certs</code> folder inside the Gluu Server <code>chroot</code> environment.</p>
+</li>
+<li>
+<p><strong>Use a domain specific issuer</strong>: Enable this box to use a
+     domain-specific issuer.</p>
+</li>
+<li>
+<p>Save your data using the <code>Save changes</code> button on the lower right
+     of the page.</p>
+</li>
+</ul>
+<p>If you want to know more about Google SSO,
+<a href="https://support.google.com/a/answer/60224?hl=en">this</a> helps you.</p>
+<h2 id="configuration-in-gluu-server">Configuration In Gluu Server:<a class="headerlink" href="#configuration-in-gluu-server" title="Permanent link">#</a></h2>
+<p>Now we need to create a Trust Relationship in Gluu Server. Trust
+Relationships are created so that the IdP can authorize/authenticate the
+user to the service provider (SP). In this specific case, the SP is
+Google Apps, and the protocol used is SAML.</p>
+<p>In order to create a Trust Relationship, we need to grab the metadata of
+Google Apps. This metadata can be collected from Google. It's generally
+specific to an organization account. The following is a template of the Google metadata.</p>
+<pre><code>&lt;EntityDescriptor entityID=&quot;google.com/a/domain.com&quot; xmlns=&quot;urn:oasis:names:tc:SAML:2.0:metadata&quot;&gt;
+&lt;SPSSODescriptor protocolSupportEnumeration=&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot;&gt;
+&lt;NameIDFormat&gt;urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified&lt;/NameIDFormat&gt;
+&lt;AssertionConsumerService index=&quot;1&quot; Binding=&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&quot;
+Location=&quot;https://www.google.com/a/domain.com/acs&quot; &gt;&lt;/AssertionConsumerService&gt;
+&lt;/SPSSODescriptor&gt;
+&lt;/EntityDescriptor&gt;
+</code></pre>
+
+<p>Got the metadata? Great, we are ready to move forward. </p>
+<ul>
+<li>
+<p>Create Trust Relationship for Google Apps: </p>
+</li>
+<li>
+<p>How to create a trust relationship can be found <a href="./outbound-saml.md#how-to-create-trust-relationship">here</a>. We need to follow the "File" method for Google Apps trust relationship.</p>
+<ul>
+<li>Required attributes: Generally a nameID attributes is required. <a href="https://gluu.org/docs/customize/attributes/#custom-nameid">Here</a> is how you can create custom nameID in Gluu Server. </li>
+<li>Relying Party Configuration: Yes, SAML2SSO should be configured. <ul>
+<li>includeAttributeStatement: check</li>
+<li>assertionLifetime: default </li>
+<li>assertionProxyCount: default</li>
+<li>signResponses: conditional</li>
+<li>signAssertions: never</li>
+<li>signRequests: conditional</li>
+<li>encryptAssertions: never</li>
+<li>encryptNameIds: never </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+          <aside class="copyright" role="note">
+           Built with 
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a> using
+            <a href="http://gitlab.testbird.io:8099/frontend/testbird-mkdocs-theme.git" target="_blank">
+              testBird-mkdocs-theme
+            </a> <br>
+            
+            Copyright &copy; 2016, Gluu, Inc.
+            
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../oauth2/" title="OXD OAuth2">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                OXD OAuth2
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../office/" title="Office 365">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Office 365
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-ce3999cf34.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    
+  </body>
+</html>
