@@ -594,7 +594,7 @@ Node-Passport server authenticates users for all the social networks like: googl
 
 Gluu server has only one interception script for all the social network providers which will call node js server for authenticating users to respective social network provider. The users will be added to Gluu server if the user does not present in the LDAP server of Gluu and if user does not exists then user will be added to server.
 
-### Sequence Diagram:
+### Sequence Diagram
 
 ![Sequence Diagram](../img/passport/sequence_diagram.png "Title")
 
@@ -605,12 +605,56 @@ Gluu server has only one interception script for all the social network provider
 5. After successful authentication of user, social network will callback Node-Passport server along with user details and access token.
 6. Node-Passport server will redirect user back to Gluu server with user details and access token.
 7. Gluu server’s interception script will check if the user exists in LDAP server and if user exists then user will be logged into the system and if not, then it will create new user with the required details and logs user into the system.
+### SETUP Passport.js with Gluu
 
+During installation of the Gluu Server select `yes` to install Passport.js when prompted.
+
+1. Click on Manage Custom Scripts under configuration tab on the main menu.
+2. Enable passport script in Person Authentication Tab.![Enable passport1](../img/passport/enable-passport.png)
+3. Click on update at the end of the page.![update](../img/passport/auth-update.png)
+4. Enable uma authorization policy in uma authorization policy tab.![uma-enable](../img/passport/uma-enable.png)
+5. Click on update.
+6. To set the strategies from Configuration > Manage Authentication > Default Authenticaion
+7. Under Default Authenticaion tab, change Authentication mode to passport
+8. Change passport support to enabled.![enable-authentication](../img/passport/enable-authentication.png)
+9. Once Passport support is enabled and updated, Passport Authentication Method will appear in the next tab.
+10. Click on the Passport Authenticaion Method, and set the strategies as follows,The values for Strategy field for common providers are:
+	- google for GPlus Authentication
+	- twitter for Twitter Authentication
+	- linkedin for LinkedIn Authentication
+	- github for Github Authentication
+	- facebook for Facebook Authentication
+11. And then add the strategy details like clientID and clientSecret.
+			clientID and clientSecret are details obtained from the provider, after the app is created in the provider form.![setting-strategies](../img/passport/setting-strategies.png)
+12. Once the configuration and settings are done, restart the passport service or Gluu Server.
+		a. Login to chroot
+		b. Enter below command to stop.
+		`service passport stop`
+		c. Below command to start.
+		`service passport start`
+
+!!! Warning
+	All the strategies name and Field name should follow the case. As these are case sensitive. ie. Google Strategy should have "google" as the strategy name and clientID should be small "c".
+	
+### How to create a new app to use for Passport server?
+
+Every provider has different protocols and ways to create the app. We will look at one of the most common providers "facebook" and create a new app.
+
+1. Login to https://developers.facebook.com
+2. Click on Add a new App from My Apps dropdown
+3. Fill the required details and click the create Create App ID button to create the app.
+4. Click on the dashboard menu and get the clientID and clientSecret which can be used with the passport.
+5. Click on settings menu and put the domain of your gluu server in the App Domains field.
+
+Note: If there is a filed for Authorized redirect URIs, make sure the Authorized redirect URIs list of your app contains the passport strategy's callback. If your gluu server points to https://example.gluu.org and the strategy is facebook, the list of Authorized redirect URIs should contain https://example.gluu.org/passport/auth/facebook/callback.
+Make sure the  Authorized redirect URIs list of your app contains the passport strategy's callback.
+If your gluu server points to https://example.gluu.org and the strategy is facebook, the list of Authorized redirect URIs should contain https://example.gluu.org/passport/auth/facebook/callback.
+ 
 ### INSTALLATION
 
-
-!!! Note:
-	This node installation is already taken when passport is selected during the installation of Gluu 3.0.0 CE Server.
+!!! note
+	The node installation is already installed when passport is selected during the installation of Gluu 3.0.0 CE Server.
+	
 Node-Passport server requires npm and NodeJS to be installed on the system.
 
 For installing node and npm please refer to [this guide](https://nodejs.org/en/download/package-manager/).
@@ -623,7 +667,7 @@ This will install all the dependencies of the server. To start the server move t
 
 `node app`
 
-### JWT:
+### JWT
 
 JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with HMAC algorithm) or a public/private key pair using RSA.
 
@@ -681,7 +725,7 @@ Let's start with an example. In this example we will consider adding facebook st
 5. Call method to configure the strategy
 6. Add button for the configured strategy in passport authentication UI.
 
-#### Configure the strategy.
+#### Configure the strategy
 
 All the strategies are been configured in the folder server/auth/*.js.
 We need to create new file named with the strategy name. Our strategy is facebook so we can create new file named facebook.js and configure the strategy.
@@ -818,63 +862,5 @@ router.get('/auth/facebook/:token',
 ```
 
 In order to call the Strategy, the request URL to call the API must match the route that we configured.
-
-### SETUP Passport.js with Gluu
-
-During installation of the Gluu Server select `yes` to install Passport.js when prompted.
-
-After Gluu Server installation, enable Passport.js by logging in to oxTrust and navigating to Configuration > Organization Configuration.
-
-Enable Passport.js support and click the update button to save the settings.
-
-Then go to Manage Custom Scripts and:
-
-    1. Enable passport script in Person Authentication Tab.
-	![Enable passport1](../img/passport/enable-passport.png)
-	2. Click on update at the end of the page.
-	![update](../img/passport/auth-update.png)
-    3. Enable uma authorization policy in uma authorization policy tab.
-	![uma-enable](../img/passport/uma-enable.png)
-	4. Click on update.
-	5. To set the strategies from Configuration > Manage Authentication > Default Authenticaion
-	6. Under Default Authenticaion tab, change Authentication mode to passport
-	7. Change passport support to enabled.
-	![enable-authentication](../img/passport/enable-authentication.png)
-	8. Once Passport support is enabled and updated, Passport Authentication Method will appear in the next tab.
-	9. Click on the Passport Authenticaion Method, and set the strategies as follows
-		The values for Strategy field for common providers are:
-			- google for GPlus Authentication
-			- twitter for Twitter Authentication
-			- linkedin for LinkedIn Authentication
-			- github for Github Authentication
-			- facebook for Facebook Authentication
-	10. And then add the strategy details like clientID and clientSecret.
-			clientID and clientSecret are details obtained from the provider, after the app is created in the provider form.
-			![setting-strategies](../img/passport/setting-strategies.png)
-!!!Warning:
-	All the strategies name and Field name should follow the case. As these are case sensitive. ie. Google Strategy should have "google" as the strategy name.
-		clientID should be small "c"
-		
-	11. Once the configuration and settings are done, restart the passport service or Gluu Server.
-		a. Login to chroot
-		b. Enter below command to stop.
-		`service passport stop`
-		c. Below command to start.
-		`service passport start`
-
-### How to create a new app to use for Passport server?
-
-Every provider has different protocols and ways to create the app. We will look at one of the most common providers "facebook" and create a new app.
-
-1. Login to https://developers.facebook.com
-2. Click on Add a new App from My Apps dropdown
-3. Fill the required details and click the create Create App ID button to create the app.
-4. Click on the dashboard menu and get the clientID and clientSecret which can be used with the passport.
-5. Click on settings menu and put the domain of your gluu server in the App Domains field.
-
-Note: If there is a filed for Authorized redirect URIs, make sure the Authorized redirect URIs list of your app contains the passport strategy's callback. If your gluu server points to https://example.gluu.org and the strategy is facebook, the list of Authorized redirect URIs should contain https://example.gluu.org/passport/auth/facebook/callback.
-Make sure the  Authorized redirect URIs list of your app contains the passport strategy's callback.
-If your gluu server points to https://example.gluu.org and the strategy is facebook, the list of Authorized redirect URIs should contain https://example.gluu.org/passport/auth/facebook/callback.
- 
 
 Please see the [FAQ](./faq.md) for details.

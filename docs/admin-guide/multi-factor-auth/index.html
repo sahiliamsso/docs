@@ -455,8 +455,20 @@
             </li>
              
               <li class="anchor">
-              <a title="Sequence Diagram:" href="#sequence-diagram">
-                  <font size=2><i>Sequence Diagram:</i></font>
+              <a title="Sequence Diagram" href="#sequence-diagram">
+                  <font size=2><i>Sequence Diagram</i></font>
+              </a>
+            </li>
+             
+              <li class="anchor">
+              <a title="SETUP Passport.js with Gluu" href="#setup-passportjs-with-gluu">
+                  <font size=2><i>SETUP Passport.js with Gluu</i></font>
+              </a>
+            </li>
+             
+              <li class="anchor">
+              <a title="How to create a new app to use for Passport server?" href="#how-to-create-a-new-app-to-use-for-passport-server">
+                  <font size=2><i>How to create a new app to use for Passport server?</i></font>
               </a>
             </li>
              
@@ -467,8 +479,8 @@
             </li>
              
               <li class="anchor">
-              <a title="JWT:" href="#jwt">
-                  <font size=2><i>JWT:</i></font>
+              <a title="JWT" href="#jwt">
+                  <font size=2><i>JWT</i></font>
               </a>
             </li>
              
@@ -499,18 +511,6 @@
               <li class="anchor">
               <a title="How to add new strategies to Passport server?" href="#how-to-add-new-strategies-to-passport-server">
                   <font size=2><i>How to add new strategies to Passport server?</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="SETUP Passport.js with Gluu" href="#setup-passportjs-with-gluu">
-                  <font size=2><i>SETUP Passport.js with Gluu</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="How to create a new app to use for Passport server?" href="#how-to-create-a-new-app-to-use-for-passport-server">
-                  <font size=2><i>How to create a new app to use for Passport server?</i></font>
               </a>
             </li>
              
@@ -1425,7 +1425,7 @@ method can be used to revert back the older authentication method. </p>
 <h3 id="specifications">SPECIFICATIONS<a class="headerlink" href="#specifications" title="Permanent link">#</a></h3>
 <p>Node-Passport server authenticates users for all the social networks like: google+, facebook, twitter etc. Node-Passport uses passport authentication middleware for social network authentication. All the node js api are secured with JWT(JSON Web Token) so that all the requests to node js server are authenticated and can be trusted by the application.</p>
 <p>Gluu server has only one interception script for all the social network providers which will call node js server for authenticating users to respective social network provider. The users will be added to Gluu server if the user does not present in the LDAP server of Gluu and if user does not exists then user will be added to server.</p>
-<h3 id="sequence-diagram">Sequence Diagram:<a class="headerlink" href="#sequence-diagram" title="Permanent link">#</a></h3>
+<h3 id="sequence-diagram">Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permanent link">#</a></h3>
 <p><img alt="Sequence Diagram" src="../../img/passport/sequence_diagram.png" title="Title" /></p>
 <ol>
 <li>Gluu server calls Node-Passport server for JWT token.</li>
@@ -1436,10 +1436,55 @@ method can be used to revert back the older authentication method. </p>
 <li>Node-Passport server will redirect user back to Gluu server with user details and access token.</li>
 <li>Gluu server’s interception script will check if the user exists in LDAP server and if user exists then user will be logged into the system and if not, then it will create new user with the required details and logs user into the system.</li>
 </ol>
+<h3 id="setup-passportjs-with-gluu">SETUP Passport.js with Gluu<a class="headerlink" href="#setup-passportjs-with-gluu" title="Permanent link">#</a></h3>
+<p>During installation of the Gluu Server select <code>yes</code> to install Passport.js when prompted.</p>
+<ol>
+<li>Click on Manage Custom Scripts under configuration tab on the main menu.</li>
+<li>Enable passport script in Person Authentication Tab.<img alt="Enable passport1" src="../../img/passport/enable-passport.png" /></li>
+<li>Click on update at the end of the page.<img alt="update" src="../../img/passport/auth-update.png" /></li>
+<li>Enable uma authorization policy in uma authorization policy tab.<img alt="uma-enable" src="../../img/passport/uma-enable.png" /></li>
+<li>Click on update.</li>
+<li>To set the strategies from Configuration &gt; Manage Authentication &gt; Default Authenticaion</li>
+<li>Under Default Authenticaion tab, change Authentication mode to passport</li>
+<li>Change passport support to enabled.<img alt="enable-authentication" src="../../img/passport/enable-authentication.png" /></li>
+<li>Once Passport support is enabled and updated, Passport Authentication Method will appear in the next tab.</li>
+<li>Click on the Passport Authenticaion Method, and set the strategies as follows,The values for Strategy field for common providers are:<ul>
+<li>google for GPlus Authentication</li>
+<li>twitter for Twitter Authentication</li>
+<li>linkedin for LinkedIn Authentication</li>
+<li>github for Github Authentication</li>
+<li>facebook for Facebook Authentication</li>
+</ul>
+</li>
+<li>And then add the strategy details like clientID and clientSecret.
+            clientID and clientSecret are details obtained from the provider, after the app is created in the provider form.<img alt="setting-strategies" src="../../img/passport/setting-strategies.png" /></li>
+<li>Once the configuration and settings are done, restart the passport service or Gluu Server.
+        a. Login to chroot
+        b. Enter below command to stop.
+        <code>service passport stop</code>
+        c. Below command to start.
+        <code>service passport start</code></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>All the strategies name and Field name should follow the case. As these are case sensitive. ie. Google Strategy should have "google" as the strategy name and clientID should be small "c".</p>
+</div>
+<h3 id="how-to-create-a-new-app-to-use-for-passport-server">How to create a new app to use for Passport server?<a class="headerlink" href="#how-to-create-a-new-app-to-use-for-passport-server" title="Permanent link">#</a></h3>
+<p>Every provider has different protocols and ways to create the app. We will look at one of the most common providers "facebook" and create a new app.</p>
+<ol>
+<li>Login to https://developers.facebook.com</li>
+<li>Click on Add a new App from My Apps dropdown</li>
+<li>Fill the required details and click the create Create App ID button to create the app.</li>
+<li>Click on the dashboard menu and get the clientID and clientSecret which can be used with the passport.</li>
+<li>Click on settings menu and put the domain of your gluu server in the App Domains field.</li>
+</ol>
+<p>Note: If there is a filed for Authorized redirect URIs, make sure the Authorized redirect URIs list of your app contains the passport strategy's callback. If your gluu server points to https://example.gluu.org and the strategy is facebook, the list of Authorized redirect URIs should contain https://example.gluu.org/passport/auth/facebook/callback.
+Make sure the  Authorized redirect URIs list of your app contains the passport strategy's callback.
+If your gluu server points to https://example.gluu.org and the strategy is facebook, the list of Authorized redirect URIs should contain https://example.gluu.org/passport/auth/facebook/callback.</p>
 <h3 id="installation_1">INSTALLATION<a class="headerlink" href="#installation_1" title="Permanent link">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This node installation is already taken when passport is selected during the installation of Gluu 3.0.0 CE Server.</p>
+<p>The node installation is already installed when passport is selected during the installation of Gluu 3.0.0 CE Server.</p>
 </div>
 <p>Node-Passport server requires npm and NodeJS to be installed on the system.</p>
 <p>For installing node and npm please refer to <a href="https://nodejs.org/en/download/package-manager/">this guide</a>.</p>
@@ -1447,7 +1492,7 @@ method can be used to revert back the older authentication method. </p>
 <p><code>npm install</code></p>
 <p>This will install all the dependencies of the server. To start the server move to the server directory and hit</p>
 <p><code>node app</code></p>
-<h3 id="jwt">JWT:<a class="headerlink" href="#jwt" title="Permanent link">#</a></h3>
+<h3 id="jwt">JWT<a class="headerlink" href="#jwt" title="Permanent link">#</a></h3>
 <p>JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with HMAC algorithm) or a public/private key pair using RSA.</p>
 <p>JSON Web Tokens consist of three parts separated by dots (.), which are:
 - Header
@@ -1481,7 +1526,7 @@ Let's start with an example. In this example we will consider adding facebook st
 <li>Call method to configure the strategy</li>
 <li>Add button for the configured strategy in passport authentication UI.</li>
 </ol>
-<h4 id="configure-the-strategy">Configure the strategy.<a class="headerlink" href="#configure-the-strategy" title="Permanent link">#</a></h4>
+<h4 id="configure-the-strategy">Configure the strategy<a class="headerlink" href="#configure-the-strategy" title="Permanent link">#</a></h4>
 <p>All the strategies are been configured in the folder server/auth/*.js.
 We need to create new file named with the strategy name. Our strategy is facebook so we can create new file named facebook.js and configure the strategy.</p>
 <pre><code class="javascript">var passport = require('passport');
@@ -1588,36 +1633,6 @@ router.get('/auth/facebook/:token',
 </code></pre>
 
 <p>In order to call the Strategy, the request URL to call the API must match the route that we configured.</p>
-<h3 id="setup-passportjs-with-gluu">SETUP Passport.js with Gluu<a class="headerlink" href="#setup-passportjs-with-gluu" title="Permanent link">#</a></h3>
-<p>During installation of the Gluu Server select <code>yes</code> to install Passport.js when prompted.</p>
-<p>After Gluu Server installation, enable Passport.js by logging in to oxTrust and navigating to Configuration &gt; Organization Configuration.</p>
-<p>Enable Passport.js support and click the update button to save the settings.</p>
-<p>Then go to Manage Custom Scripts and:</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>All the strategies name and Field name should follow the case. As these are case sensitive. ie. Google Strategy should have "google" as the strategy name.
-    clientID should be small "c"</p>
-<ol>
-<li>Once the configuration and settings are done, restart the passport service or Gluu Server.
-    a. Login to chroot
-    b. Enter below command to stop.
-    <code>service passport stop</code>
-    c. Below command to start.
-    <code>service passport start</code></li>
-</ol>
-</div>
-<h3 id="how-to-create-a-new-app-to-use-for-passport-server">How to create a new app to use for Passport server?<a class="headerlink" href="#how-to-create-a-new-app-to-use-for-passport-server" title="Permanent link">#</a></h3>
-<p>Every provider has different protocols and ways to create the app. We will look at one of the most common providers "facebook" and create a new app.</p>
-<ol>
-<li>Login to https://developers.facebook.com</li>
-<li>Click on Add a new App from My Apps dropdown</li>
-<li>Fill the required details and click the create Create App ID button to create the app.</li>
-<li>Click on the dashboard menu and get the clientID and clientSecret which can be used with the passport.</li>
-<li>Click on settings menu and put the domain of your gluu server in the App Domains field.</li>
-</ol>
-<p>Note: If there is a filed for Authorized redirect URIs, make sure the Authorized redirect URIs list of your app contains the passport strategy's callback. If your gluu server points to https://example.gluu.org and the strategy is facebook, the list of Authorized redirect URIs should contain https://example.gluu.org/passport/auth/facebook/callback.
-Make sure the  Authorized redirect URIs list of your app contains the passport strategy's callback.
-If your gluu server points to https://example.gluu.org and the strategy is facebook, the list of Authorized redirect URIs should contain https://example.gluu.org/passport/auth/facebook/callback.</p>
 <p>Please see the <a href="../faq/">FAQ</a> for details.</p>
           <aside class="copyright" role="note">
            Built with 
