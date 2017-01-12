@@ -26,7 +26,7 @@ pages:
     - 'Gluu Server UI' : 'admin-guide/oxtrust-ui.md'
     - 'SSO Protocols' : 'admin-guide/auth-protocol.md'
     - 'Authentication Management' : 'admin-guide/auth-management.md'
-    - 'User Authentication' : 'admin-guide/multi-factor-auth.md'
+    - 'User Authentication' : 'admin-guide/user-authentications.md'
     - 'User Management' : 'admin-guide/user-group.md'
     - 'Log Management' : 'admin-guide/logs.md'
 #    - 'Gluu for Mobile' : 'admin-guide/mobile.md'
