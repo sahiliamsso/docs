@@ -588,7 +588,7 @@ Passport is authentication middleware for Node.js. Extremely flexible and modula
 - To create Gluu server interception scripts for authentication of users which will consume Node-Passport server api.
 
 
-### SPECIFICATIONS
+### Specifications
 
 Node-Passport server authenticates users for all the social networks like: google+, facebook, twitter etc. Node-Passport uses passport authentication middleware for social network authentication. All the node js api are secured with JWT(JSON Web Token) so that all the requests to node js server are authenticated and can be trusted by the application.
 
