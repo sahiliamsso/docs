@@ -239,6 +239,48 @@
         
       
       
+        <ul>
+          
+            <li class="anchor">
+              <a title="New Component Changes in Gluu Server CE 3.0.0" href="#new-component-changes-in-gluu-server-ce-300">
+                <b>New Component Changes in Gluu Server CE 3.0.0</b>
+              </a>
+            </li>
+            
+          
+            <li class="anchor">
+              <a title="Tomcat Vs Jetty" href="#tomcat-vs-jetty">
+                <b>Tomcat Vs Jetty</b>
+              </a>
+            </li>
+            
+              <li class="anchor">
+              <a title="Matches Gluu's container strategy" href="#matches-gluus-container-strategy">
+                  <font size=2><i>Matches Gluu's container strategy</i></font>
+              </a>
+            </li>
+             
+              <li class="anchor">
+              <a title="Manage memory per app" href="#manage-memory-per-app">
+                  <font size=2><i>Manage memory per app</i></font>
+              </a>
+            </li>
+             
+              <li class="anchor">
+              <a title="Seperation of Logs" href="#seperation-of-logs">
+                  <font size=2><i>Seperation of Logs</i></font>
+              </a>
+            </li>
+             
+              <li class="anchor">
+              <a title="Seperation Network made easy" href="#seperation-network-made-easy">
+                  <font size=2><i>Seperation Network made easy</i></font>
+              </a>
+            </li>
+             
+          
+        </ul>
+      
     
   </li>
                   
@@ -593,12 +635,28 @@
           <h1 id="release-changes">Release Changes<a class="headerlink" href="#release-changes" title="Permanent link">#</a></h1>
 <p>This section of the document will discuss about the changes in the release and its features. </p>
 <p>Gluu Server 3.0.0 has built with few new components which wasn't in its predecessors. With these changes and new components Gluu Server 3.0.0 has significant changes in commands, logs and path to libraries and jar. All these changes will be described in the next few sections.</p>
-<h1 id="new-component-changes-in-gluu-server-ce-300">New Component Changes in Gluu Server CE 3.0.0<a class="headerlink" href="#new-component-changes-in-gluu-server-ce-300" title="Permanent link">#</a></h1>
+<h2 id="new-component-changes-in-gluu-server-ce-300">New Component Changes in Gluu Server CE 3.0.0<a class="headerlink" href="#new-component-changes-in-gluu-server-ce-300" title="Permanent link">#</a></h2>
 <ul>
 <li>Tomcat has been replaced with Jetty</li>
 <li>OpenDj is replaced with OpenLDAP</li>
 <li>Upgraded shibboleth IDP has been incorporated ad default outbound SAML service.</li>
 </ul>
+<h2 id="tomcat-vs-jetty">Tomcat Vs Jetty<a class="headerlink" href="#tomcat-vs-jetty" title="Permanent link">#</a></h2>
+<p>***Why Jetty over Tomcat as our application server?</p>
+<p>Here are the reason why we switched over to Jetty in place of Tomcat.</p>
+<h3 id="matches-gluus-container-strategy">Matches Gluu's container strategy<a class="headerlink" href="#matches-gluus-container-strategy" title="Permanent link">#</a></h3>
+<p>Jetty matches Gluu's container strategy lot more better than Tomcat, where each app which is incorporated (Identity,oxauth,Asimba, cas,passport, apache,etc) in Gluu can be deployed separately.</p>
+<p>By which its gives more leverage to work on each app exclusively and restart the particular app, rather than restarting the whole Gluu Server.</p>
+<h3 id="manage-memory-per-app">Manage memory per app<a class="headerlink" href="#manage-memory-per-app" title="Permanent link">#</a></h3>
+<p>Since we have separated the apps container, it becomes easier to manage memory per app and provide memory as per usage of the app.</p>
+<h3 id="seperation-of-logs">Seperation of Logs<a class="headerlink" href="#seperation-of-logs" title="Permanent link">#</a></h3>
+<p>Logs have segregated according to the apps in separate folder and this section has been discussedelaborately under <a href="../../admin-guide/logs/">logs management</a> section.</p>
+<h3 id="seperation-network-made-easy">Seperation Network made easy<a class="headerlink" href="#seperation-network-made-easy" title="Permanent link">#</a></h3>
+<ul>
+<li>oxTrust is internal facing, where admin and admin assigned users and internal users could use the login UI</li>
+<li>oxAuth is internet facing. OxAuth is used by external users and used while multi-factor authentication is used.</li>
+</ul>
+<h1 id="opendj-vs-openldap">OpenDj Vs OpenLDAP<a class="headerlink" href="#opendj-vs-openldap" title="Permanent link">#</a></h1>
 <p>This version of the Gluu Server, includes the following new features to enable more security in SSO.</p>
 <ul>
 <li>Passport.js authentication, this method has been discussed in detail in <a href="../../authn-guide/passport/">Passport</a> page</li>
