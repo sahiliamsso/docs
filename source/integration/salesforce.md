@@ -52,7 +52,7 @@ Further documentation is available at the Salesforce.com site.
 
 ## Prepare Gluu Server
 
-* How to create SAML trust relationship is available [here](../integrate/outbound-saml.md). 
+* How to create SAML trust relationship is available [here](../admin-guide/saml.md). 
 * Grab Salesforce.com metadata from the Salesforce.com website. There is
   an option named 'Download Metadata':
   * Modify Salesforce.com metadata a bit:

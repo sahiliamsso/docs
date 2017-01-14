@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>User Authentication - Gluu Docs</title>
+        <title>User Authentication Introduction - Gluu Docs</title>
       
 <link href="../../assets/stylesheets/font.css" rel="stylesheet">
       
@@ -90,12 +90,12 @@
           <span class="path">
             
               
-                Administration Guide <i class="icon icon-link"></i>
+                User Authentication Guide <i class="icon icon-link"></i>
               
             
           </span>
         
-        User Authentication
+        User Authentication Introduction
       </div>
     </div>
     <div class="button button-search" role="button" aria-label="Search">
@@ -238,285 +238,88 @@
   </li>
                   
       
+    </ul>
+  </li>
+                  
+          
+            
+  <li>
+    <span class="section">User Authentication Guide</span>
+    <ul>
+      
         
   <li>
-    <a class="current" title="User Authentication" href="./">
-      User Authentication
+    <a class="current" title="User Authentication Introduction" href="./">
+      User Authentication Introduction
     </a>
     
       
         
       
       
-        <ul>
-          
-            <li class="anchor">
-              <a title="U2F" href="#u2f">
-                <b>U2F</b>
-              </a>
-            </li>
-            
-              <li class="anchor">
-              <a title="Overview" href="#overview">
-                  <font size=2><i>Overview</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Installation" href="#installation">
-                  <font size=2><i>Installation</i></font>
-              </a>
-            </li>
-             
-          
-            <li class="anchor">
-              <a title="DUO Security" href="#duo-security">
-                <b>DUO Security</b>
-              </a>
-            </li>
-            
-              <li class="anchor">
-              <a title="Overview" href="#overview_1">
-                  <font size=2><i>Overview</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Configure DUO Account" href="#configure-duo-account">
-                  <font size=2><i>Configure DUO Account</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Configure CE Chroot" href="#configure-ce-chroot">
-                  <font size=2><i>Configure CE Chroot</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Configure oxTrust" href="#configure-oxtrust_1">
-                  <font size=2><i>Configure oxTrust</i></font>
-              </a>
-            </li>
-             
-          
-            <li class="anchor">
-              <a title="oxPush2 - Super Gluu Authenticaion" href="#oxpush2-super-gluu-authenticaion">
-                <b>oxPush2 - Super Gluu Authenticaion</b>
-              </a>
-            </li>
-            
-              <li class="anchor">
-              <a title="Overview" href="#overview_2">
-                  <font size=2><i>Overview</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Configure oxTrust" href="#configure-oxtrust_2">
-                  <font size=2><i>Configure oxTrust</i></font>
-              </a>
-            </li>
-             
-          
-            <li class="anchor">
-              <a title="Certificate Authentication" href="#certificate-authentication">
-                <b>Certificate Authentication</b>
-              </a>
-            </li>
-            
-              <li class="anchor">
-              <a title="Configure oxTrust" href="#configure-oxtrust_3">
-                  <font size=2><i>Configure oxTrust</i></font>
-              </a>
-            </li>
-             
-          
-            <li class="anchor">
-              <a title="Configure Google" href="#configure-google">
-                <b>Configure Google</b>
-              </a>
-            </li>
-            
-              <li class="anchor">
-              <a title="Configure oxTrust" href="#configure-oxtrust_4">
-                  <font size=2><i>Configure oxTrust</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Testing" href="#testing">
-                  <font size=2><i>Testing</i></font>
-              </a>
-            </li>
-             
-          
-            <li class="anchor">
-              <a title="Twilio SMS Authentication - OTP using custom script" href="#twilio-sms-authentication-otp-using-custom-script">
-                <b>Twilio SMS Authentication - OTP using custom script</b>
-              </a>
-            </li>
-            
-              <li class="anchor">
-              <a title="Writing a Custom Authentication Script" href="#writing-a-custom-authentication-script">
-                  <font size=2><i>Writing a Custom Authentication Script</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Custom Script Location" href="#custom-script-location">
-                  <font size=2><i>Custom Script Location</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Suggested Development Environment" href="#suggested-development-environment">
-                  <font size=2><i>Suggested Development Environment</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Samples and Documentation" href="#samples-and-documentation">
-                  <font size=2><i>Samples and Documentation</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Implement methods - Using Twilio SMS" href="#implement-methods-using-twilio-sms">
-                  <font size=2><i>Implement methods - Using Twilio SMS</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Methods" href="#methods">
-                  <font size=2><i>Methods</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Saving the value in LDAP and Passing values between two steps" href="#saving-the-value-in-ldap-and-passing-values-between-two-steps">
-                  <font size=2><i>Saving the value in LDAP and Passing values between two steps</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Custom Properties" href="#custom-properties">
-                  <font size=2><i>Custom Properties</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Returning a message to the user" href="#returning-a-message-to-the-user">
-                  <font size=2><i>Returning a message to the user</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Adding Libraries" href="#adding-libraries">
-                  <font size=2><i>Adding Libraries</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Testing" href="#testing_1">
-                  <font size=2><i>Testing</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Reverting Authentication Method" href="#reverting-authentication-method">
-                  <font size=2><i>Reverting Authentication Method</i></font>
-              </a>
-            </li>
-             
-          
-            <li class="anchor">
-              <a title="Passport.js Authentication" href="#passportjs-authentication">
-                <b>Passport.js Authentication</b>
-              </a>
-            </li>
-            
-              <li class="anchor">
-              <a title="Overview" href="#overview_3">
-                  <font size=2><i>Overview</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Why Passport.js Authenticaion" href="#why-passportjs-authenticaion">
-                  <font size=2><i>Why Passport.js Authenticaion</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Specifications" href="#specifications">
-                  <font size=2><i>Specifications</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Sequence Diagram" href="#sequence-diagram">
-                  <font size=2><i>Sequence Diagram</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="SETUP Passport.js with Gluu" href="#setup-passportjs-with-gluu">
-                  <font size=2><i>SETUP Passport.js with Gluu</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="How to create a new app to use for Passport server?" href="#how-to-create-a-new-app-to-use-for-passport-server">
-                  <font size=2><i>How to create a new app to use for Passport server?</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="INSTALLATION" href="#installation_1">
-                  <font size=2><i>INSTALLATION</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="JWT" href="#jwt">
-                  <font size=2><i>JWT</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Example of encoded and decoded JWT" href="#example-of-encoded-and-decoded-jwt">
-                  <font size=2><i>Example of encoded and decoded JWT</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="What data will be persist?" href="#what-data-will-be-persist">
-                  <font size=2><i>What data will be persist?</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="How Node-Passport server will fit in Gluu server?" href="#how-node-passport-server-will-fit-in-gluu-server">
-                  <font size=2><i>How Node-Passport server will fit in Gluu server?</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="How does Gluu server specify which passport strategy it wants?" href="#how-does-gluu-server-specify-which-passport-strategy-it-wants">
-                  <font size=2><i>How does Gluu server specify which passport strategy it wants?</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="How to add new strategies to Passport server?" href="#how-to-add-new-strategies-to-passport-server">
-                  <font size=2><i>How to add new strategies to Passport server?</i></font>
-              </a>
-            </li>
-             
-          
-        </ul>
+    
+  </li>
+                  
       
+        
+  <li>
+    <a class="" title="U2f" href="../../authn-guide/U2F/">
+      U2f
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="DUO" href="../../authn-guide/DUO/">
+      DUO
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="oxPush2-Super Gluu" href="../../authn-guide/supergluu/">
+      oxPush2-Super Gluu
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="cert" href="../../authn-guide/cert-auth/">
+      cert
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Google" href="../../authn-guide/google/">
+      Google
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Twilio SMS" href="../../authn-guide/twiliosms/">
+      Twilio SMS
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
+    <a class="" title="Passport" href="../../authn-guide/passport/">
+      Passport
+    </a>
     
   </li>
                   
@@ -751,888 +554,12 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="multi-factor-authentication">Multi Factor Authentication<a class="headerlink" href="#multi-factor-authentication" title="Permanent link">#</a></h1>
+          <h1 id="user-authentication-introduction">User Authentication Introduction<a class="headerlink" href="#user-authentication-introduction" title="Permanent link">#</a></h1>
 <p>Using the  Gluu Server, you can define the business logic for complex multi-step authentication workflows, providing SSO for people using smart cards, tokens, mobile or biometric authentication mechanisms. You don't have to chose one multi-factor authentication technology. You can have multiple authentication mechanisms active at the same time--Web or mobile clients can request a certain authentication type by using standard OpenID Connect request parameters.</p>
 <p>A number of multi-factor authentication scripts are shipped in the Gluu Server by default, including support for FIDO U2F tokens, Gluu's free mobile two-factor application <a href="https://super.gluu.org">Super Gluu</a>, certificate authentication, and Duo Security. </p>
-<h2 id="u2f">U2F<a class="headerlink" href="#u2f" title="Permanent link">#</a></h2>
-<p>This script enables multi-factor authentication with any FIDO U2F device. Learn more about the U2F standard <a href="https://www.gluu.org/resources/documents/standards/fido-u2f/">here</a>. For a list of U2F compliant devices for sale, <a href="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords=U2F">check Amazon</a>. </p>
-<p>Some well known U2F device manufacturers include:<br />
-- <a href="https://www.yubico.com/">Yubico</a> <br />
-- <a href="http://hyperfido.com/">HyperFIDO</a> <br />
-- <a href="http://www.ftsafe.com/">Feitian Technologies</a>    </p>
-<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h3>
-<p>The script has the following properties</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>u2f_server_uri</td>
-<td>URL of the u2f server</td>
-<td>https://idp.gluu.info</td>
-</tr>
-<tr>
-<td>u2f_server_metadata_uri</td>
-<td>URL of the u2f server metadata</td>
-<td>https://idp.gluu.info</td>
-</tr>
-</tbody>
-</table>
-<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h3>
-<h4 id="configure-oxtrust">Configure oxTrust<a class="headerlink" href="#configure-oxtrust" title="Permanent link">#</a></h4>
-<p>Follow the steps below to configure the [DUO][duo] module in the oxTrust Admin GUI.</p>
-<ol>
-<li>
-<p>Go to Manage Custom Scripts
-<img alt="custom-script" src="../../img/admin-guide/multi-factor/custom-script.png" /></p>
-</li>
-<li>
-<p>Click on the Person Authentication tab
-<img alt="person-auth" src="../../img/admin-guide/multi-factor/person-auth.png" /></p>
-</li>
-<li>
-<p>Select the U2F script
-<img alt="u2f-script" src="../../img/admin-guide/multi-factor/u2f-script.png" /></p>
-</li>
-<li>
-<p>Enable the script by ticking the check box
-<img alt="enable" src="../../img/admin-guide/enable.png" /></p>
-</li>
-<li>
-<p>Click <code>Update</code></p>
-</li>
-<li>
-<p>Change the <code>Default Authentication Method</code> to <code>u2f</code>
-<img alt="u2f" src="../../img/admin-guide/multi-factor/u2f.png" /></p>
-</li>
-</ol>
-<h2 id="duo-security">DUO Security<a class="headerlink" href="#duo-security" title="Permanent link">#</a></h2>
-<h3 id="overview_1">Overview<a class="headerlink" href="#overview_1" title="Permanent link">#</a></h3>
-<p>There are a few properties in the [DUO][duo] Authentication Script.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Status</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>duo_creds_file</td>
-<td>Mandatory</td>
-<td>Path to ikey, skey, akey</td>
-<td>/etc/certs/duo_creds.json</td>
-</tr>
-<tr>
-<td>duo_host</td>
-<td>Mandatory</td>
-<td>URL of the DUO API Server</td>
-<td>api-random.duosecurity.com</td>
-</tr>
-<tr>
-<td>audit_attribute</td>
-<td>Optional</td>
-<td>Attribute to determine user group</td>
-<td>memberOf</td>
-</tr>
-<tr>
-<td>duo_group</td>
-<td>Optional</td>
-<td>Attribute to enable DUO for specific user</td>
-<td>memberOf</td>
-</tr>
-<tr>
-<td>audit_group</td>
-<td>Optional</td>
-<td>Notify administrator via email upon user login</td>
-<td>memberOf</td>
-</tr>
-<tr>
-<td>audit_group_email</td>
-<td>Optional</td>
-<td>Administrator email</td>
-<td>admin@organization.com</td>
-</tr>
-</tbody>
-</table>
-<h3 id="configure-duo-account">Configure DUO Account<a class="headerlink" href="#configure-duo-account" title="Permanent link">#</a></h3>
-<ol>
-<li>
-<p>Sign up for a Duo account.</p>
-</li>
-<li>
-<p>Log in to the Duo Admin Panel and navigate to Applications.</p>
-</li>
-<li>
-<p>Click Protect an Application and locate Web SDK in the applications list. Click Protect this Application to get your integration key, secret key, and API hostname.</p>
-</li>
-<li>
-<p>Generate an <code>akey</code> value for your instance. <a href="https://duo.com/docs/duoweb#1.-generate-an-akey">Click here to know more </a></p>
-</li>
-</ol>
-<p>For additional info on Duo's Web SDK check <a href="https://duo.com/docs/duoweb">this atricle</a> </p>
-<h3 id="configure-ce-chroot">Configure CE Chroot<a class="headerlink" href="#configure-ce-chroot" title="Permanent link">#</a></h3>
-<ol>
-<li>Prepare the DUO credential file <code>/etc/certs/duo_creds.json</code> with <strong>ikey, akey &amp; skey</strong></li>
-</ol>
-<h3 id="configure-oxtrust_1">Configure oxTrust<a class="headerlink" href="#configure-oxtrust_1" title="Permanent link">#</a></h3>
-<p>Follow the steps below to configure the [DUO][duo] module in the oxTrust Admin GUI.</p>
-<ol>
-<li>
-<p>Go to Manage Custom Scripts<br/>
-<img alt="custom-script" src="../../img/admin-guide/multi-factor/custom-script.png" /></p>
-</li>
-<li>
-<p>Scroll down to [DUO][duo] authentication script<br/>
-<img alt="duo-script" src="../../img/admin-guide/multi-factor/duo-script.png" /></p>
-</li>
-<li>
-<p>Change the value of <code>duo_host</code> to your API</p>
-</li>
-<li>
-<p>Enable the script by ticking the check box
-<img alt="enable" src="../../img/admin-guide/enable.png" /></p>
-</li>
-<li>
-<p>Change the dufault authenticaiont method to [DUO][duo]
-<img alt="duo" src="../../img/admin-guide/multi-factor/duo.png" /></p>
-</li>
-</ol>
-<h2 id="oxpush2-super-gluu-authenticaion">oxPush2 - Super Gluu Authenticaion<a class="headerlink" href="#oxpush2-super-gluu-authenticaion" title="Permanent link">#</a></h2>
-<h4 id="overview_2">Overview<a class="headerlink" href="#overview_2" title="Permanent link">#</a></h4>
-<p>The script has the following properties</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>application_id</td>
-<td>URL of the identity server</td>
-<td>https://idp.gluu.info</td>
-</tr>
-<tr>
-<td>authentication_mode</td>
-<td>Determine factor of authentication</td>
-<td>two_step</td>
-</tr>
-<tr>
-<td>credentials_file</td>
-<td>JSON file for oxPush2</td>
-<td>/etc/certs/oxpush2_creds.json</td>
-</tr>
-</tbody>
-</table>
-<h3 id="configure-oxtrust_2">Configure oxTrust<a class="headerlink" href="#configure-oxtrust_2" title="Permanent link">#</a></h3>
-<ol>
-<li>
-<p>Go to Manage Custom Script
-<img alt="custom-script" src="../../img/admin-guide/multi-factor/custom-script.png" /></p>
-</li>
-<li>
-<p>Click on the Perosn Authentication tab
-<img alt="person-auth" src="../../img/admin-guide/multi-factor/person-auth.png" /></p>
-</li>
-<li>
-<p>Select the oxPush2 Script
-<img alt="oxpush2-script" src="../../img/admin-guide/multi-factor/oxpush2-script.png" /></p>
-</li>
-<li>
-<p>Enable the script by ticking the check box
-<img alt="enable" src="../../img/admin-guide/enable.png" /></p>
-</li>
-<li>
-<p>Click <code>Update</code></p>
-</li>
-<li>
-<p>Change the Authentication method to oxPush2
-<img alt="oxpush2" src="../../img/admin-guide/multi-factor/oxpush2.png" /></p>
-</li>
-</ol>
-<h2 id="certificate-authentication">Certificate Authentication<a class="headerlink" href="#certificate-authentication" title="Permanent link">#</a></h2>
-<p>The image below contains the design diagram for this module.</p>
-<p><img alt="cert-design" src="../../img/admin-guide/multi-factor/cert-design.jpg" /></p>
-<p>The script has a few properties:</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-<th>Allowed Values</th>
-<th>example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>chain_cert_file_path</td>
-<td>mandatory property pointing to certificate chains in [pem][pem] format</td>
-<td>file path</td>
-<td>/etc/certs/chain_cert.pem</td>
-</tr>
-<tr>
-<td>map_user_cert</td>
-<td>specifies if the script should map new user to local account</td>
-<td>true/false</td>
-<td>true</td>
-</tr>
-<tr>
-<td>use_generic_validator</td>
-<td>enable/disable specific certificate validation</td>
-<td>true/false</td>
-<td>false</td>
-</tr>
-<tr>
-<td>use_path_validator</td>
-<td>enable/disable specific certificate validation</td>
-<td>true/false</td>
-<td>true</td>
-</tr>
-<tr>
-<td>use_oscp_validator</td>
-<td>enable/disable specific certificate validation</td>
-<td>true/false</td>
-<td>false</td>
-</tr>
-<tr>
-<td>use_crl_validator</td>
-<td>enable/disable specific certificate validation</td>
-<td>true/false</td>
-<td>false</td>
-</tr>
-<tr>
-<td>crl_max_response_size</td>
-<td>specifies the maximum allowed size of [CRL][crl] response</td>
-<td>Integer &gt; 0</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<h3 id="configure-oxtrust_3">Configure oxTrust<a class="headerlink" href="#configure-oxtrust_3" title="Permanent link">#</a></h3>
-<p>Follow the steps below to configure the certificate authentication in the oxTrust Admin GUI.</p>
-<ol>
-<li>
-<p>Go to Manage Custom Scripts
-<img alt="custom-script" src="../../img/admin-guide/multi-factor/custom-script.png" /></p>
-</li>
-<li>
-<p>Click on the <code>Add Custom Scritp</code> button
-<a href="../../img/admin-guide/multi-factor/add-script-button.png">add-script-button</a></p>
-</li>
-<li>
-<p>Fill up the from and add the <a href="https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/cert/UserCertExternalAuthenticator.py">Certificate Authentication Script</a></p>
-</li>
-<li>
-<p>Enable the script by ticking the check box
-<a href="../../img/admin-guide/enable.png">enable</a></p>
-</li>
-<li>
-<p>Change the <code>Default Authentication Method</code> to <code>Cert</code>
-<img alt="cert" src="../../img/admin-guide/multi-factor/cert.png" /></p>
-</li>
-</ol>
-<h2 id="configure-google">Configure Google<a class="headerlink" href="#configure-google" title="Permanent link">#</a></h2>
-<p>In order to call Google API's, you need to register as a developer and
-create client credentials. Here are some
-<a href="https://developers.google.com/identity/protocols/OAuth2">instructions</a>
-for these steps.</p>
-<p>The first thing you'll need to do is Create a Project on Google to obtain
-client credentials. Click "Create project" and enter your desired
-project name.</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/01-create-project.png" /></p>
-<p>Then click on your newly created project from the listing on the
-dashboard, and under the Credentials section, create a new "OAuth2 2.0
-client ID". </p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/02-create-oauth2-creds.png" /></p>
-<p>Google will ask you to configure your consent screen, to add your logo
-and other information displayed to the user to authorize Google to
-release information.</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/03-create-oauth2-creds.png" /></p>
-<p>Fill out the form...</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/04-configure-authorization-page.png" /></p>
-<p>Now you're ready to create the credentials. Enter "Authorized JavaScript
-origins". It should be the uri of your Gluu Server--for example
-<code>https://idp.example.com</code>.</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/05-create-oauth2-creds.png" /></p>
-<p>Google will display the client-id and the according secret ... ignore
-it. Instead, download the JSON file which you are going to upload into
-your Gluu Server, next.</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/06-download_json.png" /></p>
-<p>Move this file to the location <code>/opt/tomcat/conf/google.json</code>. The JSON
-file will look something like this example (no... these data are not
-valid credentials!):</p>
-<pre><code>{
-  &quot;web&quot;: {
-    &quot;client_id&quot;: &quot;7a64e55f-724d4e8c91823d5f1f18a0b2.apps.googleusercontent.com&quot;,
-    &quot;auth_uri&quot;: &quot;https:\/\/accounts.google.com\/o\/oauth2\/auth&quot;,
-    &quot;token_uri&quot;: &quot;https:\/\/accounts.google.com\/o\/oauth2\/token&quot;,
-    &quot;auth_provider_x509_cert_url&quot;: &quot;https:\/\/www.googleapis.com\/oauth2\/v1\/certs&quot;,
-    &quot;client_secret&quot;: &quot;bb76a2c99be94e35b874&quot;,
-    &quot;javascript_origins&quot;: [
-    &quot;https:\/\/brookie.gluu.info&quot;
-    ]
-  }
-}
-</code></pre>
-
-<p>The last step is to enable Google+ API's:</p>
-<ul>
-<li>Navigate back to the Google API <a href="https://console.developers.google.com/project">console</a></li>
-<li>Select project and enter project name</li>
-<li>Open new project "API &amp; auth -&gt; API" menu item in configuration navigation tree</li>
-<li>Click "Google+ API"</li>
-<li>Click "Enable API" button</li>
-</ul>
-<h3 id="configure-oxtrust_4">Configure oxTrust<a class="headerlink" href="#configure-oxtrust_4" title="Permanent link">#</a></h3>
-<p>Follow the steps below to configure the certificate authentication in the oxTrust Admin GUI.</p>
-<ol>
-<li>
-<p>Go to Manage Custom Scripts
-<img alt="custom-script" src="../../img/admin-guide/multi-factor/custom-script.png" /></p>
-</li>
-<li>
-<p>Click on the <code>Add Custom Scritp</code> button
-<a href="../../img/admin-guide/multi-factor/add-script-button.png">add-script-button</a></p>
-</li>
-<li>
-<p>Fill up the form and add the <a href="https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/gplus/GooglePlusExternalAuthenticator.py">Google External Authenticator</a> Script.</p>
-</li>
-</ol>
-<p>You'll also need to add some custom properties:</p>
-<ul>
-<li><strong>gplus_client_secrets_file</strong>: <code>/opt/tomcat/conf/google.json</code></li>
-<li><strong>gplus_deployment_type</strong>: enroll</li>
-<li><strong>gplus_remote_attributes_list</strong>: email, given_name, family_name, and locale</li>
-<li>
-<p><strong>gplus_local_attributes_list</strong>: uid, mail, givenName, sn, cn, preferredLanguage</p>
-</li>
-<li>
-<p><strong>gplus_client_secrets_file</strong> - It is a mandatory property that holds
-   the path to the application configuration file downloaded from Google
-   console for application. An example is <code>/etc/certs/gplus_client_secrets.json</code>.
-   These are the single steps needed to get it:
-    a) Log into: <code>https://console.developers.google.com/project</code>
-    b) Click "Create project" and enter project name
-    c) Open new project "API &amp; auth -&gt; Credentials" menu item in configuration navigation tree
-    d) Click "Add credential" with type "OAuth 2.0 client ID"
-    e) Select "Web application" application type
-    f) Enter "Authorized JavaScript origins". It should be CE server DNS
-       name, for example <code>https://gluu.info</code>.
-    g) Click "Create" and Click "OK" in next dialog
-    h) Click "Download JSON" in order to download
-       <code>gplus_client_secrets.json</code> file.
-    Also it is mandatory to enable Google+ API:
-    a) Log into <code>https://console.developers.google.com/project</code>
-    b) Select project and enter project name
-    c) Open new project "API &amp; auth -&gt; API" menu item in configuration navigation tree
-    d) Click "Google+ API"
-    e) Click "Enable API" button</p>
-</li>
-<li>
-<p><strong>gplus_deployment_type</strong> - Specify the deployment mode. It is an
-optional property. If this property isn't specified the script tries to
-find the user in the local LDAP by 'subject_identifier' claim specified
-in id_token. If this property has a 'map' value the script allows to map
-'subject_identifier' to the local user account. If this property has an
-'enroll' value the script adds a new user to the local LDAP with status
-'active'. In order to map the IDP attributes to the local attributes it
-uses properties from both gplus_remote_attributes_list and
-gplus_local_attributes_list. The allowed values are map and enroll.</p>
-</li>
-<li>
-<p><strong>gplus_remote_attributes_list</strong> - Comma-separated list of attribute
-names (user claims) that Google+ returns which map to local attributes
-in the <code>gplus_local_attributes_list</code> property. It is mandatory only if
-<code>gplus_deployment_type</code> is set to 'enroll'.</p>
-</li>
-<li>
-<p><strong>gplus_local_attributes_list</strong> - Comma-separated list of Gluu Server
-LDAP attribute names that are mapped to Google user claims from the
-<code>gplus_remote_attributes_list</code> property. It is mandatory only if
-<code>gplus_deployment_type</code> is set to 'enroll'.</p>
-</li>
-<li>
-<p><strong>extension_module</strong> - Optional property to specify the full path of
-an external module that implements two methods:</p>
-</li>
-</ul>
-<pre><code class="python">    # This is called when the authentication script initializes
-    def init(conf_attr):
-        # Code here
-        return True/False
-
-    # This is called after authentication
-    def postLogin(conf_attr, user):
-        # Code here
-        return True    # or return False
-</code></pre>
-
-<ol>
-<li><strong>gplus_client_configuration_attribute</strong> - Optional property to
-specify the client entry attribute name which can override
-<code>gplus_client_secrets_file file</code> content. It can be used in cases when
-all clients should use a separate <code>gplus_client_secrets.json</code>
-configuration.</li>
-</ol>
-<h3 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">#</a></h3>
-<p>One simple way to test the configuration is to use oxTrust. In the
-"Configure Authentication" dropdown menu, select "Google" (or whatever
-you entered as the "Name" of the custom authentication script--as the
-default authentication method.</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/08-select_default_authentication.png" /></p>
-<p>After you login and logout, you should be presented with a new login
-form that has the Google login button:</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/09-google-authentication-button.png" /></p>
-<p>After clicking the Google login button, you are presented for
-authorization--Google needs to make sure its ok to release attributes to
-the Gluu Server:</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/10-google-authorization.png" /></p>
-<p>If the script doesn't work, and you locked yourself out of oxTrust,
-don't worry! You can create an LDIF file, for example <code>revert.ldif</code>, to
-set back the default authentication method, like this:</p>
-<pre><code>dn: inum=@!1E3B.F133.14FA.5062!0002!4B66.CF9C,ou=appliances,o=gluu
-changetype: modify
-replace: oxAuthenticationMode
-oxAuthenticationMode: internal
-</code></pre>
-
-<p>oxAuthenticationMode corresponds to the 'Name' of the customer
-authentication script in oxTrust. Use <code>internal</code> to revert to the
-default LDAP authentication. You'll have to change the <code>inum</code> with the
-<code>inum</code> of your installation. You can find it using ldapsearch like this:</p>
-<pre><code>/opt/opendj/bin/ldapsearch -h localhost -p 1389 -D &quot;cn=directory manager&quot; -j ~/.pw -b &quot;ou=appliances,o=gluu&quot; -s one &quot;objectclass=*&quot; inum
-</code></pre>
-
-<p><code>~/.pw</code> is a file with your Directory Manager password. If you don't
-remember it, try to find it using <code>grep</code>: </p>
-<pre><code>grep ldapPass= /install/community-edition-setup/setup.properties.last
-</code></pre>
-
-<p>Once your LDIF looks ok, then use <code>ldapmodify</code> to revert back to
-password authentication:</p>
-<pre><code>/opt/opendj/bin/ldapmodify -h localhost -p 1389 -D &quot;cn=directory manager&quot; -j ~/.pw -f revert.ldif
-</code></pre>
-
-<p>If things go wrong, it can leave the sessions in your browser in a bad
-state. If things get really weird, remove the cookies in your browser
-for the hostname of your Gluu Server.</p>
-<h2 id="twilio-sms-authentication-otp-using-custom-script">Twilio SMS Authentication - OTP using custom script<a class="headerlink" href="#twilio-sms-authentication-otp-using-custom-script" title="Permanent link">#</a></h2>
-<h3 id="writing-a-custom-authentication-script">Writing a Custom Authentication Script<a class="headerlink" href="#writing-a-custom-authentication-script" title="Permanent link">#</a></h3>
-<p>In this document we walk through the steps of writing a script to implement OTP authentication using <a href="http://twilio.com">Twilio</a> to send an SMS code for a two-step out-of-band authentication mechanism.</p>
-<p>At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, you can review the completed Twilio custom authentication script <a href="../twilio2FA.py">here</a>. </p>
-<p>Fields in Custom Script:</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Name</td>
-<td align="left">Name of the Script</td>
-</tr>
-<tr>
-<td>Description</td>
-<td align="left">[optional] Description about the script</td>
-</tr>
-<tr>
-<td>Programming Language</td>
-<td align="left">Currently Python is supported, In future jscript and Java script might be added</td>
-</tr>
-<tr>
-<td>Level</td>
-<td align="left">Authentication Level for the authentication, which determines the security level</td>
-</tr>
-<tr>
-<td>Location Type</td>
-<td align="left">Determines the script location. Can be stored in a "File" or could be stored in "LDAP"</td>
-</tr>
-<tr>
-<td>Usage Type</td>
-<td align="left">Determines the type of the usage. Web, Native or Both</td>
-</tr>
-<tr>
-<td>Custome Property</td>
-<td align="left">Determines the key and value of the custom property, which can added to the authentication to pass the values</td>
-</tr>
-<tr>
-<td>Script Box</td>
-<td align="left">Script Box will displayed if Location Type is selected as "File", to enter the path of the script</td>
-</tr>
-<tr>
-<td>Script</td>
-<td align="left">Script Box will be displayed when Location Type is selected as "LDAP"</td>
-</tr>
-</tbody>
-</table>
-<h3 id="custom-script-location">Custom Script Location<a class="headerlink" href="#custom-script-location" title="Permanent link">#</a></h3>
-<p>Custom scripts can either be inserted directly into the Gluu Server interface or you can specify a path to the script. Specifying a path will make script development easier. There is also an option to revert back to a working script if the script is faulty or needs further enhancements. The administrator can select <code>File</code> from the Script Location Type in oxTrust and the file input box will be displayed:</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/script_upload_box.png" /></p>
-<p>The 'LDAP' option in the Script Location Type can be used to store the script in the LDAP tree once the development is complete. Remember that selecting the <code>LDAP</code> method requires the script to be copied in the input box that appears upon LDAP selection:</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/script_in_ldap.png" /></p>
-<h3 id="suggested-development-environment">Suggested Development Environment<a class="headerlink" href="#suggested-development-environment" title="Permanent link">#</a></h3>
-<p>Gluu Server custom scripts are written in <a href="http://www.jython.org/">Jython</a>. It is recommended to use Eclipse for coding purposes.</p>
-<p>Now, create some files:
-- A Python file for your script
-- One or more XHTML files if you have a custom form for your authentication
-- One or more XML files (you'll need one for each XHTML file) that provide some information to the Tomcat server about how to display the XHTML file.</p>
-<h3 id="samples-and-documentation">Samples and Documentation<a class="headerlink" href="#samples-and-documentation" title="Permanent link">#</a></h3>
-<p>There are many good examples of authentication interception scripts checked into Gluu's<br />
-<a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations">oxAuth integrations folder</a>. Also, the respective <code>XHTML</code> and <code>XML</code> files are checked in to the <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth">auth folder</a>.
-The interfaces for the authentication interception can be found in the <a href="http://www.gluu.org/docs/reference/interception-scripts/#authentication">Gluu Documentation</a>.</p>
-<p>We used the <a href="https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/basic/BasicExternalAuthenticator.py">Basic Script</a> 
-as a template. The <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth/wikid">Wikid forms</a> were also used as a template since it is required to pass the value of the "code" obtained from Twilio to step 2 of the authentication in order to validate and authenticate the user.</p>
-<p>The <a href="https://github.com/GluuFederation/oxAuth/blob/master/Server/integrations/wikid/WikidExternalAuthenticator.py">Wikid authentication</a> script was also looked upon quite a bit for examples on how to process the form.</p>
-<h3 id="implement-methods-using-twilio-sms">Implement methods - Using Twilio SMS<a class="headerlink" href="#implement-methods-using-twilio-sms" title="Permanent link">#</a></h3>
-<p>Simple example of how to add a custom template and how to pass values between 2 steps of authentication and save the value temporarily for authentication of a user. Our Sample 
-<a href="../twilio2FA.py">Twilio script</a></p>
-<ol>
-<li>Login to Gluu UI</li>
-<li>Navigate to "Configuration" on the Menu panel to the left</li>
-<li>Select Manage Custom Scripts</li>
-<li>Scroll to the end of the page and click on "Add custom script configuration"</li>
-<li>Enter the Name, Description, Programming Language (Python will be by default, may be in future Java or JavaSCript will be added)</li>
-<li>Select the Level needed to set the security level to.</li>
-<li>Select Location Type from the script to be executed.</li>
-<li>Select the Usage Type required for the authentication.</li>
-<li>Define Custom property which is provided by Twilio and can be noted down from Twilio account page of the signed up user. </li>
-<li>Click on Enabled to enable the added custom script.</li>
-<li>Scroll down to the end of the update and click on Update button to submit the form. </li>
-<li>After the custom script is added, click on Manage Authenticaion on the Menu Panel to left. </li>
-<li>Select "Default Authentication Method" tab and change the oxTrust authentication mode to "Twilio" or "Name of the script" from the drop down.</li>
-</ol>
-<p><strong>Note: All three below custom properties are mandatory for the Twilio Two-Factor Authentication script to work</strong></p>
-<ul>
-<li>ACCOUNT_SID - Numerical sequence of numbers, to identify the token assigned to the user associated with Twilio.</li>
-<li>AUTH TOKEN  - Alphanumerical number provided by Twilio for the account holder to identify the user.</li>
-<li>FROM_NUMBER - Number which is either assigned by Twilio or can be a number user provides to send the code from.</li>
-</ul>
-<p>As shown in the below illustration:</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/twilio.png" /></p>
-<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
-<p><strong>authenticate():</strong></p>
-<p>The most important method to implement is obviously the <code>authenticate</code> method. This is where the main business logic is located for
-the authentication workflow. It is possible to switch on the step, with the <code>if (step == 1):</code> statement. In oxAuth, there is no
-assumption that step 1 and step 2 happen on the same server, therefore the value stored in the LDAP using a temporarily created attribute and retrieved in step 2. There the step is sent into the <code>authenticate</code> method, which helps to save and retrieve the values whereever required.</p>
-<p>Below are few Methods and Libraries used to Save the Value to LDAP and retrieve the values as per the requirement.</p>
-<p><strong>random.randit()</strong> 
-random.randit("start number",""end number"), Generates the code as per designer or requirements. 
-Example: random.randit(10000,99999)</p>
-<p><strong>context.set()</strong>
-This particular method is obtained from jboss to pass the session attribute value to ldap, by creating a temporary attribute which has limited life time and can be retrieved within the life span, expires and session becomes invalid. Save the value of the code obtained through the code generator method. context.set("Name of the temp attribute", <code>&lt;key&gt;</code>). Where <code>&lt;key&gt;</code> is the value that needs to be stored temporarily in ldap.
-Example:
-context.set("code",code)</p>
-<p><strong>UserService.instance()</strong> 
-Gets the user login instance</p>
-<p><strong>ServerUtil.getFirstValue():</strong></p>
-<p>To access  information from requestParameters in your script with <code>ServerUtil.getFirstValue(requestParameters, &lt;key&gt;)</code> where <code>&lt;key&gt;</code>
-specifies the value you want to retrieve, you can also use another method <code>requestParameters.get("&lt;key&gt;")</code>
-where <code>&lt;key&gt;</code> specifies the value you want to retrieve .</p>
-<p><strong>userService.getUserByAttribute():</strong></p>
-<p><code>getUserByAttribute("LDAP Attribute", &lt;key&gt;)</code> method access the information in LDAP and retrieves the value of the attribute comparing the value of the <code>&lt;Key&gt;</code>.
-Example:
-userService.getUserByAttribute("uid", user_name)</p>
-<p><strong>getAttribute():</strong>
-To retrieve the value of an attribute from LDAP, getAttribute("LDAP Attribute name") can be used. 
-Example:
-getAttribute("mobile")</p>
-<p><strong>requestParameters.get():</strong>
-To retrieve values passed from the form through header can be obtained by using the method requestParameters.get(<code>&lt;key&gt;</code>). This will retrieve the values from the form via header and can be stored in a string. Where <code>&lt;key&gt;</code> is the value to be retrieved from header.
-Example:
-abc = requestParameters.get("passcode")[0].strip()</p>
-<p><strong>getCountAuthenticationSteps():</strong></p>
-<p>Another method usually needed to implement is <code>getCountAuthenticationSteps</code>. This method normally just returns 1, 2, or 3. If implementing an adaptive authentication strategy,
-where the number of steps depends on the context. Check out the
-Duo script for a good example of this. In our sample 
-<a href="../DuoExternalAuthenticator.py">Duo script</a>,</p>
-<p>Duo Script was scripted only for those who wanted to use Duo
-for the IT group. So this was checked for group membership, and dynamically adjusted the number of steps. And this can be scripted for any logic or attribute to the check the authentication, like "country" or "region".</p>
-<p><strong>getExtraParametersForStep():</strong></p>
-<p>If required to save session variables between steps, use the <code>getExtraParametersForStep</code> method. The Gluu Server persists
-these variables in LDAP in able to support stateless clustered two
-step authentications.</p>
-<p><strong>getPageForStep():</strong></p>
-<p>If required to display a special Web page for an interactive
-login, (or even a custom first page) you'll need to implement the
-<code>getPageForStep</code> which specifies the page you want to return for a given
-step.</p>
-<p><strong>session_attributes.get():</strong>
-The attribute value that are saved by the session using context.set. This method is derived from the oxauth core java libraries and called using the SessionState parameters which is defined in the code or programme.
-session_attributes.get(<code>&lt;key&gt;</code>), where <code>&lt;key&gt;</code> is the session atribute value that is stored in the ldap.
-Example:
-session_attributes.get("code")</p>
-<h3 id="saving-the-value-in-ldap-and-passing-values-between-two-steps">Saving the value in LDAP and Passing values between two steps<a class="headerlink" href="#saving-the-value-in-ldap-and-passing-values-between-two-steps" title="Permanent link">#</a></h3>
-<h4 id="saving-values">Saving Values:<a class="headerlink" href="#saving-values" title="Permanent link">#</a></h4>
-<p><strong>context.set</strong> can be used to save values of the required key to an attribute temporarily and the created temporary attribute will be alive only for limited time and expires and gets removed, by that way, adding new attribute to the user is not messed up. And also the expired attribute kills the validity of the session and becomes invalid.</p>
-<h4 id="retriving-and-passing-values-between-the-authentication-steps">Retriving and passing values between the authentication steps:<a class="headerlink" href="#retriving-and-passing-values-between-the-authentication-steps" title="Permanent link">#</a></h4>
-<p>Using <strong>session_attribute.get()</strong> method, stored session attribute could be retrieved anywhere between the authentication method, by that way the values can be passed between two authentication methods for verification and validation.
-Generated code and the entered "code" in the form can be verified using a simple if and the "code" from the form can be obtained using the requestParameters.get() method or serviceUtil.getFirstValue() method.</p>
-<h3 id="custom-properties">Custom Properties<a class="headerlink" href="#custom-properties" title="Permanent link">#</a></h3>
-<p>Sometimes it is helpful to enable system administrators to
-enter properties that might change a lot. If administrators are
-not allowed to modify the script, Custom Property feature can be used, as illustrated in below screenshot:</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/07-custom-properties.jpg" /></p>
-<p>configurationAttributes.get("<key>").getValue2"():</p>
-<p>To access this information in your script with 
-<code>configurationAttributes.get("&lt;key&gt;").getValue2()</code>
-where <code>&lt;key&gt;</code> specifies the value you want to retrieve.</p>
-<h3 id="returning-a-message-to-the-user">Returning a message to the user<a class="headerlink" href="#returning-a-message-to-the-user" title="Permanent link">#</a></h3>
-<p>It is possible to use the Context to return a message to the
-user, which could be especially useful if an error occurs, or if
-required to have some kind of user action.</p>
-<h3 id="adding-libraries">Adding Libraries<a class="headerlink" href="#adding-libraries" title="Permanent link">#</a></h3>
-<p>Pure Python libraries, can be added to <code>/opt/tomcat/conf/python</code>, jar files can be added to <code>/var/gluu/webapps/oxauth/libs</code>.</p>
-<p><strong>Note:</strong> jar files should be added within chroot. And not in the main <code>/var/</code> of the system.</p>
-<h3 id="testing_1">Testing<a class="headerlink" href="#testing_1" title="Permanent link">#</a></h3>
-<p>When the scripting is done, you can test the script by print
-the statments to wrapper.log under <code>/opt/tomcat/logs/wrapper.log</code>. </p>
-<p>And by prefix the logs, will help to find the script at ease
-using tail command <code>tail -f | grep &lt;prefix&gt;</code>, the prefix logs will
-provide the script output while one trys to login using the script.</p>
-<p>In the Twilio test script, a specific method called
-<code>printOut</code> has been scripted to make it easier to add this prefix.</p>
-<p>Also, remember that putting all the code in a <code>try / catch</code>
-is a good practice to avoid unhandled exceptions. Since during
-debugging, those exception may provide a hint pointing what causes the issue.</p>
-<p>Further logs to debug and monitor the sequence can be done using oxauth_script.log and oxauth.log
-under<code>/opt/tomcat/logs/</code> which is within the chroot.</p>
-<h3 id="reverting-authentication-method">Reverting Authentication Method<a class="headerlink" href="#reverting-authentication-method" title="Permanent link">#</a></h3>
-<p>It is not unlikely that one may get locked out of Gluu
-Server, while testing the authentication script.</p>
-<p>If there is any problem in it. In such a case the following
-method can be used to revert back the older authentication method. </p>
-<p>As a secondary option, InPrivate or Incognito or Private Browser from various Browsers can be used.</p>
-<h2 id="passportjs-authentication">Passport.js Authentication<a class="headerlink" href="#passportjs-authentication" title="Permanent link">#</a></h2>
-<h3 id="overview_3">Overview<a class="headerlink" href="#overview_3" title="Permanent link">#</a></h3>
-<p>Passport is authentication middleware for Node.js. Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application. Including Passport.js in the Gluu Server will allow an admin to offer many authentication strategies to end users, including social login at large consumer IDPs like Google, Facebook, etc.</p>
-<h3 id="why-passportjs-authenticaion">Why Passport.js Authenticaion<a class="headerlink" href="#why-passportjs-authenticaion" title="Permanent link">#</a></h3>
-<ul>
-<li>To create Node-Passport server which will provide social network authentication APIs for Gluu server.</li>
-<li>To create Gluu server interception scripts for authentication of users which will consume Node-Passport server api.</li>
-</ul>
-<h3 id="specifications">Specifications<a class="headerlink" href="#specifications" title="Permanent link">#</a></h3>
-<p>Node-Passport server authenticates users for all the social networks like: google+, facebook, twitter etc. Node-Passport uses passport authentication middleware for social network authentication. All the node js api are secured with JWT(JSON Web Token) so that all the requests to node js server are authenticated and can be trusted by the application.</p>
-<p>Gluu server has only one interception script for all the social network providers which will call node js server for authenticating users to respective social network provider. The users will be added to Gluu server if the user does not present in the LDAP server of Gluu and if user does not exists then user will be added to server.</p>
-<h3 id="sequence-diagram">Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permanent link">#</a></h3>
-<p><img alt="Sequence Diagram" src="../../img/passport/sequence_diagram.png" title="Title" /></p>
-<ol>
-<li>Gluu server calls Node-Passport server for JWT token.</li>
-<li>Node-Passport server generates a JWT token and provides it in response to Gluu server.</li>
-<li>Gluu server requests Node-Passport server with JWT token to authenticate user for a social network provider.</li>
-<li>Node-Passport server will redirect user to social media authentication provider.</li>
-<li>After successful authentication of user, social network will callback Node-Passport server along with user details and access token.</li>
-<li>Node-Passport server will redirect user back to Gluu server with user details and access token.</li>
-<li>Gluu server’s interception script will check if the user exists in LDAP server and if user exists then user will be logged into the system and if not, then it will create new user with the required details and logs user into the system.</li>
-</ol>
-<h3 id="setup-passportjs-with-gluu">SETUP Passport.js with Gluu<a class="headerlink" href="#setup-passportjs-with-gluu" title="Permanent link">#</a></h3>
-<p>During installation of the Gluu Server select <code>yes</code> to install Passport.js when prompted.</p>
-<ol>
-<li>Click on Manage Custom Scripts under configuration tab on the main menu.</li>
-<li>Enable passport script in Person Authentication Tab.<img alt="Enable passport1" src="../../img/passport/enable-passport.png" /></li>
-<li>Click on update at the end of the page.<img alt="update" src="../../img/passport/auth-update.png" /></li>
-<li>Enable uma authorization policy in uma authorization policy tab.<img alt="uma-enable" src="../../img/passport/uma-enable.png" /></li>
-<li>Click on update.</li>
-<li>To set the strategies from Configuration &gt; Manage Authentication &gt; Default Authenticaion</li>
-<li>Under Default Authenticaion tab, change Authentication mode to passport</li>
-<li>Change passport support to enabled.<img alt="enable-authentication" src="../../img/passport/enable-authentication.png" /></li>
-<li>Once Passport support is enabled and updated, Passport Authentication Method will appear in the next tab.</li>
-<li>Click on the Passport Authenticaion Method, and set the strategies as follows,The values for Strategy field for common providers are:<ul>
-<li>google for GPlus Authentication</li>
-<li>twitter for Twitter Authentication</li>
-<li>linkedin for LinkedIn Authentication</li>
-<li>github for Github Authentication</li>
-<li>facebook for Facebook Authentication</li>
-</ul>
-</li>
-<li>And then add the strategy details like clientID and clientSecret.
-            clientID and clientSecret are details obtained from the provider, after the app is created in the provider form.<img alt="setting-strategies" src="../../img/passport/setting-strategies.png" /></li>
-<li>Once the configuration and settings are done, restart the passport service or Gluu Server.
-        a. Login to chroot
-        b. Enter below command to stop.
-        <code>service passport stop</code>
-        c. Below command to start.
-        <code>service passport start</code></li>
-</ol>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>All the strategies name and Field name should follow the case. As these are case sensitive. ie. Google Strategy should have "google" as the strategy name and clientID should be small "c".</p>
-</div>
-<h3 id="how-to-create-a-new-app-to-use-for-passport-server">How to create a new app to use for Passport server?<a class="headerlink" href="#how-to-create-a-new-app-to-use-for-passport-server" title="Permanent link">#</a></h3>
-<p>Every provider has different protocols and ways to create the app. We will look at one of the most common providers "facebook" and create a new app.</p>
-<ol>
-<li>Login to https://developers.facebook.com</li>
-<li>Click on Add a new App from My Apps dropdown</li>
-<li>Fill the required details and click the create Create App ID button to create the app.</li>
-<li>Click on the dashboard menu and get the clientID and clientSecret which can be used with the passport.</li>
-<li>Click on settings menu and put the domain of your gluu server in the App Domains field.</li>
-</ol>
-<p>Note: If there is a filed for Authorized redirect URIs, make sure the Authorized redirect URIs list of your app contains the passport strategy's callback. If your gluu server points to https://example.gluu.org and the strategy is facebook, the list of Authorized redirect URIs should contain https://example.gluu.org/passport/auth/facebook/callback.
-Make sure the  Authorized redirect URIs list of your app contains the passport strategy's callback.
-If your gluu server points to https://example.gluu.org and the strategy is facebook, the list of Authorized redirect URIs should contain https://example.gluu.org/passport/auth/facebook/callback.</p>
-<h3 id="installation_1">INSTALLATION<a class="headerlink" href="#installation_1" title="Permanent link">#</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The node installation is already installed when passport is selected during the installation of Gluu 3.0.0 CE Server.</p>
-</div>
-<p>Node-Passport server requires npm and NodeJS to be installed on the system.</p>
-<p>For installing node and npm please refer to <a href="https://nodejs.org/en/download/package-manager/">this guide</a>.</p>
-<p>Clone the repository and move to server directory and hit:</p>
-<p><code>npm install</code></p>
-<p>This will install all the dependencies of the server. To start the server move to the server directory and hit</p>
-<p><code>node app</code></p>
-<h3 id="jwt">JWT<a class="headerlink" href="#jwt" title="Permanent link">#</a></h3>
-<p>JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with HMAC algorithm) or a public/private key pair using RSA.</p>
-<p>JSON Web Tokens consist of three parts separated by dots (.), which are:
-- Header
-- Payload
-- Signature</p>
-<p>Therefore, a JWT typically looks like the following.
-xxxxx.yyyyy.zzzzz</p>
-<p>All the three parts are then Base64Url encoded to form JSON Web Token.</p>
-<p>The output is three Base64 strings separated by dots that can be easily passed in HTML and HTTP environments, while being more compact compared to XML-based standards such as SAML.</p>
-<p>The following shows a JWT that has the previous header and payload encoded, and it is signed with a secret.</p>
-<p>If you want to play with JWT and put these concepts to practice, you can use jwt.io Debugger to decode, verify and generate JWTs.</p>
-<h3 id="example-of-encoded-and-decoded-jwt">Example of encoded and decoded JWT<a class="headerlink" href="#example-of-encoded-and-decoded-jwt" title="Permanent link">#</a></h3>
-<p><img alt="JWT" src="../../img/passport/jwt.png" title="Title" /></p>
-<p>Whenever the user wants to access a protected route or resource, it should send the JWT, here in our case in route url. Therefore the route or api call should look like the following.</p>
-<p>https://urltorouteorresource/JWT</p>
-<p>This is a stateless authentication mechanism as the user state is never saved in the server memory. The server's protected routes will check for a valid JWT in the API parameter, and if there is a valid token, the user will be allowed.</p>
-<h3 id="what-data-will-be-persist">What data will be persist?<a class="headerlink" href="#what-data-will-be-persist" title="Permanent link">#</a></h3>
-<p>All the data that are received from the social network like name, email etc will be stored. If all the required details for creating a user are not available from the social network then user will be asked to enter all the required details. Currently email is the only required field.</p>
-<h3 id="how-node-passport-server-will-fit-in-gluu-server">How Node-Passport server will fit in Gluu server?<a class="headerlink" href="#how-node-passport-server-will-fit-in-gluu-server" title="Permanent link">#</a></h3>
-<p>During the installation of Gluu server we can setup node server as well. We can create a vagrant script to set up whole Node-Passport environment.</p>
-<h3 id="how-does-gluu-server-specify-which-passport-strategy-it-wants">How does Gluu server specify which passport strategy it wants?<a class="headerlink" href="#how-does-gluu-server-specify-which-passport-strategy-it-wants" title="Permanent link">#</a></h3>
-<p>There will be single page for the authentication with different buttons which will call different endpoints on Node-Passport server. For example twitter button will call the twitter strategy of Node-Passport server for twitter authentication.</p>
-<h3 id="how-to-add-new-strategies-to-passport-server">How to add new strategies to Passport server?<a class="headerlink" href="#how-to-add-new-strategies-to-passport-server" title="Permanent link">#</a></h3>
-<p>Find an npm module that fits best for the strategy that you want to add.
-Let's start with an example. In this example we will consider adding facebook strategy.</p>
-<ol>
-<li>If you want to add facebook strategy, search for passport-facebook npm module where you can select the npm module and then add the module to passport server.</li>
-<li>Let's say we found this module "passport-facebook" and want to use this module in for facebook authentication, install the module in passport app by executing <code>npm install passport-facebook --save</code> to install the module and also save the dependency to the passport server.</li>
-<li>Configure the strategy.</li>
-<li>Configure routes for the strategy.</li>
-<li>Call method to configure the strategy</li>
-<li>Add button for the configured strategy in passport authentication UI.</li>
-</ol>
-<h4 id="configure-the-strategy">Configure the strategy<a class="headerlink" href="#configure-the-strategy" title="Permanent link">#</a></h4>
-<p>All the strategies are been configured in the folder server/auth/*.js.
-We need to create new file named with the strategy name. Our strategy is facebook so we can create new file named facebook.js and configure the strategy.</p>
-<pre><code class="javascript">var passport = require('passport');
-var FacebookStrategy = require('passport-facebook').Strategy;
-
-var setCredentials = function(credentials) {
-    var callbackURL = global.applicationHost.concat(&quot;/passport/auth/facebook/callback&quot;);
-    passport.use(new FacebookStrategy({
-            clientID: credentials.clientID,
-            clientSecret: credentials.clientSecret,
-            callbackURL: callbackURL,
-            enableProof: true,
-            profileFields: ['id', 'name', 'displayName', 'email']
-        },
-        function(accessToken, refreshToken, profile, done) {
-            var userProfile = {
-                id: profile._json.id,
-                name: profile.displayName,
-                username: profile.username || profile._json.id,
-                email: profile._json.email,
-                givenName: profile._json.first_name,
-                familyName: profile._json.last_name,
-                provider: profile.provider,
-                accessToken: accessToken
-            };
-            return done(null, userProfile);
-        }
-    ));
-};
-
-module.exports = {
-    passport: passport,
-    setCredentials: setCredentials
-};
-</code></pre>
-
-<p>Here is an example of the facebook strategy configured. For facebook the required parameters are clientID, clientSecret and callbackURL. You can search for more configurations depending on the requirements and configure accordingly.</p>
-<p>The function setCredentials is used to configure the strategy of the credentials of this strategy are been received. The parameter credentials holds the values that are stored in the oxTrust</p>
-<p>The parameter callbackURL should point to the callback route that we will configure in step 4. As we are configuring facebook strategy, the callbackURL can be set to <code>"/passport/auth/facebook/callback"</code> according the the convention of the app. You can customise the callbackURL but it is recommended not to change the convention.</p>
-<p>The callback function has different number of parameters and data in those parameters which are required to be mapped to the userProfile keys which are <code>id, name, username, email, givenName, familyName, provider, accessToken</code>. Here id and provider params are must. Provider param holds the value of the provider, i.e for facebook the provider value will be facebook etc. In most cases the value of provider is received in the user claims itself.</p>
-<p>Then export the strategy that we configured and also the setCredentials method which will be used to set the details of the strategy.</p>
-<h4 id="configure-routes-for-the-strategy">Configure routes for the strategy<a class="headerlink" href="#configure-routes-for-the-strategy" title="Permanent link">#</a></h4>
-<p>We are going to set the routes for the strategy that we are going to configure.
-First require the strategy that we configured in the previous step.</p>
-<pre><code class="javascript">var passportFacebook = require('../auth/facebook').passport;
-</code></pre>
-
-<p>Here <code>require('../auth/facebook').passport</code> will include the passport strategy that we have configured.</p>
-<p>Then add the routes for the strategy. First we are going to register the callback route and then the authenticate route.</p>
-<p>The authenticate route first validated the jwt token that is been sent by Gluu server to passport server. If the JWT is valid then the user is redirected to the strategy and user can be authenticated there and the response of the user authentication is redirected to callback route.</p>
-<p>If the callback routes receives the user data then user is been redirected to Gluu.</p>
-<pre><code class="javascript">//==================== facebook ================
-router.get('/auth/facebook/callback',
-    passportFacebook.authenticate('facebook', {
-        failureRedirect: '/passport/login'
-    }),
-    callbackResponse);
-
-router.get('/auth/facebook/:token',
-    validateToken,
-    passportFacebook.authenticate('facebook', {
-        scope: ['email']
-    }));
-</code></pre>
-
-<p>scope value can be set from the strategy itself it it supports that or you can set the scope value here too.</p>
-<p>The callbackResponse method return the control to Gluu server and user is been enrolled in the system.</p>
-<h4 id="call-method-to-configure-the-strategy">Call method to configure the strategy<a class="headerlink" href="#call-method-to-configure-the-strategy" title="Permanent link">#</a></h4>
-<p>In this step we are going to call the setCredentials method of the strategy that we have created.</p>
-<p>Go to the file configureStrategies.js in auth folder of passport server and require the strategy that we have created.</p>
-<pre><code class="javascript">var FacebookStrategy = require('./facebook');
-</code></pre>
-
-<p>And then in setConfiguratins function, call the setCredentials method if the strategy data is received.</p>
-<pre><code class="javascript">//FacebookStrategy
-if (data.passportStrategies.facebook) {
-    logger.log('info', 'Facebook Strategy details received');
-    logger.sendMQMessage('info: Facebook Strategy details received');
-    FacebookStrategy.setCredentials(data.passportStrategies.facebook);
-}
-</code></pre>
-
-<p>This will configure the passport strategy if the details of the strategy are received from passport API.</p>
-<h4 id="add-button-for-the-configured-strategy-in-passport-authentication-ui">Add button for the configured strategy in passport authentication UI.<a class="headerlink" href="#add-button-for-the-configured-strategy-in-passport-authentication-ui" title="Permanent link">#</a></h4>
-<p>So far the passport server is ready with the new strategy that we have created, but to call the strategy we need to add a button which calls the new strategy.</p>
-<pre><code class="xhtml">&lt;a data-p=&quot;facebook&quot; class=&quot;provider&quot; href=&quot;javascript:void(0);&quot; style=&quot;height:40px; width:120px&quot;&gt;
-    &lt;img alt=&quot;facebook&quot; src=&quot;img/facebook.png&quot; style=&quot;height:40px; width:40px&quot;&gt;&lt;/img&gt;
-&lt;/a&gt;
-</code></pre>
-
-<p>Here the data-p and class="provider" are required to call the strategy. the data-p attribute should hold the value of the route that we created in routes.</p>
-<pre><code class="javascript">//==================== facebook ================
-router.get('/auth/facebook/callback',
-    passportFacebook.authenticate('facebook', {
-        failureRedirect: '/passport/login'
-    }),
-    callbackResponse);
-
-router.get('/auth/facebook/:token',
-    validateToken,
-    passportFacebook.authenticate('facebook', {
-        scope: ['email']
-    }));
-</code></pre>
-
-<p>In order to call the Strategy, the request URL to call the API must match the route that we configured.</p>
+<p>These user authentication methods are explained in detail and describes on how to setup in Gluu Server and use it effectively.</p>
+<p>!! note
+    While configuring or setting up these authentication and run into issues, please follow FAQ to troubleshoot. It adviced to open the OXtrust in private tab or browser to avoid any issues in logging later.</p>
 <p>Please see the <a href="../faq/">FAQ</a> for details.</p>
           <aside class="copyright" role="note">
            Built with 
@@ -1669,14 +596,14 @@ router.get('/auth/facebook/:token',
     </div>
     <div class="next">
       
-        <a href="../user-group/" title="User Management">
+        <a href="../../authn-guide/U2F/" title="U2f">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                User Management
+                U2f
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

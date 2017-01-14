@@ -23,10 +23,19 @@ pages:
 #        - 'Upgrade Gluu Server' : 'upgrade/index.md'
 #        - 'Patch Gluu Server' : 'upgrade/update.md'
 - Administration Guide:
-    - 'Gluu Server UI' : 'admin-guide/oxtrust-ui.md'
-    - 'SSO Protocols' : 'admin-guide/auth-protocol.md'
-    - 'Authentication Management' : 'admin-guide/auth-management.md'
-    - 'User Authentication' : 'admin-guide/user-authentications.md'
+        - 'Gluu Server UI' : 'admin-guide/oxtrust-ui.md'
+        - 'SSO Protocols' : 'admin-guide/auth-protocol.md'
+        - 'Authentication Management' : 'admin-guide/auth-management.md'
+- User Authentication Guide: 
+    - 'User Authentication Introduction': 'admin-guide/user-authentications.md'
+    - 'U2f': 'authn-guide/U2F.md'
+    - 'DUO': 'authn-guide/DUO.md'
+    - 'oxPush2-Super Gluu': 'authn-guide/supergluu.md'
+    - 'cert': 'authn-guide/cert-auth.md'
+    - 'Google': 'authn-guide/google.md'
+    - 'Twilio SMS': 'authn-guide/twiliosms.md'
+    - 'Passport': 'authn-guide/passport.md'
+#        - 'HOTP/TOTP':
     - 'User Management' : 'admin-guide/user-group.md'
     - 'Log Management' : 'admin-guide/logs.md'
 #    - 'Gluu for Mobile' : 'admin-guide/mobile.md'
