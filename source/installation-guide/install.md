@@ -225,7 +225,7 @@ Gluu Server uninstallation follows the same principle as package removal from Ub
 |       Uninstall Gluu Server   |apt-get remove gluu-server-3.0.0       |
 |       Remove backup folder    |rm -rf /opt/gluu-server-3.0.0*         |
 
-### Why hostname is preferred on Gluu instead of IP?
+### Why hostname is recommended on Gluu instead of IP?
 
 There are few reasons why Gluu recommends to use Hostname instead of IP address while installing Gluu. And here are few points.
 
