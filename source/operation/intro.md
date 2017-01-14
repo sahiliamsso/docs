@@ -34,9 +34,36 @@ Logs have segregated according to the apps in separate folder and this section h
 - oxTrust is internal facing, where admin and admin assigned users and internal users could use the login UI
 - oxAuth is internet facing. OxAuth is used by external users and used while multi-factor authentication is used.
 
+### Isolation of Restart
 
-# OpenDj Vs OpenLDAP
+Isolation of restart for individual app is made possible, For Example, Asimba requires more restarts than other apps, and restarting Asimba alone reduces the impact on oxauth. Therefore isolating restart of app doesn't affect other app.
 
+## OpenDj Vs OpenLDAP
+
+OpenLDAP plays a vital role in Gluu Servers, and here are few things which made Gluu to migrate from OpenDJ to OpenLDAP.
+
+1. OpenLDAP has better license
+2. Affordable support options from Symas.
+3. Proxy Capabilities(Back-Meta)
+4. Better crash resistance
+5. Less impact on Java Garbage collection.
+6. Clear commitment by Symas to open source community.
+7. After OpenLDAP LMDB backend recovers quickly and efficiently.
+
+### Proxy Capabilities
+
+The proxy is particularly useful for large deployments.
+
+The 3 parts of the Gluu Server that get big are 
+
+- ou=clients 
+- ou=sessions
+- ou=people
+
+If we can break these into different ldap server replicated topologies, and use a proxy to route in front. We can increase the write performance of the ldap service.
+If you have all the data in one server, it doesn't matter how many servers you add, you are limited in write speed. because all changes are replicated, so it doesn't matter which server receives the original write request, the only way to increase performance is to break up the data and make sure some servers don't see some of the writes.
+
+## New Features
 This version of the Gluu Server, includes the following new features to enable more security in SSO.
 
 - Passport.js authentication, this method has been discussed in detail in [Passport](../authn-guide/passport.md) page

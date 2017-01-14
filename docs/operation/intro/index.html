@@ -278,6 +278,32 @@
               </a>
             </li>
              
+              <li class="anchor">
+              <a title="Isolation of Restart" href="#isolation-of-restart">
+                  <font size=2><i>Isolation of Restart</i></font>
+              </a>
+            </li>
+             
+          
+            <li class="anchor">
+              <a title="OpenDj Vs OpenLDAP" href="#opendj-vs-openldap">
+                <b>OpenDj Vs OpenLDAP</b>
+              </a>
+            </li>
+            
+              <li class="anchor">
+              <a title="Proxy Capabilities" href="#proxy-capabilities">
+                  <font size=2><i>Proxy Capabilities</i></font>
+              </a>
+            </li>
+             
+          
+            <li class="anchor">
+              <a title="New Features" href="#new-features">
+                <b>New Features</b>
+              </a>
+            </li>
+            
           
         </ul>
       
@@ -656,7 +682,30 @@
 <li>oxTrust is internal facing, where admin and admin assigned users and internal users could use the login UI</li>
 <li>oxAuth is internet facing. OxAuth is used by external users and used while multi-factor authentication is used.</li>
 </ul>
-<h1 id="opendj-vs-openldap">OpenDj Vs OpenLDAP<a class="headerlink" href="#opendj-vs-openldap" title="Permanent link">#</a></h1>
+<h3 id="isolation-of-restart">Isolation of Restart<a class="headerlink" href="#isolation-of-restart" title="Permanent link">#</a></h3>
+<p>Isolation of restart for individual app is made possible, For Example, Asimba requires more restarts than other apps, and restarting Asimba alone reduces the impact on oxauth. Therefore isolating restart of app doesn't affect other app.</p>
+<h2 id="opendj-vs-openldap">OpenDj Vs OpenLDAP<a class="headerlink" href="#opendj-vs-openldap" title="Permanent link">#</a></h2>
+<p>OpenLDAP plays a vital role in Gluu Servers, and here are few things which made Gluu to migrate from OpenDJ to OpenLDAP.</p>
+<ol>
+<li>OpenLDAP has better license</li>
+<li>Affordable support options from Symas.</li>
+<li>Proxy Capabilities(Back-Meta)</li>
+<li>Better crash resistance</li>
+<li>Less impact on Java Garbage collection.</li>
+<li>Clear commitment by Symas to open source community.</li>
+<li>After OpenLDAP LMDB backend recovers quickly and efficiently.</li>
+</ol>
+<h3 id="proxy-capabilities">Proxy Capabilities<a class="headerlink" href="#proxy-capabilities" title="Permanent link">#</a></h3>
+<p>The proxy is particularly useful for large deployments.</p>
+<p>The 3 parts of the Gluu Server that get big are </p>
+<ul>
+<li>ou=clients </li>
+<li>ou=sessions</li>
+<li>ou=people</li>
+</ul>
+<p>If we can break these into different ldap server replicated topologies, and use a proxy to route in front. We can increase the write performance of the ldap service.
+If you have all the data in one server, it doesn't matter how many servers you add, you are limited in write speed. because all changes are replicated, so it doesn't matter which server receives the original write request, the only way to increase performance is to break up the data and make sure some servers don't see some of the writes.</p>
+<h2 id="new-features">New Features<a class="headerlink" href="#new-features" title="Permanent link">#</a></h2>
 <p>This version of the Gluu Server, includes the following new features to enable more security in SSO.</p>
 <ul>
 <li>Passport.js authentication, this method has been discussed in detail in <a href="../../authn-guide/passport/">Passport</a> page</li>
