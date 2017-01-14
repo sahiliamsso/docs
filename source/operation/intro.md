@@ -11,7 +11,7 @@ Gluu Server 3.0.0 has built with few new components which wasn't in its predeces
 - Upgraded shibboleth IDP has been incorporated ad default outbound SAML service.
 
 ## Tomcat Vs Jetty
-***Why Jetty over Tomcat as our application server?
+***Why Jetty over Tomcat as our application server?***
 
 Here are the reason why we switched over to Jetty in place of Tomcat.
 
