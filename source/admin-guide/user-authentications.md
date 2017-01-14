@@ -6,7 +6,7 @@ A number of multi-factor authentication scripts are shipped in the Gluu Server b
 
 These user authentication methods are explained in detail and describes on how to setup in Gluu Server and use it effectively.
 
-!! note
-	While configuring or setting up these authentication and run into issues, please follow FAQ to troubleshoot. It adviced to open the OXtrust in private tab or browser to avoid any issues in logging later.
+!!! note
+	While configuring or setting up these authentications and run into issues ie, not able to login or facing error pages. please follow FAQ to troubleshoot. It is adviced to open the OXtrust in private tab or browser to avoid any issues in logging in later.
 
 Please see the [FAQ](./faq.md) for details.
