@@ -202,17 +202,17 @@
         },
         {
             "location": "/operation/intro/",
-            "text": "Release Changes\n#\n\n\nThis section of the document will discuss about the changes of the releease and its features. \n\n\nGluu Server 3.0.0 has built with few new components which wasn't in its predecessors. With these changes and new components Gluu Server 3.0.0 has significant changes in commands, logs and path to libraries and jar. All these changes will be described in the next few sections.\n\n\nNew Component Changes in Gluu Server CE 3.0.0\n#\n\n\n\n\nTomcat has been replaced with Jetty\n\n\nOpenDj is replaced with OpenLDAP\n\n\n\n\nThis version of the Gluu Server, includes the following new features to enable more security in SSO.\n\n\n\n\nPassport.js authentication, this method has been discussed in detail in \nPassport\n page\n\n\nHOTP/TOTP authentication",
+            "text": "Release Changes\n#\n\n\nThis section of the document will discuss about the changes in the release and its features. \n\n\nGluu Server 3.0.0 has built with few new components which wasn't in its predecessors. With these changes and new components Gluu Server 3.0.0 has significant changes in commands, logs and path to libraries and jar. All these changes will be described in the next few sections.\n\n\nNew Component Changes in Gluu Server CE 3.0.0\n#\n\n\n\n\nTomcat has been replaced with Jetty\n\n\nOpenDj is replaced with OpenLDAP\n\n\nUpgraded shibboleth IDP has been incorporated ad default outbound SAML service.\n\n\n\n\nThis version of the Gluu Server, includes the following new features to enable more security in SSO.\n\n\n\n\nPassport.js authentication, this method has been discussed in detail in \nPassport\n page\n\n\nHOTP/TOTP authentication.\n\n\nImproved centralized logging for clusters.",
             "title": "Release Changes"
         },
         {
             "location": "/operation/intro/#release-changes",
-            "text": "This section of the document will discuss about the changes of the releease and its features.   Gluu Server 3.0.0 has built with few new components which wasn't in its predecessors. With these changes and new components Gluu Server 3.0.0 has significant changes in commands, logs and path to libraries and jar. All these changes will be described in the next few sections.",
+            "text": "This section of the document will discuss about the changes in the release and its features.   Gluu Server 3.0.0 has built with few new components which wasn't in its predecessors. With these changes and new components Gluu Server 3.0.0 has significant changes in commands, logs and path to libraries and jar. All these changes will be described in the next few sections.",
             "title": "Release Changes"
         },
         {
             "location": "/operation/intro/#new-component-changes-in-gluu-server-ce-300",
-            "text": "Tomcat has been replaced with Jetty  OpenDj is replaced with OpenLDAP   This version of the Gluu Server, includes the following new features to enable more security in SSO.   Passport.js authentication, this method has been discussed in detail in  Passport  page  HOTP/TOTP authentication",
+            "text": "Tomcat has been replaced with Jetty  OpenDj is replaced with OpenLDAP  Upgraded shibboleth IDP has been incorporated ad default outbound SAML service.   This version of the Gluu Server, includes the following new features to enable more security in SSO.   Passport.js authentication, this method has been discussed in detail in  Passport  page  HOTP/TOTP authentication.  Improved centralized logging for clusters.",
             "title": "New Component Changes in Gluu Server CE 3.0.0"
         },
         {
