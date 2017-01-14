@@ -307,6 +307,12 @@
               </a>
             </li>
              
+              <li class="anchor">
+              <a title="Why hostname is preferred on Gluu instead of IP?" href="#why-hostname-is-preferred-on-gluu-instead-of-ip">
+                  <font size=2><i>Why hostname is preferred on Gluu instead of IP?</i></font>
+              </a>
+            </li>
+             
           
         </ul>
       
@@ -782,13 +788,20 @@
 <p class="admonition-title">Note</p>
 </div>
 <p>While entering the "deb" command manually, make sure to enter an extra space between "/ubuntu/" and "trusty main". It is recommended to copy and paste the commands.</p>
-<p>Please see section 2.1.3 to complete installation.</p>
 <h3 id="complete-installation">Complete Installation<a class="headerlink" href="#complete-installation" title="Permanent link">#</a></h3>
 <p>The setup is completed by running the setup script <code>setup.py</code> from the setup folder. The server must be running so that the administrator can log into the chroot environment and run the script.</p>
 <ul>
 <li>Log into Gluu Server <code>chroot</code></li>
 <li>Run the setup script</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>While running the setup script, you will be prompted for hostname, please make sure to enter FQDN of the server or hostname of the cluster used.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Changing of hostname after installation is not supported.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -910,6 +923,14 @@
 <li>Log into Gluu Server <code>chroot</code></li>
 <li>Run the setup script</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>While running the setup script, you will be prompted for hostname, please make sure to enter FQDN of the server or hostname of the cluster used.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Changing of hostname after installation is not supported.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1079,6 +1100,14 @@
 <li>Log into Gluu Server <code>chroot</code></li>
 <li>Run the setup script</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>While running the setup script, you will be prompted for hostname, please make sure to enter FQDN of the server or hostname of the cluster used.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Changing of hostname after installation is not supported.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1201,6 +1230,14 @@
 <p>The setup is completed by running the setup script <code>setup.py</code> from the setup folder.
 <em> Log into Gluu Server <code>chroot</code>
 </em> Run the setup script</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>While running the setup script, you will be prompted for hostname, please make sure to enter FQDN of the server or hostname of the cluster used.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Changing of hostname after installation is not supported.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -1247,6 +1284,13 @@
 </tr>
 </tbody>
 </table>
+<h3 id="why-hostname-is-preferred-on-gluu-instead-of-ip">Why hostname is preferred on Gluu instead of IP?<a class="headerlink" href="#why-hostname-is-preferred-on-gluu-instead-of-ip" title="Permanent link">#</a></h3>
+<p>There are few reasons why Gluu recommends to use Hostname instead of IP address while installing Gluu. And here are few points.</p>
+<ul>
+<li>In form post, the form contains the hostname, therefore using private IP address will not work and will cause issues.</li>
+<li>Even if a proxy is used to re-writes, using IP address will not work and not supported, in such cases the certificate's CN are written incorrectly and will not work on the browser.</li>
+<li>If in case, Load Balancer requires a https(ssl) certificate with private IP, that could be done by replacing the apache ssl certificates only with the private IP address.</li>
+</ul>
           <aside class="copyright" role="note">
            Built with 
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a> using

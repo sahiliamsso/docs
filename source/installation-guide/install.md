@@ -31,13 +31,18 @@ The following commands will install Gluu Server `chroot`
 
 !!! Note: While entering the "deb" command manually, make sure to enter an extra space between "/ubuntu/" and "trusty main". It is recommended to copy and paste the commands.
 
-Please see section 2.1.3 to complete installation.
 
 ### Complete Installation
 The setup is completed by running the setup script `setup.py` from the setup folder. The server must be running so that the administrator can log into the chroot environment and run the script.
 
 * Log into Gluu Server `chroot`
 * Run the setup script
+
+!!! Warning
+	While running the setup script, you will be prompted for hostname, please make sure to enter FQDN of the server or hostname of the cluster used.
+
+!!! note:
+	Changing of hostname after installation is not supported.
 
 |       Command Description     |               Trusty & Xenial Commands|
 |-------------------------------|---------------------------------------|
@@ -85,6 +90,12 @@ The setup is completed by running the setup script `setup.py` from the setup fol
 
 * Log into Gluu Server `chroot`
 * Run the setup script
+
+!!! Warning
+	While running the setup script, you will be prompted for hostname, please make sure to enter FQDN of the server or hostname of the cluster used.
+
+!!! note:
+	Changing of hostname after installation is not supported.
 
 |       Command Description     |               CentOS 6.x              |
 |-------------------------------|---------------------------------------|
@@ -145,6 +156,12 @@ The setup is completed by running the setup script `setup.py` from the setup fol
 * Log into Gluu Server `chroot`
 * Run the setup script
 
+!!! Warning
+	While running the setup script, you will be prompted for hostname, please make sure to enter FQDN of the server or hostname of the cluster used.
+
+!!! note:
+	Changing of hostname after installation is not supported.
+	
 |       Command Description     |               RHEL 6.x                |
 |-------------------------------|---------------------------------------|
 |       Start Gluu Server       |service gluu-server-3.0.0 start        |
@@ -187,6 +204,12 @@ The setup is completed by running the setup script `setup.py` from the setup fol
 * Log into Gluu Server `chroot`
 * Run the setup script
 
+!!! Warning
+	While running the setup script, you will be prompted for hostname, please make sure to enter FQDN of the server or hostname of the cluster used.
+
+!!! note:
+	Changing of hostname after installation is not supported.
+	
 |       Command Description     |               Jessie Commands |
 |-------------------------------|---------------------------------------|
 |       Start Gluu Server       |/etc/init.d/gluu-server-3.0.0 start    |
@@ -202,3 +225,10 @@ Gluu Server uninstallation follows the same principle as package removal from Ub
 |       Uninstall Gluu Server   |apt-get remove gluu-server-3.0.0       |
 |       Remove backup folder    |rm -rf /opt/gluu-server-3.0.0*         |
 
+### Why hostname is preferred on Gluu instead of IP?
+
+There are few reasons why Gluu recommends to use Hostname instead of IP address while installing Gluu. And here are few points.
+
+- In form post, the form contains the hostname, therefore using private IP address will not work and will cause issues.
+- Even if a proxy is used to re-writes, using IP address will not work and not supported, in such cases the certificate's CN are written incorrectly and will not work on the browser.
+- If in case, Load Balancer requires a https(ssl) certificate with private IP, that could be done by replacing the apache ssl certificates only with the private IP address.

@@ -69,3 +69,5 @@ This version of the Gluu Server, includes the following new features to enable m
 - Passport.js authentication, this method has been discussed in detail in [Passport](../authn-guide/passport.md) page
 - HOTP/TOTP authentication.
 - Improved centralized logging for clusters.
+
+## Deploying Jar and Libraries in Jetty
