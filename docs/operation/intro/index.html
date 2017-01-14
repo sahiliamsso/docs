@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>U2f - Gluu Docs</title>
+        <title>Release Changes - Gluu Docs</title>
       
 <link href="../../assets/stylesheets/font.css" rel="stylesheet">
       
@@ -90,12 +90,12 @@
           <span class="path">
             
               
-                User Authentication Guide <i class="icon icon-link"></i>
+                Operation Guide <i class="icon icon-link"></i>
               
             
           </span>
         
-        U2f
+        Release Changes
       </div>
     </div>
     <div class="button button-search" role="button" aria-label="Search">
@@ -231,9 +231,14 @@
       
         
   <li>
-    <a class="" title="Release Changes" href="../../operation/intro/">
+    <a class="current" title="Release Changes" href="./">
       Release Changes
     </a>
+    
+      
+        
+      
+      
     
   </li>
                   
@@ -294,39 +299,16 @@
       
         
   <li>
-    <a class="current" title="U2f" href="./">
+    <a class="" title="U2f" href="../../authn-guide/U2F/">
       U2f
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="Overview" href="#overview">
-                <b>Overview</b>
-              </a>
-            </li>
-            
-          
-            <li class="anchor">
-              <a title="Configure U2F" href="#configure-u2f">
-                <b>Configure U2F</b>
-              </a>
-            </li>
-            
-          
-        </ul>
-      
     
   </li>
                   
       
         
   <li>
-    <a class="" title="DUO" href="../DUO/">
+    <a class="" title="DUO" href="../../authn-guide/DUO/">
       DUO
     </a>
     
@@ -335,7 +317,7 @@
       
         
   <li>
-    <a class="" title="oxPush2-Super Gluu" href="../supergluu/">
+    <a class="" title="oxPush2-Super Gluu" href="../../authn-guide/supergluu/">
       oxPush2-Super Gluu
     </a>
     
@@ -344,7 +326,7 @@
       
         
   <li>
-    <a class="" title="cert" href="../cert-auth/">
+    <a class="" title="cert" href="../../authn-guide/cert-auth/">
       cert
     </a>
     
@@ -353,7 +335,7 @@
       
         
   <li>
-    <a class="" title="Google" href="../google/">
+    <a class="" title="Google" href="../../authn-guide/google/">
       Google
     </a>
     
@@ -362,7 +344,7 @@
       
         
   <li>
-    <a class="" title="Twilio SMS" href="../twiliosms/">
+    <a class="" title="Twilio SMS" href="../../authn-guide/twiliosms/">
       Twilio SMS
     </a>
     
@@ -371,7 +353,7 @@
       
         
   <li>
-    <a class="" title="Passport" href="../passport/">
+    <a class="" title="Passport" href="../../authn-guide/passport/">
       Passport
     </a>
     
@@ -608,62 +590,19 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="u2f">U2F<a class="headerlink" href="#u2f" title="Permanent link">#</a></h1>
-<p>This script enables multi-factor authentication with any FIDO U2F device. Learn more about the U2F standard <a href="https://www.gluu.org/resources/documents/standards/fido-u2f/">here</a>. For a list of U2F compliant devices for sale, <a href="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords=U2F">check Amazon</a>. </p>
-<p>Some well known U2F device manufacturers include:<br />
-- <a href="https://www.yubico.com/">Yubico</a> <br />
-- <a href="http://hyperfido.com/">HyperFIDO</a> <br />
-- <a href="http://www.ftsafe.com/">Feitian Technologies</a>    </p>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>The script has the following properties</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>u2f_server_uri</td>
-<td>URL of the u2f server</td>
-<td>https://idp.gluu.info</td>
-</tr>
-<tr>
-<td>u2f_server_metadata_uri</td>
-<td>URL of the u2f server metadata</td>
-<td>https://idp.gluu.info</td>
-</tr>
-</tbody>
-</table>
-<h2 id="configure-u2f">Configure U2F<a class="headerlink" href="#configure-u2f" title="Permanent link">#</a></h2>
-<p>Follow the steps below to configure the U2F module in the oxTrust Admin GUI.</p>
-<ol>
-<li>
-<p>Go to Manage Custom Scripts
-<img alt="custom-script" src="../../img/admin-guide/multi-factor/custom-script.png" /></p>
-</li>
-<li>
-<p>Click on the Person Authentication tab
-<img alt="person-auth" src="../../img/admin-guide/multi-factor/person-auth.png" /></p>
-</li>
-<li>
-<p>Select the U2F script
-<img alt="u2f-script" src="../../img/admin-guide/multi-factor/u2f-script.png" /></p>
-</li>
-<li>
-<p>Enable the script by ticking the check box
-<img alt="enable" src="../../img/admin-guide/enable.png" /></p>
-</li>
-<li>
-<p>Click <code>Update</code></p>
-</li>
-<li>
-<p>Change the <code>Default Authentication Method</code> to <code>u2f</code>
-<img alt="u2f" src="../../img/admin-guide/multi-factor/u2f.png" /></p>
-</li>
-</ol>
+          <h1 id="release-changes">Release Changes<a class="headerlink" href="#release-changes" title="Permanent link">#</a></h1>
+<p>This section of the document will discuss about the changes of the releease and its features. </p>
+<p>Gluu Server 3.0.0 has built with few new components which wasn't in its predecessors. With these changes and new components Gluu Server 3.0.0 has significant changes in commands, logs and path to libraries and jar. All these changes will be described in the next few sections.</p>
+<h1 id="new-component-changes-in-gluu-server-ce-300">New Component Changes in Gluu Server CE 3.0.0<a class="headerlink" href="#new-component-changes-in-gluu-server-ce-300" title="Permanent link">#</a></h1>
+<ul>
+<li>Tomcat has been replaced with Jetty</li>
+<li>OpenDj is replaced with OpenLDAP</li>
+</ul>
+<p>This version of the Gluu Server, includes the following new features to enable more security in SSO.</p>
+<ul>
+<li>Passport.js authentication, this method has been discussed in detail in <a href="../../authn-guide/passport/">Passport</a> page</li>
+<li>HOTP/TOTP authentication</li>
+</ul>
           <aside class="copyright" role="note">
            Built with 
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a> using
@@ -680,7 +619,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../../admin-guide/user-authentications/" title="User Authentication Introduction">
+        <a href="../../upgrade/update-oxtrustwar/" title="Updating oxTrust">
           <span class="direction">
             Previous
           </span>
@@ -690,7 +629,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                User Authentication Introduction
+                Updating oxTrust
               </div>
             </div>
           </div>
@@ -699,14 +638,14 @@
     </div>
     <div class="next">
       
-        <a href="../DUO/" title="DUO">
+        <a href="../../admin-guide/oxtrust-ui/" title="Gluu Server UI">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                DUO
+                Gluu Server UI
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
