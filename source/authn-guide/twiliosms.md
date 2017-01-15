@@ -190,7 +190,7 @@ required to have some kind of user action.
 
 Pure Python libraries, can be added to `/opt/gluu/python/libs`, jar files can be added to  `/opt/gluu/jetty/oxauth/lib/ext`.
 
-!!! **Note:**
+!!! Note
 	jar files should be added within chroot. 
 
 ## Testing
