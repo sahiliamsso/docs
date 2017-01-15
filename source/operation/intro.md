@@ -71,3 +71,15 @@ This version of the Gluu Server, includes the following new features to enable m
 - Improved centralized logging for clusters.
 
 ## Deploying Jar and Libraries in Jetty
+
+For adding jar files in Jetty for authentication scripts, drop the jar into the below path
+
+`/opt/gluu/jetty/oxauth/lib/ext`
+
+if you are adding jar files for CacheRefresh, copy the jars to 
+
+`/opt/gluu/jetty/identity/lib/ext`
+
+And for adding pure Python jars
+
+`/opt/gluu/python/libs`

@@ -870,11 +870,11 @@ where <code>&lt;key&gt;</code> specifies the value you want to retrieve.</p>
 user, which could be especially useful if an error occurs, or if
 required to have some kind of user action.</p>
 <h2 id="adding-libraries">Adding Libraries<a class="headerlink" href="#adding-libraries" title="Permanent link">#</a></h2>
-<p>Pure Python libraries, can be added to <code>/opt/tomcat/conf/python</code>, jar files can be added to <code>/var/gluu/webapps/oxauth/libs</code>.</p>
-<p><strong>Note:</strong> jar files should be added within chroot. And not in the main <code>/var/</code> of the system.</p>
+<p>Pure Python libraries, can be added to <code>/opt/gluu/python/libs</code>, jar files can be added to  <code>/opt/gluu/jetty/oxauth/lib/ext</code>.</p>
+<p><strong>Note:</strong> jar files should be added within chroot. </p>
 <h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">#</a></h2>
 <p>When the scripting is done, you can test the script by print
-the statments to oxtrust.log under <code>/opt/gluu/jetty/identity/oxtrust.log</code>. </p>
+the statments to oxtrust.log under <code>/opt/gluu/jetty/identity/logs/oxtrust.log</code>. </p>
 <p>And by prefix the logs, will help to find the script at ease
 using tail command <code>tail -f | grep &lt;prefix&gt;</code>, the prefix logs will
 provide the script output while one trys to login using the script.</p>
@@ -884,7 +884,7 @@ provide the script output while one trys to login using the script.</p>
 is a good practice to avoid unhandled exceptions. Since during
 debugging, those exception may provide a hint pointing what causes the issue.</p>
 <p>Further logs to debug and monitor the sequence can be done using oxauth_script.log and oxauth.log
-under<code>/opt/tomcat/logs/</code> which is within the chroot.</p>
+under<code>/opt/gluu/jetty/identity/logs/</code> which is within the chroot.</p>
 <h2 id="reverting-authentication-method">Reverting Authentication Method<a class="headerlink" href="#reverting-authentication-method" title="Permanent link">#</a></h2>
 <p>It is not unlikely that one may get locked out of Gluu
 Server, while testing the authentication script.</p>

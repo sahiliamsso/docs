@@ -188,14 +188,14 @@ required to have some kind of user action.
 
 ## Adding Libraries
 
-Pure Python libraries, can be added to `/opt/tomcat/conf/python`, jar files can be added to `/var/gluu/webapps/oxauth/libs`.
+Pure Python libraries, can be added to `/opt/gluu/python/libs`, jar files can be added to  `/opt/gluu/jetty/oxauth/lib/ext`.
 
-**Note:** jar files should be added within chroot. And not in the main `/var/` of the system.
+**Note:** jar files should be added within chroot. 
 
 ## Testing
 
 When the scripting is done, you can test the script by print
-the statments to oxtrust.log under `/opt/gluu/jetty/identity/oxtrust.log`. 
+the statments to oxtrust.log under `/opt/gluu/jetty/identity/logs/oxtrust.log`. 
 
 And by prefix the logs, will help to find the script at ease
 using tail command `tail -f | grep <prefix>`, the prefix logs will
@@ -209,7 +209,7 @@ is a good practice to avoid unhandled exceptions. Since during
 debugging, those exception may provide a hint pointing what causes the issue.
 
 Further logs to debug and monitor the sequence can be done using oxauth_script.log and oxauth.log
-under`/opt/tomcat/logs/` which is within the chroot.
+under`/opt/gluu/jetty/identity/logs/` which is within the chroot.
 
 ## Reverting Authentication Method
 
