@@ -90,6 +90,10 @@
           <span class="path">
             
               
+                Administration Guide <i class="icon icon-link"></i>
+              
+            
+              
                 User Authentication Guide <i class="icon icon-link"></i>
               
             
@@ -274,11 +278,7 @@
   </li>
                   
       
-    </ul>
-  </li>
-                  
-          
-            
+        
   <li>
     <span class="section">User Authentication Guide</span>
     <ul>
@@ -481,6 +481,15 @@
       
         
   <li>
+    <a class="" title="HOTP/TOTP" href="../otp/">
+      HOTP/TOTP
+    </a>
+    
+  </li>
+                  
+      
+        
+  <li>
     <a class="" title="User Management" href="../../admin-guide/user-group/">
       User Management
     </a>
@@ -494,6 +503,10 @@
       Log Management
     </a>
     
+  </li>
+                  
+      
+    </ul>
   </li>
                   
       
@@ -721,7 +734,7 @@
 <p>Node-Passport server authenticates users for all the social networks like: google+, facebook, twitter etc. Node-Passport uses passport authentication middleware for social network authentication. All the node js api are secured with JWT(JSON Web Token) so that all the requests to node js server are authenticated and can be trusted by the application.</p>
 <p>Gluu server has only one interception script for all the social network providers which will call node js server for authenticating users to respective social network provider. The users will be added to Gluu server if the user does not present in the LDAP server of Gluu and if user does not exists then user will be added to server.</p>
 <h2 id="sequence-diagram">Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permanent link">#</a></h2>
-<p><img alt="Sequence Diagram" src="../../img/passport/sequence_diagram.png" title="Title" /></p>
+<p><img alt="Sequence Diagram" src="../../img/user-authn/passport/sequence_diagram.png" title="Title" /></p>
 <ol>
 <li>Gluu server calls Node-Passport server for JWT token.</li>
 <li>Node-Passport server generates a JWT token and provides it in response to Gluu server.</li>
@@ -735,13 +748,13 @@
 <p>During installation of the Gluu Server select <code>yes</code> to install Passport.js when prompted.</p>
 <ol>
 <li>Click on Manage Custom Scripts under configuration tab on the main menu.</li>
-<li>Enable passport script in Person Authentication Tab.<img alt="Enable passport1" src="../../img/passport/enable-passport.png" /></li>
-<li>Click on update at the end of the page.<img alt="update" src="../../img/passport/auth-update.png" /></li>
-<li>Enable uma authorization policy in uma authorization policy tab.<img alt="uma-enable" src="../../img/passport/uma-enable.png" /></li>
+<li>Enable passport script in Person Authentication Tab.<img alt="Enable passport1" src="../../img/user-authn/passport/enable-passport.png" /></li>
+<li>Click on update at the end of the page.<img alt="update" src="../../img/user-authn/passport/auth-update.png" /></li>
+<li>Enable uma authorization policy in uma authorization policy tab.<img alt="uma-enable" src="../../img/user-authn/passport/uma-enable.png" /></li>
 <li>Click on update.</li>
 <li>To set the strategies from Configuration &gt; Manage Authentication &gt; Default Authenticaion</li>
 <li>Under Default Authenticaion tab, change Authentication mode to passport</li>
-<li>Change passport support to enabled.<img alt="enable-authentication" src="../../img/passport/enable-authentication.png" /></li>
+<li>Change passport support to enabled.<img alt="enable-authentication" src="../../img/user-authn/passport/enable-authentication.png" /></li>
 <li>Once Passport support is enabled and updated, Passport Authentication Method will appear in the next tab.</li>
 <li>Click on the Passport Authenticaion Method, and set the strategies as follows,The values for Strategy field for common providers are:<ul>
 <li>google for GPlus Authentication</li>
@@ -752,7 +765,7 @@
 </ul>
 </li>
 <li>And then add the strategy details like clientID and clientSecret.
-            clientID and clientSecret are details obtained from the provider, after the app is created in the provider form.<img alt="setting-strategies" src="../../img/passport/setting-strategies.png" /></li>
+            clientID and clientSecret are details obtained from the provider, after the app is created in the provider form.<img alt="setting-strategies" src="../../img/user-authn/passport/setting-strategies.png" /></li>
 <li>Once the configuration and settings are done, restart the passport service or Gluu Server.
         a. Login to chroot
         b. Enter below command to stop.
@@ -800,7 +813,7 @@ xxxxx.yyyyy.zzzzz</p>
 <p>The following shows a JWT that has the previous header and payload encoded, and it is signed with a secret.</p>
 <p>If you want to play with JWT and put these concepts to practice, you can use jwt.io Debugger to decode, verify and generate JWTs.</p>
 <h2 id="example-of-encoded-and-decoded-jwt">Example of encoded and decoded JWT<a class="headerlink" href="#example-of-encoded-and-decoded-jwt" title="Permanent link">#</a></h2>
-<p><img alt="JWT" src="../../img/passport/jwt.png" title="Title" /></p>
+<p><img alt="JWT" src="../../img/user-authn/passport/jwt.png" title="Title" /></p>
 <p>Whenever the user wants to access a protected route or resource, it should send the JWT, here in our case in route url. Therefore the route or api call should look like the following.</p>
 <p>https://urltorouteorresource/JWT</p>
 <p>This is a stateless authentication mechanism as the user state is never saved in the server memory. The server's protected routes will check for a valid JWT in the API parameter, and if there is a valid token, the user will be allowed.</p>
@@ -963,14 +976,14 @@ router.get('/auth/facebook/:token',
     </div>
     <div class="next">
       
-        <a href="../../admin-guide/user-group/" title="User Management">
+        <a href="../otp/" title="HOTP/TOTP">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                User Management
+                HOTP/TOTP
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
