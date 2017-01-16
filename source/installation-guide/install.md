@@ -13,7 +13,8 @@ The following commands will install Gluu Server `chroot`
 |       Install Gluu Server     |apt-get install gluu-server-3.0.0      |
 |       Gluu Server Status      |/etc/init.d/gluu-server-3.0.0 status   |
 
-!!! Note: While entering the "deb" command manually, make sure to enter an extra space between "/ubuntu/" and "trusty main". It is recommended to copy and paste the commands.
+!!! Note
+	While entering the "deb" command manually, make sure to enter an extra space between "/ubuntu/" and "trusty main". It is recommended to copy and paste the commands.
 
 Please see section 2.1.3 to complete installation.
 
@@ -29,7 +30,8 @@ The following commands will install Gluu Server `chroot`
 |       Install Gluu Server     |apt-get install gluu-server-3.0.0      |
 |       Gluu Server Status      |/etc/init.d/gluu-server-3.0.0 status   |
 
-!!! Note: While entering the "deb" command manually, make sure to enter an extra space between "/ubuntu/" and "trusty main". It is recommended to copy and paste the commands.
+!!! Note
+	While entering the "deb" command manually, make sure to enter an extra space between "/ubuntu/" and "trusty main". It is recommended to copy and paste the commands.
 
 
 ### Complete Installation
@@ -231,4 +233,4 @@ There are few reasons why Gluu recommends to use Hostname instead of IP address 
 
 - In form post, the form contains the hostname, therefore using private IP address will not work and will cause issues.
 - Even if a proxy is used to re-writes, using IP address will not work and not supported, in such cases the certificate's CN are written incorrectly and will not work on the browser.
-- If in case, Load Balancer requires a https(ssl) certificate with private IP, that could be done by replacing the apache ssl certificates only with the private IP address.
+- If in case, Load Balancer requires a https(ssl) certificate with private IP, that could be done by replacing only apache ssl certificates with the private IP address.

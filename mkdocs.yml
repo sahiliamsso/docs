@@ -25,6 +25,8 @@ pages:
         - 'Updating oxTrust': 'upgrade/update-oxtrustwar.md'
 - Operation Guide:
     - 'Release Changes': 'operation/intro.md'
+#    - 'LDAP Schemas':
+#    - 'LDAP Commands':
 - Administration Guide:
         - 'Gluu Server UI' : 'admin-guide/oxtrust-ui.md'
         - 'SSO Protocols' : 'admin-guide/auth-protocol.md'

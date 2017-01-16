@@ -685,7 +685,7 @@ appear:</p>
   The custom attribute must be created in oxTrust first before defining it as the <code>NameID</code>.
   Please see the <a href="#using-oxtrust">oxTrust custom attribute guide</a> to create the custom attribute in oxTrust.</p>
 <p>## Defining NameID
-  The template file for <code>NameID</code> definitions are located in the <code>attribute-resolver.xml.vm</code> file under <code>/opt/tomcat/conf/shibboleth2/</code>.
+  The template file for <code>NameID</code> definitions are located in the <code>attribute-resolver.xml.vm</code> file under <code>/opt/gluu/jetty/identity/conf/shibboleth3/idp/</code>.
   The example below adds <code>testcustomattribute</code> as <code>NameID</code> based on UID attribute. The following are put into the <code>attribute-resolver.xml.vm</code> file.</p>
 <ul>
 <li>Add declaration for the new attribute
@@ -704,8 +704,12 @@ appear:</p>
 </code></pre>
 
 <ul>
-<li>Restart Jetty service</li>
+<li>Restart identity service using below command</li>
 </ul>
+<p><code>service identity restart</code> </p>
+<p>However it is recommended to stop and start service using </p>
+<p><code>service identity stop</code></p>
+<p><code>service identity start</code></p>
 <h1 id="openid-connect-scopes">OpenID Connect Scopes<a class="headerlink" href="#openid-connect-scopes" title="Permanent link">#</a></h1>
 <p>In OpenID Connect, scopes are used to group attributes, and to provide a human 
 understandable description of the attributes. This improves usability when you need 

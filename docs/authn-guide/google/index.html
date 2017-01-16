@@ -641,7 +641,7 @@ origins". It should be the uri of your Gluu Server--for example
 it. Instead, download the JSON file which you are going to upload into
 your Gluu Server, next.</p>
 <p><img alt="image" src="../../img/admin-guide/multi-factor/06-download_json.png" /></p>
-<p>Move this file to the location <code>/opt/tomcat/conf/google.json</code>. The JSON
+<p>Move this file to the location <code>/etc/gluu/conf/google.json</code>. The JSON
 file will look something like this example (no... these data are not
 valid credentials!):</p>
 <pre><code>{
@@ -669,10 +669,10 @@ valid credentials!):</p>
 <p><strong>Configure oxTrust</strong></p>
 <p>Follow the steps below to configure the certificate authentication in the oxTrust Admin GUI.</p>
 <ol>
-<li>
-<p>Go to Manage Custom Scripts
-<img alt="custom-script" src="../../img/admin-guide/multi-factor/custom-script.png" /></p>
-</li>
+<li>Go to Manage Custom Scripts</li>
+</ol>
+<p><img alt="custom-script" src="../../img/admin-guide/multi-factor/custom-script.png" /></p>
+<ol>
 <li>
 <p>Click on the <code>Add Custom Scritp</code> button
 <a href="../../img/admin-guide/multi-factor/add-script-button.png">add-script-button</a></p>
@@ -683,7 +683,7 @@ valid credentials!):</p>
 </ol>
 <p>You'll also need to add some custom properties:</p>
 <ul>
-<li><strong>gplus_client_secrets_file</strong>: <code>/opt/tomcat/conf/google.json</code></li>
+<li><strong>gplus_client_secrets_file</strong>: <code>/etc/gluu/conf/google.json</code></li>
 <li><strong>gplus_deployment_type</strong>: enroll</li>
 <li><strong>gplus_remote_attributes_list</strong>: email, given_name, family_name, and locale</li>
 <li>
@@ -692,25 +692,27 @@ valid credentials!):</p>
 <li>
 <p><strong>gplus_client_secrets_file</strong> - It is a mandatory property that holds
    the path to the application configuration file downloaded from Google
-   console for application. An example is <code>/etc/certs/gplus_client_secrets.json</code>.
-   These are the single steps needed to get it:
-    a) Log into: <code>https://console.developers.google.com/project</code>
-    b) Click "Create project" and enter project name
-    c) Open new project "API &amp; auth -&gt; Credentials" menu item in configuration navigation tree
-    d) Click "Add credential" with type "OAuth 2.0 client ID"
-    e) Select "Web application" application type
-    f) Enter "Authorized JavaScript origins". It should be CE server DNS
-       name, for example <code>https://gluu.info</code>.
-    g) Click "Create" and Click "OK" in next dialog
-    h) Click "Download JSON" in order to download
-       <code>gplus_client_secrets.json</code> file.
-    Also it is mandatory to enable Google+ API:
-    a) Log into <code>https://console.developers.google.com/project</code>
-    b) Select project and enter project name
-    c) Open new project "API &amp; auth -&gt; API" menu item in configuration navigation tree
-    d) Click "Google+ API"
-    e) Click "Enable API" button</p>
+   console for application. An example is <code>/etc/certs/gplus_client_secrets.json</code>.</p>
 </li>
+</ul>
+<p>These are the single steps needed to get it:</p>
+<p>a) Log into: <code>https://console.developers.google.com/project</code></p>
+<p>b) Click "Create project" and enter project name</p>
+<p>c) Open new project "API &amp; auth -&gt; Credentials" menu item in configuration navigation tree</p>
+<p>d) Click "Add credential" with type "OAuth 2.0 client ID"</p>
+<p>e) Select "Web application" application type</p>
+<p>f) Enter "Authorized JavaScript origins". It should be CE server DNS
+       name, for example <code>https://gluu.info</code>.</p>
+<p>g) Click "Create" and Click "OK" in next dialog</p>
+<p>h) Click "Download JSON" in order to download
+       <code>gplus_client_secrets.json</code> file.</p>
+<p>Also it is mandatory to enable Google+ API:</p>
+<p>a) Log into <code>https://console.developers.google.com/project</code></p>
+<p>b) Select project and enter project name</p>
+<p>c) Open new project "API &amp; auth -&gt; API" menu item in configuration navigation tree</p>
+<p>d) Click "Google+ API"</p>
+<p>e) Click "Enable API" button</p>
+<ol>
 <li>
 <p><strong>gplus_deployment_type</strong> - Specify the deployment mode. It is an
 optional property. If this property isn't specified the script tries to
@@ -738,7 +740,7 @@ LDAP attribute names that are mapped to Google user claims from the
 <p><strong>extension_module</strong> - Optional property to specify the full path of
 an external module that implements two methods:</p>
 </li>
-</ul>
+</ol>
 <pre><code class="python">    # This is called when the authentication script initializes
     def init(conf_attr):
         # Code here
@@ -783,7 +785,7 @@ oxAuthenticationMode: internal
 authentication script in oxTrust. Use <code>internal</code> to revert to the
 default LDAP authentication. You'll have to change the <code>inum</code> with the
 <code>inum</code> of your installation. You can find it using ldapsearch like this:</p>
-<pre><code>/opt/opendj/bin/ldapsearch -h localhost -p 1389 -D &quot;cn=directory manager&quot; -j ~/.pw -b &quot;ou=appliances,o=gluu&quot; -s one &quot;objectclass=*&quot; inum
+<pre><code>root@gluu3-ubuntu:/opt/symas/bin# ./ldapsearch -h locahost -p 1389 -D &quot;cn=directory manager,o=gluu&quot; -w &quot;{password provided during setup}&quot; -b &quot;ou=appliances,o=gluu&quot; -s one &quot;objectclass=*&quot; inum
 </code></pre>
 
 <p><code>~/.pw</code> is a file with your Directory Manager password. If you don't
@@ -793,8 +795,7 @@ remember it, try to find it using <code>grep</code>: </p>
 
 <p>Once your LDIF looks ok, then use <code>ldapmodify</code> to revert back to
 password authentication:</p>
-<pre><code>/opt/opendj/bin/ldapmodify -h localhost -p 1389 -D &quot;cn=directory manager&quot; -j ~/.pw -f revert.ldif
-/opt/opendj/bin/ldapmodify -h localhost -p 1389 -D &quot;cn=directory manager&quot; -j ~/.pw -f revert.ldif
+<pre><code>root@gluu3-ubuntu:/opt/symas/bin# ./ldapmodify -h localhost -p 1389 -D &quot;cn=directory manager&quot; -j ~/.pw -f revert.ldif
 </code></pre>
 
 <p>If things go wrong, it can leave the sessions in your browser in a bad

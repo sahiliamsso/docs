@@ -22,17 +22,17 @@ Install oxAuth RP? [Yes] :
 Install Passport? [Yes]
 ```
 !!! Login
-    Please log in using the username `admin` and the password from the setup script promtpt e.g `hlE3vzf0hMdD`
+    Please log in using the username `admin` and the password from the setup script promtpt e.g `hlE3vzf0hMdD` or the password entered
 
 If a resolvable DNS host is not used, then it must be added to the hostname of the Operating System  hosts file on the server running the browser.
 
-!!! Note
+!!! warning
     Please remove or encrypt the setup.properties.last file as it contains the clear text passwords for *LDAP, admin user, keystores, and 3DES salt*.
 
 The errors can be found the the `setup_errors.log` file and a detailed step by step installation is found in the `setup.log` file under the `/install/community-edition-setup` folder.
 
 !!! warning
-    Use a FQDN (fully qualified domain name) as hostname and refrain from using 127.0.0.1 as IP address
+    Use a FQDN (fully qualified domain name) as hostname and refrain from using 127.0.0.1 as IP address or usage of private IP is not supported and not recommended.
 
 ### Script Command Line Options
 The `setup.py` script can be used to configure your Gluu Server and to add initial data

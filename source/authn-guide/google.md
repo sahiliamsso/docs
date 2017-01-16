@@ -39,7 +39,7 @@ your Gluu Server, next.
 
 ![image](../img/admin-guide/multi-factor/06-download_json.png)
 
-Move this file to the location `/opt/tomcat/conf/google.json`. The JSON
+Move this file to the location `/etc/gluu/conf/google.json`. The JSON
 file will look something like this example (no... these data are not
 valid credentials!):
 
@@ -71,6 +71,7 @@ The last step is to enable Google+ API's:
 Follow the steps below to configure the certificate authentication in the oxTrust Admin GUI.
 
 1. Go to Manage Custom Scripts
+
 ![custom-script](../img/admin-guide/multi-factor/custom-script.png)
 
 2. Click on the `Add Custom Scritp` button
@@ -80,7 +81,7 @@ Follow the steps below to configure the certificate authentication in the oxTrus
 
 You'll also need to add some custom properties:
 
- * __gplus_client_secrets_file__: `/opt/tomcat/conf/google.json`
+ * __gplus_client_secrets_file__: `/etc/gluu/conf/google.json`
  * __gplus_deployment_type__: enroll
  * __gplus_remote_attributes_list__: email, given_name, family_name, and locale
  * __gplus_local_attributes_list__: uid, mail, givenName, sn, cn, preferredLanguage
@@ -88,23 +89,38 @@ You'll also need to add some custom properties:
 1. __gplus_client_secrets_file__ - It is a mandatory property that holds
    the path to the application configuration file downloaded from Google
    console for application. An example is `/etc/certs/gplus_client_secrets.json`.
-   These are the single steps needed to get it:
-    a) Log into: `https://console.developers.google.com/project`
-    b) Click "Create project" and enter project name
-    c) Open new project "API & auth -> Credentials" menu item in configuration navigation tree
-    d) Click "Add credential" with type "OAuth 2.0 client ID"
-    e) Select "Web application" application type
-    f) Enter "Authorized JavaScript origins". It should be CE server DNS
+
+These are the single steps needed to get it:
+
+a) Log into: `https://console.developers.google.com/project`
+
+b) Click "Create project" and enter project name
+
+c) Open new project "API & auth -> Credentials" menu item in configuration navigation tree
+
+d) Click "Add credential" with type "OAuth 2.0 client ID"
+
+e) Select "Web application" application type
+
+f) Enter "Authorized JavaScript origins". It should be CE server DNS
        name, for example `https://gluu.info`.
-    g) Click "Create" and Click "OK" in next dialog
-    h) Click "Download JSON" in order to download
+
+g) Click "Create" and Click "OK" in next dialog
+
+h) Click "Download JSON" in order to download
        `gplus_client_secrets.json` file.
-    Also it is mandatory to enable Google+ API:
-    a) Log into `https://console.developers.google.com/project`
-    b) Select project and enter project name
-    c) Open new project "API & auth -> API" menu item in configuration navigation tree
-    d) Click "Google+ API"
-    e) Click "Enable API" button
+
+Also it is mandatory to enable Google+ API:
+    
+a) Log into `https://console.developers.google.com/project`
+    
+b) Select project and enter project name
+    
+c) Open new project "API & auth -> API" menu item in configuration navigation tree
+    
+d) Click "Google+ API"
+    
+e) Click "Enable API" button
 
 2. __gplus_deployment_type__ - Specify the deployment mode. It is an
 optional property. If this property isn't specified the script tries to
@@ -184,7 +200,7 @@ default LDAP authentication. You'll have to change the `inum` with the
 `inum` of your installation. You can find it using ldapsearch like this:
 
 ```
-/opt/opendj/bin/ldapsearch -h localhost -p 1389 -D "cn=directory manager" -j ~/.pw -b "ou=appliances,o=gluu" -s one "objectclass=*" inum
+root@gluu3-ubuntu:/opt/symas/bin# ./ldapsearch -h locahost -p 1389 -D "cn=directory manager,o=gluu" -w "{password provided during setup}" -b "ou=appliances,o=gluu" -s one "objectclass=*" inum
 ```
 
 `~/.pw` is a file with your Directory Manager password. If you don't
@@ -198,8 +214,7 @@ Once your LDIF looks ok, then use `ldapmodify` to revert back to
 password authentication:
 
 ```
-/opt/opendj/bin/ldapmodify -h localhost -p 1389 -D "cn=directory manager" -j ~/.pw -f revert.ldif
-/opt/opendj/bin/ldapmodify -h localhost -p 1389 -D "cn=directory manager" -j ~/.pw -f revert.ldif
+root@gluu3-ubuntu:/opt/symas/bin# ./ldapmodify -h localhost -p 1389 -D "cn=directory manager" -j ~/.pw -f revert.ldif
 ```
 
 If things go wrong, it can leave the sessions in your browser in a bad

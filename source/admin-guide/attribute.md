@@ -66,7 +66,7 @@ appear:
   Please see the [oxTrust custom attribute guide](#using-oxtrust) to create the custom attribute in oxTrust.
 
   ## Defining NameID
-  The template file for `NameID` definitions are located in the `attribute-resolver.xml.vm` file under `/opt/tomcat/conf/shibboleth2/`.
+  The template file for `NameID` definitions are located in the `attribute-resolver.xml.vm` file under `/opt/gluu/jetty/identity/conf/shibboleth3/idp/`.
   The example below adds `testcustomattribute` as `NameID` based on UID attribute. The following are put into the `attribute-resolver.xml.vm` file.
 
   * Add declaration for the new attribute
@@ -85,7 +85,15 @@ appear:
                                 nameFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent" />
 </resolver:AttributeDefinition> 
 ```
-* Restart Jetty service
+* Restart identity service using below command
+
+` service identity restart` 
+
+However it is recommended to stop and start service using 
+
+`service identity stop`
+
+`service identity start`
 
 # OpenID Connect Scopes
 

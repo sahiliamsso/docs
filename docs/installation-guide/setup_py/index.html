@@ -641,17 +641,17 @@ Install Passport? [Yes]
 
 <div class="admonition login">
 <p class="admonition-title">Login</p>
-<p>Please log in using the username <code>admin</code> and the password from the setup script promtpt e.g <code>hlE3vzf0hMdD</code></p>
+<p>Please log in using the username <code>admin</code> and the password from the setup script promtpt e.g <code>hlE3vzf0hMdD</code> or the password entered</p>
 </div>
 <p>If a resolvable DNS host is not used, then it must be added to the hostname of the Operating System  hosts file on the server running the browser.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>Please remove or encrypt the setup.properties.last file as it contains the clear text passwords for <em>LDAP, admin user, keystores, and 3DES salt</em>.</p>
 </div>
 <p>The errors can be found the the <code>setup_errors.log</code> file and a detailed step by step installation is found in the <code>setup.log</code> file under the <code>/install/community-edition-setup</code> folder.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Use a FQDN (fully qualified domain name) as hostname and refrain from using 127.0.0.1 as IP address</p>
+<p>Use a FQDN (fully qualified domain name) as hostname and refrain from using 127.0.0.1 as IP address or usage of private IP is not supported and not recommended.</p>
 </div>
 <h3 id="script-command-line-options">Script Command Line Options<a class="headerlink" href="#script-command-line-options" title="Permanent link">#</a></h3>
 <p>The <code>setup.py</code> script can be used to configure your Gluu Server and to add initial data
