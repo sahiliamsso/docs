@@ -214,7 +214,7 @@ Once your LDIF looks ok, then use `ldapmodify` to revert back to
 password authentication:
 
 ```
-root@gluu3-ubuntu:/opt/symas/bin# ./ldapmodify -h localhost -p 1389 -D "cn=directory manager" -j ~/.pw -f revert.ldif
+root@gluu3-ubuntu:/opt/symas/bin# ./ldapmodify -h localhost -p 1389 -D "cn=directory manager,o=gluu" -w "{password provided during setup}" -f revert.ldif
 ```
 
 If things go wrong, it can leave the sessions in your browser in a bad

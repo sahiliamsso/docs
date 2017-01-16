@@ -795,7 +795,7 @@ remember it, try to find it using <code>grep</code>: </p>
 
 <p>Once your LDIF looks ok, then use <code>ldapmodify</code> to revert back to
 password authentication:</p>
-<pre><code>root@gluu3-ubuntu:/opt/symas/bin# ./ldapmodify -h localhost -p 1389 -D &quot;cn=directory manager&quot; -j ~/.pw -f revert.ldif
+<pre><code>root@gluu3-ubuntu:/opt/symas/bin# ./ldapmodify -h localhost -p 1389 -D &quot;cn=directory manager,o=gluu&quot; -w &quot;{password provided during setup}&quot; -f revert.ldif
 </code></pre>
 
 <p>If things go wrong, it can leave the sessions in your browser in a bad
