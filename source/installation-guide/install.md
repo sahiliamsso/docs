@@ -18,7 +18,6 @@ Below are package specific instructions.
 | Add Gluu GPG Key        | `# curl https://repo.gluu.org/ubuntu/gluu-apt.key | apt-key add -` |
 | Update/Clean Repo       | `# apt-get update`                         |
 | Install Gluu Server     | `# apt-get install gluu-server-3.0.0`      |
-| Gluu Server Status      | `# /etc/init.d/gluu-server-3.0.0 status`   |
 
 ### Ubuntu Server 16.04.x
 
@@ -28,7 +27,6 @@ Below are package specific instructions.
 | Add Gluu GPG Key        | `# curl https://repo.gluu.org/ubuntu/gluu-apt.key | apt-key add -` |
 | Update/Clean Repo       | `# apt-get update`                         |
 | Install Gluu Server     | `# apt-get install gluu-server-3.0.0`      |
-| Gluu Server Status      | `# /etc/init.d/gluu-server-3.0.0 status`   |
 
 ### CentOS 6.x
 
@@ -83,32 +81,33 @@ Below are package specific instructions.
 
 **Start the Gluu Server and Login**
 
-The Gluu Server is a chroot container. You must start the container 
-in order to proceed. For Centos 6.x, Red Hat 6.x, Ubuntu 14/16, and 
-Debian 8, use the following command:
+The Gluu Server is a chroot container, which you must start to proceed. 
+
+For Centos 6.x, Red Hat 6.x, Ubuntu 14/16, and Debian 8:
 
 ```
 # service gluu-server-3.0.0 start
 # service gluu-server-3.0.0 login
 ```
 
-For Centos 7.2 and Red Hat 7.2, use `enable` just the first time you
-start the Gluu Server.
+For Centos 7.2 and Red Hat 7.2: 
 
 ```
 # /sbin/gluu-serverd-3.0.0 enable
 # /sbin/gluu-serverd-3.0.0 start
+# /sbin/gluu-serverd-3.0.0 login
 ```
+
+Note: use `enable` just the first time you start the Gluu Server.
 
 ## Step 3
 
 **Run setup.py**
 
-The setup is completed by running the setup script. This performs the 
-last mile of configuration--generates certificates, salt values, 
-and renders the right configuration so you can login to the admin 
-user interface. Note: you must be logged into the Gluu Server chroot 
-container (see Step 2 above). 
+Configuration is completed by running the `setup.py` script. This generates 
+certificates, salt values, and renders configuration files. After
+completion, you're done! Note: you must be logged into the Gluu Server 
+chroot container to run `setup.py` (see Step 2 above). 
 
 ```
 # cd /install/community-edition-setup
@@ -153,6 +152,8 @@ to the Gluu Server.
 	Changing of hostname after installation is not supported. 
 
 #### Uninstallation
+
+Messed something up, and want to try again? No problem, just uninstall! 
 
 For Ubuntu 14/16, and Debian 8:
 
