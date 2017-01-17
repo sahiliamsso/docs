@@ -35,7 +35,7 @@ pages:
             - 'oxPush2-Super Gluu': 'authn-guide/supergluu.md'
             - 'certificate Authentication': 'authn-guide/cert-auth.md'
             - 'Google': 'authn-guide/google.md'
-            - 'Authentication using Custom Script': 'authn-guide/customauthn.md'
+            - 'Custom Script Authentication': 'authn-guide/customauthn.md'
             - 'Passport': 'authn-guide/passport.md'
             - 'HOTP/TOTP': 'authn-guide/otp.md'
         - 'User Management' : 'admin-guide/user-group.md'
