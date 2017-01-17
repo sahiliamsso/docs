@@ -290,7 +290,8 @@ Click `Enable` checkbox at the bottom of the page.
 ![image]
 (../img/admin-guide/user/config-manage-script_check.png)
 
-## User Registration
+**User Registration**
+
 The users can register through the user registration link usually available at `<hostname>/identity/register`.
 
 ![image]

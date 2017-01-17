@@ -14,6 +14,7 @@ markdown_extensions:
      permalink: '#'
 pages:
 - Home: 'index.md'
+- Whats new in 3.0: 'operation/intro.md'
 - Installation Guide:
         - 'Preparing VM': 'installation-guide/index.md'
         - 'Install Gluu Server': 'installation-guide/install.md'
@@ -23,22 +24,18 @@ pages:
 #        - 'Upgrade Gluu Server' : 'upgrade/index.md'
 #        - 'Patch Gluu Server' : 'upgrade/update.md'
         - 'Updating oxTrust': 'upgrade/update-oxtrustwar.md'
-- Operation Guide:
-    - 'Release Changes': 'operation/intro.md'
-#    - 'LDAP Schemas':
-#    - 'LDAP Commands':
 - Administration Guide:
-        - 'Gluu Server UI' : 'admin-guide/oxtrust-ui.md'
-        - 'SSO Protocols' : 'admin-guide/auth-protocol.md'
+        - 'oxTrust admin UI' : 'admin-guide/oxtrust-ui.md'
+#        - 'SSO Protocols' : 'admin-guide/auth-protocol.md'
         - 'Authentication Management' : 'admin-guide/auth-management.md'
         - User Authentication Guide: 
             - 'User Authentication Introduction': 'admin-guide/user-authentications.md'
             - 'U2f': 'authn-guide/U2F.md'
             - 'DUO': 'authn-guide/DUO.md'
             - 'oxPush2-Super Gluu': 'authn-guide/supergluu.md'
-            - 'cert': 'authn-guide/cert-auth.md'
+            - 'certificate Authentication': 'authn-guide/cert-auth.md'
             - 'Google': 'authn-guide/google.md'
-            - 'Twilio SMS': 'authn-guide/twiliosms.md'
+            - 'Authentication using Custom Script': 'authn-guide/customauthn.md'
             - 'Passport': 'authn-guide/passport.md'
             - 'HOTP/TOTP': 'authn-guide/otp.md'
         - 'User Management' : 'admin-guide/user-group.md'
@@ -61,12 +58,12 @@ pages:
         - 'FAQ & Troubleshooting' : 'admin-guide/faq.md'
 - Integration Guide:
 #    - 'Integration in Gluu Server': 'integration/index.md'
-    - 'SAML SP': 'integration/saml-sp.md'
-    - 'OpenIDC RP': 'integration/openidc-rp.md'
+    - 'Shibboleth SP': 'integration/saml-sp.md'
+    - 'Mod auth OpenID': 'integration/openidc-rp.md'
     - 'OXD OAuth2': 'integration/oauth2.md'
     - 'Google SSO': 'integration/google.md'
     - 'Office 365': 'integration/office.md'
-    - 'Hobsons Education Sol': 'integration/hobsons.md'
+#    - 'Hobsons Education Sol': 'integration/hobsons.md'
     - 'Salesforce': 'integration/salesforce.md'
     - 'Dropbox': 'integration/dropbox.md'
 

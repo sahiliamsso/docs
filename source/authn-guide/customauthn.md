@@ -1,5 +1,10 @@
+#Custom Script Authenticaion:
 
-# Twilio SMS Authentication - OTP using custom script
+Gluu offers the feasibility to use tailored scripts with 3rd party authentication providers like Twilio SMS,RESTCOMM,Plivo,SMSGlobal,INFOBIP, etc. Where the script developed internally using 3rd party API's to get a text or call to authenticate you through to the system. Which provides high level of security to the system.
+
+This section is to explain how to configure custom script based authentication in Gluu. Twilio SMS is used as an example.
+
+## Twilio SMS Authentication - OTP using custom script
 
 ## Writing a Custom Authentication Script
 

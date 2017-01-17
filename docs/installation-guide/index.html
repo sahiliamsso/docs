@@ -172,6 +172,15 @@
           
             
   <li>
+    <a class="" title="Whats new in 3.0" href="../operation/intro/">
+      Whats new in 3.0
+    </a>
+    
+  </li>
+                  
+          
+            
+  <li>
     <span class="section">Installation Guide</span>
     <ul>
       
@@ -274,40 +283,13 @@
           
             
   <li>
-    <span class="section">Operation Guide</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="Release Changes" href="../operation/intro/">
-      Release Changes
-    </a>
-    
-  </li>
-                  
-      
-    </ul>
-  </li>
-                  
-          
-            
-  <li>
     <span class="section">Administration Guide</span>
     <ul>
       
         
   <li>
-    <a class="" title="Gluu Server UI" href="../admin-guide/oxtrust-ui/">
-      Gluu Server UI
-    </a>
-    
-  </li>
-                  
-      
-        
-  <li>
-    <a class="" title="SSO Protocols" href="../admin-guide/auth-protocol/">
-      SSO Protocols
+    <a class="" title="oxTrust admin UI" href="../admin-guide/oxtrust-ui/">
+      oxTrust admin UI
     </a>
     
   </li>
@@ -365,8 +347,8 @@
       
         
   <li>
-    <a class="" title="cert" href="../authn-guide/cert-auth/">
-      cert
+    <a class="" title="certificate Authentication" href="../authn-guide/cert-auth/">
+      certificate Authentication
     </a>
     
   </li>
@@ -383,8 +365,8 @@
       
         
   <li>
-    <a class="" title="Twilio SMS" href="../authn-guide/twiliosms/">
-      Twilio SMS
+    <a class="" title="Authentication using Custom Script" href="../authn-guide/customauthn/">
+      Authentication using Custom Script
     </a>
     
   </li>
@@ -558,8 +540,8 @@
       
         
   <li>
-    <a class="" title="SAML SP" href="../integration/saml-sp/">
-      SAML SP
+    <a class="" title="Shibboleth SP" href="../integration/saml-sp/">
+      Shibboleth SP
     </a>
     
   </li>
@@ -567,8 +549,8 @@
       
         
   <li>
-    <a class="" title="OpenIDC RP" href="../integration/openidc-rp/">
-      OpenIDC RP
+    <a class="" title="Mod auth OpenID" href="../integration/openidc-rp/">
+      Mod auth OpenID
     </a>
     
   </li>
@@ -596,15 +578,6 @@
   <li>
     <a class="" title="Office 365" href="../integration/office/">
       Office 365
-    </a>
-    
-  </li>
-                  
-      
-        
-  <li>
-    <a class="" title="Hobsons Education Sol" href="../integration/hobsons/">
-      Hobsons Education Sol
     </a>
     
   </li>
@@ -664,37 +637,42 @@
 </table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The processor type must be 64 bit for Gluu Server to function</p>
+<p>64 bit operating system is required. No packages are provided for 32 bit.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Insufficient memory may cause unexpected errors and bugs which will require adjusting the resources for a smooth performance.</p>
+<p>The Gluu Server will not start with less then 4GB of RAM. </p>
 </div>
 <h2 id="port">Port<a class="headerlink" href="#port" title="Permanent link">#</a></h2>
-<p>The following ports open for the Gluu Server to run. Please keep the ports open before installing Gluu Server.</p>
+<p>The following ports are open to the Internet by default.</p>
 <table>
 <thead>
 <tr>
 <th>Port Number</th>
 <th>Protocol</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>80</td>
 <td>tcp</td>
+<td>Forwards to 443</td>
 </tr>
 <tr>
 <td>443</td>
 <td>tcp</td>
+<td>Apache HTTPD</td>
 </tr>
 </tbody>
 </table>
 <h2 id="file-descriptor">File Descriptor<a class="headerlink" href="#file-descriptor" title="Permanent link">#</a></h2>
-<p>Gluu recommends setting the <code>file descriptors</code> to 65k for Gluu Server CE. The following steps will help set the <code>file descriptor</code> limit.</p>
+<p>The Gluu Server <strong>requires</strong> setting the <code>file descriptors</code> to 65k. 
+The following steps will help set the <code>file descriptor</code> limit.</p>
 <ul>
 <li>Edit the <code>/etc/security/limits.conf</code> file.</li>
-<li>Add the following lines in the <code>limits.conf</code> file. Please replace the <code>username</code> with the user that will install Gluu Server.</li>
+<li>Add the following lines in the <code>limits.conf</code> file. Please replace 
+the <code>username</code> with the user that will install Gluu Server.</li>
 </ul>
 <pre><code>* soft nofile 65536
 * hard nofile 262144
@@ -790,7 +768,8 @@ after installing Gluu Server.</p>
 <p>IP Address: Do not change the default IP address; just press <code>enter</code>.</p>
 </li>
 <li>
-<p>hostname: Use the DNS name that was copied from the `VM Management Panel.</p>
+<p>hostname: Use the DNS name that clients will use in their browser.
+If you are using a cluster, use the public cluster hostname.</p>
 </li>
 <li>
 <p>Update hostname: Choose to update hostname for Ubuntu, but do not
@@ -852,7 +831,7 @@ GRUB_SERIAL_COMMAND=&quot;serial --speed=19200 --unit=0 --word=8 --parity=no --s
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href=".." title="Home">
+        <a href="../operation/intro/" title="Whats new in 3.0">
           <span class="direction">
             Previous
           </span>
@@ -862,7 +841,7 @@ GRUB_SERIAL_COMMAND=&quot;serial --speed=19200 --unit=0 --word=8 --parity=no --s
             </div>
             <div class="stretch">
               <div class="title">
-                Home
+                Whats new in 3.0
               </div>
             </div>
           </div>
