@@ -6,23 +6,26 @@ Gluu Server Community Edition (CE) resource allocation depends on the backend da
 |       2       |       4GB     |       40GB            |		64 Bit       |
 
 !!! warning
-    The processor type must be 64 bit for Gluu Server to function
+    64 bit operating system is required. No packages are provided for 32 bit.
 !!! note
-    Insufficient memory may cause unexpected errors and bugs which will require adjusting the resources for a smooth performance.
+    The Gluu Server will not start with less then 4GB of RAM. 
 
 ## Port
-The following ports open for the Gluu Server to run. Please keep the ports open before installing Gluu Server.
+The following ports are open to the Internet by default.
 
-|       Port Number     |       Protocol        |
-|-----------------------|-----------------------|
-|       80              |       tcp             |
-|       443             |       tcp             |
+|       Port Number     |       Protocol        |   Notes          |
+|-----------------------|-----------------------|------------------|
+|       80              |       tcp             | Forwards to 443  |
+|       443             |       tcp             | Apache HTTPD     |
+
 
 ## File Descriptor
-Gluu recommends setting the `file descriptors` to 65k for Gluu Server CE. The following steps will help set the `file descriptor` limit.
+The Gluu Server **requires** setting the `file descriptors` to 65k. 
+The following steps will help set the `file descriptor` limit.
 
 * Edit the `/etc/security/limits.conf` file.
-* Add the following lines in the `limits.conf` file. Please replace the `username` with the user that will install Gluu Server.
+* Add the following lines in the `limits.conf` file. Please replace 
+the `username` with the user that will install Gluu Server.
 
 ```
 * soft nofile 65536
@@ -103,7 +106,8 @@ after installing Gluu Server.
 
 * IP Address: Do not change the default IP address; just press `enter`.
 
-* hostname: Use the DNS name that was copied from the `VM Management Panel.
+* hostname: Use the DNS name that clients will use in their browser.
+If you are using a cluster, use the public cluster hostname.
 
 * Update hostname: Choose to update hostname for Ubuntu, but do not
   change if you are running CentOS.
