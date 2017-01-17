@@ -20,18 +20,18 @@ Here are some of the reasons we made this change
    aligns with our strategy to deploy each application in its own 
    container.
 
-## OpenDj Vs OpenLDAP
+## OpenLDAP replaces OpenDJ
 
-Gluu uses LDAP for persistence. While we will continue to support 
-several LDAP servers, we will now ship with OpenLDAP. Here are a few
-reasons we made that decision.
+Gluu uses LDAP for persistence. We will continue to support 
+several LDAP servers, but we will now ship with OpenLDAP. Below are a few
+reasons.
 
  - OpenLDAP has better license, and Symas (the company behind OpenLDAP),
    has a clear commitment to free open source software.
  - After OpenLDAP LMDB backend is super fast and crash-resistant 
- - Less impact on Java Garbage collection.
+ - Tired of fighting with Java garbage collection.
  - Affordable support options from Symas.
- - Proxy Capabilities: Using OpenLDAP Gold, which is a commercial 
+ - Proxy Capabilities: using OpenLDAP Gold, which is a commercial 
    distribution from Symas, we can break data into different replicated 
    topologies, and use the proxy to route operations. Using this strategy
    we can increase the write performance of the ldap service. 
@@ -44,9 +44,11 @@ reasons we made that decision.
 
 ## New Features
 
- - Passport.js component makes over 300 websites for social login. See
-   the [Passport](../authn-guide/passport.md) docs page for more information.
- - One Time Password authentication: Using any standard HOTP or TOTP OATH 
+ - Passport.js component makes it easy to use over 300 websites for 
+   social login. See the [Passport](../authn-guide/passport.md) docs 
+   page for more information.
+ - One Time Password authentication: You asked for it! Now users can 
+   authenticate using any standard HOTP or TOTP OATH 
    software, like [Google Authenticator](https://support.google.com/accounts/answer/1066447?hl=en).
- - Centralized logging, useful for clusters.
+ - Centralized logging--useful for clustered deployments.
  - Improved audit logging capabilities for OAuth 2.0
