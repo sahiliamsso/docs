@@ -44,7 +44,7 @@ pages:
 #       - 'Self-Services for Users' : 'admin-guide/self-service.md'
         - 'OpenID Clients' : 'admin-guide/clients.md'
         - 'SAML SSO' : 'admin-guide/saml.md'
-        - 'OAuth2 Grants' : 'admin-guide/oauth2.md'
+#        - 'OAuth2 Grants' : 'admin-guide/oauth2.md'
         - 'OpenID Connect' : 'admin-guide/openid-connect.md'
         - 'UMA' : 'admin-guide/uma.md'
         - 'Attribute Management' : 'admin-guide/attribute.md'

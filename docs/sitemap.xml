@@ -94,12 +94,6 @@
     </url>
         
     <url>
-     <loc>/admin-guide/oauth2/</loc>
-     <lastmod>2017-01-17</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>/admin-guide/openid-connect/</loc>
      <lastmod>2017-01-17</lastmod>
      <changefreq>daily</changefreq>
