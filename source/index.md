@@ -52,7 +52,7 @@ SugarCRM, SuiteCRM, Roundcube, Shopify, Kong and many more are being
 added! Next on the list are MatterMost, RocketChat, NextCloud, and 
 Liferay.
 
-# Support
+### Support
 
 We are committed to free community support, just register and post your 
 questions on our [Support site](https://support.gluu.org). All community
@@ -61,7 +61,7 @@ manner. Private support, guaranteed response times, and consultative
 support are available to organizations who purchase a contract. For
 more information, see [our website](gluu.org/pricing).
 
-# License
+### License
 
 Gluu's open source software is 
 [MIT License](http://opensource.org/licenses/MIT) license. The licenses 
