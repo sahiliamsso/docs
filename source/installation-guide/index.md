@@ -1,59 +1,64 @@
 # Preparing VM for Gluu Server Installation
-Gluu Server Community Edition (CE) resource allocation depends on the backend data size. The requirements below are a bare minimum for Gluu CE to function properly. It is strongly recommended to allocate more resource for bigger backend data size.
 
-|CPU Unit       |       RAM     |       Disk Space      | Processor Type|
-|---------------|---------------|-----------------------|-------------------------|
-|       2       |       4GB     |       40GB            |		64 Bit       |
+Gluu Server Community Edition (CE) has the following **minimum**
+requirements. 
+
+|CPU Unit  |    RAM     |   Disk Space      | Processor Type |
+|----------|------------|-------------------|----------------|
+|       2  |    4GB     |   40GB            |  64 Bit        |
 
 !!! warning
-    64 bit operating system is required. No packages are provided for 32 bit.
-!!! note
-    The Gluu Server will not start with less then 4GB of RAM. 
+    Don't not post on the support site if you are not 
+    meeting all the above requirements!
 
-## Port
+### Ports
+
 The following ports are open to the Internet by default.
 
 |       Port Number     |       Protocol        |   Notes          |
 |-----------------------|-----------------------|------------------|
 |       80              |       tcp             | Forwards to 443  |
 |       443             |       tcp             | Apache HTTPD     |
+|       22              |       tcp             | ssh              |
 
 
-## File Descriptor
+## File Descriptors
+
 The Gluu Server **requires** setting the `file descriptors` to 65k. 
-The following steps will help set the `file descriptor` limit.
+Follow these steps or research how to do this on your Linux platform.
 
-* Edit the `/etc/security/limits.conf` file.
-* Add the following lines in the `limits.conf` file. Please replace 
-the `username` with the user that will install Gluu Server.
+* Add the following lines in the `/etc/security/limits.conf` file.
 
 ```
 * soft nofile 65536
 * hard nofile 262144
 ```
 
-* Edit the `/etc/pam.d/login` by adding the line:
+* Add the following lines to `/etc/pam.d/login`
 ```
 session required pam_limits.so
 ```
-* Use the system file limit to increase the file descriptor limit to 65535. The system file limit is set in `/proc/sys/fs/file-max`.
+
+* Increase the file descriptor limit to 65535. The system file limit 
+is set in `/proc/sys/fs/file-max`.
 ```
-echo 65535 > /proc/sys/fs/file-max
+# echo 65535 > /proc/sys/fs/file-max
 ```
 
-* Use the `ulimit` command to set the file descriptor limit to the hard limit specified in `/etc/security/limits.conf`.
+* Use the `ulimit` command to set the file descriptor limit to the hard 
+limit specified in `/etc/security/limits.conf`.
 ```
-ulimit -n unlimited
+# ulimit -n unlimited
 ```
+
 * Restart your system.
-
-## Cloud Specific Instructions
 
 ### Amazon AWS
 
-Amazon AWS provides a public and private IP address to its clouds. While
+Amazon AWS instances provide a public and private IP address. While
 running the `/install/community-edition-setup/setup.py` script, use the
-Private IP address.
+Private IP address. Also, use a hostname other then the long default
+hostname that Amazon provides. Update your DNS or hosts files accordingly.
 
 ### Microsoft Azure
 
@@ -64,9 +69,11 @@ addresses each time the server is started.
 #### Setting up VM
 1. Log into Windows Azure Administrative Panel
 
-2. Click on `Virtual Machines` tab, and click `Create a Virtual Machine` link
+2. Click on `Virtual Machines` tab, and click `Create a Virtual Machine` 
+link
 
-3. From the menu, choose `Compute` --> `Virtual Machine` --> `From Gallery` branch.
+3. From the menu, choose `Compute` --> `Virtual Machine` --> `From Gallery` 
+branch.
 
 4. Choose Ubuntu Server 14.04 LTS or CentOS 6.7. Remember to set selinux
    to permissive if you choose CentOS.
@@ -74,18 +81,16 @@ addresses each time the server is started.
 5. Provide a name for the VM in the `Virtual Machine Name` field and use
 `Standard` for `Tier`.
 
-6. Select at least `A2` variant equipped with 3.5GB RAM in the `Size`
-dropdown menu.
+6. Select a server with at least 4GB RAM in the `Size` dropdown menu.
 
-7. Provide an username to connect via ssh, and define an according
-   access password, or upload a certificate for an authentification
-   without passwords. Then, click `Next`.
+7. Provide a username/password to connect via ssh and upload a
+   ssh certificate. Click `Next`.
 
 8. Create a new cloud service and select `None` for `Availability Set`
    option.
         * Endpoints Section: This is where the port forwarding is set so
       that the internal IP address could be selectively reachable from
-      the outside world. By default, only ssh tcp port 22 is there. The
+      the outside world. By default, only tcp /22 is there for ssh. The
       public ports for http and https (tcp ports 80 and 443) have to be
       added and mapped to the same private ports. If the cloud mappings
       are flagged conflicting, proceed without setting them. Remember to
@@ -97,27 +102,16 @@ dropdown menu.
 10. Go to the `Dashboard` tab of VM Management Panel and copy the `DNS
     Name`. This is the name that is used to access the Gluu Server.
 
-11. SSH into the VM and install the Gluu Server. See our [Installation Guide](./install.md) for
-    installation instructions.
+11. You should now be able to ssh to the server and proceed with the 
+    installation.
 
-#### Setup.py Configuration
-This section describes what to put in the prompt when `setup.py` is run
-after installing Gluu Server.
-
-* IP Address: Do not change the default IP address; just press `enter`.
-
-* hostname: Use the DNS name that clients will use in their browser.
-If you are using a cluster, use the public cluster hostname.
-
-* Update hostname: Choose to update hostname for Ubuntu, but do not
-  change if you are running CentOS.
-        * For CentOS, manually update the file `/etc/sysconfig/networking`, and add the full DNS name.
-
-* Now the chosen DNS name can be used to access the Gluu Server.
 
 ### Linode VM
 
-The Linode Virtual Machines (VM) use a custom kernel which is not supported by Gluu Server, therefore the kernel must be updated before Gluu Server can be installed in Linode VM. The following steps will guide you through kernel update in the Linode VM.
+The Linode Virtual Machines (VM) use a custom kernel which is not 
+supported by Gluu Server, therefore the kernel must be updated before 
+Gluu Server can be installed in Linode VM. The following steps will 
+guide you through kernel update in the Linode VM.
 
 * Check for the current version of the kernel. If the output contains `-Linode`, then proceed
 ```
