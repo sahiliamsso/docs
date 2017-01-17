@@ -59,7 +59,7 @@ pages:
 - Integration Guide:
 #    - 'Integration in Gluu Server': 'integration/index.md'
     - 'Shibboleth SP': 'integration/saml-sp.md'
-    - 'Mod auth OpenID': 'integration/openidc-rp.md'
+    - 'Mod_auth_OpenID': 'integration/openidc-rp.md'
     - 'OXD OAuth2': 'integration/oauth2.md'
     - 'Google SSO': 'integration/google.md'
     - 'Office 365': 'integration/office.md'

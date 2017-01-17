@@ -98,7 +98,13 @@ Cache Refresh related information such as status, primary failure, etc., is avai
         2016-07-16 17:18:17,740 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) There are '2,002' entries after removal '0' entries 
 
 ## Log Levels
-Gluu Server logs use the log4j logging levels which can be changed in the `log4j.xml` file.
+Gluu Server logs use the log4j2 logging levels which can be changed in the `log4j2.xml` file.
+`log4j2.xml` can be found in below path
+
+`/opt/jetty-9.3/temp/jetty-localhost-8082-identity.war-_identity-any-8516765662711672787.dir`
+
+And also the same file can be found in all incorporated Gluu apps, i.e oxauth, asimba, idp, oxauth-rp and identity
+
 The available logging levels are :
 
 |Level|Description|
