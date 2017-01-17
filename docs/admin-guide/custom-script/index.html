@@ -635,12 +635,13 @@ destroy a script. All scripts are stored in LDAP in the
 <p>The script manager reloads scripts automatically without needing to
 restart the application once <code>oxRevision</code> is increased.</p>
 <h2 id="interception-script-logs">Interception Script Logs<a class="headerlink" href="#interception-script-logs" title="Permanent link">#</a></h2>
-<p>The log files regarding interception scripts are not stored in the
-<code>wrapper.log</code> file. The logs are separated according to the module they
+<p>The log files regarding interception scripts are stored in the
+<code>oxauth.log</code> file. The logs are separated according to the module they
 affect. The oxAuth custom script logs are stored in <code>oxauth_script.log</code>
 and the oxTrust custom script logs are stored in the
 <code>oxtrust_script.log</code>. Please refer to these log files for any errors in
 the interception scripts or following the workflow of the script.</p>
+<p>More details on Logs can be found in <a href="../logs/">Log Management</a></p>
 <h1 id="person-authentication">Person Authentication<a class="headerlink" href="#person-authentication" title="Permanent link">#</a></h1>
 <p><strong>For a list of pre-written, open source Gluu authentication scripts, view our <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations">server integrations</a></strong></p>
 <p>An authentication script enables you to customize the user
