@@ -1,234 +1,180 @@
-# Install Gluu Server
-Gluu Server CE is shipped in packages prepared for Ubuntu, CentOS, RHEL and Debian. The package installation follows the general procedure of adding the repo followed by the addition of RPM GPG key and finally installing with the `apt-get` or `yum install` command.
+# Installation 
 
-## Ubuntu
-### Ubuntu Server 14.04
-The following commands will install Gluu Server `chroot`
+Gluu releases packages for Ubuntu, CentOS, RHEL and Debian. The 
+installation procedure is similar across all the distributions: 
+(1) Add the Gluu repository, (2) install the package, (3) start 
+the Gluu Server and login to the container, (4) run `setup.py`.
+Below are package specific instructions.
 
-|       Command Description     |               Trusty Commands         |
-|-------------------------------|---------------------------------------|
-|       Add Gluu Repository     | # echo "deb https://repo.gluu.org/ubuntu/ trusty main" > /etc/apt/sources.list.d/gluu-repo.list|
-|       Add Gluu GPG Key        | # curl https://repo.gluu.org/ubuntu/gluu-apt.key | apt-key add -|
-|       Update/Clean Repo       | # apt-get update                         |
-|       Install Gluu Server     | # apt-get install gluu-server-3.0.0      |
-|       Gluu Server Status      | # /etc/init.d/gluu-server-3.0.0 status   |
+## Step 1
 
-!!! Note
-	While entering the "deb" command manually, make sure to enter an extra space between "/ubuntu/" and "trusty main". It is recommended to copy and paste the commands.
+**Install Gluu Server Package**
 
-Please see section 2.1.3 to complete installation.
+### Ubuntu Server 14.04.x
 
-### Ubuntu Server 16.04
+| Command Description     |               Trusty Commands         |
+|-------------------------|---------------------------------------|
+| Add Gluu Repository     | `# echo "deb https://repo.gluu.org/ubuntu/ trusty main" > /etc/apt/sources.list.d/gluu-repo.list` |
+| Add Gluu GPG Key        | `# curl https://repo.gluu.org/ubuntu/gluu-apt.key | apt-key add -` |
+| Update/Clean Repo       | `# apt-get update`                         |
+| Install Gluu Server     | `# apt-get install gluu-server-3.0.0`      |
+| Gluu Server Status      | `# /etc/init.d/gluu-server-3.0.0 status`   |
 
-The following commands will install Gluu Server `chroot`
+### Ubuntu Server 16.04.x
 
-|       Command Description     |               Xenial Commands         |
-|-------------------------------|---------------------------------------|
-|       Add Gluu Repository     | # echo "deb https://repo.gluu.org/ubuntu/ xenial main" > /etc/apt/sources.list.d/gluu-repo.list|
-|       Add Gluu GPG Key        | # curl https://repo.gluu.org/ubuntu/gluu-apt.key | apt-key add -|
-|       Update/Clean Repo       | # apt-get update                         |
-|       Install Gluu Server     | # apt-get install gluu-server-3.0.0      |
-|       Gluu Server Status      | # /etc/init.d/gluu-server-3.0.0 status   |
+|  Command Description    |               Xenial Commands         |
+|-------------------------|---------------------------------------|
+| Add Gluu Repository     | `# echo "deb https://repo.gluu.org/ubuntu/ xenial main" > /etc/apt/sources.list.d/gluu-repo.list` |
+| Add Gluu GPG Key        | `# curl https://repo.gluu.org/ubuntu/gluu-apt.key | apt-key add -` |
+| Update/Clean Repo       | `# apt-get update`                         |
+| Install Gluu Server     | `# apt-get install gluu-server-3.0.0`      |
+| Gluu Server Status      | `# /etc/init.d/gluu-server-3.0.0 status`   |
 
-!!! Note
-	While entering the "deb" command manually, make sure to enter an extra space between "/ubuntu/" and "trusty main". It is recommended to copy and paste the commands.
+### CentOS 6.x
 
-
-### Complete Installation
-The setup is completed by running the setup script `setup.py` from the setup folder. The server must be running so that the administrator can log into the chroot environment and run the script.
-
-* Log into Gluu Server `chroot`
-* Run the setup script
-
-!!! Warning
-	While running the setup script, you will be prompted for hostname, please make sure to enter FQDN of the server or hostname of the cluster used.
-	Changing of hostname after installation is not supported.
-
-|       Command Description     |               Trusty & Xenial Commands|
-|-------------------------------|---------------------------------------|
-|       Start Gluu Server       | # /etc/init.d/gluu-server-3.0.0 start    |
-|       Log into Gluu `chroot`  | # /etc/init.d/gluu-server-3.0.0 login    |
-|       Run [Setup Script](./setup_py.md)        | # cd /install/community-edition-setup/ <br/>./setup.py|
-|	Gluu Server Status	| # /etc/init.d/gluu-server-3.0.0 status	|
-
-### Uninstall Gluu Server
-Gluu Server uninstallation follows the same principle as package removal from Ubuntu. The server must be stopped to remove the package.
-
-|       Command Description     |               Trusty & Xenial Commands|
-|-------------------------------|---------------------------------------|
-|       Stop Gluu Server        | # /etc/init.d/gluu-server-3.0.0 stop     |
-|       Uninstall Gluu Server   | # apt-get remove gluu-server-3.0.0       |
-|       Remove backup folder    | # rm -rf /opt/gluu-server-3.0.0*         |
-
-## CentOS
-### CentOS 6.5
-
-The following commands will install Gluu Server `chroot`. The supported versions include 6.6,6.7 and 6.8
-
-|       Command Description     |               CentOS 6.x              |
-|-------------------------------|---------------------------------------|
-|       Add Gluu Repository     | # wget https://repo.gluu.org/centos/Gluu-centos6.repo -O /etc/yum.repos.d/Gluu.repo|
-|       Add Gluu GPG Key        | # wget https://repo.gluu.org/centos/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU|
-|       Import GPG Key          | # rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU|
-|       Update/Clean Repo       | # yum clean all                          |
-|       Install Gluu Server     | # yum install gluu-server-3.0.0          |
+| Command Description     |               CentOS 6.x              |
+|-------------------------|---------------------------------------|
+| Add Gluu Repository     | `# wget https://repo.gluu.org/centos/Gluu-centos6.repo -O /etc/yum.repos.d/Gluu.repo`|
+| Add Gluu GPG Key        | `# wget https://repo.gluu.org/centos/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU`|
+| Import GPG Key          | `# rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU`|
+| Update/Clean Repo       | `# yum clean all`                          |
+| Install Gluu Server     | `# yum install gluu-server-3.0.0`          |
 
 ### CentOS 7.2
-The following commands will install Gluu Server `chroot`
 
+| Command Description     |               CentOS 7.2              |
+|-------------------------|---------------------------------------|
+| Add Gluu Repository     | `# wget https://repo.gluu.org/centos/Gluu-centos7.repo -O /etc/yum.repos.d/Gluu.repo` |
+| Add Gluu GPG Key        | `# wget https://repo.gluu.org/centos/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU` |
+| Import GPG Key          | `# rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU` |
+| Update/Clean Repo       | `# yum clean all`                          |
+| Install Gluu Server     | `# yum install gluu-server-3.0.0`          |
 
-|       Command Description     |               CentOS 7.2              |
+### RHEL 6.x
+
+| Command Description     |               RHEL 6.x              |
 |-------------------------------|---------------------------------------|
-|       Add Gluu Repository     | # wget https://repo.gluu.org/centos/Gluu-centos7.repo -O /etc/yum.repos.d/Gluu.repo|
-|       Add Gluu GPG Key        | # wget https://repo.gluu.org/centos/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU|
-|       Import GPG Key          | # rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU|
-|       Update/Clean Repo       | # yum clean all                          |
-|       Install Gluu Server     | # yum install gluu-server-3.0.0          |
-
-### Complete Installation
-The setup is completed by running the setup script `setup.py` from the setup folder. The server must be running so that the administrator can log into the chroot environment and run the script. The commands differ in CentO 6.x and CentOS 7.2
-
-* Log into Gluu Server `chroot`
-* Run the setup script
-
-!!! Warning
-	While running the setup script, you will be prompted for hostname, please make sure to enter FQDN of the server or hostname of the cluster used.
-
-!!! note:
-	Changing of hostname after installation is not supported.
-
-|       Command Description     |               CentOS 6.x              |
-|-------------------------------|---------------------------------------|
-|       Start Gluu Server       | # service gluu-server-3.0.0 start        |
-|       Log into Gluu `chroot`  | # service gluu-server-3.0.0 login        |
-|       Run [Setup Script](./setup_py.md)        | # cd /install/community-edition-setup/ <br/>./setup.py|
-|       Gluu Server Status      | # service gluu-server-3.0.0 status	|
-
-|       Command Description     |               CentOS 7.2              |
-|-------------------------------|---------------------------------------|
-|       Start Gluu Server       | # /sbin/gluu-serverd-3.0.0 start         |
-|       Log into Gluu `chroot`  | # /sbin/gluu-serverd-3.0.0 login         |
-|       Run [Setup Script](./setup_py.md)        | # cd /install/community-edition-setup/ <br/>./setup.py|
-|       Gluu Server Status      | # /sbin/gluu-serverd-3.0.0 status	|
-
-### Uninstall Gluu Server
-Gluu Server uninstallation follows the same principle as package removal from CentOS. The server must be stopped to remove the package.
-
-|       Command Description     |               CentOS 6.x              |
-|-------------------------------|---------------------------------------|
-|       Stop Gluu Server        | # service gluu-server-3.0.0 stop         |
-|       Uninstall Gluu Server   | # yum remove gluu-server-3.0.0           |
-|       Remove backup folder    | # rm -rf /opt/gluu-server-3.0.0*         |
-
-|       Command Description     |               CentOS 7.2              |
-|-------------------------------|---------------------------------------|
-|       Stop Gluu Server        | # /sbin/gluu-serverd-3.0.0 stop          |
-|       Uninstall Gluu Server   | # yum remove gluu-server-3.0.0           |
-|       Remove backup folder    | # rm -rf /opt/gluu-server-3.0.0*         |
-
-## Red Hat Enterprise Linux (RHEL)
-### RHEL 6.5
-The following commands will install Gluu Server `chroot`. The supported versions include 6.6,6.7 and 6.8
-
-|       Command Description     |               RHEL 6.x              |
-|-------------------------------|---------------------------------------|
-|       Add Gluu Repository     | # wget https://repo.gluu.org/centos/Gluu-centos6.repo -O /etc/yum.repos.d/Gluu.repo|
-|       Add Gluu GPG Key        | # wget https://repo.gluu.org/centos/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU|
-|       Import GPG Key          | # rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU|
-|       Update/Clean Repo       | # yum clean all                          |
-|       Install Gluu Server     | # yum install gluu-server-3.0.0          |
+| Add Gluu Repository     | `# wget https://repo.gluu.org/centos/Gluu-centos6.repo -O /etc/yum.repos.d/Gluu.repo` |
+| Add Gluu GPG Key        | `# wget https://repo.gluu.org/centos/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU` |
+| Import GPG Key          | `# rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU` |
+| Update/Clean Repo       | `# yum clean all`                          |
+| Install Gluu Server     | `# yum install gluu-server-3.0.0`          |
 
 ### RHEL 7.2
-The following commands will install Gluu Server `chroot`
 
+| Command Description     |               RHEL 7                  |
+|-------------------------|---------------------------------------|
+| Add Gluu Repository     | `# wget https://repo.gluu.org/rhel/Gluu-rhel7.repo -O /etc/yum.repos.d/Gluu.repo` |
+| Add Gluu GPG Key        | `# wget https://repo.gluu.org/rhel/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU` |
+| Import GPG Key          | `# rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU` |
+| Update/Clean Repo       | `# yum clean all`                          |
+| Install Gluu Server     | `# yum install gluu-server-3.0.0`          |
 
-|       Command Description     |               RHEL 7                  |
-|-------------------------------|---------------------------------------|
-|       Add Gluu Repository     | # wget https://repo.gluu.org/rhel/Gluu-rhel7.repo -O /etc/yum.repos.d/Gluu.repo|
-|       Add Gluu GPG Key        | # wget https://repo.gluu.org/rhel/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU|
-|       Import GPG Key          | # rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU|
-|       Update/Clean Repo       | # yum clean all                          |
-|       Install Gluu Server     | # yum install gluu-server-3.0.0          |
+### Debian 8 (Jessie)
 
-### Complete Installation
-The setup is completed by running the setup script `setup.py` from the setup folder. The commands are different in RHEL 6.x and RHEL 7
+| Command Description     |               Jessie Commands         |
+|-------------------------|---------------------------------------|
+| Add Gluu Repository     | `# echo "deb https://repo.gluu.org/debian/ stable main" > /etc/apt/sources.list.d/gluu-repo.list`|
+| Add Gluu GPG Key        | `# curl https://repo.gluu.org/debian/gluu-apt.key | apt-key add -` |
+| Update/Clean Repo       | `# apt-get update`                         |
+| Install Gluu Server     | `# apt-get install gluu-server-3.0.0`      |
 
-* Log into Gluu Server `chroot`
-* Run the setup script
+## Step 2
+
+**Start the Gluu Server and Login**
+
+The Gluu Server is a chroot container. You must start the container 
+in order to proceed. For Centos 6.x, Red Hat 6.x, Ubuntu 14/16, and 
+Debian 8, use the following command:
+
+```
+# service gluu-server-3.0.0 start
+# service gluu-server-3.0.0 login
+```
+
+For Centos 7.2 and Red Hat 7.2, use `enable` just the first time you
+start the Gluu Server.
+
+```
+# /sbin/gluu-serverd-3.0.0 enable
+# /sbin/gluu-serverd-3.0.0 start
+```
+
+## Step 3
+
+**Run setup.py**
+
+The setup is completed by running the setup script. This performs the 
+last mile of configuration--generates certificates, salt values, 
+and renders the right configuration so you can login to the admin 
+user interface. Note: you must be logged into the Gluu Server chroot 
+container (see Step 2 above). 
+
+```
+# cd /install/community-edition-setup
+# ./setup.py
+```
+
+You will be prompted to answer some questions. Just hit `Enter` to
+accept the default value specified in square brackets. The following
+table should help you answer the questions correctly.
+
+| Question                |  Explanation                               |
+|-------------------------|--------------------------------------------|
+| Enter IP Address | Used primarily by Apache HTTPD for the [Listen](https://httpd.apache.org/docs/2.4/bind.html) directive|
+| Enter hostname | Internet-facing hostname, used to generate certificates and metadata. **Don't use an IP address or localhost here** |
+| Enter your city or locality | Used to generate X.509 certificates |
+| Enter your state or province two letter code | Used to generate X.509 certificates |
+| Enter two letter Country Code | Used to generate X.509 certificates |
+| Enter Organization Name | Used to generate X.509 certificates |
+| Enter email address for support at your organization | Used to generate X.509 certificates | 
+| Optional: enter password for oxTrust and LDAP superuser | Used as the LDAP directory manager password, and for the default admin user for oxTrust |
+| Install oxAuth OAuth2 Authorization Server | Required |
+| Install oxTrust Admin UI | Required |
+| Install LDAP Server | Required |
+| Install Apache HTTPD Server | Required |
+| Install Shibboleth SAML IDP | Optional: install only if you want outbound SAML |
+| Install Asimba SAML Proxy | Optional: install only if you are supporting SAML from other domains' IDPs. |
+| Install CAS | Deprecated: install only if you have existing CAS apps |
+| Install oxAuth RP | OpenID Connect test client: recommended for test enviornments |
+| Install Passport | Component used for social login |
+
+After answering these questions, `setup.py` will show you your 
+selections, and ask you if you want to continue. 
+
+The easiest place to go wrong is with the first two questions. Don't 
+use `localhost` for either the IP address or hostname. And use a real
+hostname--you can always manage via host file entries even if you don't 
+want to mess with DNS for testing. If you are deploying a cluster, use
+the hostname of the cluster--that is used by the clients connecting
+to the Gluu Server.
 
 !!! Warning
-	While running the setup script, you will be prompted for hostname, please make sure to enter FQDN of the server or hostname of the cluster used.
+	Changing of hostname after installation is not supported. 
 
-!!! note:
-	Changing of hostname after installation is not supported.
-	
-|       Command Description     |               RHEL 6.x                |
-|-------------------------------|---------------------------------------|
-|       Start Gluu Server       | # service gluu-server-3.0.0 start        |
-|       Log into Gluu `chroot`  | # service gluu-server-3.0.0 login        |
-|       Run [Setup Script](./setup_py.md)        | # cd /install/community-edition-setup/ <br/>./setup.py|
+#### Uninstallation
 
-|       Command Description     |               RHEL 7                  |
-|-------------------------------|---------------------------------------|
-|       Start Gluu Server       | # /sbin/gluu-serverd-3.0.0 start         |
-|       Log into Gluu `chroot`  | # /sbin/gluu-serverd-3.0.0 login         |
-|       Run [Setup Script](./setup_py.md)        | # cd /install/community-edition-setup/ <br/>./setup.py|
+For Ubuntu 14/16, and Debian 8:
 
-### Uninstall Gluu Server
-Gluu Server uninstallation follows the same principle as package removal from RHEL. The sevrer must be stopped to remove the package.
+```
+# service gluu-server-3.0.0 stop
+# apt-get remove gluu-server-3.0.0
+# rm -rf /opt/gluu-server-3.0.0
+```
 
-|       Command Description     |               RHEL 6.x                |
-|-------------------------------|---------------------------------------|
-|       Stop Gluu Server        | # service gluu-server-3.0.0 stop         |
-|       Uninstall Gluu Server   | # yum remove gluu-server-3.0.0           |
-|       Remove backup folder    | # rm -rf /opt/gluu-server-3.0.0*         |
+For Centos 6.x, Red Hat 6.x, 
 
-|       Command Description     |               RHEL 7                  |
-|-------------------------------|---------------------------------------|
-|       Stop Gluu Server        | # /sbin/gluu-serverd-3.0.0 stop          |
-|       Uninstall Gluu Server   | # yum remove gluu-server-3.0.0           |
-|       Remove backup folder    | # rm -rf /opt/gluu-server-3.0.0*         |
+```
+# service gluu-server-3.0.0 stop
+# yum remove gluu-server-3.0.0
+# rm -rf /opt/gluu-server-3.0.0
+```
 
-## Debian 8 (Jessie)
-The following commands will install Gluu Server `chroot`
+For Centos 7.2 and Red Hat 7.2:
 
-|       Command Description     |               Jessie Commands         |
-|-------------------------------|---------------------------------------|
-|       Add Gluu Repository     | # echo "deb https://repo.gluu.org/debian/ stable main" > /etc/apt/sources.list.d/gluu-repo.list|
-|       Add Gluu GPG Key        | # curl https://repo.gluu.org/debian/gluu-apt.key | apt-key add -|
-|       Update/Clean Repo       | # apt-get update                         |
-|       Install Gluu Server     | # apt-get install gluu-server-3.0.0      |
-
-### Complete Installation
-The setup is completed by running the setup script `setup.py` from the setup folder.
-* Log into Gluu Server `chroot`
-* Run the setup script
-
-!!! Warning
-	While running the setup script, you will be prompted for hostname, please make sure to enter FQDN of the server or hostname of the cluster used.
-
-!!! note:
-	Changing of hostname after installation is not supported.
-	
-|       Command Description     |               Jessie Commands |
-|-------------------------------|---------------------------------------|
-|       Start Gluu Server       | # /etc/init.d/gluu-server-3.0.0 start    |
-|       Log into Gluu `chroot`  | # /etc/init.d/gluu-server-3.0.0 login    |
-|       Run [Setup Script](./setup_py.md)        | # cd /install/community-edition-setup/ <br/>./setup.py|
-
-### Uninstall Gluu Server
-Gluu Server uninstallation follows the same principle as package removal from Ubuntu. The server must be stopped to remove the package.
-
-|       Command Description     |               Jessie Commands         |
-|-------------------------------|---------------------------------------|
-|       Stop Gluu Server        | # /etc/init.d/gluu-server-3.0.0 stop     |
-|       Uninstall Gluu Server   | # apt-get remove gluu-server-3.0.0       |
-|       Remove backup folder    | # rm -rf /opt/gluu-server-3.0.0*         |
-
-### Why hostname is recommended on Gluu instead of IP?
-
-There are few reasons why Gluu recommends to use Hostname instead of IP address while installing Gluu. And here are few points.
-
-- In form post, the form contains the hostname, therefore using private IP address will not work and will cause issues.
-- Even if a proxy is used to re-writes, using IP address will not work and not supported, in such cases the certificate's CN are written incorrectly and will not work on the browser.
-- If in case, Load Balancer requires a https(ssl) certificate with private IP, that could be done by replacing only apache ssl certificates with the private IP address.
+```
+# /sbin/gluu-serverd-3.0.0 disable
+# /sbin/gluu-serverd-3.0.0 stop
+# yum remove gluu-server-3.0.0 
+# rm -rf /opt/gluu-server-3.0.0
+```
