@@ -599,7 +599,7 @@ the container.</li>
 </tr>
 <tr>
 <td>Add Gluu GPG Key</td>
-<td><code>"# curl https://repo.gluu.org/ubuntu/gluu-apt.key| apt-key add -"</code></td>
+<td><code># curl https://repo.gluu.org/ubuntu/gluu-apt.key {pipe} apt-key add -</code></td>
 </tr>
 <tr>
 <td>Update/Clean Repo</td>
@@ -611,6 +611,10 @@ the container.</li>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>{pipe} represents the character "|".</p>
+</div>
 <h3 id="ubuntu-server-1604x">Ubuntu Server 16.04.x<a class="headerlink" href="#ubuntu-server-1604x" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -622,11 +626,15 @@ the container.</li>
 <tbody>
 <tr>
 <td>Add Gluu Repository</td>
-<td><code># echo "deb https://repo.gluu.org/ubuntu/ xenial main" &gt; /etc/apt/sources.list.d/gluu-repo.list</code></td>
+<td>`# echo "deb https://repo.gluu.org/ubuntu/ xenial main" &gt;</td>
+</tr>
+<tr>
+<td>/etc/apt/sources.list.d/gluu-repo.list`</td>
+<td></td>
 </tr>
 <tr>
 <td>Add Gluu GPG Key</td>
-<td><code># curl https://repo.gluu.org/ubuntu/gluu-apt.key | apt-key add -</code></td>
+<td><code># curl https://repo.gluu.org/ubuntu/gluu-apt.key {pipe} apt-key add -</code></td>
 </tr>
 <tr>
 <td>Update/Clean Repo</td>
@@ -638,6 +646,10 @@ the container.</li>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>{pipe} represents the character "|".</p>
+</div>
 <h3 id="centos-6x">CentOS 6.x<a class="headerlink" href="#centos-6x" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -777,7 +789,7 @@ the container.</li>
 </tr>
 <tr>
 <td>Add Gluu GPG Key</td>
-<td><code># curl https://repo.gluu.org/debian/gluu-apt.key | apt-key add -</code></td>
+<td><code># curl https://repo.gluu.org/debian/gluu-apt.key {pipe} apt-key add -</code></td>
 </tr>
 <tr>
 <td>Update/Clean Repo</td>
@@ -789,6 +801,10 @@ the container.</li>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>{pipe} represents the character "|".</p>
+</div>
 <h2 id="step-2">Step 2<a class="headerlink" href="#step-2" title="Permanent link">#</a></h2>
 <p><strong>Start the Gluu Server and Login</strong></p>
 <p>The Gluu Server is a chroot container, which you must start to proceed. </p>
@@ -803,7 +819,10 @@ the container.</li>
 # /sbin/gluu-serverd-3.0.0 login
 </code></pre>
 
-<p>Note: use <code>enable</code> just the first time you start the Gluu Server.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>use <code>enable</code> just the first time you start the Gluu Server.</p>
+</div>
 <h2 id="step-3">Step 3<a class="headerlink" href="#step-3" title="Permanent link">#</a></h2>
 <p><strong>Run setup.py</strong></p>
 <p>Configuration is completed by running the <code>setup.py</code> script. This generates 

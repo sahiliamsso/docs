@@ -17,18 +17,25 @@ the container.
 | Command Description     |               Trusty Commands         |
 |-------------------------|---------------------------------------|
 | Add Gluu Repository     | `# echo "deb https://repo.gluu.org/ubuntu/ trusty main" > /etc/apt/sources.list.d/gluu-repo.list` |
-| Add Gluu GPG Key        | `"# curl https://repo.gluu.org/ubuntu/gluu-apt.key| apt-key add -"` |
+| Add Gluu GPG Key        | `# curl https://repo.gluu.org/ubuntu/gluu-apt.key {pipe} apt-key add -` |
 | Update/Clean Repo       | `# apt-get update`                         |
 | Install Gluu Server     | `# apt-get install gluu-server-3.0.0`      |
 
+!!! Note
+    {pipe} represents the character "|".
+    
 ### Ubuntu Server 16.04.x
 
 |  Command Description    |               Xenial Commands         |
 |-------------------------|---------------------------------------|
-| Add Gluu Repository     | `# echo "deb https://repo.gluu.org/ubuntu/ xenial main" > /etc/apt/sources.list.d/gluu-repo.list` |
-| Add Gluu GPG Key        | `# curl https://repo.gluu.org/ubuntu/gluu-apt.key | apt-key add -` |
+| Add Gluu Repository     | `# echo "deb https://repo.gluu.org/ubuntu/ xenial main" > 
+/etc/apt/sources.list.d/gluu-repo.list` |
+| Add Gluu GPG Key        | `# curl https://repo.gluu.org/ubuntu/gluu-apt.key {pipe} apt-key add -` |
 | Update/Clean Repo       | `# apt-get update`                         |
 | Install Gluu Server     | `# apt-get install gluu-server-3.0.0`      |
+
+!!! Note
+    {pipe} represents the character "|".
 
 ### CentOS 6.x
 
@@ -45,7 +52,7 @@ the container.
 | Command Description     |               CentOS 7.2              |
 |-------------------------|---------------------------------------|
 | Add Gluu Repository     | `# wget https://repo.gluu.org/centos/Gluu-centos7.repo -O /etc/yum.repos.d/Gluu.repo` |
-| Add Gluu GPG Key        | `# wget https://repo.gluu.org/centos/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU` |
+| Add Gluu GPG Key        | `# wget https://repo.gluu.org/centos/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU`|
 | Import GPG Key          | `# rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU` |
 | Update/Clean Repo       | `# yum clean all`                          |
 | Install Gluu Server     | `# yum install gluu-server-3.0.0`          |
@@ -55,7 +62,7 @@ the container.
 | Command Description     |               RHEL 6.x              |
 |-------------------------------|---------------------------------------|
 | Add Gluu Repository     | `# wget https://repo.gluu.org/centos/Gluu-centos6.repo -O /etc/yum.repos.d/Gluu.repo` |
-| Add Gluu GPG Key        | `# wget https://repo.gluu.org/centos/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU` |
+| Add Gluu GPG Key        | `# wget https://repo.gluu.org/centos/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU`|
 | Import GPG Key          | `# rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU` |
 | Update/Clean Repo       | `# yum clean all`                          |
 | Install Gluu Server     | `# yum install gluu-server-3.0.0`          |
@@ -65,7 +72,7 @@ the container.
 | Command Description     |               RHEL 7                  |
 |-------------------------|---------------------------------------|
 | Add Gluu Repository     | `# wget https://repo.gluu.org/rhel/Gluu-rhel7.repo -O /etc/yum.repos.d/Gluu.repo` |
-| Add Gluu GPG Key        | `# wget https://repo.gluu.org/rhel/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU` |
+| Add Gluu GPG Key        | `# wget https://repo.gluu.org/rhel/RPM-GPG-KEY-GLUU -O /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU`|
 | Import GPG Key          | `# rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-GLUU` |
 | Update/Clean Repo       | `# yum clean all`                          |
 | Install Gluu Server     | `# yum install gluu-server-3.0.0`          |
@@ -75,9 +82,12 @@ the container.
 | Command Description     |               Jessie Commands         |
 |-------------------------|---------------------------------------|
 | Add Gluu Repository     | `# echo "deb https://repo.gluu.org/debian/ stable main" > /etc/apt/sources.list.d/gluu-repo.list`|
-| Add Gluu GPG Key        | `# curl https://repo.gluu.org/debian/gluu-apt.key | apt-key add -` |
+| Add Gluu GPG Key        | `# curl https://repo.gluu.org/debian/gluu-apt.key {pipe} apt-key add -` |
 | Update/Clean Repo       | `# apt-get update`                         |
 | Install Gluu Server     | `# apt-get install gluu-server-3.0.0`      |
+
+!!! Note
+    {pipe} represents the character "|".
 
 ## Step 2
 
@@ -100,7 +110,8 @@ For Centos 7.2 and Red Hat 7.2:
 # /sbin/gluu-serverd-3.0.0 login
 ```
 
-Note: use `enable` just the first time you start the Gluu Server.
+!!! Note:
+    use `enable` just the first time you start the Gluu Server.
 
 ## Step 3
 
