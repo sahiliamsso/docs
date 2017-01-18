@@ -2,8 +2,11 @@
 
 Gluu publishes packages for Ubuntu, CentOS, RHEL and Debian. The 
 installation procedure is similar across all the distributions: 
-(1) install the package, (2) start the Gluu Server and login to 
-the container and (3) run `setup.py`. 
+
+1. install the package. 
+2. start the Gluu Server and login to 
+the container.
+3. run `setup.py`. 
 
 ## Step 1
 

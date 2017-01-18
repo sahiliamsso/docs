@@ -203,13 +203,10 @@ The Authorization Endpoint performs Authentication of the end-user. This is done
  
 - query
 
-<table border="1">
-        <tr>
-            <th>Parameter|Required|Description|Data Type|
-|response_mode|false|Informs the Authorization Server of the mechanism to be used for returning parameters from the Authorization Endpoint. This use of this parameter is NOT RECOMMENDED when the Response Mode that would be requested is the default mode specified for the Response Type.|string|
-        </tr>
-</table>
-
+|Parameter|Required|Description|Data Type|response_mode|false|string|
+Informs the Authorization Server of the mechanism to be used for returning parameters from the Authorization Endpoint. 
+This use of this parameter is NOT RECOMMENDED when the Response Mode that would be requested
+is the default mode specified for the Response Type.
 #### Response
 [JSON[Response]](#JSON[Response])
 

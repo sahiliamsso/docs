@@ -197,22 +197,15 @@
         <ul>
           
             <li class="anchor">
-              <a title="Port" href="#port">
-                <b>Port</b>
+              <a title="Ports" href="#ports">
+                <b>Ports</b>
               </a>
             </li>
             
           
             <li class="anchor">
-              <a title="File Descriptor" href="#file-descriptor">
-                <b>File Descriptor</b>
-              </a>
-            </li>
-            
-          
-            <li class="anchor">
-              <a title="Cloud Specific Instructions" href="#cloud-specific-instructions">
-                <b>Cloud Specific Instructions</b>
+              <a title="File Descriptors" href="#file-descriptors">
+                <b>File Descriptors</b>
               </a>
             </li>
             
@@ -252,19 +245,6 @@
       
         
   <li>
-    <a class="" title="Setup Script Options" href="setup_py/">
-      Setup Script Options
-    </a>
-    
-  </li>
-                  
-      
-    </ul>
-  </li>
-                  
-          
-            
-  <li>
     <span class="section">Upgrade/Patch Guide</span>
     <ul>
       
@@ -274,6 +254,10 @@
       Updating oxTrust
     </a>
     
+  </li>
+                  
+      
+    </ul>
   </li>
                   
       
@@ -468,8 +452,8 @@
       
         
   <li>
-    <a class="" title="Gluu Server APIs" href="../admin-guide/api/">
-      Gluu Server APIs
+    <a class="" title="Certificate Management" href="../admin-guide/certificate/">
+      Certificate Management
     </a>
     
   </li>
@@ -477,8 +461,26 @@
       
         
   <li>
-    <a class="" title="SCIM API Configuration" href="../admin-guide/scim/">
-      SCIM API Configuration
+    <a class="" title="FAQ & Troubleshooting" href="../admin-guide/faq/">
+      FAQ & Troubleshooting
+    </a>
+    
+  </li>
+                  
+      
+    </ul>
+  </li>
+                  
+          
+            
+  <li>
+    <span class="section">Reference</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Gluu Server APIs" href="../admin-guide/api/">
+      Gluu Server APIs
     </a>
     
   </li>
@@ -504,8 +506,8 @@
       
         
   <li>
-    <a class="" title="Certificate Management" href="../admin-guide/certificate/">
-      Certificate Management
+    <a class="" title="SCIM API Configuration" href="../admin-guide/scim/">
+      SCIM API Configuration
     </a>
     
   </li>
@@ -513,80 +515,8 @@
       
         
   <li>
-    <a class="" title="FAQ & Troubleshooting" href="../admin-guide/faq/">
-      FAQ & Troubleshooting
-    </a>
-    
-  </li>
-                  
-      
-    </ul>
-  </li>
-                  
-          
-            
-  <li>
-    <span class="section">Integration Guide</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="Shibboleth SP" href="../integration/saml-sp/">
-      Shibboleth SP
-    </a>
-    
-  </li>
-                  
-      
-        
-  <li>
-    <a class="" title="Mod_auth_OpenID" href="../integration/openidc-rp/">
-      Mod_auth_OpenID
-    </a>
-    
-  </li>
-                  
-      
-        
-  <li>
-    <a class="" title="OXD OAuth2" href="../integration/oauth2/">
-      OXD OAuth2
-    </a>
-    
-  </li>
-                  
-      
-        
-  <li>
-    <a class="" title="Google SSO" href="../integration/google/">
-      Google SSO
-    </a>
-    
-  </li>
-                  
-      
-        
-  <li>
-    <a class="" title="Office 365" href="../integration/office/">
-      Office 365
-    </a>
-    
-  </li>
-                  
-      
-        
-  <li>
-    <a class="" title="Salesforce" href="../integration/salesforce/">
-      Salesforce
-    </a>
-    
-  </li>
-                  
-      
-        
-  <li>
-    <a class="" title="Dropbox" href="../integration/dropbox/">
-      Dropbox
+    <a class="" title="Setup Script Options" href="setup_py/">
+      Setup Script Options
     </a>
     
   </li>
@@ -607,7 +537,8 @@
         <div class="wrapper">
           
           <h1 id="preparing-vm-for-gluu-server-installation">Preparing VM for Gluu Server Installation<a class="headerlink" href="#preparing-vm-for-gluu-server-installation" title="Permanent link">#</a></h1>
-<p>Gluu Server Community Edition (CE) resource allocation depends on the backend data size. The requirements below are a bare minimum for Gluu CE to function properly. It is strongly recommended to allocate more resource for bigger backend data size.</p>
+<p>Gluu Server Community Edition (CE) has the following <strong>minimum</strong>
+requirements. </p>
 <table>
 <thead>
 <tr>
@@ -628,13 +559,10 @@
 </table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>64 bit operating system is required. No packages are provided for 32 bit.</p>
+<p>Post or open tickets on support site only if, all above requirements
+are met!</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The Gluu Server will not start with less then 4GB of RAM. </p>
-</div>
-<h2 id="port">Port<a class="headerlink" href="#port" title="Permanent link">#</a></h2>
+<h3 id="ports">Ports<a class="headerlink" href="#ports" title="Permanent link">#</a></h3>
 <p>The following ports are open to the Internet by default.</p>
 <table>
 <thead>
@@ -655,46 +583,51 @@
 <td>tcp</td>
 <td>Apache HTTPD</td>
 </tr>
+<tr>
+<td>22</td>
+<td>tcp</td>
+<td>ssh</td>
+</tr>
 </tbody>
 </table>
-<h2 id="file-descriptor">File Descriptor<a class="headerlink" href="#file-descriptor" title="Permanent link">#</a></h2>
+<h2 id="file-descriptors">File Descriptors<a class="headerlink" href="#file-descriptors" title="Permanent link">#</a></h2>
 <p>The Gluu Server <strong>requires</strong> setting the <code>file descriptors</code> to 65k. 
-The following steps will help set the <code>file descriptor</code> limit.</p>
+Follow these steps or research how to do this on your Linux platform.</p>
 <ul>
-<li>Edit the <code>/etc/security/limits.conf</code> file.</li>
-<li>Add the following lines in the <code>limits.conf</code> file. Please replace 
-the <code>username</code> with the user that will install Gluu Server.</li>
+<li>Add the following lines in the <code>/etc/security/limits.conf</code> file.</li>
 </ul>
 <pre><code>* soft nofile 65536
 * hard nofile 262144
 </code></pre>
 
 <ul>
-<li>Edit the <code>/etc/pam.d/login</code> by adding the line:</li>
+<li>Add the following lines to <code>/etc/pam.d/login</code></li>
 </ul>
 <pre><code>session required pam_limits.so
 </code></pre>
 
 <ul>
-<li>Use the system file limit to increase the file descriptor limit to 65535. The system file limit is set in <code>/proc/sys/fs/file-max</code>.</li>
+<li>Increase the file descriptor limit to 65535. The system file limit 
+is set in <code>/proc/sys/fs/file-max</code>.</li>
 </ul>
-<pre><code>echo 65535 &gt; /proc/sys/fs/file-max
+<pre><code># echo 65535 &gt; /proc/sys/fs/file-max
 </code></pre>
 
 <ul>
-<li>Use the <code>ulimit</code> command to set the file descriptor limit to the hard limit specified in <code>/etc/security/limits.conf</code>.</li>
+<li>Use the <code>ulimit</code> command to set the file descriptor limit to the hard 
+limit specified in <code>/etc/security/limits.conf</code>.</li>
 </ul>
-<pre><code>ulimit -n unlimited
+<pre><code># ulimit -n unlimited
 </code></pre>
 
 <ul>
 <li>Restart your system.</li>
 </ul>
-<h2 id="cloud-specific-instructions">Cloud Specific Instructions<a class="headerlink" href="#cloud-specific-instructions" title="Permanent link">#</a></h2>
 <h3 id="amazon-aws">Amazon AWS<a class="headerlink" href="#amazon-aws" title="Permanent link">#</a></h3>
-<p>Amazon AWS provides a public and private IP address to its clouds. While
+<p>Amazon AWS instances provide a public and private IP address. While
 running the <code>/install/community-edition-setup/setup.py</code> script, use the
-Private IP address.</p>
+Private IP address. Also, use a hostname other then the long default
+hostname that Amazon provides. Update your DNS or hosts files accordingly.</p>
 <h3 id="microsoft-azure">Microsoft Azure<a class="headerlink" href="#microsoft-azure" title="Permanent link">#</a></h3>
 <p>Accessing the Gluu Server on Azure can be a little bit tricky because of
 the Public/Private IP. Azure assigns a new Public/Private IP
@@ -705,10 +638,12 @@ addresses each time the server is started. </p>
 <p>Log into Windows Azure Administrative Panel</p>
 </li>
 <li>
-<p>Click on <code>Virtual Machines</code> tab, and click <code>Create a Virtual Machine</code> link</p>
+<p>Click on <code>Virtual Machines</code> tab, and click <code>Create a Virtual Machine</code> 
+link</p>
 </li>
 <li>
-<p>From the menu, choose <code>Compute</code> --&gt; <code>Virtual Machine</code> --&gt; <code>From Gallery</code> branch.</p>
+<p>From the menu, choose <code>Compute</code> --&gt; <code>Virtual Machine</code> --&gt; <code>From Gallery</code> 
+branch.</p>
 </li>
 <li>
 <p>Choose Ubuntu Server 14.04 LTS or CentOS 6.7. Remember to set selinux
@@ -719,20 +654,18 @@ addresses each time the server is started. </p>
 <code>Standard</code> for <code>Tier</code>.</p>
 </li>
 <li>
-<p>Select at least <code>A2</code> variant equipped with 3.5GB RAM in the <code>Size</code>
-dropdown menu.</p>
+<p>Select a server with at least 4GB RAM in the <code>Size</code> dropdown menu.</p>
 </li>
 <li>
-<p>Provide an username to connect via ssh, and define an according
-   access password, or upload a certificate for an authentification
-   without passwords. Then, click <code>Next</code>.</p>
+<p>Provide a username/password to connect via ssh and upload a
+   ssh certificate. Click <code>Next</code>.</p>
 </li>
 <li>
 <p>Create a new cloud service and select <code>None</code> for <code>Availability Set</code>
    option.
         * Endpoints Section: This is where the port forwarding is set so
       that the internal IP address could be selectively reachable from
-      the outside world. By default, only ssh tcp port 22 is there. The
+      the outside world. By default, only tcp /22 is there for ssh. The
       public ports for http and https (tcp ports 80 and 443) have to be
       added and mapped to the same private ports. If the cloud mappings
       are flagged conflicting, proceed without setting them. Remember to
@@ -747,32 +680,15 @@ dropdown menu.</p>
     Name</code>. This is the name that is used to access the Gluu Server.</p>
 </li>
 <li>
-<p>SSH into the VM and install the Gluu Server. See our <a href="install/">Installation Guide</a> for
-    installation instructions.</p>
+<p>You should now be able to ssh to the server and proceed with the 
+    installation.</p>
 </li>
 </ol>
-<h4 id="setuppy-configuration">Setup.py Configuration<a class="headerlink" href="#setuppy-configuration" title="Permanent link">#</a></h4>
-<p>This section describes what to put in the prompt when <code>setup.py</code> is run
-after installing Gluu Server.</p>
-<ul>
-<li>
-<p>IP Address: Do not change the default IP address; just press <code>enter</code>.</p>
-</li>
-<li>
-<p>hostname: Use the DNS name that clients will use in their browser.
-If you are using a cluster, use the public cluster hostname.</p>
-</li>
-<li>
-<p>Update hostname: Choose to update hostname for Ubuntu, but do not
-  change if you are running CentOS.
-        * For CentOS, manually update the file <code>/etc/sysconfig/networking</code>, and add the full DNS name.</p>
-</li>
-<li>
-<p>Now the chosen DNS name can be used to access the Gluu Server.</p>
-</li>
-</ul>
 <h3 id="linode-vm">Linode VM<a class="headerlink" href="#linode-vm" title="Permanent link">#</a></h3>
-<p>The Linode Virtual Machines (VM) use a custom kernel which is not supported by Gluu Server, therefore the kernel must be updated before Gluu Server can be installed in Linode VM. The following steps will guide you through kernel update in the Linode VM.</p>
+<p>The Linode Virtual Machines (VM) use a custom kernel which is not 
+supported by Gluu Server, therefore the kernel must be updated before 
+Gluu Server can be installed in Linode VM. The following steps will 
+guide you through kernel update in the Linode VM.</p>
 <ul>
 <li>Check for the current version of the kernel. If the output contains <code>-Linode</code>, then proceed</li>
 </ul>
