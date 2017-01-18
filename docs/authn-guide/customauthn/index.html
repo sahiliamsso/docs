@@ -329,13 +329,12 @@
               </a>
             </li>
             
-          
-            <li class="anchor">
+              <li class="anchor">
               <a title="Writing a Custom Authentication Script" href="#writing-a-custom-authentication-script">
-                <b>Writing a Custom Authentication Script</b>
+                  <font size=2><i>Writing a Custom Authentication Script</i></font>
               </a>
             </li>
-            
+             
           
             <li class="anchor">
               <a title="Custom Script Location" href="#custom-script-location">
@@ -343,13 +342,12 @@
               </a>
             </li>
             
-          
-            <li class="anchor">
+              <li class="anchor">
               <a title="Suggested Development Environment" href="#suggested-development-environment">
-                <b>Suggested Development Environment</b>
+                  <font size=2><i>Suggested Development Environment</i></font>
               </a>
             </li>
-            
+             
           
             <li class="anchor">
               <a title="Samples and Documentation" href="#samples-and-documentation">
@@ -616,7 +614,7 @@
 <p>Gluu offers the feasibility to use tailored scripts with 3rd party authentication providers like Twilio SMS,RESTCOMM,Plivo,SMSGlobal,INFOBIP, etc. Where the script developed internally using 3rd party API's to get a text or call to authenticate you through to the system. Which provides high level of security to the system.</p>
 <p>This section is to explain how to configure custom script based authentication in Gluu. Twilio SMS is used as an example.</p>
 <h2 id="twilio-sms-authentication-otp-using-custom-script">Twilio SMS Authentication - OTP using custom script<a class="headerlink" href="#twilio-sms-authentication-otp-using-custom-script" title="Permanent link">#</a></h2>
-<h2 id="writing-a-custom-authentication-script">Writing a Custom Authentication Script<a class="headerlink" href="#writing-a-custom-authentication-script" title="Permanent link">#</a></h2>
+<h3 id="writing-a-custom-authentication-script">Writing a Custom Authentication Script<a class="headerlink" href="#writing-a-custom-authentication-script" title="Permanent link">#</a></h3>
 <p>In this document we walk through the steps of writing a script to implement OTP authentication using <a href="http://twilio.com">Twilio</a> to send an SMS code for a two-step out-of-band authentication mechanism.</p>
 <p>At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, you can review the completed Twilio custom authentication script <a href="../twilio2FA.py">here</a>. </p>
 <p>Fields in Custom Script:</p>
@@ -667,40 +665,57 @@
 </tbody>
 </table>
 <h2 id="custom-script-location">Custom Script Location<a class="headerlink" href="#custom-script-location" title="Permanent link">#</a></h2>
-<p>Custom scripts can either be inserted directly into the Gluu Server interface or you can specify a path to the script. Specifying a path will make script development easier. There is also an option to revert back to a working script if the script is faulty or needs further enhancements. The administrator can select <code>File</code> from the Script Location Type in oxTrust and the file input box will be displayed:</p>
+<p>Custom scripts can either be inserted directly into the Gluu Server 
+interface or you can specify a path to the script. Specifying a path will 
+make script development easier. There is also an option to revert back to 
+a working script if the script is faulty or needs further enhancements. 
+The administrator can select <code>File</code> from the Script Location Type in 
+oxTrust and the file input box will be displayed:</p>
 <p><img alt="image" src="../../img/admin-guide/multi-factor/script_upload_box.png" /></p>
-<p>The 'LDAP' option in the Script Location Type can be used to store the script in the LDAP tree once the development is complete. Remember that selecting the <code>LDAP</code> method requires the script to be copied in the input box that appears upon LDAP selection:</p>
+<p>The 'LDAP' option in the Script Location Type can be used to store the 
+script in the LDAP tree once the development is complete. Remember that 
+selecting the <code>LDAP</code> method requires the script to be copied in the input 
+box that appears upon LDAP selection:</p>
 <p><img alt="image" src="../../img/admin-guide/multi-factor/script_in_ldap.png" /></p>
-<h2 id="suggested-development-environment">Suggested Development Environment<a class="headerlink" href="#suggested-development-environment" title="Permanent link">#</a></h2>
-<p>Gluu Server custom scripts are written in <a href="http://www.jython.org/">Jython</a>. It is recommended to use Eclipse for coding purposes.</p>
+<h4 id="suggested-development-environment">Suggested Development Environment<a class="headerlink" href="#suggested-development-environment" title="Permanent link">#</a></h4>
+<p>Gluu Server custom scripts are written in <a href="http://www.jython.org/">Jython</a>. 
+It is recommended to use Eclipse for coding purposes.</p>
 <p>Now, create some files:
 - A Python file for your script
 - One or more XHTML files if you have a custom form for your authentication
-- One or more XML files (you'll need one for each XHTML file) that provide some information to the Tomcat server about how to display the XHTML file.</p>
+- One or more XML files (you'll need one for each XHTML file) that provide 
+some information to the Tomcat server about how to display the XHTML file.</p>
 <h2 id="samples-and-documentation">Samples and Documentation<a class="headerlink" href="#samples-and-documentation" title="Permanent link">#</a></h2>
 <p>There are many good examples of authentication interception scripts checked into Gluu's<br />
-<a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations">oxAuth integrations folder</a>. Also, the respective <code>XHTML</code> and <code>XML</code> files are checked in to the <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth">auth folder</a>.
+<a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations">oxAuth integrations folder</a>. 
+Also, the respective <code>XHTML</code> and <code>XML</code> files are checked in to the <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth">auth folder</a>.
 The interfaces for the authentication interception can be found in the <a href="http://www.gluu.org/docs/reference/interception-scripts/#authentication">Gluu Documentation</a>.</p>
 <p>We used the <a href="https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/basic/BasicExternalAuthenticator.py">Basic Script</a> 
-as a template. The <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth/wikid">Wikid forms</a> were also used as a template since it is required to pass the value of the "code" obtained from Twilio to step 2 of the authentication in order to validate and authenticate the user.</p>
+as a template. The <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth/wikid">Wikid forms</a> 
+were also used as a template since it is required to pass the value of the "code" 
+obtained from Twilio to step 2 of the authentication in order to validate and authenticate the user.</p>
 <p>The <a href="https://github.com/GluuFederation/oxAuth/blob/master/Server/integrations/wikid/WikidExternalAuthenticator.py">Wikid authentication</a> script was also looked upon quite a bit for examples on how to process the form.</p>
 <h2 id="implement-methods-using-twilio-sms">Implement methods - Using Twilio SMS<a class="headerlink" href="#implement-methods-using-twilio-sms" title="Permanent link">#</a></h2>
-<p>Simple example of how to add a custom template and how to pass values between 2 steps of authentication and save the value temporarily for authentication of a user. Our Sample 
+<p>Simple example of how to add a custom template and how to pass values between 
+2 steps of authentication and save the value temporarily for authentication of a user. Our Sample 
 <a href="../twilio2FA.py">Twilio script</a></p>
 <ol>
 <li>Login to Gluu UI</li>
 <li>Navigate to "Configuration" on the Menu panel to the left</li>
 <li>Select Manage Custom Scripts</li>
 <li>Scroll to the end of the page and click on "Add custom script configuration"</li>
-<li>Enter the Name, Description, Programming Language (Python will be by default, may be in future Java or JavaSCript will be added)</li>
+<li>Enter the Name, Description, Programming Language (Python will be by default, 
+may be in future Java or JavaSCript will be added)</li>
 <li>Select the Level needed to set the security level to.</li>
 <li>Select Location Type from the script to be executed.</li>
 <li>Select the Usage Type required for the authentication.</li>
-<li>Define Custom property which is provided by Twilio and can be noted down from Twilio account page of the signed up user. </li>
+<li>Define Custom property which is provided by Twilio and can be noted down from 
+Twilio account page of the signed up user. </li>
 <li>Click on Enabled to enable the added custom script.</li>
 <li>Scroll down to the end of the update and click on Update button to submit the form. </li>
 <li>After the custom script is added, click on Manage Authenticaion on the Menu Panel to left. </li>
-<li>Select "Default Authentication Method" tab and change the oxTrust authentication mode to "Twilio" or "Name of the script" from the drop down.</li>
+<li>Select "Default Authentication Method" tab and change the oxTrust authentication mode 
+to "Twilio" or "Name of the script" from the drop down.</li>
 </ol>
 <p><strong>Note: All three below custom properties are mandatory for the Twilio Two-Factor Authentication script to work</strong></p>
 <ul>

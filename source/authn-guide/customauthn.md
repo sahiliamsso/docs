@@ -6,7 +6,7 @@ This section is to explain how to configure custom script based authentication i
 
 ## Twilio SMS Authentication - OTP using custom script
 
-## Writing a Custom Authentication Script
+### Writing a Custom Authentication Script
 
 In this document we walk through the steps of writing a script to implement OTP authentication using [Twilio](http://twilio.com) to send an SMS code for a two-step out-of-band authentication mechanism.
 
@@ -28,52 +28,69 @@ Fields in Custom Script:
 
 ## Custom Script Location
 
-Custom scripts can either be inserted directly into the Gluu Server interface or you can specify a path to the script. Specifying a path will make script development easier. There is also an option to revert back to a working script if the script is faulty or needs further enhancements. The administrator can select `File` from the Script Location Type in oxTrust and the file input box will be displayed:
+Custom scripts can either be inserted directly into the Gluu Server 
+interface or you can specify a path to the script. Specifying a path will 
+make script development easier. There is also an option to revert back to 
+a working script if the script is faulty or needs further enhancements. 
+The administrator can select `File` from the Script Location Type in 
+oxTrust and the file input box will be displayed:
 
 ![image](/img/admin-guide/multi-factor/script_upload_box.png)
 
-The 'LDAP' option in the Script Location Type can be used to store the script in the LDAP tree once the development is complete. Remember that selecting the `LDAP` method requires the script to be copied in the input box that appears upon LDAP selection:
+The 'LDAP' option in the Script Location Type can be used to store the 
+script in the LDAP tree once the development is complete. Remember that 
+selecting the `LDAP` method requires the script to be copied in the input 
+box that appears upon LDAP selection:
 
 ![image](/img/admin-guide/multi-factor/script_in_ldap.png)
 
-## Suggested Development Environment
+#### Suggested Development Environment
 
-Gluu Server custom scripts are written in [Jython](http://www.jython.org/). It is recommended to use Eclipse for coding purposes.
+Gluu Server custom scripts are written in [Jython](http://www.jython.org/). 
+It is recommended to use Eclipse for coding purposes.
 
 Now, create some files:
 - A Python file for your script
 - One or more XHTML files if you have a custom form for your authentication
-- One or more XML files (you'll need one for each XHTML file) that provide some information to the Tomcat server about how to display the XHTML file.
+- One or more XML files (you'll need one for each XHTML file) that provide 
+some information to the Tomcat server about how to display the XHTML file.
 
 ## Samples and Documentation
 
 There are many good examples of authentication interception scripts checked into Gluu's  
-[oxAuth integrations folder](https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations). Also, the respective `XHTML` and `XML` files are checked in to the [auth folder](https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth).
+[oxAuth integrations folder](https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations). 
+Also, the respective `XHTML` and `XML` files are checked in to the [auth folder](https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth).
 The interfaces for the authentication interception can be found in the [Gluu Documentation](http://www.gluu.org/docs/reference/interception-scripts/#authentication).
 
 We used the [Basic Script](https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/basic/BasicExternalAuthenticator.py) 
-as a template. The [Wikid forms](https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth/wikid) were also used as a template since it is required to pass the value of the "code" obtained from Twilio to step 2 of the authentication in order to validate and authenticate the user.
+as a template. The [Wikid forms](https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth/wikid) 
+were also used as a template since it is required to pass the value of the "code" 
+obtained from Twilio to step 2 of the authentication in order to validate and authenticate the user.
 
 The [Wikid authentication](https://github.com/GluuFederation/oxAuth/blob/master/Server/integrations/wikid/WikidExternalAuthenticator.py) script was also looked upon quite a bit for examples on how to process the form.
 
 ## Implement methods - Using Twilio SMS
 
-Simple example of how to add a custom template and how to pass values between 2 steps of authentication and save the value temporarily for authentication of a user. Our Sample 
+Simple example of how to add a custom template and how to pass values between 
+2 steps of authentication and save the value temporarily for authentication of a user. Our Sample 
 [Twilio script](./twilio2FA.py)
 
 1. Login to Gluu UI
 2. Navigate to "Configuration" on the Menu panel to the left
 3. Select Manage Custom Scripts
 4. Scroll to the end of the page and click on "Add custom script configuration"
-5. Enter the Name, Description, Programming Language (Python will be by default, may be in future Java or JavaSCript will be added)
+5. Enter the Name, Description, Programming Language (Python will be by default, 
+may be in future Java or JavaSCript will be added)
 6. Select the Level needed to set the security level to.
 7. Select Location Type from the script to be executed.
 8. Select the Usage Type required for the authentication.
-9. Define Custom property which is provided by Twilio and can be noted down from Twilio account page of the signed up user. 
+9. Define Custom property which is provided by Twilio and can be noted down from 
+Twilio account page of the signed up user. 
 10. Click on Enabled to enable the added custom script.
 11. Scroll down to the end of the update and click on Update button to submit the form. 
 12. After the custom script is added, click on Manage Authenticaion on the Menu Panel to left. 
-13. Select "Default Authentication Method" tab and change the oxTrust authentication mode to "Twilio" or "Name of the script" from the drop down.
+13. Select "Default Authentication Method" tab and change the oxTrust authentication mode 
+to "Twilio" or "Name of the script" from the drop down.
 
 **Note: All three below custom properties are mandatory for the Twilio Two-Factor Authentication script to work**
 
