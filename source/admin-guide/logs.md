@@ -121,7 +121,8 @@ Gluu Server logs use the log4j2 logging levels which can be changed in the `log4
 
 `/opt/jetty-9.3/temp/jetty-localhost-8082-identity.war-_identity-any-8516765662711672787.dir`
 
-And also the same file can be found in all incorporated Gluu apps, i.e oxauth, asimba, idp, oxauth-rp and identity
+And also the same file can be found in all incorporated Gluu apps, 
+i.e oxauth, asimba, idp, oxauth-rp and identity
 
 The available logging levels are :
 
@@ -134,8 +135,10 @@ The available logging levels are :
 |OFF|No logs are recorded|
 |TRACE|Logs detailed events; more than DEBUG|
 
-The following files define the log levels in Gluu Server. Please edit the file with the levels given above and restart the `jetty` server. 
-The following section is taken from a live Gluu Server `log4j.xml` file showing different log levels for different logs. The changes made this section will reflect in the logs.
+The following files define the log levels in Gluu Server. Please edit the 
+file with the levels given above and restart the `jetty` server. 
+The following section is taken from a live Gluu Server `log4j.xml` file 
+showing different log levels for different logs. The changes made this section will reflect in the logs.
 ```
 <category name="org.xdi.oxauth">
         <priority value="TRACE" />
@@ -166,7 +169,9 @@ The following section is taken from a live Gluu Server `log4j.xml` file showing 
 
 ```
 
-Please restart the specific service after any change in log levels to allow the changes to take effect. Use the following command to restart tomcat:
+Please restart the specific service after any change in log levels to 
+allow the changes to take effect. Use the following command to restart tomcat:
+
 !!! Note
     It is recommended to use OxTrust UI to change the logging levels.
     
@@ -186,11 +191,14 @@ Sometimes it worthy to check system logs like `/var/log/messages`. These logs co
 
 Apache httpd / apache2 logs are available in `/var/log/httpd` or `/var/log/apache2` for Ubuntu.
 
-1. `access_log`: This log contains information about requests coming into the Gluu Server, success status or requests, execution time for any request etc.     
+1. `access_log`: This log contains information about requests coming into the Gluu Server, 
+success status or requests, execution time for any request etc.     
 
-2. `error_log`: This log shows error messages if the web server encounter any issue while processing incoming requests.    
+2. `error_log`: This log shows error messages if the web server encounter any issue while 
+processing incoming requests.    
 
-3. `other_vhosts_access.log`: This log is specific to the Gluu Server setup and those links which are being requested by a user from a web browser. An example below:     
+3. `other_vhosts_access.log`: This log is specific to the Gluu Server setup and those links 
+which are being requested by a user from a web browser. An example below:     
 
         test.gluu.org:443 192.168.201.184 - - [17/Jul/2016:18:25:21 +0000] "GET /index.html HTTP/1.1" 200 13239 "-" "Java/1.7.0_95"
         test.gluu.org:443 192.168.201.1 - - [17/Jul/2016:18:25:56 +0000] "GET / HTTP/1.1" 302 2185 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36"

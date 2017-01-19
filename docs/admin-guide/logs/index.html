@@ -759,7 +759,8 @@ troubleshooting.</li>
 <p>Gluu Server logs use the log4j2 logging levels which can be changed in the <code>log4j2.xml</code> file.
 <code>log4j2.xml</code> can be found in below path</p>
 <p><code>/opt/jetty-9.3/temp/jetty-localhost-8082-identity.war-_identity-any-8516765662711672787.dir</code></p>
-<p>And also the same file can be found in all incorporated Gluu apps, i.e oxauth, asimba, idp, oxauth-rp and identity</p>
+<p>And also the same file can be found in all incorporated Gluu apps, 
+i.e oxauth, asimba, idp, oxauth-rp and identity</p>
 <p>The available logging levels are :</p>
 <table>
 <thead>
@@ -795,8 +796,10 @@ troubleshooting.</li>
 </tr>
 </tbody>
 </table>
-<p>The following files define the log levels in Gluu Server. Please edit the file with the levels given above and restart the <code>jetty</code> server. 
-The following section is taken from a live Gluu Server <code>log4j.xml</code> file showing different log levels for different logs. The changes made this section will reflect in the logs.</p>
+<p>The following files define the log levels in Gluu Server. Please edit the 
+file with the levels given above and restart the <code>jetty</code> server. 
+The following section is taken from a live Gluu Server <code>log4j.xml</code> file 
+showing different log levels for different logs. The changes made this section will reflect in the logs.</p>
 <pre><code>&lt;category name=&quot;org.xdi.oxauth&quot;&gt;
         &lt;priority value=&quot;TRACE&quot; /&gt;
     &lt;/category&gt;
@@ -826,6 +829,8 @@ The following section is taken from a live Gluu Server <code>log4j.xml</code> fi
 
 </code></pre>
 
+<p>Please restart the specific service after any change in log levels to 
+allow the changes to take effect. Use the following command to restart tomcat:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It is recommended to use OxTrust UI to change the logging levels.</p>
@@ -846,13 +851,16 @@ The following section is taken from a live Gluu Server <code>log4j.xml</code> fi
 <p>Apache httpd / apache2 logs are available in <code>/var/log/httpd</code> or <code>/var/log/apache2</code> for Ubuntu.</p>
 <ol>
 <li>
-<p><code>access_log</code>: This log contains information about requests coming into the Gluu Server, success status or requests, execution time for any request etc.     </p>
+<p><code>access_log</code>: This log contains information about requests coming into the Gluu Server, 
+success status or requests, execution time for any request etc.     </p>
 </li>
 <li>
-<p><code>error_log</code>: This log shows error messages if the web server encounter any issue while processing incoming requests.    </p>
+<p><code>error_log</code>: This log shows error messages if the web server encounter any issue while 
+processing incoming requests.    </p>
 </li>
 <li>
-<p><code>other_vhosts_access.log</code>: This log is specific to the Gluu Server setup and those links which are being requested by a user from a web browser. An example below:     </p>
+<p><code>other_vhosts_access.log</code>: This log is specific to the Gluu Server setup and those links 
+which are being requested by a user from a web browser. An example below:     </p>
 <pre><code>test.gluu.org:443 192.168.201.184 - - [17/Jul/2016:18:25:21 +0000] "GET /index.html HTTP/1.1" 200 13239 "-" "Java/1.7.0_95"
 test.gluu.org:443 192.168.201.1 - - [17/Jul/2016:18:25:56 +0000] "GET / HTTP/1.1" 302 2185 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36"
 test.gluu.org:443 192.168.201.1 - - [17/Jul/2016:18:25:56 +0000] "GET /identity/ HTTP/1.1" 200 583 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36"
