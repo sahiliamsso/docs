@@ -741,6 +741,21 @@ Cache Refresh related information such as status, primary failure, etc., is avai
 </li>
 </ol>
 <h2 id="log-levels">Log Levels<a class="headerlink" href="#log-levels" title="Permanent link">#</a></h2>
+<p><strong>Logging Levels configuration through OxTrust UI</strong></p>
+<p>These logging levels can also be set in oxTrust UI.</p>
+<ol>
+<li>Login to oxTrust UI as <code>admin</code> or with an administrator account.</li>
+<li>Navigate to Configuration &gt; JSON Configuration &gt; OxTrust Configuration Tab.
+<img alt="JSONConfig" src="../../img/admin-guide/logs/json_config.png" /></li>
+<li>Scroll to the very bottom of the page.</li>
+<li>Click on the <code>logging level</code> and select the levels from the drop down.
+<img alt="logginglevel" src="../../img/admin-guide/logs/logginglevel.png" /></li>
+<li>Default value will be set to <code>Default</code>, you can change the level as per your requirement for extensive
+troubleshooting.</li>
+<li>Click on <code>Save Configuration</code> to save the configuration.
+<img alt="save" src="../../img/admin-guide/logs/saveconf.png" /></li>
+</ol>
+<p><strong>Changing Log Levels using log4j2.xml</strong></p>
 <p>Gluu Server logs use the log4j2 logging levels which can be changed in the <code>log4j2.xml</code> file.
 <code>log4j2.xml</code> can be found in below path</p>
 <p><code>/opt/jetty-9.3/temp/jetty-localhost-8082-identity.war-_identity-any-8516765662711672787.dir</code></p>
@@ -811,7 +826,10 @@ The following section is taken from a live Gluu Server <code>log4j.xml</code> fi
 
 </code></pre>
 
-<p>Please restart the specific service after any change in log levels to allow the changes to take effect. Use the following command to restart tomcat:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is recommended to use OxTrust UI to change the logging levels.</p>
+</div>
 <h4 id="system-logs">System logs<a class="headerlink" href="#system-logs" title="Permanent link">#</a></h4>
 <ul>
 <li>For Ubuntu: <code>/var/log/syslog</code></li>

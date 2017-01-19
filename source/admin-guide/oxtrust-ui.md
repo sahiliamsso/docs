@@ -1,4 +1,4 @@
-# Gluu Server Administrative Interface
+# OxTrust Administrative Interface
 The administration interface (oxTrust) is accessible from the `hostname` provided in the prompt from the setup script. After the installation is complete, log in to the web-based interface with the username `admin` and the `LDAP superuser` password. 
 
 ## Welcome Page

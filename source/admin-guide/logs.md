@@ -98,6 +98,24 @@ Cache Refresh related information such as status, primary failure, etc., is avai
         2016-07-16 17:18:17,740 INFO  [gluu.oxtrust.ldap.cache.service.CacheRefreshTimer] (pool-1-thread-9) There are '2,002' entries after removal '0' entries 
 
 ## Log Levels
+
+**Logging Levels configuration through OxTrust UI**
+
+These logging levels can also be set in oxTrust UI.
+
+1. Login to oxTrust UI as `admin` or with an administrator account.
+2. Navigate to Configuration > JSON Configuration > OxTrust Configuration Tab.
+![JSONConfig](../img/admin-guide/logs/json_config.png)
+3. Scroll to the very bottom of the page.
+4. Click on the `logging level` and select the levels from the drop down.
+![logginglevel](../img/admin-guide/logs/logginglevel.png)
+5. Default value will be set to `Default`, you can change the level as per your requirement for extensive
+troubleshooting.
+6. Click on `Save Configuration` to save the configuration.
+![save](../img/admin-guide/logs/saveconf.png)
+
+**Changing Log Levels using log4j2.xml**
+
 Gluu Server logs use the log4j2 logging levels which can be changed in the `log4j2.xml` file.
 `log4j2.xml` can be found in below path
 
@@ -149,7 +167,9 @@ The following section is taken from a live Gluu Server `log4j.xml` file showing 
 ```
 
 Please restart the specific service after any change in log levels to allow the changes to take effect. Use the following command to restart tomcat:
-
+!!! Note
+    It is recommended to use OxTrust UI to change the logging levels.
+    
 #### System logs 
 - For Ubuntu: `/var/log/syslog`
 - For RPM based systems: `/var/log/messages`
