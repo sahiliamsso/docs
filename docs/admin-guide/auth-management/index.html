@@ -525,17 +525,52 @@
 <h2 id="manage-ldap-authentication">Manage LDAP Authentication<a class="headerlink" href="#manage-ldap-authentication" title="Permanent link">#</a></h2>
 <p>The <code>Manage Authenticaiton</code> page has two tabs: Manage LDAP Authentication and Default Authentication Method. The screen below shows the autentication management page.</p>
 <p><img alt="manage-auth" src="../../img/admin-guide/auth-management/manage-auth.png" /></p>
-<ul>
-<li>Name: This field contains the name of the authentication server</li>
-<li>Bind DN: The Username for the authentication server (local LDAP/remote LDAP/remote Active Directory) goes here</li>
-<li>Max Connections: This option can be used to define the total number of simultaneous connections allowed for reading local LDAP/remote Active Directory/remote LDAP</li>
-<li>Primary Key: This field contains the primary key to connect to the authentication server (i.e. SAMAccountName/uid/mail etc.)</li>
-<li>Local Primary Key: This field contains the internal LDAP primary key of the Gluu Server. Generally the key is either the <em>uid</em> or the <em>mail</em></li>
-<li>Server: The unique name of the authentication server and port number (i.e. auth.company.org:636) goes here</li>
-<li>Base DN: Add base DNs in this field to allow the Gluu Server to connect and search the LDAP server. Every directory tree should be added separately using the <em>Add Base DN</em> option</li>
-<li>Use SSL: If the authentication server requires a secured port (i.e. 636) then this option should be activated using the check-box</li>
-<li>Deactivate: This button <em>Deactivates/Activates</em> the Gluu Server accessibility for authentication.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>This field contains the name of the authentication server</td>
+</tr>
+<tr>
+<td>Bind DN</td>
+<td>The Username for the authentication server (local LDAP/remote LDAP/remote Active Directory) goes here</td>
+</tr>
+<tr>
+<td>Max Connections</td>
+<td>This option can be used to define the total number of simultaneous connections allowed for reading local LDAP/remote Active Directory/remote LDAP</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>This field contains the primary key to connect to the authentication server (i.e. SAMAccountName/uid/mail etc.)</td>
+</tr>
+<tr>
+<td>Local Primary Key</td>
+<td>This field contains the internal LDAP primary key of the Gluu Server. Generally the key is either the <em>uid</em> or the <em>mail</em></td>
+</tr>
+<tr>
+<td>Server</td>
+<td>The unique name of the authentication server and port number (i.e. auth.company.org:636) goes here</td>
+</tr>
+<tr>
+<td>Base DN</td>
+<td>Add base DNs in this field to allow the Gluu Server to connect and search the LDAP server. Every directory tree should be added separately using the <em>Add Base DN</em> option</td>
+</tr>
+<tr>
+<td>Use SSL</td>
+<td>If the authentication server requires a secured port (i.e. 636) then this option should be activated using the check-box</td>
+</tr>
+<tr>
+<td>Deactivate</td>
+<td>This button <em>Deactivates/Activates</em> the Gluu Server accessibility for authentication.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="default-authentication-method">Default Authentication Method<a class="headerlink" href="#default-authentication-method" title="Permanent link">#</a></h2>
 <p>This allows the Gluu Server administrator to select both the default authentication mode, and level for person authentication. Both modes are set to "Default" until additional authentication mechanisms are enabled via <a href="../custom-script/">custom scripts</a>.</p>
 <p>Gluu Server uses oxAuth as the first step of authentication in all kind of SSO protocols ( OpenID Connect, SAML, CAS )</p>
