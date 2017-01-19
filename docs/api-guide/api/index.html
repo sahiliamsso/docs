@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>Dropbox - Gluu Docs</title>
+        <title>API Introduction - Gluu Docs</title>
       
 <link href="../../assets/stylesheets/font.css" rel="stylesheet">
       
@@ -90,12 +90,16 @@
           <span class="path">
             
               
-                Integration Guide <i class="icon icon-link"></i>
+                Reference <i class="icon icon-link"></i>
+              
+            
+              
+                Gluu API Guide <i class="icon icon-link"></i>
               
             
           </span>
         
-        Dropbox
+        API Introduction
       </div>
     </div>
     <div class="button button-search" role="button" aria-label="Search">
@@ -444,16 +448,38 @@
       
         
   <li>
-    <a class="" title="API Introduction" href="../../api-guide/api/">
+    <a class="current" title="API Introduction" href="./">
       API Introduction
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Path" href="#path">
+                <b>Path</b>
+              </a>
+            </li>
+            
+              <li class="anchor">
+              <a title="Overview" href="#overview">
+                  <font size=2><i>Overview</i></font>
+              </a>
+            </li>
+             
+          
+        </ul>
+      
     
   </li>
                   
       
         
   <li>
-    <a class="" title="OpenID Connect Authorization" href="../../api-guide/openid-connect-authorization/">
+    <a class="" title="OpenID Connect Authorization" href="../openid-connect-authorization/">
       OpenID Connect Authorization
     </a>
     
@@ -511,7 +537,7 @@
       
         
   <li>
-    <a class="" title="Shibboleth SP" href="../saml-sp/">
+    <a class="" title="Shibboleth SP" href="../../integration/saml-sp/">
       Shibboleth SP
     </a>
     
@@ -520,7 +546,7 @@
       
         
   <li>
-    <a class="" title="Mod_auth_OpenID" href="../openidc-rp/">
+    <a class="" title="Mod_auth_OpenID" href="../../integration/openidc-rp/">
       Mod_auth_OpenID
     </a>
     
@@ -529,7 +555,7 @@
       
         
   <li>
-    <a class="" title="OXD OAuth2" href="../oauth2/">
+    <a class="" title="OXD OAuth2" href="../../integration/oauth2/">
       OXD OAuth2
     </a>
     
@@ -538,7 +564,7 @@
       
         
   <li>
-    <a class="" title="Google SSO" href="../google/">
+    <a class="" title="Google SSO" href="../../integration/google/">
       Google SSO
     </a>
     
@@ -547,7 +573,7 @@
       
         
   <li>
-    <a class="" title="Office 365" href="../office/">
+    <a class="" title="Office 365" href="../../integration/office/">
       Office 365
     </a>
     
@@ -556,7 +582,7 @@
       
         
   <li>
-    <a class="" title="Salesforce" href="../salesforce/">
+    <a class="" title="Salesforce" href="../../integration/salesforce/">
       Salesforce
     </a>
     
@@ -565,43 +591,9 @@
       
         
   <li>
-    <a class="current" title="Dropbox" href="./">
+    <a class="" title="Dropbox" href="../../integration/dropbox/">
       Dropbox
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="Custom NameID" href="#custom-nameid">
-                <b>Custom NameID</b>
-              </a>
-            </li>
-            
-              <li class="anchor">
-              <a title="Trust Relationship" href="#trust-relationship">
-                  <font size=2><i>Trust Relationship</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Configure Gluu Server as IdP in Dropbox" href="#configure-gluu-server-as-idp-in-dropbox">
-                  <font size=2><i>Configure Gluu Server as IdP in Dropbox</i></font>
-              </a>
-            </li>
-             
-              <li class="anchor">
-              <a title="Test SSO" href="#test-sso">
-                  <font size=2><i>Test SSO</i></font>
-              </a>
-            </li>
-             
-          
-        </ul>
-      
     
   </li>
                   
@@ -620,117 +612,364 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="dropbox-sso-with-gluu-server">Dropbox SSO with Gluu Server<a class="headerlink" href="#dropbox-sso-with-gluu-server" title="Permanent link">#</a></h1>
-<p>This document is a step-by-step guide to setting up Dropbox SSO in Gluu Server.
-This SSO requires setting a custom <code>nameid</code> called <code>emailnid</code>.</p>
-<h2 id="custom-nameid">Custom NameID<a class="headerlink" href="#custom-nameid" title="Permanent link">#</a></h2>
-<p>Please see <a href="../../admin-guide/attribute/">this doc</a> on how to create custom attributes.</p>
-<p>The new attribute screen should look like the screenshot below
-<img alt="image" src="../../img/integration/emailnid.png" /></p>
-<p>The custom <code>nameid</code> needs to be defined in the <code>attribute-resolver</code> template file.</p>
+          <h1 id="id-generation-api-document">ID Generation API Document<a class="headerlink" href="#id-generation-api-document" title="Permanent link">#</a></h1>
+<p>This document outlines the API for ID Generation for Gluu Server.</p>
+<h2 id="path">Path<a class="headerlink" href="#path" title="Permanent link">#</a></h2>
+<p><code>/id</code></p>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h3>
+<p>The API convention is set as <em>id</em> followed by <em>prefix</em> and <em>type</em> or <code>/id/{prefix}/{type}/</code>.
+Please se the following table to specify what type you are generating. The <code>prefix</code> is used in the 
+inum to make it possible to know the type of object just by looking at the identifier.</p>
+<table>
+<thead>
+<tr>
+<th><code>prefix</code></th>
+<th><code>type</code></th>
+<th><code>description</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0000</td>
+<td>people</td>
+<td>Person object</td>
+</tr>
+<tr>
+<td>0001</td>
+<td>organization</td>
+<td>Organization object</td>
+</tr>
+<tr>
+<td>0002</td>
+<td>appliance</td>
+<td>Appliance object</td>
+</tr>
+<tr>
+<td>0003</td>
+<td>group</td>
+<td>Group object</td>
+</tr>
+<tr>
+<td>0004</td>
+<td>server</td>
+<td>Server object</td>
+</tr>
+<tr>
+<td>0005</td>
+<td>attribute</td>
+<td>User attribute (claim) object</td>
+</tr>
+<tr>
+<td>0006</td>
+<td>tRelationship</td>
+<td>SAML Trust Relationship object</td>
+</tr>
+<tr>
+<td>0008</td>
+<td>client</td>
+<td>OAuth2 Client object</td>
+</tr>
+<tr>
+<td>0009</td>
+<td>scope</td>
+<td>OAuth2 Scope Object</td>
+</tr>
+<tr>
+<td>0010</td>
+<td>uma-resource-set</td>
+<td>UMA Resource Set Object</td>
+</tr>
+<tr>
+<td>0011</td>
+<td>interception-script</td>
+<td>Gluu Server interception script object</td>
+</tr>
+<tr>
+<td>0012</td>
+<td>sector-identifier</td>
+<td>Managed Sector Identifier URI</td>
+</tr>
+</tbody>
+</table>
+<p><strong>generateJsonInum</strong><br/>
+<strong>GET</strong><code>/id/{prefix}/{type}/</code></p>
+<p>Generates ID for given prefix and type.</p>
+<p><strong>URL</strong><br/>
+    http://gluu.org/id/{prefix}/{type}/</p>
+<p><strong>Parameters</strong><br/>
+- path</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+<th>Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prefix</td>
+<td>true</td>
+<td>Prefix for id. E.g. if prefix is @!1111 and server will generate id: !0000 then ID returned by service would be: @!1111!0000</td>
+<td>string</td>
+</tr>
+<tr>
+<td>type</td>
+<td>true</td>
+<td>Type of id</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>
-<p>Please edit the <code>attribute-resolver.xml.vm</code> file  under the <code>/opt/tomcat/conf/shibboleth2/idp</code> folder</p>
-</li>
-<li>
-<p>Add the <code>$attribute.name.equals('emailnid')</code> with the existing <em>#if( ! ($attribute.name.equals('transientId')</em> to look like the snippet below</p>
-</li>
+<li>header</li>
 </ul>
-<pre><code>#if( ! ($attribute.name.equals('transientId') or $attribute.name.equals('emailnid') ) ) 
-</code></pre>
-
+<p>|Parameter|Required|Description|Data Type|
+|Authorization|false||string|</p>
+<p><strong>Response</strong><br/>
+<a href="#String[Response]">String[Response]</a></p>
+<p><strong>generateHtmlInum
+</strong>GET**<code>/id/{prefix}/{type}/</code></p>
+<p>Generates ID for given prefix and type.</p>
+<p><strong>URL</strong><br/>
+    http://gluu.org/id/{prefix}/{type}/
+<strong>Parameters</strong><br/>
+- path</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+<th>Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prefix</td>
+<td>true</td>
+<td>Prefix for id. E.g. if prefix is @!1111 and server will generate id: !0000 then ID returned by service would be: @!1111!0000</td>
+<td>string</td>
+</tr>
+<tr>
+<td>type</td>
+<td>true</td>
+<td>Type of id</td>
+<td>string</td>
+</tr>
+<tr>
+<td>- header</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+<th>Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>false</td>
+<td>The authorization sent as a String</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Response</strong><br/>
+<a href="#String[Response]">String[Response]</a>
+<strong>Errors</strong><br/></p>
+<p><strong>generateTextInum</strong><br/>
+<strong>GET</strong><code>/id/{prefix}/{type}/</code></p>
+<p>Generates ID for given prefix and type.</p>
+<p><strong>URL</strong><br/>
+    http://gluu.org/id/{prefix}/{type}/
+<strong>Parameters</strong><br/>
+- path</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+<th>Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prefix</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>true</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Add <code>nameid</code> definition </li>
+<li>header</li>
 </ul>
-<pre><code> &lt;resolver:AttributeDefinition id=&quot;emailnid&quot;
-                                xsi:type=&quot;Simple&quot;
-                                xmlns=&quot;urn:mace:shibboleth:2.0:resolver:ad&quot;
-                                sourceAttributeID=&quot;mail&quot;&gt;
-                        &lt;resolver:Dependency ref=&quot;siteLDAP&quot; /&gt;
-                        &lt;resolver:AttributeEncoder xsi:type=&quot;SAML2StringNameID&quot;
-                                xmlns=&quot;urn:mace:shibboleth:2.0:attribute:encoder&quot;
-                                nameFormat=&quot;urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress&quot; /&gt;
-&lt;/resolver:AttributeDefinition&gt; 
-</code></pre>
-
-<ul>
-<li>Add <code>emailAddress</code> in Principal Connector</li>
-</ul>
-<pre><code> &lt;resolver:PrincipalConnector xsi:type=&quot;pc:Transient&quot; id=&quot;saml2Transient&quot; nameIDFormat=&quot;urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress&quot; /&gt; 
-</code></pre>
-
-<ul>
-<li>Restart Tomcat service</li>
-</ul>
-<h3 id="trust-relationship">Trust Relationship<a class="headerlink" href="#trust-relationship" title="Permanent link">#</a></h3>
-<p>Please see <a href="../../admin-guide/saml/">this doc</a> to create trust relationship and fill up the form with the following info</p>
-<p>The metadata for Dropbox is necessary to create trust relationship. Please use the following snippet so create the <code>dropbox_metadata.xml</code>.</p>
-<pre><code> &lt;EntityDescriptor entityID=&quot;Dropbox&quot; xmlns=&quot;urn:oasis:names:tc:SAML:2.0:metadata&quot;&gt;
-    &lt;SPSSODescriptor protocolSupportEnumeration=&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot;&gt;
-        &lt;NameIDFormat&gt;urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress&lt;/NameIDFormat&gt;
-        &lt;AssertionConsumerService index=&quot;1&quot; Binding=&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&quot; Location=&quot;https://www.dropbox.com/saml_login&quot; /&gt;
-    &lt;/SPSSODescriptor&gt;
-&lt;/EntityDescriptor&gt; 
-</code></pre>
-
-<ul>
-<li>Display Name: Dropbox</li>
-<li>Description: External SP / File method</li>
-<li>Metadata Type: File</li>
-<li>SP Metadata File: Upload the 'dropbox_metadata.xml' which you just created</li>
-<li>Configure Specific RelyiningParty: Yes</li>
-</ul>
-<pre><code>signResponses: conditional
-signAssertions: never
-signRequests: conditional
-encryptAssertions: never
-encryptNameIds: never
-</code></pre>
-
-<p><img alt="image" src="../../img/integration/rp_configuration.png" /></p>
-<ul>
-<li>Released attribute: emailnid
-<img alt="image" src="../../img/integration/dropboxtr.png" /></li>
-</ul>
-<h3 id="configure-gluu-server-as-idp-in-dropbox">Configure Gluu Server as IdP in Dropbox<a class="headerlink" href="#configure-gluu-server-as-idp-in-dropbox" title="Permanent link">#</a></h3>
-<ul>
-<li>Log into Dropbox</li>
-<li>Click on <code>Admin Console</code></li>
-<li>Click <code>Authentication</code></li>
-<li>Click on the checkbox labeled <code>Enable single-sign-on</code></li>
-<li>
-<p>Optional/Required according to necessity</p>
-<ul>
-<li>
-<p>Sign in URL
-<code>https://&lt;hostname_of_Gluu_server&gt;/idp/profile/SAML2/Redirect/SSO</code></p>
-</li>
-<li>
-<p>X.509 certificate </p>
-</li>
-</ul>
-</li>
-</ul>
-<pre><code>    Get `shibIDP.crt` from Gluu Server `chroot` environment under `/etc/certs/` folder and upload it
-</code></pre>
-
-<p><img alt="image" src="../../img/integration/dbadmin.png" /></p>
-<ul>
-<li>Save configuration</li>
-</ul>
-<h3 id="test-sso">Test SSO<a class="headerlink" href="#test-sso" title="Permanent link">#</a></h3>
-<ul>
-<li>
-<p>Please go to https://www.dropbox.com and click on the <code>Sign In</code> button</p>
-</li>
-<li>
-<p>If the account is configured for SSO, then a screen similar to the screenshot below will appear after entering the email address.
-<img alt="image" src="../../img/integration/dblogin.png" /></p>
-</li>
-<li>
-<p>Click <code>Continue</code> and the website will redirect to Gluu Server for authentication.</p>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+<th>Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Response</strong><br/>
+<a href="#String[Response]">String[Response]</a></p>
+<p><strong>Errors</strong><br/>
+<strong>generateXmlInum</strong><br/>
+<strong>GET</strong><code>/id/{prefix}/{type}/</code></p>
+<p>Generates ID for given prefix and type.</p>
+<p><strong>URL</strong><br/>
+    http://gluu.org/id/{prefix}/{type}/
+<strong>Parameters</strong><br/>
+- path</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+<th>Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prefix</td>
+<td>true</td>
+<td>Prefix for id. E.g. if prefix is @!1111 and server will generate id: !0000 then ID returned by service would be: @!1111!0000</td>
+<td>string</td>
+</tr>
+<tr>
+<td>type</td>
+<td>true</td>
+<td>Type of id</td>
+<td>string</td>
+</tr>
+<tr>
+<td>- header</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+<th>Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Response</strong><br/>
+<a href="#String[Response]">String[Response]</a></p>
+<p><strong>Errors</strong><br/>
+<table border="1">
+    <tr>
+        <th>Status Code|<th>Reason|
+    </tr>
+</table></p>
+<hr />
+<p><strong>generateHtmlInum</strong><br/>
+<strong>GET</strong><code>/id/{prefix}/{type}/</code></p>
+<p>Generates ID for given prefix and type.</p>
+<p><strong>URL</strong><br/>
+    http://gluu.org/id/{prefix}/{type}/
+<strong>Parameters</strong><br/>
+- path</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+<th>Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prefix</td>
+<td>true</td>
+<td>Prefix for id. E.g. if prefix is @!1111 and server will generate id: !0000 then ID returned by service would be: @!1111!0000</td>
+<td>string</td>
+</tr>
+<tr>
+<td>type</td>
+<td>true</td>
+<td>Type of id</td>
+<td>string</td>
+</tr>
+<tr>
+<td>- header</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+<th>Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>false</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Response</strong><br/>
+<a href="#String[Response]">String[Response]</a></p>
+<p><strong>Errors</strong><br/>
+<table border="1">
+    <tr>
+        <th>Status Code|<th>Reason|
+    </tr>
+</table></p>
+<hr />
           <aside class="copyright" role="note">
            Built with 
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a> using
@@ -747,7 +986,7 @@ encryptNameIds: never
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../salesforce/" title="Salesforce">
+        <a href="../../admin-guide/faq/" title="FAQ & Troubleshooting">
           <span class="direction">
             Previous
           </span>
@@ -757,7 +996,7 @@ encryptNameIds: never
             </div>
             <div class="stretch">
               <div class="title">
-                Salesforce
+                FAQ & Troubleshooting
               </div>
             </div>
           </div>
@@ -765,6 +1004,22 @@ encryptNameIds: never
       
     </div>
     <div class="next">
+      
+        <a href="../openid-connect-authorization/" title="OpenID Connect Authorization">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                OpenID Connect Authorization
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
       
     </div>
   </nav>
