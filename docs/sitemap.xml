@@ -119,6 +119,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
@@ -142,59 +148,7 @@
     </url>
         
     <url>
-     <loc>/admin-guide/scim/</loc>
-     <lastmod>2017-01-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>/installation-guide/setup_py/</loc>
-     <lastmod>2017-01-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>/integration/saml-sp/</loc>
-     <lastmod>2017-01-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/integration/openidc-rp/</loc>
-     <lastmod>2017-01-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/integration/oauth2/</loc>
-     <lastmod>2017-01-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/integration/google/</loc>
-     <lastmod>2017-01-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/integration/office/</loc>
-     <lastmod>2017-01-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/integration/salesforce/</loc>
-     <lastmod>2017-01-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/integration/dropbox/</loc>
      <lastmod>2017-01-19</lastmod>
      <changefreq>daily</changefreq>
     </url>

@@ -1,5 +1,7 @@
 # ID Generation API Document
-This document outlines the API for ID Generation for Gluu Server.
+This document outlines the API for ID Generation for Gluu Server. 
+This API Guide will discuss few API's used in Gluu Server for ID generation
+
 ## Path
 `/id`
 ### Overview
