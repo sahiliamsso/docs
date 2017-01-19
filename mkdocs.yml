@@ -22,7 +22,7 @@ pages:
         - Upgrade/Patch Guide:
 #        - 'Upgrade Gluu Server' : 'upgrade/index.md'
 #        - 'Patch Gluu Server' : 'upgrade/update.md'
-            - 'Updating oxTrust': 'upgrade/update-oxtrustwar.md'
+            - 'Updating a War File': 'upgrade/update-war.md'
 - Administration Guide:
         - 'oxTrust admin UI' : 'admin-guide/oxtrust-ui.md'
 #        - 'SSO Protocols' : 'admin-guide/auth-protocol.md'

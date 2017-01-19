@@ -8,8 +8,7 @@ requirements.
 |       2  |    4GB     |   40GB            |  64 Bit        |
 
 !!! warning
-    Post or open tickets on support site only if, all above requirements
-    are met!
+    Post support tickets only if all the above requirements are met!
 
 ### Ports
 
