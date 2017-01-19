@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>U2f - Gluu Docs</title>
+        <title>Google SSO - Gluu Docs</title>
       
 <link href="../../assets/stylesheets/font.css" rel="stylesheet">
       
@@ -90,16 +90,12 @@
           <span class="path">
             
               
-                Administration Guide <i class="icon icon-link"></i>
-              
-            
-              
-                User Authentication Guide <i class="icon icon-link"></i>
+                Integration Guide <i class="icon icon-link"></i>
               
             
           </span>
         
-        U2f
+        Google SSO
       </div>
     </div>
     <div class="button button-search" role="button" aria-label="Search">
@@ -268,39 +264,16 @@
       
         
   <li>
-    <a class="current" title="U2f" href="./">
+    <a class="" title="U2f" href="../../authn-guide/U2F/">
       U2f
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="Overview" href="#overview">
-                <b>Overview</b>
-              </a>
-            </li>
-            
-          
-            <li class="anchor">
-              <a title="Configure U2F" href="#configure-u2f">
-                <b>Configure U2F</b>
-              </a>
-            </li>
-            
-          
-        </ul>
-      
     
   </li>
                   
       
         
   <li>
-    <a class="" title="DUO" href="../DUO/">
+    <a class="" title="DUO" href="../../authn-guide/DUO/">
       DUO
     </a>
     
@@ -309,7 +282,7 @@
       
         
   <li>
-    <a class="" title="oxPush2-Super Gluu" href="../supergluu/">
+    <a class="" title="oxPush2-Super Gluu" href="../../authn-guide/supergluu/">
       oxPush2-Super Gluu
     </a>
     
@@ -318,7 +291,7 @@
       
         
   <li>
-    <a class="" title="certificate Authentication" href="../cert-auth/">
+    <a class="" title="certificate Authentication" href="../../authn-guide/cert-auth/">
       certificate Authentication
     </a>
     
@@ -327,7 +300,7 @@
       
         
   <li>
-    <a class="" title="Google" href="../google/">
+    <a class="" title="Google" href="../../authn-guide/google/">
       Google
     </a>
     
@@ -336,7 +309,7 @@
       
         
   <li>
-    <a class="" title="Custom Script Authentication" href="../customauthn/">
+    <a class="" title="Custom Script Authentication" href="../../authn-guide/customauthn/">
       Custom Script Authentication
     </a>
     
@@ -345,7 +318,7 @@
       
         
   <li>
-    <a class="" title="Passport" href="../passport/">
+    <a class="" title="Passport" href="../../authn-guide/passport/">
       Passport
     </a>
     
@@ -354,7 +327,7 @@
       
         
   <li>
-    <a class="" title="HOTP/TOTP" href="../otp/">
+    <a class="" title="HOTP/TOTP" href="../../authn-guide/otp/">
       HOTP/TOTP
     </a>
     
@@ -520,7 +493,7 @@
       
         
   <li>
-    <a class="" title="Shibboleth SP" href="../../integration/saml-sp/">
+    <a class="" title="Shibboleth SP" href="../saml-sp/">
       Shibboleth SP
     </a>
     
@@ -529,7 +502,7 @@
       
         
   <li>
-    <a class="" title="Mod_auth_OpenID" href="../../integration/openidc-rp/">
+    <a class="" title="Mod_auth_OpenID" href="../openidc-rp/">
       Mod_auth_OpenID
     </a>
     
@@ -538,7 +511,7 @@
       
         
   <li>
-    <a class="" title="OXD OAuth2" href="../../integration/oauth2/">
+    <a class="" title="OXD OAuth2" href="../oauth2/">
       OXD OAuth2
     </a>
     
@@ -547,16 +520,39 @@
       
         
   <li>
-    <a class="" title="Google SSO" href="../../integration/google/">
+    <a class="current" title="Google SSO" href="./">
       Google SSO
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Configuring Google Apps With Google Dashboard:" href="#configuring-google-apps-with-google-dashboard">
+                <b>Configuring Google Apps With Google Dashboard:</b>
+              </a>
+            </li>
+            
+          
+            <li class="anchor">
+              <a title="Configuration In Gluu Server:" href="#configuration-in-gluu-server">
+                <b>Configuration In Gluu Server:</b>
+              </a>
+            </li>
+            
+          
+        </ul>
+      
     
   </li>
                   
       
         
   <li>
-    <a class="" title="Office 365" href="../../integration/office/">
+    <a class="" title="Office 365" href="../office/">
       Office 365
     </a>
     
@@ -565,7 +561,7 @@
       
         
   <li>
-    <a class="" title="Salesforce" href="../../integration/salesforce/">
+    <a class="" title="Salesforce" href="../salesforce/">
       Salesforce
     </a>
     
@@ -574,7 +570,7 @@
       
         
   <li>
-    <a class="" title="Dropbox" href="../../integration/dropbox/">
+    <a class="" title="Dropbox" href="../dropbox/">
       Dropbox
     </a>
     
@@ -595,62 +591,108 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="u2f">U2F<a class="headerlink" href="#u2f" title="Permanent link">#</a></h1>
-<p>This script enables multi-factor authentication with any FIDO U2F device. Learn more about the U2F standard <a href="https://www.gluu.org/resources/documents/standards/fido-u2f/">here</a>. For a list of U2F compliant devices for sale, <a href="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords=U2F">check Amazon</a>. </p>
-<p>Some well known U2F device manufacturers include:<br />
-- <a href="https://www.yubico.com/">Yubico</a> <br />
-- <a href="http://hyperfido.com/">HyperFIDO</a> <br />
-- <a href="http://www.ftsafe.com/">Feitian Technologies</a>    </p>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>The script has the following properties</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>u2f_server_uri</td>
-<td>URL of the u2f server</td>
-<td>https://idp.gluu.info</td>
-</tr>
-<tr>
-<td>u2f_server_metadata_uri</td>
-<td>URL of the u2f server metadata</td>
-<td>https://idp.gluu.info</td>
-</tr>
-</tbody>
-</table>
-<h2 id="configure-u2f">Configure U2F<a class="headerlink" href="#configure-u2f" title="Permanent link">#</a></h2>
-<p>Follow the steps below to configure the U2F module in the oxTrust Admin GUI.</p>
-<ol>
+          <h1 id="using-saml-to-get-sso-with-google-apps">Using SAML To Get SSO With Google Apps<a class="headerlink" href="#using-saml-to-get-sso-with-google-apps" title="Permanent link">#</a></h1>
+<p>Google Apps will work as a Service Provider (SP) and we need to
+"introduce" Gluu Server with Google Apps as Gluu Server so that it can
+work as an Identity Provider (IDP).</p>
+<p>NOTE: It is highly recommended to use Google staging apps setup before
+Google production migration. If you have any question or confusion,
+please feel free to let us know.</p>
+<p>We need to configure Google Apps and Gluu Server so that both parties
+can talk to each other.</p>
+<h2 id="configuring-google-apps-with-google-dashboard">Configuring Google Apps With Google Dashboard:<a class="headerlink" href="#configuring-google-apps-with-google-dashboard" title="Permanent link">#</a></h2>
+<ul>
+<li>Login to dashboard.</li>
+</ul>
+<p><img alt="Image" src="../../img/integration/admin_console.png" /></p>
+<ul>
 <li>
-<p>Go to Manage Custom Scripts
-<img alt="custom-script" src="../../img/admin-guide/multi-factor/custom-script.png" /></p>
+<p>From the list of options choose the "Security" tab.</p>
 </li>
 <li>
-<p>Click on the Person Authentication tab
-<img alt="person-auth" src="../../img/admin-guide/multi-factor/person-auth.png" /></p>
+<p>A new page will open. Select <code>Set up single sign-on(SSO)</code> from the
+options.</p>
+</li>
+</ul>
+<p><img alt="Image" src="../../img/integration/security_setting.png" /></p>
+<ul>
+<li>Finally, the Single Sign-On setting page will appear. </li>
+</ul>
+<p><img alt="Image" src="../../img/integration/final_setup.png" /></p>
+<p>This page contains a number of selection, and entry fields.</p>
+<ul>
+<li>
+<p><strong>Setup SSO with third party Identity Provider</strong>: This
+     refers to your Gluu Server instance. Enable this box.</p>
 </li>
 <li>
-<p>Select the U2F script
-<img alt="u2f-script" src="../../img/admin-guide/multi-factor/u2f-script.png" /></p>
+<p><strong>Sign-in Page URL</strong>: Enter the uri of the sign-in page, for
+     example <code>https://idp_hostname/idp/profile/SAML2/Redirect/SSO</code>.</p>
 </li>
 <li>
-<p>Enable the script by ticking the check box
-<img alt="enable" src="../../img/admin-guide/enable.png" /></p>
+<p><strong>Sign-out Page URL</strong>: Enter the uri of the logout page, for
+     example <code>https://idp_hostname/idp/logout.jsp</code>.</p>
 </li>
 <li>
-<p>Click <code>Update</code></p>
+<p><strong>Change Password URL</strong>: The uri an user is redirected if he wants
+     to change his password. It is recommended that an organization 
+     provides such a link for its end users.</p>
 </li>
 <li>
-<p>Change the <code>Default Authentication Method</code> to <code>u2f</code>
-<img alt="u2f" src="../../img/admin-guide/multi-factor/u2f.png" /></p>
+<p><strong>Verification certificate</strong>: Upload the SAML certificate of your
+     Gluu Server. The SAML certificates are available in the <code>/etc/certs</code> folder inside the Gluu Server <code>chroot</code> environment.</p>
 </li>
-</ol>
+<li>
+<p><strong>Use a domain specific issuer</strong>: Enable this box to use a
+     domain-specific issuer.</p>
+</li>
+<li>
+<p>Save your data using the <code>Save changes</code> button on the lower right
+     of the page.</p>
+</li>
+</ul>
+<p>If you want to know more about Google SSO,
+<a href="https://support.google.com/a/answer/60224?hl=en">this</a> helps you.</p>
+<h2 id="configuration-in-gluu-server">Configuration In Gluu Server:<a class="headerlink" href="#configuration-in-gluu-server" title="Permanent link">#</a></h2>
+<p>Now we need to create a Trust Relationship in Gluu Server. Trust
+Relationships are created so that the IdP can authorize/authenticate the
+user to the service provider (SP). In this specific case, the SP is
+Google Apps, and the protocol used is SAML.</p>
+<p>In order to create a Trust Relationship, we need to grab the metadata of
+Google Apps. This metadata can be collected from Google. It's generally
+specific to an organization account. The following is a template of the Google metadata.</p>
+<pre><code>&lt;EntityDescriptor entityID=&quot;google.com/a/domain.com&quot; xmlns=&quot;urn:oasis:names:tc:SAML:2.0:metadata&quot;&gt;
+&lt;SPSSODescriptor protocolSupportEnumeration=&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot;&gt;
+&lt;NameIDFormat&gt;urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified&lt;/NameIDFormat&gt;
+&lt;AssertionConsumerService index=&quot;1&quot; Binding=&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&quot;
+Location=&quot;https://www.google.com/a/domain.com/acs&quot; &gt;&lt;/AssertionConsumerService&gt;
+&lt;/SPSSODescriptor&gt;
+&lt;/EntityDescriptor&gt;
+</code></pre>
+
+<p>Got the metadata? Great, we are ready to move forward. </p>
+<ul>
+<li>
+<p>Create Trust Relationship for Google Apps: </p>
+</li>
+<li>
+<p>How to create a trust relationship can be found <a href="../../admin-guide/saml/#how-to-create-trust-relationship">here</a>. We need to follow the "File" method for Google Apps trust relationship.</p>
+<ul>
+<li>Required attributes: Generally a nameID attributes is required. <a href="https://gluu.org/docs/customize/attributes/#custom-nameid">Here</a> is how you can create custom nameID in Gluu Server. </li>
+<li>Relying Party Configuration: Yes, SAML2SSO should be configured. <ul>
+<li>includeAttributeStatement: check</li>
+<li>assertionLifetime: default </li>
+<li>assertionProxyCount: default</li>
+<li>signResponses: conditional</li>
+<li>signAssertions: never</li>
+<li>signRequests: conditional</li>
+<li>encryptAssertions: never</li>
+<li>encryptNameIds: never </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
           <aside class="copyright" role="note">
            Built with 
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a> using
@@ -667,7 +709,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../../admin-guide/user-authentications/" title="User Authentication Introduction">
+        <a href="../oauth2/" title="OXD OAuth2">
           <span class="direction">
             Previous
           </span>
@@ -677,7 +719,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                User Authentication Introduction
+                OXD OAuth2
               </div>
             </div>
           </div>
@@ -686,14 +728,14 @@
     </div>
     <div class="next">
       
-        <a href="../DUO/" title="DUO">
+        <a href="../office/" title="Office 365">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                DUO
+                Office 365
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

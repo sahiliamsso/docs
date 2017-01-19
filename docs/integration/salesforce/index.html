@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>U2f - Gluu Docs</title>
+        <title>Salesforce - Gluu Docs</title>
       
 <link href="../../assets/stylesheets/font.css" rel="stylesheet">
       
@@ -90,16 +90,12 @@
           <span class="path">
             
               
-                Administration Guide <i class="icon icon-link"></i>
-              
-            
-              
-                User Authentication Guide <i class="icon icon-link"></i>
+                Integration Guide <i class="icon icon-link"></i>
               
             
           </span>
         
-        U2f
+        Salesforce
       </div>
     </div>
     <div class="button button-search" role="button" aria-label="Search">
@@ -268,39 +264,16 @@
       
         
   <li>
-    <a class="current" title="U2f" href="./">
+    <a class="" title="U2f" href="../../authn-guide/U2F/">
       U2f
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="Overview" href="#overview">
-                <b>Overview</b>
-              </a>
-            </li>
-            
-          
-            <li class="anchor">
-              <a title="Configure U2F" href="#configure-u2f">
-                <b>Configure U2F</b>
-              </a>
-            </li>
-            
-          
-        </ul>
-      
     
   </li>
                   
       
         
   <li>
-    <a class="" title="DUO" href="../DUO/">
+    <a class="" title="DUO" href="../../authn-guide/DUO/">
       DUO
     </a>
     
@@ -309,7 +282,7 @@
       
         
   <li>
-    <a class="" title="oxPush2-Super Gluu" href="../supergluu/">
+    <a class="" title="oxPush2-Super Gluu" href="../../authn-guide/supergluu/">
       oxPush2-Super Gluu
     </a>
     
@@ -318,7 +291,7 @@
       
         
   <li>
-    <a class="" title="certificate Authentication" href="../cert-auth/">
+    <a class="" title="certificate Authentication" href="../../authn-guide/cert-auth/">
       certificate Authentication
     </a>
     
@@ -327,7 +300,7 @@
       
         
   <li>
-    <a class="" title="Google" href="../google/">
+    <a class="" title="Google" href="../../authn-guide/google/">
       Google
     </a>
     
@@ -336,7 +309,7 @@
       
         
   <li>
-    <a class="" title="Custom Script Authentication" href="../customauthn/">
+    <a class="" title="Custom Script Authentication" href="../../authn-guide/customauthn/">
       Custom Script Authentication
     </a>
     
@@ -345,7 +318,7 @@
       
         
   <li>
-    <a class="" title="Passport" href="../passport/">
+    <a class="" title="Passport" href="../../authn-guide/passport/">
       Passport
     </a>
     
@@ -354,7 +327,7 @@
       
         
   <li>
-    <a class="" title="HOTP/TOTP" href="../otp/">
+    <a class="" title="HOTP/TOTP" href="../../authn-guide/otp/">
       HOTP/TOTP
     </a>
     
@@ -520,7 +493,7 @@
       
         
   <li>
-    <a class="" title="Shibboleth SP" href="../../integration/saml-sp/">
+    <a class="" title="Shibboleth SP" href="../saml-sp/">
       Shibboleth SP
     </a>
     
@@ -529,7 +502,7 @@
       
         
   <li>
-    <a class="" title="Mod_auth_OpenID" href="../../integration/openidc-rp/">
+    <a class="" title="Mod_auth_OpenID" href="../openidc-rp/">
       Mod_auth_OpenID
     </a>
     
@@ -538,7 +511,7 @@
       
         
   <li>
-    <a class="" title="OXD OAuth2" href="../../integration/oauth2/">
+    <a class="" title="OXD OAuth2" href="../oauth2/">
       OXD OAuth2
     </a>
     
@@ -547,7 +520,7 @@
       
         
   <li>
-    <a class="" title="Google SSO" href="../../integration/google/">
+    <a class="" title="Google SSO" href="../google/">
       Google SSO
     </a>
     
@@ -556,7 +529,7 @@
       
         
   <li>
-    <a class="" title="Office 365" href="../../integration/office/">
+    <a class="" title="Office 365" href="../office/">
       Office 365
     </a>
     
@@ -565,16 +538,46 @@
       
         
   <li>
-    <a class="" title="Salesforce" href="../../integration/salesforce/">
+    <a class="current" title="Salesforce" href="./">
       Salesforce
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Prepare Salesforce.com" href="#prepare-salesforcecom">
+                <b>Prepare Salesforce.com</b>
+              </a>
+            </li>
+            
+          
+            <li class="anchor">
+              <a title="Prepare Gluu Server" href="#prepare-gluu-server">
+                <b>Prepare Gluu Server</b>
+              </a>
+            </li>
+            
+          
+            <li class="anchor">
+              <a title="Test SSO" href="#test-sso">
+                <b>Test SSO</b>
+              </a>
+            </li>
+            
+          
+        </ul>
+      
     
   </li>
                   
       
         
   <li>
-    <a class="" title="Dropbox" href="../../integration/dropbox/">
+    <a class="" title="Dropbox" href="../dropbox/">
       Dropbox
     </a>
     
@@ -595,62 +598,117 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="u2f">U2F<a class="headerlink" href="#u2f" title="Permanent link">#</a></h1>
-<p>This script enables multi-factor authentication with any FIDO U2F device. Learn more about the U2F standard <a href="https://www.gluu.org/resources/documents/standards/fido-u2f/">here</a>. For a list of U2F compliant devices for sale, <a href="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords=U2F">check Amazon</a>. </p>
-<p>Some well known U2F device manufacturers include:<br />
-- <a href="https://www.yubico.com/">Yubico</a> <br />
-- <a href="http://hyperfido.com/">HyperFIDO</a> <br />
-- <a href="http://www.ftsafe.com/">Feitian Technologies</a>    </p>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>The script has the following properties</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>u2f_server_uri</td>
-<td>URL of the u2f server</td>
-<td>https://idp.gluu.info</td>
-</tr>
-<tr>
-<td>u2f_server_metadata_uri</td>
-<td>URL of the u2f server metadata</td>
-<td>https://idp.gluu.info</td>
-</tr>
-</tbody>
-</table>
-<h2 id="configure-u2f">Configure U2F<a class="headerlink" href="#configure-u2f" title="Permanent link">#</a></h2>
-<p>Follow the steps below to configure the U2F module in the oxTrust Admin GUI.</p>
-<ol>
+          <h1 id="saml-integration-of-salesforcecom-with-gluu-server">SAML integration of Salesforce.com with Gluu Server<a class="headerlink" href="#saml-integration-of-salesforcecom-with-gluu-server" title="Permanent link">#</a></h1>
+<p>By default Salesforce suggest deployers to implement IDP-initiated SSO.
+The initialization of IDP-initiated SSO is little bit complex as it
+requires a big hostname which includes IDP's SSO link as well as SP's
+login uri. So we prefer SP-initiated SSO and here in this documentation
+we are presenting a very simple SP-initiated SSO steps with Salesforce
+and Gluu Server. Still, you can go for IDP-initiated SSO if you prefer.
+Further documentation is available at the Salesforce.com site.</p>
+<h2 id="prepare-salesforcecom">Prepare Salesforce.com<a class="headerlink" href="#prepare-salesforcecom" title="Permanent link">#</a></h2>
+<ul>
+<li>Log into Salesforce.com with your administrative account.</li>
+<li>Click on <em>Setup</em> in the right upper corner of the page.</li>
+<li>You need to add a custom domain name for your Salesforce.com site if
+  you do not have any yet.</li>
+<li>Go to <em>Domain Management</em> –&gt; <em>My Domain</em></li>
+<li>Add your custom domain</li>
+<li>Wait for some time. Salesforce.com will register this domain name
+  for you. As an example we use <code>testgluu-dev-ed.my.salesforce.com</code> here.</li>
+</ul>
+<p><img alt="image" src="../../img/integration/My_Domain.png" /></p>
+<ul>
+<li>Register your Gluu Server information in Salesforce.com</li>
+<li>Go to <em>Security Controls</em> –&gt; <em>Single Sign On Settings</em></li>
+<li>Click <em>New</em></li>
+</ul>
+<p><img alt="image" src="../../img/integration/SSO_Settings.png" /></p>
+<ul>
 <li>
-<p>Go to Manage Custom Scripts
-<img alt="custom-script" src="../../img/admin-guide/multi-factor/custom-script.png" /></p>
+<p>Now you need to add the information of your Gluu Server here</p>
+<ul>
+<li><em>Name</em>: Anything, whichever is easier for you to recognize this
+   setup, i.e. <code>Gluu Server</code></li>
+<li><em>API Name</em>: Gluu Server.</li>
+<li><em>Issuer</em>: EntityID of your Gluu Server, i.e. <code>https://test.gluu.org/idp/shibboleth</code></li>
+<li><em>EntityID</em>: Your Salesforce.com custom domain name as chosen
+   above, i.e. <code>https://testgluu-dev-ed.my.salesforce.com</code></li>
+<li><em>Identity Provider Certificate</em>: Grab your Gluu Server's SAML
+   certificate. SAML certificate can be grabbed from your Gluu Sever's
+   metadata. Save the certificate and upload it.</li>
+<li><em>Request Signing Certificate</em>: Default certificate</li>
+<li><em>Request Signature Method</em>: RSA-SHA1</li>
+<li><em>Assertion Decryption Certificate</em>: Assertion not encrypted.</li>
+<li><em>SAML Identity Type</em>: Assertion contains user's Salesforce.com username</li>
+<li><em>SAML Identity Location</em>: Identity is in an Attribute element</li>
+<li><em>Attribute Name</em>: Provide 'SAML2 URI' of your attribute. For our test case we are using Gluu Server's Email attribute. How to check the information of your attribute is available <a href="http://www.gluu.org/docs/admin-guide/configuration/#attributes">here</a>.</li>
+<li><em>NameID Format</em>: Leave this field empty.</li>
+<li><em>Identity Provider Login URL</em>: <code>https://test.gluu.org/idp/profile/SAML2/Redirect/SSO</code></li>
+<li><em>Service Provider Initiated Request Binding</em>: HTTP-Redirect</li>
+<li>Here is how our example setup looks like:</li>
+</ul>
+<p><img alt="image" src="../../img/integration/Final_setup1.png" /></p>
+</li>
+</ul>
+<h2 id="prepare-gluu-server">Prepare Gluu Server<a class="headerlink" href="#prepare-gluu-server" title="Permanent link">#</a></h2>
+<ul>
+<li>How to create SAML trust relationship is available <a href="../../admin-guide/saml/">here</a>. </li>
+<li>Grab Salesforce.com metadata from the Salesforce.com website. There is
+  an option named 'Download Metadata':</li>
+<li>Modify Salesforce.com metadata a bit:<ul>
+<li>Remove <em>AuthnRequestsSigned=“true”</em> from metadata.</li>
+<li>Save metadata</li>
+</ul>
+</li>
+<li>Create Trust Relationship:</li>
+<li><em>Display Name</em>: Anything, whichever is easier for you to recognize this trust relationship.</li>
+<li><em>Description</em>: Anything, whichever is easier for you to recognize this trust relationship</li>
+<li><em>Metadata Type</em>: 'File'</li>
+<li>Upload salesforce's metadata (your modified one)</li>
+<li>Releases attributes: TransientID and Email</li>
+<li>'Add' this trust</li>
+<li>Configure Specific Relying: It can be done from Gluu Server's GUI (named: oxTrust)<ul>
+<li>Select 'SAML2SSO'<ul>
+<li>includeAttributeStatement: Enabled</li>
+<li>assertionLifetime: keep the default one</li>
+<li>assertionProxyCount: keep the default one</li>
+<li>signResponses: conditional</li>
+<li>signAssertions: never</li>
+<li>signRequests: conditional</li>
+<li>encryptAssertions: never</li>
+<li>encryptNameIds: never</li>
+<li>Save it</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>'Update' the trust relationship</li>
+<li>Here is how it looks like in our example setup:</li>
+</ul>
+<p><img alt="image" src="../../img/integration/85cd191c-ddd0-11e5-922e-2195841e98a8.png" /></p>
+<h2 id="test-sso">Test SSO<a class="headerlink" href="#test-sso" title="Permanent link">#</a></h2>
+<ul>
+<li>Go back to Salesforce.com setup</li>
+<li>Security Controls –&gt; Single Sign On Settings</li>
+<li>Enable 'Federated Single Sign-On Using SAML'</li>
+<li>Go to 'Domain Management'</li>
+<li>Configure 'Authentication Configuration'</li>
+<li>Select 'Gluu Server'</li>
+<li>Save it</li>
+<li>Here is how the 'Authentication Configuration' looks like:</li>
+</ul>
+<p><img alt="image" src="../../img/integration/Authentication_Configuration.png" /></p>
+<ul>
+<li>
+<p>This is SP-initiate SSO. So hit your Salesforce.com website link to
+initiate the SSO.</p>
 </li>
 <li>
-<p>Click on the Person Authentication tab
-<img alt="person-auth" src="../../img/admin-guide/multi-factor/person-auth.png" /></p>
+<p><a href="https://www.youtube.com/watch?v=VehuRJr647E&amp;feature=youtu.be">Here</a>
+is a video link of this SSO.</p>
 </li>
-<li>
-<p>Select the U2F script
-<img alt="u2f-script" src="../../img/admin-guide/multi-factor/u2f-script.png" /></p>
-</li>
-<li>
-<p>Enable the script by ticking the check box
-<img alt="enable" src="../../img/admin-guide/enable.png" /></p>
-</li>
-<li>
-<p>Click <code>Update</code></p>
-</li>
-<li>
-<p>Change the <code>Default Authentication Method</code> to <code>u2f</code>
-<img alt="u2f" src="../../img/admin-guide/multi-factor/u2f.png" /></p>
-</li>
-</ol>
+</ul>
           <aside class="copyright" role="note">
            Built with 
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a> using
@@ -667,7 +725,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../../admin-guide/user-authentications/" title="User Authentication Introduction">
+        <a href="../office/" title="Office 365">
           <span class="direction">
             Previous
           </span>
@@ -677,7 +735,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                User Authentication Introduction
+                Office 365
               </div>
             </div>
           </div>
@@ -686,14 +744,14 @@
     </div>
     <div class="next">
       
-        <a href="../DUO/" title="DUO">
+        <a href="../dropbox/" title="Dropbox">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                DUO
+                Dropbox
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

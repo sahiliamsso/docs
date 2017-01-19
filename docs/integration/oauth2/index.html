@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>U2f - Gluu Docs</title>
+        <title>OXD OAuth2 - Gluu Docs</title>
       
 <link href="../../assets/stylesheets/font.css" rel="stylesheet">
       
@@ -90,16 +90,12 @@
           <span class="path">
             
               
-                Administration Guide <i class="icon icon-link"></i>
-              
-            
-              
-                User Authentication Guide <i class="icon icon-link"></i>
+                Integration Guide <i class="icon icon-link"></i>
               
             
           </span>
         
-        U2f
+        OXD OAuth2
       </div>
     </div>
     <div class="button button-search" role="button" aria-label="Search">
@@ -268,39 +264,16 @@
       
         
   <li>
-    <a class="current" title="U2f" href="./">
+    <a class="" title="U2f" href="../../authn-guide/U2F/">
       U2f
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="Overview" href="#overview">
-                <b>Overview</b>
-              </a>
-            </li>
-            
-          
-            <li class="anchor">
-              <a title="Configure U2F" href="#configure-u2f">
-                <b>Configure U2F</b>
-              </a>
-            </li>
-            
-          
-        </ul>
-      
     
   </li>
                   
       
         
   <li>
-    <a class="" title="DUO" href="../DUO/">
+    <a class="" title="DUO" href="../../authn-guide/DUO/">
       DUO
     </a>
     
@@ -309,7 +282,7 @@
       
         
   <li>
-    <a class="" title="oxPush2-Super Gluu" href="../supergluu/">
+    <a class="" title="oxPush2-Super Gluu" href="../../authn-guide/supergluu/">
       oxPush2-Super Gluu
     </a>
     
@@ -318,7 +291,7 @@
       
         
   <li>
-    <a class="" title="certificate Authentication" href="../cert-auth/">
+    <a class="" title="certificate Authentication" href="../../authn-guide/cert-auth/">
       certificate Authentication
     </a>
     
@@ -327,7 +300,7 @@
       
         
   <li>
-    <a class="" title="Google" href="../google/">
+    <a class="" title="Google" href="../../authn-guide/google/">
       Google
     </a>
     
@@ -336,7 +309,7 @@
       
         
   <li>
-    <a class="" title="Custom Script Authentication" href="../customauthn/">
+    <a class="" title="Custom Script Authentication" href="../../authn-guide/customauthn/">
       Custom Script Authentication
     </a>
     
@@ -345,7 +318,7 @@
       
         
   <li>
-    <a class="" title="Passport" href="../passport/">
+    <a class="" title="Passport" href="../../authn-guide/passport/">
       Passport
     </a>
     
@@ -354,7 +327,7 @@
       
         
   <li>
-    <a class="" title="HOTP/TOTP" href="../otp/">
+    <a class="" title="HOTP/TOTP" href="../../authn-guide/otp/">
       HOTP/TOTP
     </a>
     
@@ -520,7 +493,7 @@
       
         
   <li>
-    <a class="" title="Shibboleth SP" href="../../integration/saml-sp/">
+    <a class="" title="Shibboleth SP" href="../saml-sp/">
       Shibboleth SP
     </a>
     
@@ -529,7 +502,7 @@
       
         
   <li>
-    <a class="" title="Mod_auth_OpenID" href="../../integration/openidc-rp/">
+    <a class="" title="Mod_auth_OpenID" href="../openidc-rp/">
       Mod_auth_OpenID
     </a>
     
@@ -538,16 +511,32 @@
       
         
   <li>
-    <a class="" title="OXD OAuth2" href="../../integration/oauth2/">
+    <a class="current" title="OXD OAuth2" href="./">
       OXD OAuth2
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Documentation" href="#documentation">
+                <b>Documentation</b>
+              </a>
+            </li>
+            
+          
+        </ul>
+      
     
   </li>
                   
       
         
   <li>
-    <a class="" title="Google SSO" href="../../integration/google/">
+    <a class="" title="Google SSO" href="../google/">
       Google SSO
     </a>
     
@@ -556,7 +545,7 @@
       
         
   <li>
-    <a class="" title="Office 365" href="../../integration/office/">
+    <a class="" title="Office 365" href="../office/">
       Office 365
     </a>
     
@@ -565,7 +554,7 @@
       
         
   <li>
-    <a class="" title="Salesforce" href="../../integration/salesforce/">
+    <a class="" title="Salesforce" href="../salesforce/">
       Salesforce
     </a>
     
@@ -574,7 +563,7 @@
       
         
   <li>
-    <a class="" title="Dropbox" href="../../integration/dropbox/">
+    <a class="" title="Dropbox" href="../dropbox/">
       Dropbox
     </a>
     
@@ -595,62 +584,11 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="u2f">U2F<a class="headerlink" href="#u2f" title="Permanent link">#</a></h1>
-<p>This script enables multi-factor authentication with any FIDO U2F device. Learn more about the U2F standard <a href="https://www.gluu.org/resources/documents/standards/fido-u2f/">here</a>. For a list of U2F compliant devices for sale, <a href="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords=U2F">check Amazon</a>. </p>
-<p>Some well known U2F device manufacturers include:<br />
-- <a href="https://www.yubico.com/">Yubico</a> <br />
-- <a href="http://hyperfido.com/">HyperFIDO</a> <br />
-- <a href="http://www.ftsafe.com/">Feitian Technologies</a>    </p>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>The script has the following properties</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>u2f_server_uri</td>
-<td>URL of the u2f server</td>
-<td>https://idp.gluu.info</td>
-</tr>
-<tr>
-<td>u2f_server_metadata_uri</td>
-<td>URL of the u2f server metadata</td>
-<td>https://idp.gluu.info</td>
-</tr>
-</tbody>
-</table>
-<h2 id="configure-u2f">Configure U2F<a class="headerlink" href="#configure-u2f" title="Permanent link">#</a></h2>
-<p>Follow the steps below to configure the U2F module in the oxTrust Admin GUI.</p>
-<ol>
-<li>
-<p>Go to Manage Custom Scripts
-<img alt="custom-script" src="../../img/admin-guide/multi-factor/custom-script.png" /></p>
-</li>
-<li>
-<p>Click on the Person Authentication tab
-<img alt="person-auth" src="../../img/admin-guide/multi-factor/person-auth.png" /></p>
-</li>
-<li>
-<p>Select the U2F script
-<img alt="u2f-script" src="../../img/admin-guide/multi-factor/u2f-script.png" /></p>
-</li>
-<li>
-<p>Enable the script by ticking the check box
-<img alt="enable" src="../../img/admin-guide/enable.png" /></p>
-</li>
-<li>
-<p>Click <code>Update</code></p>
-</li>
-<li>
-<p>Change the <code>Default Authentication Method</code> to <code>u2f</code>
-<img alt="u2f" src="../../img/admin-guide/multi-factor/u2f.png" /></p>
-</li>
-</ol>
+          <h1 id="oxd">OXD<a class="headerlink" href="#oxd" title="Permanent link">#</a></h1>
+<p>oxd is a mediator, a service demon that listens on localhost, providing easy APIs that can be called by a web application to simplify using an external OAuth2 server for authentication or authorization. oxd is not a proxy--sometimes it makes API calls on behalf of an application, but other times it just forms the right URLs and returns them to the application. </p>
+<p>One significant advantage of using oxd over a native client library is that oxd consolidates the OAuth2 code in one package. If there are updates to the OAuth2 client code, you can update the oxd-server package, without changing the interface to the application.</p>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">#</a></h2>
+<p>The complete documentation for oxd is made available in a separate address. Please see <a href="https://gluu.org/docs-oxd/">this link</a> for the OXD documentation.</p>
           <aside class="copyright" role="note">
            Built with 
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a> using
@@ -667,7 +605,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../../admin-guide/user-authentications/" title="User Authentication Introduction">
+        <a href="../openidc-rp/" title="Mod_auth_OpenID">
           <span class="direction">
             Previous
           </span>
@@ -677,7 +615,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                User Authentication Introduction
+                Mod_auth_OpenID
               </div>
             </div>
           </div>
@@ -686,14 +624,14 @@
     </div>
     <div class="next">
       
-        <a href="../DUO/" title="DUO">
+        <a href="../google/" title="Google SSO">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                DUO
+                Google SSO
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
