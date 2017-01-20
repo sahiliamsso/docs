@@ -5,7 +5,7 @@ Sign-On (SSO). Other common use cases include mobile authentication,
 API access management, two-factor authentication, customer identity
 and access management (CIAM), and identity federation. 
 
-The Gluu Server is a container distribution that is composed of software
+The Gluu Server is a container distribution composed of software
 written by Gluu and incorporated from other open source projects. Gluu
 projects are frequently prefixed with **ox**, which is our open source
 handle. Any code in the Gluu Server that we wrote is MIT license, 
@@ -57,7 +57,9 @@ Liferay.
 We are committed to free community support, just register and post your 
 questions on our [Support site](https://support.gluu.org). All community
 questions are public, and we do our best to answer them in a timely 
-manner. Private support, guaranteed response times, and consultative 
+manner. 
+
+Private support, guaranteed response times, and consultative 
 support are available to organizations who purchase a contract. For
 more information, see [our website](gluu.org/pricing).
 
