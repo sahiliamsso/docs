@@ -5,8 +5,8 @@ zipped up java web application. Beacuse they make deployment a breeze,
 even if you hate violence, you can learn to love .war's!
 
 When you install a new version of Gluu, it always comes with the latest
-war file. However, sometimes you might make a customization, or 
-Gluu might send you a war file as a temporary fix while between
+war files. However, sometimes you might make a customization, or 
+Gluu might send you a war file as a temporary fix between
 service pack or version releases. These instructions walk you through
 how to put it to use. 
 
