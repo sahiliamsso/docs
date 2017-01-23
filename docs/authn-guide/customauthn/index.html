@@ -1072,12 +1072,23 @@
               
                 
                 <h1 id="custom-script-authenticaion">Custom Script Authenticaion:<a class="headerlink" href="#custom-script-authenticaion" title="Permanent link">#</a></h1>
-<p>Gluu offers the feasibility to use tailored scripts with 3rd party authentication providers like Twilio SMS,RESTCOMM,Plivo,SMSGlobal,INFOBIP, etc. Where the script developed internally using 3rd party API's to get a text or call to authenticate you through to the system. Which provides high level of security to the system.</p>
-<p>This section is to explain how to configure custom script based authentication in Gluu. Twilio SMS is used as an example.</p>
+<p>Gluu offers the feasibility to use tailored scripts with 
+3rd party authentication providers like Twilio SMS,RESTCOMM,
+Plivo,SMSGlobal,INFOBIP, etc. Where the script developed internally 
+using 3rd party API's to get a text or call to authenticate you 
+through to the system. Which provides high level of security to the 
+system.</p>
+<p>This section is to explain how to configure custom script based 
+authentication in Gluu. Twilio SMS is used as an example.</p>
 <h2 id="twilio-sms-authentication-otp-using-custom-script">Twilio SMS Authentication - OTP using custom script<a class="headerlink" href="#twilio-sms-authentication-otp-using-custom-script" title="Permanent link">#</a></h2>
 <h3 id="writing-a-custom-authentication-script">Writing a Custom Authentication Script<a class="headerlink" href="#writing-a-custom-authentication-script" title="Permanent link">#</a></h3>
-<p>In this document we walk through the steps of writing a script to implement OTP authentication using <a href="http://twilio.com">Twilio</a> to send an SMS code for a two-step out-of-band authentication mechanism.</p>
-<p>At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, you can review the completed Twilio custom authentication script <a href="../twilio2FA.py">here</a>. </p>
+<p>In this document we walk through the steps of writing a script to i
+mplement OTP authentication using <a href="http://twilio.com">Twilio</a> to send 
+an SMS code for a two-step out-of-band authentication mechanism.</p>
+<p>At the end of this tutorial you should have a better understanding of 
+how to write your own custom scripts. For reference, 
+you can review the completed Twilio custom authentication script 
+<a href="../twilio2FA.py">here</a>. </p>
 <p>Fields in Custom Script:</p>
 <table>
 <thead>

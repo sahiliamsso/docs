@@ -4,9 +4,9 @@ Gluu Server comes with a separate tab for authenticaiton management where the ad
 ![config-menu](../img/admin-guide/auth-management/config-menu.png)
 
 ## Manage LDAP Authentication
-The `Manage Authenticaiton` page has two tabs: Manage LDAP Authentication and Default Authentication Method. The screen below shows the autentication management page.
-
-![manage-auth](../img/admin-guide/auth-management/manage-auth.png)
+The `Manage Authenticaiton` page has two tabs: Manage LDAP Authentication 
+and Default Authentication Method. The screen below shows the autentication
+ management page.
 
 |Field Name| Description|
 -----------|-------------|
@@ -21,7 +21,9 @@ The `Manage Authenticaiton` page has two tabs: Manage LDAP Authentication and De
 |Deactivate| This button _Deactivates/Activates_ the Gluu Server accessibility for authentication.|
 
 ## Default Authentication Method
-This allows the Gluu Server administrator to select both the default authentication mode, and level for person authentication. Both modes are set to "Default" until additional authentication mechanisms are enabled via [custom scripts](./custom-script.md).
+This allows the Gluu Server administrator to select both the default authentication mode, 
+and level for person authentication. Both modes are set to "Default" until additional 
+authentication mechanisms are enabled via [custom scripts](./custom-script.md).
 
 Gluu Server uses oxAuth as the first step of authentication in all kind of SSO protocols ( OpenID Connect, SAML, CAS )
 

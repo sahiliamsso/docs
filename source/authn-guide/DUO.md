@@ -24,14 +24,14 @@ There are a few properties in the [DUO][duo] Authentication Script.
 For additional info on Duo's Web SDK check [this atricle](https://duo.com/docs/duoweb) 
 
 ## Configure CE Chroot
-1. Prepare the DUO credential file `/etc/certs/duo_creds.json` with **ikey, akey & skey**
+1. Prepare the DUO credential file `/etc/certs/duo_creds.json` 
+with **ikey, akey & skey**
 
 **Configure oxTrust**
 
 Follow the steps below to configure the DUO module in the oxTrust Admin GUI.
 
-1. Go to Manage Custom Scripts<br/>
-![custom-script](../img/admin-guide/multi-factor/custom-script.png)
+1. Click on Manage Custom Scripts under Configuration on the Main Menu.
 
 2. Scroll down to [DUO][duo] authentication script<br/>
 ![duo-script](../img/admin-guide/multi-factor/duo-script.png)

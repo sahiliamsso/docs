@@ -10,9 +10,7 @@ The script has the following properties
 
 ## Configure oxTrust
 
-1. Go to Manage Custom Script
-
-![custom-script](../img/admin-guide/multi-factor/custom-script.png)
+1. Click on Manage Custom Scripts under Configuration on the Main Menu.
 
 2. Click on the Perosn Authentication tab
 

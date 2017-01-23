@@ -18,10 +18,10 @@ The script has the following properties
 
 Follow the steps below to configure the U2F module in the oxTrust Admin GUI.
 
-1. Go to Manage Custom Scripts
-![custom-script](../img/admin-guide/multi-factor/custom-script.png)
+1. Click on Manage Custom Scripts under Configuration on the Main Menu.    
 
 2. Click on the Person Authentication tab
+
 ![person-auth](../img/admin-guide/multi-factor/person-auth.png)
 
 3. Select the U2F script

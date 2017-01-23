@@ -18,8 +18,7 @@ The script has a few properties:
 **Configure oxTrust**
 Follow the steps below to configure the certificate authentication in the oxTrust Admin GUI.
 
-1. Go to Manage Custom Scripts
-![custom-script](../img/admin-guide/multi-factor/custom-script.png)
+1. Click on Manage Custom Scripts under Configuration on the Main Menu.
 
 2. Click on the `Add Custom Scritp` button
 [add-script-button](../img/admin-guide/multi-factor/add-script-button.png)

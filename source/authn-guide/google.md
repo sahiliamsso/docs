@@ -70,9 +70,7 @@ The last step is to enable Google+ API's:
 
 Follow the steps below to configure the certificate authentication in the oxTrust Admin GUI.
 
-1. Go to Manage Custom Scripts
-
-![custom-script](../img/admin-guide/multi-factor/custom-script.png)
+1. Click on Manage Custom Scripts under Configuration on the Main Menu.
 
 2. Click on the `Add Custom Scritp` button
 [add-script-button](../img/admin-guide/multi-factor/add-script-button.png)
@@ -90,7 +88,9 @@ You'll also need to add some custom properties:
    the path to the application configuration file downloaded from Google
    console for application. An example is `/etc/certs/gplus_client_secrets.json`.
 
-These are the single steps needed to get it:
+### Setting Google App
+These are the single steps needed to ClientSecret and ClientID 
+or Google JSON:
 
 a) Log into: `https://console.developers.google.com/project`
 

@@ -94,7 +94,7 @@ filtering mechanism can be used such as "sn=*" whereas the value of this
 field ensures that every user must contain an attribute named SN.
 
 ### Source Backend LDAP Servers
-![Source Backend](/img/admin-guide/user/admin_cache_sourcebackend.png)
+![Source Backend](../img/admin-guide/user/admin_cache_sourcebackend.png)
 
 This section allows the Gluu Server to connect to the backend Active
 Directory/LDAP server of the organization.
@@ -271,8 +271,6 @@ frequently oxTrust is not Internet facing--it was primarily designed as an inter
 
 ### oxTrust Configuration
 Navigate to the custom scripts section of the Admin Panel. Click on the `Configuration menu and then  `Manage Custom Scripts`.
-
-![image](../img/admin-guide/user/config-manage-script_menu.png)
 
 The tabs near the top of the page can be used to navigate to different custom scripts. We are concerned about 
 the `User Registration` tab.
