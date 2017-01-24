@@ -5,7 +5,8 @@ There methods of backing up Gluu Server CE is given below:
 * Tarball Method: using `tar` command to tarball the entire 
 Gluu Server CE `chroot` folder
 
-<!-- * Scritp Method : using the provided export and import scripts to back up ldif of the LDAP. -->
+<!-- * Scritp Method : using the provided export and 
+import scripts to back up ldif of the LDAP. -->
 
 ## Tarball Method
 
@@ -26,5 +27,6 @@ Gluu Server CE `chroot` folder
 4. run the script
 	d. # ./export24.py
 
-The export script will generate a directory called  backup_24  which will have all the data backed up from the current installation. Check the log file generated in the directory for any errors.
+The export script will generate a directory called  backup_24  which will have all the data backed up from the 
+current installation. Check the log file generated in the directory for any errors.
 -->

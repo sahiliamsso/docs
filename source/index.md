@@ -39,13 +39,17 @@ help... even if you're not a coder, you can contribute!
 ###  oxd Client Software
 Gluu offers commercial client software. Your application can use any 
 client software that implements the open standards we support. But you 
-may want to consider using [oxd](https://oxd.gluu.org) for a few reasons: 
-(1) we tried to make it super-easy and fun to use (2) we keep updating
-it to address the latest security knowledge (3) we can provide more
-complete end-to-end support if we know both the client and server 
-software (4) oxd subscription revenue helps provide money
-to support this project, so you can see even more enhancements even
-faster! [oxd](https://oxd.gluu.org) has libraries for Php, Python,
+may want to consider using [oxd](https://oxd.gluu.org) for a few reasons:
+ 
+(1). we tried to make it super-easy and fun to use. 
+
+(2). we keep updating it to address the latest security knowledge. 
+
+(3). we can provide more complete end-to-end support if we know both 
+the client and server software.
+
+(4). oxd subscription revenue helps provide money to support this project, 
+so you can see even more enhancements even faster! [oxd](https://oxd.gluu.org) has libraries for Php, Python,
 Java, Node, Ruby, C#, Perl and Go. We also have oxd plugins for many
 popular open source projects like Wordpress, Drupal, Magento, OpenCart,
 SugarCRM, SuiteCRM, Roundcube, Shopify, Kong and many more are being 
