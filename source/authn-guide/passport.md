@@ -55,10 +55,15 @@ During installation of the Gluu Server select `yes` to install Passport.js when 
 11. And then add the strategy details like clientID and clientSecret.
 			clientID and clientSecret are details obtained from the provider, after the app is created in the provider form.![setting-strategies](../img/user-authn/passport/setting-strategies.png)
 12. Once the configuration and settings are done, restart the passport service or Gluu Server.
-		a. Login to chroot
-		b. Enter below command to stop.
+    
+    a. Login to chroot.
+    
+    b. Enter below command to stop.
+    
 		`service passport stop`
-		c. Below command to start.
+    
+    c. Below command to start.
+    
 		`service passport start`
 
 !!! Warning

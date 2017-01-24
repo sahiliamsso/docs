@@ -1000,12 +1000,16 @@ authentication and provisioning. </p>
 </li>
 <li>And then add the strategy details like clientID and clientSecret.
             clientID and clientSecret are details obtained from the provider, after the app is created in the provider form.<img alt="setting-strategies" src="../../img/user-authn/passport/setting-strategies.png" /></li>
-<li>Once the configuration and settings are done, restart the passport service or Gluu Server.
-        a. Login to chroot
-        b. Enter below command to stop.
-        <code>service passport stop</code>
-        c. Below command to start.
-        <code>service passport start</code></li>
+<li>
+<p>Once the configuration and settings are done, restart the passport service or Gluu Server.</p>
+<p>a. Login to chroot.</p>
+<p>b. Enter below command to stop.</p>
+<pre><code>`service passport stop`
+</code></pre>
+<p>c. Below command to start.</p>
+<pre><code>`service passport start`
+</code></pre>
+</li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
