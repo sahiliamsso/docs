@@ -23,4 +23,4 @@ Please take a look at [this page](https://wiki.shibboleth.net/confluence/display
 It is possible to use Custom Authentication Script to call individual 
 logout methods for both SAML and OpenID Connect and log out of the 
 desired SP/SPs when the user logs out of the Gluu Server. 
-Please see the [Custom Script Guide](https://gluu.org/docs/customize/auth-script/) to start writing your own custom script. 
+Please see the [Custom Script Guide](../authn-guide/customauthn.md) to start writing your own custom script. 
