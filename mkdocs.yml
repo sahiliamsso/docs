@@ -69,6 +69,9 @@ pages:
             - 'OpenID Connect API': 'api-guide/openid-connect-api.md'
             - 'SCIM API Configuration': 'api-guide/scim-api.md'
             - 'UMA API': 'api-guide/uma-api.md'
+        - 'JSON Properties':
+            - 'OxTrust JSON Properties': 'reference/JSON-oxtrust-prop.md'
+            - 'OxAuth JSON Properties': 'reference/JSON-oxauth-prop.md'
 - Operation Guide:
         - 'Backup Gluu Server CE': 'operation/backup.md'
         - 'Gluu Version': 'operation/find-gluu-version.md'
