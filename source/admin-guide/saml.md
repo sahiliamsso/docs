@@ -77,8 +77,8 @@ i![asimba-overview](../img/asimba/overview.png)
 |https://nest.gluu.org|This is a second Gluu Server SAML IdP connected to _https://test.gluu.org_ |
 
 
-!!! Note
-    Description of SAML Authentication Module is available here: https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations/saml
+**Note: Description of SAML Authentication Module is available here: 
+https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations/saml**
 
 ### Specific Setup Details
 The Gluu Server setup with the hostname `https://test.gluu.org` must be setup with Asimba. This is done by typing `yes` to the [setup script prompt](../installation-guide/setup_py.md).
@@ -87,8 +87,8 @@ The Gluu Server setup with the hostname `https://test.gluu.org` must be setup wi
 
 ### Custom Script Configuration
 
-!!! Note
-    The configuration below is done in the Gluu Server with Asimba installed with the hostname `https://test.gluu.org`.
+**Note: The configuration below is done in the Gluu Server with Asimba 
+installed with the hostname `https://test.gluu.org`.**
 
 * Log into the oxTrust interface as `admin`
 
@@ -127,8 +127,8 @@ The Gluu Server setup with the hostname `https://test.gluu.org` must be setup wi
 
 ### Adding IDP in Asimba Server
 
-!!! Note
-    The configuration below is done in the Gluu Server with Asimba installed with the hostname `https://test.gluu.org`.
+**Note: The configuration below is done in the Gluu Server 
+with Asimba installed with the hostname `https://test.gluu.org`.**
 
 * Log into the oxTrust interface
 
@@ -223,13 +223,10 @@ The Gluu Server setup with the hostname `https://test.gluu.org` must be setup wi
 ![image](../img/asimba/add_sp2mod.png)
 
 ### Trust Relationship 
-!!! Note
-    The configuration below is done in the Gluu Server with Asimba installed with the hostname `https://test.gluu.org`.
+**Note: The configuration below is done in the Gluu Server 
+with Asimba installed with the hostname `https://test.gluu.org`.**
 
 Create Trust relationships for all service provides which are included in SAML Proxy SSO workflow. In our test setup we created Trust relationship for remote SP which has entityID 'https://sp.gluu.org/shibboleth'. How to create Trust Relationship is available in [Section 2.1](#2.1-outbound-saml).
-
-!!! Note
-    The configuration below is done in the Gluu Server with Asimba installed with the hostname `https://nest.gluu.org`.
 
 Log into the oxTrust inteface and follow the steps to add a new Trust Relationship.
 

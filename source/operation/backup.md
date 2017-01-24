@@ -2,7 +2,8 @@
 
 There methods of backing up Gluu Server CE is given below:
 
-* Tarball Method: using `tar` command to tarball the entire Gluu Server CE `chroot` folder
+* Tarball Method: using `tar` command to tarball the entire 
+Gluu Server CE `chroot` folder
 
 <!-- * Scritp Method : using the provided export and import scripts to back up ldif of the LDAP. -->
 

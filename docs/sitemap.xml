@@ -32,6 +32,12 @@
     </url>
         
     <url>
+     <loc>/installation-guide/setup_py/</loc>
+     <lastmod>2017-01-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc></loc>
      <lastmod></lastmod>
      <changefreq>daily</changefreq>
@@ -49,6 +55,12 @@
         
     <url>
      <loc>/admin-guide/auth-management/</loc>
+     <lastmod>2017-01-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/admin-guide/custom-script/</loc>
      <lastmod>2017-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -175,20 +187,24 @@
      <changefreq>daily</changefreq>
     </url>
         
+    
+
+    
+        
     <url>
-     <loc>/admin-guide/backup/</loc>
+     <loc>/operation/backup/</loc>
      <lastmod>2017-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/admin-guide/custom-script/</loc>
+     <loc>/operation/find-gluu-version/</loc>
      <lastmod>2017-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/installation-guide/setup_py/</loc>
+     <loc>/operation/logout/</loc>
      <lastmod>2017-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
