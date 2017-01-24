@@ -1,6 +1,6 @@
 site_name: Gluu Docs
 site_description: Documenation for Gluu Server
-site_favicon: '/img/gluu_favicon.ico'
+site_favicon: 'favicon.ico'
 copyright: Copyright &copy; 2016, Gluu, Inc.
 docs_dir: source
 repo_url: https://github.com/GluuFederation/docs-3
@@ -51,16 +51,16 @@ pages:
         - 'Certificate Management' : 'admin-guide/certificate.md'
 #       - 'Fine Tuning Gluu Server' : 'admin-guide/fine-tuning.md'
         - 'FAQ & Troubleshooting' : 'admin-guide/faq.md'
-        - Integration Guide:
+- Integration Guide:
 #    - 'Integration in Gluu Server': 'integration/index.md'
-            - 'Shibboleth SP': 'integration/saml-sp.md'
-            - 'Mod_auth_OpenID': 'integration/openidc-rp.md'
-            - 'OXD OAuth2': 'integration/oauth2.md'
-            - 'Google SSO': 'integration/google.md'
-            - 'Office 365': 'integration/office.md'
+        - 'Shibboleth SP': 'integration/saml-sp.md'
+        - 'Mod_auth_OpenID': 'integration/openidc-rp.md'
+        - 'OXD OAuth2': 'integration/oauth2.md'
+        - 'Google SSO': 'integration/google.md'
+        - 'Office 365': 'integration/office.md'
     #    - 'Hobsons Education Sol': 'integration/hobsons.md'
-            - 'Salesforce': 'integration/salesforce.md'
-            - 'Dropbox': 'integration/dropbox.md'
+        - 'Salesforce': 'integration/salesforce.md'
+        - 'Dropbox': 'integration/dropbox.md'
 - Reference:
         - Gluu API Guide:
             - 'Custom ID Generation': 'api-guide/api.md'
