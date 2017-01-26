@@ -15,17 +15,27 @@ SaaS, custom, open source and commercial software can be made more
 secure by leveraging a central authentication and authorization service. 
 Because there are so many different kinds of apps, there is no way to 
 "top down" implement proprietary security mechanisms. This is why
-standards are so important for IAM. Also, we don't want to lock you into 
+open standards are so important for IAM. Also, we don't want to lock you into 
 the Gluu Server!
 
 While there are many open protocols for IAM, Gluu focuses on just a few. 
 Consolidation saves money, and one-off integrations should be avoided. 
 Our goal was to support the most widely adopted older protocols, and the 
-most promising new protocols.
+most promising new protocols. 
+
+Currently the Gluu Server supports the following open web standards:
+
+- OAuth 2.0    
+- SAML 2.0   
+- OpenID Connect    
+- User Managed Access (UMA)    
+- Simple Cloud Identity Management (SCIM)    
+- FIDO Universal 2nd Factor (U2F)    
+- Lightweight Directory Access Protocol (LDAP)   
 
 If this is your first exposure to the Gluu Server, welcome to the 
 community! We want to see the ecosystem flourish, and ultimately to make 
-the Internet a safer more privacy protected place. In order to do that, 
+the Internet a safer, more privacy protected place. In order to do that, 
 we believe we need to keep the Gluu Server free, so all kinds of 
 organizations can use, contribute and benefit from the software. We 
 couldn't do it without you! 
@@ -37,29 +47,31 @@ on any typos, bugs, or improvements you'd like to see. We need your
 help... even if you're not a coder, you can contribute! 
 
 ###  oxd Client Software
-Gluu offers commercial client software. Your application can use any 
-client software that implements the open standards we support. But you 
+Gluu offers commercial client software to make securing applications easier. Your application can use any 
+client software that implements the open standards the Gluu Server supports. But you 
 may want to consider using [oxd](https://oxd.gluu.org) for a few reasons:
  
-(1). we tried to make it super-easy and fun to use. 
+(1). We tried to make it super-easy and fun to use; 
 
-(2). we keep updating it to address the latest security knowledge. 
+(2). We keep updating it to address the latest security knowledge; 
 
-(3). we can provide more complete end-to-end support if we know both 
-the client and server software.
+(3). We can provide more complete end-to-end support if we know both 
+the client and server software;
 
-(4). oxd subscription revenue helps provide money to support this project, 
-so you can see even more enhancements even faster! [oxd](https://oxd.gluu.org) has libraries for Php, Python,
-Java, Node, Ruby, C#, Perl and Go. We also have oxd plugins for many
-popular open source projects like Wordpress, Drupal, Magento, OpenCart,
-SugarCRM, SuiteCRM, Roundcube, Shopify, Kong and many more are being 
-added! Next on the list are MatterMost, RocketChat, NextCloud, and 
+(4). oxd subscription revenue helps support this project, 
+so you can see even more enhancements even faster!; 
+
+(5). There are oxd libraries for Php, Python,
+Java, Node, Ruby, C#, Perl and Go; 
+
+(6). There are oxd plugins for many popular open source projects like Wordpress, Drupal, Magento, OpenCart,
+SugarCRM, SuiteCRM, Roundcube, Shopify, Kong and many more are being added! Next on the list are MatterMost, RocketChat, NextCloud, and 
 Liferay.
 
 ### Support
 
-We are committed to free community support, just register and post your 
-questions on our [Support site](https://support.gluu.org). All community
+We are committed to free community support! You can browse or register and post 
+questions on our [support site](https://support.gluu.org). All community
 questions are public, and we do our best to answer them in a timely 
 manner. 
 
