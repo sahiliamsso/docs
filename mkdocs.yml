@@ -21,9 +21,9 @@ pages:
 #        - 'Cluster with CE': 'installation-guide/cluster.md'
         - 'Setup Script Options': 'installation-guide/setup_py.md'
         - Upgrade/Patch Guide:
-#        - 'Upgrade Gluu Server' : 'upgrade/index.md'
+          - 'Upgrade Gluu Server' : 'upgrade/index.md'
 #        - 'Patch Gluu Server' : 'upgrade/update.md'
-            - 'Updating a War File': 'upgrade/update-war.md'
+          - 'Updating a War File': 'upgrade/update-war.md'
 - Administration Guide:
         - 'oxTrust admin UI' : 'admin-guide/oxtrust-ui.md'
 #        - 'SSO Protocols' : 'admin-guide/auth-protocol.md'
