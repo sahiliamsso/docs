@@ -51,7 +51,7 @@ Gluu offers commercial client software to make securing applications easier. You
 client software that implements the open standards the Gluu Server supports. But you 
 may want to consider using [oxd](https://oxd.gluu.org) for a few reasons:
  
-(1). We tried to make oxd super-easy and fun to use; 
+(1). oxd is super-easy and fun to use; 
 
 (2). We keep updating oxd to address the latest security knowledge; 
 
@@ -59,7 +59,7 @@ may want to consider using [oxd](https://oxd.gluu.org) for a few reasons:
 the client and server software;
 
 (4). oxd subscription revenue helps support this project, 
-so you can see even more enhancements even faster!; 
+so you can see even more enhancements even faster; 
 
 (5). There are oxd libraries for Php, Python,
 Java, Node, Ruby, C#, Perl and Go; 
