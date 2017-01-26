@@ -24,4 +24,4 @@ version can be found on the top the oxTrust Admin UI.
 
 Versions of other apps like idp, asimba and oxauth-rp,
 can be found or viewed in the same directory. These app can be 
-identified with the port number after the localhost.
+identified with the [port number](./ports.md) after the localhost.
