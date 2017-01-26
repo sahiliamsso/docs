@@ -58,7 +58,7 @@ may want to consider using [oxd](https://oxd.gluu.org) for a few reasons:
 (3). We can provide more complete end-to-end support if we know both 
 the client and server software;
 
-(4). oxd subscription revenue helps support this project, 
+(4). oxd subscriptions helps support this project, 
 so you can see more enhancements faster; 
 
 (5). There are oxd libraries for Php, Python,
