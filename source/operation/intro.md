@@ -9,7 +9,7 @@ Here are some of the reasons we made this change:
 
  - Memory management: easier to allocate memory per app.
  - Restart: Easier to restart for individual components, without affecting
-   others. For example, Asimba requires more restarts when some
+   others. For example, Asimba requires more restarts when certain
    configuration is updated.
  - Logs: `wrapper.log` was getting too busy. It's better to have
    the top-level log smaller. See [logs management](../admin-guide/logs.md) 
