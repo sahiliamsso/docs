@@ -59,7 +59,7 @@ may want to consider using [oxd](https://oxd.gluu.org) for a few reasons:
 the client and server software;
 
 (4). oxd subscription revenue helps support this project, 
-so you can see even more enhancements even faster; 
+so you can see more enhancements faster; 
 
 (5). There are oxd libraries for Php, Python,
 Java, Node, Ruby, C#, Perl and Go; 
