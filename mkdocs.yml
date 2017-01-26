@@ -72,9 +72,10 @@ pages:
         - 'JSON Properties':
             - 'OxTrust JSON Properties': 'reference/JSON-oxtrust-prop.md'
             - 'OxAuth JSON Properties': 'reference/JSON-oxauth-prop.md'
+        #- 'Ox LDAP Properties':
 - Operation Guide:
         - 'Backup Gluu Server CE': 'operation/backup.md'
-        - 'Gluu Version': 'operation/find-gluu-version.md'
+        - 'Know your Gluu Version': 'operation/find-gluu-version.md'
         - 'Ports used in Gluu': 'operation/ports.md'
         - 'Logout from Gluu Server': 'operation/logout.md'
 

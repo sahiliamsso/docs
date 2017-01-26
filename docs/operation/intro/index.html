@@ -873,8 +873,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../find-gluu-version/" title="Gluu Version" class="md-nav__link">
-        Gluu Version
+      <a href="../find-gluu-version/" title="Know your Gluu Version" class="md-nav__link">
+        Know your Gluu Version
       </a>
     
   </li>
@@ -966,43 +966,43 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/GluuFederation/docs-3/edit/master/docs/operation\intro.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/GluuFederation/docs-3/blob/master/source/operation\intro.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
                 <h1 id="whats-new-in-version-3">What's new in Version 3?<a class="headerlink" href="#whats-new-in-version-3" title="Permanent link">#</a></h1>
 <p>We've made some big changes to Gluu Sever 3.0 to make it more modern, 
-faster and easier to manage. Following is an overview of these changes.</p>
+faster, and easier to manage. The following is an overview of changes.</p>
 <h2 id="jetty-replaces-tomcat-as-servlet-container">Jetty replaces Tomcat as servlet container<a class="headerlink" href="#jetty-replaces-tomcat-as-servlet-container" title="Permanent link">#</a></h2>
-<p>Here are some of the reasons we made this change</p>
+<p>Here are some of the reasons we made this change:</p>
 <ul>
 <li>Memory management: easier to allocate memory per app.</li>
-<li>Restart: Easier to restart for individual components, without affecting
-   others. For example, Asimba requires more restarts when some
+<li>Restart: Easier to restart individual components without affecting
+   others. For example, Asimba requires more restarts when certain
    configuration is updated.</li>
-<li>Logs: <code>wrapper.log</code> was getting to busy. It's better to have
+<li>Logs: <code>wrapper.log</code> was getting too busy. It's better to have
    the top-level log smaller. See <a href="../../admin-guide/logs/">logs management</a> 
    for more informatoin.</li>
 <li>Network: oxAuth is Internet facing; oxTrust is an admin application
-   which may be internal facing.</li>
+   which may be internal facing only.</li>
 <li>Docker: Deploying each application in it's own servlet container 
    aligns with our strategy to deploy each application in its own 
    container.</li>
 </ul>
 <h2 id="openldap-replaces-opendj">OpenLDAP replaces OpenDJ<a class="headerlink" href="#openldap-replaces-opendj" title="Permanent link">#</a></h2>
-<p>Gluu uses LDAP for persistence. We will continue to support 
-several LDAP servers, but we will now ship with OpenLDAP. Below are a few
+<p>The Gluu Server uses LDAP for persistence. The Gluu Server will continue to support 
+several LDAP servers, but will now ship with OpenLDAP. Below are a few
 reasons.</p>
 <ul>
-<li>OpenLDAP has better license, and Symas (the company behind OpenLDAP),
+<li>OpenLDAP has a better license, and Symas (the company behind OpenLDAP),
    has a clear commitment to free open source software.</li>
-<li>After OpenLDAP LMDB backend is super fast and crash-resistant </li>
+<li>OpenLDAP's LMDB backend is super fast and crash-resistant. </li>
 <li>Tired of fighting with Java garbage collection.</li>
 <li>Affordable support options from Symas.</li>
 <li>Proxy Capabilities: using OpenLDAP Gold, which is a commercial 
-   distribution from Symas, we can break data into different replicated 
-   topologies, and use the proxy to route operations. Using this strategy
-   we can increase the write performance of the ldap service. </li>
+   distribution from Symas, data can be organized into different replicated 
+   topologies, and the proxycan be used to route operations. Using this strategy
+   can increase the write performance of the ldap service. </li>
 </ul>
 <h2 id="shibboleth-idp-version-3">Shibboleth IDP version 3<a class="headerlink" href="#shibboleth-idp-version-3" title="Permanent link">#</a></h2>
 <ul>
@@ -1012,11 +1012,11 @@ reasons.</p>
 </ul>
 <h2 id="new-features">New Features<a class="headerlink" href="#new-features" title="Permanent link">#</a></h2>
 <ul>
-<li>Passport.js component makes it easy to use over 300 websites for 
+<li>Passport.js makes it easy to use over 300 websites for 
    social login. See the <a href="../../authn-guide/passport/">Passport</a> docs 
-   page for more information.</li>
-<li>One Time Password authentication: You asked for it! Now users can 
-   authenticate using any standard HOTP or TOTP OATH 
+   for more information.</li>
+<li>One-Time Password (OTP) authentication: You asked for it! Now it's easy to 
+   authenticate users with any standard HOTP or TOTP OATH 
    software, like <a href="https://support.google.com/accounts/answer/1066447?hl=en">Google Authenticator</a>.</li>
 <li>Centralized logging--useful for clustered deployments.</li>
 <li>Improved audit logging capabilities for OAuth 2.0</li>
