@@ -910,7 +910,7 @@
                 
                 <h1 id="updating-a-war-file">Updating a war file<a class="headerlink" href="#updating-a-war-file" title="Permanent link">#</a></h1>
 <p>A <a href="https://en.wikipedia.org/wiki/WAR_(file_format)">war</a> file is a 
-zipped up java web application. Beacuse they make deployment a breeze,
+zipped up java web application. Because they make deployment a breeze,
 even if you hate violence, you can learn to love .war's!</p>
 <p>When you install a new version of Gluu, it always comes with the latest
 war files. However, sometimes you might make a customization, or 
@@ -926,39 +926,33 @@ uses the warfile "identity.war"). But you could switch this process
 for any of the Gluu Server war files like oxAuth, asimba, the 
 Shibboleth IDP or oxauth-rp.</p>
 <ol>
-<li>Login to chroot container </li>
+<li>
+<p>Login to chroot container </p>
+<p><code># service gluu-server-3.0.0 login</code></p>
+</li>
+<li>
+<p>Stop the respective service. </p>
+<p><code># service identity stop</code></p>
+</li>
+<li>
+<p>Navigate to the /opt/gluu/jetty folder and back up the current app
+in root's home directory (just in case you need to restore!)</p>
+<p><code># cd /opt/gluu/jetty/</code></p>
+<p><code># tar -czf ~/identity.tar.gz identity</code></p>
+</li>
+<li>
+<p>Download and install the latest release war (assuming the 
+URL was in the $WAR_URL environment variable).</p>
+<p><code># cd /opt/gluu/jetty/identity/webapps/</code></p>
+<p><code># rm identity.war</code></p>
+<p><code># wget $WAR_URL</code></p>
+</li>
+<li>
+<p>Start the service (for example oxTrust)</p>
+<p><code># service identity start</code></p>
+</li>
 </ol>
-<pre><code># service gluu-server-3.0.0 login
-</code></pre>
-
-<ol>
-<li>Stop the respective service. </li>
-</ol>
-<pre><code># service identity stop
-</code></pre>
-
-<ol>
-<li>Navigate to the /opt/gluu/jetty folder and back up the current app
-in root's home directory (just in case you need to restore!)</li>
-</ol>
-<pre><code># cd /opt/gluu/jetty/
-# tar -czf ~/identity.tar.gz identity
-</code></pre>
-
-<ol>
-<li>Download and install the latest release war (assuming the 
-URL was in the $WAR_URL environment variable).</li>
-</ol>
-<pre><code># cd /opt/gluu/jetty/identity/webapps/
-# rm identity.war
-# wget $WAR_URL
-</code></pre>
-
-<ol>
-<li>Start the service (for example oxTrust)</li>
-</ol>
-<pre><code># service identity start
-</code></pre>
+<p>Latest release of war files can be downloaded from <a href="https://ox.gluu.org/maven/org/xdi/oxtrust-server/">here</a></p>
               
             </article>
           </div>

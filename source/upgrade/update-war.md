@@ -1,7 +1,7 @@
 # Updating a war file
 
 A [war](https://en.wikipedia.org/wiki/WAR_(file_format)) file is a 
-zipped up java web application. Beacuse they make deployment a breeze,
+zipped up java web application. Because they make deployment a breeze,
 even if you hate violence, you can learn to love .war's!
 
 When you install a new version of Gluu, it always comes with the latest
@@ -22,36 +22,32 @@ Shibboleth IDP or oxauth-rp.
 
 1. Login to chroot container 
 
-```
-# service gluu-server-3.0.0 login
-```
-	
+    `# service gluu-server-3.0.0 login`
+    
 2. Stop the respective service. 
 
-```
-# service identity stop
-```
-	
+    `# service identity stop`
+    
 3. Navigate to the /opt/gluu/jetty folder and back up the current app
 in root's home directory (just in case you need to restore!)
 
-```
-# cd /opt/gluu/jetty/
-# tar -czf ~/identity.tar.gz identity
-```
+    `# cd /opt/gluu/jetty/`
+    
+    `# tar -czf ~/identity.tar.gz identity`
+    
 
-5. Download and install the latest release war (assuming the 
+4. Download and install the latest release war (assuming the 
 URL was in the $WAR_URL environment variable).
 
-```
-# cd /opt/gluu/jetty/identity/webapps/
-# rm identity.war
-# wget $WAR_URL
-```	
+    `# cd /opt/gluu/jetty/identity/webapps/`
+    
+    `# rm identity.war`
+    
+    `# wget $WAR_URL`
+    
 
-7. Start the service (for example oxTrust)
-
-```
-# service identity start
-```
-
+5. Start the service (for example oxTrust)
+    
+    `# service identity start`
+    
+Latest release of war files can be downloaded from [here](https://ox.gluu.org/maven/org/xdi/oxtrust-server/)
