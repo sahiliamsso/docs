@@ -851,6 +851,17 @@
           
   <li class="md-nav__item">
     
+      <a href="../ports/" title="Ports used in Gluu" class="md-nav__link">
+        Ports used in Gluu
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
       <a href="../logout/" title="Logout from Gluu Server" class="md-nav__link">
         Logout from Gluu Server
       </a>
@@ -894,12 +905,30 @@
               
                 
                 <h1 id="here-is-how-you-can-check-which-version-of-the-gluu-server-you-are-using">Here is how you can check which version of the Gluu Server you are using:<a class="headerlink" href="#here-is-how-you-can-check-which-version-of-the-gluu-server-you-are-using" title="Permanent link">#</a></h1>
-<p><em>Will be modified later with jetty</em></p>
-<pre><code>1. SSH into VM
-2. Log into Gluu-Server container
-3. oxTrust version: cat /opt/tomcat/webapps/identity/META-INF/MANIFEST.MF
-4. oxAuth version: cat /opt/tomcat/webapps/oxauth/META-INF/MANIFEST.MF
-</code></pre>
+<ol>
+<li>SSH into VM</li>
+<li>
+<p>Log into Gluu-Server container. </p>
+<p>a. Using below command</p>
+<p><code>service gluu-server-3.0.0 login</code></p>
+</li>
+<li>
+<p>To find oxTrust version</p>
+<p><code>cat /opt/jetty-9.3/temp/jetty-localhost-8082-identity.war-
+  _identity-any-8734901518752897483.dir/webapp/META-INF/MANIFEST.MF</code></p>
+</li>
+<li>
+<p>oxAuth version can be found using below command </p>
+<p><code>cat /opt/jetty-9.3/temp/jetty-localhost-8081-oxauth.war-
+_oxauth-any-6134601069165491713.dir/webapp/META-INF/MANIFEST.MF</code></p>
+</li>
+</ol>
+<p>Another simplest way to find out the Gluu Server installed or upgraded 
+version can be found on the top the oxTrust Admin UI.</p>
+<p><img alt="Gluu Version" src="../../img/oxtrust/welcome-page.png" /></p>
+<p>Versions of other apps like idp, asimba and oxauth-rp,
+can be found or viewed in the same directory. These app can be 
+identified with the port number after the localhost.</p>
               
             </article>
           </div>
@@ -927,13 +956,13 @@
           </a>
         
         
-          <a href="../logout/" title="Logout from Gluu Server" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../ports/" title="Ports used in Gluu" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Logout from Gluu Server
+                Ports used in Gluu
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

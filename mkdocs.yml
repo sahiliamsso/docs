@@ -75,5 +75,7 @@ pages:
 - Operation Guide:
         - 'Backup Gluu Server CE': 'operation/backup.md'
         - 'Gluu Version': 'operation/find-gluu-version.md'
+        - 'Ports used in Gluu': 'operation/ports.md'
         - 'Logout from Gluu Server': 'operation/logout.md'
+
 
