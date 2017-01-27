@@ -1,60 +1,65 @@
 # SAML
 ## Outbound SAML
-Outbound SAML can also be called SP-initiated Single Sign On (SSO) or traditional SAML. In an outbound SAML transaction, the SP redirects the user to the designated Identity Provider (IDP) for authentication and authorization. The IDP will ask for the username and password for the user and up on successful authentication, the user is sent back to the SP logged in. The requirement for the IDP is a trust relationship (TR) set up beforehand with the SP. The next section covers how to set up a TR in Gluu Server.
+Outbound SAML can also be called SP-initiated Single Sign-On (SSO) or traditional SAML. In an outbound SAML transaction, the SP redirects the user to the designated Identity Provider (IDP) for authentication and authorization. The IDP will ask for user's credentials and upon successful authentication, the user is sent back to the SP logged in. In order for this transaction to happen successfully there must be pre-established trust between the IDP and the SP. In the Gluu Server, the IDPs configuration is called a Trust Relationship (TR). The following sections cover how to create a TR in Gluu Server, as well as how to use the Shibboleth RP software to add SAML to an application (if needed).
 
 !!! Note
-    For any SAML transaction, a trust relationship must be created with the IDP.
+    For any SAML transaction, a trust relationship must be created in the IDP.
 
 ### Trust Relationship Requirements
 Trust Relationship requires the infomation listed below.
 
 **Metadata of the SP**
-Metadata is a XML file which has configuration data used to provision any website (SP) or IDP (Gluu Server) to communicate with each other. It is interchangeable between the IDP and the SP.
-
-Websites (SP) can provide metadata via URL or as a separate file.
+Metadata is an XML file which has configuration data used to establish trust between the website (SP) or IDP (Gluu Server). Websites (SP) can provide metadata via a URL or as a separate file. Metadata can change, so a static URL typically requires the least amount of ongoing maintenance. 
 
 **Required Attributes**
-Every organization has their own policy to release/share attributes with
-any IDP or SP. The oxTrust GUI supports both preconfigured and custom attribute
-Release to the SP. The administrator only needs to click on the desired 
-attribute and it will be released to the SP.
+Each SP may require one or many attributes in order to grant a user access. Required attributes vary depending on the application, and should be explicitly listed in the application's documentation. The Gluu Server ships with certain preconfigured attributes and also supports the creation of custom attributes. Once the attributes are available in the Gluu Server, the administrator only needs to click on the desired attribute(s) and it will be released to the SP upon successful user authentication.
 
 **SSO Testing Endpoint**
 Every website (SP) should have both a staging and a production URI
-endpoint which can be checked for SSO, where the user will access to log
-into that SP.
+endpoint which can be checked for SSO.
 
-### Create a Trust Relationship
+### Create a Trust Relationship in the Gluu Server
 * Go to SAML → Trust Relationships
 * Click on “Add Relationship”
 
 ![addTR](../img/saml/addTR.png)
 
 * A new page will appear. Here, as a Gluu Server administrator you need
-  to provide all the information regarding the SP to establish Trust
+  to provide all the required information regarding the SP to create a Trust
   Relationship from Gluu Server.
 
 ![newTR](../img/saml/newTR.png)
 
 * _Display Name_: Name of the Trust Relationship (it should be unique for every trust relationship)
 * _Description_: Little description. Purpose and SSO link can be added here.
-* _Metadata Type_: Depending on trusted party’s metadata (SP), there are four available types in Gluu Server
+* _Metadata Type_: There are four available options to choose from in Gluu Server. The correct type depends on how the SP is delivering the Metadata to your IDP.
     * _File_: If SP has uploadable metadata in XML format, this option works best.
     * _URI_: If the metadata of SP has URI link and accessible from the internet, Gluu Server Administrator can use this option.
-* _Released_: The attributes that are required for the SP must be in this pane. The required attributes can be selected from the left side pane with the heading “Release Additional Attributes”.
+    * _Generate_: If the SP is an "inhouse application" or the “Shibboleth SP” is installed or going to be installed in target application site (SP) the generate option will generate a how-to guide for installing the Shibboleth SP on the application. will help user to configure and install Shibboleth SP on their own area. Please note the following if you do plan to use the Generate method for your SP:
+            * _URL_ : This is the `hostname of SP`    
+            * _Public certificate_ : You must provide the certificate which is a Base64 encoded ASCII file and contain "-----BEGIN CERTIFICATE-----" and "-----END CERTIFICATE-----". This certificate can not be password protected.   
+            * After creating the Trust Relationship, download the generated configuration files from `Download Shibboleth2 configuration files` link and place these configuration files inside your SP configuration.   
+    * _Federation_: If the target application (SP) is affiliated with a federation service (e.g. InCommon, NJEdge etc. ), this option of “Metadata Type” is required. Select “Federation” in Metadata Type and another drop down menu called “Select Federation” will appear. From this drop menu select desired Federation. After selecting the “Federation Name”, a new link named “Click to select
+entity id” will appear. From this link the Gluu Server Administrator can select all SP entityIDs which are affiliated with the federation. Learn how to establish trust with a federation [below](#federation-configuration).
+
+* _Released_: The SPs required attributes must be added to this pane. The required attributes can be selected from the left side panel with the heading “Release Additional Attributes”.
+
 The TR is added by clicking on the `Add` button located in the lower left side of the page.
 
 ### Relying Party Configuration
-The Relying Party must be configured for some SPs. The relying party configuration is accessible on the TR Creation page. The checkbox `Configure specific Relying Party` must be checked.
+If the target application does not already support SAML, the Relying Party software must be configured. The relying party configuration is accessible on the TR Creation page. The checkbox `Configure specific Relying Party` must be checked.
 
 ![enable-relying-party.png](../img/saml/enable-relying-party.png)
 
-The checkbox will result in a link which can be accessed to configure relying party for the TR. The image below shows the relying party config panel from which the administrator can add the specific option.
+The checkbox will result in a link which can be accessed to find information about configuring the relying party for the TR. The image below shows the relying party config panel from which the administrator can add the specific option.
 
 ![tr-relying-party](../img/saml/tr-relying-party.png)
 
+!!! Note
+    If the target app does not already support a federation standard like SAML, and you or the developer are planning on adding federation to the application, we strongly recommend using OpenID Connect rather than SAML. OpenID Connect is newer, easier to use, and follows modern best practices. Learn more in our blog: [OAuth vs. SAML vs. OpenID Connect](http://gluu.co/oauth-saml-openid).
+    
 ### Federation Configuration
-If the SP is part of any identity federation such as InCommon Federation, then the administrator must add the federation as a SP in Gluu Server. This will allow the administrator to add SPs under the federation easily from a TR. The requirement of a federation TR created using the general TR is a must. The example below shows an administrator adding a TR for InCommon Federation.
+If the SP is part of any identity federation such as the InCommon Federation, then the administrator must add the federation as an SP in Gluu Server. This will allow the administrator to add SPs under the federation easily from a TR. The requirement of a federation TR created using the general TR is a must. The example below shows an administrator adding a TR for InCommon Federation.
 
 ![federationTR](../img/saml/federationTR.png)
 
