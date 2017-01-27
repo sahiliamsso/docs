@@ -26,27 +26,26 @@ endpoint which can be checked for SSO. It's important to thoroughly test all sce
 
 ![addTR](../img/saml/addTR.png)
 
-* A new page will appear. Here, as a Gluu Server administrator you need
-  to provide all the required information regarding the SP to create a Trust
-  Relationship from Gluu Server.
+* A new page will appear where you can provide all the required information to create a Trust
+  Relationship.
 
 ![newTR](../img/saml/newTR.png)
 
 * _Display Name_: Name of the Trust Relationship (it should be unique for every trust relationship)     
 * _Description_: Little description. Purpose and SSO link can be added here.    
-* _Metadata Type_: There are four available options to choose from in Gluu Server. The correct type depends on how the SP is delivering the Metadata to your IDP.      
-    * _File_: If SP has uploadable metadata in XML format, this option works best.
-    * _URI_: If the metadata of SP has URI link and accessible from the internet, Gluu Server Administrator can use this option.
-    * _Generate_: If the SP is an "inhouse application" or the “Shibboleth SP” is installed or going to be installed in target application site (SP) the generate option will generate a how-to guide for installing the Shibboleth SP on the application. will help user to configure and install Shibboleth SP on their own area. Please note the following if you do plan to use the Generate method for your SP:
-            * _URL_ : This is the `hostname of SP`    
-            * _Public certificate_ : You must provide the certificate which is a Base64 encoded ASCII file and contain "-----BEGIN CERTIFICATE-----" and "-----END CERTIFICATE-----". This certificate can not be password protected.        
-            * After creating the Trust Relationship, download the generated configuration files from `Download Shibboleth2 configuration files` link and place these configuration files inside your SP configuration.        
-    * _Federation_: If the target application (SP) is affiliated with a federation service (e.g. InCommon, NJEdge etc. ), this option of “Metadata Type” is required. Select “Federation” in Metadata Type and another drop down menu called “Select Federation” will appear. From this drop menu select desired Federation. After selecting the “Federation Name”, a new link named “Click to select
-entity id” will appear. From this link the Gluu Server Administrator can select all SP entityIDs which are affiliated with the federation. Learn how to establish trust with a federation [below](#federation-configuration).     
+* _Metadata Type_: There are four available options to choose from. The correct Type depends on how the SP is delivering Metadata to your IDP.      
+    * _File_: Choose File if the SP has provided an uploadable metadata document in XML format.
+    * _URI_: Chose URI if the SP metadata is hosted on a URI that is accessible from the Internet.
+    * _Generate_: Choose Generate if the SP is an "inhouse application" or the “Shibboleth SP” is going to be installed in the target application (SP). This option will generate a how-to guide for installing the Shibboleth SP. If you plan on using the Generate method, please note the following:
+            * _URL_ : This is the hostname of the SP.    
+            * _Public certificate_ : You must provide the certificate, which is a Base64 encoded ASCII file, and contain "-----BEGIN CERTIFICATE-----" and "-----END CERTIFICATE-----". This certificate **can not** be password protected.        
+            * After creating the Trust Relationship, download the generated configuration files from the `Download Shibboleth2 configuration files` link and place these configuration files inside your SP configuration.        
+    * _Federation_: Choose this option if the target application (SP) is affiliated with a federation service (e.g. InCommon, NJEdge etc.). Once you select “Federation” as the Metadata Type, another drop down menu called “Select Federation” will appear. From this drop menu you can select the appropriate federation. After selecting the “Federation Name”, a new link called “Click to select
+entity id” will appear. Use this link to find and select the SP entityIDs that you wish to create SSO with. Learn how to establish trust with a federation [below](#federation-configuration).     
 
-* _Released_: The SPs required attributes must be added to this pane. The required attributes can be selected from the left side panel with the heading “Release Additional Attributes”.     
+* _Released_: The SPs required attributes must be added to this panel. The required attributes can be selected from the menu on the left with the heading “Release Additional Attributes”.     
 
-The TR is added by clicking on the `Add` button located in the lower left side of the page.     
+The TR is added by clicking the `Add` button located in the lower left side of the page.     
 
 ### Relying Party Configuration     
 If the target application does not already support SAML, the Relying Party software must be configured. The relying party configuration is accessible on the TR Creation page. The checkbox `Configure specific Relying Party` must be checked.     
@@ -58,7 +57,7 @@ The checkbox will result in a link which can be accessed to find information abo
 ![tr-relying-party](../img/saml/tr-relying-party.png)     
 
 !!! Note     
-    If the target app does not already support a federation standard like SAML, and you or the developer are planning on adding federation to the application, we strongly recommend using OpenID Connect rather than SAML. OpenID Connect is newer, easier to use, and follows modern best practices. Learn more in our blog: [OAuth vs. SAML vs. OpenID Connect](http://gluu.co/oauth-saml-openid).
+    If the target application does not already support a federation standard like SAML, and you or the developer are planning on adding federation to the application, we strongly recommend using OpenID Connect rather than SAML. OpenID Connect is newer, easier to use, and follows modern best practices. Learn more in our blog: [OAuth vs. SAML vs. OpenID Connect](http://gluu.co/oauth-saml-openid).
     
 ### Federation Configuration     
 If the SP is part of an identity federation such as InCommon, the administrator must add the federation as an SP in the Gluu Server. This will enable the administrator to more easily create TRs with SPs in the federation. The example below shows how an administrator would add a TR for the InCommon Federation.
@@ -70,9 +69,9 @@ Once a TR has been established with the federation, the Gluu Server administrato
 ![federation-entityid.png](../img/saml/federation-entityid.png)
 
 ## Inbound SAML     
-Gluu Server uses an open source product called Asimba to achieve inbound SAML. Asimba allows websites to use a single IDP for SSO even when the organization has multiple trusted IDPs. Please see the [Asimba website](http://www.asimba.org/site/) for more information.
+Inbound SAML allows users from external identity providers to SSO into services protected by the Gluu Server. The Gluu Server uses an open source product called [Asimba](http://www.asimba.org/site/) to achieve inbound SAML. Asimba allows SPs to use a single IDP for SSO even when users come from multiple trusted external IDPs. 
 
-Gluu Server is shipped with the SAML Script which simplifies the process of using SAML Proxy. The SAML proxy configuration is made easy from the oxTrust admin interface. This section provides a step-by-step method of configuring the proxy with two (2) IDPs and a single SP. The administrator can add multiple IDPs or SPs if required using the same method. However, it is mandatory that all the SPs and IDPs are connected to the Asimba server, or the IDP that has the Asimba module enabled.
+The Gluu Server is shipped with a SAML Script which simplifies the process of using Asimba. This section provides a step-by-step method of configuring Asimba with two (2) IDPs and a single SP. The administrator can add multiple IDPs or SPs if required using the same method. However, it is required that all SPs and IDPs are connected to the Asimba server, or the IDP that has the Asimba module enabled.
 i![asimba-overview](../img/asimba/overview.png)
 
 ### Required Setup     
@@ -80,8 +79,8 @@ i![asimba-overview](../img/asimba/overview.png)
 |Setup hostname|Description|
 |--------------|-----------|
 |https://sp.gluu.org/protected/print.py|This is a shibboleth SP connected to _https://test.gluu.org_|
-|https://test.gluu.org| This is a Gluu Server SAML IdP with Asimba|
-|https://nest.gluu.org|This is a second Gluu Server SAML IdP connected to _https://test.gluu.org_ |
+|https://test.gluu.org| This is a Gluu Server SAML IDP with Asimba|
+|https://nest.gluu.org|This is a second Gluu Server SAML IDP connected to _https://test.gluu.org_ |
 
 
 **Note: Description of SAML Authentication Module is available here: 
