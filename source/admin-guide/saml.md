@@ -11,7 +11,7 @@ In order for this transaction to happen successfully there must be pre-establish
 Each Trust Relationship requires the infomation listed below.
 
 **Metadata of the SP**       
-Metadata is an XML file which has configuration data used to establish trust between the website (SP) or IDP (Gluu Server). Websites (SP) can provide metadata via a URL or as a separate file. Metadata can change, so a static URL typically requires the least amount of ongoing maintenance. 
+Metadata is an XML file which has configuration data used to establish trust between the website (SP) and IDP (Gluu Server). Websites (SP) can provide metadata via a URL or as a separate file. Metadata can change, so a static URL typically requires the least amount of ongoing maintenance. 
   
 **Required Attributes**      
 Each SP may require one or many attributes in order to grant a user access. Required attributes vary depending on the application, and should be explicitly listed in the application's documentation. The Gluu Server ships with certain preconfigured attributes and also supports the creation of custom attributes. Once the attributes are available in the Gluu Server, the administrator only needs to click on the desired attribute(s) and it will be released to the SP upon successful user authentication.
