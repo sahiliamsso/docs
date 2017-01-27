@@ -76,13 +76,13 @@ questions are public, and we do our best to answer them in a timely
 manner. 
 
 Private support, guaranteed response times, and consultative 
-support are available to organizations who purchase a contract. For
+support are available to organizations who purchase a support contract. For
 more information, see [our website](gluu.org/pricing).
 
 ### License
 
-Gluu's open source software is 
-[MIT License](http://opensource.org/licenses/MIT) license. The licenses 
+All of Gluu's open source software is published under an
+[MIT License](http://opensource.org/licenses/MIT). The licenses 
 for other components are listed below.
 
 |	Component	|	License	            |
