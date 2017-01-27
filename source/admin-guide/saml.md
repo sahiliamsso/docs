@@ -1,6 +1,6 @@
 # SAML
 ## Outbound SAML
-Outbound SAML can also be called SP-initiated Single Sign-On (SSO) or traditional SAML. In an outbound SAML transaction, the SP redirects the user to the designated Identity Provider (IDP) for authentication and authorization. The IDP will ask for user's credentials and upon successful authentication, the user is sent back to the SP logged in. 
+Outbound SAML can also be called SP-initiated Single Sign-On (SSO) or traditional SAML. In an outbound SAML transaction the SP redirects the user to the designated Identity Provider (IDP) for authentication and authorization. The IDP will ask for user's credentials and upon successful authentication, the user is sent back to the SP logged in. 
 
 In order for this transaction to happen successfully there must be pre-established trust between the IDP and the SP. In the Gluu Server, the IDPs SSO configuration is called a Trust Relationship (TR). The following sections cover how to create a TR in the Gluu Server. 
 
