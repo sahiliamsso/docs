@@ -501,19 +501,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../clients/" title="OpenID Clients" class="md-nav__link">
-        OpenID Clients
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../saml/" title="SAML SSO" class="md-nav__link">
-        SAML SSO
+      <a href="../saml/" title="SAML" class="md-nav__link">
+        SAML
       </a>
     
   </li>
@@ -540,6 +529,17 @@
   
   
 </nav>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../clients/" title="OpenID Connect Clients" class="md-nav__link">
+        OpenID Connect Clients
+      </a>
     
   </li>
 
@@ -954,6 +954,7 @@ OpenID Connect allows relying parties to verify the identity of, and obtain info
 <h2 id="openid-connect-authorization-code-flow">OpenID Connect Authorization Code Flow<a class="headerlink" href="#openid-connect-authorization-code-flow" title="Permanent link">#</a></h2>
 <p>The OpenID Connect Authorization Code Flow specifies how the relying party interacts with the OpenID Provider based on use of the OAuth 2.0 authorization grant. The authorization code flow is more secure than the implicit flow because the tokens are never exposed to the web browser and possibly other malicious applications with access to the browser. As with the implicit flow the extra securuty in Connect's authorization code flow stems from the id_token. </p>
 <h2 id="openid-connect-hybrid-flow">OpenID Connect Hybrid Flow<a class="headerlink" href="#openid-connect-hybrid-flow" title="Permanent link">#</a></h2>
+<p>Hybrid flow is a combination of the Implicit Flow and Authorization Code Flow. It allows an application to request a combination of identity token, access token, and code via the front channel using either a fragment encoded redirect (native and JS based clients) or a form post (server-based web applications). This enables scenarios where your client app can make immediate use of an identity token to get access to the user’s identity, but also retrieve an authorization code that can be used by a back end service to request a refresh token, thus gaining long lived access to resources.</p>
 <h2 id="discovery">Discovery<a class="headerlink" href="#discovery" title="Permanent link">#</a></h2>
 <p>The first thing you want to know about any OAuth 2.0 API is where the
 endpoints are (i.e. what are the URIs where you call the APIs).
@@ -1263,7 +1264,13 @@ Grant Types: implicit
 <p>In 2016, Google released and then donated code to the OpenID Foundation called AppAuth for <a href="https://github.com/openid/AppAuth-android">Android</a> and <a href="https://github.com/openid/AppAuth-iOS">iOS</a>. The AppAuth projects also include sample applications. Simulataneously, Google announced that it was deprecating the use of WebViews--a strategy used by mobile app developers which is vulnerable to malicious application code. Not only does AppAuth provide secure authentication, it enables SSO across the system browser and mobile applications. It accomplishes this by leveraging new operating system features that enable the system browser to be called by an application in an opaque view that does not enable an app developer to steal a person's credentials, or other applications to steal codes or tokens. Using this approach, mobile app developers can use the authorization code or hypbrid flow (as described earlier). </p>
 <p>The Gluu Server is the only free open source OpenID Connect Provider that currently supports AppAuth. </p>
 <h1 id="oxauth-rp">oxAuth RP<a class="headerlink" href="#oxauth-rp" title="Permanent link">#</a></h1>
-<p>The Gluu Server ships with an optional OpenID Connect relying party web application, which is handy for testing.  It's called oxauth-rp. During Gluu Server setup, you'll be asked if you want to install it--which you should on a development environment. It will be deployed on <code>https://&lt;hostname&gt;/oxauth-rp</code>. Using this tool you can exercise all of the OpenID Connect API's, including discovery, client registration, authorization, token, userinfo, and end_session. </p>
+<p>The Gluu Server ships with an optional OpenID Connect relying 
+party web application, which is handy for testing.<br />
+It's called oxauth-rp. During Gluu Server setup, you'll be asked if you 
+want to install it--which you should on a development environment. 
+It will be deployed on <code>https://&lt;hostname&gt;/oxauth-rp</code>. Using this tool 
+you can exercise all of the OpenID Connect API's, including discovery, 
+client registration, authorization, token, userinfo, and end_session. </p>
               
             </article>
           </div>
@@ -1276,7 +1283,7 @@ Grant Types: implicit
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../saml/" title="SAML SSO" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../saml/" title="SAML" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1285,19 +1292,19 @@ Grant Types: implicit
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                SAML SSO
+                SAML
               </span>
             </div>
           </a>
         
         
-          <a href="../uma/" title="UMA" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../clients/" title="OpenID Connect Clients" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                UMA
+                OpenID Connect Clients
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

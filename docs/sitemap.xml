@@ -90,12 +90,6 @@
     </url>
         
     <url>
-     <loc>/admin-guide/clients/</loc>
-     <lastmod>2017-01-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>/admin-guide/saml/</loc>
      <lastmod>2017-01-28</lastmod>
      <changefreq>daily</changefreq>
@@ -103,6 +97,12 @@
         
     <url>
      <loc>/admin-guide/openid-connect/</loc>
+     <lastmod>2017-01-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/admin-guide/clients/</loc>
      <lastmod>2017-01-28</lastmod>
      <changefreq>daily</changefreq>
     </url>

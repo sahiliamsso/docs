@@ -386,5 +386,11 @@ The Gluu Server is the only free open source OpenID Connect Provider that curren
 
 # oxAuth RP
 
-The Gluu Server ships with an optional OpenID Connect relying party web application, which is handy for testing.  It's called oxauth-rp. During Gluu Server setup, you'll be asked if you want to install it--which you should on a development environment. It will be deployed on `https://<hostname>/oxauth-rp`. Using this tool you can exercise all of the OpenID Connect API's, including discovery, client registration, authorization, token, userinfo, and end_session. 
+The Gluu Server ships with an optional OpenID Connect relying 
+party web application, which is handy for testing.  
+It's called oxauth-rp. During Gluu Server setup, you'll be asked if you 
+want to install it--which you should on a development environment. 
+It will be deployed on `https://<hostname>/oxauth-rp`. Using this tool 
+you can exercise all of the OpenID Connect API's, including discovery, 
+client registration, authorization, token, userinfo, and end_session. 
 
