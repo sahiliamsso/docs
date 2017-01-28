@@ -17,7 +17,7 @@
     
     
       
-        <title>SCIM protected by UMA - Gluu Docs</title>
+        <title>Session Timeout - Gluu Docs</title>
       
     
     
@@ -81,7 +81,7 @@
                 </span>
               
             
-            SCIM protected by UMA
+            Session Timeout
           
         </span>
       </div>
@@ -326,9 +326,46 @@
           
   <li class="md-nav__item">
     
-      <a href="../session/" title="Session Timeout" class="md-nav__link">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
         Session Timeout
-      </a>
+      </label>
+    
+    <a href="./" title="Session Timeout" class="md-nav__link md-nav__link--active">
+      Session Timeout
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sessionunusedlifetime" title="SessionUnusedLifeTime" class="md-nav__link">
+    SessionUnusedLifeTime
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sessionidunauthenticatedunusedlifetime" title="SessionIdUnauthenticatedUnusedLifeTime" class="md-nav__link">
+    SessionIdUnauthenticatedUnusedLifeTime
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -556,60 +593,9 @@
           
   <li class="md-nav__item">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <a href="../scim-uma/" title="SCIM protected by UMA" class="md-nav__link">
         SCIM protected by UMA
-      </label>
-    
-    <a href="./" title="SCIM protected by UMA" class="md-nav__link md-nav__link--active">
-      SCIM protected by UMA
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" title="Installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" title="Configuration" class="md-nav__link">
-    Configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing-scim-uma" title="Testing SCIM UMA" class="md-nav__link">
-    Testing SCIM UMA
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scim-20-test-mode-v244" title="SCIM 2.0 Test Mode (v2.4.4+)" class="md-nav__link">
-    SCIM 2.0 Test Mode (v2.4.4+)
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+      </a>
     
   </li>
 
@@ -954,29 +940,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" title="Installation" class="md-nav__link">
-    Installation
+  <a href="#sessionunusedlifetime" title="SessionUnusedLifeTime" class="md-nav__link">
+    SessionUnusedLifeTime
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration" title="Configuration" class="md-nav__link">
-    Configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing-scim-uma" title="Testing SCIM UMA" class="md-nav__link">
-    Testing SCIM UMA
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scim-20-test-mode-v244" title="SCIM 2.0 Test Mode (v2.4.4+)" class="md-nav__link">
-    SCIM 2.0 Test Mode (v2.4.4+)
+  <a href="#sessionidunauthenticatedunusedlifetime" title="SessionIdUnauthenticatedUnusedLifeTime" class="md-nav__link">
+    SessionIdUnauthenticatedUnusedLifeTime
   </a>
   
 </li>
@@ -992,167 +964,29 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/GluuFederation/docs-3/blob/master/source/admin-guide\scim-uma.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/GluuFederation/docs-3/blob/master/source/admin-guide\session.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h1>
-<p>Gluu Server supports only UMA protection for SCIM endpoints from version 2.4.0 onwards. 
-A machine based authorization method is used to obtain the access tokens. SCIM/UMA is built
-into the Gluu Server CE and does not require any special package or installation. Please checkout 
-<a href="../../installation-guide/">Installation Guide</a> for installation instructions.</p>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
-<ul>
-<li>Install Gluu Server CE following the <a href="../../installation-guide/">Installation Guide</a> and 
-remember to install <code>Asimba</code> while running the setup script.  The setup script prepares the 
-configuration necessary for SCIM UMA RS endpoints and SCIM UMA RP client 
-and <a href="https://github.com/GluuFederation/community-edition-setup/blob/master/templates/scim.ldif">this template</a> 
-is used. </li>
-</ul>
-<p><strong>Note:</strong> The JWKS for RS and RP clients are put into the <code>./output/scim.ldif</code> file ready for SCIM configuration.
-The <code>setup.properties.file</code> contains the RS and RP JWKS in Base64 format.</p>
-<ul>
-<li>
-<p>Use the following command to extract OpenID SCIM RS and RP Client ID
-<code>cat setup.properties.last | grep "scim_rs_client_id\|scim_rp_client_id"</code></p>
-</li>
-<li>
-<p>The UMA SCIM client requires JWKS, so the setup script extracts the JWKS from <code>setup.properties.last</code> and puts it into the <code>./output/scim-rp.jks</code> file.</p>
-</li>
-</ul>
-<p><strong><em>NOTE:</em> For versions before v2.4.4, the JWKS is put in the <code>./output/scim-rp-openid-keys.json</code> file instead.</strong></p>
-<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
-<ul>
-<li>Enable SCIM from Organization Configuration</li>
-</ul>
-<p><img alt="image" src="../../img/scim/enable-scim.png" /></p>
-<ul>
-<li>oxTrust SCIM UMA configuration is automatically updated while running the <code>setup.py</code> and the correct values are setup 
-in the <a href="https://github.com/GluuFederation/community-edition-setup/blob/master/templates/oxtrust-config.json#L122">oxtrust-config.json</a> file.</li>
-</ul>
-<pre><code>  &quot;umaIssuer&quot;:&quot;https://%(hostname)s&quot;,
-  &quot;umaClientId&quot;:&quot;%(scim_rs_client_id)s&quot;,
-  &quot;umaClientKeyId&quot;:&quot;&quot;,
-  &quot;umaResourceId&quot;:&quot;1447184268430&quot;,
-  &quot;umaScope&quot;:&quot;https://%(hostname)s/oxauth/seam/resource/restv1/uma/scopes/scim_access&quot;,
-  &quot;umaClientKeyStoreFile&quot;:&quot;%(scim_rs_client_jks_fn)s&quot;,
-  &quot;umaClientKeyStorePassword&quot;:&quot;%(scim_rs_client_jks_pass_encoded)s&quot;,
-</code></pre>
-
-<ul>
-<li><code>umaClientKeyId</code> can be updated with the <code>alias</code> from <code>scim-rp.jks</code> file; if it is not updated, the first key from the file is used automatically.</li>
-</ul>
-<h2 id="testing-scim-uma">Testing SCIM UMA<a class="headerlink" href="#testing-scim-uma" title="Permanent link">#</a></h2>
-<p>The following is a sample code that can be run to test the configured SCIM UMA Gluu CE. It uses <a href="https://github.com/GluuFederation/SCIM-Client">SCIM-Client</a>, a Java library also developed by Gluu intended for client applications.</p>
-<ul>
-<li>If you are using Maven, below is how to add SCIM-Client to your project:</li>
-</ul>
-<pre><code>&lt;repositories&gt;
-  &lt;repository&gt;
-    &lt;id&gt;gluu&lt;/id&gt;
-    &lt;name&gt;Gluu repository&lt;/name&gt;
-    &lt;url&gt;http://ox.gluu.org/maven&lt;/url&gt;
-  &lt;/repository&gt;
-&lt;/repositories&gt;
-...
-&lt;dependency&gt;
-  &lt;groupId&gt;gluu.scim.client&lt;/groupId&gt;
-  &lt;artifactId&gt;SCIM-Client&lt;/artifactId&gt;
-  &lt;version&gt;${scim.client.version}&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre>
-
-<ul>
-<li>
-<p>Starting with Release v2.4.2, an SCIM-Client must be used on a matching Gluu CE. For example, if you are running CE v2.4.4, you must also use SCIM-Client v2.4.4.</p>
-</li>
-<li>
-<p>Add your domain's SSL certificate to the JRE's <code>cacerts</code> certificate key store where your client application will run. There are lots of articles around the Web on how to do this.</p>
-</li>
-<li>
-<p>Supply the UMA parameters and run the code. <strong><em>NOTE:</em> If you have re-installed Gluu CE, please note that the UMA parameters / JWKS files are also regenerated. You must then rebuild your client code with <code>target</code> or <code>tmp</code> folders possibly cleared beforehand to avoid conflicts.</strong></p>
-</li>
-</ul>
-<pre><code>
-package gluu.scim.client.dev.local;
-
-import gluu.scim.client.ScimClient;
-import gluu.scim.client.ScimResponse;
-import gluu.scim2.client.Scim2Client;
-
-import java.io.IOException;
-
-import javax.ws.rs.core.MediaType;
-import javax.xml.bind.JAXBException;
-
-import org.codehaus.jackson.JsonGenerationException;
-import org.codehaus.jackson.map.JsonMappingException;
-
-public class TestScimClient {
-
-    private static void testScim1Uma(String domain, String umaMetaDataUrl, String umaAatClientId, String umaAatClientJksPath, String umaAatClientJksPassword, String umaAatClientKeyId) throws IOException, JsonGenerationException, JsonMappingException, JAXBException {
-
-        final ScimClient scimClient = ScimClient.umaInstance(domain, umaMetaDataUrl, umaAatClientId, umaAatClientJksPath, umaAatClientJksPassword, umaAatClientKeyId);
-
-        ScimResponse response = scimClient.personSearch(&quot;uid&quot;, &quot;admin&quot;, MediaType.APPLICATION_JSON);
-        System.out.println(&quot;SCIM1 &quot; + response.getResponseBodyString());
-    }
-
-    private static void testScim2Uma(String domain, String umaMetaDataUrl, String umaAatClientId, String umaAatClientJksPath, String umaAatClientJksPassword, String umaAatClientKeyId) throws IOException, JsonGenerationException, JsonMappingException, JAXBException {
-
-        final Scim2Client scim2Client = Scim2Client.umaInstance(domain, umaMetaDataUrl, umaAatClientId, umaAatClientJksPath, umaAatClientJksPassword, umaAatClientKeyId);
-
-        String filter = &quot;userName eq \&quot;admin\&quot;&quot;;
-        ScimResponse response = scim2Client.searchUsers(filter, 1, 1, &quot;&quot;, &quot;&quot;, null);
-        System.out.println(&quot;SCIM2: &quot; + response.getResponseBodyString());
-    }
-
-    public static void main(String[] args) throws IOException, JAXBException {
-
-        final String domain = &quot;https://c67.gluu.info/identity/seam/resource/restv1&quot;;
-        final String umaMetaDataUrl = &quot;https://c67.gluu.info/.well-known/uma-configuration&quot;;
-        final String umaAatClientId = &quot;@!A410.188A.95DD.EA5A!0001!3A1E.BAA5!0008!5870.A795&quot;;
-
-        final String umaAatClientJksPath = &quot;D:\\Development\\test_data\\scim\\scim-rp.jks&quot;;
-        final String umaAatClientJksPassword = &quot;secret&quot;;
-        final String umaAatClientKeyId = &quot;&quot;;
-
-        testScim1Uma(domain, umaMetaDataUrl, umaAatClientId, umaAatClientJksPath, umaAatClientJksPassword, umaAatClientKeyId);
-        testScim2Uma(domain, umaMetaDataUrl, umaAatClientId, umaAatClientJksPath, umaAatClientJksPassword, umaAatClientKeyId);
-    }
-}
-
-</code></pre>
-
-<h2 id="scim-20-test-mode-v244">SCIM 2.0 Test Mode (v2.4.4+)<a class="headerlink" href="#scim-20-test-mode-v244" title="Permanent link">#</a></h2>
-<p>Starting with CE v2.4.4, the "test mode" configuration will help developers test the SCIM 2.0 endpoints easier. Instead of UMA + SCIM-Client, in test mode a long-lived OAuth2 access token issued by the Gluu server is used to authorize with the SCIM 2.0 endpoints.</p>
-<p>To enable test mode, do the following:</p>
-<ul>
-<li>Login to the oxTrust GUI and go to "Configuration" -&gt; "JSON Configuration" -&gt; "OxTrust Configuration", then locate the property <code>scimTestMode</code>.</li>
-</ul>
-<p><img alt="image" src="../../img/scim/scim-test-mode-false.png" /></p>
-<ul>
-<li>Set it to <code>true</code>, then click the "Save Configuration" button. The Gluu server will then create a long-lived OAuth2 access token with a validity period of one year. Doing this will also switch the authentication scheme from UMA to OAuth2 Access Token.</li>
-<li>Click again "JSON Configuration" -&gt; "OxTrust Configuration" in the left navigation pane. This will retrieve the access token and be displayed in the <code>scimTestModeAccessToken</code> property.</li>
-</ul>
-<p><img alt="image" src="../../img/scim/scim-test-mode-true.png" /></p>
-<ul>
-<li>If the access token has expired, just repeat the previous steps to create a new one.</li>
-</ul>
-<p>The access token can then be used as the query string parameter <code>access_token</code> in accessing the SCIM 2.0 endpoints, for example:</p>
-<p><img alt="image" src="../../img/scim/scim-test-mode-example.png" /></p>
-<p>You can verify the current authentication scheme of the SCIM 2.0 endpoints by browsing its <code>ServiceProviderConfig</code>:</p>
-<p><img alt="image" src="../../img/scim/scim-test-mode-config.png" /></p>
-<p>To exit test mode, just set <code>scimTestMode</code> back to <code>false</code> then click the "Save Configuration" button. This will switch the authentication scheme from OAuth2 Access Token to UMA. If you try using your access token again, you will now get the <code>403 Unauthorized</code> error:</p>
-<p><img alt="image" src="../../img/scim/scim-test-mode-403.png" /></p>
-<h1 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h1>
-<p>UMA is protected with SCIM in Gluu Server Community Edition (CE). The usage of UMA requires HTTP GET and HTTP POST requests. Before testing, the Client making the requests must be added/registered in Gluu CE. The UMA configuration is available @ <code>https://hostname/.well-known/uma-configuration</code>. The request to authorization endpoint must accompanied with  application/json content type. </p>
-<p>The example below shows the parameters used in a real-life use case  where the UMA RPT Token is authorized in oxAuth.</p>
-<pre><code>    public RptAuthorizationResponse requestRptPermissionAuthorization(@HeaderParam(&quot;Authorization&quot;) String authorization,
-            @HeaderParam(&quot;Host&quot;) String amHost, RptAuthorizationRequest rptAuthorizationRequest);
-</code></pre>
-
-<p>If the default openID SCIM Client is not used, the <code>inum</code> must be added to the UMA Authorization Policy Custom Script.</p>
+                <h1 id="session-timeout-in-gluu">Session Timeout in Gluu<a class="headerlink" href="#session-timeout-in-gluu" title="Permanent link">#</a></h1>
+<p>Session Timeout can be configured under 
+JSON Configuration&gt;OxAuth Properties.</p>
+<p>These properties are
+1. SessionUnusedLifeTime
+2. sessionIdUnauthenticatedUnusedLifetime</p>
+<h2 id="sessionunusedlifetime">SessionUnusedLifeTime<a class="headerlink" href="#sessionunusedlifetime" title="Permanent link">#</a></h2>
+<p>SessionUnusedLifeTime property is set to default for a day. 
+Session timeout works in such way that if the application is logged out, 
+if SessionUnusedLifeTime gets expired. If specific session timeout is set 
+in an application, it would be overrided by the SessionUnusedLifeTime from 
+Gluu.</p>
+<p>If application's Session time is less than the session time out 
+configured in Gluu, the application's session would be reauthorized and 
+set to a future time for timeout, where the applicatin's session timeout 
+will be overrided by Gluu's Session timeout property.</p>
+<h2 id="sessionidunauthenticatedunusedlifetime">SessionIdUnauthenticatedUnusedLifeTime<a class="headerlink" href="#sessionidunauthenticatedunusedlifetime" title="Permanent link">#</a></h2>
+<p>List of OxAuth Properties for reference can be found in 
+<a href="../../reference/JSON-oxauth-prop/">OxAuth JSON Properties</a></p>
               
             </article>
           </div>
@@ -1165,7 +999,7 @@ public class TestScimClient {
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../attribute/" title="Attribute Management" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../oxtrust-ui/" title="oxTrust admin UI" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1174,19 +1008,19 @@ public class TestScimClient {
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Attribute Management
+                oxTrust admin UI
               </span>
             </div>
           </a>
         
         
-          <a href="../certificate/" title="Certificate Management" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../auth-management/" title="Authentication Management" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Certificate Management
+                Authentication Management
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
