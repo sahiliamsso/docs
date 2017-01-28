@@ -26,11 +26,11 @@ The Gluu Server uses LDAP for persistence. The Gluu Server will continue to supp
 several LDAP servers, but will now ship with OpenLDAP. Below are a few
 reasons.
 
- - OpenLDAP has a better license, and Symas (the company behind OpenLDAP),
+ - OpenLDAP has a better license, and [Symas](https://symas.com/) (the company behind OpenLDAP),
    has a clear commitment to free open source software.
  - OpenLDAP's LMDB backend is super fast and crash-resistant. 
  - Tired of fighting with Java garbage collection.
- - Affordable support options from Symas.
+ - [Affordable support options](https://symas.com/services/subscriptions/) from Symas.
  - Proxy Capabilities: using OpenLDAP Gold, which is a commercial 
    distribution from Symas, data can be organized into different replicated 
    topologies, and the proxycan be used to route operations. Using this strategy
