@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>/operation/intro/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -21,19 +21,19 @@
         
     <url>
      <loc>/installation-guide/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/installation-guide/install/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/installation-guide/setup_py/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -49,25 +49,25 @@
         
     <url>
      <loc>/admin-guide/oxtrust-ui/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/admin-guide/session/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/admin-guide/auth-management/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/admin-guide/custom-script/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -79,61 +79,61 @@
         
     <url>
      <loc>/admin-guide/user-group/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/admin-guide/logs/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/admin-guide/saml/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/admin-guide/openid-connect/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/admin-guide/clients/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/admin-guide/uma/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/admin-guide/attribute/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/admin-guide/scim-uma/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/admin-guide/certificate/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/admin-guide/faq/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -143,43 +143,43 @@
         
     <url>
      <loc>/integration/saml-sp/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/integration/openidc-rp/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/integration/oauth2/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/integration/google/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/integration/office/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/integration/salesforce/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/integration/dropbox/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -205,25 +205,25 @@
         
     <url>
      <loc>/operation/backup/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/operation/find-gluu-version/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/operation/ports/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/operation/logout/</loc>
-     <lastmod>2017-01-28</lastmod>
+     <lastmod>2017-01-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

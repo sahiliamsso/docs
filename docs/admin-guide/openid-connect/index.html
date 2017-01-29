@@ -61,6 +61,24 @@
       <header class="md-header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
+	<div class="md-flex__cell md-flex__cell--shrink">
+	<link rel="stylesheet" href="assets/stylesheets/version-doc.css" type="text/css" />
+	<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      ver: Latest
+	  <div class="rst-other-versions">
+      <dl>
+        <dt>Versions</dt>
+          <dd><a href="/docs-3/">latest</a></dd>
+          <dd><a href="/docs/">2.4.4.2</a></dd>
+      </dl>
+      <dl>
+	 </div>
+      <span class="fa fa-caret-down"></span>
+    </span>
+    
+	</div>
+	</div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../.." title="Gluu Docs" class=" md-logo  md-header-nav__button">
           
@@ -954,7 +972,15 @@ OpenID Connect allows relying parties to verify the identity of, and obtain info
 <h2 id="openid-connect-authorization-code-flow">OpenID Connect Authorization Code Flow<a class="headerlink" href="#openid-connect-authorization-code-flow" title="Permanent link">#</a></h2>
 <p>The OpenID Connect Authorization Code Flow specifies how the relying party interacts with the OpenID Provider based on use of the OAuth 2.0 authorization grant. The authorization code flow is more secure than the implicit flow because the tokens are never exposed to the web browser and possibly other malicious applications with access to the browser. As with the implicit flow the extra securuty in Connect's authorization code flow stems from the id_token. </p>
 <h2 id="openid-connect-hybrid-flow">OpenID Connect Hybrid Flow<a class="headerlink" href="#openid-connect-hybrid-flow" title="Permanent link">#</a></h2>
-<p>Hybrid flow is a combination of the Implicit Flow and Authorization Code Flow. It allows an application to request a combination of identity token, access token, and code via the front channel using either a fragment encoded redirect (native and JS based clients) or a form post (server-based web applications). This enables scenarios where your client app can make immediate use of an identity token to get access to the user’s identity, but also retrieve an authorization code that can be used by a back end service to request a refresh token, thus gaining long lived access to resources.</p>
+<p>Hybrid flow is a combination of the Implicit Flow and Authorization Code 
+Flow. It allows an application to request a combination of identity token, 
+access token, and code via the front channel using either a fragment 
+encoded redirect (native and JS based clients) or a form post 
+(server-based web applications). This enables scenarios where your client
+ app can make immediate use of an identity token to get access to the 
+ user’s identity, but also retrieve an authorization code that can be 
+ used by a back end service to request a refresh token, thus gaining long 
+ lived access to resources.</p>
 <h2 id="discovery">Discovery<a class="headerlink" href="#discovery" title="Permanent link">#</a></h2>
 <p>The first thing you want to know about any OAuth 2.0 API is where the
 endpoints are (i.e. what are the URIs where you call the APIs).
