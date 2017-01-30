@@ -34,12 +34,12 @@ pages:
         - 'Authentication Management' : 'admin-guide/auth-management.md'
         - User Authentication Guide: 
             - 'User Authentication Introduction': 'admin-guide/user-authentications.md'
+            - 'Passport Social Authentication': 'authn-guide/passport.md'
             - 'Super Gluu': 'authn-guide/supergluu.md'
             - 'FIDO U2F': 'authn-guide/U2F.md'
             - 'Duo Security': 'authn-guide/duo.md'
             - 'Certificate Authentication': 'authn-guide/cert-auth.md'
             - 'Google': 'authn-guide/google.md'
-            - 'Passport Social Authentication': 'authn-guide/passport.md'
             - 'HOTP/TOTP': 'authn-guide/otp.md'
             - 'Custom Authentication': 'authn-guide/customauthn.md'
         - 'User Management' : 'admin-guide/user-group.md'
