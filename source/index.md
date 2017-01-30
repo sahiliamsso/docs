@@ -71,7 +71,7 @@ Gluu offers a free two-factor authentication mobile application for iOS and Andr
 
 Super Gluu supports two workflows: It can be used as a one-step authentication to a website, where the person scans a QR code, and the Gluu Server looks up which person is associated with that phone. It can also be used for a two-step authentication, where the person logs into a website with a username and password, and then receives an out-of-band (OOB) push notification to the mobile device to authorize access. 
 
-Learn [how to enable](./authn-guide/supergluu) Super Gluu in the Gluu Server.
+Learn [how to enable](./authn-guide/supergluu.md) Super Gluu in the Gluu Server.
 
 Learn [how to use](https://super.gluu.org/docs) the Super Gluu mobile application.
 
