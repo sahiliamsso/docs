@@ -34,7 +34,7 @@ pages:
             - 'User Authentication Introduction': 'admin-guide/user-authentications.md'
             - 'Super Gluu': 'authn-guide/supergluu.md'
             - 'FIDO U2F': 'authn-guide/U2F.md'
-            - 'Duo Security': 'authn-guide/DUO.md'
+            - 'Duo Security': 'authn-guide/duo.md'
             - 'Certificate Authentication': 'authn-guide/cert-auth.md'
             - 'Google': 'authn-guide/google.md'
             - 'Passport': 'authn-guide/passport.md'
