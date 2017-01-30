@@ -5,16 +5,16 @@
 [Passport](http://passportjs.org/) is a component used in the Gluu
 Server to consolidate social login. With over 300 existing
 "strategies" it provides a crowd-sourced approach to supporting
-popular existing websites. Passport not only normalizes authentication, 
+popular consumer IDPs. Passport not only normalizes authentication, 
 it also provides a standard mapping for user claims. 
 
 Passport is an Express-based web application. We've modified it 
-to call oxTrust API's for it's non-static configuration. Because its 
+to call oxTrust APIs for its non-static configuration. Because its 
 configuration is stored centrally in LDAP, you can scale Passport even 
 in clustered topologies.
 
 The Gluu Server needs only one interception script for Passport. This 
-script is distributed in our default distribution. Post-authentication,
+script is included in our default distribution. Post-authentication,
 this script uses just-in-time provisioning to add the user to the Gluu
 LDAP server if a local account does not already exist. In this way, 
 the Gluu SAML and OpenID Connect providers can gather claims and maintain
