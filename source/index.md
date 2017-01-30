@@ -68,6 +68,17 @@ Java, Node, Ruby, C#, Perl and Go;
 SugarCRM, SuiteCRM, Roundcube, Shopify, Kong and many more are being added! Next on the list are MatterMost, RocketChat, NextCloud, and 
 Liferay.
 
+###  Super Gluu multi-factor authentication
+Gluu offers a free two-factor authentication mobile application called Super Gluu, available on iOS and Android. Super Gluu can be used to achieve multi-factor authentication to applications that send users to a Gluu Server for login. The Gluu Server includes support for Super Gluu out-of-the-box. 
+
+Super Gluu supports two workflows: It can be used as a one-step authentication to a website, where the person scans a QR code, and the Gluu Server looks up which person is associated with that phone. It can also be used for a two-step authentication, where the person logs into a website with a username and password, and then receives an out-of-band (OOB) push notification to the mobile device to authorize access. 
+
+Learn [how to enable](./authn-guide/supergluu) Super Gluu in the Gluu Server.
+
+Learn [how to use](https://super.gluu.org/docs) the Super Gluu mobile application.
+
+In addition to Super Gluu, the Gluu Server can be configured to support any third-party authentication mechanism that either supports the FIDO U2F authentication standard, or exposes a web API that can be called over the Internet. Learn more in the [user authentication introduction](https://gluu.org/docs-3/admin-guide/user-authentications/). 
+
 ### Support
 
 We are committed to free community support! You can browse or register and post 
