@@ -7,5 +7,5 @@ Sophisticated authentication logic can implement adaptive authentication. For ex
 A number of multi-factor authentication scripts are shipped in the Gluu Server by default, including support for FIDO U2F tokens (like Vasco and Yubikey), Gluu's free mobile two-factor application [Super Gluu](https://super.gluu.org), social authentication via Passport.js, certificate authentication, and Duo Security. 
 
 !!! Note
-    If you run into issues while configuring or testing authentication mechanisms, e.g. not able to login or facing error pages, please         follow the [FAQ recommendations](./faq.md) to troubleshoot. It is advised to perform tests in an incognito tab or a different browser       to avoid session issues.
+    If you run into issues while configuring or testing authentication mechanisms, e.g. not able to login or facing error pages, please         follow the [FAQ recommendations](./faq.md) to troubleshoot. Make sure to perform tests in an incognito tab or a different browser       to avoid session issues.
 
