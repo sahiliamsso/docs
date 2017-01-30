@@ -17,7 +17,7 @@
     
     
       
-        <title>Custom Script Authentication - Gluu Docs</title>
+        <title>Custom Authentication - Gluu Docs</title>
       
     
     
@@ -65,12 +65,11 @@
 	<link rel="stylesheet" href="assets/stylesheets/version-doc.css" type="text/css" />
 	<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
-      ver: Latest-3.0
 	  <span class="fa fa-caret-down"></span>
     </span>
 	  <div class="rst-other-versions">
       <dl>
-        <dt>Versions</dt>
+        <dt>ver:Latest-3.0</dt>
           <dd><a href="/docs-3/">Latest</a></dd>
           <dd><a href="/docs/">2.4.4.2</a></dd>
       </dl>
@@ -102,7 +101,7 @@
                 </span>
               
             
-            Custom Script Authentication
+            Custom Authentication
           
         </span>
       </div>
@@ -358,6 +357,17 @@
           
   <li class="md-nav__item">
     
+      <a href="../../admin-guide/cacherefresh/" title="Cache Refresh" class="md-nav__link">
+        Cache Refresh
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
       <a href="../../admin-guide/auth-management/" title="Authentication Management" class="md-nav__link">
         Authentication Management
       </a>
@@ -380,13 +390,13 @@
           
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6" checked>
     
-    <label class="md-nav__link" for="nav-4-5">
+    <label class="md-nav__link" for="nav-4-6">
       User Authentication Guide
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-4-5">
+      <label class="md-nav__title" for="nav-4-6">
         User Authentication Guide
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -407,8 +417,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../U2F/" title="U2f" class="md-nav__link">
-        U2f
+      <a href="../supergluu/" title="Super Gluu" class="md-nav__link">
+        Super Gluu
       </a>
     
   </li>
@@ -418,8 +428,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../DUO/" title="DUO" class="md-nav__link">
-        DUO
+      <a href="../U2F/" title="FIDO U2F" class="md-nav__link">
+        FIDO U2F
       </a>
     
   </li>
@@ -429,8 +439,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../supergluu/" title="oxPush2-Super Gluu" class="md-nav__link">
-        oxPush2-Super Gluu
+      <a href="../duo/" title="Duo Security" class="md-nav__link">
+        Duo Security
       </a>
     
   </li>
@@ -440,8 +450,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../cert-auth/" title="certificate Authentication" class="md-nav__link">
-        certificate Authentication
+      <a href="../cert-auth/" title="Certificate Authentication" class="md-nav__link">
+        Certificate Authentication
       </a>
     
   </li>
@@ -462,17 +472,39 @@
           
   <li class="md-nav__item">
     
+      <a href="../passport/" title="Passport" class="md-nav__link">
+        Passport
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../otp/" title="HOTP/TOTP" class="md-nav__link">
+        HOTP/TOTP
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
       
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Custom Script Authentication
+        Custom Authentication
       </label>
     
-    <a href="./" title="Custom Script Authentication" class="md-nav__link md-nav__link--active">
-      Custom Script Authentication
+    <a href="./" title="Custom Authentication" class="md-nav__link md-nav__link--active">
+      Custom Authentication
     </a>
     
       
@@ -611,28 +643,6 @@
     </ul>
   
 </nav>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../passport/" title="Passport" class="md-nav__link">
-        Passport
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../otp/" title="HOTP/TOTP" class="md-nav__link">
-        HOTP/TOTP
-      </a>
     
   </li>
 
@@ -1441,7 +1451,7 @@ method can be used to revert back the older authentication method. </p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../google/" title="Google" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../otp/" title="HOTP/TOTP" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1450,19 +1460,19 @@ method can be used to revert back the older authentication method. </p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Google
+                HOTP/TOTP
               </span>
             </div>
           </a>
         
         
-          <a href="../passport/" title="Passport" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../admin-guide/user-group/" title="User Management" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Passport
+                User Management
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
