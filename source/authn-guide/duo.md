@@ -1,4 +1,4 @@
-# DUO Security
+# Duo Security
 ## Overview
 There are a few properties in the Duo Security authentication script:
 
