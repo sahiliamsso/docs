@@ -39,7 +39,7 @@ pages:
             - 'Duo Security': 'authn-guide/duo.md'
             - 'Certificate Authentication': 'authn-guide/cert-auth.md'
             - 'Google': 'authn-guide/google.md'
-            - 'Passport': 'authn-guide/passport.md'
+            - 'Passport Social Authentication': 'authn-guide/passport.md'
             - 'HOTP/TOTP': 'authn-guide/otp.md'
             - 'Custom Authentication': 'authn-guide/customauthn.md'
         - 'User Management' : 'admin-guide/user-group.md'
