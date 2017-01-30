@@ -47,9 +47,7 @@ on any typos, bugs, or improvements you'd like to see. We need your
 help... even if you're not a coder, you can contribute! 
 
 ###  oxd Client Software
-Gluu offers commercial client software to make securing applications easier. Your application can use any 
-client software that implements the open standards the Gluu Server supports. But you 
-may want to consider using [oxd](https://oxd.gluu.org) for a few reasons:
+Gluu offers commercial client software, called [oxd](https://oxd.gluu.org), to make securing applications easier. Your application can use any client software that implements the open standards the Gluu Server supports. But you may want to consider using oxd for the following reasons:
  
 (1). oxd is super-easy and fun to use; 
 
