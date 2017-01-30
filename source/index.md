@@ -69,7 +69,7 @@ SugarCRM, SuiteCRM, Roundcube, Shopify, Kong and many more are being added! Next
 Liferay.
 
 ###  Super Gluu multi-factor authentication
-Gluu offers a free two-factor authentication mobile application called Super Gluu, available on iOS and Android. Super Gluu can be used to achieve multi-factor authentication to applications that send users to a Gluu Server for login. The Gluu Server includes support for Super Gluu out-of-the-box. 
+Gluu offers a free two-factor authentication mobile application called [Super Gluu](https://super.gluu.org), available on iOS and Android. Super Gluu can be used to achieve multi-factor authentication to applications that send users to a Gluu Server for login. The Gluu Server includes support for Super Gluu out-of-the-box. 
 
 Super Gluu supports two workflows: It can be used as a one-step authentication to a website, where the person scans a QR code, and the Gluu Server looks up which person is associated with that phone. It can also be used for a two-step authentication, where the person logs into a website with a username and password, and then receives an out-of-band (OOB) push notification to the mobile device to authorize access. 
 
