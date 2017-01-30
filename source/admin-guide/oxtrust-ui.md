@@ -16,14 +16,13 @@ The configuration tab contains tools to configure the Gluu Server. This section 
 ### Organization Configuration
 There are three sections in the organization configuration page:       
 
-(1). [System Configuration](#system-configuration)       
-(2). [SMTP Server Configuration](#smtp-server-configuration)       
-(3). [oxTrust Settings](#oxtrust-settings)            
+1. [System Configuration](#system-configuration)         
+2. [SMTP Server Configuration](#smtp-server-configuration)         
+3. [oxTrust Settings](#oxtrust-settings)             
 
-![organization-config-head](../img/oxtrust/organization-config-head.png "Organization Configuration")
+**System Configuration**  
 
-**System Configuration**      
-The System Configuration tab includes options to enable and manage system configuration options. Each field is described below:
+![system-config-options](../img/oxtrust/system-config-options.png)
 
 - Self-service password reset: Allow users to reset their password via email. In order for this feature to work, the admin will also need to have the [SMTP Server Configuration](#smtp-server-configuration) section completed.      
 
@@ -38,13 +37,17 @@ The System Configuration tab includes options to enable and manage system config
 - Contact Email: This email will be displayed on all error pages with a note instructing users to contact for troubleshooting assistance.        
 
 **SMTP Server Configuration**      
-The mail server used by the Gluu Server to send notification to the pre-selected email address is configured in this page/panel. All the fields in this page are manadory and the configuration can be tested before confirmation. The fields are self-explanatory and simple such as hostname, user, password, ssl-requirement, authentication requirement, sending name and address.
+
 ![smtp-config](../img/oxtrust/smtp-config.png "SMTP Configuration")
+
+The mail server used by the Gluu Server to send notification to the pre-selected email address is configured in this page/panel. All the fields in this page are manadory and the configuration can be tested before confirmation. The fields are self-explanatory and simple such as hostname, user, password, ssl-requirement, authentication requirement, sending name and address.
+
       
 **OxTrust Settings**      
-Some basic information abouht the administrator interface is available in this page. The administrator can find out the oxTrust build date and number by accessing the oxTrust settings page. The administrator can change the organization name, logo and favicon settings from this page as well. Finally oxTrust Settings page contains the name of the administrator group for Gluu Server. The users added in this group will have administrator access in Gluu Server where they will be able to maintain/configure the server.
 
 ![oxtrust-settings](../img/oxtrust/oxtrust-settings.png "OxTrust Settings")
+
+Some basic information abouht the administrator interface is available in this page. The administrator can find out the oxTrust build date and number by accessing the oxTrust settings page. The administrator can change the organization name, logo and favicon settings from this page as well. Finally oxTrust Settings page contains the name of the administrator group for Gluu Server. The users added in this group will have administrator access in Gluu Server where they will be able to maintain/configure the server.
 
 ### JSON Configuration      
 The configuration files are accessible from the administrator interface (oxTrust). 
