@@ -1,36 +1,52 @@
 # oxTrust Administrative Graphical User Interface (GUI)
-The administration interface (oxTrust) is accessible from the `hostname` provided in the prompt from the setup script. After the installation is complete, log in to the web-based interface with the username `admin` and the `LDAP superuser` password. 
+The administration interface (oxTrust) is accessible from the `hostname` provided during setup. After installation is complete, log in to the web-based interface with the username `admin` and the `LDAP superuser` password. 
 
 ## Welcome Page
-The administrator is taken to the welcome page if the username and the password is correct. Some basic information about the VM/server is displayed in the welcome screen. The version is displayed on top followed by free memory,disk space. The health of the VM/server can be easily determined from the welcome page. There is a photo icon on the right hand top side of the page which can be used to navigate to the user-profile and logging out of Gluu Server CE.
+After successful authentication the administrator is taken to the Gluu Server admin dashboard. Some basic information about the VM/server is displayed as well as the server version, free memory, and disk space. In the top right there is a user icon which can be used to log out of the Gluu Server as well as navigate to the user-profile. 
+
 ![welcome-page.png](../img/oxtrust/welcome-page.png "Welcome to Gluu Server")
-The menu on the left side of the welcome page is used to navigate the admin interface for Gluu Server. The menu has separate buttons for SAML, OpenID Connect and UMA. The user-management menu is found under `Users` and the user-profile is under `Personal`.
+
+The left hand menu is used to navigate the admin interface. The menu includes links to manage SAML, OpenID Connect and UMA integrations, as well as server configurations, users, and your own personal profile. 
 
 ## Configuration
 ![configuration-menu](../img/oxtrust/configuration-menu.png "Organization Menu")
 
-The configuration tab contians the tools to configure Gluu Server CE. This section is dedicated to all tuning and tinkering except integration tools.
-The configuration menu is divided in to other sections which are revealed on click. The administrator can manage authentication, registration, attributes, cache-refresh,logs etc. from this menu.
+The configuration tab contains tools to configure the Gluu Server. This section is dedicated to tuning and tinkering your Gluu Server. Upon clicking the configuration menu item, multiple subsections are revealed. The administrator can manage authentication, registration, attributes, LDAP synchronization, logs, and more from this menu. Each page is described in detail below. 
 
 ### Organization Configuration
-There are three sections in the organization configuration page which are [System Configuration](#system-configuration), [SMTP Server Configuration](#smtp-server-configuration) and [OxTrust Settings](#oxtrust-settings). These sections are detailed below with screenshots.
+There are three sections in the organization configuration page:       
+
+(1). [System Configuration](#system-configuration)       
+(2). [SMTP Server Configuration](#smtp-server-configuration)       
+(3). [oxTrust Settings](#oxtrust-settings)            
 
 ![organization-config-head](../img/oxtrust/organization-config-head.png "Organization Configuration")
 
-**System Configuration**
-Gluu Server CE is shipped with a built-in `White Pages` feature which can be enabled from the system configuration page. This page also contains the options to enable `Self-Service Password Reset` which allows the Gluu Server users to reset their password via email. This options depends on the [SMTP Server Configuration](#smtp-server-configuration), also available under the organization configuration page. Additionally the `SCIM Support` can be enabled from the System Configuration page. If the organization uses any custom `DNS Server(s)`, the address should be updated from the System Configuration interface. `Maximum Log Size (MB)*`, by default Gluu UI will have 200 mb as the size of the log file and this value could be manipulated according to the administrator. Either this value could be increased or decreased depending on the HW specifications and contingency plan of the environment.
-![system-config-options](../img/oxtrust/system-config-options.png)
+**System Configuration**      
+The System Configuration tab includes options to enable and manage system configuration options. Each field is described below:
 
-**SMTP Server Configuration**
+- Self-service password reset: Allow users to reset their password via email. In order for this feature to work, the admin will also need to have the [SMTP Server Configuration](#smtp-server-configuration) section completed.      
+
+- SCIM Support: Enable SCIM if you plan on using SCIM to move identity data between applications.      
+
+- DNS Server(s): If the organization uses any custom `DNS Server(s)`, the address should be updated here. 
+
+- Maximum Log Size (MB): by default the maximum size of the log file is 200 mb. This value can be increased or decreased depending on the HW specifications and contingency plan of the environment.     
+
+- User can edit their own profile: oxTrust has a profile section for each user. If this option is enabled, users will be able to log into oxTrust and edit the values associated with their user.      
+
+- Contact Email: This email will be displayed on all error pages with a note instructing users to contact for troubleshooting assistance.        
+
+**SMTP Server Configuration**      
 The mail server used by the Gluu Server to send notification to the pre-selected email address is configured in this page/panel. All the fields in this page are manadory and the configuration can be tested before confirmation. The fields are self-explanatory and simple such as hostname, user, password, ssl-requirement, authentication requirement, sending name and address.
 ![smtp-config](../img/oxtrust/smtp-config.png "SMTP Configuration")
-
-**OxTrust Settings**
+      
+**OxTrust Settings**      
 Some basic information abouht the administrator interface is available in this page. The administrator can find out the oxTrust build date and number by accessing the oxTrust settings page. The administrator can change the organization name, logo and favicon settings from this page as well. Finally oxTrust Settings page contains the name of the administrator group for Gluu Server. The users added in this group will have administrator access in Gluu Server where they will be able to maintain/configure the server.
 
 ![oxtrust-settings](../img/oxtrust/oxtrust-settings.png "OxTrust Settings")
 
-### JSON Configuration
+### JSON Configuration      
 The configuration files are accessible from the administrator interface (oxTrust). 
 There are three tabs under the `JSON Configuration` menu
 
