@@ -19,9 +19,9 @@ There are a few properties in the Duo Security authentication script:
 
 3. Click Protect an Application and locate Web SDK in the applications list. Click Protect this Application to get your integration key, secret key, and API hostname.
 
-4. Generate an `akey` value for your instance. [Click here to know more ](https://duo.com/docs/duoweb#1.-generate-an-akey)
+4. Generate an `akey` value for your instance. [Learn more](https://duo.com/docs/duoweb#1.-generate-an-akey).
 
-For additional info on Duo's Web SDK check [this atricle](https://duo.com/docs/duoweb) 
+For additional info on Duo's Web SDK, check [this article](https://duo.com/docs/duoweb). 
 
 ## Configure CE Chroot
 1. Prepare the Duo credential file `/etc/certs/duo_creds.json` with **ikey, akey & skey**
