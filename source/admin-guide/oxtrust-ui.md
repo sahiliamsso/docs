@@ -20,7 +20,7 @@ There are three sections in the organization configuration page:
 2. [SMTP Server Configuration](#smtp-server-configuration)         
 3. [oxTrust Settings](#oxtrust-settings)             
 
-**System Configuration**  
+#### System Configuration
 
 ![system-config-options](../img/oxtrust/system-config-options.png)
 
@@ -36,14 +36,14 @@ There are three sections in the organization configuration page:
 
 - Contact Email: This email will be displayed on all error pages with a note instructing users to contact for troubleshooting assistance.        
 
-**SMTP Server Configuration**      
+#### SMTP Server Configuration     
 
 ![smtp-config](../img/oxtrust/smtp-config.png "SMTP Configuration")
 
 The mail server used by the Gluu Server to send notification to the pre-selected email address is configured in this page/panel. All the fields in this page are manadory and the configuration can be tested before confirmation. The fields are self-explanatory and simple such as hostname, user, password, ssl-requirement, authentication requirement, sending name and address.
 
       
-**OxTrust Settings**      
+#### OxTrust Settings  
 
 ![oxtrust-settings](../img/oxtrust/oxtrust-settings.png "OxTrust Settings")
 
