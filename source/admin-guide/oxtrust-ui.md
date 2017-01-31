@@ -56,22 +56,21 @@ The Gluu Server needs a mail server in order to send notifications. The fields o
 From the oxTrust Settings page the administrator can find the oxTrust build date and number, and manage the organization name, logo, and favicon. This page also contains the name of the Gluu Server administrator group. Users added to this group will have administrator access to the Gluu Server.
 
 ### JSON Configuration      
-The configuration files are accessible from the administrator interface (oxTrust). 
-There are three tabs under the `JSON Configuration` menu:
+There are three tabs included in the `JSON Configuration` menu:
 
 ![json-config-head](../img/oxtrust/json-config-head.png "JSON Configuration Headers")
 
 #### oxTrust Configuration
-The oxtrust JSON configuration file is accessible from this tab and it can be edited from this page. The changes are updated by clicking on the `Update` button on the bottom of the page. 
+From this tab you can access and edit the oxtrust JSON configuration file. Click the update button at the bottom of the changes to save any changes. 
 
 #### oxAuth Configuration
-The oxAuth JSON configuration page gives easy access to the different endpoints used by Gluu Server CE. This page also contains the supported response, grants and algorithms among other information. The details will follow later on this documentation.
+The oxAuth JSON configuration page gives easy access to the different endpoints used by Gluu Server CE. This page also contains the supported response, grants, and algorithms. 
 
 #### oxTrust Import Person Configuration
-The oxTrust Import Person Configuration page contains the configuration for the file method of importing users into Gluu Server CE. The administrator can import users from a `xls` file which must be defined in this tab to import data in the LDAP attributes. The default format should contain the following fields
+The oxTrust Import Person Configuration page contains the configuration for the file method of importing users into the Gluu Server. The administrator can import users from an `xls` file which must be defined in this tab to import data in the LDAP attributes. The default format should contain the following fields: 
 
 ### Manage Authentication
-The `Manage Authentication` page contains the internal OpenDJ settings for Gluu Server CE. 
+The `Manage Authentication` page contains the internal LDAP settings for Gluu Server CE. 
 The `Default Authentication Method` defines the authentication mechanism used for general 
 authentication and oxTrust authentication. The separation is introduced because the users 
 logging into Service Providers (SP) do not see the administrative console. 
