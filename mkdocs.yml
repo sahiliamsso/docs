@@ -71,9 +71,9 @@ pages:
             - 'OxAuth JSON Properties': 'reference/JSON-oxauth-prop.md'
         #- 'Ox LDAP Properties':
 - Operation Guide:
-        - 'Backup Gluu Server CE': 'operation/backup.md'
-        - 'Know your Gluu Version': 'operation/find-gluu-version.md'
-        - 'Ports used in Gluu': 'operation/ports.md'
-        - 'Logout from Gluu Server': 'operation/logout.md'
+        - 'Backup': 'operation/backup.md'
+        - 'Find your Gluu Version': 'operation/find-gluu-version.md'
+        - 'Ports': 'operation/ports.md'
+        - 'Logout': 'operation/logout.md'
         - 'FAQ & Troubleshooting' : 'admin-guide/faq.md'
         #       - 'Fine Tuning Gluu Server' : 'admin-guide/fine-tuning.md'
