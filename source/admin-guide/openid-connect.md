@@ -355,7 +355,7 @@ self-approve the release of information from the IDP to the website (or
 mobile application). In OAuth2, scopes can be used for various purposes.
 OpenID Connect uses OAuth2 scopes to "group" attributes". For example, we
 could have a scope called "address" that includes the street, city,
-state, and country user claims. By default the Gluu Server defines six
+state, and country user claims. By default the Gluu Server defines nine
 scopes: `address`, `clientinfo`, `email`, `mobile_phone`, `openid`, `permission`, `phone`, `profile`, `user_name`
 
 ![Scopes Screenshot](https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/oxTrust/admin_oauth2_scope.png)
