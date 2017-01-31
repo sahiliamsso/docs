@@ -53,7 +53,7 @@ The Gluu Server needs a mail server in order to send notifications. The fields o
 
 ![oxtrust-settings](../img/oxtrust/oxtrust-settings.png "OxTrust Settings")
 
-From the oxTrust Settings page the administrator can find the oxTrust build date and number, and change the organization name, logo, and favicon. This page also contains the name of the Gluu Server administrator group. Users added to this group will have administrator access to the Gluu Server.
+From the oxTrust Settings page the administrator can find the oxTrust build date and number, and manage the organization name, logo, and favicon. This page also contains the name of the Gluu Server administrator group. Users added to this group will have administrator access to the Gluu Server.
 
 ### JSON Configuration      
 The configuration files are accessible from the administrator interface (oxTrust). 
