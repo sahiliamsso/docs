@@ -14,8 +14,6 @@ The left hand menu is used to navigate the admin interface.
 ![welcome-page.png](../img/oxtrust/welcome-page.png "Welcome to Gluu Server")
 
 ## Configuration   
-![configuration-menu](../img/oxtrust/configuration-menu.png "Organization Menu")
-
 From the configuration tab, the Gluu Server administrator can manage 
 certain non-protocol related tasks.
 
