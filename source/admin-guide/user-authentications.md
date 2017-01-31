@@ -37,6 +37,7 @@ finally followed by a successful one. You can re-enable locked account by settin
 its “gluuStatus” attribute back to “active” via web UI.
 
 To configure this feature:
+
 1. Click on “Configuration -> Manage authentication > Person Authentication Tab” 
 and find “basic_lock” script.
 
