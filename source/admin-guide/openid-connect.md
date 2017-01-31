@@ -347,6 +347,41 @@ The key for logout is to understand the limitations of logout, and to
 test the use cases that are important to you, so you will not be
 surprised by the behavior when you put your application into production.
 
+## Scopes
+
+In SAML, the IDP releases attributes to the SP. OpenID Connect provides
+similar functionality, with more flexibility in case the person needs to
+self-approve the release of information from the IDP to the website (or
+mobile application). In OAuth2, scopes can be used for various purposes.
+OpenID Connect uses OAuth2 scopes to "group" attributes". For example, we
+could have a scope called "address" that includes the street, city,
+state, and country user claims. By default the Gluu Server defines six
+scopes.
+
+![Scopes Screenshot](https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/oxTrust/admin_oauth2_scope.png)
+
+The Gluu Server administrator can easily add more scopes in the GUI.
+Click *Add Scope* and you will be presented with the following screen:
+
+![Add Scopes](https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/openid_connect/oxtrust_scope_screenshot.png)
+
+You will have the ability to provide a Display Name, Description,
+whether or not the scope is provided by default, and the claims that are
+included in the scope.
+
+Default Scope needs some further explanation. When a client uses dynamic
+client registration, the OpenID Connect specification says that the
+`openid` scope should always be released, which contains an identifier
+for that person, normally the username. If you want to release another
+scope automatically, set the Default Scope to `true` for that scope. You
+can always explicitly release a scope to a certain client later on, but
+this will require some manual intervention by the domain administrator.
+
+To add more claims, simply click "Add Claim" and you will be presented
+with the following screen:
+
+![Add Claims](https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/oxTrust/admin_oauth2_scopeadd.png)
+
 ## OpenID Connect Clients
 
 ### Manually Register a Client
