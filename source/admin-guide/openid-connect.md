@@ -516,7 +516,7 @@ _Encryption, Key Encryption Algorithms:_ RSA1_5, RSA-OAEP, A128KW, A256KW.
 
 _Block Encryption Algorithms:_ A128CBC+HS256, A256CBC+HS612, A128GCM, A256GCM,
 
-## Custom Client Registration
+### Custom Client Registration
 
 Using interception scripts you can customize client registration
 behavior. For example, by default oxAuth allows new clients to access to
@@ -528,7 +528,6 @@ additional scopes or not.
 To access the interface for custom scripts in oxTrust, navigate to
 Configuration --> Custom Scripts --> Custom Client Registration.
 
-![custom-script-menu](../img/oxtrust/custom-script-menu.png)
 ![custom-client](../img/openid/custom-client.png)
 
 The script is [available here](./sample-client-registration-script.py)
