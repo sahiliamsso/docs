@@ -1,19 +1,26 @@
 # oxTrust Administrative Graphical User Interface (GUI)
-The administration interface (oxTrust) is accessible from the `hostname` provided during setup. After installation is complete, log in to the web-based interface with the username `admin` and the `LDAP superuser` password. 
+The administration interface (oxTrust) is accessible by navigating to 
+`https://hostname` (the one you provided during setup.) When you 
+first complete an installation, the default username is `admin` and 
+the password is the same as the `LDAP superuser` password.
 
 ## Welcome Page
-After successful authentication the administrator is taken to the Gluu Server admin dashboard. Some basic information about the VM/server is displayed as well as the server version, free memory, and disk space. In the top right there is a user icon which can be used to log out of the Gluu Server as well as navigate to the user-profile. 
+After successful authentication the administrator is taken to the 
+Dashboard. Some basic information about the VM/server is displayed as 
+well as the server version, free memory, and disk space. In the top 
+right there is a user icon which you can log out of oxTrust. 
+The left hand menu is used to navigate the admin interface.
 
 ![welcome-page.png](../img/oxtrust/welcome-page.png "Welcome to Gluu Server")
-
-The left hand menu is used to navigate the admin interface. The menu includes links to manage SAML, OpenID Connect and UMA integrations, as well as server configurations, users, and your own personal profile. 
 
 ## Configuration   
 ![configuration-menu](../img/oxtrust/configuration-menu.png "Organization Menu")
 
-From the conifguration tab the Gluu Server administrator can manage authentication, registration, attributes, LDAP synchronization, logs, and more. Each page is described in detail below. 
+From the configuration tab, the Gluu Server administrator can manage 
+certain non-protocol related tasks.
 
 ### Organization Configuration
+
 There are three sections in the organization configuration page:       
 
 1. [System Configuration](#system-configuration)         
@@ -74,59 +81,70 @@ logging into the oxTrust admin interface.
 ![manage-authentication-head](../img/oxtrust/manage-authentication-head.png)
 
 ### Manage Custom Scripts
-It will not be an understatement to say that the custom script feature makes 
-Gluu Server CE so robust and dynamic. The scripts are available for all intents 
-and purposes the major being multi-factor authentication. There are many custom scritps 
-included with the vanilla Gluu Server CE which can be enabled by clicking the check box. This section is 
-discussed in detail under [User Authentication Guide](/admin-guide/user-authentications.md) 
+The Gluu Server exposes interception scripts in places where it is common 
+for organizations to implement custom workflows, or changes to the 
+look and feel of the Gluu Server. The most commonly used scripts are 
+for authentication, authorization and identity synchronization. Each
+type of script has its own interface--in other words what methods are
+available. For more information, see the reference page detailing how
+[to write a custom authentication script](/admin-guide/user-authentications.md).
 
 ![enable](../img/oxtrust/enable.png)
 
 ### Manage Registration
-Gluu Server CE is shiped with the feature to register users via the user-registration endpoint. 
-The registry feature contains a Captcha which can be disabled from this page. Additionally it is 
-possible to enable registration configuration from attributes.
+The Gluu Server CE is shipped with a very basic user registration 
+feature. For complex enrollment requirements, you may want to write
+a registration page in a different application, and use the SCIM endpoint
+to add the user. Also, in some cases oxTrust is not Internet facing,
+which makes it a bad option for user registration. Use this feature
+only if you have very basic requirements! 
 
 This tabs has two options:
 1. `Disable Captcha for registration form`
 2. `Configure Registration Form Attributes`
 
 **Disable Captcha for registration form**
-This option allows to you to decide whether you require captcha to be displayed
-in the registration form while the person is registering.
+This option allows to require CAPTCHA in the registration form.
 ![registration](../img/admin-guide/manage_registration.png)
 
 **Configure Registration Form Attributes**
-This section allows you to filter list of attributes to be displayed in the registration form.
-You will be able to search for the attribute and move the selected attribute by clicking on the drop down
-list and moving to the other column by clicking on `Add` or `Add all` if you have selected multiple attributes.
+This section allows you to filter list of attributes to be displayed 
+in the registration form. You will be able to search for the attribute 
+and move the selected attribute by clicking on the drop down
+list and moving to the other column by clicking on `Add` or `Add all` 
+if you have selected multiple attributes.
 
 ![attr_filter](../img/admin-guide/config_registration.png)
 
 ### Attributes
-The attributes that are avalaible in the Gluu Server CE is found in this page. The administration can only see the active attributes when this page is accessed. The `Show All Attributes` button will show the inactive attributes too. Custom attributes can be added by clicking the `Add Attribute` button and filling up a simple form. 
+The user attributes available in the Gluu Server are found on 
+this page. By default, only the active attributes are visible.  
+Use the `Show All Attributes` to display the inactive attributes too. 
+Custom attributes can be added by clicking the `Add Attribute` button 
+and filling up a simple form. Note the attribute must already be
+present in the LDAP server. Adding an attribute here is more like
+"registration" in the Gluu Server. In order to release an attribute
+via SAML or OpenID Connect, the Gluu Server needs to know it exists.
 
 ![attribute-head](../img/oxtrust/attribute-head.png)
 
 ### Cache Refresh
-Cache Refresh is the mechanism used by Gluu Server CE to import users from a 
-backend LDAP/AD data source. The entire configuration is handled from this page. 
-The `Cache Refresh` will notify the administrator of any problem with cache refresh 
-the last time it was run. The frequency of cache refresh is also set from this page 
-with the `Polling interval (minutes)` form. The key attributes, object class and the 
-source attributes can be defined from the `Customer  BackendKey/Attributes` tab. The 
-backend server address, bind DN and other information must go to the `Source Backend LDAP Servers` tab.
+Cache Refresh is the mechanism used by Gluu Server to syncrhonize users from a 
+backend LDAP data source, for example, Active Directory. `Cache Refresh` 
+periodically searches these data sources, compares the results to 
+previous searches, and if a changed user account is found, it updates it.
+The frequency of cache refresh is also set from this page via the 
+`Polling interval (minutes)`. The `key attribute(s)` is used to correlate
+a user if found in more then one LDAP server. In this case, the two entries
+are joined. The source attributes specify which attributes will be 
+pulled from the backend LDAP server. The backend server address, bind DN 
+and other connection information is speciifed in the `Source Backend 
+LDAP Servers` tab.
 
-### Configure Log Viewer
-The logs for oxauth, oxtrust, cache refresh and the tomcat log can be configured 
-from this tab. The log paths are given with the functionality to define any new 
-log template with log file path.
-
-### View Log File
-The log files are listed in the `View Log File` page under the `Allowed Log Files` tab. 
-The individual logs can be tailed by clicking them. The `Configuration` contains the 
-last line count which will show the number of lines specified from the log in the `Tail of Log File` tab. 
-This section is an alternative to getting into the Gluu `chroot` and tailing the log files.
+### Configure Log Viewer / View Log File
+This tool can be used to view file system logs. If you don't like to 
+ssh, Log Viewer is your friend! Several common logs are preconfigured,
+or you can define new logs by specifying the path.
 
 ### Server Status
 This page will give some basic information about the Gluu Server such as the 
@@ -134,12 +152,13 @@ hostname, IP address, free memory & disk space. The number of users in the
 backend is also available in this page.
 
 ### Certificates
-The certificate page will give the certificate information for Gluu Server. 
-The issuer info along with the algorithm used and the expiry date is also available.
+The certificate page shows some summary information about the SSL
+and SAML certificates.
 
 ## SAML
 Gluu Server CE contains all SAML related functionalities under the `SAML` tab 
-divided into outbound and inbound SAML transactions. Inbound SAML is also known as ASIMBA. 
+divided into outbound and inbound SAML transactions. 
+Inbound SAML is also known as ASIMBA. 
 
 ### Outbound
 
