@@ -30,7 +30,6 @@ pages:
         - 'Log Management' : 'admin-guide/logs.md'
         - 'User Management' : 'admin-guide/user-group.md'
         - 'Session Timeout': 'admin-guide/session.md'
-        - 'Cache Refresh': 'admin-guide/cacherefresh.md'
 #       - 'SSO Protocols' : 'admin-guide/auth-protocol.md'
         - 'Authentication Management' : 'admin-guide/auth-management.md'
         - User Authentication Guide: 

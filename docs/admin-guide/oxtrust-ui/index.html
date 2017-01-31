@@ -639,17 +639,6 @@
           
   <li class="md-nav__item">
     
-      <a href="../cacherefresh/" title="Cache Refresh" class="md-nav__link">
-        Cache Refresh
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
       <a href="../auth-management/" title="Authentication Management" class="md-nav__link">
         Authentication Management
       </a>
@@ -661,13 +650,13 @@
           
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-8" type="checkbox" id="nav-4-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-7" type="checkbox" id="nav-4-7">
     
-    <label class="md-nav__link" for="nav-4-8">
+    <label class="md-nav__link" for="nav-4-7">
       User Authentication Guide
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-4-8">
+      <label class="md-nav__title" for="nav-4-7">
         User Authentication Guide
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1583,8 +1572,7 @@ and filling in a simple form. Note that attributes must already be
 present in the LDAP server. Adding an attribute here is like registering it in the Gluu Server. In order to release an attribute
 during a SAML or OpenID Connect transaction, the Gluu Server needs to know it exists.</p>
 <h3 id="cache-refresh">Cache Refresh<a class="headerlink" href="#cache-refresh" title="Permanent link">#</a></h3>
-<p>Cache Refresh is the mechanism used by Gluu Server to syncrhonize users from a 
-backend LDAP data source, for example, Active Directory. <code>Cache Refresh</code> 
+<p>Cache Refresh, a.k.a. LDAP Synchronization, is the process of connecting an existing backend LDAP server, like Microsoft Active Directory, with the Gluu Server's local LDAP server. <code>Cache Refresh</code> 
 periodically searches these data sources, compares the results to 
 previous searches, and if a changed user account is found, it is updated.
 The frequency of cache refresh is also set from this page via the 

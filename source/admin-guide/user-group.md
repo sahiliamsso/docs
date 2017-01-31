@@ -59,9 +59,78 @@ button. The flow is _Add Member --> Search the name/email of the user
 ![Add Member](../img/admin-guide/user/admin_users_addmember.png)
 
 ## LDAP Synchronization 
-LDAP Synchronization, a.k.a. Cache Refresh, is the process of connecting an existing backend LDAP server, like Microsoft Active Directory, with the Gluu Server's local LDAP server. Synching people and attributes from a backend server into the Gluu Server speeds up authentication transactions. It is possible to perform attribute transformations, changing the name of attributes, or even using an interception script to change the values. Transformations are stored in the Gluu LDAP service. 
+LDAP Synchronization, a.k.a. Cache Refresh, is the process of connecting 
+an existing backend LDAP server, like Microsoft Active Directory, with the
+Gluu Server's local LDAP server. Synching people and attributes from a 
+backend server into the Gluu Server speeds up authentication transactions. 
+It is possible to perform attribute transformations, changing the name of 
+attributes, or even using an interception script to change the values. 
+Transformations are stored in the Gluu LDAP service. 
 
-![Cache Refresh Menu](/img/admin-guide/user/admin_cache_menu.png)
+
+# Video Tutorial
+For a guided video overview of configuring Cache Refresh, please watch the following three videos:    
+- [Part 1: What is 'Cache Refresh' and How Does it Work?](https://youtu.be/VnyCTUCRkic)     
+- [Part 2: Configuring Cache Refresh in the Gluu Server](https://youtu.be/c64l_xmBbvw)    
+- [Part 3: Managing Authentication After You've Setup Cache Refresh](https://youtu.be/fyAEwJuwqn4)    
+       
+# Things To Remember
+The Gluu Server supports two LDAP modes: 
+
+- Authentication 
+- Identity mapping
+
+Only sometimes it is the same LDAP server. To
+synchronize user accounts from an external LDAP directory server, you
+can use the built-in oxTrust features for ”Cache Refresh”, which support
+mapping identities from n number of source directory servers.
+
+After configuring Cache Refresh, you should give it some time to run,
+and populate the LDAP server. Here are some tips before you get started:
+
+* Enable 'Keep External Person' during CR setup. This will allow your
+  default user 'admin' to log into Gluu Server after initial Cache 
+  Refresh iteration. If you do not enable 'Keep External Person', your 
+  'admin' user including all other test users will be gone after first 
+  Cache Refresh iteration.
+
+* Make sure you are using LDAP authentication, not VDS. You will only
+  need VDS setting if you are using the Radiant Logic Virtual Directory
+  Server.
+
+* Check the snapshots folder to see if files are being created.
+
+* Use the oxTrust admin to browse users.
+
+* Use the command `ldapsearch` to check to see if results are starting
+  to come in. The following command will search for the total number of
+  users in the Gluu LDAP:
+
+```
+# /opt/opendj/bin/ldapsearch -h localhost -p 1636 -Z -X -D "cn=directory manager" -w 'pass_of_ldap_ -b 'ou=people,o=DA....,o=gluu' dn | grep "dn\:" | wc -l
+```
+
+* Try to login with one of these users. We assume that you have also
+  setup your Gluu Server to use the correct LDAP server for
+  authentication.
+
+# Things To Know
+The deployer needs to know various values of his own backend AD to
+configure this part. For example, host & port, bindDN user information,
+bindDN password, Objectclasses, attributes whose information will be
+pulled etc.
+
+In addition, the deployer also needs to know generic information of his
+Gluu Server's LDAP. By default, the deployer can use 'localhost:1636',
+'cn=directory manager', 'password what he chose during installation',
+'ou=people,o=site' as server information, bindDN, bindDN password and
+baseDN respectively.
+
+After collecting this information, the deployer can move forward with
+the setup of the Cache Refresh engine.
+
+![Cache Refresh Menu](../img/admin-guide/user/admin_cache_menu.png)
+
 
 * _Last Run:_ The date and time of the latest cache refresh cycle
   completion is shown here.

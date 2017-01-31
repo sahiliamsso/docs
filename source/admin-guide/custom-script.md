@@ -277,7 +277,7 @@ This script can be used in an oxAuth application only.
 - [Sample Authorization Script](./sample-uma-authorization-script.py)
 
 
-##.2 Application Session Management
+## Application Session Management
 
 This script allows an admin to notify 3rd party systems about requests
 to end an OAuth session. This method is triggered by an oxAuth call to
