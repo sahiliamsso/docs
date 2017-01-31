@@ -119,12 +119,6 @@
      <changefreq>daily</changefreq>
     </url>
         
-    <url>
-     <loc>/admin-guide/faq/</loc>
-     <lastmod>2017-02-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
     
 
     
@@ -211,6 +205,12 @@
         
     <url>
      <loc>/operation/logout/</loc>
+     <lastmod>2017-02-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/admin-guide/faq/</loc>
      <lastmod>2017-02-01</lastmod>
      <changefreq>daily</changefreq>
     </url>

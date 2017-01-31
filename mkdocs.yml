@@ -50,8 +50,6 @@ pages:
         - 'Attribute Management' : 'admin-guide/attribute.md'
         - 'SCIM protected by UMA' : 'admin-guide/scim-uma.md'
         - 'Certificate Management' : 'admin-guide/certificate.md'
-#       - 'Fine Tuning Gluu Server' : 'admin-guide/fine-tuning.md'
-        - 'FAQ & Troubleshooting' : 'admin-guide/faq.md'
 - Integration Guide:
 #    - 'Integration in Gluu Server': 'integration/index.md'
         - 'Shibboleth SP': 'integration/saml-sp.md'
@@ -77,3 +75,5 @@ pages:
         - 'Know your Gluu Version': 'operation/find-gluu-version.md'
         - 'Ports used in Gluu': 'operation/ports.md'
         - 'Logout from Gluu Server': 'operation/logout.md'
+        - 'FAQ & Troubleshooting' : 'admin-guide/faq.md'
+        #       - 'Fine Tuning Gluu Server' : 'admin-guide/fine-tuning.md'

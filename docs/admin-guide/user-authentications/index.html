@@ -648,17 +648,6 @@
   </li>
 
         
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../faq/" title="FAQ & Troubleshooting" class="md-nav__link">
-        FAQ & Troubleshooting
-      </a>
-    
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -951,6 +940,17 @@
   </li>
 
         
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../faq/" title="FAQ & Troubleshooting" class="md-nav__link">
+        FAQ & Troubleshooting
+      </a>
+    
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1038,6 +1038,41 @@
 <h2 id="configuring-multi-factor-authentication">Configuring Multi-Factor Authentication<a class="headerlink" href="#configuring-multi-factor-authentication" title="Permanent link">#</a></h2>
 <p>A number of multi-factor authentication scripts are shipped in the Gluu Server by default, including support for FIDO U2F tokens (like Vasco and Yubikey), Gluu's free mobile two-factor application Super Gluu, certificate authentication, and Duo Security.  </p>
 <h2 id="configuring-account-lockout">Configuring Account Lockout<a class="headerlink" href="#configuring-account-lockout" title="Permanent link">#</a></h2>
+<p>Configuring Account Lockout</p>
+<p>Gluu CE is shipped with custom authentication script implementing a 
+basic account lockout policy which will deactivate user’s account 
+after a set amount of consecutive failed login attempts.</p>
+<p>Script will use authentication settings provided at 
+the “Manage LDAP Authentication” tab of  “Configuration -&gt; Manage Authentication”. 
+In case the set threshold of failed logins is reached, “gluuStatus” attribute of user 
+entry in question is set to “inactive” and login counter is reset to zero. 
+Counter will also be reset to zero if several unsuccessful login attempts are 
+finally followed by a successful one. You can re-enable locked account by settings 
+its “gluuStatus” attribute back to “active” via web UI.</p>
+<p>To configure this feature:
+1. Click on “Configuration -&gt; Manage authentication &gt; Person Authentication Tab” 
+and find “basic_lock” script.</p>
+<p>There are 2 configurable properties:</p>
+<ul>
+<li>
+<p>“Invalid_login_count_attribute” allows to set name of the 
+attribute used to store current amount of failed login attempts. 
+It assumes that schema already allows such attribute to appear in user entries. 
+Default is “oxCountInvalidLogin” and it’s already supported by Gluu’s LDAP schema</p>
+</li>
+<li>
+<p>“Maximum_invalid_login_attemps” allows to set threshold for number of failed login attempts.</p>
+</li>
+</ul>
+<p><img alt="acct-update" src="../../img/admin-guide/user/acct-lockout-config.png" /></p>
+<ol>
+<li>After script is configured tick the “Enabled” checkbox </li>
+<li>Click the “Update” button. </li>
+<li>Click on “Configuration -&gt; Manage Authentication” on the left menu and select “Default Authentication Method” tab. </li>
+<li>Select “basic_lock” authentication method for oxAuth and/or oxTrust.</li>
+<li>Click the “Update” button there.
+<img alt="acct-update" src="../../img/admin-guide/user/acct-lockout-update.png" /></li>
+</ol>
 <h2 id="customizing-the-login-page">Customizing the Login Page<a class="headerlink" href="#customizing-the-login-page" title="Permanent link">#</a></h2>
 <p>Learn how to customize the look and feel of Gluu Server pages in the Design Customizations(add-link) section of the Operations Guide. </p>
               

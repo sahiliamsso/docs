@@ -22,6 +22,43 @@ A number of multi-factor authentication scripts are shipped in the Gluu Server b
 
 ## Configuring Account Lockout
 
+Configuring Account Lockout
+
+Gluu CE is shipped with custom authentication script implementing a 
+basic account lockout policy which will deactivate user’s account 
+after a set amount of consecutive failed login attempts.
+
+Script will use authentication settings provided at 
+the “Manage LDAP Authentication” tab of  “Configuration -> Manage Authentication”. 
+In case the set threshold of failed logins is reached, “gluuStatus” attribute of user 
+entry in question is set to “inactive” and login counter is reset to zero. 
+Counter will also be reset to zero if several unsuccessful login attempts are 
+finally followed by a successful one. You can re-enable locked account by settings 
+its “gluuStatus” attribute back to “active” via web UI.
+
+To configure this feature:
+1. Click on “Configuration -> Manage authentication > Person Authentication Tab” 
+and find “basic_lock” script.
+
+
+There are 2 configurable properties:
+
+- “Invalid_login_count_attribute” allows to set name of the 
+attribute used to store current amount of failed login attempts. 
+It assumes that schema already allows such attribute to appear in user entries. 
+Default is “oxCountInvalidLogin” and it’s already supported by Gluu’s LDAP schema
+
+- “Maximum_invalid_login_attemps” allows to set threshold for number of failed login attempts.
+
+![acct-update](../img/admin-guide/user/acct-lockout-config.png)
+
+2. After script is configured tick the “Enabled” checkbox 
+3. Click the “Update” button. 
+4. Click on “Configuration -> Manage Authentication” on the left menu and select “Default Authentication Method” tab. 
+5. Select “basic_lock” authentication method for oxAuth and/or oxTrust.
+6. Click the “Update” button there.
+![acct-update](../img/admin-guide/user/acct-lockout-update.png)
+
 
 ## Customizing the Login Page 
 
