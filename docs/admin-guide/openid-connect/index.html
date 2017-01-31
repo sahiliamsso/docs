@@ -551,6 +551,10 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        OpenID Connect
+      </label>
+    
     <a href="./" title="OpenID Connect" class="md-nav__link md-nav__link--active">
       OpenID Connect
     </a>
@@ -562,18 +566,88 @@
     
   
   
-</nav>
-    
-  </li>
-
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jargon" title="Jargon" class="md-nav__link">
+    Jargon
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openid-connect-support-in-the-gluu-server" title="OpenID Connect Support in the Gluu Server" class="md-nav__link">
+    OpenID Connect Support in the Gluu Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openid-connect-implicit-flow" title="OpenID Connect Implicit Flow" class="md-nav__link">
+    OpenID Connect Implicit Flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openid-connect-authorization-code-flow" title="OpenID Connect Authorization Code Flow" class="md-nav__link">
+    OpenID Connect Authorization Code Flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openid-connect-hybrid-flow" title="OpenID Connect Hybrid Flow" class="md-nav__link">
+    OpenID Connect Hybrid Flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discovery" title="Discovery" class="md-nav__link">
+    Discovery
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../clients/" title="OpenID Connect Clients" class="md-nav__link">
-        OpenID Connect Clients
-      </a>
+          <li class="md-nav__item">
+  <a href="#sample-discovery-request" title="Sample Discovery Request" class="md-nav__link">
+    Sample Discovery Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm" title="Algorithm" class="md-nav__link">
+    Algorithm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-management" title="Session management" class="md-nav__link">
+    Session management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openid-connect-relying-party-registration" title="OpenID Connect Relying Party Registration" class="md-nav__link">
+    OpenID Connect Relying Party Registration
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -947,6 +1021,87 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jargon" title="Jargon" class="md-nav__link">
+    Jargon
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openid-connect-support-in-the-gluu-server" title="OpenID Connect Support in the Gluu Server" class="md-nav__link">
+    OpenID Connect Support in the Gluu Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openid-connect-implicit-flow" title="OpenID Connect Implicit Flow" class="md-nav__link">
+    OpenID Connect Implicit Flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openid-connect-authorization-code-flow" title="OpenID Connect Authorization Code Flow" class="md-nav__link">
+    OpenID Connect Authorization Code Flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openid-connect-hybrid-flow" title="OpenID Connect Hybrid Flow" class="md-nav__link">
+    OpenID Connect Hybrid Flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discovery" title="Discovery" class="md-nav__link">
+    Discovery
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-discovery-request" title="Sample Discovery Request" class="md-nav__link">
+    Sample Discovery Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm" title="Algorithm" class="md-nav__link">
+    Algorithm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-management" title="Session management" class="md-nav__link">
+    Session management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openid-connect-relying-party-registration" title="OpenID Connect Relying Party Registration" class="md-nav__link">
+    OpenID Connect Relying Party Registration
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -960,13 +1115,13 @@
                
               
                 
-                <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h1>
+                <h1 id="openid-connect-overview">OpenID Connect Overview<a class="headerlink" href="#openid-connect-overview" title="Permanent link">#</a></h1>
 <p>OpenID Connect is an authentication layer built on OAuth 2.0. 
 OpenID Connect is a specific implementation of OAuth 2.0 
 where the identity provider holds protected resources that a 
 third-party application needs to access on behalf of a person. 
 OpenID Connect allows relying parties to verify the identity of, and obtain information about a person requesting to access the applications protected resources. </p>
-<h1 id="jargon">Jargon<a class="headerlink" href="#jargon" title="Permanent link">#</a></h1>
+<h2 id="jargon">Jargon<a class="headerlink" href="#jargon" title="Permanent link">#</a></h2>
 <p>In OpenID Connect the key entities include:</p>
 <ul>
 <li>The <em>end user</em> (a.k.a. OAuth 2.0 resource owner) whose user information the application needs to access.</li>
@@ -981,7 +1136,7 @@ OpenID Connect allows relying parties to verify the identity of, and obtain info
 </ul>
 <p>The Gluu Server is an OpenID Provider. The OP holds information about the user and allows the end user or the organization (depending on configuration) to consent to providing the RP with access to user information. OpenID Connect defines a unique identification for an account (subject identifier + issuer identifier), and the RP can use this as a key to its own user profile. </p>
 <p>The relying party can verify claims about the identity of the end user, and log the user out at the end of a session. OpenID Connect also makes it possible to discover the OpenID Provider for an end user, and to register relying party client applications dynamically. OpenID connect services are built on OAuth 2.0, JSON Web Token (JWT), WebFinger and Well-Known URIs.</p>
-<h1 id="openid-connect-support-in-the-gluu-server">OpenID Connect Support in the Gluu Server<a class="headerlink" href="#openid-connect-support-in-the-gluu-server" title="Permanent link">#</a></h1>
+<h2 id="openid-connect-support-in-the-gluu-server">OpenID Connect Support in the Gluu Server<a class="headerlink" href="#openid-connect-support-in-the-gluu-server" title="Permanent link">#</a></h2>
 <p>The Gluu Server is a <a href="http://openid.net/certification/">fully certified OpenID Connect Provider (OP)</a>. As an OpenID Provider, the Gluu Server enables OpenID Connect relying parties (clients) to discover its capabilities, handle both dynamic and static registration of relying parties, respond to relying party requests with authorization codes, access tokens, and user information according to the Authorization Code and Implicit flows of OpenID Connect, and manages sessions.</p>
 <h2 id="openid-connect-implicit-flow">OpenID Connect Implicit Flow<a class="headerlink" href="#openid-connect-implicit-flow" title="Permanent link">#</a></h2>
 <p>The OpenID Connect Implicit Flow specifies how the relying party interacts with the OpenID Provider based on use of the OAuth 2.0 implicit grant. The main difference between the OAuth and OpenID Connect implicit flows lie in the use of the id_token, which must be returned in Connect. The id_token adds additional security to the transaction. For more information, read the <a href="http://openid.net/specs/openid-connectimplicit-1_0.html">OpenID Connect Implicit Client Implementer's guide</a>.</p>
@@ -1313,6 +1468,274 @@ want to install it--which you should on a development environment.
 It will be deployed on <code>https://&lt;hostname&gt;/oxauth-rp</code>. Using this tool 
 you can exercise all of the OpenID Connect API's, including discovery, 
 client registration, authorization, token, userinfo, and end_session. </p>
+<h2 id="openid-connect-client">OpenID Connect Client<a class="headerlink" href="#openid-connect-client" title="Permanent link">#</a></h2>
+<p><img alt="clientmenu" src="../../img/openid/clientmenu.png" /></p>
+<p>A client in OAuth2 could be either a website or mobile application.
+OpenID Connect has an API for <a href="http://openid.net/specs/openid-connect-registration-1_0.html">Dynamic Client
+Registration</a>
+which efficiently pushes the task to the application developer. If you
+do not want to write an application to register your client, there are a
+few web pages around that can do the job for you. Gluu publishes the
+<a href="https://ce-dev.gluu.org/oxauth-rp">oxAuth-RP</a> and there is also another in <a href="http://www.gluu.co/php-sample-rp">PHP
+RP</a>.</p>
+<p>A new client can be added by clicking the <strong>Add Client</strong> link.</p>
+<p><img alt="addclient" src="../../img/openid/addclient.png" /></p>
+<p>Available <strong>Clients</strong> can be seen by hitting the <strong>Search</strong> button
+leaving the search box empty.</p>
+<p><img alt="clientlist" src="../../img/openid/clientlist.png" /></p>
+<h3 id="register-client">Register Client<a class="headerlink" href="#register-client" title="Permanent link">#</a></h3>
+<p>Gluu Server Administrators can click on the <code>Add Client</code> button to register new clients. It is possible to dynamically register any client by calling the dynamic registration endpoint, but this section focuses on the manual registration of the client. The following screen appears when the <code>Add Client</code> button is clicked.</p>
+<p><img alt="add-client" src="../../img/openid/add-client.png" /></p>
+<ul>
+<li>
+<p><em>Client Name:</em> This contains the recognizable and unique display name
+  of the client. The name of the Client to be presented to the End-User.</p>
+</li>
+<li>
+<p><em>Client Secret:</em> This is the Data Encryption Standard scheme used by
+  Confidential Clients to authenticate to the token endpoint. The value for the secret can be inserted manually.</p>
+</li>
+<li>
+<p><em>Application Type:</em> There are two types of applications, Web and
+  Native.</p>
+<ul>
+<li>
+<p><em>Web:</em> The Dynamic Client Registration is the default for web. In this type the redirect_uri for implicit grant type must be a real
+hostname with HTTPS. This type is not approved any localhost or HTTP. The web application uses the authorization code flow for clients which
+can maintain a client secret between the uris and the authorization
+server.</p>
+</li>
+<li>
+<p><em>Native:</em> Custom uri for Native type application have to follow HTTP with localhost. This is suitable for a mobile app which cannot maintain the client secret between itself and the authorization server.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Pre Authorization:</em> Allow pre-authorized Client Applications </p>
+</li>
+<li>
+<p><em>Logo URI:</em> The URL of the logo for the client application.
+  If present, the server will display this image to the End-User during approval.</p>
+</li>
+<li>
+<p><em>Client URI:</em> The URL of the home page of the client.</p>
+</li>
+<li>
+<p><em>Policy URI:</em> The URL of the Privacy policy.</p>
+</li>
+<li>
+<p><em>Terms of Service URI:</em> The URL to the Terms of Use of the Client.</p>
+</li>
+<li>
+<p><em>JWKS URI:</em> The URL for the Client's JSON Web Key Set.</p>
+</li>
+<li>
+<p><em>JWKS:</em> The value of  Client's JSON Web Key Set. The jwks_uri and jwks parameters MUST NOT be used together.</p>
+</li>
+</ul>
+<p><img alt="add-client1" src="../../img/openid/add-client1.png" /></p>
+<ul>
+<li>
+<p><em>Sector Identifier URI:</em> URL using the https scheme to be used in calculating Pseudonymous Identifiers by the OP.
+  The URL references a file with a single JSON array of redirect_uri values.</p>
+</li>
+<li>
+<p><em>Subject Type:</em> The subject type requested for responses to this Client.</p>
+</li>
+<li>
+<p><em>JWS alg Algorithm for signing the ID Token:</em> JWS alg algorithm for signing the ID Token issued to this Client.
+  See <a href="#algorithm">Algorithms section</a> for options.</p>
+</li>
+<li>
+<p><em>JWE alg Algorithm for encrypting the ID Token:</em> JWE alg algorithm for encrypting the ID Token issued to this Client.
+  See <a href="#algorithm">Algorithms section</a> for options.</p>
+</li>
+<li>
+<p><em>JWE enc Algorithm for encrypting the ID Token:</em> JWE enc algorithm for encrypting the ID Token issued to this Client.
+  See <a href="#algorithm">Algorithms section</a> for options.</p>
+</li>
+<li>
+<p><em>JWS alg Algorithm for signing the UserInfo Responses:</em> JWS alg algorithm for signing UserInfo Responses.
+  If this is specified, the response will be JWT serialized, and signed using JWS.
+  See <a href="#algorithm">Algorithms section</a> for options.</p>
+</li>
+<li>
+<p><em>JWS alg Algorithm for encrypting the UserInfo Responses:</em>  JWE alg algorithm for encrypting UserInfo Responses.
+  See <a href="#algorithm">Algorithms section</a> for options.</p>
+</li>
+</ul>
+<p><img alt="add-client2" src="../../img/openid/add-client2.png" /></p>
+<ul>
+<li>
+<p><em>JWE enc Algorithm for encrypting the UserInfo Responses:</em> JWE enc algorithm for encrypting UserInfo Responses. 
+  See <a href="#algorithm">Algorithms section</a> for options.</p>
+</li>
+<li>
+<p><em>JWS alg Algorithm for signing Request Objects:</em> JWS alg algorithm used for signing Request Objects sent to the OP.
+  This algorithm is used when the Request Object is passed by value (using the request parameter) and when it is
+  passed by reference (using the request_uri parameter).
+  The value none can be used.
+  See <a href="#algorithm">Algorithms section</a> for options.</p>
+</li>
+<li>
+<p><em>JWE alg Algorithm for encrypting Request Objects:</em> JWE alg algorithm the RP is declaring that it use for
+  encrypting Request Objects sent to the OP.
+  See <a href="#algorithm">Algorithms section</a> for options.</p>
+</li>
+<li>
+<p><em>JWE enc Algorithm for encrypting Request Objects:</em> JWE enc algorithm the RP is declaring that it may use for
+  encrypting Request Objects sent to the OP.
+  See <a href="#algorithm">Algorithms section</a> for options.</p>
+</li>
+<li>
+<p><em>Authentication method for the Token Endpoint:</em> Requested Client Authentication method for the Token Endpoint.
+  The options are client_secret_post, client_secret_basic, client_secret_jwt, private_key_jwt, and none.
+  If omitted, the default is client_secret_basic, the HTTP Basic Authentication Scheme.</p>
+</li>
+</ul>
+<p><img alt="add-client3" src="../../img/openid/add-client3.png" /></p>
+<ul>
+<li>
+<p><em>JWS alg Algorithm for Authentication method to Token Endpoint:</em> JWS alg algorithm used for signing the JWT
+  used to authenticate the Client at the Token Endpoint for the private_key_jwt and client_secret_jwt
+  authentication methods. The value none cannot be used.
+  See <a href="#algorithm">Algorithms section</a> for options.</p>
+</li>
+<li>
+<p><em>Default Maximum Authentication Age:</em> Specifies that the End-User must be actively authenticated if the End-User was
+  authenticated longer ago than the specified number of seconds.
+  If omitted, no default Maximum Authentication Age is specified.</p>
+</li>
+<li>
+<p><em>Require Auth Time:</em> Specifies whether the auth_time Claim in the ID Token is required.
+  If omitted, the default value is false.</p>
+</li>
+<li>
+<p><em>Persist Client Authorizations*:</em> Specifies whether to persist user authorizations.</p>
+</li>
+</ul>
+<p><img alt="add-client-bot" src="../../img/openid/add-client-bot.png" /></p>
+<ul>
+<li>
+<p><em>Initiate Login URI:</em> URI using the https scheme that a third party can use to initiate a login by the RP.</p>
+</li>
+<li>
+<p><em>Request URIs:</em> Array of request_uri values that are pre-registered by the RP for use at the OP.
+   The Server cache the contents of the files referenced by these URIs and not retrieve them at the time they are used in a request.</p>
+</li>
+<li>
+<p><em>Logout URIs:</em> Redirect logout URLs supplied by the RP to which it can request that the End-User's
+  User Agent be redirected using the post_logout_redirect_uri parameter after a logout has been performed.</p>
+</li>
+<li>
+<p><em>Logout Session Required*:</em> Specifies whether the RP requires that a sid (session ID) query parameter
+  be included to identify the RP session at the OP when the logout_uri is used.
+  If omitted, the default value is false.</p>
+</li>
+<li>
+<p><em>Client Secret Expires:</em> Time at which the client will expire or 0 if it will not expire.</p>
+</li>
+<li>
+<p><em>Add Login URI:</em> This option can be used to add the login URL.
+<img alt="add-login-uri" src="../../img/openid/add-login-uri.png" /></p>
+</li>
+<li>
+<p><em>Add Redirect Logout URI:</em> The logout request, if requires a redirection can be added here.
+<img alt="add-logout-uri" src="../../img/openid/add-logout-uri.png" /></p>
+</li>
+<li>
+<p><em>Add Scopes:</em> This option can be used to add the required scopes in the Gluu Server.
+<img alt="add-scope" src="../../img/openid/add-scope-in-client.png" />The available scopes can be listed by hitting the <em>Search</em> button, and
+  keeping the search phrase blank. Furthermore, from this the Gluu Server administrator can select the required scopes.</p>
+</li>
+<li>
+<p><em>Add Response Type:</em> There are three types of responses in the Gluu
+  Server and they are Code, Token and ID Token. The Gluu Server
+  Administrator can select all of them for testing purposes.
+<img alt="add-response-type" src="../../img/openid/add-response-type.png" /></p>
+</li>
+<li>
+<p><em>Add Grant Type:</em> There are 3 grant type available in this option <code>authorization_code, implicit, refresh_token</code>
+<img alt="add-grant-type" src="../../img/openid/add-grant-type.png" /></p>
+</li>
+<li>
+<p><em>Add Contact:</em> Use this option to add the email address for the Client contact</p>
+</li>
+<li>
+<p><em>Add Default ACR value:</em> The default ACR Value is defined through this option and it is used to include multi-factor authentication in registered clients. Please use this option to define which from of authentication to use for specific client. See section 3.3.2.1 for details.
+<img alt="add-default-acr" src="../../img/openid/add-default-acr.png" /></p>
+</li>
+<li>
+<p><em>Add Request URI:</em> Use this option to add the Request URI</p>
+</li>
+<li>
+<p><em>Add Logout URI:</em> Use this option to add the logout URI.</p>
+</li>
+</ul>
+<h3 id="multi-factor-authentication-for-clients">Multi-Factor Authentication for Clients<a class="headerlink" href="#multi-factor-authentication-for-clients" title="Permanent link">#</a></h3>
+<p>The <code>acr_values</code> parameter is used to specify the use of specific multi-factor authentication for each client. If a scenario is presented where different clients use different authentication mechanism, then the <code>acr_value</code> parameter is used to specify the choice. Out of the box, GLuu Server supports U2F, DUO, Basic, oxPush/SuperGluu, Google+ and internal LDAP authentication. While registering new clients, put the mode in <code>Add Default ACR value</code> to chosen mechanism. The authentication mechanism must be enabled in the <code>Custom Scripts</code> section as well.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Supported ACR Values in Client Registration: "u2f", "duo", "basic", "mt", "oxpush2", "gplus", "internal"</p>
+</div>
+<p>The values appear in order of preference and the successful authentication is sent as the acr claim value in the issued ID Token. The table below explains the acr values. Please click on the description to access the specific how-to guide for the ACR declared authentication.</p>
+<table>
+<thead>
+<tr>
+<th>ACR Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u2f</td>
+<td><a href="../../multi-factor/u2f">FIDO U2F Device</a></td>
+</tr>
+<tr>
+<td>duo</td>
+<td><a href="../../multi-factor/duo">Duo soft-token authentication</a></td>
+</tr>
+<tr>
+<td>basic</td>
+<td>Username/Password authentication from LDAP Server</td>
+</tr>
+<tr>
+<td>oxpush2</td>
+<td><a href="../../multi-factor/oxpush2">Multi-factor authentication</a></td>
+</tr>
+<tr>
+<td>gplus</td>
+<td><a href="../../customize/social-login-google">Google+ authentication</a></td>
+</tr>
+<tr>
+<td>internal</td>
+<td>Use Gluu Server LDAP to authenticate users</td>
+</tr>
+</tbody>
+</table>
+<h3 id="algorithm_1">Algorithm<a class="headerlink" href="#algorithm_1" title="Permanent link">#</a></h3>
+<p>oxAuth supports various types of signature and encryption
+algorithms for authorizing request parameter passing, ID token signature
+and encryption, signing return responses, Encrypt User Info Endpoints
+etc.</p>
+<p><strong>Note:</strong> It is a good practice to implement ID Token Signatures with the RSA
+SHA-256 algorithm (algorithm value RS256). Additionally, oxAuth also
+supports other algorithms that are listed below.</p>
+<p><em>Available Signature Algorithms:</em> none, HS256, HS384, HS512, RS256, RS384, RS512, ES256, ES384, ES512.</p>
+<p><em>Encryption, Key Encryption Algorithms:</em> RSA1_5, RSA-OAEP, A128KW, A256KW.</p>
+<p><em>Block Encryption Algorithms:</em> A128CBC+HS256, A256CBC+HS612, A128GCM, A256GCM,</p>
+<h2 id="custom-client-registration">Custom Client Registration<a class="headerlink" href="#custom-client-registration" title="Permanent link">#</a></h2>
+<p>Using interception scripts you can customize client registration
+behavior. For example, by default oxAuth allows new clients to access to
+default scopes only. With a custom client registration interception
+script it is possible to allow access to more scopes. For instance, we
+can use <code>redirect_uri</code> to determine if we need to allow access to
+additional scopes or not.</p>
+<p>To access the interface for custom scripts in oxTrust, navigate to
+Configuration --&gt; Custom Scripts --&gt; Custom Client Registration.</p>
+<p><img alt="custom-script-menu" src="../../img/oxtrust/custom-script-menu.png" />
+<img alt="custom-client" src="../../img/openid/custom-client.png" /></p>
+<p>The script is <a href="../sample-client-registration-script.py">available here</a></p>
               
             </article>
           </div>
@@ -1340,13 +1763,13 @@ client registration, authorization, token, userinfo, and end_session. </p>
           </a>
         
         
-          <a href="../clients/" title="OpenID Connect Clients" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../uma/" title="UMA" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                OpenID Connect Clients
+                UMA
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

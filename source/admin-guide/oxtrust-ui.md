@@ -61,13 +61,18 @@ There are three tabs included in the `JSON Configuration` menu:
 ![json-config-head](../img/oxtrust/json-config-head.png "JSON Configuration Headers")
 
 #### oxTrust Configuration
-From this tab you can access and edit the oxtrust JSON configuration file. Click the update button at the bottom of the changes to save any changes. 
+From this tab you can access and edit the oxtrust JSON configuration file. 
+Click the update button at the bottom of the changes to save any changes. 
 
 #### oxAuth Configuration
-The oxAuth JSON configuration page gives easy access to the different endpoints used by Gluu Server CE. This page also contains the supported response, grants, and algorithms. 
+The oxAuth JSON configuration page gives easy access to the different endpoints used by Gluu Server CE. 
+This page also contains the supported response, grants, and algorithms. 
 
 #### oxTrust Import Person Configuration
-The oxTrust Import Person Configuration page contains the configuration for the file method of importing users into the Gluu Server. The administrator can import users from an `xls` file which must be defined in this tab to import data in the LDAP attributes. The default format should contain the following fields: 
+The oxTrust Import Person Configuration page contains the configuration for 
+the file method of importing users into the Gluu Server. The administrator 
+can import users from an `xls` file which must be defined in this tab to import 
+data in the LDAP attributes. The default format should contain the following fields: 
 
 ### Manage Authentication
 This section allows the Gluu Server administrator to define how and
@@ -77,7 +82,7 @@ of the data source that you are trying to connect with Gluu Server. For
 example, the data source can be your back-end Active Directory, or your
 local LDAP server.
 
-![Manage LDAP Authentication](https://raw.githubusercontent.com/GluuFederation/docs/2.4/sources/img/2.4/admin_manage_ldap.png)
+![Manage LDAP Authentication](../img/oxtrust/admin_manage_ldap.png)
 
 * _Name:_ This field contains the name of the authentication server.
 
@@ -164,8 +169,9 @@ Available user attributes are found on this page. By default, only the active at
 Use the `Show All Attributes` to display the inactive attributes too. 
 Custom attributes can be added by clicking the `Add Attribute` button 
 and filling in a simple form. Note that attributes must already be
-present in the LDAP server. Adding an attribute here is like registering it in the Gluu Server. In order to release an attribute
-during a SAML or OpenID Connect transaction, the Gluu Server needs to know it exists.
+present in the LDAP server. Adding an attribute here is like registering 
+it in the Gluu Server. In order to release an attribute during a SAML or 
+OpenID Connect transaction, the Gluu Server needs to know it exists. This section is discussed in detail in [Attributes Management](../admin-guide/attribute.md)
 
 ### Cache Refresh
 Cache Refresh, a.k.a. LDAP Synchronization, is the process of connecting an existing backend LDAP server, like Microsoft Active Directory, with the Gluu Server's local LDAP server. `Cache Refresh` 
@@ -177,7 +183,7 @@ a user if the user is found in more then one LDAP server. In this case, the two 
 are joined. The source attributes specify which attributes will be 
 pulled from the backend LDAP server. The backend server address, bind DN 
 and other connection information is speciifed in the `Source Backend 
-LDAP Servers` tab.
+LDAP Servers` tab. More information on [LDAP Syncronization](./user-group/#ldap-synchronization)
 
 ### Configure Log Viewer / View Log File
 This tool can be used to view file system logs. If you don't like to 
@@ -194,7 +200,9 @@ The certificate page shows some summary information about the SSL
 and SAML certificates.
 
 ## SAML
-If you chose to deploy the Shibboleth SAML IDP during installation, you will see this menu to manage all SAML related functionalities. In addition, if you chose to deploy the Asimba SAML Proxy, you will see a sub menu for inbound SAML.
+If you chose to deploy the Shibboleth SAML IDP during installation, 
+you will see this menu to manage all SAML related functionalities. 
+In addition, if you chose to deploy the Asimba SAML Proxy, you will see a sub menu for inbound SAML.
 
 ### Outbound
 
@@ -206,7 +214,7 @@ There is a button to add relationship with the same name. All the available TRs 
 searched by using two (2) spaces in the search bar. There are some information that the 
 administrator needs to gather before creating any new TR in Gluu Server. The metadata of the 
 Service Provider (SP) connected using TR must be gathered along with the required attributes. 
-The creation of TR will be covered in detail later.
+The creation of TR will be covered in detail later under [SAML](./saml.md).
 
 ### Inbound
 
@@ -217,12 +225,13 @@ The [OpenID Connect protocol](http://openid.net/specs/openid-connect-core-1_0.ht
 
 The OpenID Connect clients are accessible from the `Clients` page under `OpenID Connect` tab. 
 The structure is similar to the scopes page with the functionality to search by name or use two (2) spaces 
-to list all the available clients. New clients can be added by clicking the `Add Client` button.
+to list all the available clients. New clients can be added by clicking 
+the `Add Client` button. This section is detailed in [OpenID Connect](./openid-connect.md) 
 
 ![clients](../img/oxtrust/clients.png)
 
 ## UMA
-UMA or (User-Managed Access) is an access management protocol supported by Gluu Server.
+[UMA](./uma.md) or (User-Managed Access) is an access management protocol supported by Gluu Server.
 The available scopes can be searched using the search bar on the top of the page. 
 New scope descriptions can be added using the `Add Scope Description` button.
 ![uma-scopes](../img/oxtrust/uma-scopes.png)

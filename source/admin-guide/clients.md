@@ -1,4 +1,5 @@
-# OpenID Connect Client
+## OpenID Connect Client
+
 ![clientmenu](../img/openid/clientmenu.png)
 
 A client in OAuth2 could be either a website or mobile application.

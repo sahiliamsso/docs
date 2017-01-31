@@ -440,6 +440,10 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        User Authentication Introduction
+      </label>
+    
     <a href="./" title="User Authentication Introduction" class="md-nav__link md-nav__link--active">
       User Authentication Introduction
     </a>
@@ -450,6 +454,39 @@
   
     
   
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#default-authentication" title="Default Authentication" class="md-nav__link">
+    Default Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-social-authentication" title="Configuring Social Authentication" class="md-nav__link">
+    Configuring Social Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-multi-factor-authentication" title="Configuring Multi-Factor Authentication" class="md-nav__link">
+    Configuring Multi-Factor Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-account-lockout" title="Configuring Account Lockout" class="md-nav__link">
+    Configuring Account Lockout
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
     
@@ -566,17 +603,6 @@
     
       <a href="../openid-connect/" title="OpenID Connect" class="md-nav__link">
         OpenID Connect
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../clients/" title="OpenID Connect Clients" class="md-nav__link">
-        OpenID Connect Clients
       </a>
     
   </li>
@@ -951,6 +977,39 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#default-authentication" title="Default Authentication" class="md-nav__link">
+    Default Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-social-authentication" title="Configuring Social Authentication" class="md-nav__link">
+    Configuring Social Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-multi-factor-authentication" title="Configuring Multi-Factor Authentication" class="md-nav__link">
+    Configuring Multi-Factor Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-account-lockout" title="Configuring Account Lockout" class="md-nav__link">
+    Configuring Account Lockout
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -965,13 +1024,17 @@
               
                 
                 <h1 id="user-authentication-introduction">User Authentication Introduction<a class="headerlink" href="#user-authentication-introduction" title="Permanent link">#</a></h1>
-<p>Using the Gluu Server's interception script infrastructure, you can define the business logic for complex multi-step authentication workflows, providing SSO for people using smart cards, tokens, mobile or biometric authentication mechanisms. You don't have to chose one multi-factor authentication technology. You can have multiple authentication mechanisms active at the same time--Web or mobile clients can request a certain authentication type by using standard OpenID Connect request parameters.</p>
-<p>Sophisticated authentication logic can implement adaptive authentication. For example, you can add extra authentication steps based on contextual information such as fraud scores, location, or browser profiling. You can also customize the look and feel of a web authentication: html, css, images and javascript can be externalized and managed by your organization.</p>
-<p>A number of multi-factor authentication scripts are shipped in the Gluu Server by default, including support for FIDO U2F tokens (like Vasco and Yubikey), Gluu's free mobile two-factor application <a href="https://super.gluu.org">Super Gluu</a>, social authentication via Passport.js, certificate authentication, and Duo Security. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you run into issues while configuring or testing authentication mechanisms, e.g. not able to login or facing error pages, please         follow the <a href="../faq/">FAQ recommendations</a> to troubleshoot. Make sure to perform tests in an incognito tab or a different browser       to avoid session issues.</p>
-</div>
+<p>The Gluu Server is most frequently used to protect web-accessible resources. Users browse to a protected webpage and the application redirects the user to the Gluu Server for authentication and authorization. The Gluu Server determines who the user is, and whether the user has the right to access the protected page. The Gluu Server then redirects the user back to the protected page with an authenticated session.</p>
+<p>The Gluu Server is very flexible in handling authentication. By default, the Gluu Server uses username and password authentication. However, using the Gluu Server's interception script infrastructure, you can define multiple authentication methods and business logic for complex multi-step authentication workflows. You can have multiple authentication mechanisms active at the same time--Web or mobile clients can request a certain authentication type by using standard OpenID Connect request parameters.</p>
+<p>Interception scripts allow you to configure authentication processes and customize how they are applied. Sophisticated authentication logic can implement adaptive authentication. For example, you can add extra authentication steps based on contextual information such as fraud scores, location, or browser profiling. You can also customize the look and feel of a web authentication: html, css, images and javascript can be externalized and managed by your organization.</p>
+<h2 id="default-authentication">Default Authentication<a class="headerlink" href="#default-authentication" title="Permanent link">#</a></h2>
+<p>By default, LDAP is used to authenticate usernames and passwords. You can set a default authentication method for access to external applications, as well as access to the Gluu Server UI. Until additional authentication mechanisms are enabled via custom scripts, default authentication will always be some variation of username and password. </p>
+<h2 id="configuring-social-authentication">Configuring Social Authentication<a class="headerlink" href="#configuring-social-authentication" title="Permanent link">#</a></h2>
+<p>During deployment of the Gluu Server you are presented with an option to deploy Passport.js. With over 300 existing "strategies", Passport.js provides a crowd-sourced approach to supporting social login at many popular consumer IDPs. Passport not only normalizes authentication, it also provides a standard mapping for user claims.</p>
+<p>Learn <a href="../../authn-guide/passport.md/">how to use Passport.js</a> to configure social login. </p>
+<h2 id="configuring-multi-factor-authentication">Configuring Multi-Factor Authentication<a class="headerlink" href="#configuring-multi-factor-authentication" title="Permanent link">#</a></h2>
+<p>A number of multi-factor authentication scripts are shipped in the Gluu Server by default, including support for FIDO U2F tokens (like Vasco and Yubikey), Gluu's free mobile two-factor application Super Gluu, certificate authentication, and Duo Security.  </p>
+<h2 id="configuring-account-lockout">Configuring Account Lockout<a class="headerlink" href="#configuring-account-lockout" title="Permanent link">#</a></h2>
               
             </article>
           </div>
