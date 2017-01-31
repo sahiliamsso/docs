@@ -58,8 +58,8 @@ button. The flow is _Add Member --> Search the name/email of the user
 --> Select the user --> Click OK --> Update._
 ![Add Member](../img/admin-guide/user/admin_users_addmember.png)
 
-## Cache Refresh
-Cache Refresh is the process of connecting an existing backend LDAP server, like Microsoft Active Directory, with the Gluu Server's local LDAP server. Synching people and attributes from a backend server into the Gluu Server speeds up authentication transactions. It is possible to perform attribute transformations, changing the name of attributes, or even using an interception script to change the values. Transformations are stored in the Gluu LDAP service. 
+## LDAP Synchronization 
+LDAP Synchronization, a.k.a. Cache Refresh, is the process of connecting an existing backend LDAP server, like Microsoft Active Directory, with the Gluu Server's local LDAP server. Synching people and attributes from a backend server into the Gluu Server speeds up authentication transactions. It is possible to perform attribute transformations, changing the name of attributes, or even using an interception script to change the values. Transformations are stored in the Gluu LDAP service. 
 
 ![Cache Refresh Menu](/img/admin-guide/user/admin_cache_menu.png)
 

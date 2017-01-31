@@ -1,12 +1,11 @@
-# Authenticaiton Management in Gluu Server
-Gluu Server comes with a separate tab for authenticaiton management where the adminstrator can define the backend LDAP/AD configuration of the organization. The `Manage Authentication` tab is accessible from the `Configuration` menu in oxTrust Administrator interface.
+# Authentication Management
+The Gluu Server includes a dedicated page where an adminstrator can define the backend LDAP/AD configuration for the organization. The `Manage Authentication` tab is accessible from the `Configuration` menu in the oxTrust GUI.
 
 ![config-menu](../img/admin-guide/auth-management/config-menu.png)
 
 ## Manage LDAP Authentication
-The `Manage Authenticaiton` page has two tabs: Manage LDAP Authentication 
-and Default Authentication Method. The screen below shows the autentication
- management page.
+The `Manage Authentication` page has two tabs: Manage LDAP Authentication 
+and Default Authentication Method. 
 
 |Field Name| Description|
 -----------|-------------|
@@ -21,7 +20,7 @@ and Default Authentication Method. The screen below shows the autentication
 |Deactivate| This button _Deactivates/Activates_ the Gluu Server accessibility for authentication.|
 
 ## Default Authentication Method
-This allows the Gluu Server administrator to select both the default authentication mode, 
+This allows the Gluu Server administrator to select both the default authentication mode 
 and level for person authentication. Both modes are set to "Default" until additional 
 authentication mechanisms are enabled via [custom scripts](./custom-script.md).
 

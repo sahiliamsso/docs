@@ -1,4 +1,4 @@
-# Passport.js Authentication
+# Social Login using Passport.js 
 
 ## Overview
 
