@@ -345,27 +345,7 @@ The key for logout is to understand the limitations of logout, and to
 test the use cases that are important to you, so you will not be
 surprised by the behavior when you put your application into production.
 
-## OpenID Connect Client
-
-A client in OAuth2 could be either a website or mobile application.
-OpenID Connect has an API for [Dynamic Client
-Registration](http://openid.net/specs/openid-connect-registration-1_0.html)
-which efficiently pushes the task to the application developer. If you
-do not want to write an application to register your client, there are a
-few web pages around that can do the job for you. Gluu publishes the
-[oxAuth-RP](https://ce-dev.gluu.org/oxauth-rp) and there is also another in [PHP
-RP](http://www.gluu.co/php-sample-rp).
-
-A new client can be added by clicking the **Add Client** link.
-
-![addclient](../img/openid/addclient.png)
-
-Available **Clients** can be seen by hitting the **Search** button
-leaving the search box empty.
-
-![clientlist](../img/openid/clientlist.png)
-
-### Register Client
+## Manually Register a Client
 Gluu Server Administrators can click on the `Add Client` button to register new clients. It is possible to dynamically register any client by calling the dynamic registration endpoint, but this section focuses on the manual registration of the client. The following screen appears when the `Add Client` button is clicked.
 
 ![add-client](../img/openid/add-client.png)
@@ -507,12 +487,9 @@ Gluu Server Administrators can click on the `Add Client` button to register new 
 * _Add Logout URI:_ Use this option to add the logout URI.
 
 ### Multi-Factor Authentication for Clients
-The `acr_values` parameter is used to specify the use of specific multi-factor authentication for each client. If a scenario is presented where different clients use different authentication mechanism, then the `acr_value` parameter is used to specify the choice. Out of the box, GLuu Server supports U2F, DUO, Basic, oxPush/SuperGluu, Google+ and internal LDAP authentication. While registering new clients, put the mode in `Add Default ACR value` to chosen mechanism. The authentication mechanism must be enabled in the `Custom Scripts` section as well.
+The `acr_values` parameter is used to specify the use of specific multi-factor authentication for each client. If a scenario is presented where different clients use different authentication mechanism, then the `acr_value` parameter is used to specify the choice. Out of the box, the Gluu Server supports U2F, DUO, Basic, oxPush/SuperGluu, Google+ and internal LDAP authentication. While registering a new client, put the mode in `Add Default ACR value` to chosen mechanism. The authentication mechanism must be enabled in the `Custom Scripts` section as well.
 
-!!! Note
-    Supported ACR Values in Client Registration: "u2f", "duo", "basic", "mt", "oxpush2", "gplus", "internal"
-
-The values appear in order of preference and the successful authentication is sent as the acr claim value in the issued ID Token. The table below explains the acr values. Please click on the description to access the specific how-to guide for the ACR declared authentication.
+Out-of-the-box supported ACR Values in Client Registration include: "u2f", "duo", "basic", "mt", "oxpush2", "gplus", "internal". The table below explains the acr values. Please click on the description to access the specific how-to guide for implementing the ACR declared authentication.
 
 |  ACR Value  	| Description			|
 |---------------|-------------------------------|
@@ -556,7 +533,7 @@ Configuration --> Custom Scripts --> Custom Client Registration.
 
 The script is [available here](./sample-client-registration-script.py)
 
-## OpenID Connect Client Code
+## Client Software to Secure Applications
 Although you can use generic OAuth 2.0 client libraries to call OpenID Connect endpoints, you would have to implement code to take advantage of some of OpenID Connect's features. For example, there is no id_token in OAuth 2.0, so you won't find any code for id_token validation in an OAuth 2.0 library. A good OpenID Connect client will do much of the heavy lifting for you. 
 
 ### JavaScript Client
