@@ -67,14 +67,13 @@ It is possible to perform attribute transformations, changing the name of
 attributes, or even using an interception script to change the values. 
 Transformations are stored in the Gluu LDAP service. 
 
-
-# Video Tutorial
+### Video Tutorial
 For a guided video overview of configuring Cache Refresh, please watch the following three videos:    
 - [Part 1: What is 'Cache Refresh' and How Does it Work?](https://youtu.be/VnyCTUCRkic)     
 - [Part 2: Configuring Cache Refresh in the Gluu Server](https://youtu.be/c64l_xmBbvw)    
 - [Part 3: Managing Authentication After You've Setup Cache Refresh](https://youtu.be/fyAEwJuwqn4)    
        
-# Things To Remember
+### Things To Remember
 The Gluu Server supports two LDAP modes: 
 
 - Authentication 
@@ -114,7 +113,7 @@ and populate the LDAP server. Here are some tips before you get started:
   setup your Gluu Server to use the correct LDAP server for
   authentication.
 
-# Things To Know
+### Things To Know
 The deployer needs to know various values of his own backend AD to
 configure this part. For example, host & port, bindDN user information,
 bindDN password, Objectclasses, attributes whose information will be
@@ -143,10 +142,10 @@ the setup of the Cache Refresh engine.
   been rejected by the Gluu Server during the update. If there are any
   rejections, please contact Gluu Support for clarification and help.
 
-![Last Run](/img/admin-guide/user/admin_cache_lastrun.png)
+![Last Run](../img/admin-guide/user/admin_cache_lastrun1.png)
 
 ### Customer Backend Key and Attributes
-![Customer Backend Key](/img/admin-guide/user/admin_cache_backend.png)
+![Customer Backend Key](../img/admin-guide/user/admin_cache_backend.png)
 
 * _Key Attribute:_ This is the unique key attribute of backend Active
   Directory/LDAP Server such as SAMAccountname for any Active Directory.
@@ -364,15 +363,15 @@ The users can register through the user registration link usually available at `
 ![image]
 (../img/admin-guide/user/config-manage-script_enable.png)
 
-# SCIM 2.0 User Add/Delete
+## SCIM 2.0 User Add/Delete
 This section outlines how to add/remove user from Gluu Server CE using [SCIM-Client](https://github.com/GluuFederation/SCIM-Client).
-## Add User
+### Add User
 There are two methods to add users:
 
 1. [JSON Sting](#json-string)
 2. [User Object](#user-object)
 
-### Required Parameters
+#### Required Parameters
 |Parameter|Description|
 |---------|-----------|
 |userName | The intended username for the end-user|
@@ -381,7 +380,7 @@ There are two methods to add users:
 |displayName| The formatted first name followed by last name|
 |_groups_| Optional parameter if the user is added to any specific group|
 
-### JSON String
+#### JSON String
 The user is added using a JSON object string using the required parameters; however it is possible to add more parameters. The following is an example of a JSON string used to add a user.
 
 ```
@@ -389,7 +388,7 @@ The user is added using a JSON object string using the required parameters; howe
         String createJson = {"schemas":["urn:ietf:params:scim:schemas:core:2.0:User"],"externalId":"12345","userName":"newUser","name":{"givenName":"json","familyName":"json","middleName":"N/A","honorificPrefix":"","honorificSuffix":""},"displayName":"json json","nickName":"json","profileUrl":"http://www.gluu.org/","emails":[{"value":"json@gluu.org","type":"work","primary":"true"},{"value":"json2@gluu.org","type":"home","primary":"false"}],"addresses":[{"type":"work","streetAddress":"621 East 6th Street Suite 200","locality":"Austin","region":"TX","postalCode":"78701","country":"US","formatted":"621 East 6th Street Suite 200  Austin , TX 78701 US","primary":"true"}],"phoneNumbers":[{"value":"646-345-2346","type":"work"}],"ims":[{"value":"nynytest_user","type":"Skype"}],"userType":"CEO","title":"CEO","preferredLanguage":"en-us","locale":"en_US","active":"true","password":"secret","groups":[{"display":"Gluu Test Group","value":"@!9B22.5F33.7D8D.B890!0001!880B.F95A!0003!60B7"}],"roles":[{"value":"Owner"}],"entitlements":[{"value":"full access"}],"x509Certificates":[{"value":"cert-12345"}]}
         ScimResponse response = client.createPersonString(createJson, MediaType.APPLICATION_JSON);
 ```
-### User Object
+#### User Object
 The following code snippet uses the User object.
 
 ```
@@ -456,7 +455,7 @@ The following code snippet uses the User object.
         String id = userCreated.getId();
 ```
 
-## Delete User
+#### Delete User
 To delete a user only the id (the LDAP `inum`) is needed.
 
 ```
@@ -464,7 +463,7 @@ To delete a user only the id (the LDAP `inum`) is needed.
         assertEquals(response.getStatusCode(), 200, "User could not be deleted, status != 200");
 ```
 
-### Required Parameter
+#### Required Parameter
 
 |Parameter|Description|
 |---------|-----------|
@@ -487,10 +486,10 @@ Now for the actual code, you can refer to the unit tests in SCIM-Client:
 * [UserExtensionsObjectTest](/src/test/java/gluu/scim2/client/UserExtensionsObjectTest.java)
 * [UserExtensionsJsonTest](/src/test/java/gluu/scim2/client/UserExtensionsJsonTest.java)
 
-# Lock User in Gluu Server
+## Lock User in Gluu Server
 This section deals with the locking of user after 4 failed login attempts. This feature requires using the interception script to achieve the goal. The login attempts are stored in a custom attribute which needs to be created first.
 
-## Create Custom Attribute
+### Create Custom Attribute
 The custom attribute `oxCountInvalidLogin` will track the unsuccessful login attempts by any user. Please create that attribute from the oxTrust Admin GUI.
 
 * Click on the add user button under **Configuration**
@@ -501,7 +500,7 @@ The custom attribute `oxCountInvalidLogin` will track the unsuccessful login att
 
 * Click the **Update** button and the custom attribute is added in the Gluu Server
 
-## Script Installation
+### Script Installation
 
 * Go to Manage Custom Scripts
 ![image](https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/2.4/config-script_menu.png)
@@ -543,4 +542,3 @@ The custom attribute `oxCountInvalidLogin` will track the unsuccessful login att
 
     11. Change Default Authentication Method to LockAccount
 ![image](https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/2.4/lock_user_method.png)
-
