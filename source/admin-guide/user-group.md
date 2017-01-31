@@ -1,7 +1,7 @@
 # User Management in Gluu Server
 ## Overivew
 To keep the Gluu Server up-to-date with the latest user claims, your
-organization can either "push" or "pull" identity data. In the "pull"
+organization can either "push" or "pull" identity data to the server. In the "pull"
 mode, otherwise known as LDAP Synchronization or Cache Refresh, the Gluu
 Server can use an existing LDAP identity source like Microsoft Active
 Directory as the authoritative source of identity information. If you
