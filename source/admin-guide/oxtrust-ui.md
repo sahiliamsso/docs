@@ -168,8 +168,7 @@ present in the LDAP server. Adding an attribute here is like registering it in t
 during a SAML or OpenID Connect transaction, the Gluu Server needs to know it exists.
 
 ### Cache Refresh
-Cache Refresh is the mechanism used by Gluu Server to syncrhonize users from a 
-backend LDAP data source, for example, Active Directory. `Cache Refresh` 
+Cache Refresh, a.k.a. LDAP Synchronization, is the process of connecting an existing backend LDAP server, like Microsoft Active Directory, with the Gluu Server's local LDAP server. `Cache Refresh` 
 periodically searches these data sources, compares the results to 
 previous searches, and if a changed user account is found, it is updated.
 The frequency of cache refresh is also set from this page via the 
