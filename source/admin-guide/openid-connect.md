@@ -347,8 +347,6 @@ surprised by the behavior when you put your application into production.
 
 ## OpenID Connect Client
 
-![clientmenu](../img/openid/clientmenu.png)
-
 A client in OAuth2 could be either a website or mobile application.
 OpenID Connect has an API for [Dynamic Client
 Registration](http://openid.net/specs/openid-connect-registration-1_0.html)
