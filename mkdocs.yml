@@ -71,7 +71,7 @@ pages:
             - 'OxAuth JSON Properties': 'reference/JSON-oxauth-prop.md'
         #- 'Ox LDAP Properties':
 - Operation Guide:
-        - 'Backup': 'operation/backup.md'
+        - 'Backups': 'operation/backup.md'
         - 'Find your Gluu Version': 'operation/find-gluu-version.md'
         - 'Ports': 'operation/ports.md'
         - 'Logout': 'operation/logout.md'
