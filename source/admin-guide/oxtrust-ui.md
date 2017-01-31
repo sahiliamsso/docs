@@ -70,14 +70,62 @@ The oxAuth JSON configuration page gives easy access to the different endpoints 
 The oxTrust Import Person Configuration page contains the configuration for the file method of importing users into the Gluu Server. The administrator can import users from an `xls` file which must be defined in this tab to import data in the LDAP attributes. The default format should contain the following fields: 
 
 ### Manage Authentication
-The `Manage Authentication` page contains the internal LDAP settings for Gluu Server CE. 
-The `Default Authentication Method` defines the authentication mechanism used for general 
-authentication and oxTrust authentication. The separation is introduced because the users 
-logging into Service Providers (SP) do not see the administrative console. 
-The `oxTrust authentication mode` decides the authentication mechasims for the users 
-logging into the oxTrust admin interface.
+This section allows the Gluu Server administrator to define how and
+where the server should connect to authenticate users. If it is a remote
+LDAP/Active Directory server, the values are required. Put the details
+of the data source that you are trying to connect with Gluu Server. For
+example, the data source can be your back-end Active Directory, or your
+local LDAP server.
 
-![manage-authentication-head](../img/oxtrust/manage-authentication-head.png)
+![Manage LDAP Authentication](https://raw.githubusercontent.com/GluuFederation/docs/2.4/sources/img/2.4/admin_manage_ldap.png)
+
+* _Name:_ This field contains the name of the authentication server.
+
+* _Bind DN:_ The *Username* for the authentication server (local
+  LDAP/remote LDAP/remote Active Directory) goes here.
+
+* _Max Connections:_ This option can be used to define the total number
+  of simultaneous connections allowed for reading local LDAP/remote Active
+  Directory/remote LDAP.
+  
+* _Primary Key:_ This field contains the primary key to connect to the
+  authentication server (i.e. SAMAccountName/uid/mail etc.). 
+
+* _Local Primary Key:_ This field contains the Gluu Server's internal LDAP primary key. Generally the key is either *uid* or *mail*. 
+
+* _Server:_ The unique name of the authentication server and port number
+  (e.g. auth.company.org:636) goes here.
+
+* _Base DN:_ Add base DNs in this field to allow the Gluu Server to
+  connect and search the LDAP server. Every directory tree should be added
+  separately using the *Add Base DN* option.
+
+* _Change Bind Password:_ This button assignes a password to
+  authenticate the *Authentication Server*.
+
+* _Use SSL:_ Enable SSL if the authentication server requires a secured port (e.g. 636).
+
+* _Enabled:_ This check-box is used to enable the keys that are inserted
+  in their respective fields.
+
+* _Deactivate:_ This button *Deactivates/Activates* the Gluu Server
+  accessibility for authentication.
+
+* _Test LDAP Connection:_ Use this button to check whether the provided
+  information is sufficient to connect to the authentication server. The
+  scan is done in real time.
+
+#### Default Authentication Method
+
+This allows the Gluu Server administrator to select both the default
+authentication mode, and level for person authentication. Both modes are
+set to "Default" until additional authentication mechanisms are enabled
+via [custom scripts](#manage-custom-scripts). 
+
+|Authentication Method|Description|
+|---|---|
+|Authentication mode|This mode is used when users login to applications via Gluu|
+|oxTrust authentication mode|This mode is used for authentication to the Gluu Server GUI|
 
 ### Manage Custom Scripts
 The Gluu Server exposes interception scripts in places where it is common 
@@ -88,13 +136,11 @@ type of script has its own interface--in other words what methods are
 available. For more information, see the reference page detailing how
 [to write a custom authentication script](/admin-guide/user-authentications.md).
 
-![enable](../img/oxtrust/enable.png)
-
 ### Manage Registration
-The Gluu Server CE is shipped with a very basic user registration 
-feature. For complex enrollment requirements, you may want to write
-a registration page in a different application, and use the SCIM endpoint
-to add the user. Also, in some cases oxTrust is not Internet facing,
+The Gluu Server is shipped with a very basic user registration 
+feature. For custom enrollment requirements, you may want to write
+a registration page and use the SCIM endpoint
+to add the user to the Gluu Server. Also, in some cases oxTrust is not Internet facing,
 which makes it a bad option for user registration. Use this feature
 only if you have very basic requirements! 
 
@@ -102,39 +148,33 @@ This tabs has two options:
 1. `Disable Captcha for registration form`
 2. `Configure Registration Form Attributes`
 
-**Disable Captcha for registration form**
-This option allows to require CAPTCHA in the registration form.
+**Disable Captcha for registration form**    
 ![registration](../img/admin-guide/manage_registration.png)
 
-**Configure Registration Form Attributes**
-This section allows you to filter list of attributes to be displayed 
-in the registration form. You will be able to search for the attribute 
-and move the selected attribute by clicking on the drop down
-list and moving to the other column by clicking on `Add` or `Add all` 
-if you have selected multiple attributes.
+This option adds a required CAPTCHA to the registration form.     
 
+**Configure Registration Form Attributes**    
 ![attr_filter](../img/admin-guide/config_registration.png)
 
+This section allows you to filter the list of attributes to be displayed 
+in the registration form. Search, select, add, and order desired attributes here.
+
 ### Attributes
-The user attributes available in the Gluu Server are found on 
-this page. By default, only the active attributes are visible.  
+Available user attributes are found on this page. By default, only the active attributes are visible.  
 Use the `Show All Attributes` to display the inactive attributes too. 
 Custom attributes can be added by clicking the `Add Attribute` button 
-and filling up a simple form. Note the attribute must already be
-present in the LDAP server. Adding an attribute here is more like
-"registration" in the Gluu Server. In order to release an attribute
-via SAML or OpenID Connect, the Gluu Server needs to know it exists.
-
-![attribute-head](../img/oxtrust/attribute-head.png)
+and filling in a simple form. Note that attributes must already be
+present in the LDAP server. Adding an attribute here is like registering it in the Gluu Server. In order to release an attribute
+during a SAML or OpenID Connect transaction, the Gluu Server needs to know it exists.
 
 ### Cache Refresh
 Cache Refresh is the mechanism used by Gluu Server to syncrhonize users from a 
 backend LDAP data source, for example, Active Directory. `Cache Refresh` 
 periodically searches these data sources, compares the results to 
-previous searches, and if a changed user account is found, it updates it.
+previous searches, and if a changed user account is found, it is updated.
 The frequency of cache refresh is also set from this page via the 
 `Polling interval (minutes)`. The `key attribute(s)` is used to correlate
-a user if found in more then one LDAP server. In this case, the two entries
+a user if the user is found in more then one LDAP server. In this case, the two entries
 are joined. The source attributes specify which attributes will be 
 pulled from the backend LDAP server. The backend server address, bind DN 
 and other connection information is speciifed in the `Source Backend 
@@ -146,7 +186,7 @@ ssh, Log Viewer is your friend! Several common logs are preconfigured,
 or you can define new logs by specifying the path.
 
 ### Server Status
-This page will give some basic information about the Gluu Server such as the 
+This page provides some basic information about the Gluu Server such as the 
 hostname, IP address, free memory & disk space. The number of users in the 
 backend is also available in this page.
 
@@ -155,9 +195,7 @@ The certificate page shows some summary information about the SSL
 and SAML certificates.
 
 ## SAML
-Gluu Server CE contains all SAML related functionalities under the `SAML` tab 
-divided into outbound and inbound SAML transactions. 
-Inbound SAML is also known as ASIMBA. 
+If you chose to deploy the Shibboleth SAML IDP during installation, you will see this menu to manage all SAML related functionalities. In addition, if you chose to deploy the Asimba SAML Proxy, you will see a sub menu for inbound SAML.
 
 ### Outbound
 
@@ -171,11 +209,10 @@ administrator needs to gather before creating any new TR in Gluu Server. The met
 Service Provider (SP) connected using TR must be gathered along with the required attributes. 
 The creation of TR will be covered in detail later.
 
+### Inbound
+
 ## OpenID Connect
-OpenID Connect is another protocol supported by Gluu Server 
-CE following the [openID Connect specifications](http://openid.net/specs/openid-connect-core-1_0.html). 
-The scopes page contains the `Add Scope` button which can be used to add new scopes in Gluu Server. 
-Additionally the available scopes can be searched by name or listed using two (2) spaces in the search bar.
+The [OpenID Connect protocol](http://openid.net/specs/openid-connect-core-1_0.html) is supported by default in all Gluu Server deployments. The scopes page contains the `Add Scope` button which can be used to add new scopes in Gluu Server. Additionally the available scopes can be searched by name or listed using two (2) spaces in the search bar.
 
 ![scopes](../img/oxtrust/scopes.png)
 
