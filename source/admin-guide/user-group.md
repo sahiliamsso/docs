@@ -1,4 +1,5 @@
 # User Management in Gluu Server
+## Overivew
 To keep the Gluu Server up-to-date with the latest user claims, your
 organization can either "push" or "pull" identity data. In the "pull"
 mode, otherwise known as LDAP Synchronization or Cache Refresh, the Gluu
@@ -334,8 +335,7 @@ disabled by default. The `User Registration` custom script  is used to enable th
 registration feature.
 
 !!! Note
-    When possible, we recommend handling user registration in your app locally, then pushing the information to the Gluu Server via SCIM 2.0. This will give you much more control and flexibility in defining the exact registration process. Also,
-frequently oxTrust is not Internet facing--it was primarily designed as an interface for admins.
+    When possible, we recommend handling user registration in your app locally, then pushing the information to the Gluu Server via SCIM 2.0. This will give you much more control and flexibility in defining the exact registration process. Also, frequently oxTrust is not Internet facing--it was primarily designed as an interface for admins.
 
 ### oxTrust Configuration
 Navigate to the custom scripts section of the Admin Panel. Click on the `Configuration menu and then  `Manage Custom Scripts`.
