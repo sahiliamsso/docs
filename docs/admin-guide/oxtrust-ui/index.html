@@ -637,26 +637,15 @@
         
           
           
-  <li class="md-nav__item">
-    
-      <a href="../auth-management/" title="Authentication Management" class="md-nav__link">
-        Authentication Management
-      </a>
-    
-  </li>
-
-        
-          
-          
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-7" type="checkbox" id="nav-4-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6">
     
-    <label class="md-nav__link" for="nav-4-7">
+    <label class="md-nav__link" for="nav-4-6">
       User Authentication Guide
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-4-7">
+      <label class="md-nav__title" for="nav-4-6">
         User Authentication Guide
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1533,6 +1522,15 @@ via <a href="#manage-custom-scripts">custom scripts</a>. </p>
 </tr>
 </tbody>
 </table>
+<p>Gluu Server uses oxAuth as the first step of authentication in all kind 
+of SSO protocols ( OpenID Connect, SAML, CAS )</p>
+<p><img alt="default" src="../../img/admin-guide/auth-management/default.png" /></p>
+<ul>
+<li>Authentication mode: This mode defines the mode used for general authentication with Service Providers. The mode defined under this tab will not affect the users accessing the oxTrust administrator interface.</li>
+<li>oxTrust authentication mode: This mode is used when the user is accessing the oxTrust administrator interface using the gluu server hostname.</li>
+<li>Passport Support: This mode uses third-party authentication e.g. Google+, Twitter, Facebook to authenticate users in Gluu Server.</li>
+<li>Custom Script Authenticaiton: This mode uses custom script and enabled in the oxTrust Admin UI.</li>
+</ul>
 <h3 id="manage-custom-scripts">Manage Custom Scripts<a class="headerlink" href="#manage-custom-scripts" title="Permanent link">#</a></h3>
 <p>The Gluu Server exposes interception scripts in places where it is common 
 for organizations to implement custom workflows, or changes to the 

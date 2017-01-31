@@ -602,33 +602,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#lock-user-in-gluu-server" title="Lock User in Gluu Server" class="md-nav__link">
-    Lock User in Gluu Server
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-custom-attribute" title="Create Custom Attribute" class="md-nav__link">
-    Create Custom Attribute
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#script-installation" title="Script Installation" class="md-nav__link">
-    Script Installation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -649,26 +622,15 @@
         
           
           
-  <li class="md-nav__item">
-    
-      <a href="../auth-management/" title="Authentication Management" class="md-nav__link">
-        Authentication Management
-      </a>
-    
-  </li>
-
-        
-          
-          
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-7" type="checkbox" id="nav-4-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6">
     
-    <label class="md-nav__link" for="nav-4-7">
+    <label class="md-nav__link" for="nav-4-6">
       User Authentication Guide
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-4-7">
+      <label class="md-nav__title" for="nav-4-6">
         User Authentication Guide
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1369,33 +1331,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#lock-user-in-gluu-server" title="Lock User in Gluu Server" class="md-nav__link">
-    Lock User in Gluu Server
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-custom-attribute" title="Create Custom Attribute" class="md-nav__link">
-    Create Custom Attribute
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#script-installation" title="Script Installation" class="md-nav__link">
-    Script Installation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1906,7 +1841,10 @@ want to manually review user registrations before allowing them.</p>
 </tbody>
 </table>
 <h2 id="user-extensions">User Extensions<a class="headerlink" href="#user-extensions" title="Permanent link">#</a></h2>
-<p>SCIM 2.0 User Extensions implementation in Gluu server is very simple. Just set the custom attribute's <code>SCIM Attribute</code> parameter to <code>true</code> in oxTrust GUI and it will be recognized as a User extension. It is a must to create new custom attributes to be used as User extensions for a cleaner implementation.</p>
+<p>SCIM 2.0 User Extensions implementation in Gluu server is very simple. 
+Just set the custom attribute's <code>SCIM Attribute</code> parameter to <code>true</code> in 
+oxTrust GUI and it will be recognized as a User extension. It is a must to 
+create new custom attributes to be used as User extensions for a cleaner implementation.</p>
 <p><img alt="image" src="../../img/admin-guide/user/scim-attribute.png" /></p>
 <p>You can verify the User extensions via the <code>Schema</code> endpoint:</p>
 <p><code>&lt;domain root&gt;/identity/seam/resource/restv1/scim/v2/Schemas/urn:ietf:params:scim:schemas:extension:gluu:2.0:User</code></p>
@@ -1915,86 +1853,6 @@ want to manually review user registrations before allowing them.</p>
 <ul>
 <li><a href="../../src/test/java/gluu/scim2/client/UserExtensionsObjectTest.java">UserExtensionsObjectTest</a></li>
 <li><a href="../../src/test/java/gluu/scim2/client/UserExtensionsJsonTest.java">UserExtensionsJsonTest</a></li>
-</ul>
-<h2 id="lock-user-in-gluu-server">Lock User in Gluu Server<a class="headerlink" href="#lock-user-in-gluu-server" title="Permanent link">#</a></h2>
-<p>This section deals with the locking of user after 4 failed login attempts. This feature requires using the interception script to achieve the goal. The login attempts are stored in a custom attribute which needs to be created first.</p>
-<h3 id="create-custom-attribute">Create Custom Attribute<a class="headerlink" href="#create-custom-attribute" title="Permanent link">#</a></h3>
-<p>The custom attribute <code>oxCountInvalidLogin</code> will track the unsuccessful login attempts by any user. Please create that attribute from the oxTrust Admin GUI.</p>
-<ul>
-<li>
-<p>Click on the add user button under <strong>Configuration</strong>
-<img alt="image" src="https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/2.4/admin_config_attribute_add.png" /></p>
-</li>
-<li>
-<p>Please fill up the form as shown in the screenshot below
-<img alt="image" src="https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/2.4/custom_attribute.png" /></p>
-</li>
-<li>
-<p>Click the <strong>Update</strong> button and the custom attribute is added in the Gluu Server</p>
-</li>
-</ul>
-<h3 id="script-installation">Script Installation<a class="headerlink" href="#script-installation" title="Permanent link">#</a></h3>
-<ul>
-<li>
-<p>Go to Manage Custom Scripts
-<img alt="image" src="https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/2.4/config-script_menu.png" /></p>
-</li>
-<li>
-<p>Click on the Person Authenticaiton tab
-<img alt="image" src="https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/2.4/config-script_person.png" /></p>
-</li>
-<li>
-<p>Click on the Add custon script configuration button
-<img alt="image" src="https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/2.4/config-script_add.png" /></p>
-</li>
-<li>
-<p>Fill up the form with the following information:
-<img alt="image" src="https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/2.4/config_script_update1.png" /></p>
-<ol>
-<li>
-<p>Name: LockAccount</p>
-</li>
-<li>
-<p>Description: Basic Lock Account</p>
-</li>
-<li>
-<p>Programming Language: Python</p>
-</li>
-<li>
-<p>Level: 1</p>
-</li>
-<li>
-<p>Location Type: Ldap</p>
-</li>
-<li>
-<p>Usage Type: Both methods</p>
-</li>
-<li>
-<p>Custom property(key/value)</p>
-</li>
-<li>
-<p>invalid_login_count_attribute: oxCountInvalidLogin</p>
-</li>
-<li>
-<p>maximum_invalid_login_attemps: 4</p>
-</li>
-<li>
-<p>Script: <a href="https://github.com/GluuFederation/oxAuth/blob/master/Server/integrations/basic.lock.account/BasicLockAccountExternalAuthenticator.py">Lock User Account Script</a></p>
-</li>
-<li>
-<p>Enable the script by ticking the check box 
-<img alt="image" src="https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/2.4/config-script_enable.png" /></p>
-</li>
-<li>
-<p>Click Update 
-<img alt="image" src="https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/2.4/config-script_update.png" /></p>
-</li>
-<li>
-<p>Change Default Authentication Method to LockAccount
-<img alt="image" src="https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/2.4/lock_user_method.png" /></p>
-</li>
-</ol>
-</li>
 </ul>
               
             </article>

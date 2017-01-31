@@ -406,26 +406,15 @@
         
           
           
-  <li class="md-nav__item">
-    
-      <a href="../auth-management/" title="Authentication Management" class="md-nav__link">
-        Authentication Management
-      </a>
-    
-  </li>
-
-        
-          
-          
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-7" type="checkbox" id="nav-4-7" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6" checked>
     
-    <label class="md-nav__link" for="nav-4-7">
+    <label class="md-nav__link" for="nav-4-6">
       User Authentication Guide
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-4-7">
+      <label class="md-nav__title" for="nav-4-6">
         User Authentication Guide
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -482,6 +471,13 @@
         <li class="md-nav__item">
   <a href="#configuring-account-lockout" title="Configuring Account Lockout" class="md-nav__link">
     Configuring Account Lockout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-login-page" title="Customizing the Login Page" class="md-nav__link">
+    Customizing the Login Page
   </a>
   
 </li>
@@ -1008,6 +1004,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#customizing-the-login-page" title="Customizing the Login Page" class="md-nav__link">
+    Customizing the Login Page
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1024,7 +1027,7 @@
               
                 
                 <h1 id="user-authentication-introduction">User Authentication Introduction<a class="headerlink" href="#user-authentication-introduction" title="Permanent link">#</a></h1>
-<p>The Gluu Server is most frequently used to protect web-accessible resources. Users browse to a protected webpage and the application redirects the user to the Gluu Server for authentication and authorization. The Gluu Server determines who the user is, and whether the user has the right to access the protected page. The Gluu Server then redirects the user back to the protected page with an authenticated session.</p>
+<p>The Gluu Server is most frequently used to protect web-accessible resources. People navigate to a protected webpage and the application redirects the person to the Gluu Server for authentication and authorization. The Gluu Server determines who the person is, and whether the person has the right to access the protected page. The Gluu Server then redirects the user back to the protected page with an authenticated session.</p>
 <p>The Gluu Server is very flexible in handling authentication. By default, the Gluu Server uses username and password authentication. However, using the Gluu Server's interception script infrastructure, you can define multiple authentication methods and business logic for complex multi-step authentication workflows. You can have multiple authentication mechanisms active at the same time--Web or mobile clients can request a certain authentication type by using standard OpenID Connect request parameters.</p>
 <p>Interception scripts allow you to configure authentication processes and customize how they are applied. Sophisticated authentication logic can implement adaptive authentication. For example, you can add extra authentication steps based on contextual information such as fraud scores, location, or browser profiling. You can also customize the look and feel of a web authentication: html, css, images and javascript can be externalized and managed by your organization.</p>
 <h2 id="default-authentication">Default Authentication<a class="headerlink" href="#default-authentication" title="Permanent link">#</a></h2>
@@ -1035,6 +1038,8 @@
 <h2 id="configuring-multi-factor-authentication">Configuring Multi-Factor Authentication<a class="headerlink" href="#configuring-multi-factor-authentication" title="Permanent link">#</a></h2>
 <p>A number of multi-factor authentication scripts are shipped in the Gluu Server by default, including support for FIDO U2F tokens (like Vasco and Yubikey), Gluu's free mobile two-factor application Super Gluu, certificate authentication, and Duo Security.  </p>
 <h2 id="configuring-account-lockout">Configuring Account Lockout<a class="headerlink" href="#configuring-account-lockout" title="Permanent link">#</a></h2>
+<h2 id="customizing-the-login-page">Customizing the Login Page<a class="headerlink" href="#customizing-the-login-page" title="Permanent link">#</a></h2>
+<p>Learn how to customize the look and feel of Gluu Server pages in the Design Customizations(add-link) section of the Operations Guide. </p>
               
             </article>
           </div>
@@ -1047,7 +1052,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../auth-management/" title="Authentication Management" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../session/" title="Session Timeout" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1056,7 +1061,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Authentication Management
+                Session Timeout
               </span>
             </div>
           </a>
