@@ -1,5 +1,7 @@
 # OpenID Connect 
 
+## Overview
+
 OpenID Connect is an authentication layer built on OAuth 2.0. 
 OpenID Connect is a specific implementation of OAuth 2.0 
 where the identity provider holds protected resources that a 
