@@ -241,7 +241,7 @@ This script can be used in an oxTrust application only.
 
 In order to integrate an interception script with an existing
 authentication server oxTrust provides a mechanism called [Cache
-Refresh](../admin-guide/cacherefresh.md) to copy
+Refresh](../admin-guide/user-group/#ldap-synchronization) to copy
 user data to the local LDAP server. During this process it is possible
 to specify key attribute(s) and specify attribute name transformations.
 There are also cases when it can be used to overwrite attribute values
@@ -277,7 +277,7 @@ This script can be used in an oxAuth application only.
 - [Sample Authorization Script](./sample-uma-authorization-script.py)
 
 
-## Application Session Management
+##.2 Application Session Management
 
 This script allows an admin to notify 3rd party systems about requests
 to end an OAuth session. This method is triggered by an oxAuth call to

@@ -61,23 +61,7 @@
       <header class="md-header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
-	<div class="md-flex__cell md-flex__cell--shrink">
-	<link rel="stylesheet" href="assets/stylesheets/version-doc.css" type="text/css" />
-	<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-	  <span class="fa fa-caret-down"></span>
-    </span>
-	  <div class="rst-other-versions">
-      <dl>
-        <dt>ver:Latest-3.0</dt>
-          <dd><a href="/docs-3/">Latest</a></dd>
-          <dd><a href="/docs/">2.4.4.2</a></dd>
-      </dl>
-      <dl>
-	 </div>
-     </div>
-	</div>
-      <div class="md-flex__cell md-flex__cell--shrink">
+	 <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../.." title="Gluu Docs" class=" md-logo  md-header-nav__button">
           
             <img src="../../gluu.jpg" width="24" height="24">
@@ -152,6 +136,40 @@
       </div>
     </div>
   </nav>
+
+<nav class="md-secondary-header-nav md-grid" style="
+    height: 25px;
+    background: transparent;
+	
+">
+<div class="md-flex-secondary" style="
+    display: table;
+    padding: 10px;
+">
+<select id="versions" onchange="window.location.href=this.value;" style="
+    position: relative;
+    display: block;
+    /*min-width: 100%;*/
+    width: 120%; 
+    height: 25px;
+    padding: 5px 10px 5px 5px;
+    color: #555555;
+    border: none;
+    background: transparent;
+    outline: none;
+    -webkit-appearance: none;
+    z-index: 99;
+    cursor: pointer;
+    font-size: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+">
+  <option value="/docs-3">Latest</option>
+  <option value="/docs">2.4.4.2</option>
+    </select> 
+
+ </div>
+   </nav>
 </header>
     
     <div class="md-container">
@@ -357,17 +375,6 @@
           
   <li class="md-nav__item">
     
-      <a href="../cacherefresh/" title="Cache Refresh" class="md-nav__link">
-        Cache Refresh
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
       <a href="../auth-management/" title="Authentication Management" class="md-nav__link">
         Authentication Management
       </a>
@@ -390,13 +397,13 @@
           
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5" checked>
     
-    <label class="md-nav__link" for="nav-4-6">
+    <label class="md-nav__link" for="nav-4-5">
       User Authentication Guide
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-4-6">
+      <label class="md-nav__title" for="nav-4-5">
         User Authentication Guide
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
