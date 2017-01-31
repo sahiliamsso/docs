@@ -25,6 +25,6 @@ A number of multi-factor authentication scripts are shipped in the Gluu Server b
 
 ## Customizing the Login Page 
 
-Learn how to customize the look and feel of Gluu Server pages in the [Design Customizations](todo) section of the Operations Guide. 
+Learn how to customize the look and feel of Gluu Server pages in the Design Customizations(add-link) section of the Operations Guide. 
 
 
