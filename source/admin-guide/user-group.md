@@ -313,7 +313,7 @@ The file needs to contain the following fields from which the user data will be 
 
 * Email
 
-## Register User
+## User Registration
 Self-Registration is done by users on a self-service basis. Since
 oxTrust user registration cannot add users to a backend LDAP or Active
 Directory server, self-registration will only be effective if GluuLDAP
@@ -331,16 +331,13 @@ registration feature.
     When possible, we recommend handling user registration in your app locally, then pushing the information to the Gluu Server via SCIM 2.0. This will give you much more control and flexibility in defining the exact registration process. Also, frequently oxTrust is not Internet facing--it was primarily designed as an interface for admins.
 
 ### oxTrust Configuration
-Navigate to the custom scripts section of the Admin Panel. Click on the `Configuration menu and then  `Manage Custom Scripts`.
+Navigate to the custom scripts section of the Admin Panel. Click on `Configuration` then `Manage Custom Scripts`.
 
-The tabs near the top of the page can be used to navigate to different custom scripts. We are concerned about 
-the `User Registration` tab.
+The tabs near the top of the page can be used to navigate to different custom scripts. Navigate to the `User Registration` tab.
 
 ![image](../img/admin-guide/user/config-manage-script_menu1.png)
 
-Set the `enable_user` value to to `true` so that the user can login as soon as 
-the registration is complete, which sets the default status value. You may want to leave this to `false` if you 
-want to manually review user registrations before allowing them.
+Set the `enable_user` value to `true` so that the user can login as soon as the registration is complete. If you want to manually review and approve new user registrations, you can leave this value set to `false`.
 
 ![image](../img/admin-guide/user/config-manage-script_enable.png)
 
@@ -349,15 +346,14 @@ Click `Enable` checkbox at the bottom of the page.
 ![image]
 (../img/admin-guide/user/config-manage-script_check.png)
 
-**User Registration**
-
-The users can register through the user registration link usually available at `<hostname>/identity/register`.
+Now users should be able to self-register through the user registration link, which should be available at `<hostname>/identity/register`.
 
 ![image]
 (../img/admin-guide/user/config-manage-script_enable.png)
 
 ## SCIM 2.0 User Add/Delete
 This section outlines how to add/remove user from Gluu Server CE using [SCIM-Client](https://github.com/GluuFederation/SCIM-Client).
+
 ### Add User
 There are two methods to add users:
 
