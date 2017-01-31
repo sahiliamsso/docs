@@ -1,11 +1,10 @@
-# OpenID Connect Overview
+# OpenID Connect 
 
 OpenID Connect is an authentication layer built on OAuth 2.0. 
 OpenID Connect is a specific implementation of OAuth 2.0 
 where the identity provider holds protected resources that a 
 third-party application needs to access on behalf of a person. 
 OpenID Connect allows relying parties to verify the identity of, and obtain information about a person requesting to access the applications protected resources. 
-
 
 ## Jargon
 In OpenID Connect the key entities include:
@@ -24,16 +23,16 @@ The Gluu Server is an OpenID Provider. The OP holds information about the user a
 
 The relying party can verify claims about the identity of the end user, and log the user out at the end of a session. OpenID Connect also makes it possible to discover the OpenID Provider for an end user, and to register relying party client applications dynamically. OpenID connect services are built on OAuth 2.0, JSON Web Token (JWT), WebFinger and Well-Known URIs.
 
-## OpenID Connect Support in the Gluu Server
+## OpenID Connect in the Gluu Server
 The Gluu Server is a [fully certified OpenID Connect Provider (OP)](http://openid.net/certification/). As an OpenID Provider, the Gluu Server enables OpenID Connect relying parties (clients) to discover its capabilities, handle both dynamic and static registration of relying parties, respond to relying party requests with authorization codes, access tokens, and user information according to the Authorization Code and Implicit flows of OpenID Connect, and manages sessions.
 
-## OpenID Connect Implicit Flow
+### OpenID Connect Implicit Flow
 The OpenID Connect Implicit Flow specifies how the relying party interacts with the OpenID Provider based on use of the OAuth 2.0 implicit grant. The main difference between the OAuth and OpenID Connect implicit flows lie in the use of the id_token, which must be returned in Connect. The id_token adds additional security to the transaction. For more information, read the [OpenID Connect Implicit Client Implementer's guide](http://openid.net/specs/openid-connectimplicit-1_0.html).
 
-## OpenID Connect Authorization Code Flow
+### OpenID Connect Authorization Code Flow
 The OpenID Connect Authorization Code Flow specifies how the relying party interacts with the OpenID Provider based on use of the OAuth 2.0 authorization grant. The authorization code flow is more secure than the implicit flow because the tokens are never exposed to the web browser and possibly other malicious applications with access to the browser. As with the implicit flow the extra securuty in Connect's authorization code flow stems from the id_token. 
 
-## OpenID Connect Hybrid Flow 
+### OpenID Connect Hybrid Flow 
 Hybrid flow is a combination of the Implicit Flow and Authorization Code 
 Flow. It allows an application to request a combination of identity token, 
 access token, and code via the front channel using either a fragment 
@@ -44,7 +43,7 @@ encoded redirect (native and JS based clients) or a form post
  used by a back end service to request a refresh token, thus gaining long 
  lived access to resources.
 
-## Discovery 
+### Discovery 
 
 The first thing you want to know about any OAuth 2.0 API is where the
 endpoints are (i.e. what are the URIs where you call the APIs).
@@ -60,7 +59,7 @@ Once the OpenID Provider has been identified, the configuration information
 for the OP is retrieved from a well-known location as a JSON document,
 including its OAuth 2.0 endpoint locations.
 
-### Sample Discovery Request
+#### Sample Discovery Request
 If you want to try a discovery request, you can make the following
 WebFinger request to discover the Issuer location:
 
@@ -308,7 +307,11 @@ _Encryption, Key Encryption Algorithms:_ RSA1_5, RSA-OAEP, A128KW, A256KW.
 
 _Block Encryption Algorithms:_ A128CBC+HS256, A256CBC+HS612, A128GCM, A256GCM,
 
-## Session management
+
+### OpenID Connect Relying Party Registration
+Relying parties can register with the Gluu Server both statically, by the Gluu Server admin, and dynamically, as specified by OpenID Connect Discovery. To allow dynamic registration, you register an initial OAuth 2.0 client that other relying parties can use to get access tokens for registration. You can also enable OpenID Connect relying parties to register dynamically without having to provide an access token. If dynamic registration is enabled, make sure to limit or throttle registrations as it could be used as a form of DDOS.
+
+### Session management
 
 OpenID Connect lets the relying party track whether the end user is logged in at the provider, and also initiate end user logout at the provider. The specification has the relying party monitor session state using an invisible iframe and communicate status using the HTML 5 postMessage API.
 
@@ -341,67 +344,6 @@ perhaps in a portal.
 The key for logout is to understand the limitations of logout, and to
 test the use cases that are important to you, so you will not be
 surprised by the behavior when you put your application into production.
-
-## OpenID Connect Relying Party Registration
-Relying parties can register with the Gluu Server both statically, by the Gluu Server admin, and dynamically, as specified by OpenID Connect Discovery. To allow dynamic registration, you register an initial OAuth 2.0 client that other relying parties can use to get access tokens for registration. You can also enable OpenID Connect relying parties to register dynamically without having to provide an access token. If dynamic registration is enabled, make sure to limit or throttle registrations as it could be used as a form of DDOS.
-
-# Client Code
-Although you can use generic OAuth 2.0 client libraries to call OpenID Connect endpoints, you would have to implement code to take advantage of some of OpenID Connect's features. For example, there is no id_token in OAuth 2.0, so you won't find any code for id_token validation in an OAuth 2.0 library. A good OpenID Connect client will do much of the heavy lifting for you. 
-
-## JavaScript Client
-A JavaScript client is one of the easiest ways to use OpenID Connect, although it's not the most secure. The client we recommend was forked from a sample application written to demonstrate how easy it is to use Connect. Gluu forked the code, and has enhanced it since the time of its original publishing. The project can be found on [Github](https://github.com/GluuFederation/openid-implicit-client).
-
-It's not a fancy app--it sends the person to the authorization endpoint to be authenticated, and then prints the claims tha are returned in the id_token. Currently the client does not handle dynamic client registration. 
-
-You'll have to add the client manually to the Gluu Server via the GUI. When completing the `add client` form, you can use the following configuration:
-
-```
-Client Name: Implicit Test Client
-response_type: token id_token
-Application Type: Web
-Pre-Authorization: Enabled
-Subject Type: public
-Scopes: openid, profile, email
-Response Types: token id_token
-Grant Types: implicit
-```
-
-Once you have registered the client in the Gluu Server, all you need to do is update the `client_id`, `redirect_uri`, and `providerInfo` values in the login page html. Assuming you've checked out the project into a web accessible folder, then navigate to the page and test! 
-
-## Server-Side libraries
-Many applications are "server-side", meaning the web page displays content but most of the dynamic business logic resides on the web server. The OpenID Foundation maintains a list of client libraries on [their website](http://openid.net/developers/libraries). However, our experience has been that the quality of these libraries varies widely. Some are not well documented, other are not updated frequently, and some do not implement essential security features available in OpenID Connect. In addition, if a wide array of client libraries are used it becomes difficult to monitor and patch security vulnerabilities. For this reason, we recommend that you use our OpenID Connect middleware software called [oxd](http://oxd.gluu.org).  
-
-oxd is not open source, but it is very reasonably priced at $0.33 per day per server--or ~$10/month. The code is available on [GitHub](https://github.com/gluufederation/oxd), and there are free open source oxd libraries available for PHP, Java, Python, C#, Node, Ruby, Perl and Go. There are also plugins available for several popular open source applications.
-
-[Watch the oxd demo](http://gluu.co/oxd-demo).
-
-[Get an oxd license for free](http://oxd.gluu.org)
-
-## Apache HTTPD module
-A popular approach to protecting web applications is to use a web server filter to intercept the request, and make sure the person using that connection is authenticated and authorized. The web server with the filter may directly serve the application, or may proxy to a backend service. Leveraging the web server is a well established pattern, used by older access management platforms like CA Siteminder and Oracle Access Manager. 
-
-One of the advantages of the web server filter approach is that the application developer does not need to know that much about the security protocols--if the request makes it through to the application, the person has been authenticated and the request is authorized. Another advantage is that the application security is administered by the system administrators, not by developers. For example, it may be easier to manage and audit apache configuration than to read a bunch of code. 
-
-One of the best OpenID Connect relying party implementations was written by Hans Zandbelt, called [mod_auth_openidc](https://github/com/pingidentity/mod_auth_openidc). It is an authentication and authorization module for the Apache 2.x HTTP server that authenticates users against an OpenID Connect Provider (OP). The software can be found on GitHub and is included in the package management system for several Linux distributions. There are binary packages available, and if you are good at compiling C code, you can build it yourself from the source. 
-
-Note: if you are an Nginx fan, there is a similar [Lua implementation](https://github.com/pingidentity/lua-resty-openidc) to make NGINX operate as an OpenID Connect RP or OAuth 2.0 RS. 
-
-## AppAuth for Mobile Applications
-One of the most compelling reasons to use Connect is to authenticate people from a mobile application. The IETF draft ["OAuth 2.0 for Native Apps"](https://tools.ietf.org/html/draft-ietf-oauth-native-apps-06) provides an overview of an improved design for mobile security. In additio to the security features of OpenID Connect, this draft suggests the use of a PKCE and custom URI schemes (i.e. an application can register a URI such as myapp:// instead of https://).
-
-In 2016, Google released and then donated code to the OpenID Foundation called AppAuth for [Android](https://github.com/openid/AppAuth-android) and [iOS](https://github.com/openid/AppAuth-iOS). The AppAuth projects also include sample applications. Simulataneously, Google announced that it was deprecating the use of WebViews--a strategy used by mobile app developers which is vulnerable to malicious application code. Not only does AppAuth provide secure authentication, it enables SSO across the system browser and mobile applications. It accomplishes this by leveraging new operating system features that enable the system browser to be called by an application in an opaque view that does not enable an app developer to steal a person's credentials, or other applications to steal codes or tokens. Using this approach, mobile app developers can use the authorization code or hypbrid flow (as described earlier). 
-
-The Gluu Server is the only free open source OpenID Connect Provider that currently supports AppAuth. 
-
-# oxAuth RP
-
-The Gluu Server ships with an optional OpenID Connect relying 
-party web application, which is handy for testing.  
-It's called oxauth-rp. During Gluu Server setup, you'll be asked if you 
-want to install it--which you should on a development environment. 
-It will be deployed on `https://<hostname>/oxauth-rp`. Using this tool 
-you can exercise all of the OpenID Connect API's, including discovery, 
-client registration, authorization, token, userinfo, and end_session. 
 
 ## OpenID Connect Client
 
@@ -615,3 +557,62 @@ Configuration --> Custom Scripts --> Custom Client Registration.
 ![custom-client](../img/openid/custom-client.png)
 
 The script is [available here](./sample-client-registration-script.py)
+
+## OpenID Connect Client Code
+Although you can use generic OAuth 2.0 client libraries to call OpenID Connect endpoints, you would have to implement code to take advantage of some of OpenID Connect's features. For example, there is no id_token in OAuth 2.0, so you won't find any code for id_token validation in an OAuth 2.0 library. A good OpenID Connect client will do much of the heavy lifting for you. 
+
+### JavaScript Client
+A JavaScript client is one of the easiest ways to use OpenID Connect, although it's not the most secure. The client we recommend was forked from a sample application written to demonstrate how easy it is to use Connect. Gluu forked the code, and has enhanced it since the time of its original publishing. The project can be found on [Github](https://github.com/GluuFederation/openid-implicit-client).
+
+It's not a fancy app--it sends the person to the authorization endpoint to be authenticated, and then prints the claims tha are returned in the id_token. Currently the client does not handle dynamic client registration. 
+
+You'll have to add the client manually to the Gluu Server via the GUI. When completing the `add client` form, you can use the following configuration:
+
+```
+Client Name: Implicit Test Client
+response_type: token id_token
+Application Type: Web
+Pre-Authorization: Enabled
+Subject Type: public
+Scopes: openid, profile, email
+Response Types: token id_token
+Grant Types: implicit
+```
+
+Once you have registered the client in the Gluu Server, all you need to do is update the `client_id`, `redirect_uri`, and `providerInfo` values in the login page html. Assuming you've checked out the project into a web accessible folder, then navigate to the page and test! 
+
+### Server-Side libraries
+Many applications are "server-side", meaning the web page displays content but most of the dynamic business logic resides on the web server. The OpenID Foundation maintains a list of client libraries on [their website](http://openid.net/developers/libraries). However, our experience has been that the quality of these libraries varies widely. Some are not well documented, other are not updated frequently, and some do not implement essential security features available in OpenID Connect. In addition, if a wide array of client libraries are used it becomes difficult to monitor and patch security vulnerabilities. For this reason, we recommend that you use our OpenID Connect middleware software called [oxd](http://oxd.gluu.org).  
+
+oxd is not open source, but it is very reasonably priced at $0.33 per day per server--or ~$10/month. The code is available on [GitHub](https://github.com/gluufederation/oxd), and there are free open source oxd libraries available for PHP, Java, Python, C#, Node, Ruby, Perl and Go. There are also plugins available for several popular open source applications.
+
+[Watch the oxd demo](http://gluu.co/oxd-demo).
+
+[Get an oxd license for free](http://oxd.gluu.org)
+
+### Apache HTTPD module
+A popular approach to protecting web applications is to use a web server filter to intercept the request, and make sure the person using that connection is authenticated and authorized. The web server with the filter may directly serve the application, or may proxy to a backend service. Leveraging the web server is a well established pattern, used by older access management platforms like CA Siteminder and Oracle Access Manager. 
+
+One of the advantages of the web server filter approach is that the application developer does not need to know that much about the security protocols--if the request makes it through to the application, the person has been authenticated and the request is authorized. Another advantage is that the application security is administered by the system administrators, not by developers. For example, it may be easier to manage and audit apache configuration than to read a bunch of code. 
+
+One of the best OpenID Connect relying party implementations was written by Hans Zandbelt, called [mod_auth_openidc](https://github/com/pingidentity/mod_auth_openidc). It is an authentication and authorization module for the Apache 2.x HTTP server that authenticates users against an OpenID Connect Provider (OP). The software can be found on GitHub and is included in the package management system for several Linux distributions. There are binary packages available, and if you are good at compiling C code, you can build it yourself from the source. 
+
+Note: if you are an Nginx fan, there is a similar [Lua implementation](https://github.com/pingidentity/lua-resty-openidc) to make NGINX operate as an OpenID Connect RP or OAuth 2.0 RS. 
+
+### AppAuth for Mobile Applications
+One of the most compelling reasons to use Connect is to authenticate people from a mobile application. The IETF draft ["OAuth 2.0 for Native Apps"](https://tools.ietf.org/html/draft-ietf-oauth-native-apps-06) provides an overview of an improved design for mobile security. In additio to the security features of OpenID Connect, this draft suggests the use of a PKCE and custom URI schemes (i.e. an application can register a URI such as myapp:// instead of https://).
+
+In 2016, Google released and then donated code to the OpenID Foundation called AppAuth for [Android](https://github.com/openid/AppAuth-android) and [iOS](https://github.com/openid/AppAuth-iOS). The AppAuth projects also include sample applications. Simulataneously, Google announced that it was deprecating the use of WebViews--a strategy used by mobile app developers which is vulnerable to malicious application code. Not only does AppAuth provide secure authentication, it enables SSO across the system browser and mobile applications. It accomplishes this by leveraging new operating system features that enable the system browser to be called by an application in an opaque view that does not enable an app developer to steal a person's credentials, or other applications to steal codes or tokens. Using this approach, mobile app developers can use the authorization code or hypbrid flow (as described earlier). 
+
+The Gluu Server is the only free open source OpenID Connect Provider that currently supports AppAuth. 
+
+## oxAuth RP
+
+The Gluu Server ships with an optional OpenID Connect relying 
+party web application, which is handy for testing.  
+It's called oxauth-rp. During Gluu Server setup, you'll be asked if you 
+want to install it--which you should on a development environment. 
+It will be deployed on `https://<hostname>/oxauth-rp`. Using this tool 
+you can exercise all of the OpenID Connect API's, including discovery, 
+client registration, authorization, token, userinfo, and end_session. 
+
