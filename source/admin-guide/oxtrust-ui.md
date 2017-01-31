@@ -1,6 +1,6 @@
 # oxTrust Administrative Graphical User Interface (GUI)
 The administration interface (oxTrust) is accessible by navigating to 
-`https://hostname` (the one you provided during setup.) When you 
+`https://hostname` (the one you provided during setup). When you 
 first complete an installation, the default username is `admin` and 
 the password is the same as the `LDAP superuser` password.
 
