@@ -345,7 +345,9 @@ The key for logout is to understand the limitations of logout, and to
 test the use cases that are important to you, so you will not be
 surprised by the behavior when you put your application into production.
 
-## Manually Register a Client
+## OpenID Connect Clients
+
+### Manually Register a Client
 Gluu Server Administrators can click on the `Add Client` button to register new clients. It is possible to dynamically register any client by calling the dynamic registration endpoint, but this section focuses on the manual registration of the client. The following screen appears when the `Add Client` button is clicked.
 
 ![add-client](../img/openid/add-client.png)
@@ -486,6 +488,22 @@ Gluu Server Administrators can click on the `Add Client` button to register new 
 
 * _Add Logout URI:_ Use this option to add the logout URI.
 
+### Custom Client Registration
+
+Using interception scripts you can customize client registration
+behavior. For example, by default oxAuth allows new clients to access to
+default scopes only. With a custom client registration interception
+script it is possible to allow access to more scopes. For instance, we
+can use `redirect_uri` to determine if we need to allow access to
+additional scopes or not.
+
+To access the interface for custom scripts in oxTrust, navigate to
+Configuration --> Custom Scripts --> Custom Client Registration.
+
+![custom-client](../img/openid/custom-client.png)
+
+The script is [available here](./sample-client-registration-script.py)
+
 ### Multi-Factor Authentication for Clients
 The `acr_values` parameter is used to specify the use of specific multi-factor authentication for each client. If a scenario is presented where different clients use different authentication mechanism, then the `acr_value` parameter is used to specify the choice. Out of the box, the Gluu Server supports U2F, DUO, Basic, oxPush/SuperGluu, Google+ and internal LDAP authentication. While registering a new client, put the mode in `Add Default ACR value` to chosen mechanism. The authentication mechanism must be enabled in the `Custom Scripts` section as well.
 
@@ -515,22 +533,6 @@ _Available Signature Algorithms:_ none, HS256, HS384, HS512, RS256, RS384, RS512
 _Encryption, Key Encryption Algorithms:_ RSA1_5, RSA-OAEP, A128KW, A256KW.
 
 _Block Encryption Algorithms:_ A128CBC+HS256, A256CBC+HS612, A128GCM, A256GCM,
-
-### Custom Client Registration
-
-Using interception scripts you can customize client registration
-behavior. For example, by default oxAuth allows new clients to access to
-default scopes only. With a custom client registration interception
-script it is possible to allow access to more scopes. For instance, we
-can use `redirect_uri` to determine if we need to allow access to
-additional scopes or not.
-
-To access the interface for custom scripts in oxTrust, navigate to
-Configuration --> Custom Scripts --> Custom Client Registration.
-
-![custom-client](../img/openid/custom-client.png)
-
-The script is [available here](./sample-client-registration-script.py)
 
 ## Client Software to Secure Applications
 Although you can use generic OAuth 2.0 client libraries to call OpenID Connect endpoints, you would have to implement code to take advantage of some of OpenID Connect's features. For example, there is no id_token in OAuth 2.0, so you won't find any code for id_token validation in an OAuth 2.0 library. A good OpenID Connect client will do much of the heavy lifting for you. 
