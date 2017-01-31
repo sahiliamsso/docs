@@ -8,7 +8,7 @@ the password is the same as the `LDAP superuser` password.
 After successful authentication the administrator is taken to the 
 Dashboard. Some basic information about the VM/server is displayed as 
 well as the server version, free memory, and disk space. In the top 
-right there is a user icon which you can log out of oxTrust. 
+right there is a user icon which can be used to log out of oxTrust. 
 The left hand menu is used to navigate the admin interface.
 
 ![welcome-page.png](../img/oxtrust/welcome-page.png "Welcome to Gluu Server")
@@ -47,13 +47,13 @@ There are three sections in the organization configuration page:
 
 ![smtp-config](../img/oxtrust/smtp-config.png "SMTP Configuration")
 
-The Gluu Server needs a mail server in order to send notifications. The fields on this parge are self-explanatory and simple such as hostname, user, password, ssl-requirement, authentication requirement, sending name and address. All fields on this page are manadory and the configuration can be tested before confirmation.
+The Gluu Server needs a mail server in order to send notifications. The fields on this page are self-explanatory, such as hostname, user, password, ssl-requirement, authentication requirement, sending name and address. All fields are manadory and the configuration can be tested before confirmation.
      
 #### oxTrust Settings  
 
 ![oxtrust-settings](../img/oxtrust/oxtrust-settings.png "OxTrust Settings")
 
-From the oxTrust Settings page the administrator can find the oxTrust build date and number, and change the organization name, logo, and favicon settings. This page also contains the name of the Gluu Server administrator group. Users added to this group will have administrator access to the Gluu Server.
+From the oxTrust Settings page the administrator can find the oxTrust build date and number, and change the organization name, logo, and favicon. This page also contains the name of the Gluu Server administrator group. Users added to this group will have administrator access to the Gluu Server.
 
 ### JSON Configuration      
 The configuration files are accessible from the administrator interface (oxTrust). 
