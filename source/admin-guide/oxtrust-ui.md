@@ -7,7 +7,7 @@ first complete an installation, the default username is `admin` and
 the password is the same as the `LDAP superuser` password. 
 
 !!! Note
-     This section of the docs will cover various concepts and topics associated with managing your federation service via the interface, but will often times link to dedicated sections of the docs where more complicated topics are covered in detail.
+     This section of the docs will cover various concepts and topics associated with managing your federation service via the interface, but will often times link to dedicated sections of the docs where more complicated operations are covered in detail.
 
 ## Welcome Page
 After successful authentication the administrator is taken to the 
