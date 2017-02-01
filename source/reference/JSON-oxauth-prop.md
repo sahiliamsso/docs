@@ -1,8 +1,6 @@
-# Configuration
-## oxAuth Configurations
-This page explains the JSON Configuration under the Configuration Tab in the configuration Menu.
-
-![image](../img/reference/config-json_menu.png)
+# oxAuth Configurations
+## Overview
+This page explains the JSON Configuration which can be accessed by navigating to `Configuration` > `JSON Configuration`. 
 
 ## oxAuth.properties
 ![image](../img/reference/config-json_oxauthproperties.png)
