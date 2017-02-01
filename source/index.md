@@ -1,5 +1,5 @@
 # Gluu Server Community Edition (CE) Docs
-### Introduction
+## Introduction
 The Gluu Server is a free open source identity and access management 
 (IAM) platform. The most common use case for the Gluu Server is Single 
 Sign-On (SSO). Other common use cases include mobile authentication, 
@@ -23,7 +23,7 @@ Consolidation saves money, and one-off integrations should be avoided.
 Our goal was to support the most widely adopted older protocols, and the 
 most promising new protocols. 
 
-Currently the Gluu Server supports the following open web standards for authentication, authorization, federation, and identity management:
+The Gluu Server supports the following open web standards for authentication, authorization, federated identity, and identity management:
 
 - OAuth 2.0    
 - SAML 2.0   
@@ -45,7 +45,7 @@ If you're a Github pro, submit a pull request. If not, just open an issue
 on any typos, bugs, or improvements you'd like to see. We need your
 help... even if you're not a coder, you can contribute! 
 
-###  oxd Client Software
+##  oxd Client Software
 Gluu offers commercial client software, called [oxd](https://oxd.gluu.org), to make securing applications easier. Your application can use any client software that implements the open standards the Gluu Server supports. But you may want to consider using oxd for the following reasons:
  
 (1). oxd is super-easy and fun to use; 
@@ -65,16 +65,7 @@ Java, Node, Ruby, C#, Perl and Go;
 SugarCRM, SuiteCRM, Roundcube, Shopify, Kong and many more are being added! Next on the list are MatterMost, RocketChat, NextCloud, and 
 Liferay.
 
-###  Super Gluu multi-factor authentication
-Gluu offers a free two-factor authentication mobile application for iOS and Android called [Super Gluu](https://super.gluu.org). Super Gluu can be used to achieve multi-factor authentication to applications that send users to a Gluu Server for login. The Gluu Server includes support for Super Gluu out-of-the-box. 
-
-Learn [how to enable](./authn-guide/supergluu.md) Super Gluu in the Gluu Server.
-
-Learn [how to use](https://super.gluu.org/docs) the Super Gluu mobile application.
-
-In addition to Super Gluu, the Gluu Server can be configured to support any third-party authentication mechanism that either supports the FIDO U2F authentication standard, or exposes a web API that can be called over the Internet. Learn more in the [user authentication introduction](https://gluu.org/docs-3/admin-guide/user-authentications/). 
-
-### Support
+## Support
 
 We are committed to free community support! You can browse or register and post 
 questions on our [support site](https://support.gluu.org). All community
@@ -85,7 +76,7 @@ Private support, guaranteed response times, and consultative
 support are available to organizations who purchase a support contract. For
 more information, see [our website](gluu.org/pricing).
 
-### License
+## License
 
 All of Gluu's open source software is published under an
 [MIT License](http://opensource.org/licenses/MIT). The licenses 
