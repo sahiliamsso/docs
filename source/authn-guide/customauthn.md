@@ -1,4 +1,6 @@
-#Custom Script Authenticaion:
+# Custom Authentication Script:
+
+## Overview
 
 Gluu offers the feasibility to use tailored scripts with 
 3rd party authentication providers like Twilio SMS,RESTCOMM,
