@@ -1,4 +1,4 @@
-# Custom Authentication Script:
+# Custom Authentication Script Tutorial
 
 ## Overview
 
