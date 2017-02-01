@@ -2,28 +2,14 @@
 
 ## Overview
 
-Gluu offers the feasibility to use tailored scripts with 
-3rd party authentication providers like Twilio SMS,RESTCOMM,
-Plivo,SMSGlobal,INFOBIP, etc. Where the script developed internally 
-using 3rd party API's to get a text or call to authenticate you 
-through to the system. Which provides high level of security to the 
-system.
+Custom authentication scripts provide the ability to implement tailored authentication logic and methods that meet your organizations unique authentication requirements. This tutorial explains how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication. 
 
-This section is to explain how to configure custom script based 
-authentication in Gluu. Twilio SMS is used as an example.
+At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, 
+you can review the completed Twilio custom authentication script [here](./twilio2FA.py). 
 
 ## Twilio SMS Authentication - OTP using custom script
 
 ### Writing a Custom Authentication Script
-
-In this document we walk through the steps of writing a script to i
-mplement OTP authentication using [Twilio](http://twilio.com) to send 
-an SMS code for a two-step out-of-band authentication mechanism.
-
-At the end of this tutorial you should have a better understanding of 
-how to write your own custom scripts. For reference, 
-you can review the completed Twilio custom authentication script 
-[here](./twilio2FA.py). 
 
 Fields in Custom Script:
 
@@ -50,7 +36,7 @@ oxTrust and the file input box will be displayed:
 
 ![image](/img/admin-guide/multi-factor/script_upload_box.png)
 
-The 'LDAP' option in the Script Location Type can be used to store the 
+The `LDAP` option in the `Script Location Type` can be used to store the 
 script in the LDAP tree once the development is complete. Remember that 
 selecting the `LDAP` method requires the script to be copied in the input 
 box that appears upon LDAP selection:
