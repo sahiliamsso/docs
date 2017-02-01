@@ -375,17 +375,6 @@
           
   <li class="md-nav__item">
     
-      <a href="../../admin-guide/logs/" title="Log Management" class="md-nav__link">
-        Log Management
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
       <a href="../../admin-guide/user-group/" title="User Management" class="md-nav__link">
         User Management
       </a>
@@ -408,13 +397,13 @@
           
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
     
-    <label class="md-nav__link" for="nav-4-6">
+    <label class="md-nav__link" for="nav-4-5">
       User Authentication Guide
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-4-6">
+      <label class="md-nav__title" for="nav-4-5">
         User Authentication Guide
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -927,8 +916,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../../operation/backup/" title="Backup Gluu Server CE" class="md-nav__link">
-        Backup Gluu Server CE
+      <a href="../../operation/backup/" title="Backups" class="md-nav__link">
+        Backups
       </a>
     
   </li>
@@ -938,8 +927,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../../operation/find-gluu-version/" title="Know your Gluu Version" class="md-nav__link">
-        Know your Gluu Version
+      <a href="../../operation/find-gluu-version/" title="Find your Gluu Version" class="md-nav__link">
+        Find your Gluu Version
       </a>
     
   </li>
@@ -949,8 +938,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../../operation/ports/" title="Ports used in Gluu" class="md-nav__link">
-        Ports used in Gluu
+      <a href="../../operation/ports/" title="Ports" class="md-nav__link">
+        Ports
       </a>
     
   </li>
@@ -960,8 +949,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../../operation/logout/" title="Logout from Gluu Server" class="md-nav__link">
-        Logout from Gluu Server
+      <a href="../../operation/logout/" title="Logout" class="md-nav__link">
+        Logout
       </a>
     
   </li>
@@ -973,6 +962,17 @@
     
       <a href="../../admin-guide/faq/" title="FAQ & Troubleshooting" class="md-nav__link">
         FAQ & Troubleshooting
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../admin-guide/logs/" title="Log Management" class="md-nav__link">
+        Log Management
       </a>
     
   </li>
@@ -1083,172 +1083,415 @@
                 <h1 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h1>
 <h2 id="oxtrust-configuration">oxTrust Configuration<a class="headerlink" href="#oxtrust-configuration" title="Permanent link">#</a></h2>
 <p>This page explains the JSON Configuration under the Configuration Tab in the Configuration menu.</p>
-<p><img alt="image" src="../../img/reference/config-json_menu.png" /></p>
 <h2 id="oxtrustproperties">oxtrust.properties<a class="headerlink" href="#oxtrustproperties" title="Permanent link">#</a></h2>
 <p><img alt="image" src="../../img/reference/config-json_oxtrustproperties.png" /></p>
 <p>The following fields are available for edit in the menu.</p>
-<ul>
-<li><em>idpBindDn:</em> the admin user of the ldap server</li>
-<li><em>baseDN:</em> the base doaim name of oxtrust. The default is <code>o=gluu</code></li>
-<li><em>orgIname:</em> </li>
-<li><em>orgSupportEmail:</em> the support email address of the Gluu Server installation</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxauthproperties0.png" /></p>
-<ul>
-<li><em>applianceInum:</em> the <a href="https://en.wikipedia.org/wiki/INum_Initiative" title="INUM definition in wikipedia">INUM</a> of the appliance</li>
-<li><em>applianceUrl:</em> the <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> of the appliance</li>
-<li><em>baseEndpoint:</em> </li>
-<li><em>schemaAddObjectClassWithAttributeTypesDefinition:</em> the schema to add various attribute types</li>
-<li><em>schemaAddObjectClassWithoutAttributeTypesDefinition:</em> the schema to add various attribute types</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Fields/Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>idpBindDn</td>
+<td>The admin user of the ldap server</td>
+</tr>
+<tr>
+<td>baseDN</td>
+<td>The base doaim name of oxtrust. The default is <code>o=gluu</code></td>
+</tr>
+<tr>
+<td>orgIname</td>
+<td>This can be left blank</td>
+</tr>
+<tr>
+<td>orgSupportEmail</td>
+<td>The support email address of the Gluu Server installation</td>
+</tr>
+<tr>
+<td>applianceInum</td>
+<td>The <a href="https://en.wikipedia.org/wiki/INum_Initiative" title="INUM definition in wikipedia">INUM</a> of the appliance</td>
+</tr>
+<tr>
+<td>applianceUrl</td>
+<td>The <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> of the appliance</td>
+</tr>
+<tr>
+<td>baseEndpoint</td>
+<td></td>
+</tr>
+<tr>
+<td>schemaAddObjectClassWithAttributeTypesDefinition</td>
+<td>The schema to add various attribute types</td>
+</tr>
+<tr>
+<td>schemaAddObjectClassWithoutAttributeTypesDefinition</td>
+<td>The schema to add various attribute types</td>
+</tr>
+</tbody>
+</table>
 <h2 id="personobjectclasstypes">personObjectClassTypes<a class="headerlink" href="#personobjectclasstypes" title="Permanent link">#</a></h2>
 <p>This class holds the relation between the person entry and it's relative object class.</p>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties1.png" /></p>
-<ul>
-<li><em>item 1:</em> inetOrgPerson</li>
-<li><em>item 2:</em> gluuPerson</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties1-1.png" /></p>
-<ul>
-<li><em>personCustomObjectClass:</em></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Fields/Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>item 1</td>
+<td>inetOrgPerson</td>
+</tr>
+<tr>
+<td>item 2</td>
+<td>gluuPerson</td>
+</tr>
+<tr>
+<td>personCustomObjectClass</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="personobjectclassdisplaynames">personObjectClassDisplayNames<a class="headerlink" href="#personobjectclassdisplaynames" title="Permanent link">#</a></h2>
 <p>This class holds the relation betwee the display name of the person and the relative object class.</p>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties2.png" /></p>
-<ul>
-<li><em>item 1:</em> inetOrgPerson</li>
-<li><em>item 2:</em> gluuPerson</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties2-1.png" /></p>
-<ul>
-<li><em>schemaAddAttributeDefenition:</em> </li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Fields/Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>item 1</td>
+<td>inetOrgPerson</td>
+</tr>
+<tr>
+<td>item 2</td>
+<td>gluuPerson</td>
+</tr>
+<tr>
+<td>schemaAddAttributeDefenition</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="contactobjectclassdisplaynames">contactObjectClassDisplayNames<a class="headerlink" href="#contactobjectclassdisplaynames" title="Permanent link">#</a></h2>
 <p>Items can be added under this class by clicking on the <code>+ item</code> button.</p>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties3.png" /></p>
-<ul>
-<li><em>photoRepositoryRootDir:</em> the path to the root directory of photographs</li>
-<li><em>photoRepositoryThumbWidth:</em> the thumb with of a photo</li>
-<li><em>photoRepositoryThumbheight:</em> sets the thumb height of a photo</li>
-<li><em>photoRepositoryCountLevels:</em> the count level per photo repository</li>
-<li><em>photoRepositoryCountFoldersPerLevel:</em> he number of folders per level</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties3-1.png" /></p>
-<ul>
-<li><em>authMode:</em> set this tag to <code>basic</code> to use basic authentication or leave it blank to use oxAuth</li>
-<li><em>ldifStore:</em> the path to the <a href="https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format" title="LDAP Data Interchange Format">LDIF</a> store</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties3-2.png" /></p>
-<ul>
-<li><em>shibboleth2IdpRootDir:</em> the root directory for the shibboleth plugin</li>
-<li><em>shibboleth2SpConfDir:</em> the configuration directory for the shibboleth plugin</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties3-3.png" /></p>
-<ul>
-<li><em>pokenApplicationSecret:</em></li>
-<li><em>updateAplicanceStatus:</em>  the update appliance state for the site. Use <code>true</code> to allow, and <code>false</code> to forbid (default value)</li>
-<li><em>svnConfigurationStoreRoot:</em> he root of the <a href="https://en.wikipedia.org/wiki/Apache_Subversion" title="Apache Subversion">SVN</a> configuration store</li>
-<li><em>svnConfigurationStorePassword:</em> the password of the <a href="https://en.wikipedia.org/wiki/Apache_Subversion" title="Apache Subversion">SVN</a> configuration store</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties3-4.png" /></p>
-<ul>
-<li><em>keystorePath:</em> the path to the keystore</li>
-<li><em>keystorePassword:</em> the password to the keystore</li>
-<li><em>allowPersonModification:</em> enables or disables the allowance to modify a person entry. Use <code>true</code> to allow (default value), and  <code>false</code> otherwise</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties3-5.png" /></p>
-<ul>
-<li><em>idpUrl:</em> the <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">uri</a> of the <a href="https://en.wikipedia.org/wiki/OpenID" title="OpenID Connect">OpenID</a> provider that is in use</li>
-<li><em>velocityLog:</em> the velocity log filename with path</li>
-<li>_spMetadataPath:_the path to the Gluu Server metadata</li>
-<li><em>logoLocation:</em> the directory name for the images and logos that are used</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties3-6.png" /></p>
-<ul>
-<li><em>idpSecurityKey:</em> the security key of the <a href="https://en.wikipedia.org/wiki/OpenID" title="OpenID Connect">OpenID</a> provider</li>
-<li><em>idpSecurityKeyPassowrd:</em> the security password of the <a href="https://en.wikipedia.org/wiki/OpenID" title="OpenID Connect">OpenID</a> provider</li>
-<li><em>idpSecurityCert:</em> the security certificate of the machine</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Fields/Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>photoRepositoryRootDir</td>
+<td>Path to the root directory of photographs</td>
+</tr>
+<tr>
+<td>photoRepositoryThumbWidth</td>
+<td>thumb with a photo</td>
+</tr>
+<tr>
+<td>photoRepositoryThumbheight</td>
+<td>sets the thumb height of a photo</td>
+</tr>
+<tr>
+<td>photoRepositoryCountLevels</td>
+<td>count level per photo repository</td>
+</tr>
+<tr>
+<td>photoRepositoryCountFoldersPerLevel</td>
+<td>number of folders per level</td>
+</tr>
+<tr>
+<td>authMode</td>
+<td>set this tag to <code>basic</code> to use basic authentication or leave it blank to use oxAuth</td>
+</tr>
+<tr>
+<td>ldifStore</td>
+<td>Path to the <a href="https://en.wikipedia.org/wiki/LDAP_Data_Interchange_Format" title="LDAP Data Interchange Format">LDIF</a> store</td>
+</tr>
+<tr>
+<td>shibboleth2IdpRootDir</td>
+<td>root directory for the shibboleth plugin</td>
+</tr>
+<tr>
+<td>shibboleth2SpConfDir</td>
+<td>Configuration directory for the shibboleth plugin</td>
+</tr>
+<tr>
+<td>pokenApplicationSecret</td>
+<td></td>
+</tr>
+<tr>
+<td>updateAplicanceStatus</td>
+<td>update appliance state for the site. Use <code>true</code> to allow, and <code>false</code> to forbid (default value)</td>
+</tr>
+<tr>
+<td>svnConfigurationStoreRoot</td>
+<td>Root of the <a href="https://en.wikipedia.org/wiki/Apache_Subversion" title="Apache Subversion">SVN</a> configuration store</td>
+</tr>
+<tr>
+<td>svnConfigurationStorePassword</td>
+<td>Password of the <a href="https://en.wikipedia.org/wiki/Apache_Subversion" title="Apache Subversion">SVN</a> configuration store</td>
+</tr>
+<tr>
+<td>keystorePath</td>
+<td>Path to the keystore</td>
+</tr>
+<tr>
+<td>keystorePassword</td>
+<td>Password to the keystore</td>
+</tr>
+<tr>
+<td>allowPersonModification</td>
+<td>Enables or disables the allowance to modify a person entry. Use <code>true</code> to allow (default value), and  <code>false</code> otherwise</td>
+</tr>
+<tr>
+<td>idpUrl</td>
+<td><a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">uri</a> of the <a href="https://en.wikipedia.org/wiki/OpenID" title="OpenID Connect">OpenID</a> provider that is in use</td>
+</tr>
+<tr>
+<td>velocityLog</td>
+<td>Velocity log filename with path</td>
+</tr>
+<tr>
+<td>spMetadataPath</td>
+<td>Path to the Gluu Server metadata</td>
+</tr>
+<tr>
+<td>logoLocation</td>
+<td>Directory name for the images and logos that are used</td>
+</tr>
+<tr>
+<td>idpSecurityKey</td>
+<td>Security key of the <a href="https://en.wikipedia.org/wiki/OpenID" title="OpenID Connect">OpenID</a> provider</td>
+</tr>
+<tr>
+<td>idpSecurityKeyPassowrd</td>
+<td>Security password of the <a href="https://en.wikipedia.org/wiki/OpenID" title="OpenID Connect">OpenID</a> provider</td>
+</tr>
+<tr>
+<td>idpSecurityCert</td>
+<td>Security certificate of the machine</td>
+</tr>
+</tbody>
+</table>
 <h2 id="gluuspattributes">gluuSpAttributes<a class="headerlink" href="#gluuspattributes" title="Permanent link">#</a></h2>
 <p>Items can be added here by clicking on the <code>+ item</code> button.</p>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties4.png" /></p>
-<ul>
-<li><em>configGeneration:</em> this entry controls the automatic generation of the configuration files. Use <code>enable</code> to allow and <code>disable</code> otherwise</li>
-<li><em>idpLdapProtocol:</em> the protocol used by the [LDAP][ldap] server</li>
-<li><em>idpLdapServer:</em> hostname of the [LDAP][ldap] server with port</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties4-1.png" /></p>
-<ul>
-<li><em>orgInum:</em> the <a href="https://en.wikipedia.org/wiki/INum_Initiative" title="INUM definition in wikipedia">INUM</a> of the organization</li>
-<li><em>idpBindDn:</em> the domain name of the <a href="https://en.wikipedia.org/wiki/OpenID" title="OpenID Connect">OpenID</a> provider</li>
-<li><em>idpBindPassowrd:</em> the password for the <a href="https://en.wikipedia.org/wiki/OpenID" title="OpenID Connect">OpenID</a> provider</li>
-<li><em>idpUserFields:</em> </li>
-<li><em>gluuSpCert:</em> the certificate name and location of the Gluu Server</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties4-2.png" /></p>
-<ul>
-<li><em>mysqlUrl:</em> the MySql connector as <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a></li>
-<li><em>mysqlUser:</em> the username for the MySql server</li>
-<li><em>mysqlPassword:</em> passowrd for the MySql server</li>
-<li><em>shibboleth2FederationRootDir:</em> the root directory for the <a href="https://en.wikipedia.org/wiki/Shibboleth_%28Internet2%29" title="Shibboleth">Shobboleth</a> federation plugin</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties4-3.png" /></p>
-<ul>
-<li><em>cacheRefreshEnabled:</em> the value of the cache refresh mechanism. Use <code>true</code> to enable and <code>false</code> otherwise</li>
-<li><em>cacheRefreshIntervalMinutes:</em> the time in minutes counting down to next cache-refresh event</li>
-<li><em>caCertsLocation:</em> the keystore to use for downloaded <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security" title="Secure Sockets Layer">SSL</a> certificates</li>
-<li><em>caCertsPassphrase:</em> the password for the caCerts keystore</li>
-<li><em>tempCertDir:</em> the temporary location for certificates while certificate update procedure</li>
-<li><em>certDir:</em> the locaiton of certificates used in configuration files</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties4-4.png" /></p>
-<ul>
-<li><em>servicesRestartTrigger:</em> the location of the file which will restart the applicance server if deleted</li>
-<li><em>persistSVN:</em> the state of persistence in <a href="https://en.wikipedia.org/wiki/Apache_Subversion" title="Apache Subversion">SVN</a>. Use <code>true</code> to enable or <code>false</code> otherwise</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties4-5.png" /></p>
-<ul>
-<li><em>oxAuthAuthorizeUrl:</em> the authorization <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth</li>
-<li><em>oxAuthTokenUrl:</em> the token <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth</li>
-<li><em>oxAuthValidateTokenUrl:</em> the <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth token validation</li>
-<li><em>oxAuthEndSessionUrl:</em> the <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth session termination</li>
-<li><em>oxAuthLogoutUrl:</em> the <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for logging out of oxAuth</li>
-<li><em>oxAuthTokenValidationUrl:</em> the <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth token validation</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties4-6.png" /></p>
-<ul>
-<li><em>oxAuthUserInfo:</em> the <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth user information</li>
-<li><em>oxAuthSectorIdentifierUrl:</em> the <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth sector identifier</li>
-<li>_oxAuthClientId:_the identification number for oxAuth client</li>
-<li><em>oxAuthClientPassowrd:</em> the password for oxAuth client</li>
-<li><em>oxAuthClientScope:</em> the scope of the oxAuth client</li>
-<li><em>loginRedirectUrl:</em> the redirect <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth</li>
-<li><em>logoutRedirectUrl:</em> the <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth </li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Fields/Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>configGeneration</td>
+<td>This entry controls the automatic generation of the configuration files. Use <code>enable</code> to allow and <code>disable</code> otherwise</td>
+</tr>
+<tr>
+<td>idpLdapProtocol</td>
+<td>Protocol used by the [LDAP][ldap] server</td>
+</tr>
+<tr>
+<td>idpLdapServer</td>
+<td>Hostname of the [LDAP][ldap] server with port</td>
+</tr>
+<tr>
+<td>orgInum</td>
+<td><a href="https://en.wikipedia.org/wiki/INum_Initiative" title="INUM definition in wikipedia">INUM</a> of the organization</td>
+</tr>
+<tr>
+<td>idpBindDn</td>
+<td>Domain name of the <a href="https://en.wikipedia.org/wiki/OpenID" title="OpenID Connect">OpenID</a> provider</td>
+</tr>
+<tr>
+<td>idpBindPassowrd</td>
+<td>Password for the <a href="https://en.wikipedia.org/wiki/OpenID" title="OpenID Connect">OpenID</a> provider</td>
+</tr>
+<tr>
+<td>idpUserFields</td>
+<td></td>
+</tr>
+<tr>
+<td>gluuSpCert</td>
+<td>Certificate name and location of the Gluu Server</td>
+</tr>
+<tr>
+<td>mysqlUrl</td>
+<td>MySql connector as <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a></td>
+</tr>
+<tr>
+<td>mysqlUser</td>
+<td>Username for the MySql server</td>
+</tr>
+<tr>
+<td>mysqlPassword</td>
+<td>Passowrd for the MySql server</td>
+</tr>
+<tr>
+<td>shibboleth2FederationRootDir</td>
+<td>Root directory for the <a href="https://en.wikipedia.org/wiki/Shibboleth_%28Internet2%29" title="Shibboleth">Shobboleth</a> federation plugin</td>
+</tr>
+<tr>
+<td>cacheRefreshEnabled</td>
+<td>Value of the cache refresh mechanism. Use <code>true</code> to enable and <code>false</code> otherwise</td>
+</tr>
+<tr>
+<td>cacheRefreshIntervalMinutes</td>
+<td>Time in minutes counting down to next cache-refresh event</td>
+</tr>
+<tr>
+<td>caCertsLocation</td>
+<td>Keystore to use for downloaded <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security" title="Secure Sockets Layer">SSL</a> certificates</td>
+</tr>
+<tr>
+<td>caCertsPassphrase</td>
+<td>Password for the caCerts keystore</td>
+</tr>
+<tr>
+<td>tempCertDir</td>
+<td>Temporary location for certificates while certificate update procedure</td>
+</tr>
+<tr>
+<td>certDir</td>
+<td>Locaiton of certificates used in configuration files</td>
+</tr>
+<tr>
+<td>servicesRestartTrigger</td>
+<td>Location of the file which will restart the applicance server if deleted</td>
+</tr>
+<tr>
+<td>persistSVN</td>
+<td>State of persistence in <a href="https://en.wikipedia.org/wiki/Apache_Subversion" title="Apache Subversion">SVN</a>. Use <code>true</code> to enable or <code>false</code> otherwise</td>
+</tr>
+<tr>
+<td>oxAuthAuthorizeUrl</td>
+<td>Authorization <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth</td>
+</tr>
+<tr>
+<td>oxAuthTokenUrl</td>
+<td>Token <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth</td>
+</tr>
+<tr>
+<td>oxAuthValidateTokenUrl</td>
+<td><a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth token validation</td>
+</tr>
+<tr>
+<td>oxAuthEndSessionUrl</td>
+<td><a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth session termination</td>
+</tr>
+<tr>
+<td>oxAuthLogoutUrl</td>
+<td><a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for logging out of oxAuth</td>
+</tr>
+<tr>
+<td>oxAuthTokenValidationUrl</td>
+<td><a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth token validation</td>
+</tr>
+<tr>
+<td>oxAuthUserInfo</td>
+<td><a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth user information</td>
+</tr>
+<tr>
+<td>oxAuthSectorIdentifierUrl</td>
+<td><a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth sector identifier</td>
+</tr>
+<tr>
+<td>oxAuthClientId</td>
+<td>Identification number for oxAuth client</td>
+</tr>
+<tr>
+<td>oxAuthClientPassowrd</td>
+<td>Password for oxAuth client</td>
+</tr>
+<tr>
+<td>oxAuthClientScope</td>
+<td>Scope of the oxAuth client</td>
+</tr>
+<tr>
+<td>loginRedirectUrl</td>
+<td>Redirect <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth</td>
+</tr>
+<tr>
+<td>logoutRedirectUrl</td>
+<td><a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> for oxAuth</td>
+</tr>
+</tbody>
+</table>
 <h2 id="clusteredinums">clusteredInums<a class="headerlink" href="#clusteredinums" title="Permanent link">#</a></h2>
 <p>Items can be added here by clicking on the <code>+ item</code> button.</p>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties5.png" /></p>
-<ul>
-<li><em>clientAssociationAttribute:</em> the attribute which identifies the <a href="https://en.wikipedia.org/wiki/OpenID" title="OpenID Connect">OpenID</a> client</li>
-<li><em>oxAuthIssuers:</em> the <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> of the issuer authorization server</li>
-<li><em>ignoreValidation:</em> the control to check/ignore token validation. Use <code>true</code> to validate or <code>false</code> otherwise</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties5-1.png" /></p>
-<ul>
-<li><em>umaIssuer:</em> the <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> of the issuer authorization server</li>
-<li><em>umaClientId:</em> the identification of the <a href="https://en.wikipedia.org/wiki/User-Managed_Access" title="User-Managed Access">UMA</a> client</li>
-<li><em>umaClientKeyId:</em> </li>
-<li><em>umaResourceId:</em></li>
-<li><em>umaScope:</em> the scopes available for this resource</li>
-</ul>
-<p><img alt="image" src="../../img/reference/config-json_oxtrustproperties5-2.png" /></p>
-<ul>
-<li><em>recaptchaSiteKey:</em></li>
-<li><em>recaptchaSecretKey:</em></li>
-<li><em>cssLocation:</em> the path to the CSS files</li>
-<li><em>jsLocation:</em> the path to the JS files</li>
-<li><em>repactchUrl:</em> the type for the recaptcha <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> attribute</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Fields/Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clientAssociationAttribute</td>
+<td>Attribute which identifies the <a href="https://en.wikipedia.org/wiki/OpenID" title="OpenID Connect">OpenID</a> client</td>
+</tr>
+<tr>
+<td>oxAuthIssuers</td>
+<td><a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> of the issuer authorization server</td>
+</tr>
+<tr>
+<td>ignoreValidation</td>
+<td>Control to check/ignore token validation. Use <code>true</code> to validate or <code>false</code> otherwise</td>
+</tr>
+<tr>
+<td>umaIssuer</td>
+<td><a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> of the issuer authorization server</td>
+</tr>
+<tr>
+<td>umaClientId</td>
+<td>Identification of the <a href="https://en.wikipedia.org/wiki/User-Managed_Access" title="User-Managed Access">UMA</a> client</td>
+</tr>
+<tr>
+<td>umaClientKeyId</td>
+<td></td>
+</tr>
+<tr>
+<td>umaResourceId</td>
+<td></td>
+</tr>
+<tr>
+<td>umaScope</td>
+<td>Scopes available for this resource</td>
+</tr>
+<tr>
+<td>recaptchaSiteKey</td>
+<td></td>
+</tr>
+<tr>
+<td>recaptchaSecretKey</td>
+<td></td>
+</tr>
+<tr>
+<td>cssLocation</td>
+<td>Path to the CSS files</td>
+</tr>
+<tr>
+<td>jsLocation</td>
+<td>Path to the JS files</td>
+</tr>
+<tr>
+<td>repactchUrl</td>
+<td>Type for the recaptcha <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" title="Uniform Resource Identifier">URI</a> attribute</td>
+</tr>
+</tbody>
+</table>
 <h3 id="description-of-oxtrust-properties">Description of OxTrust Properties<a class="headerlink" href="#description-of-oxtrust-properties" title="Permanent link">#</a></h3>
 <p>Description of OxTrust Properties can be viewed <a href="../../reference/oxtrust-prop.json">here</a></p>
 <p>Oxtrust import JSON description <a href="../../reference/oxtrust-import-person.json">here</a></p>

@@ -45,7 +45,21 @@ There are three sections in the organization configuration page:
 
 ![smtp-config](../img/oxtrust/smtp-config.png "SMTP Configuration")
 
-The Gluu Server needs a mail server in order to send notifications. The fields on this page are self-explanatory, such as hostname, user, password, ssl-requirement, authentication requirement, sending name and address. All fields are manadory and the configuration can be tested before confirmation.
+The Gluu Server needs a mail server in order to send notifications. 
+The fields on this page are self-explanatory, such as hostname, user, 
+password, ssl-requirement, authentication requirement, sending name and address. 
+All fields are manadory and the configuration can be tested before confirmation.
+
+| Fields | Description |
+|--------|-------------|
+| SMTP Host | HostName of the SMTP server |
+| From Name | Name of the sender|
+| From Email Address | Email Address of the Sender|
+| Requires Authentication | This Checkbox is enables authentication of the sender |
+| SMTP User Name | User Name of the SMTP |
+| SMTP Password | Password for the SMTP |
+| Requires SSL | This checkbox is to enable the SSL |
+|SMTP Port | Port number of the SMTP server |
      
 #### oxTrust Settings  
 

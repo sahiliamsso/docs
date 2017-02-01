@@ -606,17 +606,6 @@
           
   <li class="md-nav__item">
     
-      <a href="../logs/" title="Log Management" class="md-nav__link">
-        Log Management
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
       <a href="../user-group/" title="User Management" class="md-nav__link">
         User Management
       </a>
@@ -639,13 +628,13 @@
           
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
     
-    <label class="md-nav__link" for="nav-4-6">
+    <label class="md-nav__link" for="nav-4-5">
       User Authentication Guide
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-4-6">
+      <label class="md-nav__title" for="nav-4-5">
         User Authentication Guide
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1073,8 +1062,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../../operation/backup/" title="Backup Gluu Server CE" class="md-nav__link">
-        Backup Gluu Server CE
+      <a href="../../operation/backup/" title="Backups" class="md-nav__link">
+        Backups
       </a>
     
   </li>
@@ -1084,8 +1073,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../../operation/find-gluu-version/" title="Know your Gluu Version" class="md-nav__link">
-        Know your Gluu Version
+      <a href="../../operation/find-gluu-version/" title="Find your Gluu Version" class="md-nav__link">
+        Find your Gluu Version
       </a>
     
   </li>
@@ -1095,8 +1084,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../../operation/ports/" title="Ports used in Gluu" class="md-nav__link">
-        Ports used in Gluu
+      <a href="../../operation/ports/" title="Ports" class="md-nav__link">
+        Ports
       </a>
     
   </li>
@@ -1106,8 +1095,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../../operation/logout/" title="Logout from Gluu Server" class="md-nav__link">
-        Logout from Gluu Server
+      <a href="../../operation/logout/" title="Logout" class="md-nav__link">
+        Logout
       </a>
     
   </li>
@@ -1119,6 +1108,17 @@
     
       <a href="../faq/" title="FAQ & Troubleshooting" class="md-nav__link">
         FAQ & Troubleshooting
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../logs/" title="Log Management" class="md-nav__link">
+        Log Management
       </a>
     
   </li>
@@ -1389,7 +1389,6 @@ right there is a user icon which can be used to log out of oxTrust.
 The left hand menu is used to navigate the admin interface.</p>
 <p><img alt="welcome-page.png" src="../../img/oxtrust/welcome-page.png" title="Welcome to Gluu Server" /></p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
-<p><img alt="configuration-menu" src="../../img/oxtrust/configuration-menu.png" title="Organization Menu" /></p>
 <p>From the configuration tab, the Gluu Server administrator can manage 
 certain non-protocol related tasks.</p>
 <h3 id="organization-configuration">Organization Configuration<a class="headerlink" href="#organization-configuration" title="Permanent link">#</a></h3>
@@ -1423,7 +1422,52 @@ certain non-protocol related tasks.</p>
 </ul>
 <h4 id="smtp-server-configuration">SMTP Server Configuration<a class="headerlink" href="#smtp-server-configuration" title="Permanent link">#</a></h4>
 <p><img alt="smtp-config" src="../../img/oxtrust/smtp-config.png" title="SMTP Configuration" /></p>
-<p>The Gluu Server needs a mail server in order to send notifications. The fields on this page are self-explanatory, such as hostname, user, password, ssl-requirement, authentication requirement, sending name and address. All fields are manadory and the configuration can be tested before confirmation.</p>
+<p>The Gluu Server needs a mail server in order to send notifications. 
+The fields on this page are self-explanatory, such as hostname, user, 
+password, ssl-requirement, authentication requirement, sending name and address. 
+All fields are manadory and the configuration can be tested before confirmation.</p>
+<table>
+<thead>
+<tr>
+<th>Fields</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMTP Host</td>
+<td>HostName of the SMTP server</td>
+</tr>
+<tr>
+<td>From Name</td>
+<td>Name of the sender</td>
+</tr>
+<tr>
+<td>From Email Address</td>
+<td>Email Address of the Sender</td>
+</tr>
+<tr>
+<td>Requires Authentication</td>
+<td>This Checkbox is enables authentication of the sender</td>
+</tr>
+<tr>
+<td>SMTP User Name</td>
+<td>User Name of the SMTP</td>
+</tr>
+<tr>
+<td>SMTP Password</td>
+<td>Password for the SMTP</td>
+</tr>
+<tr>
+<td>Requires SSL</td>
+<td>This checkbox is to enable the SSL</td>
+</tr>
+<tr>
+<td>SMTP Port</td>
+<td>Port number of the SMTP server</td>
+</tr>
+</tbody>
+</table>
 <h4 id="oxtrust-settings">oxTrust Settings<a class="headerlink" href="#oxtrust-settings" title="Permanent link">#</a></h4>
 <p><img alt="oxtrust-settings" src="../../img/oxtrust/oxtrust-settings.png" title="OxTrust Settings" /></p>
 <p>From the oxTrust Settings page the administrator can find the oxTrust build date and number, and manage the organization name, logo, and favicon. This page also contains the name of the Gluu Server administrator group. Users added to this group will have administrator access to the Gluu Server.</p>
