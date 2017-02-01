@@ -1,8 +1,10 @@
 # oxTrust Administrative Graphical User Interface (GUI)
-The administration interface (oxTrust) is accessible by navigating to 
+
+## Overview 
+The Gluu Server administration interface (oxTrust) is accessible by navigating to 
 `https://hostname` (the one you provided during setup). When you 
 first complete an installation, the default username is `admin` and 
-the password is the same as the `LDAP superuser` password.
+the password is the same as the `LDAP superuser` password. From the admin interface you can manage many aspects of your Gluu Server authentication, authorization, and identity management service. 
 
 ## Welcome Page
 After successful authentication the administrator is taken to the 
@@ -19,7 +21,7 @@ certain non-protocol related tasks.
 
 ### Organization Configuration
 
-There are three sections in the organization configuration page:       
+There are three tabs in the organization configuration page:       
 
 1. [System Configuration](#system-configuration)         
 2. [SMTP Server Configuration](#smtp-server-configuration)         
@@ -45,10 +47,7 @@ There are three sections in the organization configuration page:
 
 ![smtp-config](../img/oxtrust/smtp-config.png "SMTP Configuration")
 
-The Gluu Server needs a mail server in order to send notifications. 
-The fields on this page are self-explanatory, such as hostname, user, 
-password, ssl-requirement, authentication requirement, sending name and address. 
-All fields are manadory and the configuration can be tested before confirmation.
+The Gluu Server needs a mail server in order to send notifications. All fields in this form are manadory and the configuration can be tested before confirmation.
 
 | Fields | Description |
 |--------|-------------|
@@ -87,6 +86,8 @@ can import users from an `xls` file which must be defined in this tab to import
 data in the LDAP attributes. The default format should contain the following fields: 
 
 ### Manage Authentication
+
+#### Manage LDAP Authentication
 This section allows the Gluu Server administrator to define how and
 where the server should connect to authenticate users. If it is a remote
 LDAP/Active Directory server, the values are required. Put the details
@@ -134,8 +135,8 @@ local LDAP server.
 
 #### Default Authentication Method
 
-This allows the Gluu Server administrator to select both the default
-authentication mode, and level for person authentication. Both modes are
+This allows the Gluu Server administrator to select the default
+authentication method and level for person authentication. Both methods are
 set to "Default" until additional authentication mechanisms are enabled
 via [custom scripts](#manage-custom-scripts). 
 
@@ -159,16 +160,15 @@ of SSO protocols ( OpenID Connect, SAML, CAS )
 The Gluu Server exposes interception scripts in places where it is common 
 for organizations to implement custom workflows, or changes to the 
 look and feel of the Gluu Server. The most commonly used scripts are 
-for authentication, authorization and identity synchronization. Each
-type of script has its own interface--in other words what methods are
-available. For more information, see the reference page detailing how
-[to write a custom authentication script](./user-authentications.md).
+for authentication, authorization, and identity synchronization. Each
+type of script has its own interface--in other words, what methods are
+available. For more information, see the reference page detailing each type of [interception script](./custom-script.md).
 
 ### Manage Registration
 The Gluu Server is shipped with a very basic user registration 
-feature. For custom enrollment requirements, you may want to write
-a registration page and use the SCIM endpoint
-to add the user to the Gluu Server. Also, in some cases oxTrust is not Internet facing,
+feature. For custom enrollment requirements, we recommend that you write
+a custom registration page and use the SCIM endpoint
+to add the user record to the Gluu Server. Also, in some cases oxTrust is not Internet facing,
 which makes it a bad option for user registration. Use this feature
 only if you have very basic requirements! 
 
@@ -188,86 +188,35 @@ This section allows you to filter the list of attributes to be displayed
 in the registration form. Search, select, add, and order desired attributes here.
 
 ### Attributes
-Available user attributes are found on this page. By default, only the active attributes are visible.  
-Use the `Show All Attributes` to display the inactive attributes too. 
-Custom attributes can be added by clicking the `Add Attribute` button 
-and filling in a simple form. Note that attributes must already be
-present in the LDAP server. Adding an attribute here is like registering 
-it in the Gluu Server. In order to release an attribute during a SAML or 
-OpenID Connect transaction, the Gluu Server needs to know it exists.  
-How to create and configure [SAML Attributes](./saml/#saml-Attributes) 
-and [OpenID Connect Scopes](./openid-connect/#scopes) are 
-discussed later under each section of this document.
+Attributes are individual pieces of user data, like `uid` or `email`, that are required by applications in order to identify a user and grant access to protected resources. The user attributes that are available in your federation service can be found on this page. By default, only `active` attributes are visible. Use the `Show All Attributes` button to display the `inactive` attributes too. 
+
+Custom attributes can be added by clicking the `Add Attribute` button and completing the simple form. Note that custom attributes must already be present in the LDAP server in order for them to be available for release by the Gluu Server. Adding an attribute here is like registering it in the Gluu Server--in order to release an attribute during a SAML or OpenID Connect transaction, the Gluu Server needs to know it exists. 
+
+Attributes, as they pertain to SSO, are covered more thoroughly in the [SAML Attributes](./saml/#saml-Attributes) and [OpenID Connect Scopes](./openid-connect/#scopes) sections of the docs.
 
 ### Cache Refresh
-Cache Refresh, a.k.a. LDAP Synchronization, is the process of connecting an existing backend LDAP server, like Microsoft Active Directory, with the Gluu Server's local LDAP server. `Cache Refresh` 
-periodically searches these data sources, compares the results to 
-previous searches, and if a changed user account is found, it is updated.
-The frequency of cache refresh is also set from this page via the 
-`Polling interval (minutes)`. The `key attribute(s)` is used to correlate
-a user if the user is found in more then one LDAP server. In this case, the two entries
-are joined. The source attributes specify which attributes will be 
-pulled from the backend LDAP server. The backend server address, bind DN 
-and other connection information is speciifed in the `Source Backend 
-LDAP Servers` tab. More information on [LDAP Syncronization](./user-group.md/#ldap-synchronization)
+Cache Refresh, a.k.a. LDAP Synchronization, is the process of connecting one or more existing backend LDAP servers, like Microsoft Active Directory, with the Gluu Server's local LDAP server. `Cache Refresh` periodically searches these data sources, compares the results to previous searches, and if a changed user account is found, it is updated.The frequency of cache refresh is also set from this page via the `Polling interval (minutes)`. The `key attribute(s)` is used to correlate a user if the user is found in more then one LDAP server. In this case, the two entries are joined. The source attributes specify which attributes will be pulled from the backend LDAP server. The backend server address, bind DN and other connection information is speciifed in the `Source Backend LDAP Servers` tab. More information on [LDAP Syncronization](./user-group.md/#ldap-synchronization) can be found in the user management section of the docs. 
 
 ### Configure Log Viewer / View Log File
-This tool can be used to view file system logs. If you don't like to 
-ssh, Log Viewer is your friend! Several common logs are preconfigured,
-or you can define new logs by specifying the path.
+This tool can be used to view file system logs. If you don't like to ssh, Log Viewer is your friend! Several common logs are preconfigured, or you can define new logs by specifying the path.
 
 ### Server Status
-This page provides some basic information about the Gluu Server such as the 
-hostname, IP address, free memory & disk space. The number of users in the 
-backend is also available in this page.
+This page provides basic information about the Gluu Server such as the hostname, IP address, free memory & disk space. The number of users in the backend is also available in this page.
 
 ### Certificates
-The certificate page shows some summary information about the SSL
-and SAML certificates.
+The certificate page provides summary information about your SSL and SAML certificates.
 
 ## SAML
-If you chose to deploy the Shibboleth SAML IDP during installation, 
-you will see this menu to manage all SAML related functionalities. 
-In addition, if you chose to deploy the Asimba SAML Proxy, you will see a sub menu for inbound SAML.
-
-### Outbound
-
-![saml](../img/oxtrust/saml.png)
-
-The `Trust Relationships` page, as the name suggests, will allow the administrator to 
-view the created trust relationships (TRs) by searching using the search button. 
-There is a button to add relationship with the same name. All the available TRs can be 
-searched by using two (2) spaces in the search bar. There are some information that the 
-administrator needs to gather before creating any new TR in Gluu Server. The metadata of the 
-Service Provider (SP) connected using TR must be gathered along with the required attributes. 
-The creation of TR will be covered in detail later under [SAML](./saml.md).
-
-### Inbound
+If you deployed the Shibboleth SAML IDP or the Asimba SAML proxy during Gluu Server installation, you will see a link to manage inbound and outbound SAML requirements in the left hand navigation. Learn more about configuring and managing SAML in the [SAML](./saml.md) portion of the docs. 
 
 ## OpenID Connect
-The [OpenID Connect protocol](http://openid.net/specs/openid-connect-core-1_0.html) is supported by default in all Gluu Server deployments. The scopes page contains the `Add Scope` button which can be used to add new scopes in Gluu Server. Additionally the available scopes can be searched by name or listed using two (2) spaces in the search bar.
-
-![scopes](../img/oxtrust/scopes.png)
-
-The OpenID Connect clients are accessible from the `Clients` page under `OpenID Connect` tab. 
-The structure is similar to the scopes page with the functionality to search by name or use two (2) spaces 
-to list all the available clients. New clients can be added by clicking 
-the `Add Client` button. This section is detailed in [OpenID Connect](./openid-connect.md) 
-
-![clients](../img/oxtrust/clients.png)
+The [OpenID Connect protocol](http://openid.net/specs/openid-connect-core-1_0.html) is supported by default in all Gluu Server deployments. Learn more about configuring and managing OpenID Connect in the [OpenID Connect](./openid-connect.md) portion of the docs. 
 
 ## UMA
-[UMA](./uma.md) or (User-Managed Access) is an access management protocol supported by Gluu Server.
-The available scopes can be searched using the search bar on the top of the page. 
-New scope descriptions can be added using the `Add Scope Description` button.
-![uma-scopes](../img/oxtrust/uma-scopes.png)
-
-UMA resources page also has a searchbar on the top of the page and can be used 
-to search for resource sets. New resource sets can be added by clocking on the `Add Resource Set` button.
-![uma-resources](../img/oxtrust/uma-resources.png)
+[UMA](./uma.md) or (User-Managed Access) is an access management protocol that is also supported by default in all Gluu Server deployments. Learn more about configuring and managing UMA in the [UMA](./uma.md) portion of the docs.
 
 ## Users
-Users tab allows Gluu admin to do various task, including add admin, search users, Import users from file.
+The users tab allows the Gluu admin to perform various user management tasks, including add users to the admin group, search users, and import users from a file. Learn more about managing users in the [user management](./user-group.md) portion of the docs. 
 
 ## Personal
 Personal tab allows the individual person to view his basic profile and modify certain fields.
