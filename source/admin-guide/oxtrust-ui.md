@@ -206,7 +206,7 @@ a user if the user is found in more then one LDAP server. In this case, the two 
 are joined. The source attributes specify which attributes will be 
 pulled from the backend LDAP server. The backend server address, bind DN 
 and other connection information is speciifed in the `Source Backend 
-LDAP Servers` tab. More information on [LDAP Syncronization](./user-group/#ldap-synchronization)
+LDAP Servers` tab. More information on [LDAP Syncronization](./user-group.md/#ldap-synchronization)
 
 ### Configure Log Viewer / View Log File
 This tool can be used to view file system logs. If you don't like to 
