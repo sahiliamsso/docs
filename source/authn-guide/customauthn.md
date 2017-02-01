@@ -25,11 +25,11 @@ you can review the completed Twilio custom authentication script [here](./twilio
 
 Custom scripts can either be inserted directly into the Gluu Server interface or you can specify a path to the script. Specifying a path will make script development easier. There is also an option to revert back to a working script if the script is faulty or needs further enhancements. The administrator can select `File` from the `Script Location Type` in oxTrust and the file input box will be displayed:
 
-![image](/img/admin-guide/multi-factor/script_upload_box.png)
+![image](../img/admin-guide/multi-factor/script_upload_box.png)
 
 The `LDAP` option in the `Script Location Type` can be used to store the script in the LDAP tree once development is complete. Remember that selecting the `LDAP` method requires the script to be copied in the input box that appears upon LDAP selection:
 
-![image](/img/admin-guide/multi-factor/script_in_ldap.png)
+![image](../img/admin-guide/multi-factor/script_in_ldap.png)
 
 ### Suggested Development Environment
 
@@ -77,7 +77,7 @@ Steps to add a custom template and pass values between 2 steps of authentication
 
 As shown in the below illustration:
 
-![image](/img/admin-guide/multi-factor/twilio.png)
+![image](../img/admin-guide/multi-factor/twilio.png)
 
 ## Methods 
 
@@ -154,7 +154,7 @@ Using **session_attribute.get()** method, stored session attribute can be retrie
 
 Sometimes it is helpful to enable system administrators to enter properties that might frequently change. If administrators are not allowed to modify the script, the Custom Property feature can be used as illustrated in below screenshot:
 
-![image](/img/admin-guide/multi-factor/07-custom-properties.jpg)
+![image](../img/admin-guide/multi-factor/07-custom-properties.jpg)
 
 `configurationAttributes.get("<key>").getValue2"()`:
 
@@ -189,6 +189,11 @@ It is not uncommon to get locked out of the Gluu Server while testing the authen
 
 In such a case the following method can be used to revert back to the older authentication method:
 
-`add method`
-
+1. Open LDAP in a LDAP Browser (jxlorer is used here and recommended).
+2. Navigate to "gluu > appliances > {GUID or applicance number}". ![Revert authentication](../img/integration/revert-authentication1.png)
+3. Search for "oxAuthenticationMode"  and "oxTrustAuthenticationMode" attribute and delete the values. ![Revert authentication attrb](../img/integration/revert-authentication2.png)
+    - OxAuthenticationMode attribute is used for Login pages, which stores the name of the custom script used.
+    - OxTrustAuthenticationMode is used for OxTrsut Admin UI page.
+4. Submit the changes.
+5. Try to access the login page or Gluu Admin UI.
 As a secondary option, InPrivate or Incognito or Private Browser from various Browsers can be used.

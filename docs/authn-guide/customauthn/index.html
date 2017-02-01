@@ -1357,8 +1357,18 @@ The attribute value that are saved by the session using <code>context.set</code>
 <h2 id="reverting-authentication-method">Reverting Authentication Method<a class="headerlink" href="#reverting-authentication-method" title="Permanent link">#</a></h2>
 <p>It is not uncommon to get locked out of the Gluu Server while testing the authentication script.</p>
 <p>In such a case the following method can be used to revert back to the older authentication method:</p>
-<p><code>add method</code></p>
-<p>As a secondary option, InPrivate or Incognito or Private Browser from various Browsers can be used.</p>
+<ol>
+<li>Open LDAP in a LDAP Browser (jxlorer is used here and recommended).</li>
+<li>Navigate to "gluu &gt; appliances &gt; {GUID or applicance number}". <img alt="Revert authentication" src="../../img/integration/revert-authentication1.png" /></li>
+<li>Search for "oxAuthenticationMode"  and "oxTrustAuthenticationMode" attribute and delete the values. <img alt="Revert authentication attrb" src="../../img/integration/revert-authentication2.png" /><ul>
+<li>OxAuthenticationMode attribute is used for Login pages, which stores the name of the custom script used.</li>
+<li>OxTrustAuthenticationMode is used for OxTrsut Admin UI page.</li>
+</ul>
+</li>
+<li>Submit the changes.</li>
+<li>Try to access the login page or Gluu Admin UI.
+As a secondary option, InPrivate or Incognito or Private Browser from various Browsers can be used.</li>
+</ol>
               
             </article>
           </div>
