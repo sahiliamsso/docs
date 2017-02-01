@@ -46,7 +46,6 @@ pages:
 #        - 'OAuth2 Grants' : 'admin-guide/oauth2.md'
         - 'OpenID Connect' : 'admin-guide/openid-connect.md'
         - 'UMA' : 'admin-guide/uma.md'
-        - 'Attribute Management' : 'admin-guide/attribute.md'
         - 'SCIM protected by UMA' : 'admin-guide/scim-uma.md'
         - 'Certificate Management' : 'admin-guide/certificate.md'
 - Integration Guide:

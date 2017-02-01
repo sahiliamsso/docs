@@ -194,7 +194,10 @@ Custom attributes can be added by clicking the `Add Attribute` button
 and filling in a simple form. Note that attributes must already be
 present in the LDAP server. Adding an attribute here is like registering 
 it in the Gluu Server. In order to release an attribute during a SAML or 
-OpenID Connect transaction, the Gluu Server needs to know it exists. This section is discussed in detail in [Attributes Management](../admin-guide/attribute.md)
+OpenID Connect transaction, the Gluu Server needs to know it exists.  
+How to create and configure [SAML Attributes](./saml/#saml-Attributes) 
+and [OpenID Connect Scopes](./openid-connect/#scopes) are 
+discussed later under each section of this document.
 
 ### Cache Refresh
 Cache Refresh, a.k.a. LDAP Synchronization, is the process of connecting an existing backend LDAP server, like Microsoft Active Directory, with the Gluu Server's local LDAP server. `Cache Refresh` 

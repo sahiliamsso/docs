@@ -369,6 +369,13 @@ You will have the ability to provide a Display Name, Description,
 whether or not the scope is provided by default, and the claims that are
 included in the scope.
 
+| Field | Description |
+|---| ---|
+| Display Name | Name of the scope which will be displayd when searched |
+| Description | Small description of the scope being defined |
+| Scope Type | Default, if the scope needs the option to be released by default. Other options are LDAP, Dynamic, and OpenID.|
+| Default Scope | True if the scope is released to clients by default. |
+
 Default Scope needs some further explanation. When a client uses dynamic
 client registration, the OpenID Connect specification says that the
 `openid` scope should always be released, which contains an identifier
