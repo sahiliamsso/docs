@@ -4,7 +4,9 @@
 The Gluu Server administration interface (oxTrust) is accessible by navigating to 
 `https://hostname` (the one you provided during setup). When you 
 first complete an installation, the default username is `admin` and 
-the password is the same as the `LDAP superuser` password. From the admin interface you can manage many aspects of your Gluu Server authentication, authorization, and identity management service. 
+the password is the same as the `LDAP superuser` password. 
+
+From the admin interface you can manage many aspects of your Gluu Server authentication, authorization, and identity management service. This section of the docs will cover various concepts and topics associated with the interface at a high level, but will often times include links to dedicated sections of the docs with more detailed information.
 
 ## Welcome Page
 After successful authentication the administrator is taken to the 
