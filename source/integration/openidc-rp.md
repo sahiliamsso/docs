@@ -1,4 +1,4 @@
-# OpenIDC-RP Integration
+# mod_auth_openidc RP Integration
 
 ## Basic Web Server Installation
 
