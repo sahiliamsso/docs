@@ -36,7 +36,7 @@ Set-MsolDomainAuthentication -DomainName $dom -FederationBrandName $dom -Authent
 ## Gluu Server Configuration
 ### Custom Attributes
 The configuration begins by creating a few custom attributes named `IDPEmail`, `ImmutableID` and `objectguid`.
-Please see [this doc](../admin-guide/attribute.md) to create custom attributes.
+Please see [this doc](../admin-guide/saml/#saml-attributes) to create custom attributes.
 
 1. `IDPEmail` Custom Attribute
 ![image](../img/integration/idpemail.png)

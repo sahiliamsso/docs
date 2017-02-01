@@ -3,7 +3,7 @@ This document is a step-by-step guide to setting up Dropbox SSO in Gluu Server.
 This SSO requires setting a custom `nameid` called `emailnid`.
 
 ## Custom NameID
-Please see [this doc](../admin-guide/attribute.md) on how to create custom attributes.
+Please see [this doc](../admin-guide/saml/#saml-attributes) on how to create custom attributes.
 
 The new attribute screen should look like the screenshot below
 ![image](../img/integration/emailnid.png)
