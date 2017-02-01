@@ -1,6 +1,6 @@
-# Configuration
-## oxTrust Configuration
-This page explains the JSON Configuration under the Configuration Tab in the Configuration menu.
+# oxTrust JSON Configurations
+## Overview
+This page explains the oxTrust JSON Configuration which can by found by navigating to `Configuration` > `JSON Configuration`. 
 
 ## oxtrust.properties
 ![image](../img/reference/config-json_oxtrustproperties.png)
