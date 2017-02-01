@@ -2,13 +2,10 @@
 
 ## Overview
 
-OpenID Connect is an authentication layer built on OAuth 2.0. 
-OpenID Connect is a specific implementation of OAuth 2.0 
-where the identity provider holds protected resources that a 
-third-party application needs to access on behalf of a person. 
+OpenID Connect is an authentication layer built on OAuth 2.0. OpenID Connect is a specific implementation of OAuth 2.0 
+where the identity provider holds protected resources that a third-party application needs to access on behalf of a person. 
 OpenID Connect allows relying parties to verify the identity of, and obtain information about a person requesting to access the applications protected resources. 
 
-## Jargon
 In OpenID Connect the key entities include:
 
 - The *end user* (a.k.a. OAuth 2.0 resource owner) whose user information the application needs to access.
@@ -344,17 +341,12 @@ useful to clean up sessions in a legacy SSO system (i.e. SiteMinder), or
 perhaps in a portal.
 
 The key for logout is to understand the limitations of logout, and to
-test the use cases that are important to you, so you will not be
+test the use cases that are important to you, so you will not b
 surprised by the behavior when you put your application into production.
 
 ## Scopes
-
-In SAML, the IDP releases attributes to the SP. OpenID Connect provides
-similar functionality, with more flexibility in case the person needs to
-self-approve the release of information from the IDP to the website (or
-mobile application). In OAuth2, scopes can be used for various purposes.
-OpenID Connect uses OAuth2 scopes to "group" attributes". For example, we
-could have a scope called "address" that includes the street, city,
+In OAuth 2.0 scopes can be used for various purposes. OpenID Connect uses OAuth 2.0 scopes to "group attributes". For example, we
+could have a scope called `address` that includes the street, city,
 state, and country user claims. By default the Gluu Server defines nine
 scopes: `address`, `clientinfo`, `email`, `mobile_phone`, `openid`, `permission`, `phone`, `profile`, `user_name`
 
