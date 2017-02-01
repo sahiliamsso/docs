@@ -33,7 +33,7 @@ reasons.
  - [Affordable support options](https://symas.com/services/subscriptions/) from Symas.
  - Proxy Capabilities: using OpenLDAP Gold, which is a commercial 
    distribution from Symas, data can be organized into different replicated 
-   topologies, and the proxycan be used to route operations. Using this strategy
+   topologies, and the proxy can be used to route operations. This strategy
    can increase the write performance of the ldap service. 
 
 ## Shibboleth IDP version 3
