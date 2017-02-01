@@ -162,7 +162,7 @@ look and feel of the Gluu Server. The most commonly used scripts are
 for authentication, authorization and identity synchronization. Each
 type of script has its own interface--in other words what methods are
 available. For more information, see the reference page detailing how
-[to write a custom authentication script](/admin-guide/user-authentications.md).
+[to write a custom authentication script](./user-authentications.md).
 
 ### Manage Registration
 The Gluu Server is shipped with a very basic user registration 
