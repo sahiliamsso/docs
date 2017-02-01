@@ -186,6 +186,8 @@ Further logs to debug and monitor the sequence can be done using `oxauth_script.
 
 It is not uncommon to get locked out of the Gluu Server while testing the authentication script.
 
-In such a case the following method can be used to revert back to the older authentication method. 
+In such a case the following method can be used to revert back to the older authentication method:
+
+`add method`
 
 As a secondary option, InPrivate or Incognito or Private Browser from various Browsers can be used.
