@@ -122,9 +122,10 @@ Example: `getAttribute("mobile")`
 Example: `abc = requestParameters.get("passcode")[0].strip()`        
 
 **getCountAuthenticationSteps():**         
-Another method usually needed to implement is `getCountAuthenticationSteps`. This method normally just returns 1, 2, or 3. If implementing an adaptive authentication strategy, where the number of steps depends on the context. Check out the Duo script for a good example of this. In our sample [Duo script](./DuoExternalAuthenticator.py),
+Another method usually needed to implement is `getCountAuthenticationSteps`. This method normally just returns 1, 2, or 3. If implementing an adaptive authentication strategy, where the number of steps depends on the context. 
 
-Duo Script was scripted only for those who wanted to use Duo for the IT group. So the script checks for group membership, and dynamically adjusts the number of steps. This can be scripted to check for any logic or attribute during the authentication, like "country" or "region".
+!!! Note   
+Check out the [Duo script](./DuoExternalAuthenticator.py) for a good example of how `getCountAuthenticationSteps` can be used to implement adaptive authentication. The Duo script is scripted so that two-factor authentication is only presented for users in the IT group. The script checks for group membership and dynamically adjusts the number of steps. This can be implemented to check for any logic or attribute during the authentication, like "country" or "region".
 
 **getExtraParametersForStep():**     
 If required to save session variables between steps, use the `getExtraParametersForStep` method. The Gluu Server persists
