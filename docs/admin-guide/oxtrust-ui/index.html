@@ -781,17 +781,6 @@
           
   <li class="md-nav__item">
     
-      <a href="../attribute/" title="Attribute Management" class="md-nav__link">
-        Attribute Management
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
       <a href="../scim-uma/" title="SCIM protected by UMA" class="md-nav__link">
         SCIM protected by UMA
       </a>
@@ -1607,7 +1596,10 @@ Custom attributes can be added by clicking the <code>Add Attribute</code> button
 and filling in a simple form. Note that attributes must already be
 present in the LDAP server. Adding an attribute here is like registering 
 it in the Gluu Server. In order to release an attribute during a SAML or 
-OpenID Connect transaction, the Gluu Server needs to know it exists. This section is discussed in detail in <a href="../attribute/">Attributes Management</a></p>
+OpenID Connect transaction, the Gluu Server needs to know it exists.<br />
+How to create and configure <a href="../saml/#saml-Attributes">SAML Attributes</a> 
+and <a href="../openid-connect/#scopes">OpenID Connect Scopes</a> are 
+discussed later under each section of this document.</p>
 <h3 id="cache-refresh">Cache Refresh<a class="headerlink" href="#cache-refresh" title="Permanent link">#</a></h3>
 <p>Cache Refresh, a.k.a. LDAP Synchronization, is the process of connecting an existing backend LDAP server, like Microsoft Active Directory, with the Gluu Server's local LDAP server. <code>Cache Refresh</code> 
 periodically searches these data sources, compares the results to 
@@ -1618,7 +1610,7 @@ a user if the user is found in more then one LDAP server. In this case, the two 
 are joined. The source attributes specify which attributes will be 
 pulled from the backend LDAP server. The backend server address, bind DN 
 and other connection information is speciifed in the <code>Source Backend 
-LDAP Servers</code> tab. More information on <a href="../user-group/#ldap-synchronization">LDAP Syncronization</a></p>
+LDAP Servers</code> tab. More information on <a href="../user-group.md/#ldap-synchronization">LDAP Syncronization</a></p>
 <h3 id="configure-log-viewer-view-log-file">Configure Log Viewer / View Log File<a class="headerlink" href="#configure-log-viewer-view-log-file" title="Permanent link">#</a></h3>
 <p>This tool can be used to view file system logs. If you don't like to 
 ssh, Log Viewer is your friend! Several common logs are preconfigured,

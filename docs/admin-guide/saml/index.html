@@ -551,6 +551,26 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saml-attributes" title="SAML Attributes" class="md-nav__link">
+    SAML Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attrubute-in-oxtrust" title="Attrubute in oxTrust" class="md-nav__link">
+    Attrubute in oxTrust
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#create-a-trust-relationship-in-the-gluu-server" title="Create a Trust Relationship in the Gluu Server" class="md-nav__link">
     Create a Trust Relationship in the Gluu Server
@@ -663,17 +683,6 @@
     
       <a href="../uma/" title="UMA" class="md-nav__link">
         UMA
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../attribute/" title="Attribute Management" class="md-nav__link">
-        Attribute Management
       </a>
     
   </li>
@@ -1055,6 +1064,26 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saml-attributes" title="SAML Attributes" class="md-nav__link">
+    SAML Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attrubute-in-oxtrust" title="Attrubute in oxTrust" class="md-nav__link">
+    Attrubute in oxTrust
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#create-a-trust-relationship-in-the-gluu-server" title="Create a Trust Relationship in the Gluu Server" class="md-nav__link">
     Create a Trust Relationship in the Gluu Server
@@ -1160,8 +1189,14 @@
                 
                 <h1 id="saml">SAML<a class="headerlink" href="#saml" title="Permanent link">#</a></h1>
 <h2 id="outbound-saml">Outbound SAML<a class="headerlink" href="#outbound-saml" title="Permanent link">#</a></h2>
-<p>Outbound SAML can also be called SP-initiated Single Sign-On (SSO) or traditional SAML. In an outbound SAML transaction a website or application (SP) redirects a user to a designated Identity Provider (IDP) for authentication and authorization. The IDP will ask for the user's credentials and upon successful authentication, the user is sent back to the SP logged in. </p>
-<p>In order for this transaction to happen successfully there must be pre-established trust between the IDP and the SP. In the Gluu Server, the IDPs SSO configuration is called a Trust Relationship (TR). The following sections cover how to create a TR in the Gluu Server. </p>
+<p>Outbound SAML can also be called SP-initiated Single Sign-On (SSO) 
+or traditional SAML. In an outbound SAML transaction a website or application (SP) 
+redirects a user to a designated Identity Provider (IDP) for authentication 
+and authorization. The IDP will ask for the user's credentials and upon successful 
+authentication, the user is sent back to the SP logged in. </p>
+<p>In order for this transaction to happen successfully there must be pre-established 
+trust between the IDP and the SP. In the Gluu Server, the IDPs SSO configuration is 
+called a Trust Relationship (TR). The following sections cover how to create a TR in the Gluu Server. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For any SAML transaction, a trust relationship must be created in the IDP.</p>
@@ -1171,7 +1206,137 @@
 <p><strong>Metadata of the SP</strong>     <br />
 Metadata is an XML file which has configuration data used to establish trust between the website (SP) and IDP (Gluu Server). Websites (SP) can provide metadata via a URL or as a separate file. Metadata can change, so a static URL typically requires the least amount of ongoing maintenance. </p>
 <p><strong>Required Attributes</strong>    <br />
-Each SP may require one or many attributes in order to grant a user access. Required attributes vary depending on the application, and should be explicitly listed in the application's documentation. The Gluu Server ships with certain preconfigured attributes and also supports the creation of custom attributes. Once the attributes are available in the Gluu Server, the administrator only needs to click on the desired attribute(s) and it will be released to the SP upon successful user authentication.</p>
+Each SP may require one or many attributes in order to grant a user access. 
+Required attributes vary depending on the application, and should be 
+explicitly listed in the application's documentation. The Gluu Server ships with 
+certain preconfigured attributes and also supports the creation of custom attributes. 
+Once the attributes are available in the Gluu Server, the administrator only needs 
+to click on the desired attribute(s) and it will be released to the SP upon 
+successful user authentication.</p>
+<h2 id="saml-attributes">SAML Attributes<a class="headerlink" href="#saml-attributes" title="Permanent link">#</a></h2>
+<h2 id="attrubute-in-oxtrust">Attrubute in oxTrust<a class="headerlink" href="#attrubute-in-oxtrust" title="Permanent link">#</a></h2>
+<p>An <em>Active</em> attribute list can be seen from the Configuration &gt; Attributes section.</p>
+<p><img alt="Attribute Menu" src="../../img/admin-guide/attribute/admin_attribute_menu.png" /></p>
+<p>The Gluu Server has a large LDAP tree which includes all standard
+attributes. It is not necessary for all of them to be <em>Active</em>. The
+active LDAP trees can be sorted using the <em>Show only Active Attributes</em>
+link.</p>
+<p><img alt="Show Active Attribute" src="../../img/admin-guide/attribute/admin_attribute_show.png" /></p>
+<p>The Gluu Server administrator can make changes, such as changing the
+status to active/inactive, to an attribute after clicking on it.</p>
+<p><img alt="Attributes" src="../../img/admin-guide/attribute/admin_attribute_attribute.png" /></p>
+<p>Additional custom attributes can be added in below way</p>
+<ul>
+<li>Add custom attribute to /opt/gluu/schema/openldap/custom.schema </li>
+<li>In this below example 'customTest' is our custom attribute : </li>
+</ul>
+<pre><code>attributetype ( oxAttribute:1003 NAME 'customTest'
+        SUBSTR caseIgnoreSubstringsMatch EQUALITY caseIgnoreMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15        
+       X-ORIGIN 'Gluu - custom person attribute' )
+</code></pre>
+
+<ul>
+<li>Add custom attribute to gluuCustomPerson objectClass</li>
+<li>Example: </li>
+</ul>
+<pre><code>objectclass ( oxObjectClass:101 NAME 'gluuCustomPerson' SUP top AUXILIARY MAY (customTest) X-ORIGIN 'Gluu - Custom persom objectclass' )
+
+</code></pre>
+
+<ul>
+<li>Stop LDAP server with command <code>service solserver stop</code></li>
+<li>Create custom configuration holder with <code>mkdir -p /opt/symas/etc/openldap/slapd.d</code></li>
+<li>Test custom configuration with <code>/opt/symas/bin/slaptest -f /opt/symas/etc/openldap/slapd.conf -F /opt/symas/etc/openldap/slapd.d</code></li>
+<li>Start LDAP server with command <code>service solserver start</code></li>
+</ul>
+<p>Register new attribute with Gluu Server GUI, oxTrust, by
+clicking the <strong>Register Attribute</strong> button. Then, the following screen will
+appear:</p>
+<p><img alt="Add Attribute Screen" src="../../img/admin-guide/attribute/admin_attribute_add.png" /></p>
+<ul>
+<li>
+<p><em>Name:</em> This field defines the name of the custom attribute which must
+  be unique in the Gluu Server LDAP tree.</p>
+</li>
+<li>
+<p><em>SAML1 URI:</em> This field contains the SAML1 uri for the custom attribute.</p>
+</li>
+<li>
+<p><em>SAML2 URI:</em> This field contains the SAML2 uri for the custom attribute.</p>
+</li>
+<li>
+<p><em>Display Name:</em> This display name can be anything that is human readable.</p>
+</li>
+<li>
+<p><em>Type:</em> The attribute type should be selected from the drop-down menu.
+  There are four attribute types supported by Gluu:</p>
+</li>
+<li>Text</li>
+<li>Numeric</li>
+<li>Photo</li>
+<li>
+<p>Date</p>
+</li>
+<li>
+<p><em>Edit Type:</em> This field controls which type of an user is allowed to edit
+  corresponding attribute at his/her "Profile" page of the web UI (when feature
+"User can edit own profile" is enabled).</p>
+</li>
+<li>
+<p><em>View Type:</em> This field controls which type of an user is allowed to view
+  corresponding attribute at his/her "Profile" page of the web UI.</p>
+</li>
+<li>
+<p><em>Privacy Level:</em> Please select the desired privacy level from the
+  drop-down menu. The privacy level has a specific range of 1 to 5.</p>
+</li>
+<li>
+<p><em>Multivalued:</em> Please select multivalue in this field if the attribute
+  contains more than one value.</p>
+</li>
+<li>
+<p><em>SCIM Attributes:</em> If the attribute is a part of SCIM architecture select true.</p>
+</li>
+<li>
+<p><em>Description:</em> This contains a few words to describe the attribute.</p>
+</li>
+<li>
+<p><em>Status:</em> The status, when selected active, will release and publish
+  the attribute in IdP.</p>
+</li>
+</ul>
+<p>## Custom NameID
+  Gluu Server comes with the <code>transientID</code> attribute which is the default <code>NameID</code>.
+  If there are other <code>NameID</code> requirements, it is possible to create them as well.
+  The custom attribute must be created in oxTrust first before defining it as the <code>NameID</code>.
+  Please see the <a href="#using-oxtrust">oxTrust custom attribute guide</a> to create the custom attribute in oxTrust.</p>
+<p>## Defining NameID
+  The template file for <code>NameID</code> definitions are located in the <code>attribute-resolver.xml.vm</code> file under <code>/opt/gluu/jetty/identity/conf/shibboleth3/idp/</code>.
+  The example below adds <code>testcustomattribute</code> as <code>NameID</code> based on UID attribute. The following are put into the <code>attribute-resolver.xml.vm</code> file.</p>
+<ul>
+<li>Add declaration for the new attribute
+  <code>if( ! ($attribute.name.equals('transientId') or $attribute.name.equals('testcustomattribute') ) )</code></li>
+<li>Add definition for the new attribute</li>
+</ul>
+<pre><code> &lt;resolver:AttributeDefinition id=&quot;testcustomattribute&quot; xsi:type=&quot;Simple&quot;
+                              xmlns=&quot;urn:mace:shibboleth:2.0:resolver:ad&quot;
+                              sourceAttributeID=&quot;uid&quot;&gt;
+
+        &lt;resolver:Dependency ref=&quot;siteLDAP&quot;/&gt;
+        &lt;resolver:AttributeEncoder xsi:type=&quot;SAML2StringNameID&quot;
+                                xmlns=&quot;urn:mace:shibboleth:2.0:attribute:encoder&quot;
+                                nameFormat=&quot;urn:oasis:names:tc:SAML:2.0:nameid-format:persistent&quot; /&gt;
+&lt;/resolver:AttributeDefinition&gt; 
+</code></pre>
+
+<ul>
+<li>Restart identity service using below command</li>
+</ul>
+<p><code>service identity restart</code> </p>
+<p>However it is recommended to stop and start service using </p>
+<p><code>service identity stop</code></p>
+<p><code>service identity start</code></p>
 <p><strong>SSO Testing Endpoint</strong>     <br />
 Every website (SP) should have both a staging and a production URI
 endpoint which can be checked for SSO. It's important to thoroughly test all scenarios in a development environment before moving the configuration into production. </p>
