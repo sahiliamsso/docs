@@ -1,6 +1,6 @@
 # oxAuth Configurations
 ## Overview
-This page explains the JSON Configuration which can be accessed by navigating to `Configuration` > `JSON Configuration`. 
+This page explains the JSON Configuration which can be accessed by navigating to `Configuration` > `JSON Configuration` > `oxAuth Configuration`. 
 
 ## oxAuth.properties
 ![image](../img/reference/config-json_oxauthproperties.png)
