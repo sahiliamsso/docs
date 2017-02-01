@@ -16,8 +16,7 @@ SaaS, custom, open source and commercial software can be made more
 secure by leveraging a central authentication and authorization service. 
 Because there are so many different kinds of apps, there is no way to 
 "top down" implement proprietary security mechanisms. This is why
-open standards are so important for IAM. Also, we don't want to lock you into 
-the Gluu Server!
+open standards are so important for IAM. 
 
 While there are many open protocols for IAM, Gluu focuses on just a few. 
 Consolidation saves money, and one-off integrations should be avoided. 
