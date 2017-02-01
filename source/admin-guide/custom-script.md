@@ -1,4 +1,6 @@
-# Custom Script / Interception Script
+# Interception Scripts
+
+## Overview
 Gluu Server is very flexible by design enabling the use of 
 [Jython](http://www.jython.org/docs/tutorial/indexprogress.html) 
 interception scripts to customize behaviour. Jython was chosen because 
