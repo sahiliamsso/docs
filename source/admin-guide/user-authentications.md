@@ -1,6 +1,6 @@
 # User Authentication Introduction
 
-The Gluu Server is most frequently used to protect web-accessible resources. People navigate to a protected webpage and the application redirects the person to the Gluu Server for authentication and authorization. The Gluu Server determines who the person is, and whether the person has the right to access the protected page. The Gluu Server then redirects the user back to the protected page with an authenticated session.
+The Gluu Server is most frequently used to protect web-accessible resources. People navigate to a protected webpage and the application redirects the person to the Gluu Server for authentication and authorization. The Gluu Server determines who the person is, and whether the person has the right to access the protected page. After a successful authentication, the Gluu Server redirects the person back to the protected page with an active session.
 
 The Gluu Server is very flexible in handling authentication. By default, the Gluu Server uses username and password authentication. However, using the Gluu Server's interception script infrastructure, you can define multiple authentication methods and business logic for complex multi-step authentication workflows. You can have multiple authentication mechanisms active at the same time--Web or mobile clients can request a certain authentication type by using standard OpenID Connect request parameters.
 
