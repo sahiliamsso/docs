@@ -1,13 +1,13 @@
 # oxTrust Administrative Graphical User Interface (GUI)
 
 ## Overview 
-The Gluu Server administration interface (oxTrust) is accessible by navigating to 
+This section of the docs covers various features associated with managing your federation service via the Gluu Server interface ("oxTrust"). For more complicated topics and features, this document will link to dedicated sections within the docs where additional operational details are provided.
+
+## Accessing the UI
+The Gluu Server administration interface is accessible by navigating to 
 `https://hostname` (the one you provided during setup). When you 
 first complete an installation, the default username is `admin` and 
 the password is the same as the `LDAP superuser` password. 
-
-!!! Note
-     This section of the docs will cover various concepts and topics associated with managing your federation service via the interface, but will often times link to dedicated sections of the docs where more complicated operations are covered in detail.
 
 ## Welcome Page
 After successful authentication the administrator is taken to the 
