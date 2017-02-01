@@ -6,7 +6,8 @@ The Gluu Server administration interface (oxTrust) is accessible by navigating t
 first complete an installation, the default username is `admin` and 
 the password is the same as the `LDAP superuser` password. 
 
-This section of the docs will cover various concepts and topics associated with managing your federation service via the interface, but will often times link to dedicated sections of the docs with detailed information about more complicated topics.
+!!! Note
+     This section of the docs will cover various concepts and topics associated with managing your federation service via the interface, but will often times link to dedicated sections of the docs with detailed information about more complicated topics.
 
 ## Welcome Page
 After successful authentication the administrator is taken to the 
