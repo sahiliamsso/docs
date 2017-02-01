@@ -8,7 +8,7 @@ In short, refer to these three considerations to determine if you should use SAM
 - If you have a mobile application, use OpenID Connect.
 - If you are writing a new application, use OpenID Connect.
 
-If you are continuing with this SAML documentation it is presumed that your use case aligns with number one above. If not, we recommend that you review the [OpenID Connect](./openid-connect.md) portion of the Gluu Server docs. 
+If you are continuing with this SAML documentation it is presumed that your use case aligns with the first bullet point above. If not, we recommend that you review the [OpenID Connect](./openid-connect.md) portion of the Gluu Server docs. 
  
 ## Outbound SAML
 Outbound SAML can also be called SP-initiated Single Sign-On (SSO) 
