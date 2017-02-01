@@ -162,7 +162,7 @@ look and feel of the Gluu Server. The most commonly used scripts are
 for authentication, authorization and identity synchronization. Each
 type of script has its own interface--in other words what methods are
 available. For more information, see the reference page detailing how
-[to write a custom authentication script](/admin-guide/user-authentications.md).
+[to write a custom authentication script](./user-authentications.md).
 
 ### Manage Registration
 The Gluu Server is shipped with a very basic user registration 
@@ -209,7 +209,7 @@ a user if the user is found in more then one LDAP server. In this case, the two 
 are joined. The source attributes specify which attributes will be 
 pulled from the backend LDAP server. The backend server address, bind DN 
 and other connection information is speciifed in the `Source Backend 
-LDAP Servers` tab. More information on [LDAP Syncronization](./user-group/#ldap-synchronization)
+LDAP Servers` tab. More information on [LDAP Syncronization](./user-group.md/#ldap-synchronization)
 
 ### Configure Log Viewer / View Log File
 This tool can be used to view file system logs. If you don't like to 
