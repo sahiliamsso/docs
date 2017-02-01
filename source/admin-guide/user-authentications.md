@@ -18,7 +18,15 @@ Learn [how to use Passport.js](../authn-guide/passport.md/) to configure social 
 
 ## Configuring Multi-Factor Authentication
 
-A number of multi-factor authentication scripts are shipped in the Gluu Server by default, including support for FIDO U2F tokens (like Vasco and Yubikey), Gluu's free mobile two-factor application Super Gluu, certificate authentication, and Duo Security.  
+Interception scripts are used to implement multi-factor authentication. A number of scripts are included out-of-the-box, including scripts to support FIDO U2F tokens (like Vasco and Yubikey), Gluu's free Android and iOS two-factor authentication application called Super Gluu, certificate authentication, Duo Security, One-Time Passwords, and more. 
+
+Implementation guides for each of the pre-supported authentication mechanisms listed above can be found in the pages that follow in this User Authentication Guide.
+
+In addition, organizations frequently have custom requirements for multi-factor authentication. For instance, only users from a certain group should be prompted for two-factor authentication, or, only prompt users for two-factor authentication when trying to access protected resources from an unknown IP address. Custom interception scripts allow you to implement these types of policies, as well as any other business driven policy that can be scripted. 
+
+Learn more about [how to write a custom interception script](./custom-script.md/).
+
+Review our [custom authentication script tutorial](../authn-guide/customauthn.md/), where we demonstrate how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication mechanism.
 
 ## Configuring Account Lockout
 
