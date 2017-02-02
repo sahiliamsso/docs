@@ -23,8 +23,8 @@ can modify specific attributes relating to that user.
 ![Manage Users](../img/admin-guide/user/admin_users_edituser.png)
 
 ### Manage Groups
-Out of the box, the Gluu Server includes one group: the Gluu Server manager
-group (`gluuManager`). Groups can be added and populated as
+Out of the box, the Gluu Server includes one group: the Gluu Manager
+Group (`gluuManager`). Groups can be added and populated as
 needed. By using the `Manage Groups` feature, the Gluu Server
 Administrator can add, delete or modify any group or user within a
 group. The list of available groups can be viewed by hitting the
