@@ -53,7 +53,7 @@ the interception scripts or following the workflow of the script.
 
 More details on Logs can be found in [Log Management](/admin-guide/logs.md)
 
-## Person Authentication
+## Person Authentication     
 **For a list of pre-written, open source Gluu authentication scripts, 
 view our [server integrations](https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations)**
 
@@ -109,7 +109,7 @@ following methods:
 This script can be used in oxAuth application only.
 
 - [Sample Authentication Script](./sample-authentication-script.py)
-## Certificate Authentication
+### Certificate Authentication
 Gluu Server CE offers a person authentication module enabling Certificate Authentication.
 The image below contains the design diagram for this module.
 
@@ -127,8 +127,9 @@ The script has a few properties:
 |`use_crl_validator`|enable/disable specific certificate validation				|true/false| false|
 |`crl_max_response_size`	|specifies the maximum allowed size of [CRL][crl] response		| Integer > 0| 2|
 
-- [Sample Certificate Authentication Script](./UserCertExternalAuthenticator.py)
-## Update User
+- [Sample Certificate Authentication Script](./UserCertExternalAuthenticator.py)        
+
+## Update User     
 
 oxTrust allows an admin to add and modify users which belong to groups.
 In order to simplify this process and apply repeating actions, oxTrust
@@ -146,14 +147,13 @@ This script can be used in an oxTrust application only.
 
 - [Sample Update User Script](./sample-update-user-script.py)
 
-## User Registration
+## User Registration      
 
 oxTrust allows users to perform self-registration. In order to
 control/validate user registrations there is the user registration
 script type.
 
 This script type adds three methods to the base script type:
-
 
 |Methods|`def initRegistration(self, user, requestParameters, configurationAttributes)`<br/>`def preRegistration(self, user, requestParameters, configurationAttributes)`<br/>`def postRegistration(self, user, requestParameters, configurationAttributes)`|
 |---|---|
@@ -180,7 +180,7 @@ organization systems about the new user entry.
 
 - [Sample User Registration Script](./sample-user-registration-script.py)
 
-## Client Registration
+## Client Registration      
 
 oxAuth implements the [OpenID Connect dynamic client
 registration](https://openid.net/specs/openid-connect-registration-1_0.html)
@@ -202,14 +202,14 @@ This script can be used in an oxAuth application only.
 - [Sample Client Registration Script](./sample-client-registration-script)
 
 
-## Dynamic Scopes
+## Dynamic Scopes      
 The dynamic scope custom script allows the parsing of token returned from `user_info endpoint` into 
 LDAP attributes. The `id_token` is returned from `user_info endpoint` and the values are dynamically placed 
 in the LDAP attributes in Gluu Server.
 
 - [Sample Dynamic Scope Script](./sample-dynamic-script.py) 
 
-## ID Generator
+## ID Generator       
 
 By default oxAuth/oxTrust uses an internal method to generate unique
 identifiers for new person/client, etc. entries. In most cases the
@@ -228,9 +228,9 @@ This script type adds only one method to the base script type:
 
 This script can be used in an oxTrust application only.
 
-- [Sample ID Generation Script](./sample-id-generation.py)
+- [Sample ID Generation Script](./sample-id-generation.py)      
 
-## Cache Refresh
+## Cache Refresh       
 
 In order to integrate an interception script with an existing
 authentication server oxTrust provides a mechanism called [Cache
@@ -250,8 +250,8 @@ This script can be used in an oxTrust application only.
 
 - [Sample Cache Refresh Script](./sample-cache-refresh-script.py)
 
-
-## UMA Authorization Policies
+ 
+## UMA Authorization Policies     
 
 This is a special script for UMA. It allows an admin to protect UMA
 scopes with policies. It is possible to add more than one UMA policy to
@@ -270,7 +270,7 @@ This script can be used in an oxAuth application only.
 - [Sample Authorization Script](./sample-uma-authorization-script.py)
 
 
-## Application Session Management
+## Application Session Management      
 
 This script allows an admin to notify 3rd party systems about requests
 to end an OAuth session. This method is triggered by an oxAuth call to
