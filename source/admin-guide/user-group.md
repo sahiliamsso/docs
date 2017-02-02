@@ -1,7 +1,7 @@
 # User Management in Gluu Server
 
 ## Overview
-Your organization can either "push" or "pull" identity data to the Gluu server to keep it up-to-date with the latest user claims. In the "pull" mode, otherwise known as LDAP Synchronization or Cache Refresh, the Gluu Server can use an existing LDAP identity source like Microsoft Active Directory as the authoritative source of identity information. To "push" identities to the Gluu Server you can use the JSON/REST SCIM API. Local user management can also be performed inside oxTrust. Each method is detailed below.
+You can either "push" or "pull" identity data to the Gluu server to keep it up-to-date with the latest user claims. In the "pull" mode, otherwise known as LDAP Synchronization or Cache Refresh, the Gluu Server can use one or more existing LDAP identity sources like Microsoft Active Directory (AD) as the authoritative source of identity information. To "push" identities to the Gluu Server you can use the JSON/REST SCIM API. Local user management can also be performed inside oxTrust. Each method is detailed below.
 
 ## Local User Management
 

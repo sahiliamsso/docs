@@ -1,15 +1,13 @@
 # Installation 
-
+## Overview
 Gluu publishes packages for Ubuntu, CentOS, RHEL and Debian. The 
 installation procedure is similar across all the distributions: 
 
-1. Install the Linux package
-2. Start the Gluu Server and login to the container
-3. Run `setup.py`
+1. [Install the Linux package](#install-gluu-server-package)
+2. [Start the Gluu Server and login to the container](#start-the-gluu-server-and-login)
+3. [Run `setup.py`](#run-setuppy)
 
-## Step 1
-
-**Install Gluu Server Package**
+## Install Gluu Server Package
 
 ### Ubuntu Server 14.04.x
 
@@ -78,9 +76,7 @@ installation procedure is similar across all the distributions:
 | Update/Clean Repo       | `# apt-get update`                         |
 | Install Gluu Server     | `# apt-get install gluu-server-3.0.0`      |
 
-## Step 2
-
-**Start the Gluu Server and Login**
+## Start the Gluu Server and Login
 
 The Gluu Server is a chroot container, which you must start to proceed. 
 
@@ -101,9 +97,7 @@ For Centos 7.2 and Red Hat 7.2:
 
  * Use `enable` just the first time you start the Gluu Server.
 
-## Step 3
-
-**Run setup.py**
+## Run `setup.py`
 
 Configuration is completed by running the `setup.py` script. This generates 
 certificates, salt values, and renders configuration files. After
@@ -152,9 +146,9 @@ to the Gluu Server.
 !!! Warning
 	Changing of hostname after installation is not supported. 
 
-#### Uninstallation
+## Uninstallation
 
-Messed something up, and want to try again? No problem, just uninstall! 
+Something went wrong? No problem, just uninstall and reinstall.
 
 For Ubuntu 14/16, and Debian 8:
 

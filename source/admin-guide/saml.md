@@ -1,8 +1,8 @@
 # SAML
 ## Overview
-SAML is an XML-based, open-standard data format for exchanging authentication and authorization data between an identity provider (like the Gluu Server) and a service provider (like Salesforce, O365, etc.). SAML is stable and well supported at many of the Internet's largest providers. However, the last major release of SAML was in 2005! Therefore it is important to understand when to use SAML and when to use a newer protocol like OpenID Connect to achieve your identity goals. 
+SAML is an XML-based, open-standard data format for exchanging authentication and authorization data between an identity provider (like the Gluu Server) and a service provider (like Salesforce, O365, etc.). SAML is a stable and mature standard, and is well supported at many of the Internet's largest domains. However, the last major release of SAML was in 2005! Therefore it is important to understand when to use SAML and when to use a newer, more powerful protocol like OpenID Connect to achieve your identity goals. 
 
-In short, refer to these three considerations to determine if you should use SAML:
+In short, refer to these three considerations to determine which protocol to use for single sign-on (SSO):
 
 - If you have an application that already supports SAML–use SAML!
 - If you have a mobile application, use OpenID Connect.

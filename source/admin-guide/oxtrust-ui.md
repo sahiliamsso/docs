@@ -221,13 +221,13 @@ The certificate page provides summary information about your SSL and SAML certif
 If you deployed the Shibboleth SAML IDP or the Asimba SAML proxy during Gluu Server installation, you will see a link to manage inbound and outbound SAML requirements in the left hand navigation. Learn more about configuring and managing SAML in the [SAML](./saml.md) portion of the docs. 
 
 ## OpenID Connect
-The [OpenID Connect protocol](http://openid.net/specs/openid-connect-core-1_0.html) is supported by default in all Gluu Server deployments. Learn more about configuring and managing OpenID Connect in the [OpenID Connect](./openid-connect.md) portion of the docs. 
+The OpenID Connect protocol is supported by default in all Gluu Server deployments. Learn more about configuring and managing OpenID Connect in the [OpenID Connect](./openid-connect.md) portion of the docs. 
 
 ## UMA
-[UMA](./uma.md) or (User-Managed Access) is an access management protocol that is also supported by default in all Gluu Server deployments. Learn more about configuring and managing UMA in the [UMA](./uma.md) portion of the docs.
+UMA (User-Managed Access) is an access management protocol that is also supported by default in all Gluu Server deployments. Learn more about configuring and managing UMA in the [UMA](./uma.md) portion of the docs.
 
 ## Users
-The users tab allows the Gluu admin to perform various user management tasks, including add users to the admin group, search users, and import users from a file. Learn more about managing users in the [user management](./user-group.md) portion of the docs. 
+The users tab allows the Gluu admin to perform various user management tasks like adding users, searching users, and importing users from a file. Learn more about managing users in the [user management](./user-group.md) portion of the docs. 
 
 ## Personal
-Personal tab allows the individual person to view his basic profile and modify certain fields.
+The personal tab allows an individual to view and manage (if enabled) their basic profile information. However, since oxTrust is designed to be an administrative tool it is often not Internet facing, making it a bad choice for user self-service profile management. In general, if user profile management is an important requirement for your organization, we recommend writing a separate app or forking our open source [credential management app](https://github.com/GluuFederation/cred-mgr). 

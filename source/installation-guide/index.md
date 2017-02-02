@@ -8,9 +8,9 @@ requirements.
 |       2  |    4GB     |   40GB            |  64 Bit        |
 
 !!! warning
-    Post support tickets only if all the above requirements are met!
+    Please only post installation issues to [Gluu Support](https://support.gluu.org) if all the above requirements are met!
 
-### Ports
+## Ports
 
 The following ports are open to the Internet by default.
 
@@ -44,53 +44,47 @@ is set in `/proc/sys/fs/file-max`.
 # echo 65535 > /proc/sys/fs/file-max
 ```
 
-* Use the `ulimit` command to set the file descriptor limit to the hard 
-limit specified in `/etc/security/limits.conf`.
+* Use the `ulimit` command to set the file descriptor limit to the hard limit specified in `/etc/security/limits.conf`.
 ```
 # ulimit -n unlimited
 ```
 
-* Restart your system.
+* Restart your system.     
 
-### Amazon AWS
+## Amazon AWS      
 
 Amazon AWS instances provide a public and private IP address. While
 running the `/install/community-edition-setup/setup.py` script, use the
 Private IP address. Also, use a hostname other then the long default
 hostname that Amazon provides. Update your DNS or hosts files accordingly.
 
-### Microsoft Azure
+## Microsoft Azure      
 
 Accessing the Gluu Server on Azure can be a little bit tricky because of
 the Public/Private IP. Azure assigns a new Public/Private IP
 addresses each time the server is started. 
 
-#### Setting up VM
+### Setting up VM       
 1. Log into Windows Azure Administrative Panel
 
-2. Click on `Virtual Machines` tab, and click `Create a Virtual Machine` 
-link
+2. Click on `Virtual Machines` tab, and click `Create a Virtual Machine` link
 
-3. From the menu, choose `Compute` --> `Virtual Machine` --> `From Gallery` 
-branch.
+3. From the menu, choose `Compute` > `Virtual Machine` > `From Gallery` branch.
 
 4. Choose Ubuntu Server 14.04 LTS or CentOS 6.7. Remember to set selinux
    to permissive if you choose CentOS.
 
-5. Provide a name for the VM in the `Virtual Machine Name` field and use
-`Standard` for `Tier`.
+5. Provide a name for the VM in the `Virtual Machine Name` field and use `Standard` for `Tier`.
 
 6. Select a server with at least 4GB RAM in the `Size` dropdown menu.
 
-7. Provide a username/password to connect via ssh and upload a
-   ssh certificate. Click `Next`.
+7. Provide a username/password to connect via ssh and upload ssh certificate. Click `Next`.
 
-8. Create a new cloud service and select `None` for `Availability Set`
-   option.
-        * Endpoints Section: This is where the port forwarding is set so
-      that the internal IP address could be selectively reachable from
+8. Create a new cloud service and select `None` for the `Availability Set` option.
+        * Endpoints Section: This is where port forwarding is set so
+      that the internal IP address can be selectively reachable from
       the outside world. By default, only tcp /22 is there for ssh. The
-      public ports for http and https (tcp ports 80 and 443) have to be
+      public ports for `http` and `https` (tcp ports 80 and 443) have to be
       added and mapped to the same private ports. If the cloud mappings
       are flagged conflicting, proceed without setting them. Remember to
       set them after the creation of the VM. Then, click `Next`.
@@ -105,11 +99,11 @@ branch.
     installation.
 
 
-### Linode VM
+## Linode VM
 
-The Linode Virtual Machines (VM) use a custom kernel which is not 
-supported by Gluu Server, therefore the kernel must be updated before 
-Gluu Server can be installed in Linode VM. The following steps will 
+Linode Virtual Machines (VM) use a custom kernel which is not 
+supported by the Gluu Server, therefore the kernel must be updated before 
+the Gluu Server can be installed in a Linode VM. The following steps will 
 guide you through kernel update in the Linode VM.
 
 * Check for the current version of the kernel. If the output contains `-Linode`, then proceed
@@ -117,12 +111,12 @@ guide you through kernel update in the Linode VM.
 # uname -a
 ```
 
-* Run the following command to update the kernel
+* Run the following command to update the kernel:
 ```
 # apt-get install linux-image-virtual grub2
 ```
 
-* Modify `grub` file in the `/etc/default/` folder
+* Modify `grub` file in the `/etc/default/` folder:
 ```
 # vim /etc/default/grub
 ```
@@ -135,7 +129,7 @@ GRUB_DISABLE_LINUX_UUID=true
 GRUB_SERIAL_COMMAND="serial --speed=19200 --unit=0 --word=8 --parity=no --stop=1"
 ```
 
-* Finally run the following commands to update `grub` and reboot
+* Finally run the following commands to update `grub` and reboot:
 ```
 # update-grub
 # reboot
