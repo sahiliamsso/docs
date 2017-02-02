@@ -329,6 +329,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#export-the-data-from-the-current-installation" title="Export the data from the current installation" class="md-nav__link">
     Export the data from the current installation
   </a>
@@ -952,6 +959,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#export-the-data-from-the-current-installation" title="Export the data from the current installation" class="md-nav__link">
     Export the data from the current installation
   </a>
@@ -988,15 +1002,13 @@
               
                 
                 <h1 id="upgrading-gluu-server-ce">Upgrading Gluu Server CE<a class="headerlink" href="#upgrading-gluu-server-ce" title="Permanent link">#</a></h1>
-<p>Gluu Server cannot be upgraded with simple <code>apt-get upgrade</code>. 
-The admin needs to explicitly install the version of the Gluu Server and
-has to export and import the required data using scripts. 
-It generally involves the following steps:</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
+<p>Gluu Server cannot be upgraded with simple <code>apt-get upgrade</code>. The admin needs to explicitly install the new version of the Gluu Server and export and import the required data using scripts. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>As a precautionary measure, Please make sure to back up the 
-Gluu container or LDAP Ldif before proceeding to upgrading.</p>
+<p>Make sure to <a href="../../operation/backup.md/">backup</a> the Gluu container or LDAP Ldif before proceeding with the upgrade. </p>
 </div>
+<p>Upgrading generally involves the following steps:   </p>
 <ul>
 <li>Install new version</li>
 <li>Export the data from your current version</li>
@@ -1004,10 +1016,9 @@ Gluu container or LDAP Ldif before proceeding to upgrading.</p>
 <li>Start the new version of Gluu Server</li>
 <li>Import data into the new server</li>
 </ul>
-<p>Gluu provides the necessary <a href="https://github.com/GluuFederation/community-edition-setup/tree/master/static/scripts">scripts</a> to perform the import and export of the data in and out of the servers.</p>
+<p>Gluu provides the necessary <a href="https://github.com/GluuFederation/community-edition-setup/tree/master/static/scripts">scripts</a> to import and export data in and out of the servers.</p>
 <blockquote>
-<p>NOTE: In this documentation, '2.x.x' is referred to existing installed 
-version of Gluu CE Server. </p>
+<p>NOTE: In this documentation, we assume the existing installed Gluu Server version is 2.x.x. </p>
 </blockquote>
 <h2 id="export-the-data-from-the-current-installation">Export the data from the current installation<a class="headerlink" href="#export-the-data-from-the-current-installation" title="Permanent link">#</a></h2>
 <pre><code># service gluu-server-2.x.x login
@@ -1019,18 +1030,13 @@ version of Gluu CE Server. </p>
 # ./export24.py
 </code></pre>
 
-<p>The export script will generate a directory called <code>backup_24</code> which will 
-have all the data backed up from the current installation.
-Check the log file generated in the directory for any errors.</p>
+<p>The export script will generate a directory called <code>backup_24</code> which will have all the data from the current installation. Check the log file generated in the directory for any errors.</p>
 <h2 id="install-the-latest-version-of-the-gluu-server">Install the latest version of the Gluu server<a class="headerlink" href="#install-the-latest-version-of-the-gluu-server" title="Permanent link">#</a></h2>
 <p>Stop the current version of the gluu-server.</p>
 <pre><code># service gluu-server-2.4.x stop
 </code></pre>
 
-<p>Consult the <a href="../installation-guide/install/">docs</a> of the 
-respective distribution about how to install the Gluu Server using the 
-package manager. Once the package manager has installed the version
-<code>3.0.0</code>, then:</p>
+<p>Review the <a href="../installation-guide/install/">installation docs</a> to install the Gluu Server using the package manager. Once the package manager has installed version <code>3.0.0</code>, then execute the following commands:</p>
 <pre><code># cp -r /opt/gluu-server-2.4.x/root/backup_24/ /opt/gluu-server-3.0.0/root/
 
 # service gluu-server-3.0.0 start
@@ -1044,12 +1050,9 @@ package manager. Once the package manager has installed the version
 # ./setup.py
 </code></pre>
 
-<p>Enter the required information for the setup and complete the 
-installation.</p>
+<p>Enter the required information to complete the installation.</p>
 <h2 id="import-your-old-data">Import your old data<a class="headerlink" href="#import-your-old-data" title="Permanent link">#</a></h2>
-<p>Go to the folder where you have the <code>backup_24</code> folder 
-(if the above commands were followed, it is in /root/) and  get the 
-necessary scripts.</p>
+<p>Navigate to where you have the <code>backup_24</code> folder (if the above commands were followed, it is in <code>/root/</code>) and execute the following commands to get the necessary scripts.</p>
 <pre><code>
 # wget -c https://raw.githubusercontent.com/GluuFederation/community-edition-setup/master/static/scripts/import30.py
 
@@ -1073,7 +1076,7 @@ or
 # ./import30.py backup_24
 </code></pre>
 
-<p>Any error or warning will be displayed in the terminal or can be seen in the import log generated. Now the admin should be able to log into the oxTrust web-UI with the old admin credentials and see all previous data in place. After the completion of import, stop/start 2.4.4 container one more time. </p>
+<p>Any errors or warnings will be displayed in the terminal and can be reviewed in the import log. Now you should be able to log into the oxTrust web UI using the old admin credentials. You should see all previous data in place. After completion of import, stop/start 2.4.4 container one final time. </p>
               
             </article>
           </div>
