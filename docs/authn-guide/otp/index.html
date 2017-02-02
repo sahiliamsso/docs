@@ -547,6 +547,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dont-have-a-qr-code-to-scan" title="Don't have a QR code to scan:" class="md-nav__link">
+    Don't have a QR code to scan:
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -998,6 +1005,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dont-have-a-qr-code-to-scan" title="Don't have a QR code to scan:" class="md-nav__link">
+    Don't have a QR code to scan:
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1076,16 +1090,19 @@ RP-&gt;Gluu Server: Request user_info
 <ol>
 <li>Confire new custom module in oxTrust:<ul>
 <li>Log into oxTrust with administrative permissions.</li>
-<li>Open "Configuration→Manage Custom Scripts" page.</li>
-<li>Select "Person Authentication" tab.</li>
-<li>Click on "Add custom script configuration" link.</li>
+<li>Open <code>Configuration</code> &gt; <code>Manage Custom Scripts</code>.</li>
+<li>Select `Person Authentication tab.</li>
 <li>Enter name = otp</li>
 <li>Enter level = 0-100 (priority of this method).</li>
-<li>Select usage type "Interactive".</li>
-<li>Add custom required and optional properties which specified in "Properties description.md".</li>
+<li>Select usage type <code>Interactive</code>.</li>
+<li>Select the <code>Location Type</code>, if the <code>Location type</code> is LDAP, 
+  script would be automatically populated in the <code>script</code> box below.</li>
+<li>If <code>Location type</code> is selected as text, follow the below<ul>
 <li>Copy/paste script from TotpExternalAuthenticator.py.</li>
-<li>Activate it via "Enabled" checkbox.</li>
-<li>Click "Update" button at the bottom of this page.</li>
+</ul>
+</li>
+<li>Activate it via <code>Enabled</code> checkbox.</li>
+<li>Click <code>Update</code> button at the bottom of this page.</li>
 </ul>
 </li>
 </ol>
@@ -1095,9 +1112,9 @@ RP-&gt;Gluu Server: Request user_info
 <ol>
 <li>Configure oxAuth to use OTP authentication by default:<ul>
 <li>Log into oxTrust with administrative permissions.</li>
-<li>Open "Configuration→Manage Authentication" page.</li>
-<li>Scroll to "Default Authentication Method" panel. Select "otp" authentication mode.</li>
-<li>Click "Update" button at the bottom of this page.</li>
+<li>Navigate to <code>Configuration</code> &gt; <code>Manage Authentication</code>.</li>
+<li>Select <code>Default Authentication Method</code> tab. Select "otp" authentication mode.</li>
+<li>Click <code>Update</code> button at the bottom of this page.</li>
 </ul>
 </li>
 </ol>
@@ -1112,11 +1129,15 @@ RP-&gt;Gluu Server: Request user_info
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Even if you have OTP generated on the mobile authenticator app, you might have to scan the qr code again, if you are logging in from different computer or at a different time or for a different session. Since the QR code would expire after some time.</p>
+<p>Even if you have OTP generated on the mobile authenticator app, 
+you might have to scan the qr code again, if you are logging in 
+from different computer or at a different time or for a different session. 
+Since the QR code would expire after some time.</p>
 </div>
 <p><img alt="login" src="../../img/user-authn/otp/login-page.png" />
 <img alt="scanqr" src="../../img/user-authn/otp/scan-qr.png" /></p>
-<p>There are log messages in this custom authentication script. In order to debug this module we can use below command.</p>
+<p>There are log messages in this custom authentication script. 
+In order to debug this module we can use below command.</p>
 <pre><code>tail -f /opt/gluu/jetty/identity/logs/oxtrust.log | grep &quot;OTP&quot;
 </code></pre>
 
@@ -1124,6 +1145,11 @@ RP-&gt;Gluu Server: Request user_info
 <pre><code>tail -f /opt/gluu/jetty/identity/logs/oxtrust_script.log | grep &quot;OTP&quot;
 </code></pre>
 
+<h2 id="dont-have-a-qr-code-to-scan">Don't have a QR code to scan:<a class="headerlink" href="#dont-have-a-qr-code-to-scan" title="Permanent link">#</a></h2>
+<p>If you have changed your mobile or you have reinstalled Google Authenticator app, 
+and if the app is looking for QR code to scan, and you don't see a QR code.
+Open Gluu LDAP server using a LDAP browser and navigate to  <code>appliances</code> 
+and search for an attribute <code>oxExternalUid</code>. Remove the values of this attribute. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Logs would be populate only if logs are enabled. For more on logs refer <a href="../../operation/logs/">Log management</a></p>

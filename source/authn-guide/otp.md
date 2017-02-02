@@ -77,16 +77,17 @@ This list of steps needed to  enable OTP person authentication module.
 
 1. Confire new custom module in oxTrust:
     - Log into oxTrust with administrative permissions.
-    - Open "Configuration→Manage Custom Scripts" page.
-    - Select "Person Authentication" tab.
-    - Click on "Add custom script configuration" link.
+    - Open `Configuration` > `Manage Custom Scripts`.
+    - Select `Person Authentication tab.
     - Enter name = otp
     - Enter level = 0-100 (priority of this method).
-    - Select usage type "Interactive".
-    - Add custom required and optional properties which specified in "Properties description.md".
-    - Copy/paste script from TotpExternalAuthenticator.py.
-    - Activate it via "Enabled" checkbox.
-    - Click "Update" button at the bottom of this page.
+    - Select usage type `Interactive`.
+    - Select the `Location Type`, if the `Location type` is LDAP, 
+      script would be automatically populated in the `script` box below.
+    - If `Location type` is selected as text, follow the below
+        - Copy/paste script from TotpExternalAuthenticator.py.
+    - Activate it via `Enabled` checkbox.
+    - Click `Update` button at the bottom of this page.
 
 ![customscripts](../img/user-authn/otp/custom-scripts.png)
 ![select-otp](../img/user-authn/otp/selct-otp.png)
@@ -94,9 +95,9 @@ This list of steps needed to  enable OTP person authentication module.
 
 2. Configure oxAuth to use OTP authentication by default:
     - Log into oxTrust with administrative permissions.
-    - Open "Configuration→Manage Authentication" page.
-    - Scroll to "Default Authentication Method" panel. Select "otp" authentication mode.
-    - Click "Update" button at the bottom of this page.
+    - Navigate to `Configuration` > `Manage Authentication`.
+    - Select `Default Authentication Method` tab. Select "otp" authentication mode.
+    - Click `Update` button at the bottom of this page.
 
 ![defaulttab](../img/user-authn/otp/default-authtab.png)
 	
@@ -106,13 +107,17 @@ This list of steps needed to  enable OTP person authentication module.
     - Open second browser or second browsing session and try to log in again. It's better to try to do that from another browser session because we can return back to previous authentication method if something will go wrong.
 
 !!! note
-	Even if you have OTP generated on the mobile authenticator app, you might have to scan the qr code again, if you are logging in from different computer or at a different time or for a different session. Since the QR code would expire after some time.
+	Even if you have OTP generated on the mobile authenticator app, 
+	you might have to scan the qr code again, if you are logging in 
+	from different computer or at a different time or for a different session. 
+	Since the QR code would expire after some time.
 	
 ![login](../img/user-authn/otp/login-page.png)
 ![scanqr](../img/user-authn/otp/scan-qr.png)
 
 
-There are log messages in this custom authentication script. In order to debug this module we can use below command.
+There are log messages in this custom authentication script. 
+In order to debug this module we can use below command.
 
 ```
 tail -f /opt/gluu/jetty/identity/logs/oxtrust.log | grep "OTP"
@@ -122,6 +127,11 @@ and
 ```
 tail -f /opt/gluu/jetty/identity/logs/oxtrust_script.log | grep "OTP"
 ```
+## Don't have a QR code to scan:
+If you have changed your mobile or you have reinstalled Google Authenticator app, 
+and if the app is looking for QR code to scan, and you don't see a QR code.
+Open Gluu LDAP server using a LDAP browser and navigate to  `appliances` 
+and search for an attribute `oxExternalUid`. Remove the values of this attribute. 
+
 !!! note
 	Logs would be populate only if logs are enabled. For more on logs refer [Log management](../operation/logs.md)
-

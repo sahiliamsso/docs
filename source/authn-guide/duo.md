@@ -30,15 +30,15 @@ For additional info on Duo's Web SDK, check [this article](https://duo.com/docs/
 
 Follow the steps below to configure the Duo module in the oxTrust Admin GUI.
 
-1. Click on Manage Custom Scripts under Configuration on the Main Menu.
-
-2. Scroll down to the Duo authentication script   
+1. Navigate to `Configuration` > `Manage Custom Scripts`.
+2. Click on the `Person Authentication` tab.
+3. Scroll down to the Duo authentication script   
 ![duo-script](../img/admin-guide/multi-factor/duo-script.png)
 
-3. Change the value of `duo_host` to your API    
+4. Change the value of `duo_host` to your API    
 
-4. Enable the script by ticking the check box    
+5. Enable the script by ticking the check box    
 ![enable](../img/admin-guide/enable.png)
 
-5. Change the dufault authentication method to Duo   
+6. Change the `Default authentication method` to Duo   
 ![duo](../img/admin-guide/multi-factor/duo.png)
