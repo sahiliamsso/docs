@@ -567,12 +567,12 @@
         },
         {
             "location": "/admin-guide/session/",
-            "text": "Session Timeout in Gluu\n#\n\n\nSession Timeout can be configured under \nJSON Configuration>OxAuth Properties.\n\n\nThese properties are\n1. SessionUnusedLifeTime\n2. sessionIdUnauthenticatedUnusedLifetime\n\n\nSessionUnusedLifeTime\n#\n\n\nSessionUnusedLifeTime property is set to default for a day. \nSession timeout works in such way that if the application is logged out, \nif SessionUnusedLifeTime gets expired. If specific session timeout is set \nin an application, it would be overrided by the SessionUnusedLifeTime from \nGluu.\n\n\nIf application's Session time is less than the session time out \nconfigured in Gluu, the application's session would be reauthorized and \nset to a future time for timeout, where the applicatin's session timeout \nwill be overrided by Gluu's Session timeout property.\n\n\nSessionIdUnauthenticatedUnusedLifeTime\n#\n\n\nList of OxAuth Properties for reference can be found in \n\nOxAuth JSON Properties",
+            "text": "Session Timeout in Gluu\n#\n\n\nSession Timeout can be configured under \nJSON Configuration>OxAuth Properties.\n\n\nThese properties are\n\n\n\n\nSessionUnusedLifeTime\n\n\nsessionIdUnauthenticatedUnusedLifetime\n\n\n\n\nSessionUnusedLifeTime\n#\n\n\nSessionUnusedLifeTime property is set to default for a day. \nSession timeout works in such way that if the application is logged out, \nif SessionUnusedLifeTime gets expired. If specific session timeout is set \nin an application, it would be overrided by the SessionUnusedLifeTime from \nGluu.\n\n\nIf application's Session time is less than the session time out \nconfigured in Gluu, the application's session would be reauthorized and \nset to a future time for timeout, where the applicatin's session timeout \nwill be overrided by Gluu's Session timeout property.\n\n\nSessionIdUnauthenticatedUnusedLifeTime\n#\n\n\nList of OxAuth Properties for reference can be found in \n\nOxAuth JSON Properties",
             "title": "Session Timeout"
         },
         {
             "location": "/admin-guide/session/#session-timeout-in-gluu",
-            "text": "Session Timeout can be configured under \nJSON Configuration>OxAuth Properties.  These properties are\n1. SessionUnusedLifeTime\n2. sessionIdUnauthenticatedUnusedLifetime",
+            "text": "Session Timeout can be configured under \nJSON Configuration>OxAuth Properties.  These properties are   SessionUnusedLifeTime  sessionIdUnauthenticatedUnusedLifetime",
             "title": "Session Timeout in Gluu"
         },
         {

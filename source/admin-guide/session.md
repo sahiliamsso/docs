@@ -4,8 +4,9 @@ Session Timeout can be configured under
 JSON Configuration>OxAuth Properties.
 
 These properties are
-1. SessionUnusedLifeTime
-2. sessionIdUnauthenticatedUnusedLifetime
+
+- SessionUnusedLifeTime
+- sessionIdUnauthenticatedUnusedLifetime
 
 ## SessionUnusedLifeTime
 
