@@ -1362,13 +1362,10 @@ appear:</p>
 <p><code>service identity start</code></p>
 <h3 id="create-a-trust-relationship-in-the-gluu-server">Create a Trust Relationship in the Gluu Server<a class="headerlink" href="#create-a-trust-relationship-in-the-gluu-server" title="Permanent link">#</a></h3>
 <ul>
-<li>Go to SAML → Trust Relationships</li>
-<li>Click on “Add Relationship”</li>
-</ul>
-<p><img alt="addTR" src="../../img/saml/addTR.png" /></p>
-<ul>
+<li>Go to <code>SAML</code> &gt; <code>Trust Relationships</code></li>
+<li>Click on <code>Add Trust Relationship</code></li>
 <li>A new page will appear where you can provide all the required information to create a Trust
-  Relationship.</li>
+  Relationship(TR).</li>
 </ul>
 <p><img alt="newTR" src="../../img/saml/newTR.png" /></p>
 <ul>
@@ -1391,7 +1388,7 @@ entity id” will appear. Use this link to find and select the SP entityIDs that
 <p><em>Released</em>: The SPs required attributes must be added to this panel. The required attributes can be selected from the menu on the left with the heading “Release Additional Attributes”.     </p>
 </li>
 </ul>
-<p>The TR is added by clicking the <code>Add</code> button located in the lower left side of the page.     </p>
+<p>The Trust Relationship(TR) is added by clicking the <code>Add</code> button located in the lower left side of the page.     </p>
 <h3 id="relying-party-configuration">Relying Party Configuration<a class="headerlink" href="#relying-party-configuration" title="Permanent link">#</a></h3>
 <p>If the target application does not already support SAML, the Relying Party software must be configured. The relying party configuration is accessible on the TR Creation page. The checkbox <code>Configure specific Relying Party</code> must be checked.     </p>
 <p><img alt="enable-relying-party.png" src="../../img/saml/enable-relying-party.png" />     </p>
@@ -1407,9 +1404,17 @@ entity id” will appear. Use this link to find and select the SP entityIDs that
 <p>Once a TR has been established with the federation, the Gluu Server administrator can easily create TRs with any SP included in the federation by selecting the federation from the <code>Federation Name</code> drop down menu and selecting the entity-id for the SP.</p>
 <p><img alt="federation-entityid.png" src="../../img/saml/federation-entityid.png" /></p>
 <h2 id="inbound-saml">Inbound SAML<a class="headerlink" href="#inbound-saml" title="Permanent link">#</a></h2>
-<p>Inbound SAML allows users from external identity providers to SSO into services protected by the Gluu Server. The Gluu Server uses an open source product called <a href="http://www.asimba.org/site/">Asimba</a> to achieve inbound SAML. Asimba allows SPs to use a single IDP for SSO even when users come from multiple trusted external IDPs. </p>
-<p>The Gluu Server is shipped with a SAML Script which simplifies the process of using Asimba. This section provides a step-by-step method of configuring Asimba with two (2) IDPs and a single SP. The administrator can add multiple IDPs or SPs if required using the same method. However, it is required that all SPs and IDPs are connected to the Asimba server, or the IDP that has the Asimba module enabled.
-i<img alt="asimba-overview" src="../../img/asimba/overview.png" /></p>
+<p>Inbound SAML allows users from external identity providers to 
+SSO into services protected by the Gluu Server. The Gluu Server uses an 
+open source product called <a href="http://www.asimba.org/site/">Asimba</a> to achieve 
+inbound SAML. Asimba allows SPs to use a single IDP for SSO even when users 
+come from multiple trusted external IDPs. </p>
+<p>The Gluu Server is shipped with a SAML Script which simplifies the process of 
+using Asimba. This section provides a step-by-step method of configuring Asimba 
+with two (2) IDPs and a single SP. The administrator can add multiple IDPs or SPs 
+if required using the same method. However, it is required that all SPs and IDPs 
+are connected to the Asimba server, or the IDP that has the Asimba module enabled.</p>
+<p>i<img alt="asimba-overview" src="../../img/asimba/overview.png" /></p>
 <h3 id="required-setup">Required Setup<a class="headerlink" href="#required-setup" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -1442,15 +1447,8 @@ https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations/saml</s
 <p><strong>Note: The configuration below is done in the Gluu Server with Asimba 
 installed with the hostname <code>https://test.gluu.org</code>.</strong></p>
 <ul>
-<li>
-<p>Log into the oxTrust interface as <code>admin</code></p>
-</li>
-<li>
-<p>Navigate to Configuration --&gt; Manage Custom Scripts</p>
-</li>
-</ul>
-<p><img alt="custom-script-menu" src="../../img/oxtrust/custom-script-menu.png" /></p>
-<ul>
+<li>Log into the oxTrust interface as <code>admin</code></li>
+<li>Navigate to <code>Configuration</code> &gt; <code>Manage Custom Scripts</code></li>
 <li>Select/Add <code>saml</code> script from <code>Person Authentication</code> tab</li>
 </ul>
 <p><img alt="custom-script-person-authentication" src="../../img/asimba/cspa.png" /></p>
@@ -1491,16 +1489,9 @@ installed with the hostname <code>https://test.gluu.org</code>.</strong></p>
 <p><strong>Note: The configuration below is done in the Gluu Server    <br />
 with Asimba installed with the hostname <code>https://test.gluu.org</code>.</strong></p>
 <ul>
-<li>
-<p>Log into the oxTrust interface</p>
-</li>
-<li>
-<p>Navigate to SAML --&gt; Idp</p>
-</li>
-</ul>
-<p><img alt="image" src="../../img/asimba/asimba_idp.png" /></p>
-<ul>
-<li>Click on 'Add IDP' button</li>
+<li>Log into the oxTrust interface</li>
+<li>Navigate to <code>SAML</code> &gt; <code>IDP</code></li>
+<li>Click on <code>Add IDP</code> button</li>
 </ul>
 <p><img alt="image" src="../../img/asimba/asimba-idp_button.png" /></p>
 <ul>
@@ -1567,16 +1558,9 @@ with Asimba installed with the hostname <code>https://test.gluu.org</code>.</str
 <p><img alt="image" src="../../img/asimba/add_idp.png" /></p>
 <h3 id="adding-sp-requestor-in-asimba-server">Adding SP Requestor in Asimba Server<a class="headerlink" href="#adding-sp-requestor-in-asimba-server" title="Permanent link">#</a></h3>
 <ul>
-<li>
-<p>Log into oxTrust interface</p>
-</li>
-<li>
-<p>Navigate to SAML --&gt; SP Requestor</p>
-</li>
-</ul>
-<p><img alt="image" src="../../img/asimba/asimba-sp_menu.png" /></p>
-<ul>
-<li>Click on 'Add SP Requestor'</li>
+<li>Log into oxTrust interface</li>
+<li>Navigate to <code>SAML</code> &gt; <code>SP Requestor</code></li>
+<li>Click on <code>Add SP Requestor</code></li>
 </ul>
 <p><img alt="image" src="../../img/asimba/asimba-sp_addbutton.png" /></p>
 <ul>
@@ -1649,7 +1633,12 @@ with Asimba installed with the hostname <code>https://test.gluu.org</code>.</str
 </li>
 </ul>
 <h3 id="test-asimba-with-saml-proxy">Test Asimba with SAML Proxy<a class="headerlink" href="#test-asimba-with-saml-proxy" title="Permanent link">#</a></h3>
-<p>Here is a quick video on how SAML Proxy SSO might look like. Here in this video we are using 'https://sp.gluu.org/protected/print.py' as our protected service provider link. After initiating the SSO, we are moved to Gluu Server's SAML Proxy discovery page ( https://test.gluu.org ). From there we selected 'Nest' as our desired authentication server. After succesful authentication we are landing to proctected resource. </p>
+<p>Here is a quick video on how SAML Proxy SSO might look like. 
+Here in this video we are using 'https://sp.gluu.org/protected/print.py' as 
+our protected service provider link. After initiating the SSO, we are moved 
+to Gluu Server's SAML Proxy discovery page ( https://test.gluu.org ). From 
+there we selected 'Nest' as our desired authentication server. After succesful 
+authentication we are landing to proctected resource. </p>
 <ul>
 <li><a href="https://youtu.be/YEyrOWJu0yo">Youtube Video Link</a></li>
 </ul>
