@@ -9,36 +9,26 @@ In oxTrust, you can add, edit and manage people, groups and user
 attributes and claims to ensure the proper information is released about
 the right people.
 
-### People
-To manage people, navigate to User > Manage People, as shown in the
-screenshot below.
+### Manage People
+To manage people, navigate to `User` > `Manage People`.
 
-![people](../img/admin-guide/user/manage_people.png)
-
-From this interface you can add users and search for specific users.
-Because the user database can potentially be very large, a value is
-required in the search field. In other words, you can not click search
-with a blank entry to populate all users. If you need to see all users,
-this would be best performed manually within the Gluu OpenDJ server.
-Upon performing a user search, a list will be populated with all users
-that match the search, as shown in the screenshot below.
+From this interface you can add and search users. Because the user database can potentially be very large, a value is required in the search field. In other words, you can not click search with a blank entry to populate all users. If you need to see all users, this would be best performed manually within the Gluu LDAP server. Upon performing a user search in oxTrust a list will be populated with all users that match the search.
 
 ![Search Users](../img/admin-guide/user/admin_users_searchadmin.png)
 
 To edit a user, simply click on any of the hyperlinks associated with
 that user and you will be taken to a user management interface where you
-can modify that specific attributes relating to that user as displayed
-below.
+can modify specific attributes relating to that user.
 
 ![Manage Users](../img/admin-guide/user/admin_users_edituser.png)
 
-## Groups
-Out of the box, the Gluu Server includes one group: Gluu Server manager
-group, named: “gluuManager”. Groups can be added and populated as
-needed. By using the *Manage Groups* feature, the Gluu Server
+### Manage Groups
+Out of the box, the Gluu Server includes one group: the Gluu Server manager
+group (`gluuManager`). Groups can be added and populated as
+needed. By using the `Manage Groups` feature, the Gluu Server
 Administrator can add, delete or modify any group or user within a
 group. The list of available groups can be viewed by hitting the
-_Search_ button with a blank search box.
+`Search` button with a blank search box.
 ![Manage User Groups](../img/admin-guide/user/admin_users_managegroups.png)
 
 The Gluu Server Administrator can modify information such as Display
@@ -52,6 +42,33 @@ specific group, this can be achieved be clicking on the Add Member
 button. The flow is _Add Member --> Search the name/email of the user
 --> Select the user --> Click OK --> Update._
 ![Add Member](../img/admin-guide/user/admin_users_addmember.png)
+
+### Import People
+Gluu Server allows the administrator to import users from a file. This can be accessed by navigating to `Users` > `Import People`.
+
+![image](../img/admin-guide/user/import-people_add.png)
+
+* Click on the `Add` button to select the file from which the users will be imported. This feature has been tested with a `xls` file.
+
+![image](../img/admin-guide/user/import-people_validate.png)
+
+* The file needs to be validated before it can be imported. Click on the `Validate` button.
+
+![import](../img/admin-guide/user/import-people_import.png)
+
+* Click on the `Import` button to complete the import of users.
+
+#### File Structure
+
+The file needs to contain the following fields from which the user data will be pulled. Please remember to use the exact spelling as shown here.
+
+* Username
+
+* First Name
+
+* Last Name
+
+* Email
 
 ## LDAP Synchronization 
 LDAP Synchronization, a.k.a. Cache Refresh, is the process of connecting 
@@ -74,13 +91,9 @@ The Gluu Server supports two LDAP modes:
 - Authentication 
 - Identity mapping
 
-Only sometimes it is the same LDAP server. To
-synchronize user accounts from an external LDAP directory server, you
-can use the built-in oxTrust features for ”Cache Refresh”, which support
-mapping identities from n number of source directory servers.
+Only sometimes is it the same LDAP server. To synchronize user accounts from an external LDAP directory server, you can use the built-in oxTrust features for Cache Refresh, which supports mapping identities from one or more source directory servers.
 
-After configuring Cache Refresh, you should give it some time to run,
-and populate the LDAP server. Here are some tips before you get started:
+After configuring Cache Refresh, you should give it some time to run and populate the LDAP server. Here are some tips before you get started:
 
 * Enable 'Keep External Person' during CR setup. This will allow your
   default user 'admin' to log into Gluu Server after initial Cache 
@@ -284,36 +297,6 @@ upgraded sections here.
   * _Update and Validate Script:_ This button is used to test the
     operation and integrity of any custom script such as a Jython Script.
 
-## Import People from file
-
-![image](../img/admin-guide/user/import-people_menu.png)
-
-Gluu Server allows the administrator to add users from files. This can be accessed from the `Import People` button from the `Users` menu.
-
-![image](../img/admin-guide/user/import-people_add.png)
-
-* Click on the `Add` button to select the file from which the users will be imported. This feature has been tested with a `xls` file.
-
-![image](../img/admin-guide/user/import-people_validate.png)
-
-* The file needs to be validated before it can be imported. Click on the `Validate` button.
-
-![import](../img/admin-guide/user/import-people_import.png)
-
-* Click on the `Import` button to complete the import of users.
-
-### File Scructure
-
-The file needs to contain the following fields from which the user data will be pulled. Please remember to use the exact spelling as shown here.
-
-* Username
-
-* First Name
-
-* Last Name
-
-* Email
-
 ## User Registration
 Self-Registration is done by users on a self-service basis. Since
 oxTrust user registration cannot add users to a backend LDAP or Active
@@ -445,7 +428,7 @@ The following code snippet uses the User object.
         String id = userCreated.getId();
 ```
 
-#### Delete User
+### Delete User
 To delete a user only the id (the LDAP `inum`) is needed.
 
 ```
