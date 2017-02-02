@@ -5,7 +5,7 @@ installation procedure is similar across all the distributions:
 
 1. [Install the Linux package](#install-gluu-server-package)
 2. [Start the Gluu Server and login to the container](#start-the-gluu-server-and-login)
-3. [Run `setup.py`](#run-setup.py)
+3. [Run `setup.py`](#run-setuppy)
 
 ## Install Gluu Server Package
 
