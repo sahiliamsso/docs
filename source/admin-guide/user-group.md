@@ -444,7 +444,9 @@ To delete a user only the id (the LDAP `inum`) is needed.
 
 ### User Extensions
 
-User Extensions allow you to create Custom Attributes in SCIM 2.0. Set the custom attribute's `SCIM Attribute` parameter to `true` in oxTrust GUI and it will be recognized as a User Extension. This is required to create new custom attributes.
+User Extensions allow you to create Custom Attributes in SCIM 2.0. 
+Set the custom attribute's `SCIM Attribute` parameter to `true` in oxTrust GUI and 
+it will be recognized as a User Extension. This is required to create new custom attributes.
 
 ![image](../img/admin-guide/user/scim-attribute.png)
 

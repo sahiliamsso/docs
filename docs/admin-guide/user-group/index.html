@@ -531,8 +531,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scim-20-user-adddelete" title="SCIM 2.0 User Add/Delete" class="md-nav__link">
-    SCIM 2.0 User Add/Delete
+  <a href="#scim-20" title="SCIM 2.0" class="md-nav__link">
+    SCIM 2.0
   </a>
   
     <nav class="md-nav">
@@ -592,15 +592,15 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#user-extensions" title="User Extensions" class="md-nav__link">
     User Extensions
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1273,8 +1273,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scim-20-user-adddelete" title="SCIM 2.0 User Add/Delete" class="md-nav__link">
-    SCIM 2.0 User Add/Delete
+  <a href="#scim-20" title="SCIM 2.0" class="md-nav__link">
+    SCIM 2.0
   </a>
   
     <nav class="md-nav">
@@ -1334,15 +1334,15 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#user-extensions" title="User Extensions" class="md-nav__link">
     User Extensions
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1698,7 +1698,7 @@ registration feature.</p>
 <p><img alt="image" src="../../img/admin-guide/user/config-manage-script_check.png" /></p>
 <p>Now users should be able to self-register through the user registration link, which should be available at <code>&lt;hostname&gt;/identity/register</code>.</p>
 <p><img alt="image" src="../../img/admin-guide/user/config-manage-script_enable.png" /></p>
-<h2 id="scim-20-user-adddelete">SCIM 2.0 User Add/Delete<a class="headerlink" href="#scim-20-user-adddelete" title="Permanent link">#</a></h2>
+<h2 id="scim-20">SCIM 2.0<a class="headerlink" href="#scim-20" title="Permanent link">#</a></h2>
 <p>This section outlines how to add/remove user from Gluu Server CE using <a href="https://github.com/GluuFederation/SCIM-Client">SCIM-Client</a>.</p>
 <h3 id="add-user">Add User<a class="headerlink" href="#add-user" title="Permanent link">#</a></h3>
 <p>There are two methods to add users:</p>
@@ -1830,14 +1830,12 @@ registration feature.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="user-extensions">User Extensions<a class="headerlink" href="#user-extensions" title="Permanent link">#</a></h2>
-<p>SCIM 2.0 User Extensions implementation a.k.a Custom Attributes in SCIM 2.0
-in Gluu server is very simple. 
-Just set the custom attribute's <code>SCIM Attribute</code> parameter to <code>true</code> in 
-oxTrust GUI and it will be recognized as a User extension. It is a must to 
-create new custom attributes to be used as User extensions for a cleaner implementation.</p>
+<h3 id="user-extensions">User Extensions<a class="headerlink" href="#user-extensions" title="Permanent link">#</a></h3>
+<p>User Extensions allow you to create Custom Attributes in SCIM 2.0. 
+Set the custom attribute's <code>SCIM Attribute</code> parameter to <code>true</code> in oxTrust GUI and 
+it will be recognized as a User Extension. This is required to create new custom attributes.</p>
 <p><img alt="image" src="../../img/admin-guide/user/scim-attribute.png" /></p>
-<p>You can verify the User extensions via the <code>Schema</code> endpoint:</p>
+<p>You can verify the User Extensions via the <code>Schema</code> endpoint:</p>
 <p><code>&lt;domain root&gt;/identity/seam/resource/restv1/scim/v2/Schemas/urn:ietf:params:scim:schemas:extension:gluu:2.0:User</code></p>
 <p><img alt="image" src="../../img/admin-guide/user/scim-custom-first.png" /></p>
 <p>Now for the actual code, you can refer to the unit tests in SCIM-Client:</p>
