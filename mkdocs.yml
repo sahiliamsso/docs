@@ -49,11 +49,6 @@ pages:
         - 'SCIM protected by UMA' : 'admin-guide/scim-uma.md'
         - 'Certificate Management' : 'admin-guide/certificate.md'
 - Integration Guide:
-        - 'SaaS Integrations'
-            - 'Google SSO': 'integration/google.md'
-            - 'Office 365': 'integration/office.md'
-        - 'Developer Tools'
-            - 'OXD OAuth2': 'integration/oauth2.md'
 #    - 'Integration in Gluu Server': 'integration/index.md'
         - 'Shibboleth SP': 'integration/saml-sp.md'
         - 'Mod_auth_OpenID': 'integration/openidc-rp.md'
