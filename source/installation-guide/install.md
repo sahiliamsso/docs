@@ -148,7 +148,7 @@ to the Gluu Server.
 
 ## Uninstallation
 
-Messed something up and want to try again? No problem, just uninstall! 
+Something went wrong? No problem, just uninstall and reinstall.
 
 For Ubuntu 14/16, and Debian 8:
 
