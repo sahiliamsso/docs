@@ -79,7 +79,7 @@ following methods:
 |Method|`def authenticate(self, configurationAttributes, requestParameters, step)`|
 |---|---|
 |**Description**|This method is the key method within the person authentication script. It checks if the user has passed the specified step or not. As a result it should either return `True` or `False`|
-|Method Parameter|`requestParameters` is `java.util.Map<String, String[]>`<br/>`step` is java integar<br/>`configurationAttributes` is `java.util.Map<String, SimpleCustomProperty>`|
+|Method Parameter|`requestParameters` is `java.util.Map<String, String[]>`<br/>`step` is java integer<br/>`configurationAttributes` is `java.util.Map<String, SimpleCustomProperty>`|
 
 |Method|`def prepareForStep(self, configurationAttributes, requestParameters, step)`|
 |---|---|
@@ -99,7 +99,7 @@ following methods:
 |Method|`def getPageForStep(self, configurationAttributes, step)`|
 |---|---|
 |**Description**|This method allows the admin to render a required page for a specified authentication step. It should return a string value with a path to an XHTML page. If the return value is empty or null, the authenticator should render the default log in page `/login.xhtml`|
-|Method Parameter|`configurationAttributes` is `java.util.Map<String, SimpleCustomProperty>`<br/>`step` is a java integar|
+|Method Parameter|`configurationAttributes` is `java.util.Map<String, SimpleCustomProperty>`<br/>`step` is a java integer|
 
 |Method|`def logout(self, configurationAttributes, requestParameters)`|
 |---|---|
