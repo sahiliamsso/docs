@@ -26,9 +26,10 @@ The `setup.properties.file` contains the RS and RP JWKS in Base64 format.
 
 * Enable SCIM from Organization Configuration
 
-![image](/img/scim/enable-scim.png)
+![image](../img/scim/enable-scim.png)
 
-* oxTrust SCIM UMA configuration is automatically updated while running the `setup.py` and the correct values are setup 
+* oxTrust SCIM UMA configuration is automatically updated while running 
+the `setup.py` and the correct values are setup 
 in the [oxtrust-config.json](https://github.com/GluuFederation/community-edition-setup/blob/master/templates/oxtrust-config.json#L122) file.
 ```
   "umaIssuer":"https://%(hostname)s",
@@ -43,7 +44,9 @@ in the [oxtrust-config.json](https://github.com/GluuFederation/community-edition
 * `umaClientKeyId` can be updated with the `alias` from `scim-rp.jks` file; if it is not updated, the first key from the file is used automatically.
 
 ##Testing SCIM UMA
-The following is a sample code that can be run to test the configured SCIM UMA Gluu CE. It uses [SCIM-Client](https://github.com/GluuFederation/SCIM-Client), a Java library also developed by Gluu intended for client applications.
+The following is a sample code that can be run to test the configured SCIM 
+UMA Gluu CE. It uses [SCIM-Client](https://github.com/GluuFederation/SCIM-Client), 
+a Java library also developed by Gluu intended for client applications.
 
 * If you are using Maven, below is how to add SCIM-Client to your project:
 ```
@@ -126,37 +129,55 @@ Starting with CE v2.4.4, the "test mode" configuration will help developers test
 
 To enable test mode, do the following:
 
-* Login to the oxTrust GUI and go to "Configuration" -> "JSON Configuration" -> "OxTrust Configuration", then locate the property `scimTestMode`.
+* Login to the oxTrust GUI  
+* Navigate to `Configuration` > `JSON Configuration` > `OxTrust Configuration`, 
+then locate the property `scimTestMode`.
 
-![image](/img/scim/scim-test-mode-false.png)
+![image](../img/scim/scim-test-mode-false.png)
 
-* Set it to `true`, then click the "Save Configuration" button. The Gluu server will then create a long-lived OAuth2 access token with a validity period of one year. Doing this will also switch the authentication scheme from UMA to OAuth2 Access Token.
-* Click again "JSON Configuration" -> "OxTrust Configuration" in the left navigation pane. This will retrieve the access token and be displayed in the `scimTestModeAccessToken` property.
+* Set it to `true`.
+* click the `Save Configuration` button. 
+The Gluu server will then create a long-lived OAuth2 access token with a 
+validity period of one year. Doing this will also switch the authentication 
+scheme from UMA to OAuth2 Access Token.
+* Click on  `JSON Configuration` > `OxTrust Configuration` in the left navigation pane. 
+This will retrieve the access token and be displayed in the `scimTestModeAccessToken` property.
 
-![image](/img/scim/scim-test-mode-true.png)
+![image](../img/scim/scim-test-mode-true.png)
 
 * If the access token has expired, just repeat the previous steps to create a new one.
  
-The access token can then be used as the query string parameter `access_token` in accessing the SCIM 2.0 endpoints, for example:
+The access token can then be used as the query string 
+parameter `access_token` in accessing the SCIM 2.0 endpoints, for example:
 
-![image](/img/scim/scim-test-mode-example.png)
+![image](../img/scim/scim-test-mode-example.png)
 
-You can verify the current authentication scheme of the SCIM 2.0 endpoints by browsing its `ServiceProviderConfig`:
+You can verify the current authentication scheme of the SCIM 2.0 
+endpoints by browsing its `ServiceProviderConfig`:
 
-![image](/img/scim/scim-test-mode-config.png)
+![image](../img/scim/scim-test-mode-config.png)
 
-To exit test mode, just set `scimTestMode` back to `false` then click the "Save Configuration" button. This will switch the authentication scheme from OAuth2 Access Token to UMA. If you try using your access token again, you will now get the `403 Unauthorized` error:
+To exit test mode, just set `scimTestMode` back to `false` then 
+* click the `Save Configuration` button. This will switch the 
+authentication scheme from OAuth2 Access Token to UMA. If you try using 
+your access token again, you will now get the `403 Unauthorized` error:
 
-![image](/img/scim/scim-test-mode-403.png)
+![image](../img/scim/scim-test-mode-403.png)
 
 # Notes
-UMA is protected with SCIM in Gluu Server Community Edition (CE). The usage of UMA requires HTTP GET and HTTP POST requests. Before testing, the Client making the requests must be added/registered in Gluu CE. The UMA configuration is available @ `https://hostname/.well-known/uma-configuration`. The request to authorization endpoint must accompanied with  application/json content type. 
+UMA is protected with SCIM in Gluu Server Community Edition (CE). 
+The usage of UMA requires HTTP GET and HTTP POST requests. Before testing, 
+the Client making the requests must be added/registered in Gluu CE. The UMA 
+configuration is available @ `https://hostname/.well-known/uma-configuration`. 
+The request to authorization endpoint must accompanied with  application/json content type. 
 
-The example below shows the parameters used in a real-life use case  where the UMA RPT Token is authorized in oxAuth.
+The example below shows the parameters used in a real-life use case  where the 
+UMA RPT Token is authorized in oxAuth.
 
 ```
     public RptAuthorizationResponse requestRptPermissionAuthorization(@HeaderParam("Authorization") String authorization,
             @HeaderParam("Host") String amHost, RptAuthorizationRequest rptAuthorizationRequest);
 ```
 
-If the default openID SCIM Client is not used, the `inum` must be added to the UMA Authorization Policy Custom Script.
+If the default openID SCIM Client is not used, the `inum` must be added to the
+UMA Authorization Policy Custom Script.
