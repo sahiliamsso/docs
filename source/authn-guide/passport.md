@@ -37,11 +37,11 @@ authentication and provisioning.
 
 During installation of the Gluu Server select `yes` to install Passport.js when prompted.
 
-1. Click on Manage Custom Scripts under configuration tab on the main menu.
-2. Enable passport script in Person Authentication Tab.![Enable passport1](../img/user-authn/passport/enable-passport.png)
-3. Click on update at the end of the page.![update](../img/user-authn/passport/auth-update.png)
-4. Enable UMA authorization policy in UMA authorization policy tab.![uma-enable](../img/user-authn/passport/uma-enable.png)
-5. Click on update.
+1. Navigate to `Configuration` > `Manage Custom Scripts`.
+2. Enable passport script in `Person Authentication` Tab.![Enable passport1](../img/user-authn/passport/enable-passport.png)
+3. Click on `update` at the end of the page.![update](../img/user-authn/passport/auth-update.png)
+4. Enable UMA authorization policy in `UMA authorization policy` tab.![uma-enable](../img/user-authn/passport/uma-enable.png)
+5. Click on `update`.
 6. To set the strategies navigate to `Configuration` > `Manage Authentication` > `Default Authenticaion`
 7. Change the Default Authentication mode to `passport`
 8. Change passport support to enabled.![enable-authentication](../img/user-authn/passport/enable-authentication.png)
