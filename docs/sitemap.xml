@@ -198,13 +198,13 @@
     </url>
         
     <url>
-     <loc>/admin-guide/faq/</loc>
+     <loc>/operation/logs/</loc>
      <lastmod>2017-02-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/admin-guide/logs/</loc>
+     <loc>/operation/faq/</loc>
      <lastmod>2017-02-02</lastmod>
      <changefreq>daily</changefreq>
     </url>

@@ -1096,8 +1096,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../faq/" title="FAQ & Troubleshooting" class="md-nav__link">
-        FAQ & Troubleshooting
+      <a href="../../operation/logs/" title="Log Management" class="md-nav__link">
+        Log Management
       </a>
     
   </li>
@@ -1107,8 +1107,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../logs/" title="Log Management" class="md-nav__link">
-        Log Management
+      <a href="../../operation/faq/" title="FAQ & Troubleshooting" class="md-nav__link">
+        FAQ & Troubleshooting
       </a>
     
   </li>
@@ -1605,7 +1605,9 @@ in the registration form. Search, select, add, and order desired attributes here
 <h3 id="cache-refresh">Cache Refresh<a class="headerlink" href="#cache-refresh" title="Permanent link">#</a></h3>
 <p>Cache Refresh, a.k.a. LDAP Synchronization, is the process of connecting one or more existing backend LDAP servers, like Microsoft Active Directory, with the Gluu Server's local LDAP server. <code>Cache Refresh</code> periodically searches these data sources, compares the results to previous searches, and if a changed user account is found, it is updated.The frequency of cache refresh is also set from this page via the <code>Polling interval (minutes)</code>. The <code>key attribute(s)</code> is used to correlate a user if the user is found in more then one LDAP server. In this case, the two entries are joined. The source attributes specify which attributes will be pulled from the backend LDAP server. The backend server address, bind DN and other connection information is speciifed in the <code>Source Backend LDAP Servers</code> tab. More information on <a href="../user-group.md/#ldap-synchronization">LDAP Syncronization</a> can be found in the user management section of the docs. </p>
 <h3 id="configure-log-viewer-view-log-file">Configure Log Viewer / View Log File<a class="headerlink" href="#configure-log-viewer-view-log-file" title="Permanent link">#</a></h3>
-<p>This tool can be used to view file system logs. If you don't like to ssh, Log Viewer is your friend! Several common logs are preconfigured, or you can define new logs by specifying the path.</p>
+<p>This tool can be used to view file system logs. If you don't like to ssh, 
+Log Viewer is your friend! Several common logs are preconfigured, or you can define 
+new logs by specifying the path.</p>
 <h3 id="server-status">Server Status<a class="headerlink" href="#server-status" title="Permanent link">#</a></h3>
 <p>This page provides basic information about the Gluu Server such as the hostname, IP address, free memory &amp; disk space. The number of users in the backend is also available in this page.</p>
 <h3 id="certificates">Certificates<a class="headerlink" href="#certificates" title="Permanent link">#</a></h3>
@@ -1613,13 +1615,13 @@ in the registration form. Search, select, add, and order desired attributes here
 <h2 id="saml">SAML<a class="headerlink" href="#saml" title="Permanent link">#</a></h2>
 <p>If you deployed the Shibboleth SAML IDP or the Asimba SAML proxy during Gluu Server installation, you will see a link to manage inbound and outbound SAML requirements in the left hand navigation. Learn more about configuring and managing SAML in the <a href="../saml/">SAML</a> portion of the docs. </p>
 <h2 id="openid-connect">OpenID Connect<a class="headerlink" href="#openid-connect" title="Permanent link">#</a></h2>
-<p>The <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect protocol</a> is supported by default in all Gluu Server deployments. Learn more about configuring and managing OpenID Connect in the <a href="../openid-connect/">OpenID Connect</a> portion of the docs. </p>
+<p>The OpenID Connect protocol is supported by default in all Gluu Server deployments. Learn more about configuring and managing OpenID Connect in the <a href="../openid-connect/">OpenID Connect</a> portion of the docs. </p>
 <h2 id="uma">UMA<a class="headerlink" href="#uma" title="Permanent link">#</a></h2>
-<p><a href="../uma/">UMA</a> or (User-Managed Access) is an access management protocol that is also supported by default in all Gluu Server deployments. Learn more about configuring and managing UMA in the <a href="../uma/">UMA</a> portion of the docs.</p>
+<p>UMA (User-Managed Access) is an access management protocol that is also supported by default in all Gluu Server deployments. Learn more about configuring and managing UMA in the <a href="../uma/">UMA</a> portion of the docs.</p>
 <h2 id="users">Users<a class="headerlink" href="#users" title="Permanent link">#</a></h2>
-<p>The users tab allows the Gluu admin to perform various user management tasks, including add users to the admin group, search users, and import users from a file. Learn more about managing users in the <a href="../user-group/">user management</a> portion of the docs. </p>
+<p>The users tab allows the Gluu admin to perform various user management tasks like adding users, searching users, and importing users from a file. Learn more about managing users in the <a href="../user-group/">user management</a> portion of the docs. </p>
 <h2 id="personal">Personal<a class="headerlink" href="#personal" title="Permanent link">#</a></h2>
-<p>Personal tab allows the individual person to view his basic profile and modify certain fields.</p>
+<p>The personal tab allows an individual to view and manage (if enabled) their basic profile information. However, since oxTrust is designed to be an administrative tool it is often not Internet facing, making it a bad choice for user self-service profile management. In general, if user profile management is an important requirement for your organization, we recommend writing a separate app or forking our open source <a href="https://github.com/GluuFederation/cred-mgr">credential management app</a>. </p>
               
             </article>
           </div>

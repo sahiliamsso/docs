@@ -287,17 +287,16 @@
     File Descriptors
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#amazon-aws" title="Amazon AWS" class="md-nav__link">
     Amazon AWS
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#microsoft-azure" title="Microsoft Azure" class="md-nav__link">
     Microsoft Azure
   </a>
@@ -316,16 +315,11 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#linode-vm" title="Linode VM" class="md-nav__link">
     Linode VM
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -937,8 +931,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../admin-guide/faq/" title="FAQ & Troubleshooting" class="md-nav__link">
-        FAQ & Troubleshooting
+      <a href="../operation/logs/" title="Log Management" class="md-nav__link">
+        Log Management
       </a>
     
   </li>
@@ -948,8 +942,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../admin-guide/logs/" title="Log Management" class="md-nav__link">
-        Log Management
+      <a href="../operation/faq/" title="FAQ & Troubleshooting" class="md-nav__link">
+        FAQ & Troubleshooting
       </a>
     
   </li>
@@ -992,17 +986,16 @@
     File Descriptors
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#amazon-aws" title="Amazon AWS" class="md-nav__link">
     Amazon AWS
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#microsoft-azure" title="Microsoft Azure" class="md-nav__link">
     Microsoft Azure
   </a>
@@ -1021,16 +1014,11 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#linode-vm" title="Linode VM" class="md-nav__link">
     Linode VM
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1072,9 +1060,9 @@ requirements. </p>
 </table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Post support tickets only if all the above requirements are met!</p>
+<p>Please only post installation issues to <a href="https://support.gluu.org">Gluu Support</a> if all the above requirements are met!</p>
 </div>
-<h3 id="ports">Ports<a class="headerlink" href="#ports" title="Permanent link">#</a></h3>
+<h2 id="ports">Ports<a class="headerlink" href="#ports" title="Permanent link">#</a></h2>
 <p>The following ports are open to the Internet by default.</p>
 <table>
 <thead>
@@ -1126,59 +1114,53 @@ is set in <code>/proc/sys/fs/file-max</code>.</li>
 </code></pre>
 
 <ul>
-<li>Use the <code>ulimit</code> command to set the file descriptor limit to the hard 
-limit specified in <code>/etc/security/limits.conf</code>.</li>
+<li>Use the <code>ulimit</code> command to set the file descriptor limit to the hard limit specified in <code>/etc/security/limits.conf</code>.</li>
 </ul>
 <pre><code># ulimit -n unlimited
 </code></pre>
 
 <ul>
-<li>Restart your system.</li>
+<li>Restart your system.     </li>
 </ul>
-<h3 id="amazon-aws">Amazon AWS<a class="headerlink" href="#amazon-aws" title="Permanent link">#</a></h3>
+<h2 id="amazon-aws">Amazon AWS<a class="headerlink" href="#amazon-aws" title="Permanent link">#</a></h2>
 <p>Amazon AWS instances provide a public and private IP address. While
 running the <code>/install/community-edition-setup/setup.py</code> script, use the
 Private IP address. Also, use a hostname other then the long default
 hostname that Amazon provides. Update your DNS or hosts files accordingly.</p>
-<h3 id="microsoft-azure">Microsoft Azure<a class="headerlink" href="#microsoft-azure" title="Permanent link">#</a></h3>
+<h2 id="microsoft-azure">Microsoft Azure<a class="headerlink" href="#microsoft-azure" title="Permanent link">#</a></h2>
 <p>Accessing the Gluu Server on Azure can be a little bit tricky because of
 the Public/Private IP. Azure assigns a new Public/Private IP
 addresses each time the server is started. </p>
-<h4 id="setting-up-vm">Setting up VM<a class="headerlink" href="#setting-up-vm" title="Permanent link">#</a></h4>
+<h3 id="setting-up-vm">Setting up VM<a class="headerlink" href="#setting-up-vm" title="Permanent link">#</a></h3>
 <ol>
 <li>
 <p>Log into Windows Azure Administrative Panel</p>
 </li>
 <li>
-<p>Click on <code>Virtual Machines</code> tab, and click <code>Create a Virtual Machine</code> 
-link</p>
+<p>Click on <code>Virtual Machines</code> tab, and click <code>Create a Virtual Machine</code> link</p>
 </li>
 <li>
-<p>From the menu, choose <code>Compute</code> --&gt; <code>Virtual Machine</code> --&gt; <code>From Gallery</code> 
-branch.</p>
+<p>From the menu, choose <code>Compute</code> &gt; <code>Virtual Machine</code> &gt; <code>From Gallery</code> branch.</p>
 </li>
 <li>
 <p>Choose Ubuntu Server 14.04 LTS or CentOS 6.7. Remember to set selinux
    to permissive if you choose CentOS.</p>
 </li>
 <li>
-<p>Provide a name for the VM in the <code>Virtual Machine Name</code> field and use
-<code>Standard</code> for <code>Tier</code>.</p>
+<p>Provide a name for the VM in the <code>Virtual Machine Name</code> field and use <code>Standard</code> for <code>Tier</code>.</p>
 </li>
 <li>
 <p>Select a server with at least 4GB RAM in the <code>Size</code> dropdown menu.</p>
 </li>
 <li>
-<p>Provide a username/password to connect via ssh and upload a
-   ssh certificate. Click <code>Next</code>.</p>
+<p>Provide a username/password to connect via ssh and upload ssh certificate. Click <code>Next</code>.</p>
 </li>
 <li>
-<p>Create a new cloud service and select <code>None</code> for <code>Availability Set</code>
-   option.
-        * Endpoints Section: This is where the port forwarding is set so
-      that the internal IP address could be selectively reachable from
+<p>Create a new cloud service and select <code>None</code> for the <code>Availability Set</code> option.
+        * Endpoints Section: This is where port forwarding is set so
+      that the internal IP address can be selectively reachable from
       the outside world. By default, only tcp /22 is there for ssh. The
-      public ports for http and https (tcp ports 80 and 443) have to be
+      public ports for <code>http</code> and <code>https</code> (tcp ports 80 and 443) have to be
       added and mapped to the same private ports. If the cloud mappings
       are flagged conflicting, proceed without setting them. Remember to
       set them after the creation of the VM. Then, click <code>Next</code>.</p>
@@ -1196,10 +1178,10 @@ branch.</p>
     installation.</p>
 </li>
 </ol>
-<h3 id="linode-vm">Linode VM<a class="headerlink" href="#linode-vm" title="Permanent link">#</a></h3>
-<p>The Linode Virtual Machines (VM) use a custom kernel which is not 
-supported by Gluu Server, therefore the kernel must be updated before 
-Gluu Server can be installed in Linode VM. The following steps will 
+<h2 id="linode-vm">Linode VM<a class="headerlink" href="#linode-vm" title="Permanent link">#</a></h2>
+<p>Linode Virtual Machines (VM) use a custom kernel which is not 
+supported by the Gluu Server, therefore the kernel must be updated before 
+the Gluu Server can be installed in a Linode VM. The following steps will 
 guide you through kernel update in the Linode VM.</p>
 <ul>
 <li>Check for the current version of the kernel. If the output contains <code>-Linode</code>, then proceed</li>
@@ -1208,13 +1190,13 @@ guide you through kernel update in the Linode VM.</p>
 </code></pre>
 
 <ul>
-<li>Run the following command to update the kernel</li>
+<li>Run the following command to update the kernel:</li>
 </ul>
 <pre><code># apt-get install linux-image-virtual grub2
 </code></pre>
 
 <ul>
-<li>Modify <code>grub</code> file in the <code>/etc/default/</code> folder</li>
+<li>Modify <code>grub</code> file in the <code>/etc/default/</code> folder:</li>
 </ul>
 <pre><code># vim /etc/default/grub
 </code></pre>
@@ -1229,7 +1211,7 @@ GRUB_SERIAL_COMMAND=&quot;serial --speed=19200 --unit=0 --word=8 --parity=no --s
 </code></pre>
 
 <ul>
-<li>Finally run the following commands to update <code>grub</code> and reboot</li>
+<li>Finally run the following commands to update <code>grub</code> and reboot:</li>
 </ul>
 <pre><code># update-grub
 # reboot

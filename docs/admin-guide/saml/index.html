@@ -1013,8 +1013,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../faq/" title="FAQ & Troubleshooting" class="md-nav__link">
-        FAQ & Troubleshooting
+      <a href="../../operation/logs/" title="Log Management" class="md-nav__link">
+        Log Management
       </a>
     
   </li>
@@ -1024,8 +1024,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../logs/" title="Log Management" class="md-nav__link">
-        Log Management
+      <a href="../../operation/faq/" title="FAQ & Troubleshooting" class="md-nav__link">
+        FAQ & Troubleshooting
       </a>
     
   </li>
@@ -1203,8 +1203,8 @@
                 
                 <h1 id="saml">SAML<a class="headerlink" href="#saml" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>SAML is an XML-based, open-standard data format for exchanging authentication and authorization data between an identity provider (like the Gluu Server) and a service provider (like Salesforce, O365, etc.). SAML is stable and well supported at many of the Internet's largest providers. However, the last major release of SAML was in 2005! Therefore it is important to understand when to use SAML and when to use a newer protocol like OpenID Connect to achieve your identity goals. </p>
-<p>In short, refer to these three considerations to determine if you should use SAML:</p>
+<p>SAML is an XML-based, open-standard data format for exchanging authentication and authorization data between an identity provider (like the Gluu Server) and a service provider (like Salesforce, O365, etc.). SAML is a stable and mature standard, and is well supported at many of the Internet's largest domains. However, the last major release of SAML was in 2005! Therefore it is important to understand when to use SAML and when to use a newer, more powerful protocol like OpenID Connect to achieve your identity goals. </p>
+<p>In short, refer to these three considerations to determine which protocol to use for single sign-on (SSO):</p>
 <ul>
 <li>If you have an application that already supports SAML–use SAML!</li>
 <li>If you have a mobile application, use OpenID Connect.</li>
@@ -1360,9 +1360,6 @@ appear:</p>
 <p>However it is recommended to stop and start service using </p>
 <p><code>service identity stop</code></p>
 <p><code>service identity start</code></p>
-<p><strong>SSO Testing Endpoint</strong>     <br />
-Every website (SP) should have both a staging and a production URI
-endpoint which can be checked for SSO. It's important to thoroughly test all scenarios in a development environment before moving the configuration into production. </p>
 <h3 id="create-a-trust-relationship-in-the-gluu-server">Create a Trust Relationship in the Gluu Server<a class="headerlink" href="#create-a-trust-relationship-in-the-gluu-server" title="Permanent link">#</a></h3>
 <ul>
 <li>Go to SAML → Trust Relationships</li>

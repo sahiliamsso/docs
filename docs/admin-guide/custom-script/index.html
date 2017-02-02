@@ -409,12 +409,18 @@
     Person Authentication
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#certificate-authentication" title="Certificate Authentication" class="md-nav__link">
     Certificate Authentication
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -974,8 +980,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../faq/" title="FAQ & Troubleshooting" class="md-nav__link">
-        FAQ & Troubleshooting
+      <a href="../../operation/logs/" title="Log Management" class="md-nav__link">
+        Log Management
       </a>
     
   </li>
@@ -985,8 +991,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../logs/" title="Log Management" class="md-nav__link">
-        Log Management
+      <a href="../../operation/faq/" title="FAQ & Troubleshooting" class="md-nav__link">
+        FAQ & Troubleshooting
       </a>
     
   </li>
@@ -1043,12 +1049,18 @@
     Person Authentication
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#certificate-authentication" title="Certificate Authentication" class="md-nav__link">
     Certificate Authentication
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1125,17 +1137,8 @@
                 
                 <h1 id="interception-scripts">Interception Scripts<a class="headerlink" href="#interception-scripts" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>Gluu Server is very flexible by design enabling the use of 
-<a href="http://www.jython.org/docs/tutorial/indexprogress.html">Jython</a> 
-interception scripts to customize behaviour. Jython was chosen because 
-an interpreted language facilitates dynamic creation of business logic, 
-and makes it easier to distribute this logic to a cluster of Gluu servers. 
-Another advantage of Jython was that developers can use either Java or Python classes. 
-Combined with the option of calling web services from Python or Java, this enables the 
-Gluu Server to support any business-driven policy requirement.</p>
-<p>Custom Scripts can be accessed by navigating to Configuration 
-and selecting the <code>Manage Custom Scritps</code> tab from the main menu on the 
-left.</p>
+<p>Interception scripts allow the Gluu Server to support unique requirements for many aspects of a central authentication and authorization service. Interception scripts can be written in <a href="http://www.jython.org/docs/tutorial/indexprogress.html">Jython</a>. Jython was chosen because an interpreted language facilitates dynamic creation of business logic, and makes it easier to distribute this logic to a cluster of Gluu servers. Jython enables developers to use either Java or Python classes. Combined with the option of calling web services from Python or Java, this enables the Gluu Server to support any business-driven policy requirement.</p>
+<p>The web interface for Custom Scripts can be accessed by navigating to <code>Configuration</code> &gt; <code>Manage Custom Scritps</code>.</p>
 <h2 id="interception-script-methods">Interception Script Methods<a class="headerlink" href="#interception-script-methods" title="Permanent link">#</a></h2>
 <p>There are three methods that inherit a base interface</p>
 <table>
@@ -1147,25 +1150,25 @@ left.</p>
 </thead>
 <tbody>
 <tr>
-<td>def init(self, configurationAttributes)</td>
+<td><code>def init(self, configurationAttributes)</code></td>
 <td>This method is only called once during the script initialization. It can be used for global script initialization, initiate objects etc</td>
 </tr>
 <tr>
-<td>def destroy(self, configurationAttributes)</td>
+<td><code>def destroy(self, configurationAttributes)</code></td>
 <td>This method is called once to destroy events. It can be used to free resource and objects created in the <code>init()</code> method</td>
 </tr>
 <tr>
-<td>def getApiVersion(self)</td>
+<td><code>def getApiVersion(self)</code></td>
 <td>The <code>getApiVersion</code> method allows API changes in order to do transparent migration from an old script to a new API. Currently all scripts should return <code>1</code></td>
 </tr>
 </tbody>
 </table>
 <p>The <code>configurationAttributes</code> parameter is <code>java.util.Map&lt;String, SimpleCustomProperty&gt;</code> with properties specified in <code>oxConfigurationProperty</code> attributes.</p>
-<p>The script manager only loads enabled scripts. Hence, after enabling a
+<p>The script manager only loads enabled scripts. Hence, after enabling or disabling a
 script, the script manager should trigger an event to either load or
-destroy a script. All scripts are stored in LDAP in the
+destroy a script, respectively. All scripts are stored in LDAP in the
 <code>ou=scripts,o=&lt;org_inum&gt;,o=gluu</code> branch.</p>
-<p>This is a sample entry:</p>
+<p>Here is a sample entry:</p>
 <pre><code>    dn: inum=@!1111!031C.4A65,ou=scripts,o=@!1111,o=gluu
     objectClass: oxCustomScript
     objectClass: top
@@ -1189,17 +1192,17 @@ restart the application once <code>oxRevision</code> is increased.</p>
 <code>oxauth.log</code> file. The logs are separated according to the module they
 affect. The oxAuth custom script logs are stored in <code>oxauth_script.log</code>
 and the oxTrust custom script logs are stored in the
-<code>oxtrust_script.log</code>. Please refer to these log files for any errors in
+<code>oxtrust_script.log</code>. Please refer to these log files to troubleshoot errors in
 the interception scripts or following the workflow of the script.</p>
-<p>More details on Logs can be found in <a href="../logs/">Log Management</a></p>
+<p>More details on Logs can be found in <a href="../../operation/logs/">Log Management</a></p>
 <h2 id="person-authentication">Person Authentication<a class="headerlink" href="#person-authentication" title="Permanent link">#</a></h2>
 <p><strong>For a list of pre-written, open source Gluu authentication scripts, 
 view our <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations">server integrations</a></strong></p>
 <p>An authentication script enables you to customize the user
 authentication experience. For example, you can write a script that
 enables a two-factor authentication mechanism like Duo Security. By
-default oxAuth uses simple username/password authentication method. This
-script type allows an admin to implement more secure workflows to cover
+default oxAuth offers basic username/password authentication. Authentication 
+scripts allow an admin to implement more secure workflows to meet
 an organizations security requirements. It extends the base script type
 with the <code>init</code>, <code>destroy</code> and <code>getApiVersion</code> methods but also adds the
 following methods:</p>
@@ -1207,7 +1210,7 @@ following methods:</p>
 <thead>
 <tr>
 <th>Method</th>
-<th>isValidAuthenticationMethod(self, usageType, configurationAttributes)</th>
+<th><code>isValidAuthenticationMethod(self, usageType, configurationAttributes)</code></th>
 </tr>
 </thead>
 <tbody>
@@ -1225,7 +1228,7 @@ following methods:</p>
 <thead>
 <tr>
 <th>Method</th>
-<th>def getAlternativeAuthenticationMethod(self, usageType, configurationAttributes)</th>
+<th><code>def getAlternativeAuthenticationMethod(self, usageType, configurationAttributes)</code></th>
 </tr>
 </thead>
 <tbody>
@@ -1243,7 +1246,7 @@ following methods:</p>
 <thead>
 <tr>
 <th>Method</th>
-<th>def authenticate(self, configurationAttributes, requestParameters, step)</th>
+<th><code>def authenticate(self, configurationAttributes, requestParameters, step)</code></th>
 </tr>
 </thead>
 <tbody>
@@ -1253,7 +1256,7 @@ following methods:</p>
 </tr>
 <tr>
 <td>Method Parameter</td>
-<td><code>requestParameters</code> is <code>java.util.Map&lt;String, String[]&gt;</code><br/><code>step</code> is java integar<br/><code>configurationAttributes</code> is <code>java.util.Map&lt;String, SimpleCustomProperty&gt;</code></td>
+<td><code>requestParameters</code> is <code>java.util.Map&lt;String, String[]&gt;</code><br/><code>step</code> is java integer<br/><code>configurationAttributes</code> is <code>java.util.Map&lt;String, SimpleCustomProperty&gt;</code></td>
 </tr>
 </tbody>
 </table>
@@ -1261,7 +1264,7 @@ following methods:</p>
 <thead>
 <tr>
 <th>Method</th>
-<th>def prepareForStep(self, configurationAttributes, requestParameters, step)</th>
+<th><code>def prepareForStep(self, configurationAttributes, requestParameters, step)</code></th>
 </tr>
 </thead>
 <tbody>
@@ -1279,7 +1282,7 @@ following methods:</p>
 <thead>
 <tr>
 <th>Method</th>
-<th>def getCountAuthenticationSteps(self, configurationAttributes)</th>
+<th><code>def getCountAuthenticationSteps(self, configurationAttributes)</code></th>
 </tr>
 </thead>
 <tbody>
@@ -1297,7 +1300,7 @@ following methods:</p>
 <thead>
 <tr>
 <th>Method</th>
-<th>def getExtraParametersForStep(self, configurationAttributes, step)</th>
+<th><code>def getExtraParametersForStep(self, configurationAttributes, step)</code></th>
 </tr>
 </thead>
 <tbody>
@@ -1315,7 +1318,7 @@ following methods:</p>
 <thead>
 <tr>
 <th>Method</th>
-<th>def getPageForStep(self, configurationAttributes, step)</th>
+<th><code>def getPageForStep(self, configurationAttributes, step)</code></th>
 </tr>
 </thead>
 <tbody>
@@ -1325,7 +1328,7 @@ following methods:</p>
 </tr>
 <tr>
 <td>Method Parameter</td>
-<td><code>configurationAttributes</code> is <code>java.util.Map&lt;String, SimpleCustomProperty&gt;</code><br/><code>step</code> is a java integar</td>
+<td><code>configurationAttributes</code> is <code>java.util.Map&lt;String, SimpleCustomProperty&gt;</code><br/><code>step</code> is a java integer</td>
 </tr>
 </tbody>
 </table>
@@ -1333,7 +1336,7 @@ following methods:</p>
 <thead>
 <tr>
 <th>Method</th>
-<th>def logout(self, configurationAttributes, requestParameters)</th>
+<th><code>def logout(self, configurationAttributes, requestParameters)</code></th>
 </tr>
 </thead>
 <tbody>
@@ -1351,7 +1354,7 @@ following methods:</p>
 <ul>
 <li><a href="../sample-authentication-script.py">Sample Authentication Script</a></li>
 </ul>
-<h2 id="certificate-authentication">Certificate Authentication<a class="headerlink" href="#certificate-authentication" title="Permanent link">#</a></h2>
+<h3 id="certificate-authentication">Certificate Authentication<a class="headerlink" href="#certificate-authentication" title="Permanent link">#</a></h3>
 <p>Gluu Server CE offers a person authentication module enabling Certificate Authentication.
 The image below contains the design diagram for this module.</p>
 <p><img alt="image" src="../../img/admin-guide/Cert%20design.jpg" /></p>
@@ -1367,43 +1370,43 @@ The image below contains the design diagram for this module.</p>
 </thead>
 <tbody>
 <tr>
-<td>chain_cert_file_path</td>
+<td><code>chain_cert_file_path</code></td>
 <td>mandatory property pointing to certificate chains in <a href="https://en.wikipedia.org/wiki/Privacy-enhanced_Electronic_Mail" title="Privacy-enhanced Electronic Mail">pem</a> format</td>
 <td>file path</td>
-<td>/etc/certs/chain_cert.pem</td>
+<td><code>/etc/certs/chain_cert.pem</code></td>
 </tr>
 <tr>
-<td>map_user_cert</td>
+<td><code>map_user_cert</code></td>
 <td>specifies if the script should map new user to local account</td>
 <td>true/false</td>
 <td>true</td>
 </tr>
 <tr>
-<td>use_generic_validator</td>
+<td><code>use_generic_validator</code></td>
 <td>enable/disable specific certificate validation</td>
 <td>true/false</td>
 <td>false</td>
 </tr>
 <tr>
-<td>use_path_validator</td>
+<td><code>use_path_validator</code></td>
 <td>enable/disable specific certificate validation</td>
 <td>true/false</td>
 <td>true</td>
 </tr>
 <tr>
-<td>use_oscp_validator</td>
+<td><code>use_oscp_validator</code></td>
 <td>enable/disable specific certificate validation</td>
 <td>true/false</td>
 <td>false</td>
 </tr>
 <tr>
-<td>use_crl_validator</td>
+<td><code>use_crl_validator</code></td>
 <td>enable/disable specific certificate validation</td>
 <td>true/false</td>
 <td>false</td>
 </tr>
 <tr>
-<td>crl_max_response_size</td>
+<td><code>crl_max_response_size</code></td>
 <td>specifies the maximum allowed size of [CRL][crl] response</td>
 <td>Integer &gt; 0</td>
 <td>2</td>
@@ -1411,7 +1414,7 @@ The image below contains the design diagram for this module.</p>
 </tbody>
 </table>
 <ul>
-<li><a href="../UserCertExternalAuthenticator.py">Sample Certificate Authentication Script</a></li>
+<li><a href="../UserCertExternalAuthenticator.py">Sample Certificate Authentication Script</a>        </li>
 </ul>
 <h2 id="update-user">Update User<a class="headerlink" href="#update-user" title="Permanent link">#</a></h2>
 <p>oxTrust allows an admin to add and modify users which belong to groups.
@@ -1423,7 +1426,7 @@ a person entry before it is stored in LDAP.</p>
 <thead>
 <tr>
 <th>Method</th>
-<th>def updateUser(self, user, persisted, configurationAttributes)</th>
+<th><code>def updateUser(self, user, persisted, configurationAttributes)</code></th>
 </tr>
 </thead>
 <tbody>
@@ -1450,7 +1453,7 @@ script type.</p>
 <thead>
 <tr>
 <th>Methods</th>
-<th>def initRegistration(self, user, requestParameters, configurationAttributes)<br/>def preRegistration(self, user, requestParameters, configurationAttributes)<br/>def postRegistration(self, user, requestParameters, configurationAttributes)</th>
+<th><code>def initRegistration(self, user, requestParameters, configurationAttributes)</code><br/><code>def preRegistration(self, user, requestParameters, configurationAttributes)</code><br/><code>def postRegistration(self, user, requestParameters, configurationAttributes)</code></th>
 </tr>
 </thead>
 <tbody>
@@ -1484,17 +1487,17 @@ script type.</p>
 <tbody>
 <tr>
 <td>First</td>
-<td>initRegistration()</td>
+<td><code>initRegistration()</code></td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>Second</td>
-<td>preRegistration()</td>
+<td><code>preRegistration()</code></td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>Third</td>
-<td>postRegistration()</td>
+<td><code>postRegistration()</code></td>
 <td>True/False</td>
 </tr>
 </tbody>
@@ -1523,7 +1526,7 @@ scopes if <code>redirect_uri</code> belongs to a specified service or domain.</p
 <thead>
 <tr>
 <th>Method</th>
-<th>def updateClient(self, registerRequest, client, configurationAttributes)</th>
+<th><code>def updateClient(self, registerRequest, client, configurationAttributes)</code></th>
 </tr>
 </thead>
 <tbody>
@@ -1556,7 +1559,7 @@ generation rules.</p>
 <thead>
 <tr>
 <th>Method</th>
-<th>def generateId(self, appId, idType, idPrefix, configurationAttributes)</th>
+<th><code>def generateId(self, appId, idType, idPrefix, configurationAttributes)</code></th>
 </tr>
 </thead>
 <tbody>
@@ -1568,7 +1571,7 @@ generation rules.</p>
 </table>
 <p>This script can be used in an oxTrust application only.</p>
 <ul>
-<li><a href="../sample-id-generation.py">Sample ID Generation Script</a></li>
+<li><a href="../sample-id-generation.py">Sample ID Generation Script</a>      </li>
 </ul>
 <h2 id="cache-refresh">Cache Refresh<a class="headerlink" href="#cache-refresh" title="Permanent link">#</a></h2>
 <p>In order to integrate an interception script with an existing
@@ -1583,7 +1586,7 @@ or to add new attributes based on other attribute values.</p>
 <thead>
 <tr>
 <th>Method</th>
-<th>def updateUser(self, user, configurationAttributes)</th>
+<th><code>def updateUser(self, user, configurationAttributes)</code></th>
 </tr>
 </thead>
 <tbody>
@@ -1608,7 +1611,7 @@ access.</p>
 <thead>
 <tr>
 <th>Method</th>
-<th>def authorize(self, authorizationContext, configurationAttributes)</th>
+<th><code>def authorize(self, authorizationContext, configurationAttributes)</code></th>
 </tr>
 </thead>
 <tbody>
@@ -1633,7 +1636,7 @@ level.</p>
 <thead>
 <tr>
 <th>Method</th>
-<th>def endSession(self, httpRequest, authorizationGrant, configurationAttributes)</th>
+<th><code>def endSession(self, httpRequest, authorizationGrant, configurationAttributes)</code></th>
 </tr>
 </thead>
 <tbody>
