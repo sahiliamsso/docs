@@ -51,7 +51,7 @@ Gluu offers commercial client software, called [oxd](https://oxd.gluu.org), to m
  
 (1). oxd is super-easy and fun to use; 
 
-(2). We keep updating oxd to address the latest security knowledge; 
+(2). We keep updating oxd to address the latest OAuth 2.0 security knowledge; 
 
 (3). We can provide more complete end-to-end support if we know both 
 the client and server software;
