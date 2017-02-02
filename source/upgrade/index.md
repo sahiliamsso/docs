@@ -15,7 +15,7 @@ Upgrading generally involves the following steps:
 
 Gluu provides the necessary [scripts](https://github.com/GluuFederation/community-edition-setup/tree/master/static/scripts) to import and export data in and out of the servers.
 
-> NOTE: In this documentation, we assume the existing installed Gluu Server version is '2.x.x'. 
+> NOTE: In this documentation, we assume the existing installed Gluu Server version is 2.x.x. 
 
 ## Export the data from the current installation
 
