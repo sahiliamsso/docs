@@ -410,8 +410,30 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#people" title="People" class="md-nav__link">
-    People
+  <a href="#manage-people" title="Manage People" class="md-nav__link">
+    Manage People
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manage-groups" title="Manage Groups" class="md-nav__link">
+    Manage Groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-people" title="Import People" class="md-nav__link">
+    Import People
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" title="File Structure" class="md-nav__link">
+    File Structure
   </a>
   
 </li>
@@ -420,11 +442,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#groups" title="Groups" class="md-nav__link">
-    Groups
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -491,26 +511,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#import-people-from-file" title="Import People from file" class="md-nav__link">
-    Import People from file
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#file-scructure" title="File Scructure" class="md-nav__link">
-    File Scructure
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#user-registration" title="User Registration" class="md-nav__link">
     User Registration
   </a>
@@ -567,12 +567,18 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#delete-user" title="Delete User" class="md-nav__link">
     Delete User
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#required-parameter" title="Required Parameter" class="md-nav__link">
@@ -1146,8 +1152,30 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#people" title="People" class="md-nav__link">
-    People
+  <a href="#manage-people" title="Manage People" class="md-nav__link">
+    Manage People
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manage-groups" title="Manage Groups" class="md-nav__link">
+    Manage Groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-people" title="Import People" class="md-nav__link">
+    Import People
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" title="File Structure" class="md-nav__link">
+    File Structure
   </a>
   
 </li>
@@ -1156,11 +1184,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#groups" title="Groups" class="md-nav__link">
-    Groups
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1227,26 +1253,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#import-people-from-file" title="Import People from file" class="md-nav__link">
-    Import People from file
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#file-scructure" title="File Scructure" class="md-nav__link">
-    File Scructure
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#user-registration" title="User Registration" class="md-nav__link">
     User Registration
   </a>
@@ -1303,12 +1309,18 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#delete-user" title="Delete User" class="md-nav__link">
     Delete User
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#required-parameter" title="Required Parameter" class="md-nav__link">
@@ -1351,35 +1363,26 @@
                 
                 <h1 id="user-management-in-gluu-server">User Management in Gluu Server<a class="headerlink" href="#user-management-in-gluu-server" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>You can either "push" or "pull" identity data to the Gluu server to keep it up-to-date with the latest user claims. In the "pull" mode, otherwise known as LDAP Synchronization or Cache Refresh, the Gluu Server can use one or more existing LDAP identity sources like Microsoft Active Directory (AD) as the authoritative source of identity information. To "push" identities to the Gluu Server you can use the JSON/REST SCIM API. Local user management can also be performed inside oxTrust. Each method is detailed below.</p>
+<p>You can either "push" or "pull" identity data to the Gluu server to keep it up-to-date with the latest user claims. In the "pull" mode, otherwise known as LDAP Synchronization or Cache Refresh, the Gluu Server can use one or more existing LDAP identity sources (like Microsoft Active Directory) as the authoritative source of identity information. To "push" identities to the Gluu Server you can use the JSON/REST SCIM API. Local user management can also be performed inside oxTrust. Each method is detailed below.</p>
 <h2 id="local-user-management">Local User Management<a class="headerlink" href="#local-user-management" title="Permanent link">#</a></h2>
 <p>In oxTrust, you can add, edit and manage people, groups and user
 attributes and claims to ensure the proper information is released about
 the right people.</p>
-<h3 id="people">People<a class="headerlink" href="#people" title="Permanent link">#</a></h3>
-<p>To manage people, navigate to User &gt; Manage People, as shown in the
-screenshot below.</p>
-<p><img alt="people" src="../../img/admin-guide/user/manage_people.png" /></p>
-<p>From this interface you can add users and search for specific users.
-Because the user database can potentially be very large, a value is
-required in the search field. In other words, you can not click search
-with a blank entry to populate all users. If you need to see all users,
-this would be best performed manually within the Gluu OpenDJ server.
-Upon performing a user search, a list will be populated with all users
-that match the search, as shown in the screenshot below.</p>
+<h3 id="manage-people">Manage People<a class="headerlink" href="#manage-people" title="Permanent link">#</a></h3>
+<p>To manage people, navigate to <code>User</code> &gt; <code>Manage People</code>.</p>
+<p>From this interface you can add and search users. Because the user database can potentially be very large, a value is required in the search field. In other words, you can not click search with a blank entry to populate all users. If you need to see all users, this would be best performed manually within the Gluu LDAP server. Upon performing a user search in oxTrust a list will be populated with all users that match the search.</p>
 <p><img alt="Search Users" src="../../img/admin-guide/user/admin_users_searchadmin.png" /></p>
 <p>To edit a user, simply click on any of the hyperlinks associated with
 that user and you will be taken to a user management interface where you
-can modify that specific attributes relating to that user as displayed
-below.</p>
+can modify specific attributes relating to that user.</p>
 <p><img alt="Manage Users" src="../../img/admin-guide/user/admin_users_edituser.png" /></p>
-<h2 id="groups">Groups<a class="headerlink" href="#groups" title="Permanent link">#</a></h2>
-<p>Out of the box, the Gluu Server includes one group: Gluu Server manager
-group, named: “gluuManager”. Groups can be added and populated as
-needed. By using the <em>Manage Groups</em> feature, the Gluu Server
+<h3 id="manage-groups">Manage Groups<a class="headerlink" href="#manage-groups" title="Permanent link">#</a></h3>
+<p>Out of the box, the Gluu Server includes one group: the Gluu Manager
+Group (<code>gluuManager</code>). Groups can be added and populated as
+needed. By using the <code>Manage Groups</code> feature, the Gluu Server
 Administrator can add, delete or modify any group or user within a
 group. The list of available groups can be viewed by hitting the
-<em>Search</em> button with a blank search box.
+<code>Search</code> button with a blank search box.
 <img alt="Manage User Groups" src="../../img/admin-guide/user/admin_users_managegroups.png" /></p>
 <p>The Gluu Server Administrator can modify information such as Display
 Name, Group Owner, Visibility type etc. The Server Administrator can
@@ -1391,6 +1394,36 @@ specific group, this can be achieved be clicking on the Add Member
 button. The flow is <em>Add Member --&gt; Search the name/email of the user
 --&gt; Select the user --&gt; Click OK --&gt; Update.</em>
 <img alt="Add Member" src="../../img/admin-guide/user/admin_users_addmember.png" /></p>
+<h3 id="import-people">Import People<a class="headerlink" href="#import-people" title="Permanent link">#</a></h3>
+<p>Gluu Server allows the administrator to import users from a file. This can be accessed by navigating to <code>Users</code> &gt; <code>Import People</code>.</p>
+<p><img alt="image" src="../../img/admin-guide/user/import-people_add.png" /></p>
+<ul>
+<li>Click on the <code>Add</code> button to select the file from which the users will be imported. This feature has been tested with a <code>xls</code> file.</li>
+</ul>
+<p><img alt="image" src="../../img/admin-guide/user/import-people_validate.png" /></p>
+<ul>
+<li>The file needs to be validated before it can be imported. Click on the <code>Validate</code> button.</li>
+</ul>
+<p><img alt="import" src="../../img/admin-guide/user/import-people_import.png" /></p>
+<ul>
+<li>Click on the <code>Import</code> button to complete the import of users.</li>
+</ul>
+<h4 id="file-structure">File Structure<a class="headerlink" href="#file-structure" title="Permanent link">#</a></h4>
+<p>The file needs to contain the following fields from which the user data will be pulled. Please remember to use the exact spelling as shown here.</p>
+<ul>
+<li>
+<p>Username</p>
+</li>
+<li>
+<p>First Name</p>
+</li>
+<li>
+<p>Last Name</p>
+</li>
+<li>
+<p>Email</p>
+</li>
+</ul>
 <h2 id="ldap-synchronization">LDAP Synchronization<a class="headerlink" href="#ldap-synchronization" title="Permanent link">#</a></h2>
 <p>LDAP Synchronization, a.k.a. Cache Refresh, is the process of connecting 
 an existing backend LDAP server, like Microsoft Active Directory, with the
@@ -1410,12 +1443,8 @@ Transformations are stored in the Gluu LDAP service. </p>
 <li>Authentication </li>
 <li>Identity mapping</li>
 </ul>
-<p>Only sometimes it is the same LDAP server. To
-synchronize user accounts from an external LDAP directory server, you
-can use the built-in oxTrust features for ”Cache Refresh”, which support
-mapping identities from n number of source directory servers.</p>
-<p>After configuring Cache Refresh, you should give it some time to run,
-and populate the LDAP server. Here are some tips before you get started:</p>
+<p>Only sometimes is it the same LDAP server. To synchronize user accounts from an external LDAP directory server, you can use the built-in oxTrust features for Cache Refresh, which supports mapping identities from one or more source directory servers.</p>
+<p>After configuring Cache Refresh, you should give it some time to run and populate the LDAP server. Here are some tips before you get started:</p>
 <ul>
 <li>
 <p>Enable 'Keep External Person' during CR setup. This will allow your
@@ -1643,37 +1672,6 @@ upgraded sections here.</p>
     operation and integrity of any custom script such as a Jython Script.</p>
 </li>
 </ul>
-<h2 id="import-people-from-file">Import People from file<a class="headerlink" href="#import-people-from-file" title="Permanent link">#</a></h2>
-<p><img alt="image" src="../../img/admin-guide/user/import-people_menu.png" /></p>
-<p>Gluu Server allows the administrator to add users from files. This can be accessed from the <code>Import People</code> button from the <code>Users</code> menu.</p>
-<p><img alt="image" src="../../img/admin-guide/user/import-people_add.png" /></p>
-<ul>
-<li>Click on the <code>Add</code> button to select the file from which the users will be imported. This feature has been tested with a <code>xls</code> file.</li>
-</ul>
-<p><img alt="image" src="../../img/admin-guide/user/import-people_validate.png" /></p>
-<ul>
-<li>The file needs to be validated before it can be imported. Click on the <code>Validate</code> button.</li>
-</ul>
-<p><img alt="import" src="../../img/admin-guide/user/import-people_import.png" /></p>
-<ul>
-<li>Click on the <code>Import</code> button to complete the import of users.</li>
-</ul>
-<h3 id="file-scructure">File Scructure<a class="headerlink" href="#file-scructure" title="Permanent link">#</a></h3>
-<p>The file needs to contain the following fields from which the user data will be pulled. Please remember to use the exact spelling as shown here.</p>
-<ul>
-<li>
-<p>Username</p>
-</li>
-<li>
-<p>First Name</p>
-</li>
-<li>
-<p>Last Name</p>
-</li>
-<li>
-<p>Email</p>
-</li>
-</ul>
 <h2 id="user-registration">User Registration<a class="headerlink" href="#user-registration" title="Permanent link">#</a></h2>
 <p>Self-Registration is done by users on a self-service basis. Since
 oxTrust user registration cannot add users to a backend LDAP or Active
@@ -1811,7 +1809,7 @@ registration feature.</p>
         String id = userCreated.getId();
 </code></pre>
 
-<h4 id="delete-user">Delete User<a class="headerlink" href="#delete-user" title="Permanent link">#</a></h4>
+<h3 id="delete-user">Delete User<a class="headerlink" href="#delete-user" title="Permanent link">#</a></h3>
 <p>To delete a user only the id (the LDAP <code>inum</code>) is needed.</p>
 <pre><code>        ScimResponse response = client.deletePerson(id);
         assertEquals(response.getStatusCode(), 200, &quot;User could not be deleted, status != 200&quot;);
