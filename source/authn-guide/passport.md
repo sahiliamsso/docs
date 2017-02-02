@@ -44,16 +44,17 @@ During installation of the Gluu Server select `yes` to install Passport.js when 
 5. Click on `update`.
 6. To set the strategies navigate to `Configuration` > `Manage Authentication` > `Default Authenticaion`
 7. Change the Default Authentication mode to `passport`
-8. Change passport support to enabled.![enable-authentication](../img/user-authn/passport/enable-authentication.png)
-9. Once Passport support is enabled and updated, Passport Authentication Method will appear in the next tab.
-10. Click on the Passport Authenticaion Method, and set your desired strategies. The `Strategy` field values for common providers are:
+8. Click on `Passport Authentication Method` tab and `Passport Support` to enabled.![enable-authentication](../img/user-authn/passport/enable-authentication3.0.0.png)
+9. Add your desired strategies. The `Add Strategy` field values for common providers are:
 	- `google` for GPlus Authentication
 	- `twitter` for Twitter Authentication
 	- `linkedin` for LinkedIn Authentication
 	- `github` for Github Authentication
 	- `facebook` for Facebook Authentication
-11. Add the strategy details like clientID and clientSecret (obtained from the provider, after the app is created in the provider form). ![setting-strategies](../img/user-authn/passport/setting-strategies.png)
-12. Once the configuration and settings have been entered, restart the passport service or Gluu Server by following the below instructions:
+10. Add the strategy details like clientID and clientSecret 
+(obtained from the provider, after the app is created in the provider form). ![setting-strategies](../img/user-authn/passport/setting-strategies.png)
+11. Once the configuration and settings have been entered, restart the 
+passport service or Gluu Server by following the below instructions:
     
     a. Login to chroot.
     

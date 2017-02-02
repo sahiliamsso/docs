@@ -1108,9 +1108,8 @@ authentication and provisioning. </p>
 <li>Click on <code>update</code>.</li>
 <li>To set the strategies navigate to <code>Configuration</code> &gt; <code>Manage Authentication</code> &gt; <code>Default Authenticaion</code></li>
 <li>Change the Default Authentication mode to <code>passport</code></li>
-<li>Change passport support to enabled.<img alt="enable-authentication" src="../../img/user-authn/passport/enable-authentication.png" /></li>
-<li>Once Passport support is enabled and updated, Passport Authentication Method will appear in the next tab.</li>
-<li>Click on the Passport Authenticaion Method, and set your desired strategies. The <code>Strategy</code> field values for common providers are:<ul>
+<li>Click on <code>Passport Authentication Method</code> tab and <code>Passport Support</code> to enabled.<img alt="enable-authentication" src="../../img/user-authn/passport/enable-authentication3.0.0.png" /></li>
+<li>Add your desired strategies. The <code>Add Strategy</code> field values for common providers are:<ul>
 <li><code>google</code> for GPlus Authentication</li>
 <li><code>twitter</code> for Twitter Authentication</li>
 <li><code>linkedin</code> for LinkedIn Authentication</li>
@@ -1118,9 +1117,11 @@ authentication and provisioning. </p>
 <li><code>facebook</code> for Facebook Authentication</li>
 </ul>
 </li>
-<li>Add the strategy details like clientID and clientSecret (obtained from the provider, after the app is created in the provider form). <img alt="setting-strategies" src="../../img/user-authn/passport/setting-strategies.png" /></li>
+<li>Add the strategy details like clientID and clientSecret 
+(obtained from the provider, after the app is created in the provider form). <img alt="setting-strategies" src="../../img/user-authn/passport/setting-strategies.png" /></li>
 <li>
-<p>Once the configuration and settings have been entered, restart the passport service or Gluu Server by following the below instructions:</p>
+<p>Once the configuration and settings have been entered, restart the 
+passport service or Gluu Server by following the below instructions:</p>
 <p>a. Login to chroot.</p>
 <p>b. Enter the following command to stop: <code>service passport stop</code></p>
 <p>c. Enter the following command to start: <code>service passport start</code></p>
