@@ -207,7 +207,9 @@ Attributes, as they pertain to SSO, are covered more thoroughly in the [SAML Att
 Cache Refresh, a.k.a. LDAP Synchronization, is the process of connecting one or more existing backend LDAP servers, like Microsoft Active Directory, with the Gluu Server's local LDAP server. `Cache Refresh` periodically searches these data sources, compares the results to previous searches, and if a changed user account is found, it is updated.The frequency of cache refresh is also set from this page via the `Polling interval (minutes)`. The `key attribute(s)` is used to correlate a user if the user is found in more then one LDAP server. In this case, the two entries are joined. The source attributes specify which attributes will be pulled from the backend LDAP server. The backend server address, bind DN and other connection information is speciifed in the `Source Backend LDAP Servers` tab. More information on [LDAP Syncronization](./user-group.md/#ldap-synchronization) can be found in the user management section of the docs. 
 
 ### Configure Log Viewer / View Log File
-This tool can be used to view file system logs. If you don't like to ssh, Log Viewer is your friend! Several common logs are preconfigured, or you can define new logs by specifying the path.
+This tool can be used to view file system logs. If you don't like to ssh, 
+Log Viewer is your friend! Several common logs are preconfigured, or you can define 
+new logs by specifying the path.
 
 ### Server Status
 This page provides basic information about the Gluu Server such as the hostname, IP address, free memory & disk space. The number of users in the backend is also available in this page.

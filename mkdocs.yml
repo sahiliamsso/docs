@@ -73,6 +73,6 @@ pages:
         - 'Find your Gluu Version': 'operation/find-gluu-version.md'
         - 'Ports': 'operation/ports.md'
         - 'Logout': 'operation/logout.md'
-        - 'FAQ & Troubleshooting' : 'admin-guide/faq.md'
+        - 'FAQ & Troubleshooting' : 'operation/faq.md'
         #       - 'Fine Tuning Gluu Server' : 'admin-guide/fine-tuning.md'
-        - 'Log Management' : 'admin-guide/logs.md'
+        - 'Log Management' : 'operation/logs.md'

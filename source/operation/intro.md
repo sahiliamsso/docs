@@ -12,7 +12,7 @@ Here are some of the reasons we made this change:
    others. For example, Asimba requires more restarts when certain
    configuration is updated.
  - Logs: `wrapper.log` was getting too busy. It's better to have
-   the top-level log smaller. See [logs management](../admin-guide/logs.md) 
+   the top-level log smaller. See [logs management](./logs.md) 
    for more informatoin.
  - Network: oxAuth is Internet facing; oxTrust is an admin application
    which may be internal facing only.

@@ -157,11 +157,6 @@ However it is recommended to stop and start service using
 
 `service identity start`
 
-
-**SSO Testing Endpoint**       
-Every website (SP) should have both a staging and a production URI
-endpoint which can be checked for SSO. It's important to thoroughly test all scenarios in a development environment before moving the configuration into production. 
-
 ### Create a Trust Relationship in the Gluu Server       
 * Go to SAML → Trust Relationships
 * Click on “Add Relationship”

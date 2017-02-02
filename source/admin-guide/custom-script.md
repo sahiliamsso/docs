@@ -60,7 +60,7 @@ and the oxTrust custom script logs are stored in the
 `oxtrust_script.log`. Please refer to these log files for any errors in
 the interception scripts or following the workflow of the script.
 
-More details on Logs can be found in [Log Management](/admin-guide/logs.md)
+More details on Logs can be found in [Log Management](../operation/logs.md)
 
 ## Person Authentication
 **For a list of pre-written, open source Gluu authentication scripts, 

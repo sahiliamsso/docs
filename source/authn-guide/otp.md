@@ -123,5 +123,5 @@ and
 tail -f /opt/gluu/jetty/identity/logs/oxtrust_script.log | grep "OTP"
 ```
 !!! note
-	Logs would be populate only if logs are enabled. For more on logs refer [Log management](../admin-guide/logs.md)
+	Logs would be populate only if logs are enabled. For more on logs refer [Log management](../operation/logs.md)
 
