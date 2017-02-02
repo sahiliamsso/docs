@@ -373,6 +373,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-ui" title="Accessing the UI" class="md-nav__link">
+    Accessing the UI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#welcome-page" title="Welcome Page" class="md-nav__link">
     Welcome Page
   </a>
@@ -464,6 +478,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#manage-ldap-authentication" title="Manage LDAP Authentication" class="md-nav__link">
+    Manage LDAP Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#default-authentication-method" title="Default Authentication Method" class="md-nav__link">
     Default Authentication Method
   </a>
@@ -533,26 +554,6 @@
   <a href="#saml" title="SAML" class="md-nav__link">
     SAML
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#outbound" title="Outbound" class="md-nav__link">
-    Outbound
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inbound" title="Inbound" class="md-nav__link">
-    Inbound
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1139,6 +1140,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-ui" title="Accessing the UI" class="md-nav__link">
+    Accessing the UI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#welcome-page" title="Welcome Page" class="md-nav__link">
     Welcome Page
   </a>
@@ -1230,6 +1245,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#manage-ldap-authentication" title="Manage LDAP Authentication" class="md-nav__link">
+    Manage LDAP Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#default-authentication-method" title="Default Authentication Method" class="md-nav__link">
     Default Authentication Method
   </a>
@@ -1300,26 +1322,6 @@
     SAML
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#outbound" title="Outbound" class="md-nav__link">
-    Outbound
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inbound" title="Inbound" class="md-nav__link">
-    Inbound
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1366,10 +1368,13 @@
               
                 
                 <h1 id="oxtrust-administrative-graphical-user-interface-gui">oxTrust Administrative Graphical User Interface (GUI)<a class="headerlink" href="#oxtrust-administrative-graphical-user-interface-gui" title="Permanent link">#</a></h1>
-<p>The administration interface (oxTrust) is accessible by navigating to 
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
+<p>This section of the docs covers various features associated with managing your federation service via the Gluu Server interface ("oxTrust"). For more complicated topics and features, this document will link to dedicated sections within the docs where additional operational details are provided.</p>
+<h2 id="accessing-the-ui">Accessing the UI<a class="headerlink" href="#accessing-the-ui" title="Permanent link">#</a></h2>
+<p>The Gluu Server administration interface is accessible by navigating to 
 <code>https://hostname</code> (the one you provided during setup). When you 
 first complete an installation, the default username is <code>admin</code> and 
-the password is the same as the <code>LDAP superuser</code> password.</p>
+the password is the same as the <code>LDAP superuser</code> password. </p>
 <h2 id="welcome-page">Welcome Page<a class="headerlink" href="#welcome-page" title="Permanent link">#</a></h2>
 <p>After successful authentication the administrator is taken to the 
 Dashboard. Some basic information about the VM/server is displayed as 
@@ -1381,7 +1386,7 @@ The left hand menu is used to navigate the admin interface.</p>
 <p>From the configuration tab, the Gluu Server administrator can manage 
 certain non-protocol related tasks.</p>
 <h3 id="organization-configuration">Organization Configuration<a class="headerlink" href="#organization-configuration" title="Permanent link">#</a></h3>
-<p>There are three sections in the organization configuration page:       </p>
+<p>There are three tabs in the organization configuration page:       </p>
 <ol>
 <li><a href="#system-configuration">System Configuration</a>         </li>
 <li><a href="#smtp-server-configuration">SMTP Server Configuration</a>         </li>
@@ -1411,10 +1416,7 @@ certain non-protocol related tasks.</p>
 </ul>
 <h4 id="smtp-server-configuration">SMTP Server Configuration<a class="headerlink" href="#smtp-server-configuration" title="Permanent link">#</a></h4>
 <p><img alt="smtp-config" src="../../img/oxtrust/smtp-config.png" title="SMTP Configuration" /></p>
-<p>The Gluu Server needs a mail server in order to send notifications. 
-The fields on this page are self-explanatory, such as hostname, user, 
-password, ssl-requirement, authentication requirement, sending name and address. 
-All fields are manadory and the configuration can be tested before confirmation.</p>
+<p>The Gluu Server needs a mail server in order to send notifications. All fields in this form are manadory and the configuration can be tested before confirmation.</p>
 <table>
 <thead>
 <tr>
@@ -1474,7 +1476,15 @@ This page also contains the supported response, grants, and algorithms. </p>
 the file method of importing users into the Gluu Server. The administrator 
 can import users from an <code>xls</code> file which must be defined in this tab to import 
 data in the LDAP attributes. The default format should contain the following fields: </p>
+<ul>
+<li>givenname</li>
+<li>sn</li>
+<li>uid</li>
+<li>firstname, 
+etc..</li>
+</ul>
 <h3 id="manage-authentication">Manage Authentication<a class="headerlink" href="#manage-authentication" title="Permanent link">#</a></h3>
+<h4 id="manage-ldap-authentication">Manage LDAP Authentication<a class="headerlink" href="#manage-ldap-authentication" title="Permanent link">#</a></h4>
 <p>This section allows the Gluu Server administrator to define how and
 where the server should connect to authenticate users. If it is a remote
 LDAP/Active Directory server, the values are required. Put the details
@@ -1533,8 +1543,8 @@ local LDAP server.</p>
 </li>
 </ul>
 <h4 id="default-authentication-method">Default Authentication Method<a class="headerlink" href="#default-authentication-method" title="Permanent link">#</a></h4>
-<p>This allows the Gluu Server administrator to select both the default
-authentication mode, and level for person authentication. Both modes are
+<p>This allows the Gluu Server administrator to select the default
+authentication method and level for person authentication. Both methods are
 set to "Default" until additional authentication mechanisms are enabled
 via <a href="#manage-custom-scripts">custom scripts</a>. </p>
 <table>
@@ -1568,15 +1578,14 @@ of SSO protocols ( OpenID Connect, SAML, CAS )</p>
 <p>The Gluu Server exposes interception scripts in places where it is common 
 for organizations to implement custom workflows, or changes to the 
 look and feel of the Gluu Server. The most commonly used scripts are 
-for authentication, authorization and identity synchronization. Each
-type of script has its own interface--in other words what methods are
-available. For more information, see the reference page detailing how
-<a href="../user-authentications/">to write a custom authentication script</a>.</p>
+for authentication, authorization, and identity synchronization. Each
+type of script has its own interface--in other words, what methods are
+available. For more information, see the reference page detailing each type of <a href="../custom-script/">interception script</a>.</p>
 <h3 id="manage-registration">Manage Registration<a class="headerlink" href="#manage-registration" title="Permanent link">#</a></h3>
 <p>The Gluu Server is shipped with a very basic user registration 
-feature. For custom enrollment requirements, you may want to write
-a registration page and use the SCIM endpoint
-to add the user to the Gluu Server. Also, in some cases oxTrust is not Internet facing,
+feature. For custom enrollment requirements, we recommend that you write
+a custom registration page and use the SCIM endpoint
+to add the user record to the Gluu Server. Also, in some cases oxTrust is not Internet facing,
 which makes it a bad option for user registration. Use this feature
 only if you have very basic requirements! </p>
 <p>This tabs has two options:
@@ -1590,70 +1599,25 @@ only if you have very basic requirements! </p>
 <p>This section allows you to filter the list of attributes to be displayed 
 in the registration form. Search, select, add, and order desired attributes here.</p>
 <h3 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">#</a></h3>
-<p>Available user attributes are found on this page. By default, only the active attributes are visible.<br />
-Use the <code>Show All Attributes</code> to display the inactive attributes too. 
-Custom attributes can be added by clicking the <code>Add Attribute</code> button 
-and filling in a simple form. Note that attributes must already be
-present in the LDAP server. Adding an attribute here is like registering 
-it in the Gluu Server. In order to release an attribute during a SAML or 
-OpenID Connect transaction, the Gluu Server needs to know it exists.<br />
-How to create and configure <a href="../saml/#saml-Attributes">SAML Attributes</a> 
-and <a href="../openid-connect/#scopes">OpenID Connect Scopes</a> are 
-discussed later under each section of this document.</p>
+<p>Attributes are individual pieces of user data, like <code>uid</code> or <code>email</code>, that are required by applications in order to identify a user and grant access to protected resources. The user attributes that are available in your federation service can be found on this page. By default, only <code>active</code> attributes are visible. Use the <code>Show All Attributes</code> button to display the <code>inactive</code> attributes too. </p>
+<p>Custom attributes can be added by clicking the <code>Add Attribute</code> button and completing the simple form. Note that custom attributes must already be present in the LDAP server in order for them to be available for release by the Gluu Server. Adding an attribute here is like registering it in the Gluu Server--in order to release an attribute during a SAML or OpenID Connect transaction, the Gluu Server needs to know it exists. </p>
+<p>Attributes, as they pertain to SSO, are covered more thoroughly in the <a href="../saml/#saml-Attributes">SAML Attributes</a> and <a href="../openid-connect/#scopes">OpenID Connect Scopes</a> sections of the docs.</p>
 <h3 id="cache-refresh">Cache Refresh<a class="headerlink" href="#cache-refresh" title="Permanent link">#</a></h3>
-<p>Cache Refresh, a.k.a. LDAP Synchronization, is the process of connecting an existing backend LDAP server, like Microsoft Active Directory, with the Gluu Server's local LDAP server. <code>Cache Refresh</code> 
-periodically searches these data sources, compares the results to 
-previous searches, and if a changed user account is found, it is updated.
-The frequency of cache refresh is also set from this page via the 
-<code>Polling interval (minutes)</code>. The <code>key attribute(s)</code> is used to correlate
-a user if the user is found in more then one LDAP server. In this case, the two entries
-are joined. The source attributes specify which attributes will be 
-pulled from the backend LDAP server. The backend server address, bind DN 
-and other connection information is speciifed in the <code>Source Backend 
-LDAP Servers</code> tab. More information on <a href="../user-group.md/#ldap-synchronization">LDAP Syncronization</a></p>
+<p>Cache Refresh, a.k.a. LDAP Synchronization, is the process of connecting one or more existing backend LDAP servers, like Microsoft Active Directory, with the Gluu Server's local LDAP server. <code>Cache Refresh</code> periodically searches these data sources, compares the results to previous searches, and if a changed user account is found, it is updated.The frequency of cache refresh is also set from this page via the <code>Polling interval (minutes)</code>. The <code>key attribute(s)</code> is used to correlate a user if the user is found in more then one LDAP server. In this case, the two entries are joined. The source attributes specify which attributes will be pulled from the backend LDAP server. The backend server address, bind DN and other connection information is speciifed in the <code>Source Backend LDAP Servers</code> tab. More information on <a href="../user-group.md/#ldap-synchronization">LDAP Syncronization</a> can be found in the user management section of the docs. </p>
 <h3 id="configure-log-viewer-view-log-file">Configure Log Viewer / View Log File<a class="headerlink" href="#configure-log-viewer-view-log-file" title="Permanent link">#</a></h3>
-<p>This tool can be used to view file system logs. If you don't like to 
-ssh, Log Viewer is your friend! Several common logs are preconfigured,
-or you can define new logs by specifying the path.</p>
+<p>This tool can be used to view file system logs. If you don't like to ssh, Log Viewer is your friend! Several common logs are preconfigured, or you can define new logs by specifying the path.</p>
 <h3 id="server-status">Server Status<a class="headerlink" href="#server-status" title="Permanent link">#</a></h3>
-<p>This page provides some basic information about the Gluu Server such as the 
-hostname, IP address, free memory &amp; disk space. The number of users in the 
-backend is also available in this page.</p>
+<p>This page provides basic information about the Gluu Server such as the hostname, IP address, free memory &amp; disk space. The number of users in the backend is also available in this page.</p>
 <h3 id="certificates">Certificates<a class="headerlink" href="#certificates" title="Permanent link">#</a></h3>
-<p>The certificate page shows some summary information about the SSL
-and SAML certificates.</p>
+<p>The certificate page provides summary information about your SSL and SAML certificates.</p>
 <h2 id="saml">SAML<a class="headerlink" href="#saml" title="Permanent link">#</a></h2>
-<p>If you chose to deploy the Shibboleth SAML IDP during installation, 
-you will see this menu to manage all SAML related functionalities. 
-In addition, if you chose to deploy the Asimba SAML Proxy, you will see a sub menu for inbound SAML.</p>
-<h3 id="outbound">Outbound<a class="headerlink" href="#outbound" title="Permanent link">#</a></h3>
-<p><img alt="saml" src="../../img/oxtrust/saml.png" /></p>
-<p>The <code>Trust Relationships</code> page, as the name suggests, will allow the administrator to 
-view the created trust relationships (TRs) by searching using the search button. 
-There is a button to add relationship with the same name. All the available TRs can be 
-searched by using two (2) spaces in the search bar. There are some information that the 
-administrator needs to gather before creating any new TR in Gluu Server. The metadata of the 
-Service Provider (SP) connected using TR must be gathered along with the required attributes. 
-The creation of TR will be covered in detail later under <a href="../saml/">SAML</a>.</p>
-<h3 id="inbound">Inbound<a class="headerlink" href="#inbound" title="Permanent link">#</a></h3>
+<p>If you deployed the Shibboleth SAML IDP or the Asimba SAML proxy during Gluu Server installation, you will see a link to manage inbound and outbound SAML requirements in the left hand navigation. Learn more about configuring and managing SAML in the <a href="../saml/">SAML</a> portion of the docs. </p>
 <h2 id="openid-connect">OpenID Connect<a class="headerlink" href="#openid-connect" title="Permanent link">#</a></h2>
-<p>The <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect protocol</a> is supported by default in all Gluu Server deployments. The scopes page contains the <code>Add Scope</code> button which can be used to add new scopes in Gluu Server. Additionally the available scopes can be searched by name or listed using two (2) spaces in the search bar.</p>
-<p><img alt="scopes" src="../../img/oxtrust/scopes.png" /></p>
-<p>The OpenID Connect clients are accessible from the <code>Clients</code> page under <code>OpenID Connect</code> tab. 
-The structure is similar to the scopes page with the functionality to search by name or use two (2) spaces 
-to list all the available clients. New clients can be added by clicking 
-the <code>Add Client</code> button. This section is detailed in <a href="../openid-connect/">OpenID Connect</a> </p>
-<p><img alt="clients" src="../../img/oxtrust/clients.png" /></p>
+<p>The <a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect protocol</a> is supported by default in all Gluu Server deployments. Learn more about configuring and managing OpenID Connect in the <a href="../openid-connect/">OpenID Connect</a> portion of the docs. </p>
 <h2 id="uma">UMA<a class="headerlink" href="#uma" title="Permanent link">#</a></h2>
-<p><a href="../uma/">UMA</a> or (User-Managed Access) is an access management protocol supported by Gluu Server.
-The available scopes can be searched using the search bar on the top of the page. 
-New scope descriptions can be added using the <code>Add Scope Description</code> button.
-<img alt="uma-scopes" src="../../img/oxtrust/uma-scopes.png" /></p>
-<p>UMA resources page also has a searchbar on the top of the page and can be used 
-to search for resource sets. New resource sets can be added by clocking on the <code>Add Resource Set</code> button.
-<img alt="uma-resources" src="../../img/oxtrust/uma-resources.png" /></p>
+<p><a href="../uma/">UMA</a> or (User-Managed Access) is an access management protocol that is also supported by default in all Gluu Server deployments. Learn more about configuring and managing UMA in the <a href="../uma/">UMA</a> portion of the docs.</p>
 <h2 id="users">Users<a class="headerlink" href="#users" title="Permanent link">#</a></h2>
-<p>Users tab allows Gluu admin to do various task, including add admin, search users, Import users from file.</p>
+<p>The users tab allows the Gluu admin to perform various user management tasks, including add users to the admin group, search users, and import users from a file. Learn more about managing users in the <a href="../user-group/">user management</a> portion of the docs. </p>
 <h2 id="personal">Personal<a class="headerlink" href="#personal" title="Permanent link">#</a></h2>
 <p>Personal tab allows the individual person to view his basic profile and modify certain fields.</p>
               

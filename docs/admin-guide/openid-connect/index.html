@@ -555,13 +555,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#jargon" title="Jargon" class="md-nav__link">
-    Jargon
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#openid-connect-in-the-gluu-server" title="OpenID Connect in the Gluu Server" class="md-nav__link">
     OpenID Connect in the Gluu Server
   </a>
@@ -1119,13 +1112,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#jargon" title="Jargon" class="md-nav__link">
-    Jargon
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#openid-connect-in-the-gluu-server" title="OpenID Connect in the Gluu Server" class="md-nav__link">
     OpenID Connect in the Gluu Server
   </a>
@@ -1313,12 +1299,9 @@
                 
                 <h1 id="openid-connect">OpenID Connect<a class="headerlink" href="#openid-connect" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>OpenID Connect is an authentication layer built on OAuth 2.0. 
-OpenID Connect is a specific implementation of OAuth 2.0 
-where the identity provider holds protected resources that a 
-third-party application needs to access on behalf of a person. 
+<p>OpenID Connect is an authentication layer built on OAuth 2.0. OpenID Connect is a specific implementation of OAuth 2.0 
+where the identity provider holds protected resources that a third-party application needs to access on behalf of a person. 
 OpenID Connect allows relying parties to verify the identity of, and obtain information about a person requesting to access the applications protected resources. </p>
-<h2 id="jargon">Jargon<a class="headerlink" href="#jargon" title="Permanent link">#</a></h2>
 <p>In OpenID Connect the key entities include:</p>
 <ul>
 <li>The <em>end user</em> (a.k.a. OAuth 2.0 resource owner) whose user information the application needs to access.</li>
@@ -1334,11 +1317,25 @@ OpenID Connect allows relying parties to verify the identity of, and obtain info
 <p>The Gluu Server is an OpenID Provider. The OP holds information about the user and allows the end user or the organization (depending on configuration) to consent to providing the RP with access to user information. OpenID Connect defines a unique identification for an account (subject identifier + issuer identifier), and the RP can use this as a key to its own user profile. </p>
 <p>The relying party can verify claims about the identity of the end user, and log the user out at the end of a session. OpenID Connect also makes it possible to discover the OpenID Provider for an end user, and to register relying party client applications dynamically. OpenID connect services are built on OAuth 2.0, JSON Web Token (JWT), WebFinger and Well-Known URIs.</p>
 <h2 id="openid-connect-in-the-gluu-server">OpenID Connect in the Gluu Server<a class="headerlink" href="#openid-connect-in-the-gluu-server" title="Permanent link">#</a></h2>
-<p>The Gluu Server is a <a href="http://openid.net/certification/">fully certified OpenID Connect Provider (OP)</a>. As an OpenID Provider, the Gluu Server enables OpenID Connect relying parties (clients) to discover its capabilities, handle both dynamic and static registration of relying parties, respond to relying party requests with authorization codes, access tokens, and user information according to the Authorization Code and Implicit flows of OpenID Connect, and manages sessions.</p>
+<p>The Gluu Server is a <a href="http://openid.net/certification/">fully certified OpenID Connect Provider (OP)</a>. 
+As an OpenID Provider, the Gluu Server enables OpenID Connect relying parties (clients) to discover its 
+capabilities, handle both dynamic and static registration of relying parties, respond to relying party 
+requests with authorization codes, access tokens, and user information according to the Authorization Code 
+and Implicit flows of OpenID Connect, and manages sessions.</p>
 <h3 id="openid-connect-implicit-flow">OpenID Connect Implicit Flow<a class="headerlink" href="#openid-connect-implicit-flow" title="Permanent link">#</a></h3>
-<p>The OpenID Connect Implicit Flow specifies how the relying party interacts with the OpenID Provider based on use of the OAuth 2.0 implicit grant. The main difference between the OAuth and OpenID Connect implicit flows lie in the use of the id_token, which must be returned in Connect. The id_token adds additional security to the transaction. For more information, read the <a href="http://openid.net/specs/openid-connectimplicit-1_0.html">OpenID Connect Implicit Client Implementer's guide</a>.</p>
+<p>The OpenID Connect Implicit Flow specifies how the relying party interacts with the OpenID 
+Provider based on use of the OAuth 2.0 implicit grant. The main difference between the OAuth and OpenID 
+Connect implicit flows lie in the use of the id_token, which must be returned in Connect. 
+The id_token adds additional security to the transaction. 
+For more information, 
+read the <a href="http://openid.net/specs/openid-connectimplicit-1_0.html">OpenID Connect Implicit Client Implementer's guide</a>.</p>
 <h3 id="openid-connect-authorization-code-flow">OpenID Connect Authorization Code Flow<a class="headerlink" href="#openid-connect-authorization-code-flow" title="Permanent link">#</a></h3>
-<p>The OpenID Connect Authorization Code Flow specifies how the relying party interacts with the OpenID Provider based on use of the OAuth 2.0 authorization grant. The authorization code flow is more secure than the implicit flow because the tokens are never exposed to the web browser and possibly other malicious applications with access to the browser. As with the implicit flow the extra securuty in Connect's authorization code flow stems from the id_token. </p>
+<p>The OpenID Connect Authorization Code Flow specifies how the relying party 
+interacts with the OpenID Provider based on use of the OAuth 2.0 authorization grant. 
+The authorization code flow is more secure than the implicit flow because the tokens 
+are never exposed to the web browser and possibly other malicious applications with 
+access to the browser. As with the implicit flow the extra securuty in Connect's authorization code 
+flow stems from the id_token. </p>
 <h3 id="openid-connect-hybrid-flow">OpenID Connect Hybrid Flow<a class="headerlink" href="#openid-connect-hybrid-flow" title="Permanent link">#</a></h3>
 <p>Hybrid flow is a combination of the Implicit Flow and Authorization Code 
 Flow. It allows an application to request a combination of identity token, 
@@ -1624,15 +1621,11 @@ logout, the domain admin can use <a href="../custom-script/#application-session-
 useful to clean up sessions in a legacy SSO system (i.e. SiteMinder), or
 perhaps in a portal.</p>
 <p>The key for logout is to understand the limitations of logout, and to
-test the use cases that are important to you, so you will not be
+test the use cases that are important to you, so you will not b
 surprised by the behavior when you put your application into production.</p>
 <h2 id="scopes">Scopes<a class="headerlink" href="#scopes" title="Permanent link">#</a></h2>
-<p>In SAML, the IDP releases attributes to the SP. OpenID Connect provides
-similar functionality, with more flexibility in case the person needs to
-self-approve the release of information from the IDP to the website (or
-mobile application). In OAuth2, scopes can be used for various purposes.
-OpenID Connect uses OAuth2 scopes to "group" attributes". For example, we
-could have a scope called "address" that includes the street, city,
+<p>In OAuth 2.0 scopes can be used for various purposes. OpenID Connect uses OAuth 2.0 scopes to "group attributes". For example, we
+could have a scope called <code>address</code> that includes the street, city,
 state, and country user claims. By default the Gluu Server defines nine
 scopes: <code>address</code>, <code>clientinfo</code>, <code>email</code>, <code>mobile_phone</code>, <code>openid</code>, <code>permission</code>, <code>phone</code>, <code>profile</code>, <code>user_name</code></p>
 <p><img alt="Scopes Screenshot" src="https://raw.githubusercontent.com/GluuFederation/docs/master/sources/img/oxTrust/admin_oauth2_scope.png" /></p>

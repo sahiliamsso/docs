@@ -23,7 +23,8 @@ Consolidation saves money, and one-off integrations should be avoided.
 Our goal was to support the most widely adopted older protocols, and the 
 most promising new protocols. 
 
-The Gluu Server supports the following open web standards for authentication, authorization, federated identity, and identity management:
+The Gluu Server supports the following open web standards for 
+authentication, authorization, federated identity, and identity management:
 
 - OAuth 2.0    
 - SAML 2.0   

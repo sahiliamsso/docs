@@ -462,15 +462,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-create-a-new-app-to-use-for-passport-server" title="How to create a new app to use for Passport server?" class="md-nav__link">
-    How to create a new app to use for Passport server?
+  <a href="#how-to-make-a-new-app-use-passport" title="How to make a new app use Passport?" class="md-nav__link">
+    How to make a new app use Passport?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-add-new-strategies-to-passport-server" title="How to add new strategies to Passport server?" class="md-nav__link">
-    How to add new strategies to Passport server?
+  <a href="#add-new-strategies-to-passport" title="Add new strategies to Passport" class="md-nav__link">
+    Add new strategies to Passport
   </a>
   
     <nav class="md-nav">
@@ -1007,15 +1007,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-create-a-new-app-to-use-for-passport-server" title="How to create a new app to use for Passport server?" class="md-nav__link">
-    How to create a new app to use for Passport server?
+  <a href="#how-to-make-a-new-app-use-passport" title="How to make a new app use Passport?" class="md-nav__link">
+    How to make a new app use Passport?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-add-new-strategies-to-passport-server" title="How to add new strategies to Passport server?" class="md-nav__link">
-    How to add new strategies to Passport server?
+  <a href="#add-new-strategies-to-passport" title="Add new strategies to Passport" class="md-nav__link">
+    Add new strategies to Passport
   </a>
   
     <nav class="md-nav">
@@ -1071,10 +1071,10 @@
                 
                 <h1 id="social-login-using-passportjs">Social Login using Passport.js<a class="headerlink" href="#social-login-using-passportjs" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p><a href="http://passportjs.org/">Passport</a> is a component used in the Gluu
+<p><a href="http://passportjs.org/">Passport.js</a> is a component used in the Gluu
 Server to consolidate social login. With over 300 existing
-"strategies" it provides a crowd-sourced approach to supporting
-popular consumer IDPs. Passport not only normalizes authentication, 
+"strategies" it provides a crowd-sourced approach to offering your users
+social login at popular consumer IDPs. Passport not only normalizes authentication, 
 it also provides a standard mapping for user claims. </p>
 <p>Passport is an Express-based web application. We've modified it 
 to call oxTrust APIs for its non-static configuration. Because its 
@@ -1082,7 +1082,7 @@ configuration is stored centrally in LDAP, you can scale Passport even
 in clustered topologies.</p>
 <p>The Gluu Server needs only one interception script for Passport. This 
 script is included in our default distribution. Post-authentication,
-this script uses just-in-time provisioning to add the user to the Gluu
+this script uses just-in-time provisioning to add users to the Gluu
 LDAP server if a local account does not already exist. In this way, 
 the Gluu SAML and OpenID Connect providers can gather claims and maintain
 SSO as normal.</p>
@@ -1096,7 +1096,7 @@ authentication and provisioning. </p>
 <li>Node-Passport server will redirect user to social media authentication provider.</li>
 <li>After successful authentication of user, social network will callback Node-Passport server along with user details and access token.</li>
 <li>Node-Passport server will redirect user back to Gluu server with user details and access token.</li>
-<li>Gluu server’s interception script will check if the user exists in LDAP server and if user exists then user will be logged into the system and if not, then it will create new user with the required details and logs user into the system.</li>
+<li>Gluu server’s interception script will check if the user exists in LDAP server. If the user exists then the user will be logged into the system. If not, the interception script will create a new user with the required details and log the user into the system.</li>
 </ol>
 <h2 id="setup-passportjs-with-gluu">SETUP Passport.js with Gluu<a class="headerlink" href="#setup-passportjs-with-gluu" title="Permanent link">#</a></h2>
 <p>During installation of the Gluu Server select <code>yes</code> to install Passport.js when prompted.</p>
@@ -1104,38 +1104,33 @@ authentication and provisioning. </p>
 <li>Click on Manage Custom Scripts under configuration tab on the main menu.</li>
 <li>Enable passport script in Person Authentication Tab.<img alt="Enable passport1" src="../../img/user-authn/passport/enable-passport.png" /></li>
 <li>Click on update at the end of the page.<img alt="update" src="../../img/user-authn/passport/auth-update.png" /></li>
-<li>Enable uma authorization policy in uma authorization policy tab.<img alt="uma-enable" src="../../img/user-authn/passport/uma-enable.png" /></li>
+<li>Enable UMA authorization policy in UMA authorization policy tab.<img alt="uma-enable" src="../../img/user-authn/passport/uma-enable.png" /></li>
 <li>Click on update.</li>
-<li>To set the strategies from Configuration &gt; Manage Authentication &gt; Default Authenticaion</li>
-<li>Under Default Authenticaion tab, change Authentication mode to passport</li>
+<li>To set the strategies navigate to <code>Configuration</code> &gt; <code>Manage Authentication</code> &gt; <code>Default Authenticaion</code></li>
+<li>Change the Default Authentication mode to <code>passport</code></li>
 <li>Change passport support to enabled.<img alt="enable-authentication" src="../../img/user-authn/passport/enable-authentication.png" /></li>
 <li>Once Passport support is enabled and updated, Passport Authentication Method will appear in the next tab.</li>
-<li>Click on the Passport Authenticaion Method, and set the strategies as follows,The values for Strategy field for common providers are:<ul>
-<li>google for GPlus Authentication</li>
-<li>twitter for Twitter Authentication</li>
-<li>linkedin for LinkedIn Authentication</li>
-<li>github for Github Authentication</li>
-<li>facebook for Facebook Authentication</li>
+<li>Click on the Passport Authenticaion Method, and set your desired strategies. The <code>Strategy</code> field values for common providers are:<ul>
+<li><code>google</code> for GPlus Authentication</li>
+<li><code>twitter</code> for Twitter Authentication</li>
+<li><code>linkedin</code> for LinkedIn Authentication</li>
+<li><code>github</code> for Github Authentication</li>
+<li><code>facebook</code> for Facebook Authentication</li>
 </ul>
 </li>
-<li>And then add the strategy details like clientID and clientSecret.
-            clientID and clientSecret are details obtained from the provider, after the app is created in the provider form.<img alt="setting-strategies" src="../../img/user-authn/passport/setting-strategies.png" /></li>
+<li>Add the strategy details like clientID and clientSecret (obtained from the provider, after the app is created in the provider form). <img alt="setting-strategies" src="../../img/user-authn/passport/setting-strategies.png" /></li>
 <li>
-<p>Once the configuration and settings are done, restart the passport service or Gluu Server.</p>
+<p>Once the configuration and settings have been entered, restart the passport service or Gluu Server by following the below instructions:</p>
 <p>a. Login to chroot.</p>
-<p>b. Enter below command to stop.</p>
-<pre><code>`service passport stop`
-</code></pre>
-<p>c. Below command to start.</p>
-<pre><code>`service passport start`
-</code></pre>
+<p>b. Enter the following command to stop: <code>service passport stop</code></p>
+<p>c. Enter the following command to start: <code>service passport start</code></p>
 </li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Strategies names and field names are case sensitive.</p>
 </div>
-<h2 id="how-to-create-a-new-app-to-use-for-passport-server">How to create a new app to use for Passport server?<a class="headerlink" href="#how-to-create-a-new-app-to-use-for-passport-server" title="Permanent link">#</a></h2>
+<h2 id="how-to-make-a-new-app-use-passport">How to make a new app use Passport?<a class="headerlink" href="#how-to-make-a-new-app-use-passport" title="Permanent link">#</a></h2>
 <p>Every provider has different protocols and ways to create the app. We 
 will look at one of the most common providers "facebook" and create a new app.</p>
 <ol>
@@ -1145,32 +1140,22 @@ will look at one of the most common providers "facebook" and create a new app.</
 <li>Click on the dashboard menu and get the clientID and clientSecret which can be used with the passport.</li>
 <li>Click on settings menu and put the domain of your gluu server in the App Domains field.</li>
 </ol>
-<p>Note: If there is a filed for Authorized redirect URIs, make sure the 
-Authorized redirect URIs list of your app contains the passport 
-strategy's callback. If your gluu server points to 
-https://example.gluu.org and the strategy is facebook, the list of 
-Authorized redirect URIs should contain 
-https://example.gluu.org/passport/auth/facebook/callback.
-Make sure the  Authorized redirect URIs list of your app contains the 
-passport strategy's callback.
-If your gluu server points to https://example.gluu.org and the strategy 
-is facebook, the list of Authorized redirect URIs should 
-contain https://example.gluu.org/passport/auth/facebook/callback.</p>
-<h2 id="how-to-add-new-strategies-to-passport-server">How to add new strategies to Passport server?<a class="headerlink" href="#how-to-add-new-strategies-to-passport-server" title="Permanent link">#</a></h2>
-<p>Find an npm module that fits best for the strategy that you want to add.
-Let's start with an example. In this example we will consider adding facebook strategy.</p>
+<p>Note: If there is a field for Authorized redirect URIs, make sure your apps list of Authorized redirect URIs contains the passport 
+strategy's callback. For example, if your gluu server points to <code>https://example.gluu.org</code> and the strategy is <code>facebook</code>, the list of Authorized redirect URIs should contain <code>https://example.gluu.org/passport/auth/facebook/callback.</code> </p>
+<h2 id="add-new-strategies-to-passport">Add new strategies to Passport<a class="headerlink" href="#add-new-strategies-to-passport" title="Permanent link">#</a></h2>
+<p>The best way to add new strategies to Passport is to find an applicable npm module for your desired strategy. Let's start with an example. In this example we will consider adding facebook strategy.</p>
 <ol>
 <li>If you want to add facebook strategy, search for passport-facebook npm module where you can select the npm module and then add the module to passport server.</li>
-<li>Let's say we found this module "passport-facebook" and want to use this module in for facebook authentication, install the module in passport app by executing <code>npm install passport-facebook --save</code> to install the module and also save the dependency to the passport server.</li>
+<li>Let's say we found this module "passport-facebook" and want to use this module for facebook authentication. Install the module in passport by executing the following command: <code>npm install passport-facebook --save</code>.</li>
 <li>Configure the strategy.</li>
 <li>Configure routes for the strategy.</li>
 <li>Call method to configure the strategy</li>
 <li>Add button for the configured strategy in passport authentication UI.</li>
 </ol>
-<h5 id="configure-the-strategy">Configure the strategy<a class="headerlink" href="#configure-the-strategy" title="Permanent link">#</a></h5>
-<p>All the strategies are been configured in the folder server/auth/*.js.
-We need to create new file named with the strategy name. Our strategy is facebook so we can create new file named facebook.js and configure the strategy.</p>
-<pre><code class="javascript">var passport = require('passport');
+<h3 id="configure-the-strategy">Configure the strategy<a class="headerlink" href="#configure-the-strategy" title="Permanent link">#</a></h3>
+<p>All strategies are configured in the folder <code>server/auth/*.js.</code> Next we need to create a file for the new strategy. Our strategy is facebook so we can create new file named <code>facebook.js</code> and configure the strategy.</p>
+<pre><code>javascript
+var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
 
 var setCredentials = function(credentials) {
@@ -1205,12 +1190,12 @@ module.exports = {
 </code></pre>
 
 <p>Here is an example of the facebook strategy configured. For facebook 
-the required parameters are clientID, clientSecret and callbackURL. You 
+the required parameters are <code>clientID</code>, <code>clientSecret</code> and <code>callbackURL</code>. You 
 can search for more configurations depending on the requirements and 
 configure accordingly.</p>
-<p>The function setCredentials is used to configure the strategy of the 
+<p>The function <code>setCredentials</code> is used to configure the strategy of the 
 credentials of this strategy are been received. The parameter credentials 
-holds the values that are stored in the oxTrust</p>
+holds the values that are stored in the oxTrust. </p>
 <p>The parameter callbackURL should point to the callback route that we 
 will configure in step 4. As we are configuring facebook strategy, the 
 <code>callbackURL</code> can be set to <code>"/passport/auth/facebook/callback"</code> 
@@ -1224,7 +1209,7 @@ the provider, i.e for facebook the provider value will be facebook etc.
 In most cases the value of provider is received in the user claims itself.</p>
 <p>Then export the strategy that we configured and also the <code>setCredentials</code> 
 method which will be used to set the details of the strategy.</p>
-<h5 id="configure-routes-for-the-strategy">Configure routes for the strategy<a class="headerlink" href="#configure-routes-for-the-strategy" title="Permanent link">#</a></h5>
+<h3 id="configure-routes-for-the-strategy">Configure routes for the strategy<a class="headerlink" href="#configure-routes-for-the-strategy" title="Permanent link">#</a></h3>
 <p>We are going to set the routes for the strategy that we are going to configure.
 First require the strategy that we configured in the previous step.</p>
 <pre><code class="javascript">var passportFacebook = require('../auth/facebook').passport;
@@ -1258,7 +1243,7 @@ router.get('/auth/facebook/:token',
 or you can set the scope value here too.</p>
 <p>The callbackResponse method return the control to Gluu server and 
 user is been enrolled in the system.</p>
-<h5 id="call-method-to-configure-the-strategy">Call method to configure the strategy<a class="headerlink" href="#call-method-to-configure-the-strategy" title="Permanent link">#</a></h5>
+<h3 id="call-method-to-configure-the-strategy">Call method to configure the strategy<a class="headerlink" href="#call-method-to-configure-the-strategy" title="Permanent link">#</a></h3>
 <p>In this step we are going to call the setCredentials method of the 
 strategy that we have created.</p>
 <p>Go to the file configureStrategies.js in auth folder of passport 
@@ -1278,7 +1263,7 @@ if (data.passportStrategies.facebook) {
 
 <p>This will configure the passport strategy if the details of the 
 strategy are received from passport API.</p>
-<h5 id="add-button-for-the-configured-strategy-in-passport-authentication-ui">Add button for the configured strategy in passport authentication UI.<a class="headerlink" href="#add-button-for-the-configured-strategy-in-passport-authentication-ui" title="Permanent link">#</a></h5>
+<h3 id="add-button-for-the-configured-strategy-in-passport-authentication-ui">Add button for the configured strategy in passport authentication UI.<a class="headerlink" href="#add-button-for-the-configured-strategy-in-passport-authentication-ui" title="Permanent link">#</a></h3>
 <p>So far the passport server is ready with the new strategy that we have 
 created, but to call the strategy we need to add a button which calls 
 the new strategy.</p>

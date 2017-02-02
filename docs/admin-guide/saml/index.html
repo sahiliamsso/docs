@@ -537,6 +537,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#outbound-saml" title="Outbound SAML" class="md-nav__link">
     Outbound SAML
   </a>
@@ -1050,6 +1057,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#outbound-saml" title="Outbound SAML" class="md-nav__link">
     Outbound SAML
   </a>
@@ -1188,6 +1202,15 @@
               
                 
                 <h1 id="saml">SAML<a class="headerlink" href="#saml" title="Permanent link">#</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
+<p>SAML is an XML-based, open-standard data format for exchanging authentication and authorization data between an identity provider (like the Gluu Server) and a service provider (like Salesforce, O365, etc.). SAML is stable and well supported at many of the Internet's largest providers. However, the last major release of SAML was in 2005! Therefore it is important to understand when to use SAML and when to use a newer protocol like OpenID Connect to achieve your identity goals. </p>
+<p>In short, refer to these three considerations to determine if you should use SAML:</p>
+<ul>
+<li>If you have an application that already supports SAML–use SAML!</li>
+<li>If you have a mobile application, use OpenID Connect.</li>
+<li>If you are writing a new application, use OpenID Connect.</li>
+</ul>
+<p>If you are continuing with this SAML documentation it is presumed that your use case aligns with the first bullet point above. If not, we recommend that you review the <a href="../openid-connect/">OpenID Connect</a> portion of the Gluu Server docs. </p>
 <h2 id="outbound-saml">Outbound SAML<a class="headerlink" href="#outbound-saml" title="Permanent link">#</a></h2>
 <p>Outbound SAML can also be called SP-initiated Single Sign-On (SSO) 
 or traditional SAML. In an outbound SAML transaction a website or application (SP) 

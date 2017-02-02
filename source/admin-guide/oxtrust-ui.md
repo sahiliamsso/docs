@@ -88,6 +88,12 @@ the file method of importing users into the Gluu Server. The administrator
 can import users from an `xls` file which must be defined in this tab to import 
 data in the LDAP attributes. The default format should contain the following fields: 
 
+- givenname
+- sn
+- uid
+- firstname, 
+etc..
+
 ### Manage Authentication
 
 #### Manage LDAP Authentication

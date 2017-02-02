@@ -23,13 +23,27 @@ The Gluu Server is an OpenID Provider. The OP holds information about the user a
 The relying party can verify claims about the identity of the end user, and log the user out at the end of a session. OpenID Connect also makes it possible to discover the OpenID Provider for an end user, and to register relying party client applications dynamically. OpenID connect services are built on OAuth 2.0, JSON Web Token (JWT), WebFinger and Well-Known URIs.
 
 ## OpenID Connect in the Gluu Server
-The Gluu Server is a [fully certified OpenID Connect Provider (OP)](http://openid.net/certification/). As an OpenID Provider, the Gluu Server enables OpenID Connect relying parties (clients) to discover its capabilities, handle both dynamic and static registration of relying parties, respond to relying party requests with authorization codes, access tokens, and user information according to the Authorization Code and Implicit flows of OpenID Connect, and manages sessions.
+The Gluu Server is a [fully certified OpenID Connect Provider (OP)](http://openid.net/certification/). 
+As an OpenID Provider, the Gluu Server enables OpenID Connect relying parties (clients) to discover its 
+capabilities, handle both dynamic and static registration of relying parties, respond to relying party 
+requests with authorization codes, access tokens, and user information according to the Authorization Code 
+and Implicit flows of OpenID Connect, and manages sessions.
 
 ### OpenID Connect Implicit Flow
-The OpenID Connect Implicit Flow specifies how the relying party interacts with the OpenID Provider based on use of the OAuth 2.0 implicit grant. The main difference between the OAuth and OpenID Connect implicit flows lie in the use of the id_token, which must be returned in Connect. The id_token adds additional security to the transaction. For more information, read the [OpenID Connect Implicit Client Implementer's guide](http://openid.net/specs/openid-connectimplicit-1_0.html).
+The OpenID Connect Implicit Flow specifies how the relying party interacts with the OpenID 
+Provider based on use of the OAuth 2.0 implicit grant. The main difference between the OAuth and OpenID 
+Connect implicit flows lie in the use of the id_token, which must be returned in Connect. 
+The id_token adds additional security to the transaction. 
+For more information, 
+read the [OpenID Connect Implicit Client Implementer's guide](http://openid.net/specs/openid-connectimplicit-1_0.html).
 
 ### OpenID Connect Authorization Code Flow
-The OpenID Connect Authorization Code Flow specifies how the relying party interacts with the OpenID Provider based on use of the OAuth 2.0 authorization grant. The authorization code flow is more secure than the implicit flow because the tokens are never exposed to the web browser and possibly other malicious applications with access to the browser. As with the implicit flow the extra securuty in Connect's authorization code flow stems from the id_token. 
+The OpenID Connect Authorization Code Flow specifies how the relying party 
+interacts with the OpenID Provider based on use of the OAuth 2.0 authorization grant. 
+The authorization code flow is more secure than the implicit flow because the tokens 
+are never exposed to the web browser and possibly other malicious applications with 
+access to the browser. As with the implicit flow the extra securuty in Connect's authorization code 
+flow stems from the id_token. 
 
 ### OpenID Connect Hybrid Flow 
 Hybrid flow is a combination of the Implicit Flow and Authorization Code 
