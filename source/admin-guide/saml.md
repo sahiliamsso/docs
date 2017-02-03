@@ -55,7 +55,7 @@ trust between the IDP and the SP. In the Gluu Server, the IDPs SSO configuration
 called a Trust Relationship (TR). The following sections cover how to create a TR in the Gluu Server. 
 
 !!! Note
-    For any SAML transaction, a trust relationship must be created in the IDP.
+    For any outbound SAML transaction, a trust relationship must be created in the IDP.
 
 ### Trust Relationship Requirements     
 Each Trust Relationship requires the infomation listed below.
