@@ -31,7 +31,7 @@ the user is sent back to the SP logged in.
 
 Inbound SAML enables an organization to offer SAML authentication as a front door 
 to their digital service. Using Inbound SAML, an organization can create trust 
-with many IDPs (typically the IDP of customer and/or partner organizations) in 
+with many IDPs (typically the IDPs of customer and/or partner organizations) in 
 order to enable users from those organizations to authenticate at their home 
 identity provider for access to the service. Inbound SAML is a common requirement 
 for SaaS providers who want to make sure they can support the authentication requirements 
