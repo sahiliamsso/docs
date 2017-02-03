@@ -55,9 +55,7 @@ pages:
             - 'OAuth2.0 js Implicit Flow': 'integration/oauth-js-implicit.md'
         - 'Web Server Integrations':
             - 'Shibboleth SP': 'integration/saml-sp.md'
-            - 'mod_auth_openidc': 'integration/openidc-rp.md'
-            #- 'AppAuth Android OAuth2.0' : ' '
-            #- 'AppAuth ios OAuth2.0' : ' '
+            - 'mod_auth_openidc': 'integration/openidc-rp.md'    
         - 'SaaS Integrations':
             - 'Google SSO': 'integration/google.md'
             - 'Office 365': 'integration/office.md'
