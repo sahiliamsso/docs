@@ -43,8 +43,7 @@ pages:
 #       - 'Gluu for Mobile' : 'admin-guide/mobile.md'
 #       - 'Self-Services for Users' : 'admin-guide/self-service.md'
         - 'SAML' : 'admin-guide/saml.md'
-        - 'Asimba with Gluu CE': 'admin-guide/asimba.md'
-#        - 'OAuth2 Grants' : 'admin-guide/oauth2.md'
+        #        - 'OAuth2 Grants' : 'admin-guide/oauth2.md'
         - 'OpenID Connect' : 'admin-guide/openid-connect.md'
         - 'UMA' : 'admin-guide/uma.md'
         - 'SCIM protected by UMA' : 'admin-guide/scim-uma.md'
@@ -53,6 +52,7 @@ pages:
 #    - 'Integration in Gluu Server': 'integration/index.md'
         - 'Developer Guide':
             - 'oxd OAuth2': 'integration/oauth2.md'
+            - 'OAuth2.0 js Implicit Flow': 'integration/oauth-js-implicit.md'
         - 'Web Server Integrations':
             - 'Shibboleth SP': 'integration/saml-sp.md'
             - 'Mod_auth_OpenID': 'integration/openidc-rp.md'

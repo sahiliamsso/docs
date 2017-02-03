@@ -17,7 +17,7 @@
     
     
       
-        <title>oxd OAuth2 - Gluu Docs</title>
+        <title>OAuth2.0 js Implicit Flow - Gluu Docs</title>
       
     
     
@@ -85,7 +85,7 @@
                 </span>
               
             
-            oxd OAuth2
+            OAuth2.0 js Implicit Flow
           
         </span>
       </div>
@@ -609,17 +609,28 @@
           
   <li class="md-nav__item">
     
+      <a href="../oauth2/" title="oxd OAuth2" class="md-nav__link">
+        oxd OAuth2
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
       
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        oxd OAuth2
+        OAuth2.0 js Implicit Flow
       </label>
     
-    <a href="./" title="oxd OAuth2" class="md-nav__link md-nav__link--active">
-      oxd OAuth2
+    <a href="./" title="OAuth2.0 js Implicit Flow" class="md-nav__link md-nav__link--active">
+      OAuth2.0 js Implicit Flow
     </a>
     
       
@@ -633,26 +644,241 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation" title="Documentation" class="md-nav__link">
-    Documentation
+  <a href="#oidc-variables" title="OIDC Variables" class="md-nav__link">
+    OIDC Variables
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-provider-options" title="Supported Provider Options" class="md-nav__link">
+    Supported Provider Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-request-options" title="Supported Request Options" class="md-nav__link">
+    Supported Request Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-client-options" title="Supported Client Options" class="md-nav__link">
+    Supported Client Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oidc-methods" title="OIDC Methods" class="md-nav__link">
+    OIDC Methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setproviderinfop" title="setProviderInfo(p)" class="md-nav__link">
+    setProviderInfo(p)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" title="Example:" class="md-nav__link">
+    Example:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setclientinfop" title="setClientInfo(p)" class="md-nav__link">
+    setClientInfo(p)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_1" title="Example:" class="md-nav__link">
+    Example:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storeinfoproviderinfo-clientinfo" title="storeInfo(providerInfo, clientInfo)" class="md-nav__link">
+    storeInfo(providerInfo, clientInfo)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restoreinfo" title="restoreInfo()" class="md-nav__link">
+    restoreInfo()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkrequiredinfoparams" title="checkRequiredInfo(params)" class="md-nav__link">
+    checkRequiredInfo(params)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearproviderinfo" title="clearProviderInfo()" class="md-nav__link">
+    clearProviderInfo()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loginreqoptions" title="login(reqOptions)" class="md-nav__link">
+    login(reqOptions)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_2" title="Example:" class="md-nav__link">
+    Example:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifyidtokensigid_token" title="verifyIdTokenSig(id_token)" class="md-nav__link">
+    verifyIdTokenSig(id_token)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isvalididtokenid_token" title="isValidIdToken(id_token)" class="md-nav__link">
+    isValidIdToken(id_token)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rsaverifyjwsjws-jwk" title="rsaVerifyJWS(jws, jwk)" class="md-nav__link">
+    rsaVerifyJWS(jws, jwk)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvalididtoken" title="getValidIdToken()" class="md-nav__link">
+    getValidIdToken()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getaccesstoken" title="getAccessToken()" class="md-nav__link">
+    getAccessToken()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcode" title="getCode()" class="md-nav__link">
+    getCode()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getidtokenpartsid_token" title="getIdTokenParts(id_token)" class="md-nav__link">
+    getIdTokenParts(id_token)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getidtokenpayloadid_token" title="getIdTokenPayload(id_token)" class="md-nav__link">
+    getIdTokenPayload(id_token)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getjsonobjectjsons" title="getJsonObject(jsonS)" class="md-nav__link">
+    getJsonObject(jsonS)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetchjsonurl" title="fetchJSON(url)" class="md-nav__link">
+    fetchJSON(url)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jwk_get_keyjwkin-kty-use-kid" title="jwk_get_key(jwkIn, kty, use, kid)" class="md-nav__link">
+    jwk_get_key(jwkIn, kty, use, kid)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discoverissuer" title="discover(issuer)" class="md-nav__link">
+    discover(issuer)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugtoggle-id_token" title="debug(toggle, id_token)" class="md-nav__link">
+    debug(toggle, id_token)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getuserinfoaccess_token" title="getUserInfo(access_token)" class="md-nav__link">
+    getUserInfo(access_token)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
     </ul>
   
 </nav>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../oauth-js-implicit/" title="OAuth2.0 js Implicit Flow" class="md-nav__link">
-        OAuth2.0 js Implicit Flow
-      </a>
     
   </li>
 
@@ -1012,9 +1238,235 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation" title="Documentation" class="md-nav__link">
-    Documentation
+  <a href="#oidc-variables" title="OIDC Variables" class="md-nav__link">
+    OIDC Variables
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-provider-options" title="Supported Provider Options" class="md-nav__link">
+    Supported Provider Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-request-options" title="Supported Request Options" class="md-nav__link">
+    Supported Request Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-client-options" title="Supported Client Options" class="md-nav__link">
+    Supported Client Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oidc-methods" title="OIDC Methods" class="md-nav__link">
+    OIDC Methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setproviderinfop" title="setProviderInfo(p)" class="md-nav__link">
+    setProviderInfo(p)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" title="Example:" class="md-nav__link">
+    Example:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setclientinfop" title="setClientInfo(p)" class="md-nav__link">
+    setClientInfo(p)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_1" title="Example:" class="md-nav__link">
+    Example:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storeinfoproviderinfo-clientinfo" title="storeInfo(providerInfo, clientInfo)" class="md-nav__link">
+    storeInfo(providerInfo, clientInfo)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restoreinfo" title="restoreInfo()" class="md-nav__link">
+    restoreInfo()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkrequiredinfoparams" title="checkRequiredInfo(params)" class="md-nav__link">
+    checkRequiredInfo(params)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearproviderinfo" title="clearProviderInfo()" class="md-nav__link">
+    clearProviderInfo()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loginreqoptions" title="login(reqOptions)" class="md-nav__link">
+    login(reqOptions)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_2" title="Example:" class="md-nav__link">
+    Example:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifyidtokensigid_token" title="verifyIdTokenSig(id_token)" class="md-nav__link">
+    verifyIdTokenSig(id_token)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isvalididtokenid_token" title="isValidIdToken(id_token)" class="md-nav__link">
+    isValidIdToken(id_token)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rsaverifyjwsjws-jwk" title="rsaVerifyJWS(jws, jwk)" class="md-nav__link">
+    rsaVerifyJWS(jws, jwk)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvalididtoken" title="getValidIdToken()" class="md-nav__link">
+    getValidIdToken()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getaccesstoken" title="getAccessToken()" class="md-nav__link">
+    getAccessToken()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcode" title="getCode()" class="md-nav__link">
+    getCode()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getidtokenpartsid_token" title="getIdTokenParts(id_token)" class="md-nav__link">
+    getIdTokenParts(id_token)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getidtokenpayloadid_token" title="getIdTokenPayload(id_token)" class="md-nav__link">
+    getIdTokenPayload(id_token)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getjsonobjectjsons" title="getJsonObject(jsonS)" class="md-nav__link">
+    getJsonObject(jsonS)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetchjsonurl" title="fetchJSON(url)" class="md-nav__link">
+    fetchJSON(url)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jwk_get_keyjwkin-kty-use-kid" title="jwk_get_key(jwkIn, kty, use, kid)" class="md-nav__link">
+    jwk_get_key(jwkIn, kty, use, kid)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discoverissuer" title="discover(issuer)" class="md-nav__link">
+    discover(issuer)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugtoggle-id_token" title="debug(toggle, id_token)" class="md-nav__link">
+    debug(toggle, id_token)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getuserinfoaccess_token" title="getUserInfo(access_token)" class="md-nav__link">
+    getUserInfo(access_token)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1029,15 +1481,187 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/GluuFederation/docs-3/blob/master/source/integration\oauth2.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/GluuFederation/docs-3/blob/master/source/integration\oauth-js-implicit.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                <h1 id="oxd">OXD<a class="headerlink" href="#oxd" title="Permanent link">#</a></h1>
-<p>oxd is a mediator, a service demon that listens on localhost, providing easy APIs that can be called by a web application to simplify using an external OAuth2 server for authentication or authorization. oxd is not a proxy--sometimes it makes API calls on behalf of an application, but other times it just forms the right URLs and returns them to the application. </p>
-<p>One significant advantage of using oxd over a native client library is that oxd consolidates the OAuth2 code in one package. If there are updates to the OAuth2 client code, you can update the oxd-server package, without changing the interface to the application.</p>
-<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">#</a></h2>
-<p>The complete documentation for oxd is made available in a separate address. Please see <a href="https://gluu.org/docs-oxd/">this link</a> for the OXD documentation.</p>
+                <h1 id="openid-implicit-client">openid-implicit-client<a class="headerlink" href="#openid-implicit-client" title="Permanent link">#</a></h1>
+<p>Simple Javascript client that implements the OpenID Connect implicit flow.</p>
+<p>This code is forked based on a javascript library written by
+<a href="https://www.linkedin.com/in/edmundjay">Edmund Jay</a>, and referened in a
+<a href="https://nat.sakimura.org/2014/12/10/making-a-javascript-openid-connect-client/">blog</a>
+by <a href="https://twitter.com/_nat_en">Nat Sakimura</a></p>
+<p>To use this library, include the <code>openidconnect.js</code> your HTML page.</p>
+<ul>
+<li>Set the provider and client configuration info through JSON objects;</li>
+<li>Call the server – login;</li>
+<li>In the callback page, callback.html, you will get ID Token back,
+so that you can put it into the cookie to handle the session.</li>
+</ul>
+<hr />
+<h2 id="oidc-variables">OIDC Variables<a class="headerlink" href="#oidc-variables" title="Permanent link">#</a></h2>
+<h4 id="supported-provider-options">Supported Provider Options<a class="headerlink" href="#supported-provider-options" title="Permanent link">#</a></h4>
+<p>List of the Identity Provider's configuration parameters. <br></p>
+<ul>
+<li><strong>supportedProviderOptions.issuer</strong> <em>(string)</em>: Issuer ID <br></li>
+<li><strong>supportedProviderOptions.authorization_endpoint</strong> <em>(string)</em>: Authorization Endpoint URL <br></li>
+<li><strong>supportedProviderOptions.jwks_uri</strong> <em>(string)</em>: JWKS URI <br></li>
+<li><strong>supportedProviderOptions.claims_parameter_supported</strong> <em>(boolean)</em>: Claims parameter support <br></li>
+<li><strong>supportedProviderOptions.request_parameter_supported</strong> <em>(boolean)</em>: Request parameter support <br></li>
+<li><strong>supportedProviderOptions.jwks</strong> <em>(object)</em>: Identity Provider's JWK Set <br></li>
+</ul>
+<h4 id="supported-request-options">Supported Request Options<a class="headerlink" href="#supported-request-options" title="Permanent link">#</a></h4>
+<p>Supported Login Request parameters. <br></p>
+<ul>
+<li><strong>supportedRequestOptions.scope</strong> <em>(string)</em>: Space separated scope values<br></li>
+<li><strong>supportedRequestOptions.response_type</strong> <em>(string)</em>: Space separated response_type values<br></li>
+<li><strong>supportedRequestOptions.display</strong> <em>(string)</em>: Display<br></li>
+<li><strong>supportedRequestOptions.max_age</strong> <em>(string)</em>: Max_age<br></li>
+<li><strong>supportedRequestOptions.claims</strong> <em>(object)</em>: Claims object containing what information to return in the UserInfo endpoint and ID Token<br></li>
+<li><strong>supportedRequestOptions.claims.id_token</strong> <em>(array)</em>: List of claims to return in the ID Token<br></li>
+<li><strong>supportedRequestOptions.claims.userinfo</strong> <em>(array)</em>: List of claims to return in the UserInfo endpoint<br></li>
+<li><strong>supportedRequestOptions.request</strong> <em>(boolean)</em>: Signed request object JWS. <strong>Not supported yet.</strong><br></li>
+</ul>
+<h4 id="supported-client-options">Supported Client Options<a class="headerlink" href="#supported-client-options" title="Permanent link">#</a></h4>
+<p>List of supported Client configuration parameters. <br></p>
+<ul>
+<li><strong>supportedClientOptions.client_id</strong> <em>(string)</em>: The client's client_id <br></li>
+<li><strong>supportedClientOptions.redirect_uri</strong> <em>(string)</em>: The client's redirect_uri <br></li>
+</ul>
+<h2 id="oidc-methods">OIDC Methods<a class="headerlink" href="#oidc-methods" title="Permanent link">#</a></h2>
+<h4 id="setproviderinfop">setProviderInfo(p)<a class="headerlink" href="#setproviderinfop" title="Permanent link">#</a></h4>
+<ul>
+<li><em>p - The Identity Provider's configuration options described in <a href="#supported-provider-options">OIDC.supportedProviderOptions</a></em> <br></li>
+</ul>
+<p>Sets the Identity Provider's configuration parameters. It may be done declaring each parameter on code or using the returning information from <a href="#discoverissuer">OIDC.discover('https:<nolink>//(hostname)')</a>. It returns a boolean value indicating status of call. <br></p>
+<h6 id="example">Example:<a class="headerlink" href="#example" title="Permanent link">#</a></h6>
+<pre><code>// set Identity Provider configuration
+OIDC.setProviderInfo( {
+    issuer: 'https://(hostname)',
+    authorization_endpoint: 'http://(hostname)/auth.html',
+    jwks_uri: 'https://(hostname)/jwks'
+    });
+
+// set Identity Provider configuration using discovery information
+var discovery = OIDC.discover('https://(hostname)');
+if(var)
+  OIDC.setProviderInfo(discovery);
+</code></pre>
+<h4 id="setclientinfop">setClientInfo(p)<a class="headerlink" href="#setclientinfop" title="Permanent link">#</a></h4>
+<ul>
+<li><em>p - The Client's configuration options described in <a href="#supported-client-options">OIDC.supportedClientOptions</a></em> <br></li>
+</ul>
+<p>Sets the Client's configuration parameters. It returns a boolean value indicating status of call.</p>
+<h6 id="example_1">Example:<a class="headerlink" href="#example_1" title="Permanent link">#</a></h6>
+<pre><code>// set client_id and redirect_uri
+OIDC.setClientInfo( {
+   client_id: 'myclientID',
+   redirect_uri: 'https://rp.example.com/callback.html'
+  }
+);
+</code></pre>
+<h4 id="storeinfoproviderinfo-clientinfo">storeInfo(providerInfo, clientInfo)<a class="headerlink" href="#storeinfoproviderinfo-clientinfo" title="Permanent link">#</a></h4>
+<ul>
+<li><em>providerInfo - The Identity Provider's configuration options described in <a href="#supported-provider-options">OIDC.supportedProviderOptions</a></em> <br></li>
+<li><em>clientInfo - The Client's configuration options described in <a href="#supported-client-options">OIDC.supportedClientOptions</a></em> <br></li>
+</ul>
+<p>Stores the Identity Provider and Client configuration options in the browser session storage for reuse later.</p>
+<h4 id="restoreinfo">restoreInfo()<a class="headerlink" href="#restoreinfo" title="Permanent link">#</a></h4>
+<p>Load and set the Identity Provider and Client configuration options from the browser session storage.</p>
+<h4 id="checkrequiredinfoparams">checkRequiredInfo(params)<a class="headerlink" href="#checkrequiredinfoparams" title="Permanent link">#</a></h4>
+<ul>
+<li><em>params - List of Identity Provider and client configuration parameters</em> <br></li>
+</ul>
+<p>Check whether the required configuration parameters are set. It returns a boolean value indicating whether the options have been set.</p>
+<h4 id="clearproviderinfo">clearProviderInfo()<a class="headerlink" href="#clearproviderinfo" title="Permanent link">#</a></h4>
+<p>Clears the Identity Provider configuration parameters.</p>
+<h4 id="loginreqoptions">login(reqOptions)<a class="headerlink" href="#loginreqoptions" title="Permanent link">#</a></h4>
+<ul>
+<li><em>reqOptions - Optional authentication request options (<a href="#supported-request-options">OIDC.supportedRequestOptions</a>)</em> <br></li>
+</ul>
+<p>Redirect to the Identity Provider for authentication.</p>
+<h6 id="example_2">Example:<a class="headerlink" href="#example_2" title="Permanent link">#</a></h6>
+<pre><code>// login with options
+OIDC.login({
+   scope : 'openid profile',
+   response_type : 'token id_token',
+   max_age : 60,
+   claims : {
+      id_token : ['email', 'phone_number'],
+      userinfo : ['given_name', 'family_name']
+      }
+});
+
+// login with default
+// scope = openid and response_type = id_token
+OIDC.login();
+</code></pre>
+<h4 id="verifyidtokensigid_token">verifyIdTokenSig(id_token)<a class="headerlink" href="#verifyidtokensigid_token" title="Permanent link">#</a></h4>
+<ul>
+<li><em>id_token - The ID Token string</em> <br></li>
+</ul>
+<p>Verifies the ID Token signature using the JWK Keyset from jwks or jwks_uri of the Identity Provider Configuration options set via <em><a href="#setproviderinfop">OIDC.setProviderInfo</a></em>. Supports only RSA signatures. It returns a boolean value indicates whether the signature is valid or not.</p>
+<h4 id="isvalididtokenid_token">isValidIdToken(id_token)<a class="headerlink" href="#isvalididtokenid_token" title="Permanent link">#</a></h4>
+<ul>
+<li><em>id_token - The ID Token string</em> <br></li>
+</ul>
+<p>Validates the information in the ID Token against configuration data in the Identity Provider and Client configuration set via <em><a href="#setproviderinfop">OIDC.setProviderInfo</a></em> and set via <em><a href="#setclientinfop">OIDC.setClientInfo</a></em>. It returns a boolean value indicating the validity of the ID Token.</p>
+<h4 id="rsaverifyjwsjws-jwk">rsaVerifyJWS(jws, jwk)<a class="headerlink" href="#rsaverifyjwsjws-jwk" title="Permanent link">#</a></h4>
+<ul>
+<li><em>jws - The JWS string</em> <br></li>
+<li><em>jwk - The JWK Key that will be used to verify the signature</em> <br></li>
+</ul>
+<p>Verifies the JWS string using the JWK. It returns a boolean value indicating the validity of the JWS signature.</p>
+<h4 id="getvalididtoken">getValidIdToken()<a class="headerlink" href="#getvalididtoken" title="Permanent link">#</a></h4>
+<p>Return the ID Token string taken from the current page URL whose signature is verified and contents validated against the configuration data set via <em><a href="#setproviderinfop">OIDC.setProviderInfo</a></em> and <em><a href="#setclientinfop">OIDC.setClientInfo</a></em>.</p>
+<h4 id="getaccesstoken">getAccessToken()<a class="headerlink" href="#getaccesstoken" title="Permanent link">#</a></h4>
+<p>Return Access Token string taken from the current page URL.</p>
+<h4 id="getcode">getCode()<a class="headerlink" href="#getcode" title="Permanent link">#</a></h4>
+<p>Return Authorization Code string taken from the current page URL.</p>
+<h4 id="getidtokenpartsid_token">getIdTokenParts(id_token)<a class="headerlink" href="#getidtokenpartsid_token" title="Permanent link">#</a></h4>
+<ul>
+<li><em>id_token - The ID Token string</em> <br></li>
+</ul>
+<p>Splits the ID Token string into the individual JWS parts. It returns an array of the JWS compact serialization components (header, payload, signature).</p>
+<h4 id="getidtokenpayloadid_token">getIdTokenPayload(id_token)<a class="headerlink" href="#getidtokenpayloadid_token" title="Permanent link">#</a></h4>
+<ul>
+<li><em>id_token - The ID Token string</em> <br></li>
+</ul>
+<p>Return a JSON object with contents of the ID Token payload.</p>
+<h4 id="getjsonobjectjsons">getJsonObject(jsonS)<a class="headerlink" href="#getjsonobjectjsons" title="Permanent link">#</a></h4>
+<ul>
+<li><em>jsonS - JSON string</em> <br></li>
+</ul>
+<p>Return the JSON object from the JSON string.</p>
+<h4 id="fetchjsonurl">fetchJSON(url)<a class="headerlink" href="#fetchjsonurl" title="Permanent link">#</a></h4>
+<ul>
+<li><em>url - URL to fetch the JSON file</em> <br></li>
+</ul>
+<p>Retrieves the JSON file at the specified URL. The URL must have CORS enabled for this function to work. It returns a string of contents of the URL or null.</p>
+<h4 id="jwk_get_keyjwkin-kty-use-kid">jwk_get_key(jwkIn, kty, use, kid)<a class="headerlink" href="#jwk_get_keyjwkin-kty-use-kid" title="Permanent link">#</a></h4>
+<ul>
+<li><em>jwkIn - JWK Keyset string or object.</em> <br></li>
+<li><em>kty - The 'kty' to match (RSA|EC). Only RSA is supported.</em> <br></li>
+<li><em>use - The 'use' to match (sig|enc).</em> <br></li>
+<li><em>kid - The 'kid' to match</em> <br></li>
+</ul>
+<p>Retrieve the JWK key that matches the input criteria. It returns an array of JWK keys that match the specified criteria.</p>
+<h4 id="discoverissuer">discover(issuer)<a class="headerlink" href="#discoverissuer" title="Permanent link">#</a></h4>
+<ul>
+<li><em>issuer - The Identity Provider's issuer_id</em> <br></li>
+</ul>
+<p>Performs discovery on the Identity Provider's issuer_id. It returns the JSON object of the discovery document or null.</p>
+<h4 id="debugtoggle-id_token">debug(toggle, id_token)<a class="headerlink" href="#debugtoggle-id_token" title="Permanent link">#</a></h4>
+<ul>
+<li><em>toggle - Boolean value that enables or disables debugging output</em> <br></li>
+<li><em>id_token - The ID Token string</em> <br></li>
+</ul>
+<p>Print current Client's configuration options, Identity Provider's configuration options, results for verification and validation of id_token and its signature directly on console.</p>
+<h4 id="getuserinfoaccess_token">getUserInfo(access_token)<a class="headerlink" href="#getuserinfoaccess_token" title="Permanent link">#</a></h4>
+<ul>
+<li><em>access_token - Access Token string</em> <br></li>
+</ul>
+<p>Make the call to UserInfo endpoint with access token. It returns the user claims sent by the Identity Provider.</p>
               
             </article>
           </div>
@@ -1050,7 +1674,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../admin-guide/certificate/" title="Certificate Management" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../oauth2/" title="oxd OAuth2" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1059,19 +1683,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Certificate Management
+                oxd OAuth2
               </span>
             </div>
           </a>
         
         
-          <a href="../oauth-js-implicit/" title="OAuth2.0 js Implicit Flow" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../saml-sp/" title="Shibboleth SP" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                OAuth2.0 js Implicit Flow
+                Shibboleth SP
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

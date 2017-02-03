@@ -10,7 +10,7 @@ In short, refer to these three considerations to determine which protocol to use
 
 If you are continuing with this SAML documentation it is presumed that your use case aligns with the first bullet point above. If not, we recommend that you review the [OpenID Connect](./openid-connect.md) portion of the Gluu Server docs. 
  
-## Outbound SAML
+## Outbound SAML (Shibboleth)
 Outbound SAML can also be called SP-initiated Single Sign-On (SSO) 
 or traditional SAML. In an outbound SAML transaction a website or application (SP) 
 redirects a user to a designated Identity Provider (IDP) for authentication 
@@ -202,7 +202,7 @@ Once a TR has been established with the federation, the Gluu Server administrato
 
 ![federation-entityid.png](../img/saml/federation-entityid.png)
 
-## Inbound SAML     
+## Inbound SAML (Asimba)
 Inbound SAML allows users from external identity providers to 
 SSO into services protected by the Gluu Server. The Gluu Server uses an 
 open source product called [Asimba](http://www.asimba.org/site/) to achieve 

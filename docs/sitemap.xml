@@ -84,12 +84,6 @@
     </url>
         
     <url>
-     <loc>/admin-guide/asimba/</loc>
-     <lastmod>2017-02-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>/admin-guide/openid-connect/</loc>
      <lastmod>2017-02-03</lastmod>
      <changefreq>daily</changefreq>
