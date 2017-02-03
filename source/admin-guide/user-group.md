@@ -72,7 +72,7 @@ The file needs to contain the following fields from which the user data will be 
 
 ## LDAP Synchronization 
 LDAP Synchronization, a.k.a. Cache Refresh, is the process of connecting 
-an existing backend LDAP server, like Microsoft Active Directory, with the
+one or more existing backend LDAP servers, like Microsoft Active Directory, with the
 Gluu Server's local LDAP server. Synching people and attributes from a 
 backend server into the Gluu Server speeds up authentication transactions. 
 It is possible to perform attribute transformations, changing the name of 
