@@ -1,5 +1,5 @@
-# Message-consuner:
-Prepare a new vm for message consuner.
+# Message-consumer:
+Prepare a new vm for message consumer.
 
 ## Install mysql:
 Mysql database,
