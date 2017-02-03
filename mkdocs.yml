@@ -50,14 +50,17 @@ pages:
         - 'Certificate Management' : 'admin-guide/certificate.md'
 - Integration Guide:
 #    - 'Integration in Gluu Server': 'integration/index.md'
-        - 'Shibboleth SP': 'integration/saml-sp.md'
-        - 'Mod_auth_OpenID': 'integration/openidc-rp.md'
-        - 'OXD OAuth2': 'integration/oauth2.md'
-        - 'Google SSO': 'integration/google.md'
-        - 'Office 365': 'integration/office.md'
+        - 'Developer Guide':
+            - 'OXD OAuth2': 'integration/oauth2.md'
+        - 'Web Server Integrations':
+            - 'Shibboleth SP': 'integration/saml-sp.md'
+            - 'Mod_auth_OpenID': 'integration/openidc-rp.md'
+        - 'SaaS Integrations':
+            - 'Google SSO': 'integration/google.md'
+            - 'Office 365': 'integration/office.md'
 #    - 'Hobsons Education Sol': 'integration/hobsons.md'
-        - 'Salesforce': 'integration/salesforce.md'
-        - 'Dropbox': 'integration/dropbox.md'
+            - 'Salesforce': 'integration/salesforce.md'
+            - 'Dropbox': 'integration/dropbox.md'
 - Reference:
         - Gluu API Guide:
             - 'Custom ID Generation': 'api-guide/api.md'
