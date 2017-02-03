@@ -1,22 +1,47 @@
 # SAML
 ## Overview
-SAML is an XML-based, open-standard data format for exchanging authentication and authorization data between an identity provider (like the Gluu Server) and a service provider (like Dropbox, O365, etc.). SAML is a stable and mature standard, and is well supported at many of the Internet's largest domains. However, the last major release of SAML was in 2005! Therefore it is important to understand when to use SAML and when to use a newer protocol like OpenID Connect to achieve your identity goals. 
+SAML is an XML-based, open-standard data format for exchanging 
+authentication and authorization data between an identity provider 
+(like the Gluu Server) and a service provider (like Dropbox, O365, etc.). 
+SAML is a stable and mature standard, and is well supported at many of the 
+Internet's largest domains. However, the last major release of SAML was in 2005! 
+Therefore it is important to understand when to use SAML and when to use a 
+newer protocol like OpenID Connect to achieve your identity goals. 
 
-In short, refer to these four considerations to determine which protocol to use for single sign-on (SSO):
+In short, refer to these four considerations to determine which protocol 
+to use for single sign-on (SSO):
 
 - If you have an application that already supports SAML, use SAML.
 - If you need to support your customers or partners authentication requirements, use SAML.
 - If you have a mobile application, use OpenID Connect.
 - If you are writing a new application, use OpenID Connect.
 
-If you are continuing with this SAML documentation it is presumed that your use case aligns with one or both of the first two bullet points above. If not, we recommend that you review the [OpenID Connect](./openid-connect.md) portion of the Gluu Server docs. 
+If you are continuing with this SAML documentation it is presumed 
+that your use case aligns with one or both of the first two bullet points above. 
+If not, we recommend that you review the [OpenID Connect](./openid-connect.md) 
+portion of the Gluu Server docs. 
 
 ### Outbound vs. Inbound SAML 
-SAML is a versatile protocol. The two main use cases are Outbound SAML and Inbound SAML. Outbound SAML can also be called SP-initiated Single Sign-On (SSO) or traditional SAML. In an outbound SAML transaction a website or application (SP) redirects a user to a designated Identity Provider (IDP) for authentication and authorization. The IDP will ask for the user's credentials and upon successful authentication, the user is sent back to the SP logged in. 
+SAML is a versatile protocol. The two main use cases are Outbound SAML and Inbound SAML. 
+Outbound SAML can also be called SP-initiated Single Sign-On (SSO) or traditional SAML. 
+In an outbound SAML transaction a website or application (SP) redirects a user to a 
+designated Identity Provider (IDP) for authentication and authorization. 
+The IDP will ask for the user's credentials and upon successful authentication, 
+the user is sent back to the SP logged in. 
 
-Inbound SAML enables an organization to offer SAML authentication as a front door to their digital service. Using Inbound SAML, an organization can create trust with many IDPs (typically the IDP of customer and/or partner organizations) in order to enable users from those organizations to authenticate at their home identity provider for access to the service. Inbound SAML is a common requirement for SaaS providers who want to make sure they can support the authentication requirements of large enterprise customers.
+Inbound SAML enables an organization to offer SAML authentication as a front door 
+to their digital service. Using Inbound SAML, an organization can create trust 
+with many IDPs (typically the IDP of customer and/or partner organizations) in 
+order to enable users from those organizations to authenticate at their home 
+identity provider for access to the service. Inbound SAML is a common requirement 
+for SaaS providers who want to make sure they can support the authentication requirements 
+of large enterprise customers.
 
-The Gluu Server bundles separate components to support both use cases (installation of both components is optional during Gluu Server deployment). For Outbound SAML, the Gluu Server bundles the Shibboleth IDP. For inbound SAML, the Gluu Server bundles the Asimba SAML Proxy. Documentation for each service follows in the sections below. 
+The Gluu Server bundles separate components to support both use cases 
+(installation of both components is optional during Gluu Server deployment). 
+For Outbound SAML, the Gluu Server bundles the Shibboleth IDP. 
+For inbound SAML, the Gluu Server bundles the Asimba SAML Proxy. 
+Documentation for each service follows in the sections below. 
  
 ## Outbound SAML (Shibboleth)
 Outbound SAML can also be called SP-initiated Single Sign-On (SSO) 
@@ -47,9 +72,9 @@ Once the attributes are available in the Gluu Server, the administrator only nee
 to click on the desired attribute(s) and it will be released to the SP upon 
 successful user authentication.
 
-## SAML Attributes
+### SAML Attributes
 
-## Attrubute in oxTrust
+### Attrubute in oxTrust
 An *Active* attribute list can be seen from the Configuration > Attributes section.
 
 ![Attribute Menu](../img/admin-guide/attribute/admin_attribute_menu.png)
@@ -129,13 +154,13 @@ appear:
 * _Status:_ The status, when selected active, will release and publish
   the attribute in IdP.
 
-  ## Custom NameID
-  Gluu Server comes with the `transientID` attribute which is the default `NameID`.
-  If there are other `NameID` requirements, it is possible to create them as well.
-  The custom attribute must be created in oxTrust first before defining it as the `NameID`.
-  Please see the [oxTrust custom attribute guide](#using-oxtrust) to create the custom attribute in oxTrust.
+### Custom NameID
+Gluu Server comes with the `transientID` attribute which is the default `NameID`.
+If there are other `NameID` requirements, it is possible to create them as well.
+The custom attribute must be created in oxTrust first before defining it as the `NameID`.
+Please see the [oxTrust custom attribute guide](#using-oxtrust) to create the custom attribute in oxTrust.
 
-  ## Defining NameID
+### Defining NameID
   The template file for `NameID` definitions are located in the `attribute-resolver.xml.vm` file under `/opt/gluu/jetty/identity/conf/shibboleth3/idp/`.
   The example below adds `testcustomattribute` as `NameID` based on UID attribute. The following are put into the `attribute-resolver.xml.vm` file.
 
