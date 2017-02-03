@@ -76,7 +76,7 @@ pages:
         - 'Backups': 'operation/backup.md'
         - 'Find your Gluu Version': 'operation/find-gluu-version.md'
         - 'Ports': 'operation/ports.md'
-        - 'Logout': 'operation/logout.md'
+        - 'Single Logout (SLO)': 'operation/logout.md'
         - 'Log Management' : 'operation/logs.md'
         - 'FAQ & Troubleshooting' : 'operation/faq.md'
         #       - 'Fine Tuning Gluu Server' : 'admin-guide/fine-tuning.md'
