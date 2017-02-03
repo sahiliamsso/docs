@@ -56,6 +56,8 @@ pages:
         - 'Web Server Integrations':
             - 'Shibboleth SP': 'integration/saml-sp.md'
             - 'mod_auth_openidc': 'integration/openidc-rp.md'
+            #- 'AppAuth Android OAuth2.0' : ' '
+            #- 'AppAuth ios OAuth2.0' : ' '
         - 'SaaS Integrations':
             - 'Google SSO': 'integration/google.md'
             - 'Office 365': 'integration/office.md'
