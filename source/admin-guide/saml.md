@@ -236,10 +236,9 @@ Once a TR has been established with the federation, the Gluu Server administrato
 ![federation-entityid.png](../img/saml/federation-entityid.png)
 
 ## Inbound SAML (Asimba)
-Inbound SAML allows users from external domains to login at their home identity provider to gain access to applications protected by the Gluu Server. The Gluu Server uses an open source product called [Asimba](http://www.asimba.org/site/) to normalize  
-inbound SAML. 
+Inbound SAML allows users from external domains to login at their home identity provider to gain access to resources protected by the Gluu Server. The Gluu Server uses an open source product called [Asimba](http://www.asimba.org/site/) to normalize inbound SAML. 
 
-The following documentation provides a step-by-step guide for configuring Asimba with two (2) IDPs and a single (1) SP. The guide includes use of a SAML interception script which is shipped with the Gluu Server and simplifies the process of using Asimba.  The administrator can add multiple IDPs or SPs (as required) using the method outlined below. Each SP and IDP must be connected to the IDP that has the Asimba module enabled.
+The following documentation provides a step-by-step guide for configuring Asimba with two (2) IDPs and a single (1) SP. The guide includes use of a SAML interception script which is shipped with the Gluu Server and simplifies the process of using Asimba. The administrator can add multiple IDPs or SPs (as required) using the method outlined below. Each SP and IDP must be connected to the IDP that has the Asimba module enabled.
 
 !!! Note 
     A description of the SAML interception script is available here: 
@@ -327,7 +326,7 @@ Login to the Gluu Server with hostname `https://test.gluu.org` and add the exter
 
     * NameIDFormat: SAML2 URI nameID format if remote IDP is a Gluu Server otherwise ask for their nameID format.
 
-        - Example: `urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
+        - Example: `urn:oasis:names:tc:SAML:2.0:nameid-format:transient`
 
     * Enabled: Yes
 
@@ -344,7 +343,6 @@ Login to the Gluu Server with hostname `https://test.gluu.org` and add the exter
     * Avoid Subject Confirmations: No
 
 ![image](../img/asimba/add_idp.png)
-
 
 ### Adding SP Requestor in Asimba Server
 
@@ -418,6 +416,6 @@ Log into the oxTrust inteface and follow the steps to add a new Trust Relationsh
      - How to create nameID in Gluu Server is available [here](https://gluu.org/docs/customize/attributes/#custom-nameid)
 
 ### Test Asimba with SAML Proxy
-Here is a [quick video](https://youtu.be/YEyrOWJu0yo) to demonstrate how the SAML proxy SSO should work when properly configured. In this video we are using `https://sp.gluu.org/protected/print.py` as our protected service provider URL. After initiating SSO, we are redirected to the SAML Proxy discovery page `https://test.gluu.org`. From there we select `Nest` as our desired authentication server. After succesful authentication we are able to access the proctected resource. 
+Here is a [quick video](https://youtu.be/YEyrOWJu0yo) to demonstrate how the SAML proxy SSO should work when properly configured. In this video the protected resource is located at: `https://sp.gluu.org/protected/print.py`. After initiating SSO, we are redirected to the SAML Proxy discovery page: `https://test.gluu.org`. From there we select `Nest` as our desired authentication server. After succesful authentication we are redirected to the proctected resource. 
 
 * [Youtube Video Link](https://youtu.be/YEyrOWJu0yo)
