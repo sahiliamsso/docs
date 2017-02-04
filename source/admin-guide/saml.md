@@ -104,7 +104,7 @@ attributetype ( oxAttribute:1003 NAME 'customTest'
  - Add custom attribute to gluuCustomPerson objectClass
    - Example: 
 ```
-objectclass ( oxObjectClass:101 NAME 'gluuCustomPerson' SUP top AUXILIARY MAY (customTest) X-ORIGIN 'Gluu - Custom persom objectclass' )
+objectclass ( oxObjectClass:101 NAME 'gluuCustomPerson' SUP top AUXILIARY MAY (customTest) X-ORIGIN 'Gluu - Custom person objectclass' )
 
 ```
  - Stop LDAP server with command `service solserver stop`
