@@ -236,27 +236,27 @@ Once a TR has been established with the federation, the Gluu Server administrato
 ![federation-entityid.png](../img/saml/federation-entityid.png)
 
 ## Inbound SAML (Asimba)
-Inbound SAML allows users from external identity providers to 
-SSO into services protected by the Gluu Server. The Gluu Server uses an 
-open source product called [Asimba](http://www.asimba.org/site/) to achieve 
-inbound SAML. Asimba allows SPs to use a single IDP for SSO even when users 
-come from multiple trusted external IDPs. 
+Inbound SAML allows users from external domains to login at their home identity provider for access to applications protected by the Gluu Server. The Gluu Server uses an open source product called [Asimba](http://www.asimba.org/site/) to achieve 
+inbound SAML. 
 
-The Gluu Server is shipped with a SAML Script which simplifies the process of 
-using Asimba. This section provides a step-by-step method of configuring Asimba 
+The Gluu Server ships with a SAML Script which simplifies the process of 
+using Asimba. This section provides a step-by-step method for configuring Asimba 
 with two (2) IDPs and a single SP. The administrator can add multiple IDPs or SPs 
 if required using the same method. However, it is required that all SPs and IDPs 
 are connected to the Asimba server, or the IDP that has the Asimba module enabled.
 
 i![asimba-overview](../img/asimba/overview.png)
 
+   !!! Note: 
+   Asimba can be configured in different ways to achieve different goals. The following documentation focuses on a specific use case that enables a website or application to send users to one of many external IDPs for login. 
+   
 ### Required Setup     
 
 |Setup hostname|Description|
 |--------------|-----------|
-|https://sp.gluu.org/protected/print.py|This is a shibboleth SP connected to `https://test.gluu.org`|
-|https://test.gluu.org| This is a Gluu Server SAML IDP with Asimba|
-|https://nest.gluu.org|This is a second Gluu Server SAML IDP connected to `https://test.gluu.org` |
+|`https://sp.gluu.org/protected/print.py`|This is a shibboleth SP connected to `https://test.gluu.org`|
+|`https://test.gluu.org`| This is a Gluu Server SAML IDP with Asimba|
+|`https://nest.gluu.org`|This is a second Gluu Server SAML IDP connected to `https://test.gluu.org` |
 
 
 **Note: Description of SAML Authentication Module is available here: 
