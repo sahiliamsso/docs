@@ -16,10 +16,7 @@ to use for single sign-on (SSO):
 - If you have a mobile application, use OpenID Connect.
 - If you are writing a new application, use OpenID Connect.
 
-If you are continuing with this SAML documentation it is presumed 
-that your use case aligns with one or both of the first two bullet points above. 
-If not, we recommend that you review the [OpenID Connect](./openid-connect.md) 
-portion of the Gluu Server docs. 
+If you are continuing with the SAML documentation it is presumed your use case aligns with one or both of the first two bullet points above. If not, we recommend that you review the [OpenID Connect](./openid-connect.md) portion of the Gluu Server docs. 
 
 ### Outbound vs. Inbound SAML 
 SAML is a versatile protocol. The two main use cases are Outbound SAML and Inbound SAML. 
