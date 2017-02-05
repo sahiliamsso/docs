@@ -32,7 +32,7 @@ authentication, authorization, federated identity, and identity management:
 - Lightweight Directory Access Protocol (LDAP)   
 
 If this is your first exposure to the Gluu Server, welcome to the 
-community! We want to see the ecosystem flourish, and ultimately to make 
+community! We want to see the ecosystem flourish, and ultimately make 
 the Internet a safer, more privacy protected place. In order to do that, 
 we believe we need to keep the Gluu Server free so all kinds of 
 organizations can use, contribute and benefit from the software.
