@@ -255,8 +255,6 @@ The following documentation provides a step-by-step guide for configuring Asimba
   
 The Gluu Server with hostname `https://test.gluu.org` must include Asimba. The Gluu Server with hostname `https://nest.gluu.org` must include Shibboleth. This is done by entering `yes` to the respective options while running the [setup script prompt](../installation-guide/setup_py.md) during installation. 
 
-![asimba-install](../img/asimba/asimba-install.png)
-
 ### Add Custom Script
 
 Login to the Gluu Server with hostname `https://test.gluu.org` and add the SAML script: 
