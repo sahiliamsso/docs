@@ -401,6 +401,6 @@ In our test setup we have created a Trust Relationship for one remote SP with th
      - How to create nameID in Gluu Server is available [here](https://gluu.org/docs/customize/attributes/#custom-nameid)
 
 ### Test SSO
-Here is a [quick video](https://youtu.be/YEyrOWJu0yo) to demonstrate how SSO should look with everything properly configured. In this video the protected resource is `https://sp.gluu.org/protected/print.py`. When we try to access the page SSO is initiated and we are redirected to the SAML Proxy discovery page on `https://test.gluu.org`. From there we select `Nest` as our desired authentication server and get directed to `https://nest.gluu.org/oxAuth/login`. After logging in we are redirected to the proctected resource. 
+Here is a [quick video](https://youtu.be/YEyrOWJu0yo) to demonstrate how SSO should look with everything properly configured. In this video the protected resource is `https://sp.gluu.org/protected/print.py`. When we try to access the page SSO is initiated and we are redirected to the SAML Proxy discovery page on `https://test.gluu.org`. From there we select `Nest` as our desired authentication server and get directed to `https://nest.gluu.org/oxAuth/login`. After logging in we are redirected and able to access to the protected resource. 
 
 * [Youtube Video Link](https://youtu.be/YEyrOWJu0yo)
