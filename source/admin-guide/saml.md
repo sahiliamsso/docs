@@ -19,7 +19,7 @@ to use for single sign-on (SSO):
 If you are continuing with the SAML documentation it is presumed your use case aligns with one or both of the first two bullet points above. If not, we recommend that you review the [OpenID Connect](./openid-connect.md) portion of the Gluu Server docs. 
 
 ### Outbound vs. Inbound SAML 
-SAML is a versatile protocol. The two main use cases are Outbound SAML and Inbound SAML. 
+There are two main SAML authentication workflows: Outbound SAML and Inbound SAML. 
 Outbound SAML can also be called SP-initiated Single Sign-On (SSO) or traditional SAML. 
 In an outbound SAML transaction a website or application (SP) redirects a user to a 
 designated Identity Provider (IDP) for authentication and authorization. 
