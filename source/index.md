@@ -34,7 +34,7 @@ authentication, authorization, federated identity, and identity management:
 If this is your first exposure to the Gluu Server, welcome to the 
 community! We want to see the ecosystem flourish, and ultimately to make 
 the Internet a safer, more privacy protected place. In order to do that, 
-we believe we need to keep the Gluu Server free, so all kinds of 
+we believe we need to keep the Gluu Server free so all kinds of 
 organizations can use, contribute and benefit from the software.
 
 These docs are not perfect! Please help us make them so by submitting
