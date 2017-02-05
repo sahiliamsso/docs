@@ -1,7 +1,7 @@
 # oxd
 
 ## Overview 
-[oxd](https://oxd.gluu.org) is an application and middleware service that makes it easy to securely implement login with any standard OpenID Connect Provider (OP), like the Gluu Server. oxd is not a proxy--sometimes it makes API calls on behalf of an application, but other times it just forms the right URLs and returns them to the application.
+[oxd](https://oxd.gluu.org) is a middleware service that makes it easy to securely implement login to your application using any standard OpenID Connect Provider (OP), like the Gluu Server. oxd is not a proxy--sometimes it makes API calls on behalf of an application, but other times it just forms the right URLs and returns them to the application.
 
 Your application can use any client software that implements the open standards the Gluu Server supports, but you may want to consider using oxd for the following reasons:
 
