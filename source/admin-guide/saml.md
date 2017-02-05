@@ -288,20 +288,15 @@ Login to the Gluu Server with hostname `https://test.gluu.org` and add the SAML 
     - Script: Please copy the [SAML Script](https://github.com/GluuFederation/oxAuth/blob/master/Server/integrations/saml/SamlExternalAuthenticator.py) from Github. 
     - Enabled: True
 
-![enabled](../img/oxtrust/enable.png)
-
 ### Add External IDP    
 
 Login to the Gluu Server with hostname `https://test.gluu.org` and add the external IDP: 
 
 * Log into the oxTrust interface
 * Navigate to `SAML` > `IDP`
-* Click on `Add IDP` button
+* Click `Add IDP`    
+* Fill in the form with the following information:
 
-![image](../img/asimba/asimba-idp_button.png)
-
-* Fill in the form with the information below:
-    
     * ID: The entityID of the remote ID/ADFS 
 
         - Example: `https:<hostname_of_gluu_server>/idp/shibboleth`  
@@ -337,8 +332,6 @@ Login to the Gluu Server with hostname `https://test.gluu.org` and add the exter
     * Send NameIDPolicy: Yes
 
     * Avoid Subject Confirmations: No
-
-![image](../img/asimba/add_idp.png)
 
 ### Add SP Requestor
 
