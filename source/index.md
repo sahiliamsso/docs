@@ -6,11 +6,8 @@ Sign-On (SSO). Other common use cases include mobile authentication,
 API access management, two-factor authentication, customer identity
 and access management (CIAM), and identity federation. 
 
-The Gluu Server is a container distribution composed of software
-written by Gluu and incorporated from other open source projects. Gluu
-projects are frequently prefixed with **ox**, which is our open source
-handle. Any code in the Gluu Server that we wrote is MIT license, 
-and is available on [Github](https://github.com/GluuFederation/). 
+The Gluu Server is a container distribution composed of software written by Gluu and incorporated from other open source projects. Gluu
+projects are frequently prefixed with our open source handle: **ox** (e.g. oxAuth, oxTrust). Any code in the Gluu Server that we wrote is MIT license, and is available on [Github](https://github.com/GluuFederation/). 
 
 SaaS, custom, open source and commercial software can be made more 
 secure by leveraging a central authentication and authorization service. 
