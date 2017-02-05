@@ -12,7 +12,7 @@ In short, refer to these four considerations to determine which protocol
 to use for single sign-on (SSO):
 
 - If you have an application that already supports SAML, use SAML.
-- If you need to support your customers or partners authentication requirements, use SAML.
+- If you need to support user login at an external IDP (like a customer or partner IDP), use SAML.
 - If you have a mobile application, use OpenID Connect.
 - If you are writing a new application, use OpenID Connect.
 
