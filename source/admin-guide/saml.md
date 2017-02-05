@@ -300,23 +300,23 @@ Login to the Gluu Server with hostname `https://test.gluu.org` and add the exter
 
     * ID: The entityID of the remote ID/ADFS 
 
-        - Example: `https:<hostname_of_gluu_server>/idp/shibboleth`  
+        - Example: `https:nest.gluu.org/idp/shibboleth`  
 
-    * Friendly Name: There is no particular format for this field, use anything 
+    * Friendly Name: Provide a human-readable name, like an organization or site name.
 
-    * Metadata URL: Keep it blank, we will upload metadata
+    * Metadata URL: Leave this field blank, we will upload metadata
 
-    * Metadata Timeout: Keep it as it is. 
+    * Metadata Timeout: Leave this field as is. 
 
-    * Metadata File: Download metadata of remote IDP/ADFS and upload that XML file. 
+    * Metadata File: Download the remote IDPs metadata and upload that XML file. 
     
-        - Example: The metadata for Gluu IdP can be downloaded using `wget -c https:<hostname_of_gluu_server>/idp/shibboleth`
+        - Example: The metadata for a Gluu IDP can be downloaded using `wget -c https:<hostname_of_gluu_server>/idp/shibboleth`
 
-    * Trust Certificate File: Grab the SAML cert from remote IDP/ADFS and upload that x509 certificate
+    * Trust Certificate File: Get the SAML cert from the remote IDP and upload that x509 certificate
 
-        - Example: You will get the SAML certificate from Gluu Server's metadata link or available inside `/etc/certs/shibIDP.crt`
+        - Example: You can get a Gluu Server's SAML certificate in the metadata or in `/etc/certs/shibIDP.crt`
 
-    * NameIDFormat: SAML2 URI nameID format if remote IDP is a Gluu Server otherwise ask for their nameID format.
+    * NameIDFormat: If the remote IDP is a Gluu Server use SAML2 URI nameID format. If not ask for the nameID format.
 
         - Example: `urn:oasis:names:tc:SAML:2.0:nameid-format:transient`
 
@@ -340,10 +340,8 @@ Login to the Gluu Server with hostname `https://test.gluu.org` and add the SP Re
 
 * Log into oxTrust interface
 * Navigate to `SAML` > `SP Requestor`
-* Click on `Add SP Requestor`
-
-![image](../img/asimba/asimba-sp_addbutton.png)
-
+* Click `Add SP Requestor`
+![image](../img/asimba/add_sp2mod.png)
 * Fill in the form with the information below:
      - Select parent SP Pool: requestorpool.1
      - ID: https://test.gluu.org/saml
@@ -372,7 +370,6 @@ Login to the Gluu Server with hostname `https://test.gluu.org` and add the SP Re
   </md:ContactPerson>
 </md:EntityDescriptor> 
 ```
-![image](../img/asimba/add_sp2mod.png)
 
 ### Add Trust Relationship
 
