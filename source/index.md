@@ -55,9 +55,9 @@ the client and server software;
 
 (4). oxd subscriptions help support this project so you can see more enhancements faster; 
 
-(5). There are oxd libraries for Php, Python, Java, Node, Ruby, C#, Perl and Go; 
+(5). There are oxd libraries for Php, Python, Java, Node, Ruby, C#, Perl and Go. If your application is programmed in another language, oxd has a simple JSON/REST API;
 
-(6). There are oxd plugins for many popular applications like: Wordpress, Drupal, Magento, OpenCart, SugarCRM, SuiteCRM, Roundcube, Shopify, and Kong. And more are being added. Next on the list are: MatterMost, RocketChat, NextCloud, and Liferay.
+(6). There are oxd plugins for many popular applications like: Wordpress, Drupal, Magento, OpenCart, SugarCRM, SuiteCRM, Roundcube, Shopify, and Kong. More are being added too. Next on the list are: MatterMost, RocketChat, NextCloud, and Liferay.
 
 ## Support
 
