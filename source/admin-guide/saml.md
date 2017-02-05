@@ -8,7 +8,7 @@ Internet's largest domains. However, the last major release of SAML was in 2005!
 Therefore it is important to understand when to use SAML and when to use a 
 newer protocol like OpenID Connect to achieve your identity goals. 
 
-In short, refer to these four considerations to determine which protocol 
+Refer to these four considerations to determine which protocol 
 to use for single sign-on (SSO):
 
 - If you have an application that already supports SAML, use SAML.
