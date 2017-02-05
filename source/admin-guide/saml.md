@@ -23,7 +23,7 @@ There are two main SAML authentication workflows: outbound SAML and inbound SAML
 Outbound SAML can also be called SP-initiated Single Sign-On (SSO) or traditional SAML. 
 In an outbound SAML transaction a website or application (SP) redirects a user to a 
 designated Identity Provider (IDP) for authentication and authorization. 
-The IDP asks for the user's credentials and upon successful authentication, 
+The IDP asks for the user's credentials and upon successful authentication 
 the user is redirected and able to access the protected content. 
 
 Inbound SAML enables an organization to offer SAML authentication as a front door to their digital service. Inbound SAML is a common requirement for SaaS providers who need to support the authentication requirements of large enterprise customers.
