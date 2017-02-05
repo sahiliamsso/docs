@@ -295,6 +295,7 @@ Login to the Gluu Server with hostname `https://test.gluu.org` and add the exter
 * Log into the oxTrust interface
 * Navigate to `SAML` > `IDP`
 * Click `Add IDP`    
+![image](../img/asimba/add_idp.png)  
 * Fill in the form with the following information:
 
     * ID: The entityID of the remote ID/ADFS 
