@@ -1,7 +1,24 @@
-# OXD
-oxd is a mediator, a service demon that listens on localhost, providing easy APIs that can be called by a web application to simplify using an external OAuth2 server for authentication or authorization. oxd is not a proxy--sometimes it makes API calls on behalf of an application, but other times it just forms the right URLs and returns them to the application. 
+# oxd
 
-One significant advantage of using oxd over a native client library is that oxd consolidates the OAuth2 code in one package. If there are updates to the OAuth2 client code, you can update the oxd-server package, without changing the interface to the application.
+## Overview 
+[oxd](https://oxd.gluu.org) is an application and middleware service that makes it easy to securely implement login with any standard OpenID Connect Provider (OP), like the Gluu Server. oxd is not a proxy--sometimes it makes API calls on behalf of an application, but other times it just forms the right URLs and returns them to the application.
 
-## Documentation
-The complete documentation for oxd is made available in a separate address. Please see [this link](https://gluu.org/docs-oxd/) for the OXD documentation.
+Your application can use any client software that implements the open standards the Gluu Server supports, but you may want to consider using oxd for the following reasons:
+
+(1). oxd is super-easy to use;
+
+(2). We keep updating oxd to address the latest OAuth 2.0 security knowledge;
+
+(3). We can provide more complete end-to-end support if we know both the client and server software;
+
+(4). oxd subscriptions help support this project so you can see more enhancements faster;
+
+(5). There are oxd libraries for Php, Python, Java, Node, Ruby, C#, Perl and Go. If your application is programmed in another language, oxd has a simple JSON/REST API;
+
+(6). There are oxd plugins for many popular applications like: Wordpress, Drupal, Magento, OpenCart, SugarCRM, SuiteCRM, Roundcube, Shopify, and Kong. More are being added too. Next on the list are: MatterMost, RocketChat, NextCloud, and Liferay.
+
+## Docs
+oxd docs can be found at: [https://oxd.gluu.org/docs](https://oxd.gluu.org/docs).   
+
+## License
+oxd is commercial software licensed by Gluu. Learn more on the [oxd website](https://oxd.gluu.org).
