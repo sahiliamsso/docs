@@ -641,43 +641,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#specific-setup-details" title="Specific Setup Details" class="md-nav__link">
-    Specific Setup Details
+  <a href="#add-custom-script" title="Add Custom Script" class="md-nav__link">
+    Add Custom Script
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#custom-script-configuration" title="Custom Script Configuration" class="md-nav__link">
-    Custom Script Configuration
+  <a href="#add-external-idp" title="Add External IDP" class="md-nav__link">
+    Add External IDP
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-idp-in-asimba-server" title="Adding IDP in Asimba Server" class="md-nav__link">
-    Adding IDP in Asimba Server
+  <a href="#add-sp-requestor" title="Add SP Requestor" class="md-nav__link">
+    Add SP Requestor
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-sp-requestor-in-asimba-server" title="Adding SP Requestor in Asimba Server" class="md-nav__link">
-    Adding SP Requestor in Asimba Server
+  <a href="#add-trust-relationship" title="Add Trust Relationship" class="md-nav__link">
+    Add Trust Relationship
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#trust-relationship" title="Trust Relationship" class="md-nav__link">
-    Trust Relationship
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test-asimba-with-saml-proxy" title="Test Asimba with SAML Proxy" class="md-nav__link">
-    Test Asimba with SAML Proxy
+  <a href="#test-sso" title="Test SSO" class="md-nav__link">
+    Test SSO
   </a>
   
 </li>
@@ -1097,8 +1090,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../../operation/logout/" title="Logout" class="md-nav__link">
-        Logout
+      <a href="../../operation/logout/" title="Single Logout (SLO)" class="md-nav__link">
+        Single Logout (SLO)
       </a>
     
   </li>
@@ -1256,43 +1249,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#specific-setup-details" title="Specific Setup Details" class="md-nav__link">
-    Specific Setup Details
+  <a href="#add-custom-script" title="Add Custom Script" class="md-nav__link">
+    Add Custom Script
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#custom-script-configuration" title="Custom Script Configuration" class="md-nav__link">
-    Custom Script Configuration
+  <a href="#add-external-idp" title="Add External IDP" class="md-nav__link">
+    Add External IDP
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-idp-in-asimba-server" title="Adding IDP in Asimba Server" class="md-nav__link">
-    Adding IDP in Asimba Server
+  <a href="#add-sp-requestor" title="Add SP Requestor" class="md-nav__link">
+    Add SP Requestor
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-sp-requestor-in-asimba-server" title="Adding SP Requestor in Asimba Server" class="md-nav__link">
-    Adding SP Requestor in Asimba Server
+  <a href="#add-trust-relationship" title="Add Trust Relationship" class="md-nav__link">
+    Add Trust Relationship
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#trust-relationship" title="Trust Relationship" class="md-nav__link">
-    Trust Relationship
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test-asimba-with-saml-proxy" title="Test Asimba with SAML Proxy" class="md-nav__link">
-    Test Asimba with SAML Proxy
+  <a href="#test-sso" title="Test SSO" class="md-nav__link">
+    Test SSO
   </a>
   
 </li>
@@ -1326,37 +1312,32 @@ SAML is a stable and mature standard, and is well supported at many of the
 Internet's largest domains. However, the last major release of SAML was in 2005! 
 Therefore it is important to understand when to use SAML and when to use a 
 newer protocol like OpenID Connect to achieve your identity goals. </p>
-<p>In short, refer to these four considerations to determine which protocol 
+<p>Refer to these four considerations to determine which protocol 
 to use for single sign-on (SSO):</p>
 <ul>
 <li>If you have an application that already supports SAML, use SAML.</li>
-<li>If you need to support your customers or partners authentication requirements, use SAML.</li>
+<li>If you need to support user login at an external IDP (like a customer or partner IDP), use SAML.</li>
 <li>If you have a mobile application, use OpenID Connect.</li>
 <li>If you are writing a new application, use OpenID Connect.</li>
 </ul>
-<p>If you are continuing with this SAML documentation it is presumed 
-that your use case aligns with one or both of the first two bullet points above. 
-If not, we recommend that you review the <a href="../openid-connect/">OpenID Connect</a> 
-portion of the Gluu Server docs. </p>
+<p>If you are continuing with the SAML documentation it is presumed your use case aligns with one or both of the first two bullet points above. If not, we recommend that you review the <a href="../openid-connect/">OpenID Connect</a> portion of the Gluu Server docs. </p>
 <h3 id="outbound-vs-inbound-saml">Outbound vs. Inbound SAML<a class="headerlink" href="#outbound-vs-inbound-saml" title="Permanent link">#</a></h3>
-<p>SAML is a versatile protocol. The two main use cases are Outbound SAML and Inbound SAML. 
+<p>There are two main SAML authentication workflows: outbound SAML and inbound SAML. 
 Outbound SAML can also be called SP-initiated Single Sign-On (SSO) or traditional SAML. 
 In an outbound SAML transaction a website or application (SP) redirects a user to a 
 designated Identity Provider (IDP) for authentication and authorization. 
-The IDP will ask for the user's credentials and upon successful authentication, 
-the user is sent back to the SP logged in. </p>
-<p>Inbound SAML enables an organization to offer SAML authentication as a front door 
-to their digital service. Using Inbound SAML, an organization can create trust 
-with many IDPs (typically the IDPs of customer and/or partner organizations) in 
-order to enable users from those organizations to authenticate at their home 
-identity provider for access to the service. Inbound SAML is a common requirement 
-for SaaS providers who want to make sure they can support the authentication requirements 
-of large enterprise customers.</p>
-<p>The Gluu Server bundles separate components to support both use cases 
-(installation of both components is optional during Gluu Server deployment). 
-For Outbound SAML, the Gluu Server bundles the Shibboleth IDP. 
-For inbound SAML, the Gluu Server bundles the Asimba SAML Proxy. 
-Documentation for each service follows in the sections below. </p>
+The IDP asks for the user's credentials and upon successful authentication redirects the user to the protected content. </p>
+<p>Inbound SAML enables an organization to offer SAML authentication as a front door to their digital service. Inbound SAML is a common requirement for SaaS providers who need to support the authentication requirements of large enterprise customers.</p>
+<p>The Gluu Server bundles separate components to support both workflows (installation of each component is optional during Gluu Server deployment):</p>
+<ul>
+<li>
+<p>For outbound SAML, the Gluu Server bundles the Shibboleth SAML IDP. </p>
+</li>
+<li>
+<p>For inbound SAML, the Gluu Server bundles the Asimba SAML Proxy. </p>
+</li>
+</ul>
+<p>Documentation for each service follows in the sections below. </p>
 <h2 id="outbound-saml-shibboleth">Outbound SAML (Shibboleth)<a class="headerlink" href="#outbound-saml-shibboleth" title="Permanent link">#</a></h2>
 <p>Outbound SAML can also be called SP-initiated Single Sign-On (SSO) 
 or traditional SAML. In an outbound SAML transaction a website or application (SP) 
@@ -1409,7 +1390,7 @@ status to active/inactive, to an attribute after clicking on it.</p>
 <li>Add custom attribute to gluuCustomPerson objectClass</li>
 <li>Example: </li>
 </ul>
-<pre><code>objectclass ( oxObjectClass:101 NAME 'gluuCustomPerson' SUP top AUXILIARY MAY (customTest) X-ORIGIN 'Gluu - Custom persom objectclass' )
+<pre><code>objectclass ( oxObjectClass:101 NAME 'gluuCustomPerson' SUP top AUXILIARY MAY (customTest) X-ORIGIN 'Gluu - Custom person objectclass' )
 
 </code></pre>
 
@@ -1550,17 +1531,13 @@ entity id” will appear. Use this link to find and select the SP entityIDs that
 <p>Once a TR has been established with the federation, the Gluu Server administrator can easily create TRs with any SP included in the federation by selecting the federation from the <code>Federation Name</code> drop down menu and selecting the entity-id for the SP.</p>
 <p><img alt="federation-entityid.png" src="../../img/saml/federation-entityid.png" /></p>
 <h2 id="inbound-saml-asimba">Inbound SAML (Asimba)<a class="headerlink" href="#inbound-saml-asimba" title="Permanent link">#</a></h2>
-<p>Inbound SAML allows users from external identity providers to 
-SSO into services protected by the Gluu Server. The Gluu Server uses an 
-open source product called <a href="http://www.asimba.org/site/">Asimba</a> to achieve 
-inbound SAML. Asimba allows SPs to use a single IDP for SSO even when users 
-come from multiple trusted external IDPs. </p>
-<p>The Gluu Server is shipped with a SAML Script which simplifies the process of 
-using Asimba. This section provides a step-by-step method of configuring Asimba 
-with two (2) IDPs and a single SP. The administrator can add multiple IDPs or SPs 
-if required using the same method. However, it is required that all SPs and IDPs 
-are connected to the Asimba server, or the IDP that has the Asimba module enabled.</p>
-<p>i<img alt="asimba-overview" src="../../img/asimba/overview.png" /></p>
+<p>Inbound SAML allows users from external domains to login at their home identity provider to gain access to resources protected by the Gluu Server. The Gluu Server uses an open source product called <a href="http://www.asimba.org/site/">Asimba</a> to normalize inbound SAML. </p>
+<p>The following documentation provides a step-by-step guide for configuring Asimba with two (2) IDPs and a single (1) SP. The guide includes use of a SAML interception script which is shipped with the Gluu Server and simplifies the process of using Asimba. The administrator can add multiple IDPs or SPs (as required) using the method outlined below. Each SP and IDP must be connected to the IDP that has the Asimba module enabled.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A description of the SAML interception script is available <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations/saml">here</a>.</p>
+</div>
+<p><img alt="asimba-overview" src="../../img/asimba/overview.png" /></p>
 <h3 id="required-setup">Required Setup<a class="headerlink" href="#required-setup" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -1571,31 +1548,26 @@ are connected to the Asimba server, or the IDP that has the Asimba module enable
 </thead>
 <tbody>
 <tr>
-<td>https://sp.gluu.org/protected/print.py</td>
-<td>This is a shibboleth SP connected to <em>https://test.gluu.org</em></td>
+<td><code>https://sp.gluu.org/protected/print.py</code></td>
+<td>This is a shibboleth SP connected to <code>https://test.gluu.org</code></td>
 </tr>
 <tr>
-<td>https://test.gluu.org</td>
-<td>This is a Gluu Server SAML IDP with Asimba</td>
+<td><code>https://test.gluu.org</code></td>
+<td>This is a Gluu Server with Asimba installed</td>
 </tr>
 <tr>
-<td>https://nest.gluu.org</td>
-<td>This is a second Gluu Server SAML IDP connected to <em>https://test.gluu.org</em></td>
+<td><code>https://nest.gluu.org</code></td>
+<td>This is a second Gluu Server with Shibboleth installed that is connected to <code>https://test.gluu.org</code></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Note: Description of SAML Authentication Module is available here: 
-https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations/saml</strong></p>
-<h3 id="specific-setup-details">Specific Setup Details<a class="headerlink" href="#specific-setup-details" title="Permanent link">#</a></h3>
-<p>The Gluu Server setup with the hostname <code>https://test.gluu.org</code> must be setup with Asimba. This is done by typing <code>yes</code> to the <a href="../../installation-guide/setup_py/">setup script prompt</a>.</p>
-<p><img alt="asimba-install" src="../../img/asimba/asimba-install.png" /></p>
-<h3 id="custom-script-configuration">Custom Script Configuration<a class="headerlink" href="#custom-script-configuration" title="Permanent link">#</a></h3>
-<p><strong>Note: The configuration below is done in the Gluu Server with Asimba 
-installed with the hostname <code>https://test.gluu.org</code>.</strong></p>
+<p>The Gluu Server with hostname <code>https://test.gluu.org</code> must include Asimba. The Gluu Server with hostname <code>https://nest.gluu.org</code> must include Shibboleth. This is done by entering <code>yes</code> to the respective options while running the <a href="../../installation-guide/setup_py/">setup script prompt</a> during installation. </p>
+<h3 id="add-custom-script">Add Custom Script<a class="headerlink" href="#add-custom-script" title="Permanent link">#</a></h3>
+<p>Login to the Gluu Server with hostname <code>https://test.gluu.org</code> and add the SAML script: </p>
 <ul>
 <li>Log into the oxTrust interface as <code>admin</code></li>
 <li>Navigate to <code>Configuration</code> &gt; <code>Manage Custom Scripts</code></li>
-<li>Select/Add <code>saml</code> script from <code>Person Authentication</code> tab</li>
+<li>In the <code>Person Authentication</code> tab Select/Add <code>saml</code> script </li>
 </ul>
 <p><img alt="custom-script-person-authentication" src="../../img/asimba/cspa.png" /></p>
 <ul>
@@ -1607,19 +1579,19 @@ installed with the hostname <code>https://test.gluu.org</code>.</strong></p>
 <li>Usage Type: Web</li>
 <li>Custom property (key/value)</li>
 <li>saml_deployment_type: enroll</li>
-<li>saml_idp_sso_target_url: https://test.gluu.org/asimba/profiles/saml2/sso/web</li>
+<li>saml_idp_sso_target_url: <code>https://test.gluu.org/asimba/profiles/saml2/sso/web</code></li>
 <li>saml_validate_response: false</li>
-<li>asimba_entity_id: https://test.gluu.org/saml</li>
-<li>asimba_saml_certificate_file: /etc/certs/saml.pem <ul>
+<li>asimba_entity_id: <code>https://test.gluu.org/saml</code></li>
+<li>asimba_saml_certificate_file: <code>/etc/certs/saml.pem</code><ul>
 <li>note: Deployer need to copy 'asimba.crt' in 'saml.pem' without the 'BEGIN CERTIFICATE' and 'END CERTIFICATE' tag. </li>
 </ul>
 </li>
-<li>user_object_classes: eduPerson</li>
+<li>user_object_classes: <code>eduPerson</code></li>
 <li>saml_idp_attributes_mapping: { "attribute_name": ["attribute_name", "SAML2 URI"] } <ul>
 <li>example: <code>{"uid": ["uid", "urn:oid:0.9.2342.19200300.100.1.1"], "mail": ["mail", "urn:oid:0.9.2342.19200300.100.1.3"], "givenName": ["givenName", "urn:oid:2.5.4.42"], "sn": ["sn", "urn:oid:2.5.4.4"], "eduPersonPrincipalName": ["eduPersonPrincipalName", "urn:oid:1.3.6.1.4.1.5923.1.1.1.6"] }</code></li>
 </ul>
 </li>
-<li>enforce_uniqueness_attr_list: attribute1, attribute2<ul>
+<li>enforce_uniqueness_attr_list: <code>attribute1</code>, <code>attribute2</code><ul>
 <li>example: <code>edupersonprincipalname, uid, mail, givenName</code></li>
 </ul>
 </li>
@@ -1630,51 +1602,47 @@ installed with the hostname <code>https://test.gluu.org</code>.</strong></p>
 </ul>
 </li>
 </ul>
-<p><img alt="enabled" src="../../img/oxtrust/enable.png" /></p>
-<h3 id="adding-idp-in-asimba-server">Adding IDP in Asimba Server<a class="headerlink" href="#adding-idp-in-asimba-server" title="Permanent link">#</a></h3>
-<p><strong>Note: The configuration below is done in the Gluu Server    <br />
-with Asimba installed with the hostname <code>https://test.gluu.org</code>.</strong></p>
+<h3 id="add-external-idp">Add External IDP<a class="headerlink" href="#add-external-idp" title="Permanent link">#</a></h3>
+<p>Login to the Gluu Server with hostname <code>https://test.gluu.org</code> and add the external IDP: </p>
 <ul>
 <li>Log into the oxTrust interface</li>
 <li>Navigate to <code>SAML</code> &gt; <code>IDP</code></li>
-<li>Click on <code>Add IDP</code> button</li>
-</ul>
-<p><img alt="image" src="../../img/asimba/asimba-idp_button.png" /></p>
-<ul>
+<li>Click <code>Add IDP</code>  <br />
+<img alt="image" src="../../img/asimba/add_idp.png" />  </li>
 <li>
-<p>Fill up the form with the information below:</p>
+<p>Fill in the form with the following information:</p>
 <ul>
 <li>
 <p>ID: The entityID of the remote ID/ADFS </p>
 <ul>
-<li>Example: <code>https:&lt;hostname_of_gluu_server&gt;/idp/shibboleth</code>  </li>
+<li>Example: <code>https:nest.gluu.org/idp/shibboleth</code>  </li>
 </ul>
 </li>
 <li>
-<p>Friendly Name: There is no particular format for this field, use anything </p>
+<p>Friendly Name: Provide a human-readable name, like an organization or site name.</p>
 </li>
 <li>
-<p>Metadata URL: Keep it blank, we will upload metadata</p>
+<p>Metadata URL: Leave this field blank, we will upload metadata</p>
 </li>
 <li>
-<p>Metadata Timeout: Keep it as it is. </p>
+<p>Metadata Timeout: Leave this field as is. </p>
 </li>
 <li>
-<p>Metadata File: Download metadata of remote IDP/ADFS and upload that XML file. </p>
+<p>Metadata File: Download the remote IDPs metadata and upload that XML file. </p>
 <ul>
-<li>Example: The metadata for Gluu IdP can be downloaded using <code>wget -c https:&lt;hostname_of_gluu_server&gt;/idp/shibboleth</code></li>
+<li>Example: The metadata for a Gluu IDP can be downloaded using <code>wget -c https:&lt;hostname_of_gluu_server&gt;/idp/shibboleth</code></li>
 </ul>
 </li>
 <li>
-<p>Trust Certificate File: Grab the SAML cert from remote IDP/ADFS and upload that x509 certificate</p>
+<p>Trust Certificate File: Get the SAML cert from the remote IDP and upload that x509 certificate</p>
 <ul>
-<li>Example: You will get the SAML certificate from Gluu Server's metadata link or available inside <code>/etc/certs/shibIDP.crt</code></li>
+<li>Example: You can get a Gluu Server's SAML certificate in the metadata or in <code>/etc/certs/shibIDP.crt</code></li>
 </ul>
 </li>
 <li>
-<p>NameIDFormat: SAML2 URI nameID format if remote IDP is a Gluu Server otherwise ask for their nameID format.</p>
+<p>NameIDFormat: If the remote IDP is a Gluu Server use SAML2 URI nameID format. If not ask for the nameID format.</p>
 <ul>
-<li>Example: `urn:oasis:names:tc:SAML:2.0:nameid-format:transient'</li>
+<li>Example: <code>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</code></li>
 </ul>
 </li>
 <li>
@@ -1701,16 +1669,14 @@ with Asimba installed with the hostname <code>https://test.gluu.org</code>.</str
 </ul>
 </li>
 </ul>
-<p><img alt="image" src="../../img/asimba/add_idp.png" /></p>
-<h3 id="adding-sp-requestor-in-asimba-server">Adding SP Requestor in Asimba Server<a class="headerlink" href="#adding-sp-requestor-in-asimba-server" title="Permanent link">#</a></h3>
+<h3 id="add-sp-requestor">Add SP Requestor<a class="headerlink" href="#add-sp-requestor" title="Permanent link">#</a></h3>
+<p>Login to the Gluu Server with hostname <code>https://test.gluu.org</code> and add the SP Requestor: </p>
 <ul>
 <li>Log into oxTrust interface</li>
 <li>Navigate to <code>SAML</code> &gt; <code>SP Requestor</code></li>
-<li>Click on <code>Add SP Requestor</code></li>
-</ul>
-<p><img alt="image" src="../../img/asimba/asimba-sp_addbutton.png" /></p>
-<ul>
-<li>Please fill up the form with the information below:<ul>
+<li>Click <code>Add SP Requestor</code>
+<img alt="image" src="../../img/asimba/add_sp2mod.png" /></li>
+<li>Fill in the form with the information below:<ul>
 <li>Select parent SP Pool: requestorpool.1</li>
 <li>ID: https://test.gluu.org/saml</li>
 <li>Friendly Name: oxAuth SAML</li>
@@ -1741,18 +1707,13 @@ with Asimba installed with the hostname <code>https://test.gluu.org</code>.</str
 &lt;/md:EntityDescriptor&gt; 
 </code></pre>
 
-<p><img alt="image" src="../../img/asimba/add_sp2mod.png" /></p>
-<h3 id="trust-relationship">Trust Relationship<a class="headerlink" href="#trust-relationship" title="Permanent link">#</a></h3>
-<p><strong>Note: The configuration below is done in the Gluu Server 
-with Asimba installed with the hostname <code>https://test.gluu.org</code>.</strong></p>
-<p>Create Trust relationships for all service provides which are included in SAML Proxy SSO workflow. In our test setup we created Trust relationship for remote SP which has entityID 'https://sp.gluu.org/shibboleth'. How to create Trust Relationship is available in <a href="#2.1-outbound-saml">Section 2.1</a>.</p>
-<p>Log into the oxTrust inteface and follow the steps to add a new Trust Relationship.</p>
+<h3 id="add-trust-relationship">Add Trust Relationship<a class="headerlink" href="#add-trust-relationship" title="Permanent link">#</a></h3>
+<p>Login to the Gluu Server with hostname <code>https://nest.gluu.org</code> and create a Trust Relationship for all SPs which are included in the SAML Proxy SSO workflow. Documentation for creating a Trust Relationship is available in <a href="#2.1-outbound-saml">Section 2.1</a>. </p>
+<p>In our test setup we have created a Trust Relationship for one remote SP with the entityID <code>https://sp.gluu.org/shibboleth</code>.</p>
 <ul>
-<li>Gluu Server's Asimba metadata can be achieved from 'https://test.gluu.org/asimba/profiles/saml2'<ul>
-<li>Download the metadata and use 'File' method to create Trust relationship</li>
-</ul>
-</li>
-<li>Relying Party Configuration: 'SAML2SSO' Profile </li>
+<li>The Asimba metadata can be retrieved and downloaded from <code>https://test.gluu.org/asimba/profiles/saml2</code></li>
+<li>While creating the Trust Relationship, choose <code>File</code> as the <code>Metadata Type</code> and upload the Asumba metadata. </li>
+<li>Relying Party Configuration: <code>SAML2SSO</code> Profile </li>
 </ul>
 <p><img alt="enable-replying-party" src="../../img/saml/enable-relying-party.png" />
 <img alt="saml2sso" src="../../img/saml/saml2sso.png" /></p>
@@ -1761,7 +1722,7 @@ with Asimba installed with the hostname <code>https://test.gluu.org</code>.</str
     - assertionLifeTime: 300000
     - assertionProxyCount: 0
     - signResponses: conditional
-    - signAssertions: never
+    - signAssertions: never`
     - signRequests: conditional
     - encryptAssertions: never
     - encryptNameIds: never
@@ -1778,13 +1739,8 @@ with Asimba installed with the hostname <code>https://test.gluu.org</code>.</str
 </ul>
 </li>
 </ul>
-<h3 id="test-asimba-with-saml-proxy">Test Asimba with SAML Proxy<a class="headerlink" href="#test-asimba-with-saml-proxy" title="Permanent link">#</a></h3>
-<p>Here is a quick video on how SAML Proxy SSO might look like. 
-Here in this video we are using 'https://sp.gluu.org/protected/print.py' as 
-our protected service provider link. After initiating the SSO, we are moved 
-to Gluu Server's SAML Proxy discovery page ( https://test.gluu.org ). From 
-there we selected 'Nest' as our desired authentication server. After succesful 
-authentication we are landing to proctected resource. </p>
+<h3 id="test-sso">Test SSO<a class="headerlink" href="#test-sso" title="Permanent link">#</a></h3>
+<p>Here is a <a href="https://youtu.be/YEyrOWJu0yo">quick video</a> to demonstrate how SSO should look with everything properly configured. In this video the protected resource is <code>https://sp.gluu.org/protected/print.py</code>. When we try to access the page SSO is initiated and we are redirected to the SAML Proxy discovery page on <code>https://test.gluu.org</code>. From there we select <code>Nest</code> as our desired authentication server and get directed to <code>https://nest.gluu.org/oxAuth/login</code>. After logging in we are redirected and able to access to the protected resource. </p>
 <ul>
 <li><a href="https://youtu.be/YEyrOWJu0yo">Youtube Video Link</a></li>
 </ul>

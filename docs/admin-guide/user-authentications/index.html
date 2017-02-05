@@ -985,8 +985,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../../operation/logout/" title="Logout" class="md-nav__link">
-        Logout
+      <a href="../../operation/logout/" title="Single Logout (SLO)" class="md-nav__link">
+        Single Logout (SLO)
       </a>
     
   </li>
@@ -1102,8 +1102,8 @@
 <p>Interception scripts are used to implement multi-factor authentication. A number of scripts are included out-of-the-box, including scripts to support FIDO U2F tokens (like Vasco and Yubikey), Gluu's free Android and iOS two-factor authentication application called Super Gluu, certificate authentication, Duo Security, One-Time Passwords, and more. </p>
 <p>Implementation guides for each of the pre-supported authentication mechanisms listed above can be found in the pages that follow in this User Authentication Guide.</p>
 <p>In addition, organizations frequently have custom requirements for multi-factor authentication. For instance, only users from a certain group should be prompted for two-factor authentication, or, only prompt users for two-factor authentication when trying to access protected resources from an unknown IP address. Custom interception scripts allow you to implement these types of policies, as well as any other business driven policy that can be scripted. </p>
-<p>Learn more about <a href="../custom-script.md/">how to write a custom interception script</a>.</p>
-<p>Review our <a href="../../authn-guide/customauthn.md/">custom authentication script tutorial</a>, where we demonstrate how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication mechanism.</p>
+<p>Learn more about <a href="../custom-script/">how to write a custom interception script</a>.</p>
+<p>Review our <a href="../../authn-guide/customauthn/">custom authentication script tutorial</a>, where we demonstrate how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication mechanism.</p>
 <h2 id="configuring-account-lockout">Configuring Account Lockout<a class="headerlink" href="#configuring-account-lockout" title="Permanent link">#</a></h2>
 <p>The Gluu Server is shipped with a custom authentication script that implements a 
 basic account lockout policy which will deactivate a users account 

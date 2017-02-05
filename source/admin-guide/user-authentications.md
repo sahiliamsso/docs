@@ -24,9 +24,9 @@ Implementation guides for each of the pre-supported authentication mechanisms li
 
 In addition, organizations frequently have custom requirements for multi-factor authentication. For instance, only users from a certain group should be prompted for two-factor authentication, or, only prompt users for two-factor authentication when trying to access protected resources from an unknown IP address. Custom interception scripts allow you to implement these types of policies, as well as any other business driven policy that can be scripted. 
 
-Learn more about [how to write a custom interception script](./custom-script.md/).
+Learn more about [how to write a custom interception script](./custom-script.md).
 
-Review our [custom authentication script tutorial](../authn-guide/customauthn.md/), where we demonstrate how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication mechanism.
+Review our [custom authentication script tutorial](../authn-guide/customauthn.md), where we demonstrate how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication mechanism.
 
 ## Configuring Account Lockout
 
