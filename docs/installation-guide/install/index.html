@@ -143,6 +143,7 @@
     display: table;
     padding: 10px;
 ">
+<label for="Versions">Ver:
 <select id="versions" onchange="window.location.href=this.value;" style="
     position: relative;
     display: block;
@@ -164,7 +165,7 @@
   <option value="/docs">Latest</option>
   <option value="/docs/2.4.4">2.4.4</option>
     </select> 
-
+</label>
  </div>
    </nav>
 </header>
@@ -1205,6 +1206,10 @@ installation procedure is similar across all the distributions: </p>
 <li><a href="#start-the-gluu-server-and-login">Start the Gluu Server and login to the container</a></li>
 <li><a href="#run-setuppy">Run <code>setup.py</code></a></li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure your VM or server meets the <a href="../">minimum requirements</a> to deploy the Gluu Server.  </p>
+</div>
 <h2 id="install-gluu-server-package">Install Gluu Server Package<a class="headerlink" href="#install-gluu-server-package" title="Permanent link">#</a></h2>
 <h3 id="ubuntu-server-1404x">Ubuntu Server 14.04.x<a class="headerlink" href="#ubuntu-server-1404x" title="Permanent link">#</a></h3>
 <table>
