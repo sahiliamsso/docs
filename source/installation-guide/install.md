@@ -7,6 +7,9 @@ installation procedure is similar across all the distributions:
 2. [Start the Gluu Server and login to the container](#start-the-gluu-server-and-login)
 3. [Run `setup.py`](#run-setuppy)
 
+!!! Note
+    Make sure your VM or server meets the [minimum requirements](../installation-guide/index.md) to deploy the Gluu Server.  
+
 ## Install Gluu Server Package
 
 ### Ubuntu Server 14.04.x
