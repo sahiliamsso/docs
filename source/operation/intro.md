@@ -23,7 +23,7 @@ Here are some of the reasons we made this change:
 ## OpenLDAP replaces OpenDJ
 
 The Gluu Server uses LDAP for persistence. The Gluu Server will continue to support 
-several LDAP servers, but will now ship with OpenLDAP. Below are a few
+several LDAP servers (including OpenDJ), but will now ship with OpenLDAP. Below are a few
 reasons.
 
  - OpenLDAP has a better license, and [Symas](https://symas.com/) (the company behind OpenLDAP),
