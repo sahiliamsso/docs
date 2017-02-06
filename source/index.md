@@ -1,4 +1,4 @@
-# Gluu Server Community Edition (CE) Docs
+# Gluu Server Community Edition (CE) 2.4.4 Docs
 ## Introduction
 The Gluu Server is a free open source identity and access management 
 (IAM) platform. The most common use case for the Gluu Server is Single 
