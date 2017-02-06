@@ -2,56 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2bbc52c-a659-4696-b1a8-cfeeb604c491" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/404.html" afterPath="$PROJECT_DIR$/docs/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/admin-guide/certificate/index.html" afterPath="$PROJECT_DIR$/docs/admin-guide/certificate/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/admin-guide/custom-script/index.html" afterPath="$PROJECT_DIR$/docs/admin-guide/custom-script/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/admin-guide/openid-connect/index.html" afterPath="$PROJECT_DIR$/docs/admin-guide/openid-connect/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/admin-guide/oxtrust-ui/index.html" afterPath="$PROJECT_DIR$/docs/admin-guide/oxtrust-ui/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/admin-guide/saml/index.html" afterPath="$PROJECT_DIR$/docs/admin-guide/saml/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/admin-guide/scim-uma/index.html" afterPath="$PROJECT_DIR$/docs/admin-guide/scim-uma/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/admin-guide/session/index.html" afterPath="$PROJECT_DIR$/docs/admin-guide/session/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/admin-guide/uma/index.html" afterPath="$PROJECT_DIR$/docs/admin-guide/uma/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/admin-guide/user-authentications/index.html" afterPath="$PROJECT_DIR$/docs/admin-guide/user-authentications/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/admin-guide/user-group/index.html" afterPath="$PROJECT_DIR$/docs/admin-guide/user-group/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/api-guide/api/index.html" afterPath="$PROJECT_DIR$/docs/api-guide/api/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/api-guide/openid-connect-api/index.html" afterPath="$PROJECT_DIR$/docs/api-guide/openid-connect-api/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/api-guide/scim-api/index.html" afterPath="$PROJECT_DIR$/docs/api-guide/scim-api/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/api-guide/uma-api/index.html" afterPath="$PROJECT_DIR$/docs/api-guide/uma-api/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/authn-guide/U2F/index.html" afterPath="$PROJECT_DIR$/docs/authn-guide/U2F/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/authn-guide/cert-auth/index.html" afterPath="$PROJECT_DIR$/docs/authn-guide/cert-auth/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/authn-guide/customauthn/index.html" afterPath="$PROJECT_DIR$/docs/authn-guide/customauthn/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/authn-guide/duo/index.html" afterPath="$PROJECT_DIR$/docs/authn-guide/duo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/authn-guide/google/index.html" afterPath="$PROJECT_DIR$/docs/authn-guide/google/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/authn-guide/otp/index.html" afterPath="$PROJECT_DIR$/docs/authn-guide/otp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/authn-guide/passport/index.html" afterPath="$PROJECT_DIR$/docs/authn-guide/passport/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/authn-guide/supergluu/index.html" afterPath="$PROJECT_DIR$/docs/authn-guide/supergluu/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/installation-guide/index.html" afterPath="$PROJECT_DIR$/docs/installation-guide/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/installation-guide/install/index.html" afterPath="$PROJECT_DIR$/docs/installation-guide/install/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/installation-guide/setup_py/index.html" afterPath="$PROJECT_DIR$/docs/installation-guide/setup_py/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/integration/dropbox/index.html" afterPath="$PROJECT_DIR$/docs/integration/dropbox/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/integration/google/index.html" afterPath="$PROJECT_DIR$/docs/integration/google/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/integration/oauth-js-implicit/index.html" afterPath="$PROJECT_DIR$/docs/integration/oauth-js-implicit/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/integration/oauth2/index.html" afterPath="$PROJECT_DIR$/docs/integration/oauth2/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/integration/office/index.html" afterPath="$PROJECT_DIR$/docs/integration/office/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/integration/openidc-rp/index.html" afterPath="$PROJECT_DIR$/docs/integration/openidc-rp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/integration/salesforce/index.html" afterPath="$PROJECT_DIR$/docs/integration/salesforce/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/integration/saml-sp/index.html" afterPath="$PROJECT_DIR$/docs/integration/saml-sp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/mkdocs/search_index.json" afterPath="$PROJECT_DIR$/docs/mkdocs/search_index.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/operation/backup/index.html" afterPath="$PROJECT_DIR$/docs/operation/backup/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/operation/faq/index.html" afterPath="$PROJECT_DIR$/docs/operation/faq/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/operation/find-gluu-version/index.html" afterPath="$PROJECT_DIR$/docs/operation/find-gluu-version/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/operation/intro/index.html" afterPath="$PROJECT_DIR$/docs/operation/intro/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/operation/logout/index.html" afterPath="$PROJECT_DIR$/docs/operation/logout/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/operation/logs/index.html" afterPath="$PROJECT_DIR$/docs/operation/logs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/operation/ports/index.html" afterPath="$PROJECT_DIR$/docs/operation/ports/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/reference/JSON-oxauth-prop/index.html" afterPath="$PROJECT_DIR$/docs/reference/JSON-oxauth-prop/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/reference/JSON-oxtrust-prop/index.html" afterPath="$PROJECT_DIR$/docs/reference/JSON-oxtrust-prop/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/upgrade/index.html" afterPath="$PROJECT_DIR$/docs/upgrade/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/upgrade/update-war/index.html" afterPath="$PROJECT_DIR$/docs/upgrade/update-war/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/admin-guide/user-authentications.md" afterPath="$PROJECT_DIR$/source/admin-guide/user-authentications.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theme/material/partials/header.html" afterPath="$PROJECT_DIR$/theme/material/partials/header.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -106,8 +57,8 @@
         <entry file="file://$PROJECT_DIR$/source/admin-guide/user-authentications.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="440">
-                <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <first_editor relative-caret-position="236">
+                <caret line="43" column="42" lean-forward="true" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -915,8 +866,8 @@
     <entry file="file://$PROJECT_DIR$/source/admin-guide/user-authentications.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="440">
-            <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <first_editor relative-caret-position="236">
+            <caret line="43" column="42" lean-forward="true" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
             <folding />
           </first_editor>
           <second_editor />
