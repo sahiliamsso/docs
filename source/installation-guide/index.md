@@ -1,7 +1,7 @@
 # Preparing VM for Gluu Server Installation
+## Minimum Requirements
 
-Gluu Server Community Edition (CE) has the following **minimum**
-requirements. 
+The Gluu Server Community Edition (CE) needs to be deployed on a server or VM with the following **minimum** requirements. 
 
 |CPU Unit  |    RAM     |   Disk Space      | Processor Type |
 |----------|------------|-------------------|----------------|
