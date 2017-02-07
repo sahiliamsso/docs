@@ -303,7 +303,7 @@ The Gluu Server is shipped with a very basic user registration feature. The regi
 !!! Note
     When possible, we recommend handling user registration in your app locally, then pushing the user information to the Gluu Server via SCIM. This will give you more control and flexibility in defining the exact registration process. Also, since it was primarily designed as an interface for admins, frequently oxTrust is not Internet facing.
 
-A limited number of attributes are present in the default registration form. If more attributes are needed they can be added via the GUI by navigating to `Organization Configuration` > `Manage Registration`. The [User Registration](./custom-script.md/#user-registration) custom script is used to control and validate user registrations .
+A limited number of attributes are present in the default registration form. If more attributes are needed they can be added via the GUI by navigating to `Organization Configuration` > `Manage Registration`. Learn how to [add attributes](./oxtrust-ui.md/#manage-registration) to the default registration form. In addition, the [User Registration](./custom-script.md/#user-registration) custom script can be used to control and validate user registrations.
 
 ### oxTrust Configuration
 Navigate to the custom scripts section of the Admin Panel. Click on `Configuration` then `Manage Custom Scripts`.
