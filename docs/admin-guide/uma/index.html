@@ -188,9 +188,10 @@
     </i>
     Gluu Docs
   </label>
-  <label for="Versions">Ver:<select id="versions" onchange="window.location.href=this.value;" style="
-    position: inherit;
-    display: block;
+  <label for="Versions">Ver:
+  <select id="versions" onchange="window.location.href=this.value;" style="
+    position: relative;
+    display: inline;
     min-width: 25%;
     /* width: 120%; */
     height: 25px;
@@ -210,6 +211,7 @@
   <option value="/docs/2.4.4">2.4.4</option>
     </select> 
 </label>
+</nav>
   
     <div class="md-nav__source">
       
@@ -582,6 +584,13 @@
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#resource-registration" title="Resource Registration" class="md-nav__link">
@@ -1073,6 +1082,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resource-registration" title="Resource Registration" class="md-nav__link">
     Resource Registration
   </a>
@@ -1135,8 +1151,10 @@
               
                 
                 <h1 id="uma">UMA<a class="headerlink" href="#uma" title="Permanent link">#</a></h1>
-<p>This section describes the adminisration of UMA in Gluu Server CE. The UMA administration is accessible from the oxTrust administrator interface.</p>
-<p><img alt="menu" src="../../img/uma/menu.png" /></p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
+<p>As a profile of OAuth 2.0 (IETF RFCs 6749 and 6750) that is complementary to OpenID Connect, UMA defines RESTful, JSON-based, standardized flows and constructs for coordinating the protection of any API or web resource in a way that will be familiar to any developer already acquainted with OAuth.</p>
+<p>UMA defines interfaces between authorization servers and resource servers that, by default, enable centralized policy decision-making for improved service delivery, auditing, policy administration, and accountability, even in a very loosely coupled "public API" environment. Custom profiles enable flexibility to move the decision-making line outward to distributed applications, to account for local preferences in API ecosystems. UMA does not standardize a policy expression language, enabling flexibility in policy expression and evaluation through XACML, other declarative policy languages, or procedural code as warranted by conditions. It also has a fluid way to handle federated authorization policy.</p>
+<p>UMA inherits authentication agnosticism from OAuth. It concentrates on authorization, not on authentication. It has been profiled to work with OpenID Connect to gather identity claims from whoever is attempting access, and enables true claims-based authorization (with simple group- or role-based policies a natural subset).</p>
 <h2 id="resource-registration">Resource Registration<a class="headerlink" href="#resource-registration" title="Permanent link">#</a></h2>
 <p>The resources protected by UMA must be registered in oxTrust. The following propterties describe a resource:</p>
 <ul>
@@ -1232,9 +1250,8 @@ oxIconUrl: http://seed.gluu.org/uma/icons/view_scope.png
 <li>authorization script: script that is evaluated in order to grant/deny access</li>
 <li>name: a human readable name to the UMA policy</li>
 </ol>
-<p>The following section outlines how to define UMA policies from the Custom Script menu. The Custom Script page is accessed from the Configuration Menu.</p>
-<p><img alt="custom-script-menu" src="../../img/oxtrust/custom-script-menu.png" />
-<img alt="auth-policy" src="../../img/uma/auth-policy.png" /></p>
+<p>The following section outlines how to define UMA policies from the Custom Script menu. The Custom Script page is accessed by navigating to <code>Configuration</code> &gt; <code>Custom Scripts</code>.</p>
+<p><img alt="auth-policy" src="../../img/uma/auth-policy.png" /></p>
 <h3 id="uma-policy-algorithm">UMA Policy Algorithm<a class="headerlink" href="#uma-policy-algorithm" title="Permanent link">#</a></h3>
 <p>The UMA Policy alrorithm has two rules that are followed. These rules must be followed while writing UMA policy using the custom script feature of Gluu Server.</p>
 <ul>
