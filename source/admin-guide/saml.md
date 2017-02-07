@@ -29,9 +29,9 @@ Inbound SAML enables an organization to offer SAML authentication as a front doo
 
 The Gluu Server bundles separate components to support both workflows (installation of each component is optional during Gluu Server deployment):
 
-- For outbound SAML, the Gluu Server bundles the Shibboleth SAML IDP. 
+- For outbound SAML, the Gluu Server bundles the [Shibboleth SAML IDP](#outbound-saml-shibboleth). 
 
-- For inbound SAML, the Gluu Server bundles the Asimba SAML Proxy. 
+- For inbound SAML, the Gluu Server bundles the [Asimba SAML Proxy](#inbound-saml-asimba). 
 
 Documentation for each service follows in the sections below. 
  
