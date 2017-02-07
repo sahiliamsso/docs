@@ -1,4 +1,5 @@
 <nav class="md-nav md-nav--primary">
+
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <i class="{% if config.extra.logo %} md-logo {% else %} md-icon md-icon--home {% endif %} md-nav__button">
       {% if config.extra.logo %}
@@ -6,16 +7,7 @@
       {% endif %}
     </i>
     {{ config.site_name }}
-  </label>
-<nav class="md-ver md-ver" style="
-    height: 25px;
-    background: transparent;
-	font-weight:bold;
-">
-<div class ="md-ver" style="
-	display: table;
-	padding: 10px;
-">
+
 <label for="Versions">Ver:
   <select id="versions" onchange="window.location.href=this.value;" style="
     position: relative;
@@ -24,9 +16,9 @@
     /* width: 120%; */
     height: 25px;
     padding: 5px 15px 5px 5px;
-    color: #555555;
+    color: white;
     border: none;
-    background: transparent;
+    background: #3f51b5;
     outline: none;
     -webkit-appearance: none;
     z-index: 99;
@@ -39,8 +31,7 @@
   <option value="/docs/2.4.4">2.4.4</option>
     </select> 
 </label>
-</div>
-</nav>
+  </label>
     {% if config.repo_url %}
     <div class="md-nav__source">
       {% include "partials/source.html" %}
@@ -52,5 +43,4 @@
       {% include "partials/nav-item.html" %}
     {% endfor %}
   </ul>
-
 </nav>
