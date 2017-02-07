@@ -1,4 +1,7 @@
 # Preparing VM for Gluu Server Installation
+## Overview
+Thank you for your interest in the Gluu Server! The below document will provide instructions for preparing your VM for a standard Gluu Server deployment. After your servers have been prepared, you can move on to the [installation instructions](./install.md/). Good luck with your deployment, and welcome to the community!
+
 ## Minimum Requirements
 
 The Gluu Server Community Edition (CE) needs to be deployed on a server or VM with the following **minimum** requirements. 
