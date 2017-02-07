@@ -597,6 +597,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#user-registration" title="User Registration" class="md-nav__link">
+    User Registration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-registration-custom-script" title="User Registration Custom Script" class="md-nav__link">
+    User Registration Custom Script
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ldap-synchronization" title="LDAP Synchronization" class="md-nav__link">
     LDAP Synchronization
   </a>
@@ -649,26 +669,6 @@
           <li class="md-nav__item">
   <a href="#attributes-mapping" title="Attributes Mapping" class="md-nav__link">
     Attributes Mapping
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-registration" title="User Registration" class="md-nav__link">
-    User Registration
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#oxtrust-configuration" title="oxTrust Configuration" class="md-nav__link">
-    oxTrust Configuration
   </a>
   
 </li>
@@ -1213,6 +1213,17 @@
   </li>
 
         
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../operation/custom-loginpage/" title="Customize Login Page" class="md-nav__link">
+        Customize Login Page
+      </a>
+    
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1293,6 +1304,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#user-registration" title="User Registration" class="md-nav__link">
+    User Registration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-registration-custom-script" title="User Registration Custom Script" class="md-nav__link">
+    User Registration Custom Script
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ldap-synchronization" title="LDAP Synchronization" class="md-nav__link">
     LDAP Synchronization
   </a>
@@ -1345,26 +1376,6 @@
           <li class="md-nav__item">
   <a href="#attributes-mapping" title="Attributes Mapping" class="md-nav__link">
     Attributes Mapping
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-registration" title="User Registration" class="md-nav__link">
-    User Registration
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#oxtrust-configuration" title="oxTrust Configuration" class="md-nav__link">
-    oxTrust Configuration
   </a>
   
 </li>
@@ -1526,6 +1537,22 @@ button. The flow is <em>Add Member --&gt; Search the name/email of the user
 <p>Email</p>
 </li>
 </ul>
+<h2 id="user-registration">User Registration<a class="headerlink" href="#user-registration" title="Permanent link">#</a></h2>
+<p>The Gluu Server is shipped with a very basic user registration feature. The registration page can typically be found at <code>https://&lt;hostname&gt;/identity/register</code>. It's important to note that when user registration is handled via oxTrust, the users can <strong>not</strong> be added to a backend LDAP or Active Directory server. This means that self-registration via oxTrust is only effective if users are authenticated by GluuLDAP (and not a backend LDAP or AD server).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When possible, we recommend handling user registration in your app locally, then pushing the user information to the Gluu Server via SCIM. This will give you more control and flexibility in defining the exact registration process. Also, since it was primarily designed as an interface for admins, frequently oxTrust is not Internet facing.</p>
+</div>
+<p>A limited number of attributes are present in the default registration form. If more attributes are needed they can be added via the GUI by navigating to <code>Organization Configuration</code> &gt; <code>Manage Registration</code>. Learn how to <a href="../oxtrust-ui.md/#manage-registration">add attributes</a> to the default registration form. </p>
+<h3 id="user-registration-custom-script">User Registration Custom Script<a class="headerlink" href="#user-registration-custom-script" title="Permanent link">#</a></h3>
+<p>The <a href="../custom-script.md/#user-registration">User Registration</a> custom script can be used to control and validate user registrations. In the oxTrust GUI, navigate to <code>Configuration</code> &gt; <code>Manage Custom Scripts</code> &gt; <code>User Registration</code>. </p>
+<p><img alt="image" src="../../img/admin-guide/user/config-manage-script_menu1.png" /></p>
+<p>Set the <code>enable_user</code> value to <code>true</code> so that the user can login as soon as the registration is complete. If you want to manually review and approve new user registrations, you can leave this value set to <code>false</code>.</p>
+<p><img alt="image" src="../../img/admin-guide/user/config-manage-script_enable.png" /></p>
+<p>Click <code>Enable</code> checkbox at the bottom of the page.</p>
+<p><img alt="image" src="../../img/admin-guide/user/config-manage-script_check.png" /></p>
+<p>Now users should be able to self-register through the user registration link, which should be available at <code>&lt;hostname&gt;/identity/register</code>.</p>
+<p><img alt="image" src="../../img/admin-guide/user/config-manage-script_enable.png" /></p>
 <h2 id="ldap-synchronization">LDAP Synchronization<a class="headerlink" href="#ldap-synchronization" title="Permanent link">#</a></h2>
 <p>LDAP Synchronization, a.k.a. Cache Refresh, is the process of connecting 
 one or more existing backend LDAP servers, like Microsoft Active Directory, with the
@@ -1774,32 +1801,6 @@ upgraded sections here.</p>
     operation and integrity of any custom script such as a Jython Script.</p>
 </li>
 </ul>
-<h2 id="user-registration">User Registration<a class="headerlink" href="#user-registration" title="Permanent link">#</a></h2>
-<p>Self-Registration is done by users on a self-service basis. Since
-oxTrust user registration cannot add users to a backend LDAP or Active
-Directory server, self-registration will only be effective if GluuLDAP
-is used for authentication of users.</p>
-<p>BY default a a limited number of attribute is present in default
-self-registration form. If more attributes are needed they can be added
-in Registration Management of Organization Configuration
-The oxTrust component provides a very basic user registration service for 
-the people to sign-up for an account on the Gluu Server. This service is 
-disabled by default. The <code>User Registration</code> custom script  is used to enable the 
-registration feature.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When possible, we recommend handling user registration in your app locally, then pushing the information to the Gluu Server via SCIM 2.0. This will give you much more control and flexibility in defining the exact registration process. Also, frequently oxTrust is not Internet facing--it was primarily designed as an interface for admins.</p>
-</div>
-<h3 id="oxtrust-configuration">oxTrust Configuration<a class="headerlink" href="#oxtrust-configuration" title="Permanent link">#</a></h3>
-<p>Navigate to the custom scripts section of the Admin Panel. Click on <code>Configuration</code> then <code>Manage Custom Scripts</code>.</p>
-<p>The tabs near the top of the page can be used to navigate to different custom scripts. Navigate to the <code>User Registration</code> tab.</p>
-<p><img alt="image" src="../../img/admin-guide/user/config-manage-script_menu1.png" /></p>
-<p>Set the <code>enable_user</code> value to <code>true</code> so that the user can login as soon as the registration is complete. If you want to manually review and approve new user registrations, you can leave this value set to <code>false</code>.</p>
-<p><img alt="image" src="../../img/admin-guide/user/config-manage-script_enable.png" /></p>
-<p>Click <code>Enable</code> checkbox at the bottom of the page.</p>
-<p><img alt="image" src="../../img/admin-guide/user/config-manage-script_check.png" /></p>
-<p>Now users should be able to self-register through the user registration link, which should be available at <code>&lt;hostname&gt;/identity/register</code>.</p>
-<p><img alt="image" src="../../img/admin-guide/user/config-manage-script_enable.png" /></p>
 <h2 id="scim-20">SCIM 2.0<a class="headerlink" href="#scim-20" title="Permanent link">#</a></h2>
 <p>This section outlines how to add/remove user from Gluu Server CE using <a href="https://github.com/GluuFederation/SCIM-Client">SCIM-Client</a>.</p>
 <h3 id="add-user">Add User<a class="headerlink" href="#add-user" title="Permanent link">#</a></h3>

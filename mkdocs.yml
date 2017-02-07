@@ -78,7 +78,8 @@ pages:
         - 'Ports': 'operation/ports.md'
         - 'Single Logout (SLO)': 'operation/logout.md'
         - 'Log Management' : 'operation/logs.md'
-        - 'FAQ & Troubleshooting' : 'operation/faq.md'
+        - 'FAQ & Troubleshooting': 'operation/faq.md'
+        - 'Customize Login Page': 'operation/custom-loginpage.md'
         #       - 'Fine Tuning Gluu Server' : 'admin-guide/fine-tuning.md'
 
 
