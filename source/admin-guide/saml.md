@@ -54,6 +54,9 @@ Each Trust Relationship requires the infomation listed below.
 
 **Metadata of the SP**       
 Metadata is an XML file which has configuration data used to establish trust between the website (SP) and IDP (Gluu Server). Websites (SP) can provide metadata via a URL or as a separate file. Metadata can change, so a static URL typically requires the least amount of ongoing maintenance. 
+
+**Metadata of the Gluu Server**       
+The Gluu Server's SAML metadata may be needed from time to time. It can be found at `https://hostname/idp/shibboleth`.
   
 **Required Attributes**      
 Each SP may require one or many attributes in order to grant a user access. 
