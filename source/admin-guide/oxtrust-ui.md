@@ -174,14 +174,10 @@ type of script has its own interface--in other words, what methods are
 available. For more information, see the reference page detailing each type of [interception script](./custom-script.md).
 
 ### Manage Registration
-The Gluu Server is shipped with a very basic user registration 
-feature. For custom enrollment requirements, we recommend that you write
-a custom registration page and use the SCIM endpoint
-to add the user record to the Gluu Server. Also, in some cases oxTrust is not Internet facing,
-which makes it a bad option for user registration. Use this feature
-only if you have very basic requirements! 
+The Gluu Server is shipped with a very basic user registration feature. The registration page can be found at `https://<hostname>/identity/register`. For custom enrollment requirements we recommend that you write a registration page and use SCIM to add the user record to the Gluu Server. Also, in some cases oxTrust is not Internet facing, which makes it a bad option for user registration. Net-net, Use this feature only if you have very basic requirements! 
 
-This tabs has two options:
+The tab has two options:
+
 1. `Disable Captcha for registration form`     
 2. `Configure Registration Form Attributes`      
 
@@ -193,8 +189,7 @@ This option adds a required CAPTCHA to the registration form.
 **Configure Registration Form Attributes**      
 ![attr_filter](../img/admin-guide/config_registration.png)
 
-This section allows you to filter the list of attributes to be displayed 
-in the registration form. Search, select, add, and order desired attributes here.
+This section allows you to manage the list of attributes displayed in the registration form. Search, select, add, and order desired attributes here.
 
 ### Attributes
 Attributes are individual pieces of user data, like `uid` or `email`, that are required by applications in order to identify a user and grant access to protected resources. The user attributes that are available in your federation service can be found on this page. By default, only `active` attributes are visible. Use the `Show All Attributes` button to display the `inactive` attributes too. 
