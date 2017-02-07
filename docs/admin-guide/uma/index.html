@@ -188,7 +188,16 @@
     </i>
     Gluu Docs
   </label>
-  <label for="Versions">Ver:
+<nav class="md-ver md-ver" style="
+    height: 25px;
+    background: transparent;
+	font-weight:bold;
+">
+<div class ="md-ver" style="
+	display: table;
+	padding: 10px;
+">
+<label for="Versions">Ver:
   <select id="versions" onchange="window.location.href=this.value;" style="
     position: relative;
     display: inline;
@@ -196,23 +205,24 @@
     /* width: 120%; */
     height: 25px;
     padding: 5px 15px 5px 5px;
-    color: white;
+    color: #555555;
     border: none;
-    background: #3f51b5;
+    background: transparent;
     outline: none;
     -webkit-appearance: none;
     z-index: 99;
     cursor: pointer;
     font-size: 12px;
     margin-bottom: 10px;
-    border: 1px;
+    border: 1px solid black;
 ">
   <option value="/docs">Latest</option>
   <option value="/docs/2.4.4">2.4.4</option>
     </select> 
 </label>
+</div>
 </nav>
-  
+    
     <div class="md-nav__source">
       
 
@@ -1062,6 +1072,7 @@
 
     
   </ul>
+
 </nav>
                   </div>
                 </div>
@@ -1152,7 +1163,7 @@
                 
                 <h1 id="uma">UMA<a class="headerlink" href="#uma" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>As a profile of OAuth 2.0 (IETF RFCs 6749 and 6750) that is complementary to OpenID Connect, UMA defines RESTful, JSON-based, standardized flows and constructs for coordinating the protection of any API or web resource in a way that will be familiar to any developer already acquainted with OAuth.</p>
+<p>As a profile of OAuth 2.0 that is complementary to OpenID Connect, UMA defines RESTful, JSON-based, standardized flows and constructs for coordinating the protection of any API or web resource in a way that will be familiar to any developer already acquainted with OAuth.</p>
 <p>UMA defines interfaces between authorization servers and resource servers that, by default, enable centralized policy decision-making for improved service delivery, auditing, policy administration, and accountability, even in a very loosely coupled "public API" environment. Custom profiles enable flexibility to move the decision-making line outward to distributed applications, to account for local preferences in API ecosystems. UMA does not standardize a policy expression language, enabling flexibility in policy expression and evaluation through XACML, other declarative policy languages, or procedural code as warranted by conditions. It also has a fluid way to handle federated authorization policy.</p>
 <p>UMA inherits authentication agnosticism from OAuth. It concentrates on authorization, not on authentication. It has been profiled to work with OpenID Connect to gather identity claims from whoever is attempting access, and enables true claims-based authorization (with simple group- or role-based policies a natural subset).</p>
 <h2 id="resource-registration">Resource Registration<a class="headerlink" href="#resource-registration" title="Permanent link">#</a></h2>

@@ -192,7 +192,16 @@
     </i>
     Gluu Docs
   </label>
-  <label for="Versions">Ver:
+<nav class="md-ver md-ver" style="
+    height: 25px;
+    background: transparent;
+	font-weight:bold;
+">
+<div class ="md-ver" style="
+	display: table;
+	padding: 10px;
+">
+<label for="Versions">Ver:
   <select id="versions" onchange="window.location.href=this.value;" style="
     position: relative;
     display: inline;
@@ -200,23 +209,24 @@
     /* width: 120%; */
     height: 25px;
     padding: 5px 15px 5px 5px;
-    color: white;
+    color: #555555;
     border: none;
-    background: #3f51b5;
+    background: transparent;
     outline: none;
     -webkit-appearance: none;
     z-index: 99;
     cursor: pointer;
     font-size: 12px;
     margin-bottom: 10px;
-    border: 1px;
+    border: 1px solid black;
 ">
   <option value="/docs">Latest</option>
   <option value="/docs/2.4.4">2.4.4</option>
     </select> 
 </label>
+</div>
 </nav>
-  
+    
     <div class="md-nav__source">
       
 
@@ -1033,6 +1043,7 @@
 
     
   </ul>
+
 </nav>
                   </div>
                 </div>
