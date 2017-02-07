@@ -182,15 +182,15 @@ which makes it a bad option for user registration. Use this feature
 only if you have very basic requirements! 
 
 This tabs has two options:
-1. `Disable Captcha for registration form`
-2. `Configure Registration Form Attributes`
+1. `Disable Captcha for registration form`     
+2. `Configure Registration Form Attributes`      
 
-**Disable Captcha for registration form**    
+**Disable Captcha for registration form**     
 ![registration](../img/admin-guide/manage_registration.png)
 
 This option adds a required CAPTCHA to the registration form.     
 
-**Configure Registration Form Attributes**    
+**Configure Registration Form Attributes**      
 ![attr_filter](../img/admin-guide/config_registration.png)
 
 This section allows you to filter the list of attributes to be displayed 
