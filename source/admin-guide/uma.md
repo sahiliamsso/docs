@@ -120,9 +120,8 @@ UMA policies protect UMA Resources via scopes. Gluu Server evaluates all policie
 2. authorization script: script that is evaluated in order to grant/deny access
 3. name: a human readable name to the UMA policy
 
-The following section outlines how to define UMA policies from the Custom Script menu. The Custom Script page is accessed from the Configuration Menu.
+The following section outlines how to define UMA policies from the Custom Script menu. The Custom Script page is accessed by navigating to `Configuration` > `Custom Scripts`.
 
-![custom-script-menu](../img/oxtrust/custom-script-menu.png)
 ![auth-policy](../img/uma/auth-policy.png)
 
 ### UMA Policy Algorithm
