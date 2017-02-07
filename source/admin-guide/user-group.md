@@ -298,21 +298,12 @@ upgraded sections here.
     operation and integrity of any custom script such as a Jython Script.
 
 ## User Registration
-Self-Registration is done by users on a self-service basis. Since
-oxTrust user registration cannot add users to a backend LDAP or Active
-Directory server, self-registration will only be effective if GluuLDAP
-is used for authentication of users.
-
-BY default a a limited number of attribute is present in default
-self-registration form. If more attributes are needed they can be added
-in Registration Management of Organization Configuration
-The oxTrust component provides a very basic user registration service for 
-the people to sign-up for an account on the Gluu Server. This service is 
-disabled by default. The `User Registration` custom script  is used to enable the 
-registration feature.
+The Gluu Server is shipped with a very basic user registration feature. The registration page can typically be found at `https://<hostname>/identity/register`. It's important to note that user registration via oxTrust cannot add users to a backend LDAP or Active Directory server. This means that self-registration will only be effective if GluuLDAP is used to authenticate users.
 
 !!! Note
-    When possible, we recommend handling user registration in your app locally, then pushing the information to the Gluu Server via SCIM 2.0. This will give you much more control and flexibility in defining the exact registration process. Also, frequently oxTrust is not Internet facing--it was primarily designed as an interface for admins.
+    When possible, we recommend handling user registration in your app locally, then pushing the user information to the Gluu Server via SCIM. This will give you more control and flexibility in defining the exact registration process. Also, since it was primarily designed as an interface for admins, frequently oxTrust is not Internet facing.
+
+A limited number of attributes are present in the default registration form. If more attributes are needed they can be added via the GUI by navigating to `Organization Configuration` > `Manage Registration`. The [User Registration](./custom-script.md/#user-registration) custom script is used to control and validate user registrations .
 
 ### oxTrust Configuration
 Navigate to the custom scripts section of the Admin Panel. Click on `Configuration` then `Manage Custom Scripts`.
