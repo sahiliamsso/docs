@@ -11,15 +11,16 @@ Enter Organization Name : Gluu
 Enter email address for support at your organization : support@gluu.org
 Enter maximum RAM for tomcat in MB [3072] :
 Optional: enter password for oxTrust and LDAP superuser [hlE3vzf0hMdD] :
-Install oxAuth OAuth2 Authorization Server? [Yes] :
-Install oxTrust Admin UI? [Yes] :
-Install LDAP Server? [Yes] :
-Install Apache HTTPD Server [Yes] :
-Install Shibboleth SAML IDP? [Yes] :
-Install Asimba SAML Proxy? [Yes] :
-Install CAS? [Yes] :
-Install oxAuth RP? [Yes] :
-Install Passport? [Yes]
+Install oxAuth OAuth2 Authorization Server? [Yes] : 
+Install oxTrust Admin UI? [Yes] : 
+Install LDAP Server? [Yes] : 
+Install Apache HTTPD Server [Yes] : 
+Install Shibboleth SAML IDP? [No] : Yes
+Install Asimba SAML Proxy? [No] : Yes
+Install oxAuth RP? [No] : Yes
+Install Passport? [No] : Yes
+Install JCE 1.8? [Yes] : 
+You must accept the Oracle Binary Code License Agreement for the Java SE Platform Products to download this software. Accept License Agreement? [Yes] : 
 ```
 !!! Login
     Please log in using the username `admin` and the password from the setup script promtpt e.g `hlE3vzf0hMdD` or the password entered
