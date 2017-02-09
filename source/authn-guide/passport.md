@@ -65,7 +65,7 @@ passport service or Gluu Server by following the below instructions:
 !!! Warning
 	Strategies names and field names are case sensitive.
 	
-## How to make a new app use Passport?
+## How to make a new app to use Passport?
 
 Every provider has different protocols and ways to create the app. We 
 will look at one of the most common providers "facebook" and create a new app.
@@ -74,12 +74,12 @@ will look at one of the most common providers "facebook" and create a new app.
 2. Click on Add a new App from My Apps dropdown
 3. Fill the required details and click the create Create App ID button to create the app.
 4. Click on the dashboard menu and get the clientID and clientSecret which can be used with the passport.
-5. Click on settings menu and put the domain of your gluu server in the App Domains field.
+5. Click on settings menu and put the domain of your gluu server in the site url field.
 
 Note: If there is a field for Authorized redirect URIs, make sure your apps list of Authorized redirect URIs contains the passport 
 strategy's callback. For example, if your gluu server points to `https://example.gluu.org` and the strategy is `facebook`, the list of Authorized redirect URIs should contain `https://example.gluu.org/passport/auth/facebook/callback.` 
  
-## Add new strategies to Passport
+## How Passport is used in Gluu
 
 Before starting the development it is recommended to switch to node user,
  you can switch to node user by following command.
@@ -91,7 +91,7 @@ To use node js and npm execute following command.
 export PATH=$PATH:/opt/node/bin
 ```
 
-##### All the paths in the following guide is relative to this path: `/opt/gluu/node/passport/`
+##### All the paths in the following guide is relative to path: `/opt/gluu/node/passport/`
 
 The best way to add new strategies to Passport is to find an applicable npm module for your desired strategy. Let's start with an example. In this example we will consider adding facebook strategy.
 
@@ -102,9 +102,11 @@ The best way to add new strategies to Passport is to find an applicable npm modu
 5. Call method to configure the strategy
 6. Add button for the configured strategy in passport authentication UI.
 
-### Configure the strategy
+### Configure the strategy using setup script
 
-All strategies are configured in the folder `server/auth/*.js.` Next we need to create a file for the new strategy. Our strategy is facebook so we can create new file named `facebook.js` and configure the strategy.
+All strategies are configured in the folder `server/auth/*.js.` Next we need to create a file for the new strategy. Our strategy is facebook so we can create new file named `facebook.js` and configure the strategy. 
+!!!Note:
+	**All these configuration are performed during execution of setup script at the time of configuring Gluu. These steps are not required to be followed, these content are for your reference**
 
 ```javascript
 var passport = require('passport');
