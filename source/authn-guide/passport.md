@@ -76,6 +76,8 @@ will look at one of the most common providers "facebook" and create a new app.
 4. Click on the dashboard menu and get the clientID and clientSecret which can be used with the passport.
 5. Click on settings menu and put the domain of your gluu server in the site url field.
 
+![fburl](../img/user-authn/passport/fb-addurl.png)
+
 Note: If there is a field for Authorized redirect URIs, make sure your apps list of Authorized redirect URIs contains the passport 
 strategy's callback. For example, if your gluu server points to `https://example.gluu.org` and the strategy is `facebook`, the list of Authorized redirect URIs should contain `https://example.gluu.org/passport/auth/facebook/callback.` 
  

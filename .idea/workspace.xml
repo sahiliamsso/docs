@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2bbc52c-a659-4696-b1a8-cfeeb604c491" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/passport.md" afterPath="$PROJECT_DIR$/source/authn-guide/passport.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,12 +71,12 @@
         <entry file="file://$PROJECT_DIR$/source/authn-guide/passport.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="369">
-                <caret line="93" column="91" lean-forward="false" selection-start-line="93" selection-start-column="91" selection-end-line="93" selection-end-column="91" />
+              <first_editor relative-caret-position="216">
+                <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
                 <folding>
-                  <marker date="1486652025125" expanded="true" signature="11538:11562" ph="..." />
-                  <marker date="1486652025125" expanded="true" signature="11563:11651" ph="..." />
-                  <marker date="1486652025125" expanded="true" signature="11616:11639" ph="..." />
+                  <marker date="1486652340744" expanded="true" signature="11590:11614" ph="..." />
+                  <marker date="1486652340744" expanded="true" signature="11615:11703" ph="..." />
+                  <marker date="1486652340744" expanded="true" signature="11668:11691" ph="..." />
                 </folding>
               </first_editor>
               <second_editor />
@@ -948,12 +949,12 @@
     <entry file="file://$PROJECT_DIR$/source/authn-guide/passport.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="369">
-            <caret line="93" column="91" lean-forward="false" selection-start-line="93" selection-start-column="91" selection-end-line="93" selection-end-column="91" />
+          <first_editor relative-caret-position="216">
+            <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
             <folding>
-              <marker date="1486652025125" expanded="true" signature="11538:11562" ph="..." />
-              <marker date="1486652025125" expanded="true" signature="11563:11651" ph="..." />
-              <marker date="1486652025125" expanded="true" signature="11616:11639" ph="..." />
+              <marker date="1486652340744" expanded="true" signature="11590:11614" ph="..." />
+              <marker date="1486652340744" expanded="true" signature="11615:11703" ph="..." />
+              <marker date="1486652340744" expanded="true" signature="11668:11691" ph="..." />
             </folding>
           </first_editor>
           <second_editor />
