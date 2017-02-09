@@ -91,7 +91,7 @@ To use node js and npm execute following command.
 export PATH=$PATH:/opt/node/bin
 ```
 
-##### All the paths in the following guide is relative to path: `/opt/gluu/node/passport/`
+** All the paths in the following guide is relative to path: `/opt/gluu/node/passport/` ***
 
 The best way to add new strategies to Passport is to find an applicable npm module for your desired strategy. Let's start with an example. In this example we will consider adding facebook strategy.
 

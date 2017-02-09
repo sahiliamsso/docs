@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2bbc52c-a659-4696-b1a8-cfeeb604c491" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/operation/LdapSchema.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/admin-guide/saml/index.html" afterPath="$PROJECT_DIR$/docs/admin-guide/saml/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/authn-guide/passport/index.html" afterPath="$PROJECT_DIR$/docs/authn-guide/passport/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/installation-guide/install/index.html" afterPath="$PROJECT_DIR$/docs/installation-guide/install/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/installation-guide/setup_py/index.html" afterPath="$PROJECT_DIR$/docs/installation-guide/setup_py/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/integration/office/index.html" afterPath="$PROJECT_DIR$/docs/integration/office/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/mkdocs/search_index.json" afterPath="$PROJECT_DIR$/docs/mkdocs/search_index.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/sitemap.xml" afterPath="$PROJECT_DIR$/docs/sitemap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/installation-guide/setup_py.md" afterPath="$PROJECT_DIR$/source/installation-guide/setup_py.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/passport.md" afterPath="$PROJECT_DIR$/source/authn-guide/passport.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,13 +53,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setup_py.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="setup_py.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/installation-guide/setup_py.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="-493">
                 <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
                 <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="passport.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/authn-guide/passport.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="369">
+                <caret line="93" column="91" lean-forward="false" selection-start-line="93" selection-start-column="91" selection-end-line="93" selection-end-column="91" />
+                <folding>
+                  <marker date="1486652025125" expanded="true" signature="11538:11562" ph="..." />
+                  <marker date="1486652025125" expanded="true" signature="11563:11651" ph="..." />
+                  <marker date="1486652025125" expanded="true" signature="11616:11639" ph="..." />
+                </folding>
               </first_editor>
               <second_editor />
             </state>
@@ -159,7 +167,6 @@
         <option value="$PROJECT_DIR$/source/authn-guide/duo.md" />
         <option value="$PROJECT_DIR$/source/authn-guide/U2F.md" />
         <option value="$PROJECT_DIR$/source/authn-guide/otp.md" />
-        <option value="$PROJECT_DIR$/source/authn-guide/passport.md" />
         <option value="$PROJECT_DIR$/source/admin-guide/scim-uma.md" />
         <option value="$PROJECT_DIR$/source/integration/asimba.md" />
         <option value="$PROJECT_DIR$/source/admin-guide/asimba.md" />
@@ -169,6 +176,7 @@
         <option value="$PROJECT_DIR$/mkdocs.yml" />
         <option value="$PROJECT_DIR$/source/operation/custom-loginpage.md" />
         <option value="$PROJECT_DIR$/source/installation-guide/setup_py.md" />
+        <option value="$PROJECT_DIR$/source/authn-guide/passport.md" />
       </list>
     </option>
   </component>
@@ -236,6 +244,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="operation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="authn-guide" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -402,9 +428,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -755,16 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/authn-guide/passport.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="952">
-            <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -924,6 +940,21 @@
           <first_editor relative-caret-position="-493">
             <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
             <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/passport.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="369">
+            <caret line="93" column="91" lean-forward="false" selection-start-line="93" selection-start-column="91" selection-end-line="93" selection-end-column="91" />
+            <folding>
+              <marker date="1486652025125" expanded="true" signature="11538:11562" ph="..." />
+              <marker date="1486652025125" expanded="true" signature="11563:11651" ph="..." />
+              <marker date="1486652025125" expanded="true" signature="11616:11639" ph="..." />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
