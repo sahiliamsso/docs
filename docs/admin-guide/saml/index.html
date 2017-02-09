@@ -1370,10 +1370,10 @@ The IDP asks for the user's credentials and upon successful authentication redir
 <p>The Gluu Server bundles separate components to support both workflows (installation of each component is optional during Gluu Server deployment):</p>
 <ul>
 <li>
-<p>For outbound SAML, the Gluu Server bundles the Shibboleth SAML IDP. </p>
+<p>For outbound SAML, the Gluu Server bundles the <a href="#outbound-saml-shibboleth">Shibboleth SAML IDP</a>. </p>
 </li>
 <li>
-<p>For inbound SAML, the Gluu Server bundles the Asimba SAML Proxy. </p>
+<p>For inbound SAML, the Gluu Server bundles the <a href="#inbound-saml-asimba">Asimba SAML Proxy</a>. </p>
 </li>
 </ul>
 <p>Documentation for each service follows in the sections below. </p>
@@ -1394,6 +1394,8 @@ called a Trust Relationship (TR). The following sections cover how to create a T
 <p>Each Trust Relationship requires the infomation listed below.</p>
 <p><strong>Metadata of the SP</strong>     <br />
 Metadata is an XML file which has configuration data used to establish trust between the website (SP) and IDP (Gluu Server). Websites (SP) can provide metadata via a URL or as a separate file. Metadata can change, so a static URL typically requires the least amount of ongoing maintenance. </p>
+<p><strong>Metadata of the Gluu Server</strong>     <br />
+The Gluu Server's SAML metadata may be needed from time to time. It can be found at <code>https://hostname/idp/shibboleth</code>.</p>
 <p><strong>Required Attributes</strong>    <br />
 Each SP may require one or many attributes in order to grant a user access. 
 Required attributes vary depending on the application, and should be 

@@ -787,6 +787,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#idp-configuration" title="IDP configuration" class="md-nav__link">
+    IDP configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#identity-mapping" title="Identity Mapping" class="md-nav__link">
     Identity Mapping
   </a>
@@ -1121,6 +1128,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#idp-configuration" title="IDP configuration" class="md-nav__link">
+    IDP configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#identity-mapping" title="Identity Mapping" class="md-nav__link">
     Identity Mapping
   </a>
@@ -1222,12 +1236,7 @@ Please see <a href="../../admin-guide/saml/#saml-attributes">this doc</a> to cre
 <li>
 <p>Edit the <code>100-user.ldif</code> file under <code>/opt/opendj/config/schema</code> folder.</p>
 <ul>
-<li>
-<p>Remove the <code>obhectGUID</code> entry from the file</p>
-</li>
-<li>
-<p>Add the following new entry</p>
-</li>
+<li>Modify 'objectGUID' attributeTypes like below. Keep the attribute number ( i.e. 1454676848732 ) intact for your setup and modify others like below. </li>
 </ul>
 </li>
 </ol>
@@ -1268,10 +1277,10 @@ Please see <a href="../../admin-guide/saml/#saml-attributes">this doc</a> to cre
 &lt;/resolver:AttributeDefinition&gt; 
 </code></pre>
 
-<h3 id="identity-mapping">Identity Mapping<a class="headerlink" href="#identity-mapping" title="Permanent link">#</a></h3>
+<h3 id="idp-configuration">IDP configuration<a class="headerlink" href="#idp-configuration" title="Permanent link">#</a></h3>
 <p>The cache refresh mechanism is used to populate the Gluu Server LDAP with data from a backend LDAP/AD. The <code>objectGUID</code> attribute must be pulled from the backend data source to Gluu Server.</p>
 <ul>
-<li>Edit the <code>ox-ldap.properties</code>, <code>oxauth-ldap.properties</code> and <code>oxidp-ldap.properties</code> files to add the following</li>
+<li>Edit the <code>ox-ldap.properties</code> to add the following</li>
 </ul>
 <pre><code>binaryAttributes=objectGUID,objectguid 
 </code></pre>
@@ -1280,6 +1289,13 @@ Please see <a href="../../admin-guide/saml/#saml-attributes">this doc</a> to cre
 <ul>
 <li>Restart Tomcat</li>
 </ul>
+<h3 id="identity-mapping">Identity Mapping<a class="headerlink" href="#identity-mapping" title="Permanent link">#</a></h3>
+<p>Two attributes require for mapping: </p>
+<ul>
+<li>IDPEmail</li>
+<li>objectguid</li>
+</ul>
+<p><code>IDPEmail</code> pull data from backend's email attrubute and <code>objectguid</code> get data from backend's objectGUID. </p>
 <h3 id="create-trust-relationship">Create Trust Relationship<a class="headerlink" href="#create-trust-relationship" title="Permanent link">#</a></h3>
 <p>Please see <a href="../../admin-guide/saml/">this doc</a> to create trust relationships.</p>
 <ul>

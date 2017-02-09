@@ -468,23 +468,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-make-a-new-app-use-passport" title="How to make a new app use Passport?" class="md-nav__link">
-    How to make a new app use Passport?
+  <a href="#how-to-make-a-new-app-to-use-passport" title="How to make a new app to use Passport?" class="md-nav__link">
+    How to make a new app to use Passport?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-new-strategies-to-passport" title="Add new strategies to Passport" class="md-nav__link">
-    Add new strategies to Passport
+  <a href="#how-passport-is-used-in-gluu" title="How Passport is used in Gluu" class="md-nav__link">
+    How Passport is used in Gluu
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configure-the-strategy" title="Configure the strategy" class="md-nav__link">
-    Configure the strategy
+  <a href="#all-the-paths-in-the-following-guide-is-relative-to-path-optgluunodepassport" title="All the paths in the following guide is relative to path: /opt/gluu/node/passport/" class="md-nav__link">
+    All the paths in the following guide is relative to path: /opt/gluu/node/passport/
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-strategy-using-setup-script" title="Configure the strategy using setup script" class="md-nav__link">
+    Configure the strategy using setup script
   </a>
   
 </li>
@@ -1120,23 +1127,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-make-a-new-app-use-passport" title="How to make a new app use Passport?" class="md-nav__link">
-    How to make a new app use Passport?
+  <a href="#how-to-make-a-new-app-to-use-passport" title="How to make a new app to use Passport?" class="md-nav__link">
+    How to make a new app to use Passport?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-new-strategies-to-passport" title="Add new strategies to Passport" class="md-nav__link">
-    Add new strategies to Passport
+  <a href="#how-passport-is-used-in-gluu" title="How Passport is used in Gluu" class="md-nav__link">
+    How Passport is used in Gluu
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configure-the-strategy" title="Configure the strategy" class="md-nav__link">
-    Configure the strategy
+  <a href="#all-the-paths-in-the-following-guide-is-relative-to-path-optgluunodepassport" title="All the paths in the following guide is relative to path: /opt/gluu/node/passport/" class="md-nav__link">
+    All the paths in the following guide is relative to path: /opt/gluu/node/passport/
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-strategy-using-setup-script" title="Configure the strategy using setup script" class="md-nav__link">
+    Configure the strategy using setup script
   </a>
   
 </li>
@@ -1244,7 +1258,7 @@ passport service or Gluu Server by following the below instructions:</p>
 <p class="admonition-title">Warning</p>
 <p>Strategies names and field names are case sensitive.</p>
 </div>
-<h2 id="how-to-make-a-new-app-use-passport">How to make a new app use Passport?<a class="headerlink" href="#how-to-make-a-new-app-use-passport" title="Permanent link">#</a></h2>
+<h2 id="how-to-make-a-new-app-to-use-passport">How to make a new app to use Passport?<a class="headerlink" href="#how-to-make-a-new-app-to-use-passport" title="Permanent link">#</a></h2>
 <p>Every provider has different protocols and ways to create the app. We 
 will look at one of the most common providers "facebook" and create a new app.</p>
 <ol>
@@ -1252,11 +1266,21 @@ will look at one of the most common providers "facebook" and create a new app.</
 <li>Click on Add a new App from My Apps dropdown</li>
 <li>Fill the required details and click the create Create App ID button to create the app.</li>
 <li>Click on the dashboard menu and get the clientID and clientSecret which can be used with the passport.</li>
-<li>Click on settings menu and put the domain of your gluu server in the App Domains field.</li>
+<li>Click on settings menu and put the domain of your gluu server in the site url field.</li>
 </ol>
 <p>Note: If there is a field for Authorized redirect URIs, make sure your apps list of Authorized redirect URIs contains the passport 
 strategy's callback. For example, if your gluu server points to <code>https://example.gluu.org</code> and the strategy is <code>facebook</code>, the list of Authorized redirect URIs should contain <code>https://example.gluu.org/passport/auth/facebook/callback.</code> </p>
-<h2 id="add-new-strategies-to-passport">Add new strategies to Passport<a class="headerlink" href="#add-new-strategies-to-passport" title="Permanent link">#</a></h2>
+<h2 id="how-passport-is-used-in-gluu">How Passport is used in Gluu<a class="headerlink" href="#how-passport-is-used-in-gluu" title="Permanent link">#</a></h2>
+<p>Before starting the development it is recommended to switch to node user,
+ you can switch to node user by following command.</p>
+<pre><code class="sh">su - node
+</code></pre>
+
+<p>To use node js and npm execute following command.</p>
+<pre><code class="sh">export PATH=$PATH:/opt/node/bin
+</code></pre>
+
+<h5 id="all-the-paths-in-the-following-guide-is-relative-to-path-optgluunodepassport">All the paths in the following guide is relative to path: <code>/opt/gluu/node/passport/</code><a class="headerlink" href="#all-the-paths-in-the-following-guide-is-relative-to-path-optgluunodepassport" title="Permanent link">#</a></h5>
 <p>The best way to add new strategies to Passport is to find an applicable npm module for your desired strategy. Let's start with an example. In this example we will consider adding facebook strategy.</p>
 <ol>
 <li>If you want to add facebook strategy, search for passport-facebook npm module where you can select the npm module and then add the module to passport server.</li>
@@ -1266,10 +1290,12 @@ strategy's callback. For example, if your gluu server points to <code>https://ex
 <li>Call method to configure the strategy</li>
 <li>Add button for the configured strategy in passport authentication UI.</li>
 </ol>
-<h3 id="configure-the-strategy">Configure the strategy<a class="headerlink" href="#configure-the-strategy" title="Permanent link">#</a></h3>
-<p>All strategies are configured in the folder <code>server/auth/*.js.</code> Next we need to create a file for the new strategy. Our strategy is facebook so we can create new file named <code>facebook.js</code> and configure the strategy.</p>
-<pre><code>javascript
-var passport = require('passport');
+<h3 id="configure-the-strategy-using-setup-script">Configure the strategy using setup script<a class="headerlink" href="#configure-the-strategy-using-setup-script" title="Permanent link">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>All these configuration are performed during execution of setup script at the time of configuring Gluu. These steps are not required to be followed, these content are for your reference</strong></p>
+</div>
+<pre><code class="javascript">var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
 
 var setCredentials = function(credentials) {
@@ -1307,15 +1333,15 @@ module.exports = {
 the required parameters are <code>clientID</code>, <code>clientSecret</code> and <code>callbackURL</code>. You 
 can search for more configurations depending on the requirements and 
 configure accordingly.</p>
-<p>The function <code>setCredentials</code> is used to configure the strategy of the 
-credentials of this strategy are been received. The parameter credentials 
-holds the values that are stored in the oxTrust. </p>
+<p>The function <code>setCredentials</code> is used to configure credentials of a strategy. 
+Each strategy has a setCredentials method to configure the strategy. 
+The parameter credentials holds the values that are stored in the oxTrust.</p>
 <p>The parameter callbackURL should point to the callback route that we 
 will configure in step 4. As we are configuring facebook strategy, the 
 <code>callbackURL</code> can be set to <code>"/passport/auth/facebook/callback"</code> 
 according the the convention of the app. You can customise the 
 <code>callbackURL</code> but it is recommended not to change the convention.</p>
-<p>The callback function has different number of parameters and data in 
+<p>The callback function of passport strategy has different number of parameters and the data in 
 those parameters which are required to be mapped to the userProfile 
 keys which are <code>id, name, username, email, givenName, familyName, provider, accessToken</code>. 
 Here id and provider params are must. Provider param holds the value of 
@@ -1325,6 +1351,7 @@ In most cases the value of provider is received in the user claims itself.</p>
 method which will be used to set the details of the strategy.</p>
 <h3 id="configure-routes-for-the-strategy">Configure routes for the strategy<a class="headerlink" href="#configure-routes-for-the-strategy" title="Permanent link">#</a></h3>
 <p>We are going to set the routes for the strategy that we are going to configure.
+The following changes are to be made in server/routes/index.js. 
 First require the strategy that we configured in the previous step.</p>
 <pre><code class="javascript">var passportFacebook = require('../auth/facebook').passport;
 </code></pre>
@@ -1333,7 +1360,7 @@ First require the strategy that we configured in the previous step.</p>
 strategy that we have configured.</p>
 <p>Then add the routes for the strategy. First we are going to register the 
 callback route and then the authenticate route.</p>
-<p>The authenticate route first validated the jwt token that is been sent by
+<p>The authenticate route first validates the jwt token that is been sent by
 Gluu Server to passport server. If the JWT is valid then the user is 
 redirected to the strategy and user can be authenticated there and the 
 response of the user authentication is redirected to callback route.</p>
@@ -1353,15 +1380,14 @@ router.get('/auth/facebook/:token',
     }));
 </code></pre>
 
-<p>scope value can be set from the strategy itself it it supports that 
+<p>scope value can be set from the strategy itself if the strategy supports that 
 or you can set the scope value here too.</p>
 <p>The callbackResponse method return the control to Gluu server and 
 user is been enrolled in the system.</p>
 <h3 id="call-method-to-configure-the-strategy">Call method to configure the strategy<a class="headerlink" href="#call-method-to-configure-the-strategy" title="Permanent link">#</a></h3>
 <p>In this step we are going to call the setCredentials method of the 
 strategy that we have created.</p>
-<p>Go to the file configureStrategies.js in auth folder of passport 
-server and require the strategy that we have created.</p>
+<p>Go to the file server/auth/configureStrategies.js and require the strategy that we have created.</p>
 <pre><code class="javascript">var FacebookStrategy = require('./facebook');
 </code></pre>
 
