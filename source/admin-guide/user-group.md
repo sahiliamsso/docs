@@ -99,13 +99,10 @@ Now users should be able to self-register through the user registration link, wh
 (../img/admin-guide/user/config-manage-script_enable.png)
 
 ## LDAP Synchronization 
-LDAP Synchronization, a.k.a. Cache Refresh, is the process of connecting 
-one or more existing backend LDAP servers, like Microsoft Active Directory, with the
-Gluu Server's local LDAP server. Synching people and attributes from a 
-backend server into the Gluu Server speeds up authentication transactions. 
-It is possible to perform attribute transformations, changing the name of 
-attributes, or even using an interception script to change the values. 
-Transformations are stored in the Gluu LDAP service. 
+LDAP Synchronization, a.k.a. Cache Refresh, is the process of connecting one or more existing backend LDAP servers, like Microsoft Active Directory, with the Gluu Server's local LDAP server. Synching people and attributes from a backend server speeds up authentication transactions. It is possible to perform attribute transformations, changing the name of attributes, or even using an interception script to change the values. Transformations are stored in the Gluu LDAP service. 
+
+!!! Note
+    If you are synching user information from multiple backend servers (AD or LDAP) simultaneously, backend tree structure should be identical.
 
 ### Video Tutorial
 For a guided video overview of configuring Cache Refresh, please watch the following three videos:    
@@ -150,19 +147,19 @@ After configuring Cache Refresh, you should give it some time to run and populat
   authentication.
 
 ### Things To Know
-The deployer needs to know various values of his own backend AD to
-configure this part. For example, host & port, bindDN user information,
-bindDN password, Objectclasses, attributes whose information will be
+The deployer needs to know various values of the backend AD to
+configure Cache Refresh. For example, host & port, bindDN user information,
+bindDN password, Objectclasses, attributes which will be
 pulled etc.
 
-In addition, the deployer also needs to know generic information of his
-Gluu Server's LDAP. By default, the deployer can use 'localhost:1636',
-'cn=directory manager', 'password what he chose during installation',
-'ou=people,o=site' as server information, bindDN, bindDN password and
-baseDN respectively.
+In addition, the deployer needs to know generic information about the
+Gluu Server's LDAP. By default, the deployer can use `localhost:1636`,
+`cn=directory manager`, `password` chosen during installation,
+`ou=people,o=site` as server information, `bindDN`, `bindDN password` and
+`baseDN` respectively.
 
 After collecting this information, the deployer can move forward with
-the setup of the Cache Refresh engine.
+the Cache Refresh setup.
 
 ![Cache Refresh Menu](../img/admin-guide/user/admin_cache_menu.png)
 
