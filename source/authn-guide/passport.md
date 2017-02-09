@@ -81,6 +81,18 @@ strategy's callback. For example, if your gluu server points to `https://example
  
 ## Add new strategies to Passport
 
+Before starting the development it is recommended to switch to node user,
+ you can switch to node user by following command.
+```sh 
+su - node
+```
+To use node js and npm execute following command.
+```sh
+export PATH=$PATH:/opt/node/bin
+```
+
+##### All the paths in the following guide is relative to this path: `/opt/gluu/node/passport/`
+
 The best way to add new strategies to Passport is to find an applicable npm module for your desired strategy. Let's start with an example. In this example we will consider adding facebook strategy.
 
 1. If you want to add facebook strategy, search for passport-facebook npm module where you can select the npm module and then add the module to passport server.
@@ -94,8 +106,7 @@ The best way to add new strategies to Passport is to find an applicable npm modu
 
 All strategies are configured in the folder `server/auth/*.js.` Next we need to create a file for the new strategy. Our strategy is facebook so we can create new file named `facebook.js` and configure the strategy.
 
-```
-javascript
+```javascript
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
 
@@ -135,9 +146,9 @@ the required parameters are `clientID`, `clientSecret` and `callbackURL`. You
 can search for more configurations depending on the requirements and 
 configure accordingly.
 
-The function `setCredentials` is used to configure the strategy of the 
-credentials of this strategy are been received. The parameter credentials 
-holds the values that are stored in the oxTrust. 
+The function `setCredentials` is used to configure credentials of a strategy. 
+Each strategy has a setCredentials method to configure the strategy. 
+The parameter credentials holds the values that are stored in the oxTrust.
 
 The parameter callbackURL should point to the callback route that we 
 will configure in step 4. As we are configuring facebook strategy, the 
@@ -145,7 +156,7 @@ will configure in step 4. As we are configuring facebook strategy, the
 according the the convention of the app. You can customise the 
 `callbackURL` but it is recommended not to change the convention.
 
-The callback function has different number of parameters and data in 
+The callback function of passport strategy has different number of parameters and the data in 
 those parameters which are required to be mapped to the userProfile 
 keys which are `id, name, username, email, givenName, familyName, provider, accessToken`. 
 Here id and provider params are must. Provider param holds the value of 
@@ -158,6 +169,7 @@ method which will be used to set the details of the strategy.
 ### Configure routes for the strategy
 
 We are going to set the routes for the strategy that we are going to configure.
+The following changes are to be made in server/routes/index.js. 
 First require the strategy that we configured in the previous step.
 
 ```javascript
@@ -170,7 +182,7 @@ strategy that we have configured.
 Then add the routes for the strategy. First we are going to register the 
 callback route and then the authenticate route.
 
-The authenticate route first validated the jwt token that is been sent by
+The authenticate route first validates the jwt token that is been sent by
 Gluu Server to passport server. If the JWT is valid then the user is 
 redirected to the strategy and user can be authenticated there and the 
 response of the user authentication is redirected to callback route.
@@ -193,7 +205,7 @@ router.get('/auth/facebook/:token',
     }));
 ```
 
-scope value can be set from the strategy itself it it supports that 
+scope value can be set from the strategy itself if the strategy supports that 
 or you can set the scope value here too.
 
 The callbackResponse method return the control to Gluu server and 
@@ -204,8 +216,7 @@ user is been enrolled in the system.
 In this step we are going to call the setCredentials method of the 
 strategy that we have created.
 
-Go to the file configureStrategies.js in auth folder of passport 
-server and require the strategy that we have created.
+Go to the file server/auth/configureStrategies.js and require the strategy that we have created.
 
 ```javascript
 var FacebookStrategy = require('./facebook');
