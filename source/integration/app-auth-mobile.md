@@ -33,3 +33,7 @@ After on form "Dynamic Client Registration" fill next fields:
 - Application Type: NATIVE
 
 ![dinamic_registration](../img/app-auth/dinamic_registration.png)
+
+## Main workflow diagram
+
+![flowDiagram](../img/app-auth/flowDiagram.png)
