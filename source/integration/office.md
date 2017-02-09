@@ -51,9 +51,8 @@ Please see [this doc](../admin-guide/saml/#saml-attributes) to create custom att
 
 1. Edit the `100-user.ldif` file under `/opt/opendj/config/schema` folder.
 
-    * Remove the `obhectGUID` entry from the file
+    * Modify 'objectGUID' attributeTypes like below. Keep the attribute number ( i.e. 1454676848732 ) intact for your setup and modify others like below. 
 
-    * Add the following new entry
 ```
 attributeTypes: ( 1454676848732 NAME 'objectGUID' SYNTAX 1.3.6.1.4.1.1466.115.121.1.5 USAGE userApplications X-ORIGIN 'gluu' ) 
 ```
@@ -87,16 +86,26 @@ attributeTypes: ( 1454676848732 NAME 'objectGUID' SYNTAX 1.3.6.1.4.1.1466.115.12
 </resolver:AttributeDefinition> 
 ```
 
-### Identity Mapping
+### IDP configuration
 The cache refresh mechanism is used to populate the Gluu Server LDAP with data from a backend LDAP/AD. The `objectGUID` attribute must be pulled from the backend data source to Gluu Server.
 
-* Edit the `ox-ldap.properties`, `oxauth-ldap.properties` and `oxidp-ldap.properties` files to add the following
+* Edit the `ox-ldap.properties` to add the following
+
 ```
 binaryAttributes=objectGUID,objectguid 
 ```
 **Note:**'objectGUID' (the first one) is the attribute which contains binary values in the backend AD and 'objectguid' (the second one) is the Gluu Server binary attribute name which will pull value from 'objectGUID' attribute
 
 * Restart Tomcat
+
+### Identity Mapping
+
+Two attributes require for mapping: 
+
+ - IDPEmail
+ - objectguid
+
+`IDPEmail` pull data from backend's email attrubute and `objectguid` get data from backend's objectGUID. 
 
 ### Create Trust Relationship
 Please see [this doc](../admin-guide/saml.md) to create trust relationships.
