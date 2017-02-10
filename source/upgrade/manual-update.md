@@ -94,7 +94,6 @@ service identity start
 ...
 ```
 20\. Verify if instaled services are up
-
 21\. Update oxTrust JSON configuration
  - We need to update *personObjectClassTypes*, *personObjectClassDisplayNames* and  *personCustomObjectClass*.
    In  3.0.0 these properties have next default values:
@@ -109,7 +108,8 @@ service identity start
 22\. Update oxTrust CacheRefesh snapshotFolder.
    New snapshotFolder = /var/ox/identity/cr-snapshots
 
-Notes:
+##Notes:
+
 1\. If in 2.4.4 SP2 environment SCIM was enabled we need to do:
  - Fill new properties: "scimUmaClientId", "scimUmaClientKeyId", "scimUmaResourceId", "scimUmaScope", "scimUmaClientKeyStoreFile", "scimUmaClientKeyStorePassword"
    These properties has same values as before. But in 3.0.0 we added prefix "scim" to all of them.
