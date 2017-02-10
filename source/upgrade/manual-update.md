@@ -38,6 +38,7 @@ cd /install/community-edition-setup/
 ./setup.py
 ```
 8\. Verify if instaled services are up
+
 9\. Stop OpenLDAP and all installed services
 ```
 service oxauth stop
