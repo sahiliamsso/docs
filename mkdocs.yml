@@ -72,6 +72,8 @@ pages:
             - 'OxTrust JSON Properties': 'reference/JSON-oxtrust-prop.md'
             - 'OxAuth JSON Properties': 'reference/JSON-oxauth-prop.md'
         #- 'Ox LDAP Properties':
+        - 'Gluu LDAP Schema':
+            - 'OpenLDAP Schema': 'reference/schema.md'
 - Operation Guide:
         - 'Backups': 'operation/backup.md'
         - 'Find your Gluu Version': 'operation/find-gluu-version.md'
