@@ -1,7 +1,7 @@
 #Manual upgrade procudure from 2.4.4 SP2 to 3.0.0 with OpenDJ to OpenDJ.
 
 This guide is to upgrade Gluu Server 2.4.4.2 to 3.0.0 with existing OpenDJ.
-For other OS some system commands should be changed.
+For other OS some system commands may changed.
 
 1\. Install 2.4.4 SP2
 
