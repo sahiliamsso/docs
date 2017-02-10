@@ -20,7 +20,8 @@ service gluu-server-2.4.4.2 stop
 ```
 /usr/sbin/update-rc.d -f gluu-server-2.4.4.2 disable
 ```
-5\. Instal 3.0.0
+5\. Install 3.0.0 rpm/deb, do not run setup script. 
+
 6\. Backup OpenDJ, ox-ldap.properties, salt from 2.4.4 SP2 and copy it into 3.0.0
 ```
 cd /opt/gluu-server-2.4.4.2/opt
@@ -30,14 +31,14 @@ cp opendj.tar.gz /opt/gluu-server-3.0.0/opt/
 cp /opt/gluu-server-2.4.4.2/opt/apache-tomcat-7.0.65/conf/ox-ldap.properties /opt/gluu-server-3.0.0/tmp
 cp /opt/gluu-server-2.4.4.2/opt/apache-tomcat-7.0.65/conf/salt /opt/gluu-server-3.0.0/tmp
 ```
-7\. Log into CE 3.0.0 and insall it
+7\. Log into CE 3.0.0 and run setup script
 ```
 service gluu-server-3.0.0 start
 service gluu-server-3.0.0 login
 cd /install/community-edition-setup/
 ./setup.py
 ```
-8\. Verify if instaled services are up
+8\. Verify if installed services are up
 
 9\. Stop OpenLDAP and all installed services
 ```
