@@ -1,6 +1,6 @@
 # Upgrading Gluu Server CE
 ## Overview
-The Gluu Server cannot be upgraded with a simple `apt-get upgrade`. The admin needs to explicitly install the new version of the Gluu Server and export and import the required data using scripts. 
+The Gluu Server can **not** be upgraded with a simple `apt-get upgrade`. The admin needs to explicitly install the new version of the Gluu Server and export and import the required data using scripts. 
 
 !!! Note
     This guide assumes that you are upgrading from version 2.x.x to 3.0 and are **OK with changing persistence from OpenDJ to OpenLDAP**. If you prefer to keep OpenDJ in Gluu Server 3.0, follow the separate documentation for [upgrading with OpenDJ](../upgrade/manual-update.md/).
