@@ -94,3 +94,17 @@ service identity start
 ...
 ```
 20\. Verify if instaled services are up
+
+21\. Update oxTrust JSON configuration
+ - We need to update *personObjectClassTypes*, *personObjectClassDisplayNames* and  *personCustomObjectClass*.
+   In  3.0.0 these properties have next default values:
+   personObjectClassTypes = gluuCustomPerson, gluuPerson, eduPerson
+   personObjectClassDisplayNames = gluuCustomPerson, gluuPerson, eduPerson
+   personCustomObjectClass = gluuCustomPerson
+ - We need to update *ldifStore*, *velocityLog*.
+   In  3.0.0 these properties have next default values:
+   ldifStore = /var/ox/identity/removed*
+   velocityLog = /opt/gluu/jetty/identity/logs/velocity.log
+
+22\. Update oxTrust CacheRefesh snapshotFolder.
+   New snapshotFolder = /var/ox/identity/cr-snapshots
