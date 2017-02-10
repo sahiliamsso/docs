@@ -108,3 +108,9 @@ service identity start
 
 22\. Update oxTrust CacheRefesh snapshotFolder.
    New snapshotFolder = /var/ox/identity/cr-snapshots
+
+Notes:
+1\. If in 2.4.4 SP2 environment SCIM was enabled we need to do:
+ - Fill new properties: "scimUmaClientId", "scimUmaClientKeyId", "scimUmaResourceId", "scimUmaScope", "scimUmaClientKeyStoreFile", "scimUmaClientKeyStorePassword"
+   These properties has same values as before. But in 3.0.0 we added prefix "scim" to all of them.
+ - Copy /etc/certs/scim-rs.jks from 2.4.4 SP2 into 3.0.0
