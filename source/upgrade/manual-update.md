@@ -85,7 +85,7 @@ mv ox-ldap.properties ox-ldap.properties.3.0.0
 mv salt salt.3.0.0
 mv /tmp/ox-ldap.properties .
 mv /tmp/salt .
-chown -rR root:gluu /etc/gluu/conf
+chown -R root:gluu /etc/gluu/conf
 ```
 19\. Start CE servces
 ```
