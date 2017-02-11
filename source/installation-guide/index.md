@@ -51,6 +51,8 @@ is set in `/proc/sys/fs/file-max`.
 ```
 # ulimit -n unlimited
 ```
+!!!Note:
+    Centos by default will not accept more than the default maximum of 65535. You may get an error while performing the above command.
 
 * Restart your system.     
 
