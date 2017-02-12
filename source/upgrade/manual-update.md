@@ -76,11 +76,24 @@ chown -R ldap:ldap opendj
 ```
 /bin/su ldap -c "export OPENDJ_JAVA_HOME=/opt/jre; /opt/opendj/bin/dsjavaproperties"
 ```
+
+> For CentOS6.x: 
+> Perform below operations are user 'ldap'
+> - Add jre location in 'java.properties' ( location: /opt/opendj/config ): `default.java-home=/opt/jre`
+> - Run command: `export OPENDJ_JAVA_HOME=/opt/jre`
+> - Run command: `/opt/opendj/bin/dsjavaproperties`
+
 13\. Create OpenDJ init script
 ```
 export OPENDJ_JAVA_HOME=/opt/jre; /opt/opendj/bin/create-rc-script --outputFile /etc/init.d/opendj --userName ldap
 /usr/sbin/update-rc.d -f opendj enable
 ```
+
+> For CentOS6.x: 
+> As root, run command: `export OPENDJ_JAVA_HOME=/opt/jre; /opt/opendj/bin/create-rc-script --outputFile /etc/init.d/opendj --userName ldap` 
+> Add opendj service in startup: `chkconfig opendj on`
+> Check the status of opendj service: `chkconfig --list | grep opendj`
+
 14\. Update LDAP schema
 ```
 cp -f /install/community-edition-setup/static/opendj/deprecated/101-ox.ldif /opt/opendj/config/schema/
