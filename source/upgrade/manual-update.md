@@ -60,6 +60,11 @@ service solserver stop
 ```
 /usr/sbin/update-rc.d -f solserver disable
 ```
+
+> For CentOS6.x
+> - Disable in startup: `chkconfig solserver off`
+> - Check the status in init: `chkconfig --list | grep solserver`
+
 11\. Restore OpenDJ from 2.4.4 SP2
 ```
 cd /opendj
