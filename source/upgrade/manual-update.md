@@ -25,6 +25,10 @@ service gluu-server-2.4.4.2 stop
 ```
 /usr/sbin/update-rc.d -f gluu-server-2.4.4.2 disable
 ```
+> For CentOS6.x: 
+> - Disable 'gluuserver-2.4.4.2' from startup: `chkconfig gluu-server-2.4.4.2 off`
+> - Check the status of service in init: `chkconfig --list | grep gluu-server-2.4.4.2`
+
 5\. Install 3.0.0 rpm/deb, do not run setup script. 
 
 6\. Backup OpenDJ, ox-ldap.properties, salt from 2.4.4 SP2 and copy it into 3.0.0
