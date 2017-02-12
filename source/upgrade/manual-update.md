@@ -144,6 +144,18 @@ service identity start
    In  3.0.0 these properties have next default values:
    `ldifStore` = `/var/ox/identity/removed`
    `velocityLog` = `/opt/gluu/jetty/identity/logs/velocity.log`
+   
+  - If you are using SAML, you have to modify couple of sections as well: 
+    - Add Shibv3 Root Directory location: `"shibboleth3FederationRootDir":"/opt/shibboleth-federation",` [ This configuration goes in between of _"photoRepositoryCount..._ and _""velocityLog"..._
+    - Couple of other declarations: [ This configuration lies in between of _"scimTestModeAccessToken..."_ and _"clientWhiteList..."_ 
+```
+    "shibbolethVersion":"v3",
+    "shibboleth3IdpRootDir":"/opt/shibboleth-idp",
+    "shibboleth3SpConfDir":"/opt/shibboleth-idp/sp",
+    "organizationName":"Gluu Inc.",
+    "idp3SigningCert":"/etc/certs/idp-signing.crt",
+    "idp3EncryptionCert":"/etc/certs/idp-encryption.crt",
+```
 
 23\. Update oxTrust CacheRefesh snapshotFolder.
    New snapshotFolder = `/var/ox/identity/cr-snapshots`
