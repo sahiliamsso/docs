@@ -10,6 +10,8 @@ Interception scripts allow you to configure authentication processes and customi
 
 By default, LDAP is used to authenticate usernames and passwords. You can set a default authentication method for access to external applications, as well as access to the Gluu Server UI. Until additional authentication mechanisms are enabled via custom scripts, default authentication will always be some variation of username and password. 
 
+Learn how to [configure basic authentication](../authn-guide/basic.md/).
+
 ## Configuring Social Authentication
 
 During deployment of the Gluu Server you are presented with an option to deploy Passport.js. With over 300 existing "strategies", Passport.js provides a crowd-sourced approach to supporting social login at many popular consumer IDPs. Passport not only normalizes authentication, it also provides a standard mapping for user claims.
