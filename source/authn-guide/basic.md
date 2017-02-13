@@ -1,13 +1,7 @@
 #Authentication against LDAP backend(s) (AKA “Basic”, “Internal”)
 
 ## Configuring Basic Authentication
-Basic authentication will be default authentication method Gluu instance 
-will be using out-of-the-box. when an administrator logs into the system 
-for first time. And its one of the simplest and widely accepted ways to 
-
-The method relies on a successful LDAP BIND operation against specified 
-backend LDAP directory that’s already exist in your network. 
-To configure it Basic Authentication Method:
+Basic authentication is the default authentication method used by the Gluu Server out-of-the-box. The method relies on a successful LDAP BIND operation against a specified backend LDAP directory. To configure the Basic Authentication Method:
 
 1. Click on `Configuration` > `Manage authentication` 
 ![basic](../img/user-authn/basicauthn.png)
