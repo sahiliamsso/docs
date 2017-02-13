@@ -24,7 +24,7 @@ Interception scripts are used by the Gluu Server to implement multi-factor authe
 
 Implementation guides for each pre-supported authentication mechanism can be found in the pages that follow in this User Authentication Guide.
 
-In addition, organizations frequently have custom requirements for authentication. For instance, an admin may want to implement a policy that enforces two-factor authentication only for users from certain groups, like the IT Group. Or, only prompt for two-factor authentication when a user attempts to access a protected resource from an unknown IP address. Custom interception scripts allow you to implement these types of policies, as well as any other business driven policy that can be scripted. 
+In addition, organizations frequently have custom requirements for authentication. For instance, an admin may want to implement a policy that enforces two-factor authentication only for users from certain a group, like the IT Group. Or only when a user tries to access a protected resource from an unknown IP address. Custom interception scripts allow you to implement these types of policies, as well as any other business driven policy that can be scripted. 
 
 Learn more about [how to write a custom interception script](./custom-script.md).
 
