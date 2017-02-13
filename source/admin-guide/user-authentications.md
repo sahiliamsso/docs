@@ -20,11 +20,11 @@ Learn [how to use Passport.js](../authn-guide/passport.md/) to configure social 
 
 ## Configuring Multi-Factor Authentication
 
-Interception scripts are used to implement multi-factor authentication. A number of scripts are included out-of-the-box, including scripts to support FIDO U2F tokens (like Vasco and Yubikey), Gluu's free Android and iOS two-factor authentication application called Super Gluu, certificate authentication, Duo Security, One-Time Passwords, and more. 
+Interception scripts are used by the Gluu Server to implement multi-factor authentication. A number of scripts are included out-of-the-box, including scripts to support FIDO U2F tokens (like Vasco and Yubikey), Gluu's free Android and iOS two-factor authentication application called Super Gluu, certificate authentication, Duo Security, One-Time Passwords, and more. 
 
-Implementation guides for each of the pre-supported authentication mechanisms listed above can be found in the pages that follow in this User Authentication Guide.
+Implementation guides for each pre-supported authentication mechanism can be found in the pages that follow in this User Authentication Guide.
 
-In addition, organizations frequently have custom requirements for multi-factor authentication. For instance, only users from a certain group should be prompted for two-factor authentication, or, only prompt users for two-factor authentication when trying to access protected resources from an unknown IP address. Custom interception scripts allow you to implement these types of policies, as well as any other business driven policy that can be scripted. 
+In addition, organizations frequently have custom requirements for authentication. For instance, an admin may want to implement a policy that enforces two-factor authentication only for users from certain a group, like the IT Group. Or only when a user tries to access a protected resource from an unknown IP address. Custom interception scripts allow you to implement these types of policies, as well as any other business driven policy that can be scripted. 
 
 Learn more about [how to write a custom interception script](./custom-script.md).
 
