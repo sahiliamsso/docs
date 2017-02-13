@@ -478,6 +478,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#basic-authentication-using-ldap-backends" title="Basic Authentication using LDAP backend(s)" class="md-nav__link">
+    Basic Authentication using LDAP backend(s)
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1125,6 +1132,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#basic-authentication-using-ldap-backends" title="Basic Authentication using LDAP backend(s)" class="md-nav__link">
+    Basic Authentication using LDAP backend(s)
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1140,14 +1154,12 @@
                
               
                 
-                <h1 id="authentication-against-ldap-backends-aka-basic-internal">Authentication against LDAP backend(s) (AKA “Basic”, “Internal”)<a class="headerlink" href="#authentication-against-ldap-backends-aka-basic-internal" title="Permanent link">#</a></h1>
+                <h1 id="authentication-against-ldap-aka-basic-internal">Authentication against LDAP (AKA “Basic”, “Internal”)<a class="headerlink" href="#authentication-against-ldap-aka-basic-internal" title="Permanent link">#</a></h1>
 <h2 id="configuring-basic-authentication">Configuring Basic Authentication<a class="headerlink" href="#configuring-basic-authentication" title="Permanent link">#</a></h2>
-<p>Basic authentication will be default authentication method Gluu instance 
-will be using out-of-the-box. when an administrator logs into the system 
-for first time. And its one of the simplest and widely accepted ways to </p>
-<p>The method relies on a successful LDAP BIND operation against specified 
-backend LDAP directory that’s already exist in your network. 
-To configure it Basic Authentication Method:</p>
+<p>Basic authentication is the default authentication method used by 
+the Gluu Server out-of-the-box. The method relies on a successful 
+LDAP BIND operation against a specified backend LDAP directory. 
+To configure the Basic Authentication Method:</p>
 <ol>
 <li>Click on <code>Configuration</code> &gt; <code>Manage authentication</code> 
 <img alt="basic" src="../../img/user-authn/basicauthn.png" /></li>
@@ -1178,9 +1190,10 @@ login flows continues, otherwise it’s deemed unsuccessful</p>
 of user entry found on step 2; for a password it will use string provided 
 by user in the “Password” field of the login form. If bind results in success, 
 login flow ends and user is treated as authenticated.</p>
+<h2 id="basic-authentication-using-ldap-backends">Basic Authentication using LDAP backend(s)<a class="headerlink" href="#basic-authentication-using-ldap-backends" title="Permanent link">#</a></h2>
 <p>By default Gluu is configured to use its own internal LDAP directory instead of 
-some remote LDAP backend, so LDAP operations on steps 2 and 3 will be also executed 
-against it. </p>
+some remote LDAP backend, so LDAP operations on steps 2 and 3 from the authentication flow 
+will be also executed against it. </p>
 <p>As many organizations already have existing LDAP directories with users’ 
 data in their network which they would like to put to use, one of the first steps for 
 them will be changing this default behavior by providing their backend server’s DNS name 
