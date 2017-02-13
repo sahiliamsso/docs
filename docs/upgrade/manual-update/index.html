@@ -1166,6 +1166,11 @@ service gluu-server-2.4.4.2 stop
 <pre><code>/usr/sbin/update-rc.d -f gluu-server-2.4.4.2 disable
 </code></pre>
 
+<blockquote>
+<p>For CentOS6.x: 
+- Disable 'gluuserver-2.4.4.2' from startup: <code>chkconfig gluu-server-2.4.4.2 off</code>
+- Check the status of service in init: <code>chkconfig --list | grep gluu-server-2.4.4.2</code></p>
+</blockquote>
 <p>5. Install 3.0.0 rpm/deb, do not run setup script. </p>
 <p>6. Backup OpenDJ, ox-ldap.properties, salt from 2.4.4 SP2 and copy it into 3.0.0</p>
 <pre><code>cd /opt/gluu-server-2.4.4.2/opt
@@ -1195,6 +1200,11 @@ service solserver stop
 <pre><code>/usr/sbin/update-rc.d -f solserver disable
 </code></pre>
 
+<blockquote>
+<p>For CentOS6.x
+- Disable in startup: <code>chkconfig solserver off</code>
+- Check the status in init: <code>chkconfig --list | grep solserver</code></p>
+</blockquote>
 <p>11. Restore OpenDJ from 2.4.4 SP2</p>
 <pre><code>cd /opendj
 rm -rf opendj
@@ -1206,11 +1216,32 @@ chown -R ldap:ldap opendj
 <pre><code>/bin/su ldap -c &quot;export OPENDJ_JAVA_HOME=/opt/jre; /opt/opendj/bin/dsjavaproperties&quot;
 </code></pre>
 
+<blockquote>
+<p>For CentOS6.x: 
+Perform below operations are user 'ldap'</p>
+<ul>
+<li>
+<p>Add jre location in 'java.properties' ( location: /opt/opendj/config ): <code>default.java-home=/opt/jre</code></p>
+</li>
+<li>
+<p>Run command: <code>export OPENDJ_JAVA_HOME=/opt/jre</code></p>
+</li>
+<li>
+<p>Run command: <code>/opt/opendj/bin/dsjavaproperties</code></p>
+</li>
+</ul>
+</blockquote>
 <p>13. Create OpenDJ init script</p>
 <pre><code>export OPENDJ_JAVA_HOME=/opt/jre; /opt/opendj/bin/create-rc-script --outputFile /etc/init.d/opendj --userName ldap
 /usr/sbin/update-rc.d -f opendj enable
 </code></pre>
 
+<blockquote>
+<p>For CentOS6.x: </p>
+<p>As root, run command: <code>export OPENDJ_JAVA_HOME=/opt/jre; /opt/opendj/bin/create-rc-script --outputFile /etc/init.d/opendj --userName ldap</code> </p>
+<p>Add opendj service in startup: <code>chkconfig opendj on</code></p>
+<p>Check the status of opendj service: <code>chkconfig --list | grep opendj</code></p>
+</blockquote>
 <p>14. Update LDAP schema</p>
 <pre><code>cp -f /install/community-edition-setup/static/opendj/deprecated/101-ox.ldif /opt/opendj/config/schema/
 </code></pre>
@@ -1251,6 +1282,19 @@ service identity start
    In  3.0.0 these properties have next default values:
    <code>ldifStore</code> = <code>/var/ox/identity/removed</code>
    <code>velocityLog</code> = <code>/opt/gluu/jetty/identity/logs/velocity.log</code></p>
+<ul>
+<li>If you are using SAML, you have to modify couple of sections as well: <ul>
+<li>Add Shibv3 Root Directory location: <code>"shibboleth3FederationRootDir":"/opt/shibboleth-federation",</code> [ This configuration goes in between of <em>"photoRepositoryCount...</em> and <em>""velocityLog"...</em> ]</li>
+<li>Couple of other declarations: [ This configuration lies in between of <em>"scimTestModeAccessToken..."</em> and <em>"clientWhiteList..."</em> ] 
+ <code>"shibbolethVersion":"v3",
+"shibboleth3IdpRootDir":"/opt/shibboleth-idp",
+"shibboleth3SpConfDir":"/opt/shibboleth-idp/sp",
+"organizationName":"Gluu Inc.",
+"idp3SigningCert":"/etc/certs/idp-signing.crt",
+"idp3EncryptionCert":"/etc/certs/idp-encryption.crt",</code></li>
+</ul>
+</li>
+</ul>
 <p>23. Update oxTrust CacheRefesh snapshotFolder.
    New snapshotFolder = <code>/var/ox/identity/cr-snapshots</code></p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h2>
