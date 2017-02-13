@@ -1,9 +1,8 @@
 # Authentication against LDAP (AKA “Basic”, “Internal”)
 
 ## Overview
-Basic authentication is the default authentication method used by 
-the Gluu Server out-of-the-box. The method relies on a successful 
-LDAP BIND operation against a specified backend LDAP directory. 
+Basic authentication is the default authentication method used by the Gluu Server. Basic authentication relies on a successful 
+LDAP BIND operation against an LDAP directory--either the local LDAP included in the Gluu Server, or a backend LDAP server like Active Directory that has been configured for use with the Gluu Server via [Cache Refresh](../admin-guide/user-group.md/#ldap-synchronization). 
 
 ## Configuring Basic Authentication
 Follow the steps below to configure the Basic authentication method:
