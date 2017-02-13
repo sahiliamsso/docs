@@ -45,7 +45,7 @@ Please follow these steps shown below to update the Apache SSL cert:
 ```
 service solserver stop
 service apache2 stop
-service Identity stop
+service identity stop
 :
 service solserver start
 service apache2 start

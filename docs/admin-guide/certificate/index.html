@@ -1175,8 +1175,17 @@ are available in the <code>/etc/certs</code> folder.</p>
 <li>Import certificate in to Java Keystore(cacerts):<br/> <code>keytool -importcert -file httpd.der -keystore cacerts -alias &lt;hostname_of_your_Gluu_Server&gt;_httpd</code></li>
 </ul>
 </li>
-<li>Restart LDAP server, apache2/httpd and tomcat.</li>
+<li>Restart LDAP server, apache2/httpd and Identity Services.</li>
 </ul>
+<pre><code>service solserver stop
+service apache2 stop
+service identity stop
+:
+service solserver start
+service apache2 start
+service identity start
+</code></pre>
+
 <h2 id="install-intermediate-certificates">Install Intermediate Certificates<a class="headerlink" href="#install-intermediate-certificates" title="Permanent link">#</a></h2>
 <p>Please follow the steps below to install intermediate certificates:</p>
 <ol>
