@@ -49,7 +49,7 @@ service Identity stop
 :
 service solserver start
 service apache2 start
-service identity strat
+service identity start
 ```
 
 ## Install Intermediate Certificates
