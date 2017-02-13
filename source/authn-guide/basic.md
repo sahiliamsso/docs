@@ -24,7 +24,9 @@ Let’s only touch concepts of `primary key` and `local primary key` for now:
 •Local primary key -  name of LDAP attribute used to look up user entries in Gluu’s 
 internal LDAP directory.
 
-Roughly this authentication flow can be divided into next set of phases:
+##Basic Authentication Flow
+
+Basic authentication flow can be divided into three set of phases:
 
 1.String provided by user in the “Login” field of the login form is treated as a local key. 
 It becomes a part of LDAP search filter similar to 
@@ -48,15 +50,20 @@ login flow ends and user is treated as authenticated.
 
 By default Gluu is configured to use its own internal LDAP directory instead of 
 some remote LDAP backend, so LDAP operations on steps 2 and 3 will be also executed 
-against it. As many organizations already have existing LDAP directories with users’ 
+against it. 
+
+As many organizations already have existing LDAP directories with users’ 
 data in their network which they would like to put to use, one of the first steps for 
 them will be changing this default behavior by providing their backend server’s DNS name 
-or ip address  in `Server` field. As login name provided by user will be used as a search 
+or ip address  in `Server` field. 
+
+As login name provided by user will be used as a search 
 term in searches both against remote and internal directories, that means there must be 
 strict relation between user entries in those directories, ensuring they both will succeed. 
+
 Most simple way to achieve this is to employ Cache Refresh feature which allows to set 
-mappings for user attributes imported from a backend directory. It also allows to customize 
-default mapping behavior with Jython-based scripts. 
+mappings for user attributes imported from a backend directory. 
+It also allows to customize default mapping behavior with Jython-based scripts. 
 You can find out more about Cache Refresh a.k.a 
 [LDAP Synchronization](../user-group/#ldap-synchronization).
 
