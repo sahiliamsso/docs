@@ -17,7 +17,7 @@
     
     
       
-        <title>UMA - Gluu Docs</title>
+        <title>Basic Authenticatoin - Gluu Docs</title>
       
     
     
@@ -80,8 +80,12 @@
                   Administration Guide
                 </span>
               
+                <span class="md-header-nav__parent">
+                  User Authentication Guide
+                </span>
+              
             
-            UMA
+            Basic Authenticatoin
           
         </span>
       </div>
@@ -388,7 +392,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../oxtrust-ui/" title="oxTrust admin UI" class="md-nav__link">
+      <a href="../../admin-guide/oxtrust-ui/" title="oxTrust admin UI" class="md-nav__link">
         oxTrust admin UI
       </a>
     
@@ -399,7 +403,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../custom-script/" title="Interception Scripts" class="md-nav__link">
+      <a href="../../admin-guide/custom-script/" title="Interception Scripts" class="md-nav__link">
         Interception Scripts
       </a>
     
@@ -410,7 +414,7 @@
           
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
     
     <label class="md-nav__link" for="nav-4-3">
       User Authentication Guide
@@ -426,156 +430,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../user-authentications/" title="User Authentication Introduction" class="md-nav__link">
+      <a href="../../admin-guide/user-authentications/" title="User Authentication Introduction" class="md-nav__link">
         User Authentication Introduction
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../../authn-guide/basic/" title="Basic Authenticatoin" class="md-nav__link">
-        Basic Authenticatoin
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../../authn-guide/passport/" title="Social Authentication" class="md-nav__link">
-        Social Authentication
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../../authn-guide/supergluu/" title="Super Gluu" class="md-nav__link">
-        Super Gluu
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../../authn-guide/U2F/" title="FIDO U2F" class="md-nav__link">
-        FIDO U2F
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../../authn-guide/duo/" title="Duo Security" class="md-nav__link">
-        Duo Security
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../../authn-guide/cert-auth/" title="Certificate Authentication" class="md-nav__link">
-        Certificate Authentication
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../../authn-guide/google/" title="Google" class="md-nav__link">
-        Google
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../../authn-guide/otp/" title="HOTP/TOTP" class="md-nav__link">
-        HOTP/TOTP
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../../authn-guide/customauthn/" title="Custom Authentication" class="md-nav__link">
-        Custom Authentication
-      </a>
-    
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../user-group/" title="User Management" class="md-nav__link">
-        User Management
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../session/" title="Session Timeout" class="md-nav__link">
-        Session Timeout
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../saml/" title="SAML" class="md-nav__link">
-        SAML
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../openid-connect/" title="OpenID Connect" class="md-nav__link">
-        OpenID Connect
       </a>
     
   </li>
@@ -591,11 +447,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        UMA
+        Basic Authenticatoin
       </label>
     
-    <a href="./" title="UMA" class="md-nav__link md-nav__link--active">
-      UMA
+    <a href="./" title="Basic Authenticatoin" class="md-nav__link md-nav__link--active">
+      Basic Authenticatoin
     </a>
     
       
@@ -609,56 +465,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" title="Overview" class="md-nav__link">
-    Overview
+  <a href="#configuring-basic-authentication" title="Configuring Basic Authentication" class="md-nav__link">
+    Configuring Basic Authentication
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resource-registration" title="Resource Registration" class="md-nav__link">
-    Resource Registration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scopes" title="Scopes" class="md-nav__link">
-    Scopes
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-scope" title="Add Scope" class="md-nav__link">
-    Add Scope
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uma-policies" title="UMA Policies" class="md-nav__link">
-    UMA Policies
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#uma-policy-algorithm" title="UMA Policy Algorithm" class="md-nav__link">
-    UMA Policy Algorithm
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -673,7 +482,155 @@
           
   <li class="md-nav__item">
     
-      <a href="../scim-uma/" title="SCIM protected by UMA" class="md-nav__link">
+      <a href="../passport/" title="Social Authentication" class="md-nav__link">
+        Social Authentication
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../supergluu/" title="Super Gluu" class="md-nav__link">
+        Super Gluu
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../U2F/" title="FIDO U2F" class="md-nav__link">
+        FIDO U2F
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../duo/" title="Duo Security" class="md-nav__link">
+        Duo Security
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../cert-auth/" title="Certificate Authentication" class="md-nav__link">
+        Certificate Authentication
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../google/" title="Google" class="md-nav__link">
+        Google
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../otp/" title="HOTP/TOTP" class="md-nav__link">
+        HOTP/TOTP
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../customauthn/" title="Custom Authentication" class="md-nav__link">
+        Custom Authentication
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../admin-guide/user-group/" title="User Management" class="md-nav__link">
+        User Management
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../admin-guide/session/" title="Session Timeout" class="md-nav__link">
+        Session Timeout
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../admin-guide/saml/" title="SAML" class="md-nav__link">
+        SAML
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../admin-guide/openid-connect/" title="OpenID Connect" class="md-nav__link">
+        OpenID Connect
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../admin-guide/uma/" title="UMA" class="md-nav__link">
+        UMA
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../admin-guide/scim-uma/" title="SCIM protected by UMA" class="md-nav__link">
         SCIM protected by UMA
       </a>
     
@@ -684,7 +641,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../certificate/" title="Certificate Management" class="md-nav__link">
+      <a href="../../admin-guide/certificate/" title="Certificate Management" class="md-nav__link">
         Certificate Management
       </a>
     
@@ -1148,56 +1105,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" title="Overview" class="md-nav__link">
-    Overview
+  <a href="#configuring-basic-authentication" title="Configuring Basic Authentication" class="md-nav__link">
+    Configuring Basic Authentication
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resource-registration" title="Resource Registration" class="md-nav__link">
-    Resource Registration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scopes" title="Scopes" class="md-nav__link">
-    Scopes
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-scope" title="Add Scope" class="md-nav__link">
-    Add Scope
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uma-policies" title="UMA Policies" class="md-nav__link">
-    UMA Policies
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#uma-policy-algorithm" title="UMA Policy Algorithm" class="md-nav__link">
-    UMA Policy Algorithm
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1212,123 +1122,60 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/GluuFederation/docs/blob/master/source/admin-guide\uma.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/GluuFederation/docs/blob/master/source/authn-guide\basic.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                <h1 id="uma">UMA<a class="headerlink" href="#uma" title="Permanent link">#</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>As a profile of OAuth 2.0 that is complementary to OpenID Connect, UMA defines RESTful, JSON-based, standardized flows and constructs for coordinating the protection of any API or web resource in a way that will be familiar to any developer already acquainted with OAuth.</p>
-<p>UMA defines interfaces between authorization servers and resource servers that, by default, enable centralized policy decision-making for improved service delivery, auditing, policy administration, and accountability, even in a very loosely coupled "public API" environment. Custom profiles enable flexibility to move the decision-making line outward to distributed applications, to account for local preferences in API ecosystems. UMA does not standardize a policy expression language, enabling flexibility in policy expression and evaluation through XACML, other declarative policy languages, or procedural code as warranted by conditions. It also has a fluid way to handle federated authorization policy.</p>
-<p>UMA inherits authentication agnosticism from OAuth. It concentrates on authorization, not on authentication. It has been profiled to work with OpenID Connect to gather identity claims from whoever is attempting access, and enables true claims-based authorization (with simple group- or role-based policies a natural subset).</p>
-<h2 id="resource-registration">Resource Registration<a class="headerlink" href="#resource-registration" title="Permanent link">#</a></h2>
-<p>The resources protected by UMA must be registered in oxTrust. The following propterties describe a resource:</p>
-<ul>
-<li>name</li>
-<li>scopes</li>
-<li>type</li>
-<li>icon_uri</li>
-</ul>
-<p>The resource type can be a string, URI or any other supported value type supported by Gluu Server CE. The properties shown above are not concrete, and it is possible that a resource may contain custom properties. An example of the resource JSON is given beow:</p>
-<pre><code>{
-&quot;name&quot;:&quot;scim_access&quot;,
-&quot;icon_uri&quot;:&quot;https:\/\/centos.gluu.info\/identity\/uma\/scope\/file\/scim_access&quot;
-}
-</code></pre>
-
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Resource JSON may contain custom properties.</p>
-</div>
-<p><img alt="uma-resources" src="../../img/uma/uma-resources.png" /></p>
-<p>The search bar can be used to search for any existing resource within Gluu Server. New resoruces can be added by clicking on the <code>Add Resource Set</code> button. The following screenshot shows the page that will appear up on clicking the add resource button.</p>
-<p><img alt="add-resource-set" src="../../img/uma/add-resource-set.png" /></p>
-<p>The properties of a resource is visible in this page. There are two additional buttons that allows the administrator to add specific resource or scope as well. By default, Gluu Server is shipped with SCIM resources protected by UMA.</p>
-<p><img alt="add-resource" src="../../img/uma/add-resource.png" /></p>
-<p><img alt="add-scope" src="../../img/uma/add-scope.png" /></p>
-<h2 id="scopes">Scopes<a class="headerlink" href="#scopes" title="Permanent link">#</a></h2>
-<p>The scopes in UMA are bount to resource sets and used by policies to check whether the specified user has access to the resource. The scopes are described in JSON and has the following properties:</p>
-<ul>
-<li>name</li>
-<li>icon_uri</li>
-</ul>
-<p>An example  of the scope JSON is given below:</p>
-<pre><code>{
-  &quot;name&quot;: &quot;Add photo&quot;,
-  &quot;icon_uri&quot;: &quot;http://www.gluu.org/icons/add_photo_scope.png&quot;
-}
-</code></pre>
-
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Scope JSON may contain custom properties.</p>
-</div>
-<p>There are three (3) types of scopes in UMA:</p>
+                <h1 id="authentication-against-ldap-backends-aka-basic-internal">Authentication against LDAP backend(s) (AKA “Basic”, “Internal”)<a class="headerlink" href="#authentication-against-ldap-backends-aka-basic-internal" title="Permanent link">#</a></h1>
+<h2 id="configuring-basic-authentication">Configuring Basic Authentication<a class="headerlink" href="#configuring-basic-authentication" title="Permanent link">#</a></h2>
+<p>Basic authentication will be default authentication method Gluu instance 
+will be using out-of-the-box. when an administrator logs into the system 
+for first time. And its one of the simplest and widely accepted ways to </p>
+<p>The method relies on a successful LDAP BIND operation against specified 
+backend LDAP directory that’s already exist in your network. 
+To configure it Basic Authentication Method:</p>
 <ol>
-<li><code>internal</code>: the scope is hosted within oxAuth in Gluu Server CE</li>
-<li><code>external</code>: the scope is hosted in a different server</li>
-<li><code>external_auto</code>: the scope is hosted in a different server, but it is added to Gluu Server CE during the resource registration</li>
+<li>Click on <code>Configuration</code> &gt; <code>Manage authentication</code> 
+<img alt="basic" src="../../img/user-authn/basicauthn.png" /></li>
 </ol>
-<p>There is no URI for an internal scope because it sits within oxAuth in the Gluu Server. The UMA URL is represented in the format</p>
-<pre><code>UMA URL=uma_scopes_endpoint+&quot;/&quot;+oxId;
-</code></pre>
-
-<p>The following is an example of an UMA URL:</p>
-<pre><code>https://gluu.org/uma/scopes/view
-</code></pre>
-
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The scope endpoint has to be present in UMA configuration to make it discoverable.</p>
-</div>
-<p>The <code>ldif</code> for both external and internal scope is given below:</p>
-<p><strong>External sample ldif</strong></p>
-<pre><code>dn: inum=@!1111!8990!BF80,ou=scopes,ou=uma,o=@!1111,o=gluu
-displayName: View
-inum: @!1111!8990!BF80
-objectClass: oxAuthUmaScopeDescription
-objectClass: top
-oxType: external
-oxUrl: http://photoz.example.com/dev/scopes/view
-</code></pre>
-
-<p><strong>Internal sample ldif</strong></p>
-<pre><code>dn: inum=@!1111!8990!BF80,ou=scopes,ou=uma,o=@!1111,o=gluu
-displayName: View
-inum: @!1111!8990!BF80
-objectClass: oxAuthUmaScopeDescription
-objectClass: top
-oxType: internal
-oxId: View
-oxIconUrl: http://seed.gluu.org/uma/icons/view_scope.png
-</code></pre>
-
-<h3 id="add-scope">Add Scope<a class="headerlink" href="#add-scope" title="Permanent link">#</a></h3>
-<p>This section defines the process of defining UMA scopes from oxTrust. The scopes are accessed from the <code>Scopes</code> page under <code>UMA</code> from the oxTrust menu.</p>
-<p><img alt="uma-scopes" src="../../img/uma/uma-scopes.png" /></p>
-<p>The search bar can be used to look for available scopes. New scopes are added by clicking on the <code>Add Scope Description</code> button which will bring up the interface shown below.</p>
-<p><img alt="uma-scopes" src="../../img/uma/scopes-add.png" /></p>
-<p>Additionally there is an option to add authorization policy with the new scope.</p>
-<h2 id="uma-policies">UMA Policies<a class="headerlink" href="#uma-policies" title="Permanent link">#</a></h2>
-<p>UMA policies protect UMA Resources via scopes. Gluu Server evaluates all policies, identified by scopes, to grant access to resources. There are three (3) main properties of a policy:</p>
-<ol>
-<li>scopes: policy protects resources by scopes</li>
-<li>authorization script: script that is evaluated in order to grant/deny access</li>
-<li>name: a human readable name to the UMA policy</li>
-</ol>
-<p>The following section outlines how to define UMA policies from the Custom Script menu. The Custom Script page is accessed by navigating to <code>Configuration</code> &gt; <code>Custom Scripts</code>.</p>
-<p><img alt="auth-policy" src="../../img/uma/auth-policy.png" /></p>
-<h3 id="uma-policy-algorithm">UMA Policy Algorithm<a class="headerlink" href="#uma-policy-algorithm" title="Permanent link">#</a></h3>
-<p>The UMA Policy alrorithm has two rules that are followed. These rules must be followed while writing UMA policy using the custom script feature of Gluu Server.</p>
-<ul>
-<li>
-<p>UMA Policy protects resources based on scopes. If a scope is protected by a policy, then the policy script must reutrn <code>true</code> in order to authorize access during RPT authorization.</p>
-</li>
-<li>
-<p>Multiple policies can protect a single scope. In such a case, all the policies must retun <code>true</code> to authorize access else aceess will be denied.</p>
-</li>
-</ul>
-<p><img alt="policy-algorithm" src="../../img/uma/policy-algorithm.jpg" /> </p>
+<p>You can find a more detailed description of each field in 
+<a href="../../admin-guide/oxtrust-ui/#manage-authentication">manage authentication</a> 
+section under OxTrust admin UI. </p>
+<p>Let’s only touch concepts of <code>primary key</code> and <code>local primary key</code> for now:</p>
+<p>•Primary key - name of LDAP attribute used to look up user entries in backend LDAP directory.</p>
+<p>•Local primary key -  name of LDAP attribute used to look up user entries in Gluu’s 
+internal LDAP directory.</p>
+<p>Roughly this authentication flow can be divided into next set of phases:</p>
+<p>1.String provided by user in the “Login” field of the login form is treated as a local key. 
+It becomes a part of LDAP search filter similar to 
+<code>&amp;(..set of predefined filter clauses..)(local_primary_key=provided_login_name)</code>. 
+If a user entry conforming to this filter is found in Gluu’s internal LDAP directory and 
+its <code>gluuStatus</code> attribute is set to <code>active</code>, login flow continues, 
+otherwise it’s deemed unsuccessful. That means that even in case when backend 
+directory is used for authentication, a mirrored user entry still must be present in 
+Gluu’s internal directory all the time</p>
+<p>2.String provided by user in the “Login” field of the login form is now treated as a 
+primary key. It becomes a part of LDAP search filter similar to 
+<code>&amp;(..set hardcoded clauses..)(primary_key=provided_login_name)</code>. 
+If a user entry conforming to this filter is found in specified backend LDAP directory 
+login flows continues, otherwise it’s deemed unsuccessful</p>
+<p>3.LDAP BIND operation is initiated against backend LDAP directory with DN 
+of user entry found on step 2; for a password it will use string provided 
+by user in the “Password” field of the login form. If bind results in success, 
+login flow ends and user is treated as authenticated.</p>
+<p>By default Gluu is configured to use its own internal LDAP directory instead of 
+some remote LDAP backend, so LDAP operations on steps 2 and 3 will be also executed 
+against it. As many organizations already have existing LDAP directories with users’ 
+data in their network which they would like to put to use, one of the first steps for 
+them will be changing this default behavior by providing their backend server’s DNS name 
+or ip address  in <code>Server</code> field. As login name provided by user will be used as a search 
+term in searches both against remote and internal directories, that means there must be 
+strict relation between user entries in those directories, ensuring they both will succeed. 
+Most simple way to achieve this is to employ Cache Refresh feature which allows to set 
+mappings for user attributes imported from a backend directory. It also allows to customize 
+default mapping behavior with Jython-based scripts. 
+You can find out more about Cache Refresh a.k.a 
+<a href="../../user-group/#ldap-synchronization">LDAP Synchronization</a>.</p>
               
             </article>
           </div>
@@ -1341,7 +1188,7 @@ oxIconUrl: http://seed.gluu.org/uma/icons/view_scope.png
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../openid-connect/" title="OpenID Connect" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../admin-guide/user-authentications/" title="User Authentication Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1350,19 +1197,19 @@ oxIconUrl: http://seed.gluu.org/uma/icons/view_scope.png
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                OpenID Connect
+                User Authentication Introduction
               </span>
             </div>
           </a>
         
         
-          <a href="../scim-uma/" title="SCIM protected by UMA" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../passport/" title="Social Authentication" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                SCIM protected by UMA
+                Social Authentication
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
