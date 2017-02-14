@@ -8,7 +8,11 @@ Interception scripts allow you to configure authentication processes and customi
 
 ## Basic Authentication
 
-By default, LDAP is used to authenticate usernames and passwords. You can set a default authentication method for access to external applications, as well as access to the Gluu Server UI. Until additional authentication mechanisms are enabled via custom scripts, default authentication will always be some variation of username and password. 
+By default, LDAP is used to authenticate usernames and passwords. 
+You can set a default authentication method for access to external applications, 
+as well as access to the Gluu Server UI. Until additional authentication mechanisms 
+are enabled via custom scripts, default authentication will always be some 
+variation of username and password. 
 
 ## Configuring Social Authentication
 
