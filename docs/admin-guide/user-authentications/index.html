@@ -1187,14 +1187,19 @@
 <p>The Gluu Server is very flexible in handling authentication. By default, the Gluu Server uses username and password authentication. However, using the Gluu Server's interception script infrastructure, you can define multiple authentication methods and custom business logic for complex multi-step authentication workflows. You can have multiple authentication mechanisms active at the same time--Web or mobile clients can request a certain authentication type by using standard OpenID Connect request parameters. </p>
 <p>Interception scripts allow you to configure authentication processes and customize how they are applied. Sophisticated authentication logic can implement adaptive authentication. For example, you can add extra authentication steps based on contextual information such as fraud scores, location, or browser profiling. You can also customize the look and feel of a web authentication: html, css, images and javascript can be externalized and managed by your organization.</p>
 <h2 id="basic-authentication">Basic Authentication<a class="headerlink" href="#basic-authentication" title="Permanent link">#</a></h2>
-<p>By default, LDAP is used to authenticate usernames and passwords. You can set a default authentication method for access to external applications, as well as access to the Gluu Server UI. Until additional authentication mechanisms are enabled via custom scripts, default authentication will always be some variation of username and password. </p>
+<p>By default, LDAP is used to authenticate usernames and passwords. 
+You can set a default authentication method for access to external applications, 
+as well as access to the Gluu Server UI. Until additional authentication mechanisms 
+are enabled via custom scripts, default authentication will always be some 
+variation of username and password. </p>
+<p>Learn how to <a href="../../authn-guide/basic.md/">configure basic authentication</a>.</p>
 <h2 id="configuring-social-authentication">Configuring Social Authentication<a class="headerlink" href="#configuring-social-authentication" title="Permanent link">#</a></h2>
 <p>During deployment of the Gluu Server you are presented with an option to deploy Passport.js. With over 300 existing "strategies", Passport.js provides a crowd-sourced approach to supporting social login at many popular consumer IDPs. Passport not only normalizes authentication, it also provides a standard mapping for user claims.</p>
 <p>Learn <a href="../../authn-guide/passport.md/">how to use Passport.js</a> to configure social login. </p>
 <h2 id="configuring-multi-factor-authentication">Configuring Multi-Factor Authentication<a class="headerlink" href="#configuring-multi-factor-authentication" title="Permanent link">#</a></h2>
-<p>Interception scripts are used to implement multi-factor authentication. A number of scripts are included out-of-the-box, including scripts to support FIDO U2F tokens (like Vasco and Yubikey), Gluu's free Android and iOS two-factor authentication application called Super Gluu, certificate authentication, Duo Security, One-Time Passwords, and more. </p>
-<p>Implementation guides for each of the pre-supported authentication mechanisms listed above can be found in the pages that follow in this User Authentication Guide.</p>
-<p>In addition, organizations frequently have custom requirements for multi-factor authentication. For instance, only users from a certain group should be prompted for two-factor authentication, or, only prompt users for two-factor authentication when trying to access protected resources from an unknown IP address. Custom interception scripts allow you to implement these types of policies, as well as any other business driven policy that can be scripted. </p>
+<p>Interception scripts are used by the Gluu Server to implement multi-factor authentication. A number of scripts are included out-of-the-box, including scripts to support FIDO U2F tokens (like Vasco and Yubikey), Gluu's free Android and iOS two-factor authentication application called Super Gluu, certificate authentication, Duo Security, One-Time Passwords, and more. </p>
+<p>Implementation guides for each pre-supported authentication mechanism can be found in the pages that follow in this User Authentication Guide.</p>
+<p>In addition, organizations frequently have custom requirements for authentication. For instance, an admin may want to implement a policy that enforces two-factor authentication only for users from certain a group, like the IT Group. Or only when a user tries to access a protected resource from an unknown IP address. Custom interception scripts allow you to implement these types of policies, as well as any other business driven policy that can be scripted. </p>
 <p>Learn more about <a href="../custom-script/">how to write a custom interception script</a>.</p>
 <p>Review our <a href="../../authn-guide/customauthn/">custom authentication script tutorial</a>, where we demonstrate how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication mechanism.</p>
 <h2 id="configuring-account-lockout">Configuring Account Lockout<a class="headerlink" href="#configuring-account-lockout" title="Permanent link">#</a></h2>
@@ -1222,9 +1227,7 @@ its <code>gluuStatus</code> attribute back to <code>active</code> via web UI.</p
 <img alt="acct-update" src="../../img/admin-guide/user/acct-lockout-update.png" /></li>
 </ol>
 <h2 id="customizing-the-login-page">Customizing the Login Page<a class="headerlink" href="#customizing-the-login-page" title="Permanent link">#</a></h2>
-<!--Learn how to customize the look and feel of Gluu Server pages in the Design Customizations(add-link) section of the Operations Guide.-->
-
-<p>Design Customization of Login page will be updated shortly.</p>
+<p>Learn how to customize the look and feel of Gluu Server pages in the <a href="../../operation/custom-loginpage.md/">Design Customizations</a> section of the Operations Guide.</p>
               
             </article>
           </div>

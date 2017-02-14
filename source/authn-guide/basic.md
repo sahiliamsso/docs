@@ -1,10 +1,11 @@
-#Authentication against LDAP (AKA “Basic”, “Internal”)
+# Authentication against LDAP (AKA “Basic”, “Internal”)
+
+## Overview
+Basic authentication is the default authentication method used by the Gluu Server. Basic authentication relies on a successful 
+LDAP BIND operation against an LDAP directory--either the local LDAP included in the Gluu Server, or a backend LDAP server like Active Directory that has been configured for use with the Gluu Server via [Cache Refresh](../admin-guide/user-group.md/#ldap-synchronization). 
 
 ## Configuring Basic Authentication
-Basic authentication is the default authentication method used by 
-the Gluu Server out-of-the-box. The method relies on a successful 
-LDAP BIND operation against a specified backend LDAP directory. 
-To configure the Basic Authentication Method:
+Follow the steps below to configure the Basic authentication method:
 
 1. Click on `Configuration` > `Manage authentication` 
 ![basic](../img/user-authn/basicauthn.png)
@@ -16,12 +17,14 @@ section under OxTrust admin UI.
 
 Let’s only touch concepts of `primary key` and `local primary key` for now:
 
-•Primary key - name of LDAP attribute used to look up user entries in backend LDAP directory.
+•Primary key - name of LDAP attribute used to look up user entries in backend LDAP directory. 
 
 •Local primary key -  name of LDAP attribute used to look up user entries in Gluu’s 
 internal LDAP directory.
 
-##Basic Authentication Flow
+_Note: A primary key can also be considered a `uid` (unique identifier)._
+
+## Basic Authentication Flow
 
 Basic authentication flow can be divided into three set of phases:
 

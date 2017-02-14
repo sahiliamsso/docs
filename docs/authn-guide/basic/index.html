@@ -465,6 +465,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuring-basic-authentication" title="Configuring Basic Authentication" class="md-nav__link">
     Configuring Basic Authentication
   </a>
@@ -1119,6 +1126,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuring-basic-authentication" title="Configuring Basic Authentication" class="md-nav__link">
     Configuring Basic Authentication
   </a>
@@ -1155,11 +1169,11 @@
               
                 
                 <h1 id="authentication-against-ldap-aka-basic-internal">Authentication against LDAP (AKA “Basic”, “Internal”)<a class="headerlink" href="#authentication-against-ldap-aka-basic-internal" title="Permanent link">#</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
+<p>Basic authentication is the default authentication method used by the Gluu Server. Basic authentication relies on a successful 
+LDAP BIND operation against an LDAP directory--either the local LDAP included in the Gluu Server, or a backend LDAP server like Active Directory that has been configured for use with the Gluu Server via <a href="../../admin-guide/user-group.md/#ldap-synchronization">Cache Refresh</a>. </p>
 <h2 id="configuring-basic-authentication">Configuring Basic Authentication<a class="headerlink" href="#configuring-basic-authentication" title="Permanent link">#</a></h2>
-<p>Basic authentication is the default authentication method used by 
-the Gluu Server out-of-the-box. The method relies on a successful 
-LDAP BIND operation against a specified backend LDAP directory. 
-To configure the Basic Authentication Method:</p>
+<p>Follow the steps below to configure the Basic authentication method:</p>
 <ol>
 <li>Click on <code>Configuration</code> &gt; <code>Manage authentication</code> 
 <img alt="basic" src="../../img/user-authn/basicauthn.png" /></li>
@@ -1168,9 +1182,10 @@ To configure the Basic Authentication Method:</p>
 <a href="../../admin-guide/oxtrust-ui/#manage-authentication">manage authentication</a> 
 section under OxTrust admin UI. </p>
 <p>Let’s only touch concepts of <code>primary key</code> and <code>local primary key</code> for now:</p>
-<p>•Primary key - name of LDAP attribute used to look up user entries in backend LDAP directory.</p>
+<p>•Primary key - name of LDAP attribute used to look up user entries in backend LDAP directory. </p>
 <p>•Local primary key -  name of LDAP attribute used to look up user entries in Gluu’s 
 internal LDAP directory.</p>
+<p><em>Note: A primary key can also be considered a <code>uid</code> (unique identifier).</em></p>
 <h2 id="basic-authentication-flow">Basic Authentication Flow<a class="headerlink" href="#basic-authentication-flow" title="Permanent link">#</a></h2>
 <p>Basic authentication flow can be divided into three set of phases:</p>
 <p>1.String provided by user in the “Login” field of the login form is treated as a local key. 
