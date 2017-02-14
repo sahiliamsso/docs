@@ -8,20 +8,6 @@ For example, you may want to only prompt users in a certain group for two-factor
 
 This tutorial explains how to write a script to implement a two-step out-of-band authentication using Twilio to send an SMS with a one-time password. At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, you can review the completed Twilio custom authentication script [here](./twilio2FA.py). 
 
-## Fields in Custom Script:
-
-|Field     |Description           |
-|----------|:---------------------|
-|Name    |Name of the Script|
-|Description  |[optional] Description of the script|
-|Programming Language |Currently Python is supported, in the future jscript and Java will be added|
-|Level    | Authentication Level for the authentication, which determines the security level|
-|Location Type    |The script can be stored in a "File" or in "LDAP"|
-|Usage Type       |The script can be written for Web, Native or Both types of applications|
-|Custome Property |Determines the key and value of the custom property, which can be added to the authentication to pass values between steps|
-|Script Box |Script Box will displayed if Location Type is selected as "File", to enter the path of the script|
-|Script     |Script Box will be displayed when Location Type is selected as "LDAP"|
-
 ## Custom Script Location
 
 Custom scripts can either be inserted directly into the Gluu Server interface or you can specify a path to the script. Specifying a path will make script development easier. There is also an option to revert back to a working script if the script is faulty or needs further enhancements. The administrator can select `File` from the `Script Location Type` in oxTrust and the file input box will be displayed:
@@ -35,6 +21,20 @@ The `LDAP` option in the `Script Location Type` can be used to store the script 
 ### Suggested Development Environment
 
 Gluu Server custom scripts are written in [Jython](http://www.jython.org/). We recommended using Eclipse for coding purposes.
+
+## Fields in Custom Script:
+
+|Field     |Description           |
+|----------|:---------------------|
+|Name    |Name of the Script|
+|Description  |[optional] Description of the script|
+|Programming Language |Currently Python is supported, in the future jscript and Java will be added|
+|Level    | Authentication Level for the authentication, which determines the security level|
+|Location Type    |The script can be stored in a "File" or in "LDAP"|
+|Usage Type       |The script can be written for Web, Native or Both types of applications|
+|Custome Property |Determines the key and value of the custom property, which can be added to the authentication to pass values between steps|
+|Script Box |Script Box will displayed if Location Type is selected as "File", to enter the path of the script|
+|Script     |Script Box will be displayed when Location Type is selected as "LDAP"|
 
 ## Create Initial Files
 
