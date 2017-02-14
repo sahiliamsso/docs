@@ -41,9 +41,6 @@ pages:
             - 'Custom Authentication': 'authn-guide/customauthn.md'
         - 'User Management' : 'admin-guide/user-group.md'
         - 'Session Timeout': 'admin-guide/session.md'
-#       - 'SSO Protocols' : 'admin-guide/auth-protocol.md'
-#       - 'Gluu for Mobile' : 'admin-guide/mobile.md'
-#       - 'Self-Services for Users' : 'admin-guide/self-service.md'
         - 'SAML' : 'admin-guide/saml.md'
         #        - 'OAuth2 Grants' : 'admin-guide/oauth2.md'
         - 'OpenID Connect' : 'admin-guide/openid-connect.md'
@@ -73,8 +70,8 @@ pages:
         - 'JSON Properties':
             - 'OxTrust JSON Properties': 'reference/JSON-oxtrust-prop.md'
             - 'OxAuth JSON Properties': 'reference/JSON-oxauth-prop.md'
-        #- 'Ox LDAP Properties':
         - 'Gluu LDAP Schema':
+            - 'Ox LDAP Properties': 'reference/oxldap.md'
             - 'OpenLDAP Schema': 'reference/schema.md'
 - Operation Guide:
         - 'Backups': 'operation/backup.md'
