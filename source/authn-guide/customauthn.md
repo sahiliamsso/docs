@@ -8,19 +8,19 @@ For example, you may want to only prompt users in a certain group for two-factor
 
 This tutorial explains how to write a script to implement a two-step out-of-band authentication using Twilio to send an SMS with a one-time password. At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, you can review the completed Twilio custom authentication script [here](./twilio2FA.py). 
 
+## Suggested Development Environment
+
+Gluu Server custom scripts are written in [Jython](http://www.jython.org/). We recommended using Eclipse for coding purposes.
+
 ## Custom Script Location
 
-Custom scripts can either be inserted directly into the Gluu Server interface or you can specify a path to the script. Specifying a path will make script development easier. There is also an option to revert back to a working script if the script is faulty or needs further enhancements. The administrator can select `File` from the `Script Location Type` in oxTrust and the file input box will be displayed:
+The GUI for custom authentication scripts can be found by navigating to `Configuration` > `Manage Custom Scripts` > `Person Authentication`. Custom scripts can either be inserted directly into the GUI or you can specify a path to the script. We recommend specifying a path in order to make development easier. To specify a path, select `File` from the `Script Location Type` field in oxTrust and the `Script Path` input box will be displayed:
 
 ![image](../img/admin-guide/multi-factor/script_upload_box.png)
 
 The `LDAP` option in the `Script Location Type` can be used to store the script in the LDAP tree once development is complete. Remember that selecting the `LDAP` method requires the script to be copied in the input box that appears upon LDAP selection:
 
 ![image](../img/admin-guide/multi-factor/script_in_ldap.png)
-
-### Suggested Development Environment
-
-Gluu Server custom scripts are written in [Jython](http://www.jython.org/). We recommended using Eclipse for coding purposes.
 
 ## Fields in Custom Script:
 
