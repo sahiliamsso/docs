@@ -2,7 +2,7 @@
 
 ## Overview
 
-Custom authentication scripts provide the ability to implement tailored authentication logic and methods to meet your organizations unique requirements. This tutorial explains how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication. 
+Interception scripts enable you to implement business driven policies for authentication. This tutorial explains how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication. 
 
 At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, 
 you can review the completed Twilio custom authentication script [here](./twilio2FA.py). 
