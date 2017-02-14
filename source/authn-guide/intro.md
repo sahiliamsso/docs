@@ -61,4 +61,4 @@ To configure this feature navigate to `Configuration` > `Manage custom scripts` 
 
 ## Customizing the Login Page 
 
-Learn how to customize the look and feel of Gluu Server pages in the [Design Customizations](../operation/custom-loginpage.md/) section of the Operations Guide.
+Learn how to customize the look and feel of Gluu Server pages in the [Design Customizations](../operation/custom-loginpage.md) section of the Operations Guide.
