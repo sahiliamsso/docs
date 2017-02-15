@@ -1168,11 +1168,9 @@ are available in the <code>/etc/certs</code> folder.</p>
 <li>super_gluu_creds.json</li>
 </ul>
 <h1 id="updating-apache-certificate">Updating Apache Certificate<a class="headerlink" href="#updating-apache-certificate" title="Permanent link">#</a></h1>
-<blockquote>
-<p>Any available tool could be used for updating/renewing certificates. However support may be restricted. 
-By default Gluu uses openssl to update the certificates. </p>
-</blockquote>
-<p>The certificates require manual update from <code>/etc/certs/</code> folder. </p>
+<p>The certificates must be manually updated from the <code>/etc/certs/</code> folder. </p>
+<p>There are many tools that can be used to update and renew certificates. By default Gluu uses OpenSSL. 
+If you have questions about using other tools, like Let's Encrypt, check the <a href="http://support.gluu.org">Gluu support portal</a> for existing threads. If there is no existing information, sign up and open a ticket. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The private key cannot be password protected, and the public key must be base64 X.509. </p>
