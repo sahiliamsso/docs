@@ -258,7 +258,7 @@ Login to the Gluu Server with hostname `https://test.gluu.org` and add the SAML 
 * Navigate to `Configuration` > `Manage Custom Scripts`
 * In the `Person Authentication` tab Select/Add `saml` script 
 
-![custom-script-person-authentication](../img/asimba/cspa.png)
+![custom-script-person-authentication](../img/asimba/add_idp_asimba.png)
 
    - Name: saml
     - Description: Saml Authentication module
