@@ -26,17 +26,15 @@ Additionally the following `json` files are avaibale which are used in different
 
 # Updating Apache Certificate
 
-> Any available tool could be used for updating/renewing certificates. However support may be restricted. 
-By default Gluu uses openssl to update the certificates. 
+The certificates must be manually updated from the `/etc/certs/` folder. 
 
-The certificates require manual update from `/etc/certs/` folder. 
+There are many tools that can be used to update and renew certificates. By default Gluu uses OpenSSL. If you have questions about using other tools, like Let's Encrypt, check the [Gluu support portal](http://support.gluu.org) for existing threads. If there is no existing information, sign up and open a ticket. 
 
 !!! Warning
     The private key cannot be password protected, and the public key must be base64 X.509. 
 
 !!! Note
     Please backup your full `/etc/certs` directory and `cacerts` file under `/etc/pki/java/` folder before updating certificates.
-
 
 Please follow these steps shown below to update the Apache SSL cert:
 
