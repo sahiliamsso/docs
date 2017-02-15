@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2bbc52c-a659-4696-b1a8-cfeeb604c491" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/admin-guide/saml.md" afterPath="$PROJECT_DIR$/source/admin-guide/saml.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,8 +57,8 @@
         <entry file="file://$PROJECT_DIR$/source/admin-guide/saml.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="199">
-                <caret line="260" column="67" lean-forward="false" selection-start-line="260" selection-start-column="67" selection-end-line="260" selection-end-column="67" />
+              <first_editor relative-caret-position="97">
+                <caret line="270" column="88" lean-forward="false" selection-start-line="270" selection-start-column="88" selection-end-line="270" selection-end-column="88" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -858,8 +857,8 @@
     <entry file="file://$PROJECT_DIR$/source/admin-guide/saml.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="199">
-            <caret line="260" column="67" lean-forward="false" selection-start-line="260" selection-start-column="67" selection-end-line="260" selection-end-column="67" />
+          <first_editor relative-caret-position="97">
+            <caret line="270" column="88" lean-forward="false" selection-start-line="270" selection-start-column="88" selection-end-line="270" selection-end-column="88" />
             <folding />
           </first_editor>
           <second_editor />

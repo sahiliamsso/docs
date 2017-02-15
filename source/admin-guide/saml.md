@@ -260,13 +260,15 @@ Login to the Gluu Server with hostname `https://test.gluu.org` and add the SAML 
 
 ![custom-script-person-authentication](../img/asimba/add_idp_asimba.png)
 
-   - Name: saml
-    - Description: Saml Authentication module
+   - Name: asimba
+    - Description: Inbound Saml via Asimba Authentication module
     - Programming Language: Python
-    - Level: 1
+    - Level: 50
     - Location Type: LDAP
     - Usage Type: Web
     - Custom property (key/value)
+       - asimba_saml_certificate_file: /etc/certs/saml/pem
+       - asimba_entity_id: {gluu ce url}/saml eg; https://gluu-ubuntu.workgroup.com/saml
        - saml_deployment_type: enroll
        - saml_idp_sso_target_url: `https://test.gluu.org/asimba/profiles/saml2/sso/web`
        - saml_validate_response: false
