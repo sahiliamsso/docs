@@ -41,10 +41,11 @@ After on form "Dynamic Client Registration" fill next fields:
 ## Integration
 Need to make following changes in your code to integrate AppAuth in your android app
 - Need to put `client_id` and `client_secret` values obtained from dynamic registration response into `idp_configs.xml`(app/res/values/idp_configs.xml) file of your android project. It will look like this.
-    ```
+    
+  ```
     <string name="openid_client_id" translatable="false">"@!F7DA.785D.E01D.FA9E!0001!15E8.5587!0008!989C.7AFA"</string>
     <string name="openid_client_secret" translatable="false">"5823ff27-6bbb-4744-8682-4f54e0c6eb7b"</string>
-    ```
+  ```
 - Above `client_id` and `client_secret` will be use for Authorization.To use these values for authorization need to specify them to Identity Provider.
   your IdentityProvider.java class should be look like this.
   
@@ -66,15 +67,15 @@ Need to make following changes in your code to integrate AppAuth in your android
             android.R.color.white);
   ```
 - We are using a custom scheme to send the OAuth redirect back to app. The library configures the `RedirectUriReceiverActivity` to handle a custom scheme and need to declare this activity into your `AndroidManifest.xml` file by adding following:
-    ```        
+  ```
     <activity android:name="net.openid.appauth.RedirectUriReceiverActivity">
-            <intent-filter>
+                <intent-filter>
                     <action android:name="android.intent.action.VIEW"/>
                     <category android:name="android.intent.category.DEFAULT"/>
                     <category android:name="android.intent.category.BROWSABLE"/>
                     <data android:scheme="appscheme"
-                        android:host="client.example.com"/>
-            </intent-filter>
-    </activity>
-    ```
+                      android:host="client.example.com"/>
+                </intent-filter>
+            </activity>
+  ```
     After completing authorization in custom tab, above custom scheme(appscheme) will redirect back to app.
