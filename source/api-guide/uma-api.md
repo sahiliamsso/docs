@@ -1123,7 +1123,7 @@ following properties:
             <th>body</th>
             <td>true</td>
             <td>The identifier for a resource set to which this client is seeking access. The identifier MUST correspond to a resource set that was previously registered.</td>
-            <td><a href="#RegisterPermissionRequest">RegisterPermissionRequest</a></td>
+            <td><a href="#UmaPermission">UmaPermission</a></td>
         </tr>
     </table>
 - header
@@ -1172,7 +1172,7 @@ following properties:
 
 ## Data Types
 
-### <a name="RegisterPermissionRequest">RegisterPermissionRequest</a>
+### <a name="UmaPermission">UmaPermission</a>
 
 <table border="1">
     <tr>

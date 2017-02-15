@@ -29,7 +29,9 @@ Additionally the following `json` files are avaibale which are used in different
 The certificates must be manually updated from the `/etc/certs/` folder. 
     
 There are many tools that can be used to update and renew certificates. By default Gluu uses OpenSSL. 
-If you have questions about using other tools, like Let's Encrypt, check the [Gluu support portal](http://support.gluu.org) for existing threads. If there is no existing information, sign up and open a ticket. 
+If you have questions about using other tools, like Let'sEncrypt, 
+check the [Gluu support portal](http://support.gluu.org) for existing threads. 
+If there is no existing information, sign up and open a ticket. 
 
 !!! Warning
     The private key cannot be password protected, and the public key must be base64 X.509. 
