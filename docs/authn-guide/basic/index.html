@@ -17,7 +17,7 @@
     
     
       
-        <title>User Authentication Introduction - Gluu Docs</title>
+        <title>Basic Authenticatoin - Gluu Docs</title>
       
     
     
@@ -85,7 +85,7 @@
                 </span>
               
             
-            User Authentication Introduction
+            Basic Authenticatoin
           
         </span>
       </div>
@@ -200,9 +200,9 @@
 		/* width: 120%; */
 		height: 22px;
 		padding: 5px 15px 5px 5px;
-		color: white;
+		color: red;
 		border: none;
-		background: #3f51b5;
+		background: transparent;
 		outline: none;
 		-webkit-appearance: none;
 		z-index: 99;
@@ -344,6 +344,17 @@
           
   <li class="md-nav__item">
     
+      <a href="../../upgrade/manual-update/" title="Upgrade Gluu Server with OpenDJ" class="md-nav__link">
+        Upgrade Gluu Server with OpenDJ
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
       <a href="../../upgrade/update-war/" title="Updating a War File" class="md-nav__link">
         Updating a War File
       </a>
@@ -381,7 +392,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../oxtrust-ui/" title="oxTrust admin UI" class="md-nav__link">
+      <a href="../../admin-guide/oxtrust-ui/" title="oxTrust admin UI" class="md-nav__link">
         oxTrust admin UI
       </a>
     
@@ -392,7 +403,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../custom-script/" title="Interception Scripts" class="md-nav__link">
+      <a href="../../admin-guide/custom-script/" title="Interception Scripts" class="md-nav__link">
         Interception Scripts
       </a>
     
@@ -419,17 +430,28 @@
           
   <li class="md-nav__item">
     
+      <a href="../intro/" title="User Authentication Introduction" class="md-nav__link">
+        User Authentication Introduction
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
       
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        User Authentication Introduction
+        Basic Authenticatoin
       </label>
     
-    <a href="./" title="User Authentication Introduction" class="md-nav__link md-nav__link--active">
-      User Authentication Introduction
+    <a href="./" title="Basic Authenticatoin" class="md-nav__link md-nav__link--active">
+      Basic Authenticatoin
     </a>
     
       
@@ -443,36 +465,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-authentication" title="Basic Authentication" class="md-nav__link">
-    Basic Authentication
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-social-authentication" title="Configuring Social Authentication" class="md-nav__link">
-    Configuring Social Authentication
+  <a href="#configuring-basic-authentication" title="Configuring Basic Authentication" class="md-nav__link">
+    Configuring Basic Authentication
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-multi-factor-authentication" title="Configuring Multi-Factor Authentication" class="md-nav__link">
-    Configuring Multi-Factor Authentication
+  <a href="#basic-authentication-flow" title="Basic Authentication Flow" class="md-nav__link">
+    Basic Authentication Flow
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-account-lockout" title="Configuring Account Lockout" class="md-nav__link">
-    Configuring Account Lockout
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-the-login-page" title="Customizing the Login Page" class="md-nav__link">
-    Customizing the Login Page
+  <a href="#basic-authentication-using-ldap-backends" title="Basic Authentication using LDAP backend(s)" class="md-nav__link">
+    Basic Authentication using LDAP backend(s)
   </a>
   
 </li>
@@ -488,7 +503,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../authn-guide/passport/" title="Social Authentication" class="md-nav__link">
+      <a href="../passport/" title="Social Authentication" class="md-nav__link">
         Social Authentication
       </a>
     
@@ -499,7 +514,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../authn-guide/supergluu/" title="Super Gluu" class="md-nav__link">
+      <a href="../supergluu/" title="Super Gluu" class="md-nav__link">
         Super Gluu
       </a>
     
@@ -510,7 +525,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../authn-guide/U2F/" title="FIDO U2F" class="md-nav__link">
+      <a href="../U2F/" title="FIDO U2F" class="md-nav__link">
         FIDO U2F
       </a>
     
@@ -521,7 +536,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../authn-guide/duo/" title="Duo Security" class="md-nav__link">
+      <a href="../duo/" title="Duo Security" class="md-nav__link">
         Duo Security
       </a>
     
@@ -532,7 +547,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../authn-guide/cert-auth/" title="Certificate Authentication" class="md-nav__link">
+      <a href="../cert-auth/" title="Certificate Authentication" class="md-nav__link">
         Certificate Authentication
       </a>
     
@@ -543,7 +558,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../authn-guide/google/" title="Google" class="md-nav__link">
+      <a href="../google/" title="Google" class="md-nav__link">
         Google
       </a>
     
@@ -554,7 +569,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../authn-guide/otp/" title="HOTP/TOTP" class="md-nav__link">
+      <a href="../otp/" title="HOTP/TOTP" class="md-nav__link">
         HOTP/TOTP
       </a>
     
@@ -565,7 +580,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../authn-guide/customauthn/" title="Custom Authentication" class="md-nav__link">
+      <a href="../customauthn/" title="Custom Authentication" class="md-nav__link">
         Custom Authentication
       </a>
     
@@ -581,7 +596,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../user-group/" title="User Management" class="md-nav__link">
+      <a href="../../admin-guide/user-group/" title="User Management" class="md-nav__link">
         User Management
       </a>
     
@@ -592,7 +607,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../session/" title="Session Timeout" class="md-nav__link">
+      <a href="../../admin-guide/session/" title="Session Timeout" class="md-nav__link">
         Session Timeout
       </a>
     
@@ -603,7 +618,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../saml/" title="SAML" class="md-nav__link">
+      <a href="../../admin-guide/saml/" title="SAML" class="md-nav__link">
         SAML
       </a>
     
@@ -614,7 +629,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../openid-connect/" title="OpenID Connect" class="md-nav__link">
+      <a href="../../admin-guide/openid-connect/" title="OpenID Connect" class="md-nav__link">
         OpenID Connect
       </a>
     
@@ -625,7 +640,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../uma/" title="UMA" class="md-nav__link">
+      <a href="../../admin-guide/uma/" title="UMA" class="md-nav__link">
         UMA
       </a>
     
@@ -636,7 +651,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../scim-uma/" title="SCIM protected by UMA" class="md-nav__link">
+      <a href="../../admin-guide/scim-uma/" title="SCIM protected by UMA" class="md-nav__link">
         SCIM protected by UMA
       </a>
     
@@ -647,7 +662,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../certificate/" title="Certificate Management" class="md-nav__link">
+      <a href="../../admin-guide/certificate/" title="Certificate Management" class="md-nav__link">
         Certificate Management
       </a>
     
@@ -955,6 +970,49 @@
   </li>
 
         
+          
+          
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+    
+    <label class="md-nav__link" for="nav-6-3">
+      Gluu LDAP Schema
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-6-3">
+        Gluu LDAP Schema
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../reference/oxldap/" title="Ox LDAP Properties" class="md-nav__link">
+        Ox LDAP Properties
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../reference/schema/" title="OpenLDAP Schema" class="md-nav__link">
+        OpenLDAP Schema
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1079,36 +1137,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-authentication" title="Basic Authentication" class="md-nav__link">
-    Basic Authentication
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-social-authentication" title="Configuring Social Authentication" class="md-nav__link">
-    Configuring Social Authentication
+  <a href="#configuring-basic-authentication" title="Configuring Basic Authentication" class="md-nav__link">
+    Configuring Basic Authentication
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-multi-factor-authentication" title="Configuring Multi-Factor Authentication" class="md-nav__link">
-    Configuring Multi-Factor Authentication
+  <a href="#basic-authentication-flow" title="Basic Authentication Flow" class="md-nav__link">
+    Basic Authentication Flow
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-account-lockout" title="Configuring Account Lockout" class="md-nav__link">
-    Configuring Account Lockout
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-the-login-page" title="Customizing the Login Page" class="md-nav__link">
-    Customizing the Login Page
+  <a href="#basic-authentication-using-ldap-backends" title="Basic Authentication using LDAP backend(s)" class="md-nav__link">
+    Basic Authentication using LDAP backend(s)
   </a>
   
 </li>
@@ -1124,53 +1175,63 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/GluuFederation/docs/blob/master/source/admin-guide\user-authentications.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/GluuFederation/docs/blob/master/source/authn-guide\basic.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                <h1 id="user-authentication-introduction">User Authentication Introduction<a class="headerlink" href="#user-authentication-introduction" title="Permanent link">#</a></h1>
-<p>The Gluu Server is most frequently used to protect web-accessible resources. People navigate to a protected webpage and the application redirects the person to the Gluu Server for authentication and authorization. The Gluu Server determines who the person is, and whether the person has the right to access the protected page. After a successful authentication, the Gluu Server redirects the person back to the protected page with an active session.</p>
-<p>The Gluu Server is very flexible in handling authentication. By default, the Gluu Server uses username and password authentication. However, using the Gluu Server's interception script infrastructure, you can define multiple authentication methods and custom business logic for complex multi-step authentication workflows. You can have multiple authentication mechanisms active at the same time--Web or mobile clients can request a certain authentication type by using standard OpenID Connect request parameters. </p>
-<p>Interception scripts allow you to configure authentication processes and customize how they are applied. Sophisticated authentication logic can implement adaptive authentication. For example, you can add extra authentication steps based on contextual information such as fraud scores, location, or browser profiling. You can also customize the look and feel of a web authentication: html, css, images and javascript can be externalized and managed by your organization.</p>
-<h2 id="basic-authentication">Basic Authentication<a class="headerlink" href="#basic-authentication" title="Permanent link">#</a></h2>
-<p>By default, LDAP is used to authenticate usernames and passwords. You can set a default authentication method for access to external applications, as well as access to the Gluu Server UI. Until additional authentication mechanisms are enabled via custom scripts, default authentication will always be some variation of username and password. </p>
-<h2 id="configuring-social-authentication">Configuring Social Authentication<a class="headerlink" href="#configuring-social-authentication" title="Permanent link">#</a></h2>
-<p>During deployment of the Gluu Server you are presented with an option to deploy Passport.js. With over 300 existing "strategies", Passport.js provides a crowd-sourced approach to supporting social login at many popular consumer IDPs. Passport not only normalizes authentication, it also provides a standard mapping for user claims.</p>
-<p>Learn <a href="../../authn-guide/passport.md/">how to use Passport.js</a> to configure social login. </p>
-<h2 id="configuring-multi-factor-authentication">Configuring Multi-Factor Authentication<a class="headerlink" href="#configuring-multi-factor-authentication" title="Permanent link">#</a></h2>
-<p>Interception scripts are used to implement multi-factor authentication. A number of scripts are included out-of-the-box, including scripts to support FIDO U2F tokens (like Vasco and Yubikey), Gluu's free Android and iOS two-factor authentication application called Super Gluu, certificate authentication, Duo Security, One-Time Passwords, and more. </p>
-<p>Implementation guides for each of the pre-supported authentication mechanisms listed above can be found in the pages that follow in this User Authentication Guide.</p>
-<p>In addition, organizations frequently have custom requirements for multi-factor authentication. For instance, only users from a certain group should be prompted for two-factor authentication, or, only prompt users for two-factor authentication when trying to access protected resources from an unknown IP address. Custom interception scripts allow you to implement these types of policies, as well as any other business driven policy that can be scripted. </p>
-<p>Learn more about <a href="../custom-script/">how to write a custom interception script</a>.</p>
-<p>Review our <a href="../../authn-guide/customauthn/">custom authentication script tutorial</a>, where we demonstrate how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication mechanism.</p>
-<h2 id="configuring-account-lockout">Configuring Account Lockout<a class="headerlink" href="#configuring-account-lockout" title="Permanent link">#</a></h2>
-<p>The Gluu Server is shipped with a custom authentication script that implements a 
-basic account lockout policy which will deactivate a users account 
-after a set number of consecutive failed login attempts.</p>
-<p>The script uses authentication settings provided in the <code>Manage LDAP Authentication</code> tab within <code>Configuration</code> &gt; <code>Manage Authentication</code>. In case the set threshold of failed logins is reached, the “gluuStatus” attribute of the user in question will be set to <code>inactive</code> and login counter is reset to zero. The login counter will also be reset to zero if several unsuccessful login attempts are finally followed by a successful one (before exceeding the limit). You can re-enable a locked account by settings 
-its <code>gluuStatus</code> attribute back to <code>active</code> via web UI.</p>
-<p>To configure this feature navigate to <code>Configuration</code> &gt; <code>Manage custom scripts</code> and find <code>basic_lock</code> script on the <code>Person Authentication</code> tab. There are 2 configurable properties:</p>
-<ul>
-<li>
-<p><code>Invalid_login_count_attribute</code> sets the name of the attribute used to store the current amount of failed login attempts. It assumes your schema already allows such an attribute to appear in user entries. The default attribute is <code>oxCountInvalidLogin</code> and it’s already supported by Gluu’s LDAP schema.</p>
-</li>
-<li>
-<p><code>Maximum_invalid_login_attemps</code> sets the threshold for number of failed login attempts before the user gets locked out.</p>
-</li>
-</ul>
-<p><img alt="acct-update" src="../../img/admin-guide/user/acct-lockout-config.png" /></p>
+                <h1 id="authentication-against-ldap-aka-basic-internal">Authentication against LDAP (AKA “Basic”, “Internal”)<a class="headerlink" href="#authentication-against-ldap-aka-basic-internal" title="Permanent link">#</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
+<p>Basic authentication is the default authentication method used by the Gluu Server. Basic authentication relies on a successful 
+LDAP BIND operation against an LDAP directory--either the local LDAP included in the Gluu Server, or a backend LDAP server like Active Directory that has been configured for use with the Gluu Server via <a href="../../admin-guide/user-group.md/#ldap-synchronization">Cache Refresh</a>. </p>
+<h2 id="configuring-basic-authentication">Configuring Basic Authentication<a class="headerlink" href="#configuring-basic-authentication" title="Permanent link">#</a></h2>
+<p>Follow the steps below to configure the Basic authentication method:</p>
 <ol>
-<li>After script is configured tick the <code>Enabled</code> checkbox </li>
-<li>Click the <code>Update</code> button </li>
-<li>Click on <code>Configuration</code> &gt; <code>Manage Authentication</code> on the left menu and select <code>Default Authentication Method</code> tab. </li>
-<li>Select <code>basic_lock</code> authentication method for oxAuth and/or oxTrust.</li>
-<li>Click the <code>Update</code> button there.
-<img alt="acct-update" src="../../img/admin-guide/user/acct-lockout-update.png" /></li>
+<li>Click on <code>Configuration</code> &gt; <code>Manage authentication</code> 
+<img alt="basic" src="../../img/user-authn/basicauthn.png" /></li>
 </ol>
-<h2 id="customizing-the-login-page">Customizing the Login Page<a class="headerlink" href="#customizing-the-login-page" title="Permanent link">#</a></h2>
-<!--Learn how to customize the look and feel of Gluu Server pages in the Design Customizations(add-link) section of the Operations Guide.-->
-
-<p>Design Customization of Login page will be updated shortly.</p>
+<p>You can find a more detailed description of each field in 
+<a href="../../admin-guide/oxtrust-ui/#manage-authentication">manage authentication</a> 
+section under OxTrust admin UI. </p>
+<p>Let’s only touch concepts of <code>primary key</code> and <code>local primary key</code> for now:</p>
+<p>•Primary key - name of LDAP attribute used to look up user entries in backend LDAP directory. </p>
+<p>•Local primary key -  name of LDAP attribute used to look up user entries in Gluu’s 
+internal LDAP directory.</p>
+<p><em>Note: A primary key can also be considered a <code>uid</code> (unique identifier).</em></p>
+<h2 id="basic-authentication-flow">Basic Authentication Flow<a class="headerlink" href="#basic-authentication-flow" title="Permanent link">#</a></h2>
+<p>Basic authentication flow can be divided into three set of phases:</p>
+<p>1.String provided by user in the “Login” field of the login form is treated as a local key. 
+It becomes a part of LDAP search filter similar to 
+<code>&amp;(..set of predefined filter clauses..)(local_primary_key=provided_login_name)</code>. 
+If a user entry conforming to this filter is found in Gluu’s internal LDAP directory and 
+its <code>gluuStatus</code> attribute is set to <code>active</code>, login flow continues, 
+otherwise it’s deemed unsuccessful. That means that even in case when backend 
+directory is used for authentication, a mirrored user entry still must be present in 
+Gluu’s internal directory all the time</p>
+<p>2.String provided by user in the “Login” field of the login form is now treated as a 
+primary key. It becomes a part of LDAP search filter similar to 
+<code>&amp;(..set hardcoded clauses..)(primary_key=provided_login_name)</code>. 
+If a user entry conforming to this filter is found in specified backend LDAP directory 
+login flows continues, otherwise it’s deemed unsuccessful</p>
+<p>3.LDAP BIND operation is initiated against backend LDAP directory with DN 
+of user entry found on step 2; for a password it will use string provided 
+by user in the “Password” field of the login form. If bind results in success, 
+login flow ends and user is treated as authenticated.</p>
+<h2 id="basic-authentication-using-ldap-backends">Basic Authentication using LDAP backend(s)<a class="headerlink" href="#basic-authentication-using-ldap-backends" title="Permanent link">#</a></h2>
+<p>By default Gluu is configured to use its own internal LDAP directory instead of 
+some remote LDAP backend, so LDAP operations on steps 2 and 3 from the authentication flow 
+will be also executed against it. </p>
+<p>As many organizations already have existing LDAP directories with users’ 
+data in their network which they would like to put to use, one of the first steps for 
+them will be changing this default behavior by providing their backend server’s DNS name 
+or ip address  in <code>Server</code> field. </p>
+<p>As login name provided by user will be used as a search 
+term in searches both against remote and internal directories, that means there must be 
+strict relation between user entries in those directories, ensuring they both will succeed. </p>
+<p>Most simple way to achieve this is to employ Cache Refresh feature which allows to set 
+mappings for user attributes imported from a backend directory. 
+It also allows to customize default mapping behavior with Jython-based scripts. 
+You can find out more about Cache Refresh a.k.a 
+<a href="../../user-group/#ldap-synchronization">LDAP Synchronization</a>.</p>
               
             </article>
           </div>
@@ -1183,7 +1244,7 @@ its <code>gluuStatus</code> attribute back to <code>active</code> via web UI.</p
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../custom-script/" title="Interception Scripts" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../intro/" title="User Authentication Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1192,13 +1253,13 @@ its <code>gluuStatus</code> attribute back to <code>active</code> via web UI.</p
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Interception Scripts
+                User Authentication Introduction
               </span>
             </div>
           </a>
         
         
-          <a href="../../authn-guide/passport/" title="Social Authentication" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../passport/" title="Social Authentication" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">

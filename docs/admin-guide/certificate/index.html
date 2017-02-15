@@ -196,9 +196,9 @@
 		/* width: 120%; */
 		height: 22px;
 		padding: 5px 15px 5px 5px;
-		color: white;
+		color: red;
 		border: none;
-		background: #3f51b5;
+		background: transparent;
 		outline: none;
 		-webkit-appearance: none;
 		z-index: 99;
@@ -340,6 +340,17 @@
           
   <li class="md-nav__item">
     
+      <a href="../../upgrade/manual-update/" title="Upgrade Gluu Server with OpenDJ" class="md-nav__link">
+        Upgrade Gluu Server with OpenDJ
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
       <a href="../../upgrade/update-war/" title="Updating a War File" class="md-nav__link">
         Updating a War File
       </a>
@@ -415,8 +426,19 @@
           
   <li class="md-nav__item">
     
-      <a href="../user-authentications/" title="User Authentication Introduction" class="md-nav__link">
+      <a href="../../authn-guide/intro/" title="User Authentication Introduction" class="md-nav__link">
         User Authentication Introduction
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../authn-guide/basic/" title="Basic Authenticatoin" class="md-nav__link">
+        Basic Authenticatoin
       </a>
     
   </li>
@@ -907,6 +929,49 @@
   </li>
 
         
+          
+          
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+    
+    <label class="md-nav__link" for="nav-6-3">
+      Gluu LDAP Schema
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-6-3">
+        Gluu LDAP Schema
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../reference/oxldap/" title="Ox LDAP Properties" class="md-nav__link">
+        Ox LDAP Properties
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../reference/schema/" title="OpenLDAP Schema" class="md-nav__link">
+        OpenLDAP Schema
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1121,8 +1186,17 @@ are available in the <code>/etc/certs</code> folder.</p>
 <li>Import certificate in to Java Keystore(cacerts):<br/> <code>keytool -importcert -file httpd.der -keystore cacerts -alias &lt;hostname_of_your_Gluu_Server&gt;_httpd</code></li>
 </ul>
 </li>
-<li>Restart LDAP server, apache2/httpd and tomcat.</li>
+<li>Restart LDAP server, apache2/httpd and Identity Services.</li>
 </ul>
+<pre><code>service solserver stop
+service apache2 stop
+service identity stop
+:
+service solserver start
+service apache2 start
+service identity start
+</code></pre>
+
 <h2 id="install-intermediate-certificates">Install Intermediate Certificates<a class="headerlink" href="#install-intermediate-certificates" title="Permanent link">#</a></h2>
 <p>Please follow the steps below to install intermediate certificates:</p>
 <ol>

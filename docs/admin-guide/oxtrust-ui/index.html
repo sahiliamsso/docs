@@ -196,9 +196,9 @@
 		/* width: 120%; */
 		height: 22px;
 		padding: 5px 15px 5px 5px;
-		color: white;
+		color: red;
 		border: none;
-		background: #3f51b5;
+		background: transparent;
 		outline: none;
 		-webkit-appearance: none;
 		z-index: 99;
@@ -331,6 +331,17 @@
     
       <a href="../../upgrade/" title="Upgrade Gluu Server" class="md-nav__link">
         Upgrade Gluu Server
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../upgrade/manual-update/" title="Upgrade Gluu Server with OpenDJ" class="md-nav__link">
+        Upgrade Gluu Server with OpenDJ
       </a>
     
   </li>
@@ -651,8 +662,19 @@
           
   <li class="md-nav__item">
     
-      <a href="../user-authentications/" title="User Authentication Introduction" class="md-nav__link">
+      <a href="../../authn-guide/intro/" title="User Authentication Introduction" class="md-nav__link">
         User Authentication Introduction
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../authn-guide/basic/" title="Basic Authenticatoin" class="md-nav__link">
+        Basic Authenticatoin
       </a>
     
   </li>
@@ -1119,6 +1141,49 @@
     
       <a href="../../reference/JSON-oxauth-prop/" title="OxAuth JSON Properties" class="md-nav__link">
         OxAuth JSON Properties
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+    
+    <label class="md-nav__link" for="nav-6-3">
+      Gluu LDAP Schema
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-6-3">
+        Gluu LDAP Schema
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../reference/oxldap/" title="Ox LDAP Properties" class="md-nav__link">
+        Ox LDAP Properties
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../reference/schema/" title="OpenLDAP Schema" class="md-nav__link">
+        OpenLDAP Schema
       </a>
     
   </li>
@@ -1712,7 +1777,7 @@ available. For more information, see the reference page detailing each type of <
 <p>Custom attributes can be added by clicking the <code>Add Attribute</code> button and completing the simple form. Note that custom attributes must already be present in the LDAP server in order for them to be available for release by the Gluu Server. Adding an attribute here is like registering it in the Gluu Server--in order to release an attribute during a SAML or OpenID Connect transaction, the Gluu Server needs to know it exists. </p>
 <p>Attributes, as they pertain to SSO, are covered more thoroughly in the <a href="../saml/#saml-Attributes">SAML Attributes</a> and <a href="../openid-connect/#scopes">OpenID Connect Scopes</a> sections of the docs.</p>
 <h3 id="cache-refresh">Cache Refresh<a class="headerlink" href="#cache-refresh" title="Permanent link">#</a></h3>
-<p>Cache Refresh, a.k.a. LDAP Synchronization, is the process of connecting one or more existing backend LDAP servers, like Microsoft Active Directory, with the Gluu Server's local LDAP server. <code>Cache Refresh</code> periodically searches these data sources, compares the results to previous searches, and if a changed user account is found, it is updated.The frequency of cache refresh is also set from this page via the <code>Polling interval (minutes)</code>. The <code>key attribute(s)</code> is used to correlate a user if the user is found in more then one LDAP server. In this case, the two entries are joined. The source attributes specify which attributes will be pulled from the backend LDAP server. The backend server address, bind DN and other connection information is speciifed in the <code>Source Backend LDAP Servers</code> tab. More information on <a href="../user-group.md/#ldap-synchronization">LDAP Syncronization</a> can be found in the user management section of the docs. </p>
+<p>Cache Refresh, a.k.a. LDAP Synchronization, is the process of connecting one or more existing backend LDAP servers, like Microsoft Active Directory, with the Gluu Server's local LDAP server. <code>Cache Refresh</code> periodically searches these data sources, compares the results to previous searches, and if a changed user account is found, it is updated.The frequency of cache refresh is also set from this page via the <code>Polling interval (minutes)</code>. The <code>key attribute(s)</code> is used to correlate a user if the user is found in more then one LDAP server. In this case, the two entries are joined. The source attributes specify which attributes will be pulled from the backend LDAP server. The backend server address, bind DN and other connection information is speciifed in the <code>Source Backend LDAP Servers</code> tab. More information on <a href="../user-group/#ldap-synchronization">LDAP Syncronization</a> can be found in the user management section of the docs. </p>
 <h3 id="configure-log-viewer-view-log-file">Configure Log Viewer / View Log File<a class="headerlink" href="#configure-log-viewer-view-log-file" title="Permanent link">#</a></h3>
 <p>This tool can be used to view file system logs. If you don't like to ssh, 
 Log Viewer is your friend! Several common logs are preconfigured, or you can define 

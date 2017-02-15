@@ -200,9 +200,9 @@
 		/* width: 120%; */
 		height: 22px;
 		padding: 5px 15px 5px 5px;
-		color: white;
+		color: red;
 		border: none;
-		background: #3f51b5;
+		background: transparent;
 		outline: none;
 		-webkit-appearance: none;
 		z-index: 99;
@@ -344,6 +344,17 @@
           
   <li class="md-nav__item">
     
+      <a href="../../upgrade/manual-update/" title="Upgrade Gluu Server with OpenDJ" class="md-nav__link">
+        Upgrade Gluu Server with OpenDJ
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
       <a href="../../upgrade/update-war/" title="Updating a War File" class="md-nav__link">
         Updating a War File
       </a>
@@ -419,8 +430,19 @@
           
   <li class="md-nav__item">
     
-      <a href="../../admin-guide/user-authentications/" title="User Authentication Introduction" class="md-nav__link">
+      <a href="../intro/" title="User Authentication Introduction" class="md-nav__link">
         User Authentication Introduction
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../basic/" title="Basic Authenticatoin" class="md-nav__link">
+        Basic Authenticatoin
       </a>
     
   </li>
@@ -538,8 +560,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fields-in-custom-script" title="Fields in Custom Script:" class="md-nav__link">
-    Fields in Custom Script:
+  <a href="#suggested-development-environment" title="Suggested Development Environment" class="md-nav__link">
+    Suggested Development Environment
   </a>
   
 </li>
@@ -549,18 +571,12 @@
     Custom Script Location
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#suggested-development-environment" title="Suggested Development Environment" class="md-nav__link">
-    Suggested Development Environment
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#fields-in-custom-script" title="Fields in Custom Script:" class="md-nav__link">
+    Fields in Custom Script:
+  </a>
   
 </li>
       
@@ -1044,6 +1060,49 @@
   </li>
 
         
+          
+          
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+    
+    <label class="md-nav__link" for="nav-6-3">
+      Gluu LDAP Schema
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-6-3">
+        Gluu LDAP Schema
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../reference/oxldap/" title="Ox LDAP Properties" class="md-nav__link">
+        Ox LDAP Properties
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../reference/schema/" title="OpenLDAP Schema" class="md-nav__link">
+        OpenLDAP Schema
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1175,8 +1234,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fields-in-custom-script" title="Fields in Custom Script:" class="md-nav__link">
-    Fields in Custom Script:
+  <a href="#suggested-development-environment" title="Suggested Development Environment" class="md-nav__link">
+    Suggested Development Environment
   </a>
   
 </li>
@@ -1186,18 +1245,12 @@
     Custom Script Location
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#suggested-development-environment" title="Suggested Development Environment" class="md-nav__link">
-    Suggested Development Environment
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#fields-in-custom-script" title="Fields in Custom Script:" class="md-nav__link">
+    Fields in Custom Script:
+  </a>
   
 </li>
       
@@ -1308,9 +1361,16 @@
                 
                 <h1 id="custom-authentication-script-tutorial">Custom Authentication Script Tutorial<a class="headerlink" href="#custom-authentication-script-tutorial" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>Custom authentication scripts provide the ability to implement tailored authentication logic and methods to meet your organizations unique requirements. This tutorial explains how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication. </p>
-<p>At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, 
-you can review the completed Twilio custom authentication script <a href="../twilio2FA.py">here</a>. </p>
+<p>Interception scripts enable you to customize your Gluu authentication service. In an interception script you can call external APIs, like a commercial authentication service, a DDoS protection service, a fraud detection service, etc., to make your authentication process more secure. In addition, interception scripts give you the ability to implement business driven policies during authentication. </p>
+<p>For example, you may want to only prompt users in a certain group for two-factor authentication. Or, you may want to only prompt a user for two-factor authentication if the request is coming from an unknown IP address. These types of policies can be incorporated into your authentication service by writing an interception script that uses the <a href="#methods">methods</a> described below.</p>
+<p>This tutorial explains how to write a script to implement a two-step out-of-band authentication using Twilio to send an SMS with a one-time password. At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, you can review the completed Twilio custom authentication script <a href="../twilio2FA.py">here</a>. </p>
+<h2 id="suggested-development-environment">Suggested Development Environment<a class="headerlink" href="#suggested-development-environment" title="Permanent link">#</a></h2>
+<p>Gluu Server custom scripts are written in <a href="http://www.jython.org/">Jython</a>. We recommended using Eclipse for coding purposes.</p>
+<h2 id="custom-script-location">Custom Script Location<a class="headerlink" href="#custom-script-location" title="Permanent link">#</a></h2>
+<p>The GUI for custom authentication scripts can be found by navigating to <code>Configuration</code> &gt; <code>Manage Custom Scripts</code> &gt; <code>Person Authentication</code>. Custom scripts can either be inserted directly into the GUI or you can specify a path to the script. We recommend specifying a path in order to make development easier. To specify a path, select <code>File</code> from the <code>Script Location Type</code> field in oxTrust and the <code>Script Path</code> input box will be displayed:</p>
+<p><img alt="image" src="../../img/admin-guide/multi-factor/script_upload_box.png" /></p>
+<p>The <code>LDAP</code> option in the <code>Script Location Type</code> can be used to store the script in the LDAP tree once development is complete. Remember that selecting the <code>LDAP</code> method requires the script to be copied in the input box that appears upon LDAP selection:</p>
+<p><img alt="image" src="../../img/admin-guide/multi-factor/script_in_ldap.png" /></p>
 <h2 id="fields-in-custom-script">Fields in Custom Script:<a class="headerlink" href="#fields-in-custom-script" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -1358,13 +1418,6 @@ you can review the completed Twilio custom authentication script <a href="../twi
 </tr>
 </tbody>
 </table>
-<h2 id="custom-script-location">Custom Script Location<a class="headerlink" href="#custom-script-location" title="Permanent link">#</a></h2>
-<p>Custom scripts can either be inserted directly into the Gluu Server interface or you can specify a path to the script. Specifying a path will make script development easier. There is also an option to revert back to a working script if the script is faulty or needs further enhancements. The administrator can select <code>File</code> from the <code>Script Location Type</code> in oxTrust and the file input box will be displayed:</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/script_upload_box.png" /></p>
-<p>The <code>LDAP</code> option in the <code>Script Location Type</code> can be used to store the script in the LDAP tree once development is complete. Remember that selecting the <code>LDAP</code> method requires the script to be copied in the input box that appears upon LDAP selection:</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/script_in_ldap.png" /></p>
-<h3 id="suggested-development-environment">Suggested Development Environment<a class="headerlink" href="#suggested-development-environment" title="Permanent link">#</a></h3>
-<p>Gluu Server custom scripts are written in <a href="http://www.jython.org/">Jython</a>. We recommended using Eclipse for coding purposes.</p>
 <h2 id="create-initial-files">Create Initial Files<a class="headerlink" href="#create-initial-files" title="Permanent link">#</a></h2>
 <p>Create the following files:</p>
 <ul>

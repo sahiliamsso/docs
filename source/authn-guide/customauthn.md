@@ -2,10 +2,25 @@
 
 ## Overview
 
-Custom authentication scripts provide the ability to implement tailored authentication logic and methods to meet your organizations unique requirements. This tutorial explains how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication. 
+Interception scripts enable you to customize your Gluu authentication service. In an interception script you can call external APIs, like a commercial authentication service, a DDoS protection service, a fraud detection service, etc., to make your authentication process more secure. In addition, interception scripts give you the ability to implement business driven policies during authentication. 
 
-At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, 
-you can review the completed Twilio custom authentication script [here](./twilio2FA.py). 
+For example, you may want to only prompt users in a certain group for two-factor authentication. Or, you may want to only prompt a user for two-factor authentication if the request is coming from an unknown IP address. These types of policies can be incorporated into your authentication service by writing an interception script that uses the [methods](#methods) described below.
+
+This tutorial explains how to write a script to implement a two-step out-of-band authentication using Twilio to send an SMS with a one-time password. At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, you can review the completed Twilio custom authentication script [here](./twilio2FA.py). 
+
+## Suggested Development Environment
+
+Gluu Server custom scripts are written in [Jython](http://www.jython.org/). We recommended using Eclipse for coding purposes.
+
+## Custom Script Location
+
+The GUI for custom authentication scripts can be found by navigating to `Configuration` > `Manage Custom Scripts` > `Person Authentication`. Custom scripts can either be inserted directly into the GUI or you can specify a path to the script. We recommend specifying a path in order to make development easier. To specify a path, select `File` from the `Script Location Type` field in oxTrust and the `Script Path` input box will be displayed:
+
+![image](../img/admin-guide/multi-factor/script_upload_box.png)
+
+The `LDAP` option in the `Script Location Type` can be used to store the script in the LDAP tree once development is complete. Remember that selecting the `LDAP` method requires the script to be copied in the input box that appears upon LDAP selection:
+
+![image](../img/admin-guide/multi-factor/script_in_ldap.png)
 
 ## Fields in Custom Script:
 
@@ -20,20 +35,6 @@ you can review the completed Twilio custom authentication script [here](./twilio
 |Custome Property |Determines the key and value of the custom property, which can be added to the authentication to pass values between steps|
 |Script Box |Script Box will displayed if Location Type is selected as "File", to enter the path of the script|
 |Script     |Script Box will be displayed when Location Type is selected as "LDAP"|
-
-## Custom Script Location
-
-Custom scripts can either be inserted directly into the Gluu Server interface or you can specify a path to the script. Specifying a path will make script development easier. There is also an option to revert back to a working script if the script is faulty or needs further enhancements. The administrator can select `File` from the `Script Location Type` in oxTrust and the file input box will be displayed:
-
-![image](../img/admin-guide/multi-factor/script_upload_box.png)
-
-The `LDAP` option in the `Script Location Type` can be used to store the script in the LDAP tree once development is complete. Remember that selecting the `LDAP` method requires the script to be copied in the input box that appears upon LDAP selection:
-
-![image](../img/admin-guide/multi-factor/script_in_ldap.png)
-
-### Suggested Development Environment
-
-Gluu Server custom scripts are written in [Jython](http://www.jython.org/). We recommended using Eclipse for coding purposes.
 
 ## Create Initial Files
 

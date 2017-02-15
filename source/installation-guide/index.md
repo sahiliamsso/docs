@@ -1,6 +1,6 @@
 # Preparing VM for Gluu Server Installation
 ## Overview
-Thank you for your interest in the Gluu Server! This document will provide instructions for preparing your VM for a standard Gluu Server deployment. After your servers are ready move on to the [installation instructions](./install.md/). Good luck with your deployment, and welcome to the community!
+Thank you for your interest in the Gluu Server! This document will provide instructions for preparing your VM for a standard Gluu Server deployment. After your servers are ready move on to the [installation instructions](../installation-guide/install.md). Good luck with your deployment, and welcome to the community!
 
 ## Minimum Requirements
 
@@ -51,6 +51,8 @@ is set in `/proc/sys/fs/file-max`.
 ```
 # ulimit -n unlimited
 ```
+!!!Note:
+    Centos by default will not accept more than the default maximum of 65535. You may get an error while performing the above command.
 
 * Restart your system.     
 

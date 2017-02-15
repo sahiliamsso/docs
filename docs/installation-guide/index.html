@@ -196,9 +196,9 @@
 		/* width: 120%; */
 		height: 22px;
 		padding: 5px 15px 5px 5px;
-		color: white;
+		color: red;
 		border: none;
-		background: #3f51b5;
+		background: transparent;
 		outline: none;
 		-webkit-appearance: none;
 		z-index: 99;
@@ -425,6 +425,17 @@
           
   <li class="md-nav__item">
     
+      <a href="../upgrade/manual-update/" title="Upgrade Gluu Server with OpenDJ" class="md-nav__link">
+        Upgrade Gluu Server with OpenDJ
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
       <a href="../upgrade/update-war/" title="Updating a War File" class="md-nav__link">
         Updating a War File
       </a>
@@ -500,8 +511,19 @@
           
   <li class="md-nav__item">
     
-      <a href="../admin-guide/user-authentications/" title="User Authentication Introduction" class="md-nav__link">
+      <a href="../authn-guide/intro/" title="User Authentication Introduction" class="md-nav__link">
         User Authentication Introduction
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../authn-guide/basic/" title="Basic Authenticatoin" class="md-nav__link">
+        Basic Authenticatoin
       </a>
     
   </li>
@@ -978,6 +1000,49 @@
   </li>
 
         
+          
+          
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+    
+    <label class="md-nav__link" for="nav-6-3">
+      Gluu LDAP Schema
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-6-3">
+        Gluu LDAP Schema
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../reference/oxldap/" title="Ox LDAP Properties" class="md-nav__link">
+        Ox LDAP Properties
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../reference/schema/" title="OpenLDAP Schema" class="md-nav__link">
+        OpenLDAP Schema
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1180,7 +1245,7 @@
                 
                 <h1 id="preparing-vm-for-gluu-server-installation">Preparing VM for Gluu Server Installation<a class="headerlink" href="#preparing-vm-for-gluu-server-installation" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>Thank you for your interest in the Gluu Server! This document will provide instructions for preparing your VM for a standard Gluu Server deployment. After your servers are ready move on to the <a href="../install.md/">installation instructions</a>. Good luck with your deployment, and welcome to the community!</p>
+<p>Thank you for your interest in the Gluu Server! This document will provide instructions for preparing your VM for a standard Gluu Server deployment. After your servers are ready move on to the <a href="install/">installation instructions</a>. Good luck with your deployment, and welcome to the community!</p>
 <h2 id="minimum-requirements">Minimum Requirements<a class="headerlink" href="#minimum-requirements" title="Permanent link">#</a></h2>
 <p>The Gluu Server Community Edition (CE) needs to be deployed on a server or VM with the following <strong>minimum</strong> requirements. </p>
 <table>
@@ -1262,6 +1327,10 @@ is set in <code>/proc/sys/fs/file-max</code>.</li>
 <pre><code># ulimit -n unlimited
 </code></pre>
 
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Centos by default will not accept more than the default maximum of 65535. You may get an error while performing the above command.</p>
+</div>
 <ul>
 <li>Restart your system.     </li>
 </ul>

@@ -41,7 +41,16 @@ Please follow these steps shown below to update the Apache SSL cert:
 - Import 'httpd.der' into the java keystore
 / Convertion to DER, command:<br/> `openssl x509 -outform der -in httpd.crt -out httpd.der`
     - Import certificate in to Java Keystore(cacerts):<br/> `keytool -importcert -file httpd.der -keystore cacerts -alias <hostname_of_your_Gluu_Server>_httpd`
-- Restart LDAP server, apache2/httpd and tomcat.
+- Restart LDAP server, apache2/httpd and Identity Services.
+```
+service solserver stop
+service apache2 stop
+service identity stop
+:
+service solserver start
+service apache2 start
+service identity start
+```
 
 ## Install Intermediate Certificates
 Please follow the steps below to install intermediate certificates:
