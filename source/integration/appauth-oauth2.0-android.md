@@ -43,8 +43,8 @@ Need to make following changes in your code to integrate AppAuth in your android
 - Need to put `client_id` and `client_secret` values obtained from dynamic registration response into `idp_configs.xml`(app/res/values/idp_configs.xml) file of your android project. It will look like this.
     
   ```
-    <string name="openid_client_id" translatable="false">"@!F7DA.785D.E01D.FA9E!0001!15E8.5587!0008!989C.7AFA"</string>
-    <string name="openid_client_secret" translatable="false">"5823ff27-6bbb-4744-8682-4f54e0c6eb7b"</string>
+    <string name="openid_client_id" translatable="false">put client_id here</string>
+    <string name="openid_client_secret" translatable="false">put client_secret here</string>
   ```
 - Above `client_id` and `client_secret` will be use for Authorization.To use these values for authorization need to specify them to Identity Provider.
   your IdentityProvider.java class should be look like this.
