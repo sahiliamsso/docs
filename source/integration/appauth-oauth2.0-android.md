@@ -67,6 +67,7 @@ Need to make following changes in your code to integrate AppAuth in your android
             android.R.color.white);
   ```
 - We are using a custom scheme to send the OAuth redirect back to app. The library configures the `RedirectUriReceiverActivity` to handle a custom scheme and need to declare this activity into your `AndroidManifest.xml` file by adding following:
+  
   ```
     <activity android:name="net.openid.appauth.RedirectUriReceiverActivity">
                 <intent-filter>
