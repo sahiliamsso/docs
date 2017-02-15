@@ -1168,6 +1168,10 @@ are available in the <code>/etc/certs</code> folder.</p>
 <li>super_gluu_creds.json</li>
 </ul>
 <h1 id="updating-apache-certificate">Updating Apache Certificate<a class="headerlink" href="#updating-apache-certificate" title="Permanent link">#</a></h1>
+<blockquote>
+<p>Any available tool could be used for updating/renewing certificates. However support may be restricted. 
+By default Gluu uses openssl to update the certificates. </p>
+</blockquote>
 <p>The certificates require manual update from <code>/etc/certs/</code> folder. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1183,7 +1187,10 @@ are available in the <code>/etc/certs</code> folder.</p>
 <li>Rename them to <code>httpd.key</code> and <code>httpd.crt</code> respectively</li>
 <li>Import 'httpd.der' into the java keystore
 / Convertion to DER, command:<br/> <code>openssl x509 -outform der -in httpd.crt -out httpd.der</code><ul>
-<li>Import certificate in to Java Keystore(cacerts):<br/> <code>keytool -importcert -file httpd.der -keystore cacerts -alias &lt;hostname_of_your_Gluu_Server&gt;_httpd</code></li>
+<li>Delete the existing certificate to avoid replication and issues after importing the certificates
+   <code>keytool -delete -alias &lt;hostname_of_your_Gluu_Server&gt;_httpd -keystore cacerts</code></li>
+<li>Import certificate in to Java Keystore(cacerts):
+<br/> <code>keytool -importcert -file httpd.der -keystore cacerts -alias &lt;hostname_of_your_Gluu_Server&gt;_httpd</code></li>
 </ul>
 </li>
 <li>Restart LDAP server, apache2/httpd and Identity Services.</li>

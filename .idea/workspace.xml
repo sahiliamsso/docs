@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b2bbc52c-a659-4696-b1a8-cfeeb604c491" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/admin-guide/certificate.md" afterPath="$PROJECT_DIR$/source/admin-guide/certificate.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/api-guide/uma-api.md" afterPath="$PROJECT_DIR$/source/api-guide/uma-api.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,12 +29,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uma-api.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="uma-api.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/api-guide/uma-api.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1037">
-                <caret line="1095" column="0" lean-forward="false" selection-start-line="1095" selection-start-column="0" selection-end-line="1095" selection-end-column="0" />
+              <first_editor relative-caret-position="-357">
+                <caret line="978" column="0" lean-forward="false" selection-start-line="978" selection-start-column="0" selection-end-line="978" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="certificate.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/admin-guide/certificate.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-104">
+                <caret line="29" column="56" lean-forward="false" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -86,7 +100,6 @@
         <option value="$PROJECT_DIR$/source/reference/schema.md" />
         <option value="$PROJECT_DIR$/source/upgrade/manual-update.md" />
         <option value="$PROJECT_DIR$/theme/material/partials/nav.html" />
-        <option value="$PROJECT_DIR$/source/admin-guide/certificate.md" />
         <option value="$PROJECT_DIR$/source/authn-guide/basic.md" />
         <option value="$PROJECT_DIR$/source/admin-guide/user-group.md" />
         <option value="$PROJECT_DIR$/source/admin-guide/user-authentications.md" />
@@ -94,6 +107,7 @@
         <option value="$PROJECT_DIR$/source/reference/oxldap.md" />
         <option value="$PROJECT_DIR$/mkdocs.yml" />
         <option value="$PROJECT_DIR$/source/api-guide/uma-api.md" />
+        <option value="$PROJECT_DIR$/source/admin-guide/certificate.md" />
       </list>
     </option>
   </component>
@@ -178,6 +192,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="api-guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-guide" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -747,16 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/admin-guide/certificate.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="799">
-            <caret line="47" column="9" lean-forward="false" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/authn-guide/intro.md" />
     <entry file="file://$PROJECT_DIR$/source/authn-guide/user-authentications.md" />
     <entry file="file://$PROJECT_DIR$/source/admin-guide/user-group.md">
@@ -804,8 +826,19 @@
     <entry file="file://$PROJECT_DIR$/source/api-guide/uma-api.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1037">
-            <caret line="1095" column="0" lean-forward="false" selection-start-line="1095" selection-start-column="0" selection-end-line="1095" selection-end-column="0" />
+          <first_editor relative-caret-position="-357">
+            <caret line="978" column="0" lean-forward="false" selection-start-line="978" selection-start-column="0" selection-end-line="978" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/admin-guide/certificate.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-104">
+            <caret line="29" column="56" lean-forward="false" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
             <folding />
           </first_editor>
           <second_editor />

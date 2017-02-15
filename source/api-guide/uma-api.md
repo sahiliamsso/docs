@@ -71,6 +71,26 @@ endpoints supported by the authorization server.
     http://gluu.org/oxauth/uma-configuration
 
 ###### Parameters
+<table border="1">
+    <tr>
+        <th>Access</th>
+        <th>Type</th>
+        <th>required</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Scopes</td>
+        <td>Array(string)</td>
+        <td>required</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Claims</td>
+        <td>string</td>
+        <td>required</td>
+        <td>-</td>
+    </tr>
+</table>
 
 ###### Response
 [UmaConfiguration](#UmaConfiguration)
@@ -413,27 +433,24 @@ specification.
     </tr>
     <tr>
         <td><a href="#ClaimTokenList">ClaimTokenList</a></td>
-        <td>optional</td>
-        <td>name</td>
-        <td>A string (which MAY be a URI) representing 
-        the name of the claim; the "key" in a key-value pair.
-    </tr>
+        <td>required</td>
+        <td>claims</td>
+        <td>-</td>
+     </tr>
     <tr>
         <td>string</td>
         <td>required</td>
-        <td>format</td>
-        <td>A string specifying the format of the accompanying 
-        claim tokens. 
-        The string MAY be a URI.</td>
+        <td>rpt</td>
+        <td>Requesting party token</td>
         <td>-</td>
     </tr>
     <tr>
         <td>string</td>
         <td>required</td>
-        <td>token</td>
-        <td>A string containing the claim information in the 
-        indicated format, base64url encoded if it is not already so encoded. If claim token format features are included that require special interpretation, the client and authorization server are assumed to have a prior relationship 
-        that establishes how to interpret these features.</td>
+        <td>ticket</td>
+        <td>The same permission ticket value that the client 
+        provided in the request. It MUST be present 
+        if and only if the authorization_state is need_info.</td>
         <td>-</td>
     </tr>
 </table>
@@ -442,16 +459,18 @@ specification.
 
 ** /requester/rpt**
 
-### Overview
-
+## Overview
+The endpoint at which the requester asks the 
+AM to issue an RPT.
 
 ### PATH
  `/requester/rpt`
 
- ##### getRequesterPermissionToken
-**POST** `/requester/rpt`
+##### PermissionToken
+ 
+**POST** 
 
-The endpoint at which the requester asks the AM to issue an RPT.
+`/requester/rpt`
 
 ###### URL
     http://gluu.org/requester/rpt
@@ -467,15 +486,9 @@ The endpoint at which the requester asks the AM to issue an RPT.
             <th>Data Type</th>
         </tr>
         <tr>
-            <th>Authorization</th>
-            <td>false</td>
-            <td></td>
-            <td>string</td>
-        </tr>
-        <tr>
-            <th>Host</th>
-            <td>false</td>
-            <td></td>
+            <th>ticket</th>
+            <td>required</td>
+            <td>-</td>
             <td>string</td>
         </tr>
     </table>
@@ -501,6 +514,26 @@ The endpoint at which the requester asks the AM to issue an RPT.
 **/host/rsrc/resource_set**
 
 ### Overview
+Resource set is defined by the resource server, which is required
+by the authorization server to register the resource set description.
+
+Resource set description is a JSON document with the 
+following properties described in [ResourceSet](#ResourceSet)
+
+RESTful API  is used by Resource Server at the authorization server's 
+resource set registration endpoint to create, read, update, and delete 
+resource set description.
+
+
+
+Request to the resource set is registration is incorrect, the authorization
+server responds with an with error message by including the below  error 
+codes in the response. Discussed detail in [unsupported methods](#unsupportedHeadMethod)
+
+- unsupported_method_type: The resource server request used an unsupported HTTP method. 
+  The authorization server MUST respond with the HTTP 405 (Method Not Allowed) status code.
+- not_found: The resource set requested from the authorization server cannot be 
+  found. The authorization server MUST respond with HTTP 404 (Not Found) status code.
 
 ### PATH
  `/host/rsrc/resource_set{rsid}`
@@ -553,6 +586,34 @@ protection regime.
 ###### Response
 [ResourceSet](#ResourceSet)
 
+JSON body of a successful response will contain the following properties
+
+<table border="1">
+        <tr>
+            <th>Parameter</th>
+            <th>Required</th>
+            <th>Description</th>
+            <th>Data Type</th>
+        </tr>
+        <tr>
+            <th>_id</th>
+            <td>required</td>
+            <td>A string value repeating the authorization server-defined 
+            identifier for the web resource corresponding to the resource set. Its appearance in the body makes it readily available as an object identifier for various resource set management tasks.</td>
+            <td>string</td>
+        </tr>
+        <tr>
+            <th>user_access_policy_uri</th>
+            <td>optional</td>
+            <td>A URI that allows the resource server to redirect an end-user 
+            resource owner to a specific user interface within the authorization 
+            server where the resource owner can immediately set or modify access policies 
+            subsequent to the resource set registration action just completed. 
+            The authorization server is free to choose the targeted user interface.</td>
+            <td>string</td>
+        </tr>
+</table>
+
 ###### Errors
 <table border="1">
     <tr>
@@ -567,7 +628,10 @@ protection regime.
 
 - - -
 ##### getResourceSet
-**GET** `/host/rsrc/resource_set{rsid}`
+
+**GET** 
+
+`/host/rsrc/resource_set{rsid}`
 
 Reads a previously registered resource set description using the GET
 method. If the request is successful, the authorization server MUST
@@ -703,9 +767,15 @@ respond with a status message that includes an "_id" property.
 </table>
 
 - - -
-#### `/host/rsrc/resource_set`
-##### getResourceSetList
-**GET** `/host/rsrc/resource_set`
+### ResourceSetList
+
+#### Path
+
+**`/host/rsrc/resource_set`**
+
+**GET** 
+
+`/host/rsrc/resource_set`
 
 Lists all previously registered resource set identifiers for 
 this user using the GET method. 
@@ -870,20 +940,42 @@ status message that includes an _id property.
 </table>
 
 - - -
-##### unsupportedHeadMethod
+### unsupportedHeadMethod
 **HEAD** `/host/rsrc/resource_set`
 
 Not allowed
 
-###### URL
+#### URL
     http://gluu.org/host/rsrc/resource_set
 
-###### Parameters
+#### Parameters
+<table border = "1">
+    <tr>
+        <th>Parameter</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>error</td>
+        <td>required</td>
+        <td>A single error code. Values for this 
+        property are defined throughout this specification.</td>
+    </tr>
+    <tr>
+        <td>error_description</td>
+        <td>optional</td>
+        <td>A URI identifying a human-readable web 
+        page with information about the error.</td>
+     </tr>
+    <tr>
+        <td>error_uri</td>
+        <td>optional</td>
+        <td>A single error code. Values for this 
+        property are defined throughout this specification.</td>
+     </tr> 
+</table>
 
-###### Response
-[](#)
-
-###### Errors
+#### Errors
 <table border="1">
     <tr>
         <th>Status Code</th>
@@ -892,20 +984,20 @@ Not allowed
 </table>
 
 - - -
-##### unsupportedOptionsMethod
-**OPTIONS** `/host/rsrc/resource_set`
+### unsupportedOptionsMethod
+**OPTIONS** 
+
+`/host/rsrc/resource_set`
 
 Not allowed
 
-###### URL
+#### URL
     http://gluu.org/host/rsrc/resource_set
 
-###### Parameters
+#### Parameters
+[unsupported methods]
 
-###### Response
-[](#)
-
-###### Errors
+#### Errors
 <table border="1">
     <tr>
         <th>Status Code</th>
@@ -921,11 +1013,11 @@ Not allowed
 
 <table border="1">
     <tr>
-        <th>type</th>
-        <th>required</th>
-        <th>access</th>
-        <th>description</th>
-        <th>notes</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Access</th>
+        <th>Description</th>
+        <th>Notes</th>
     </tr>
     <tr>
         <td>string</td>
@@ -1158,13 +1250,13 @@ Not allowed
         </tr>
         <tr>
             <th>token</th>
-            <td>false</td>
+            <td>required</td>
             <td></td>
             <td>string</td>
         </tr>
         <tr>
             <th>token_type_hint</th>
-            <td>false</td>
+            <td>required</td>
             <td></td>
             <td>string</td>
         </tr>
