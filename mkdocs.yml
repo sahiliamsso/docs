@@ -36,7 +36,7 @@ pages:
             - 'FIDO U2F': 'authn-guide/U2F.md'
             - 'Duo Security': 'authn-guide/duo.md'
             - 'Certificate Authentication': 'authn-guide/cert-auth.md'
-            - 'Google OAuth 2.0': 'authn-guide/google.md'
+            - 'Google+ OAuth 2.0': 'authn-guide/google.md'
             - 'HOTP/TOTP': 'authn-guide/otp.md'
             - 'Custom Authentication': 'authn-guide/customauthn.md'
         - 'User Management' : 'admin-guide/user-group.md'
