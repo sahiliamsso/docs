@@ -2,7 +2,7 @@
 
 ## Overview
 
-Interception scripts enable you to customize your Gluu authentication service. In an interception script you can call external APIs, like a commercial authentication service, a DDoS protection service, a fraud detection service, etc., to make your authentication process more secure. In addition, interception scripts give you the ability to implement business driven policies during authentication. 
+[Interception scripts](../admin-guide/custom-script.md) enable you to customize your Gluu authentication service. In an interception script you can call external APIs, like a commercial authentication service, a DDoS protection service, a fraud detection service, etc., to make your authentication process more secure. In addition, interception scripts give you the ability to implement business driven policies during authentication. 
 
 For example, you may want to only prompt users in a certain group for two-factor authentication. Or, you may want to only prompt a user for two-factor authentication if the request is coming from an unknown IP address. These types of policies can be incorporated into your authentication service by writing an interception script that uses the [methods](#methods) described below.
 
