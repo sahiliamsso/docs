@@ -1,11 +1,11 @@
-# OTP Gluu Authenticator
+# One-Time Password (OTP) Authentication
 
-OTP authenticator provides 2 factor event/counter-based HOTP algorithm [RFC4226](https://tools.ietf.org/html/rfc4226) and the time-based TOTP algorithm [RFC6238](https://tools.ietf.org/html/rfc6238) authentications.
+## Overview
+This document will explain how to use Gluu's [One-Time Password (OTP) interception script](https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations/otp) to configure the Gluu Server for a two-step authentication process with username and password as the first step, and OTP as the second step.
 
-In order to use this authenticator user should install mobile authenticator which support HOTP/TOTP.
-For example: [Google authenticator 2](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2). It provides all functionality for both authentication methods. 
+Gluu's OTP interception script uses the two-factor event/counter-based HOTP algorithm [RFC4226](https://tools.ietf.org/html/rfc4226) and the time-based TOTP algorithm [RFC6238](https://tools.ietf.org/html/rfc6238).
 
-This is a person authentication module for oxAuth that enables one-time password for user authentication.
+In order to use this authentication mechanism users will need to install a mobile authenticator, like [Google Authenticator 2](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2), that supports HOTP/TOTP.
 
 ## Sequence Diagram
 Below is the sequence diagram for TOTP/HOTP and its flow explained:
@@ -49,7 +49,7 @@ RP->Gluu Server: Request tokens
 RP->Gluu Server: Request user_info
 ```
 
-##Properties
+## Properties
 The module has a few properties:
 
 1) otp_type - It's mandatory property. It's specify OTP mode: HOTP/ TOTP.
@@ -71,7 +71,7 @@ The module has a few properties:
 6) registration_uri - It's URL to page where user can register new account. It's optional property.
     Example: https://hostname/identity/register
     
-##Configure OTP with Gluu Server
+## Configure OTP with Gluu Server
 
 This list of steps needed to  enable OTP person authentication module.
 
@@ -133,5 +133,5 @@ and if the app is looking for QR code to scan, and you don't see a QR code.
 Open Gluu LDAP server using a LDAP browser and navigate to  `appliances` 
 and search for an attribute `oxExternalUid`. Remove the values of this attribute. 
 
-!!! note
-	Logs would be populate only if logs are enabled. For more on logs refer [Log management](../operation/logs.md)
+!!! Note
+	Logs are populated only if logs are enabled. For more info on logs refer to the [Log management](../operation/logs.md) section of the docs.
