@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Gluu Server uses a component called [Passport.js](http://passportjs.org/) to consolidate social login. With over 300 existing
+The Gluu Server uses a component called [Passport.js](http://passportjs.org/) to offer social login. With over 300 existing
 "strategies", Passport provides a crowd-sourced approach to offering your users
 social login at popular consumer IDPs. Passport not only normalizes authentication, 
 it also provides a standard mapping for user claims. 
