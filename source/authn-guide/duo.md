@@ -1,5 +1,8 @@
 # Duo Security
 ## Overview
+[Duo Security](htp://duosecurity.com) is a SaaS authentication provider. This documentation will explain how to use the [Duo interception script](../img/admin-guide/multi-factor/duo-script.png) to configure the Gluu Server for a two-step authentication process with username and password as the first step, and Duo as the second step. 
+
+## Properties
 There are a few properties in the Duo Security authentication script:
 
 |	Property	|Status		|	Description	|	Example		|
