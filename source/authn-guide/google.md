@@ -1,4 +1,4 @@
-# Configure Google
+# Google OAuth 2.0 Login
 
 In order to call Google API's, you need to register as a developer and
 create client credentials. Here are some
