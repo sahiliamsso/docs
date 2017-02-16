@@ -1,47 +1,48 @@
-# Google OAuth 2.0 Login
+# Google+ OAuth 2.0 Login
 
-In order to call Google API's, you need to register as a developer and
-create client credentials. Here are some
-[instructions](https://developers.google.com/identity/protocols/OAuth2)
-for these steps.
+## Overview 
+This document will explain how to use Gluu's [gplus interception script](https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations/gplus) to configure the Gluu Server to send users to Google for authentication. 
+
+## Configure Google
+
+In order to call Google API's you will need to register as a developer and
+create client credentials. You can follow these 
+[instructions](https://developers.google.com/identity/protocols/OAuth2).
 
 The first thing you'll need to do is Create a Project on Google to obtain
 client credentials. Click "Create project" and enter your desired
-project name.
+project name.        
 
-![image](../img/admin-guide/multi-factor/01-create-project.png)
+![image](../img/admin-guide/multi-factor/01-create-project.png)              
 
 Then click on your newly created project from the listing on the
-dashboard, and under the Credentials section, create a new "OAuth2 2.0
-client ID". 
+dashboard, and under the Credentials section, create a new "OAuth 2.0
+client ID".        
 
-![image](../img/admin-guide/multi-factor/02-create-oauth2-creds.png)
+![image](../img/admin-guide/multi-factor/02-create-oauth2-creds.png)       
 
 Google will ask you to configure your consent screen, to add your logo
 and other information displayed to the user to authorize Google to
-release information.
+release information.       
 
-![image](../img/admin-guide/multi-factor/03-create-oauth2-creds.png)
+![image](../img/admin-guide/multi-factor/03-create-oauth2-creds.png)       
 
-Fill out the form...
+Fill out the form...       
 
-![image](../img/admin-guide/multi-factor/04-configure-authorization-page.png)
-
+![image](../img/admin-guide/multi-factor/04-configure-authorization-page.png)       
+       
 Now you're ready to create the credentials. Enter "Authorized JavaScript
-origins". It should be the uri of your Gluu Server--for example
-`https://idp.example.com`.
+origins". It should be the uri of your Gluu Server--for example `https://idp.example.com`.       
 
-![image](../img/admin-guide/multi-factor/05-create-oauth2-creds.png)
+![image](../img/admin-guide/multi-factor/05-create-oauth2-creds.png)       
 
-Google will display the client-id and the according secret ... ignore
-it. Instead, download the JSON file which you are going to upload into
-your Gluu Server, next.
+Google will display the client-id and secret. Ignore that for now. Instead, download the JSON file which you are going to upload into
+your Gluu Server next.       
 
-![image](../img/admin-guide/multi-factor/06-download_json.png)
+![image](../img/admin-guide/multi-factor/06-download_json.png)       
 
 Move this file to the location `/etc/gluu/conf/google.json`. The JSON
-file will look something like this example (no... these data are not
-valid credentials!):
+file will look something like this example:       
 
 ```
 {
@@ -58,7 +59,7 @@ valid credentials!):
 }
 ```
 
-The last step is to enable Google+ API's:
+The last step is to enable Google+ API's:       
 
 - Navigate back to the Google API [console](https://console.developers.google.com/project)
 - Select project and enter project name
@@ -66,18 +67,18 @@ The last step is to enable Google+ API's:
 - Click "Google+ API"
 - Click "Enable API" button
 
-**Configure oxTrust**
+## Configure oxTrust       
 
-Follow the steps below to configure the certificate authentication in the oxTrust Admin GUI.
+Follow the steps below to configure the certificate authentication in the oxTrust Admin GUI.       
 
-1. Click on Manage Custom Scripts under Configuration on the Main Menu.
+1. Navigate to `Configuration` > `Manage Custom Scripts` > `Person Authentication`.        
 
-2. Click on the `Add Custom Scritp` button
-[add-script-button](../img/admin-guide/multi-factor/add-script-button.png)
+2. Click the `Add Custom Scritp` button       
+[add-script-button](../img/admin-guide/multi-factor/add-script-button.png)       
 
-3. Fill up the form and add the [Google External Authenticator](./GooglePlusExternalAuthenticator.py) Script.
+3. Fill in the form and add the [Google External Authenticator](./GooglePlusExternalAuthenticator.py) Script.       
 
-You'll also need to add some custom properties:
+You'll also need to add some custom properties:       
 
  * __gplus_client_secrets_file__: `/etc/gluu/conf/google.json`
  * __gplus_deployment_type__: enroll
@@ -89,8 +90,7 @@ You'll also need to add some custom properties:
    console for application. An example is `/etc/certs/gplus_client_secrets.json`.
 
 ### Setting Google App
-These are the single steps needed to ClientSecret and ClientID 
-or Google JSON:
+These are the single steps needed to ClientSecret and ClientID or Google JSON:
 
 a) Log into: `https://console.developers.google.com/project`
 
@@ -168,24 +168,24 @@ configuration.
 One simple way to test the configuration is to use oxTrust. In the
 "Configure Authentication" dropdown menu, select "Google" (or whatever
 you entered as the "Name" of the custom authentication script--as the
-default authentication method.
+default authentication method.       
 
-![image](../img/admin-guide/multi-factor/08-select_default_authentication.png)
+![image](../img/admin-guide/multi-factor/08-select_default_authentication.png)       
 
 After you login and logout, you should be presented with a new login
-form that has the Google login button:
-
-![image](../img/admin-guide/multi-factor/09-google-authentication-button.png)
-
+form that has the Google login button:       
+       
+![image](../img/admin-guide/multi-factor/09-google-authentication-button.png)       
+       
 After clicking the Google login button, you are presented for
 authorization--Google needs to make sure its ok to release attributes to
-the Gluu Server:
+the Gluu Server:       
 
-![image](../img/admin-guide/multi-factor/10-google-authorization.png)
+![image](../img/admin-guide/multi-factor/10-google-authorization.png)       
 
 If the script doesn't work, and you locked yourself out of oxTrust,
 don't worry! You can create an LDIF file, for example `revert.ldif`, to
-set back the default authentication method, like this:
+set back the default authentication method, like this:       
 
 ```
 dn: inum=@!1E3B.F133.14FA.5062!0002!4B66.CF9C,ou=appliances,o=gluu
