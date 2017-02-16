@@ -13,7 +13,8 @@ Some well known U2F devices and manufacturers include:
 
 For a comprehensive list of U2F devices, check [FIDO's certified products](https://fidoalliance.org/certification/fido-certified-products/). 
 
-*Note:* Sort by Specification == U2F
+!!! Note
+    Sort by Specification == U2F
 
 ## Properties
 The script has the following properties
