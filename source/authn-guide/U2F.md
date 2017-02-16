@@ -11,7 +11,9 @@ Some well known U2F devices and manufacturers include:
 - [HyperFIDO](http://hyperfido.com/)       
 - [Feitian Technologies](http://www.ftsafe.com/)      
 
-For a comprehensive list of available U2F devices, simply [check Amazon](http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=U2F). 
+For a comprehensive list of U2F devices, check [FIDO's certified products](https://fidoalliance.org/certification/fido-certified-products/). 
+
+*Note:* Sort by Specification == U2F
 
 ## Properties
 The script has the following properties
