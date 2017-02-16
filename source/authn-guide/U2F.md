@@ -5,7 +5,7 @@ FIDO Universal 2nd Factor (U2F) is an open authentication standard that strength
 
 The FIDO U2F script for the Gluu Server enables you to require that users present a FIDO U2F compliant device in order to access a protected resource. The device can be required as a one-step authentication, where you simply prompt for U2F authentication. Or it can be layered as a two-step authentication, where you first request a username and password and then a FIDO U2F device. 
 
-If you follow the documentation below, you will implement a one-step authentication where the user only needs to enroll and present their FIDO U2F device for authentication. 
+If you follow the documentation below, you will implement a two-step authentication where the user first needs to enter their username and password, then enroll (on the first authentication) and present their FIDO U2F device for all future authentications. 
 
 Some well known U2F devices and manufacturers include:         
 - [Vasco DIGIPASS SecureClick](https://www.vasco.com/products/two-factor-authenticators/hardware/one-button/digipass-secureclick.html)
