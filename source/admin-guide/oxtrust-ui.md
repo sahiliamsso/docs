@@ -174,7 +174,7 @@ type of script has its own interface--in other words, what methods are
 available. For more information, see the reference page detailing each type of [interception script](./custom-script.md).
 
 ### Manage Registration
-The Gluu Server is shipped with a very basic user registration feature. The registration page can be found at `https://<hostname>/identity/register`. For custom enrollment requirements we recommend that you write a registration page and use SCIM to add the user record to the Gluu Server. Also, in some cases oxTrust is not Internet facing, which makes it a bad option for user registration. Net-net, Use this feature only if you have very basic requirements! See for more on [user registration](./user-group/#user-registration)
+The Gluu Server is shipped with a very basic user registration feature. The registration page can be found at `https://<hostname>/identity/register`. For custom enrollment requirements we recommend that you write a registration page and use SCIM to add the user record to the Gluu Server. Also, in some cases oxTrust is not Internet facing, which makes it a bad option for user registration. Net-net, Use this feature only if you have very basic requirements! See [user registration](./user-group/#user-registration) for more. 
 
 The tab has two options:
 
