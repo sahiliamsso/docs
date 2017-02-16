@@ -12,12 +12,14 @@ to call oxTrust APIs for its non-static configuration. Because its
 configuration is stored centrally in LDAP, you can scale Passport even 
 in clustered topologies.
 
-The Gluu Server needs only one interception script for Passport. This 
+The Gluu Server uses the [Passport interception script](https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations/passport) to enable social login. This 
 script is included in our default distribution. Post-authentication,
 this script uses just-in-time provisioning to add users to the Gluu
 LDAP server if a local account does not already exist. In this way, 
 the Gluu SAML and OpenID Connect providers can gather claims and maintain
 SSO as normal.
+
+## Sequence Diagram
 
 Below is a sequence diagram to help clarify the workflow for user
 authentication and provisioning. 
@@ -32,7 +34,7 @@ authentication and provisioning.
 6. Node-Passport server will redirect user back to Gluu server with user details and access token.
 7. Gluu server’s interception script will check if the user exists in LDAP server. If the user exists then the user will be logged into the system. If not, the interception script will create a new user with the required details and log the user into the system.
 
-## SETUP Passport.js with Gluu
+## Setup Passport.js with Gluu
 
 During installation of the Gluu Server select `yes` to install Passport.js when prompted.
 
@@ -64,7 +66,7 @@ passport service or Gluu Server by following the below instructions:
 !!! Warning
 	Strategies names and field names are case sensitive.
 	
-## How to make a new app to use Passport?
+## How to make a new app to use Passport
 
 Every provider has different protocols and ways to create the app. We 
 will look at one of the most common providers "facebook" and create a new app.
