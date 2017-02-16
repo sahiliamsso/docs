@@ -7,11 +7,11 @@ The FIDO U2F script for the Gluu Server enables you to require that a user prese
 
 Following the documentation below will implement a two-step authentication where the user is first required to enter their username and password, then enroll (on the first authentication) and present their FIDO U2F device to complete the authentication. 
 
-Some well known U2F devices and manufacturers include:         
-- [Vasco DIGIPASS SecureClick](https://www.vasco.com/products/two-factor-authenticators/hardware/one-button/digipass-secureclick.html)
-- [Yubico](https://www.yubico.com/)   
-- [HyperFIDO](http://hyperfido.com/)   
-- [Feitian Technologies](http://www.ftsafe.com/)    
+Some well known U2F devices and manufacturers include:           
+- [Vasco DIGIPASS SecureClick](https://www.vasco.com/products/two-factor-authenticators/hardware/one-button/digipass-secureclick.html)      
+- [Yubico](https://www.yubico.com/)      
+- [HyperFIDO](http://hyperfido.com/)       
+- [Feitian Technologies](http://www.ftsafe.com/)      
 
 For a comprehensive list of available U2F devices, simply [check Amazon](http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=U2F). 
 
