@@ -17,21 +17,18 @@ The script has the following properties
 
 ## Configure oxTrust
 
-1. Navigate to `Configuration` > `Manage Custom Scripts`.              
+1. Navigate to `Configuration` > `Manage Custom Scripts`.               
 
-2. Click on the `Perosn Authentication` tab.             
-
+2. Click on the `Perosn Authentication` tab.              
 ![person-auth](../img/admin-guide/multi-factor/person-auth.png)
 
-3. Select the oxPush2 Script               
-
+3. Select the oxPush2 Script                  
 ![oxpush2-script](../img/admin-guide/multi-factor/oxpush2-script.png)
 
-4. Enable the script by ticking the check box
-
+4. Enable the script by ticking the check box          
 ![enable](../img/admin-guide/enable.png)
+ 
 5. Click `Update`         
 
 6. Change the `Authentication method` to oxPush2       
-   
 ![oxpush2](../img/admin-guide/multi-factor/oxpush2.png)
