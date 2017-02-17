@@ -10,6 +10,9 @@ The Gluu Server Community Edition (CE) needs to be deployed on a server or VM wi
 |----------|------------|-------------------|----------------|
 |       2  |    4GB     |   40GB            |  64 Bit        |
 
+!!! note
+    If you plan on installing Shibboleth (for outbound SAML) and Asimba (for inbound SAML), we recommend that your server or VM have at least 8GB of RAM. 
+
 !!! warning
     Please only post installation issues to [Gluu Support](https://support.gluu.org) if all the above requirements are met!
 
