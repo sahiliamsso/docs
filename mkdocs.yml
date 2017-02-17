@@ -49,7 +49,7 @@ pages:
         - 'Certificate Management' : 'admin-guide/certificate.md'
 - Integration Guide:
 #    - 'Integration in Gluu Server': 'integration/index.md'
-        - 'Developer Guide':
+        - 'Client SDKs':
             - 'oxd OAuth2': 'integration/oauth2.md'
             - 'OAuth2.0 js Implicit Flow': 'integration/oauth-js-implicit.md'
         - 'Web Server Integrations':
