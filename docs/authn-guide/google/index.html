@@ -17,7 +17,7 @@
     
     
       
-        <title>Google - Gluu Docs</title>
+        <title>Google+ OAuth 2.0 - Gluu Docs</title>
       
     
     
@@ -85,7 +85,7 @@
                 </span>
               
             
-            Google
+            Google+ OAuth 2.0
           
         </span>
       </div>
@@ -513,11 +513,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Google
+        Google+ OAuth 2.0
       </label>
     
-    <a href="./" title="Google" class="md-nav__link md-nav__link--active">
-      Google
+    <a href="./" title="Google+ OAuth 2.0" class="md-nav__link md-nav__link--active">
+      Google+ OAuth 2.0
     </a>
     
       
@@ -531,9 +531,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-google" title="Configure Google" class="md-nav__link">
+    Configure Google
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-oxtrust" title="Configure oxTrust" class="md-nav__link">
+    Configure oxTrust
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#setting-google-app" title="Setting Google App" class="md-nav__link">
     Setting Google App
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -683,11 +710,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
     
     <label class="md-nav__link" for="nav-5-1">
-      Developer Guide
+      Client SDKs
     </label>
     <nav class="md-nav" data-md-component="collapsible">
       <label class="md-nav__title" for="nav-5-1">
-        Developer Guide
+        Client SDKs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1102,6 +1129,38 @@
   </li>
 
     
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Developer Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-8">
+        Developer Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../developer-guide/oxtrust-eclipse/" title="How to Build OxTrust Guide" class="md-nav__link">
+        How to Build OxTrust Guide
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -1123,9 +1182,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-google" title="Configure Google" class="md-nav__link">
+    Configure Google
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-oxtrust" title="Configure oxTrust" class="md-nav__link">
+    Configure oxTrust
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#setting-google-app" title="Setting Google App" class="md-nav__link">
     Setting Google App
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1151,36 +1237,36 @@
                
               
                 
-                <h1 id="configure-google">Configure Google<a class="headerlink" href="#configure-google" title="Permanent link">#</a></h1>
-<p>In order to call Google API's, you need to register as a developer and
-create client credentials. Here are some
-<a href="https://developers.google.com/identity/protocols/OAuth2">instructions</a>
-for these steps.</p>
+                <h1 id="google-oauth-20-login">Google+ OAuth 2.0 Login<a class="headerlink" href="#google-oauth-20-login" title="Permanent link">#</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
+<p>This document will explain how to use Gluu's 
+<a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations/gplus">gplus interception script</a> to configure the Gluu Server to send users to Google for authentication. </p>
+<h2 id="configure-google">Configure Google<a class="headerlink" href="#configure-google" title="Permanent link">#</a></h2>
+<p>In order to call Google API's you will need to register as a developer and
+create client credentials. You can follow these 
+<a href="https://developers.google.com/identity/protocols/OAuth2">instructions</a>.</p>
 <p>The first thing you'll need to do is Create a Project on Google to obtain
 client credentials. Click "Create project" and enter your desired
-project name.</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/01-create-project.png" /></p>
+project name.        </p>
+<p><img alt="image" src="../../img/admin-guide/multi-factor/01-create-project.png" />              </p>
 <p>Then click on your newly created project from the listing on the
-dashboard, and under the Credentials section, create a new "OAuth2 2.0
-client ID". </p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/02-create-oauth2-creds.png" /></p>
+dashboard, and under the Credentials section, create a new "OAuth 2.0
+client ID".        </p>
+<p><img alt="image" src="../../img/admin-guide/multi-factor/02-create-oauth2-creds.png" />       </p>
 <p>Google will ask you to configure your consent screen, to add your logo
 and other information displayed to the user to authorize Google to
-release information.</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/03-create-oauth2-creds.png" /></p>
-<p>Fill out the form...</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/04-configure-authorization-page.png" /></p>
+release information.       </p>
+<p><img alt="image" src="../../img/admin-guide/multi-factor/03-create-oauth2-creds.png" />       </p>
+<p>Fill out the form...       </p>
+<p><img alt="image" src="../../img/admin-guide/multi-factor/04-configure-authorization-page.png" />       </p>
 <p>Now you're ready to create the credentials. Enter "Authorized JavaScript
-origins". It should be the uri of your Gluu Server--for example
-<code>https://idp.example.com</code>.</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/05-create-oauth2-creds.png" /></p>
-<p>Google will display the client-id and the according secret ... ignore
-it. Instead, download the JSON file which you are going to upload into
-your Gluu Server, next.</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/06-download_json.png" /></p>
+origins". It should be the uri of your Gluu Server--for example <code>https://idp.example.com</code>.       </p>
+<p><img alt="image" src="../../img/admin-guide/multi-factor/05-create-oauth2-creds.png" />       </p>
+<p>Google will display the client-id and secret. Ignore that for now. Instead, download the JSON file which you are going to upload into
+your Gluu Server next.       </p>
+<p><img alt="image" src="../../img/admin-guide/multi-factor/06-download_json.png" />       </p>
 <p>Move this file to the location <code>/etc/gluu/conf/google.json</code>. The JSON
-file will look something like this example (no... these data are not
-valid credentials!):</p>
+file will look something like this example:       </p>
 <pre><code>{
   &quot;web&quot;: {
     &quot;client_id&quot;: &quot;7a64e55f-724d4e8c91823d5f1f18a0b2.apps.googleusercontent.com&quot;,
@@ -1195,7 +1281,7 @@ valid credentials!):</p>
 }
 </code></pre>
 
-<p>The last step is to enable Google+ API's:</p>
+<p>The last step is to enable Google+ API's:       </p>
 <ul>
 <li>Navigate back to the Google API <a href="https://console.developers.google.com/project">console</a></li>
 <li>Select project and enter project name</li>
@@ -1203,21 +1289,21 @@ valid credentials!):</p>
 <li>Click "Google+ API"</li>
 <li>Click "Enable API" button</li>
 </ul>
-<p><strong>Configure oxTrust</strong></p>
-<p>Follow the steps below to configure the certificate authentication in the oxTrust Admin GUI.</p>
+<h2 id="configure-oxtrust">Configure oxTrust<a class="headerlink" href="#configure-oxtrust" title="Permanent link">#</a></h2>
+<p>Follow the steps below to configure the certificate authentication in the oxTrust Admin GUI.       </p>
 <ol>
 <li>
-<p>Click on Manage Custom Scripts under Configuration on the Main Menu.</p>
+<p>Navigate to <code>Configuration</code> &gt; <code>Manage Custom Scripts</code> &gt; <code>Person Authentication</code>.        </p>
 </li>
 <li>
-<p>Click on the <code>Add Custom Scritp</code> button
-<a href="../../img/admin-guide/multi-factor/add-script-button.png">add-script-button</a></p>
+<p>Click the <code>Add Custom Scritp</code> button     <br />
+<a href="../../img/admin-guide/multi-factor/add-script-button.png">add-script-button</a>       </p>
 </li>
 <li>
-<p>Fill up the form and add the <a href="../GooglePlusExternalAuthenticator.py">Google External Authenticator</a> Script.</p>
+<p>Fill in the form and add the <a href="../GooglePlusExternalAuthenticator.py">Google External Authenticator</a> Script.       </p>
 </li>
 </ol>
-<p>You'll also need to add some custom properties:</p>
+<p>You'll also need to add some custom properties:       </p>
 <ul>
 <li><strong>gplus_client_secrets_file</strong>: <code>/etc/gluu/conf/google.json</code></li>
 <li><strong>gplus_deployment_type</strong>: enroll</li>
@@ -1232,8 +1318,7 @@ valid credentials!):</p>
 </li>
 </ul>
 <h3 id="setting-google-app">Setting Google App<a class="headerlink" href="#setting-google-app" title="Permanent link">#</a></h3>
-<p>These are the single steps needed to ClientSecret and ClientID 
-or Google JSON:</p>
+<p>These are the single steps needed to ClientSecret and ClientID or Google JSON:</p>
 <p>a) Log into: <code>https://console.developers.google.com/project</code></p>
 <p>b) Click "Create project" and enter project name</p>
 <p>c) Open new project "API &amp; auth -&gt; Credentials" menu item in configuration navigation tree</p>
@@ -1301,18 +1386,18 @@ configuration.</li>
 <p>One simple way to test the configuration is to use oxTrust. In the
 "Configure Authentication" dropdown menu, select "Google" (or whatever
 you entered as the "Name" of the custom authentication script--as the
-default authentication method.</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/08-select_default_authentication.png" /></p>
+default authentication method.       </p>
+<p><img alt="image" src="../../img/admin-guide/multi-factor/08-select_default_authentication.png" />       </p>
 <p>After you login and logout, you should be presented with a new login
-form that has the Google login button:</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/09-google-authentication-button.png" /></p>
+form that has the Google login button:       </p>
+<p><img alt="image" src="../../img/admin-guide/multi-factor/09-google-authentication-button.png" />       </p>
 <p>After clicking the Google login button, you are presented for
 authorization--Google needs to make sure its ok to release attributes to
-the Gluu Server:</p>
-<p><img alt="image" src="../../img/admin-guide/multi-factor/10-google-authorization.png" /></p>
+the Gluu Server:       </p>
+<p><img alt="image" src="../../img/admin-guide/multi-factor/10-google-authorization.png" />       </p>
 <p>If the script doesn't work, and you locked yourself out of oxTrust,
 don't worry! You can create an LDIF file, for example <code>revert.ldif</code>, to
-set back the default authentication method, like this:</p>
+set back the default authentication method, like this:       </p>
 <pre><code>dn: inum=@!1E3B.F133.14FA.5062!0002!4B66.CF9C,ou=appliances,o=gluu
 changetype: modify
 replace: oxAuthenticationMode

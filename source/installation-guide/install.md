@@ -126,7 +126,7 @@ table should help you answer the questions correctly.
 | Enter Organization Name | Used to generate X.509 certificates |
 | Enter email address for support at your organization | Used to generate X.509 certificates | 
 | Optional: enter password for oxTrust and LDAP superuser | Used as the LDAP directory manager password, and for the default admin user for oxTrust |
-| Install oxAuth OAuth2 Authorization Server | Required |
+| Install oxAuth OAuth2 Authorization Server | Required|
 | Install oxTrust Admin UI | Required |
 | Install LDAP Server | Required |
 | Install Apache HTTPD Server | Required |

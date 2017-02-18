@@ -82,5 +82,6 @@ pages:
         - 'FAQ & Troubleshooting': 'operation/faq.md'
         - 'Customize Login Page': 'operation/custom-loginpage.md'
         #       - 'Fine Tuning Gluu Server' : 'admin-guide/fine-tuning.md'
-
+- Developer Guide:
+        - 'How to Build OxTrust Guide': 'developer-guide/oxtrust-eclipse.md'
 

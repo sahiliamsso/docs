@@ -565,8 +565,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../google/" title="Google" class="md-nav__link">
-        Google
+      <a href="../google/" title="Google+ OAuth 2.0" class="md-nav__link">
+        Google+ OAuth 2.0
       </a>
     
   </li>
@@ -704,11 +704,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
     
     <label class="md-nav__link" for="nav-5-1">
-      Developer Guide
+      Client SDKs
     </label>
     <nav class="md-nav" data-md-component="collapsible">
       <label class="md-nav__title" for="nav-5-1">
-        Developer Guide
+        Client SDKs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1123,6 +1123,38 @@
   </li>
 
     
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Developer Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-8">
+        Developer Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../developer-guide/oxtrust-eclipse/" title="How to Build OxTrust Guide" class="md-nav__link">
+        How to Build OxTrust Guide
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -1206,12 +1238,12 @@ variation of username and password. </p>
 <p>Learn how to <a href="../basic/">configure basic authentication</a>.</p>
 <h2 id="configuring-social-authentication">Configuring Social Authentication<a class="headerlink" href="#configuring-social-authentication" title="Permanent link">#</a></h2>
 <p>During deployment of the Gluu Server you are presented with an option to deploy Passport.js. With over 300 existing "strategies", Passport.js provides a crowd-sourced approach to supporting social login at many popular consumer IDPs. Passport not only normalizes authentication, it also provides a standard mapping for user claims.</p>
-<p>Learn <a href="../passport/">how to use Passport.js</a> to configure social login. </p>
+<p>Learn how to <a href="../passport/">configure social login</a>. </p>
 <h2 id="configuring-multi-factor-authentication">Configuring Multi-Factor Authentication<a class="headerlink" href="#configuring-multi-factor-authentication" title="Permanent link">#</a></h2>
 <p>Interception scripts are used by the Gluu Server to implement multi-factor authentication. A number of scripts are included out-of-the-box, including scripts to support FIDO U2F tokens (like Vasco and Yubikey), Gluu's free Android and iOS two-factor authentication application called Super Gluu, certificate authentication, Duo Security, One-Time Passwords, and more. </p>
 <p>Implementation guides for each pre-supported authentication mechanism can be found in the pages that follow in this User Authentication Guide.</p>
 <p>In addition, organizations frequently have custom requirements for authentication. For instance, an admin may want to implement a policy that enforces two-factor authentication only for users from certain a group, like the IT Group. Or only when a user tries to access a protected resource from an unknown IP address. Custom interception scripts allow you to implement these types of policies, as well as any other business driven policy that can be scripted. </p>
-<p>Learn more about <a href="../../admin-guide/custom-script/">how to write a custom interception script</a>.</p>
+<p>Learn more about how to <a href="../../admin-guide/custom-script/">write a custom interception script</a>.</p>
 <p>Review our <a href="../customauthn/">custom authentication script tutorial</a>, where we demonstrate how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication mechanism.</p>
 <h2 id="configuring-account-lockout">Configuring Account Lockout<a class="headerlink" href="#configuring-account-lockout" title="Permanent link">#</a></h2>
 <p>The Gluu Server is shipped with a custom authentication script that implements a 

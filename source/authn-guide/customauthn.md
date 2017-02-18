@@ -14,7 +14,13 @@ Gluu Server custom scripts are written in [Jython](http://www.jython.org/). We r
 
 ## Custom Script Location
 
-The GUI for custom authentication scripts can be found by navigating to `Configuration` > `Manage Custom Scripts` > `Person Authentication`. Custom scripts can either be inserted directly into the GUI or you can specify a path to the script. We recommend specifying a path in order to make development easier. To specify a path, select `File` from the `Script Location Type` field in oxTrust and the `Script Path` input box will be displayed:
+The GUI for custom authentication scripts can be found by navigating to 
+
+`Configuration` > `Manage Custom Scripts` > `Person Authentication`. 
+
+Custom scripts can either be inserted directly into the GUI or you can 
+specify a path to the script. We recommend specifying a path in order to 
+make development easier. To specify a path, select `File` from the `Script Location Type` field in oxTrust and the `Script Path` input box will be displayed:
 
 ![image](../img/admin-guide/multi-factor/script_upload_box.png)
 

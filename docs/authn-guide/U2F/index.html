@@ -505,6 +505,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#properties" title="Properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configure-u2f" title="Configure U2F" class="md-nav__link">
     Configure U2F
   </a>
@@ -544,8 +551,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../google/" title="Google" class="md-nav__link">
-        Google
+      <a href="../google/" title="Google+ OAuth 2.0" class="md-nav__link">
+        Google+ OAuth 2.0
       </a>
     
   </li>
@@ -683,11 +690,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
     
     <label class="md-nav__link" for="nav-5-1">
-      Developer Guide
+      Client SDKs
     </label>
     <nav class="md-nav" data-md-component="collapsible">
       <label class="md-nav__title" for="nav-5-1">
-        Developer Guide
+        Client SDKs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1102,6 +1109,38 @@
   </li>
 
     
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Developer Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-8">
+        Developer Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../developer-guide/oxtrust-eclipse/" title="How to Build OxTrust Guide" class="md-nav__link">
+        How to Build OxTrust Guide
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -1130,6 +1169,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#properties" title="Properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configure-u2f" title="Configure U2F" class="md-nav__link">
     Configure U2F
   </a>
@@ -1152,12 +1198,20 @@
               
                 
                 <h1 id="fido-u2f">FIDO U2F<a class="headerlink" href="#fido-u2f" title="Permanent link">#</a></h1>
-<p>This script enables multi-factor authentication with any FIDO U2F device. Learn more about the U2F standard <a href="https://www.gluu.org/resources/documents/standards/fido-u2f/">here</a>. For a list of U2F compliant devices for sale, <a href="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords=U2F">check Amazon</a>. </p>
-<p>Some well known U2F device manufacturers include:<br />
-- <a href="https://www.yubico.com/">Yubico</a> <br />
-- <a href="http://hyperfido.com/">HyperFIDO</a> <br />
-- <a href="http://www.ftsafe.com/">Feitian Technologies</a>    </p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
+<p>FIDO Universal 2nd Factor (U2F) is an open authentication standard that strengthens and simplifies two-factor authentication using specialized USB or NFC devices based on similar security technology found in smart cards. Learn more about the U2F standard <a href="https://www.gluu.org/resources/documents/standards/fido-u2f/">on Gluu's website</a>.</p>
+<p>This document will explain how to use Gluu's <a href="https://github.com/GluuFederation/oxAuth/blob/master/Server/integrations/u2f/U2fExternalAuthenticator.py">FIDO U2F interception script</a> to configure the Gluu Server for a two-step authentication process with username and password as the first step, and FIDO U2F as the second step.</p>
+<p>In order to use this authentication mechanism users will need a U2F device. Some well known devices and manufacturers include:         <br />
+- <a href="https://www.vasco.com/products/two-factor-authenticators/hardware/one-button/digipass-secureclick.html">Vasco DIGIPASS SecureClick</a>    <br />
+- <a href="https://www.yubico.com/">Yubico</a>    <br />
+- <a href="http://hyperfido.com/">HyperFIDO</a>     <br />
+- <a href="http://www.ftsafe.com/">Feitian Technologies</a>      </p>
+<p>For a comprehensive list of U2F devices, check <a href="https://fidoalliance.org/certification/fido-certified-products/">FIDO's certified products</a>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sort by Specification == U2F</p>
+</div>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">#</a></h2>
 <p>The script has the following properties</p>
 <table>
 <thead>
@@ -1171,12 +1225,12 @@
 <tr>
 <td>u2f_server_uri</td>
 <td>URL of the u2f server</td>
-<td>https://idp.gluu.info</td>
+<td><code>https://idp.gluu.info</code></td>
 </tr>
 <tr>
 <td>u2f_server_metadata_uri</td>
 <td>URL of the u2f server metadata</td>
-<td>https://idp.gluu.info</td>
+<td><code>https://idp.gluu.info</code></td>
 </tr>
 </tbody>
 </table>
@@ -1187,16 +1241,24 @@
 <p>Navigate to <code>Configuration</code> &gt; <code>Manage Custom Scripts</code>.    </p>
 </li>
 <li>
-<p>Click on the <code>Person Authentication</code> tab
+<p>Click on the <code>Person Authentication</code> tab     <br />
 <img alt="person-auth" src="../../img/admin-guide/multi-factor/person-auth.png" /></p>
 </li>
-<li>Select the U2F script
-<img alt="u2f-script" src="../../img/admin-guide/multi-factor/u2f-script.png" /></li>
-<li>Enable the script by ticking the check box
-<img alt="enable" src="../../img/admin-guide/enable.png" /></li>
-<li>Click <code>Update</code></li>
-<li>Change the <code>Default Authentication Method</code> to <code>u2f</code>
-<img alt="u2f" src="../../img/admin-guide/multi-factor/u2f.png" /></li>
+<li>
+<p>Select the U2F script     <br />
+<img alt="u2f-script" src="../../img/admin-guide/multi-factor/u2f-script.png" /></p>
+</li>
+<li>
+<p>Enable the script by ticking the check box     <br />
+<img alt="enable" src="../../img/admin-guide/enable.png" /></p>
+</li>
+<li>
+<p>Click <code>Update</code></p>
+</li>
+<li>
+<p>Change the <code>Default Authentication Method</code> to <code>u2f</code>     <br />
+<img alt="u2f" src="../../img/admin-guide/multi-factor/u2f.png" /></p>
+</li>
 </ol>
               
             </article>

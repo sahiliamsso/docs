@@ -507,8 +507,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../google/" title="Google" class="md-nav__link">
-        Google
+      <a href="../google/" title="Google+ OAuth 2.0" class="md-nav__link">
+        Google+ OAuth 2.0
       </a>
     
   </li>
@@ -540,6 +540,13 @@
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#sequence-diagram" title="Sequence Diagram" class="md-nav__link">
@@ -710,11 +717,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
     
     <label class="md-nav__link" for="nav-5-1">
-      Developer Guide
+      Client SDKs
     </label>
     <nav class="md-nav" data-md-component="collapsible">
       <label class="md-nav__title" for="nav-5-1">
-        Developer Guide
+        Client SDKs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1129,6 +1136,38 @@
   </li>
 
     
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Developer Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-8">
+        Developer Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../developer-guide/oxtrust-eclipse/" title="How to Build OxTrust Guide" class="md-nav__link">
+        How to Build OxTrust Guide
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -1148,6 +1187,13 @@
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#sequence-diagram" title="Sequence Diagram" class="md-nav__link">
@@ -1205,11 +1251,14 @@
                
               
                 
-                <h1 id="otp-gluu-authenticator">OTP Gluu Authenticator<a class="headerlink" href="#otp-gluu-authenticator" title="Permanent link">#</a></h1>
-<p>OTP authenticator provides 2 factor event/counter-based HOTP algorithm <a href="https://tools.ietf.org/html/rfc4226">RFC4226</a> and the time-based TOTP algorithm <a href="https://tools.ietf.org/html/rfc6238">RFC6238</a> authentications.</p>
-<p>In order to use this authenticator user should install mobile authenticator which support HOTP/TOTP.
-For example: <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2">Google authenticator 2</a>. It provides all functionality for both authentication methods. </p>
-<p>This is a person authentication module for oxAuth that enables one-time password for user authentication.</p>
+                <h1 id="one-time-password-otp-authentication">One-Time Password (OTP) Authentication<a class="headerlink" href="#one-time-password-otp-authentication" title="Permanent link">#</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
+<p>This document will explain how to use Gluu's <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations/otp">One-Time Password (OTP) interception script</a> to configure the Gluu Server for a two-step authentication process with username and password as the first step, and OTP as the second step.</p>
+<p>In order to use this authentication mechanism users will need to install a mobile app that supports HOTP/TOTP, like <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2">Google Authenticator</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Gluu's OTP interception script uses the two-factor event/counter-based HOTP algorithm <a href="https://tools.ietf.org/html/rfc4226">RFC4226</a> and the time-based TOTP algorithm <a href="https://tools.ietf.org/html/rfc6238">RFC6238</a>.</p>
+</div>
 <h2 id="sequence-diagram">Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permanent link">#</a></h2>
 <p>Below is the sequence diagram for TOTP/HOTP and its flow explained:</p>
 <p><img alt="sequence diagram" src="../../img/user-authn/otp/gluu_otp_integration_authentication_workflow.png" /></p>
@@ -1330,7 +1379,7 @@ Open Gluu LDAP server using a LDAP browser and navigate to  <code>appliances</co
 and search for an attribute <code>oxExternalUid</code>. Remove the values of this attribute. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Logs would be populate only if logs are enabled. For more on logs refer <a href="../../operation/logs/">Log management</a></p>
+<p>Logs are populated only if logs are enabled. For more info on logs refer to the <a href="../../operation/logs/">Log management</a> section of the docs.</p>
 </div>
               
             </article>
@@ -1344,7 +1393,7 @@ and search for an attribute <code>oxExternalUid</code>. Remove the values of thi
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../google/" title="Google" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../google/" title="Google+ OAuth 2.0" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1353,7 +1402,7 @@ and search for an attribute <code>oxExternalUid</code>. Remove the values of thi
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Google
+                Google+ OAuth 2.0
               </span>
             </div>
           </a>

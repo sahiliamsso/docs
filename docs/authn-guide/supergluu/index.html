@@ -494,6 +494,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#properties" title="Properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configure-oxtrust" title="Configure oxTrust" class="md-nav__link">
     Configure oxTrust
   </a>
@@ -544,8 +551,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../google/" title="Google" class="md-nav__link">
-        Google
+      <a href="../google/" title="Google+ OAuth 2.0" class="md-nav__link">
+        Google+ OAuth 2.0
       </a>
     
   </li>
@@ -683,11 +690,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
     
     <label class="md-nav__link" for="nav-5-1">
-      Developer Guide
+      Client SDKs
     </label>
     <nav class="md-nav" data-md-component="collapsible">
       <label class="md-nav__title" for="nav-5-1">
-        Developer Guide
+        Client SDKs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1102,6 +1109,38 @@
   </li>
 
     
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Developer Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-8">
+        Developer Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../developer-guide/oxtrust-eclipse/" title="How to Build OxTrust Guide" class="md-nav__link">
+        How to Build OxTrust Guide
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -1130,6 +1169,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#properties" title="Properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configure-oxtrust" title="Configure oxTrust" class="md-nav__link">
     Configure oxTrust
   </a>
@@ -1151,8 +1197,12 @@
                
               
                 
-                <h1 id="oxpush2-super-gluu-authenticaion">oxPush2 - Super Gluu Authenticaion<a class="headerlink" href="#oxpush2-super-gluu-authenticaion" title="Permanent link">#</a></h1>
+                <h1 id="super-gluu">Super Gluu<a class="headerlink" href="#super-gluu" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
+<p><a href="https://super.gluu.org">Super Gluu</a> is a free and secure two-factor authentication mobile application developed by Gluu. It is based on the free open source <a href="https://github.com/GluuFederation/oxPush2">oxPush2</a> two-factor authentication application. </p>
+<p>This document will explain how to use the <a href="https://github.com/GluuFederation/oxAuth/blob/master/Server/integrations/oxpush/oxPushExternalAuthenticator.py">oxPush2 interception script</a> to configure the Gluu Server for a two-step authentication process with username and password as the first step, and Super Gluu as the second step. </p>
+<p>In order to use this authentication mechanism users will need to download the Super Gluu mobile app from the <a href="https://play.google.com/store/apps/details?id=gluu.super.gluu">Android</a> or <a href="https://itunes.apple.com/us/app/super-gluu/id1093479646?ls=1&amp;mt=8">iOS</a>  marketplace. </p>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">#</a></h2>
 <p>The script has the following properties</p>
 <table>
 <thead>
@@ -1183,24 +1233,28 @@
 <h2 id="configure-oxtrust">Configure oxTrust<a class="headerlink" href="#configure-oxtrust" title="Permanent link">#</a></h2>
 <ol>
 <li>
-<p>Navigate to <code>Configuration</code> &gt; <code>Manage Custom Scripts</code>.</p>
+<p>Navigate to <code>Configuration</code> &gt; <code>Manage Custom Scripts</code>.               </p>
 </li>
 <li>
-<p>Click on the <code>Perosn Authentication</code> tab.</p>
+<p>Click on the <code>Perosn Authentication</code> tab.            <br />
+<img alt="person-auth" src="../../img/admin-guide/multi-factor/person-auth.png" /></p>
+</li>
+<li>
+<p>Select the oxPush2 Script                <br />
+<img alt="oxpush2-script" src="../../img/admin-guide/multi-factor/oxpush2-script.png" /></p>
+</li>
+<li>
+<p>Enable the script by ticking the check box        <br />
+<img alt="enable" src="../../img/admin-guide/enable.png" /></p>
+</li>
+<li>
+<p>Click <code>Update</code>         </p>
+</li>
+<li>
+<p>Change the <code>Authentication method</code> to oxPush2     <br />
+<img alt="oxpush2" src="../../img/admin-guide/multi-factor/oxpush2.png" /></p>
 </li>
 </ol>
-<p><img alt="person-auth" src="../../img/admin-guide/multi-factor/person-auth.png" /></p>
-<ol>
-<li>Select the oxPush2 Script</li>
-</ol>
-<p><img alt="oxpush2-script" src="../../img/admin-guide/multi-factor/oxpush2-script.png" /></p>
-<ol>
-<li>Enable the script by ticking the check box</li>
-</ol>
-<p><img alt="enable" src="../../img/admin-guide/enable.png" />
-5. Click <code>Update</code>
-6. Change the <code>Authentication method</code> to oxPush2
-<img alt="oxpush2" src="../../img/admin-guide/multi-factor/oxpush2.png" /></p>
               
             </article>
           </div>
