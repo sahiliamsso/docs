@@ -1463,7 +1463,7 @@ make development easier. To specify a path, select <code>File</code> from the <c
 </ul>
 <h2 id="samples-and-documentation">Samples and Documentation<a class="headerlink" href="#samples-and-documentation" title="Permanent link">#</a></h2>
 <p>There are many good examples of authentication interception scripts in Gluu's <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations">oxAuth integrations folder</a>. The respective <code>XHTML</code> and <code>XML</code> files are checked into the <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth">auth folder</a>. The interfaces for authentication interception scripts can be found in the <a href="http://www.gluu.org/docs/reference/interception-scripts/#authentication">Gluu Documentation</a>.</p>
-<p>We used the <a href="https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/basic/BasicExternalAuthenticator.py">Basic Script</a> 
+<p>We used the <a href="../BasicExternalAuthenticator.py">Basic Script</a> 
 as a template. The <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth/wikid">Wikid forms</a> 
 were also used as a template since it requires that we pass the value of the <code>code</code> obtained from Twilio to step 2 of the authentication to validate and authenticate the user.</p>
 <p>The <a href="https://github.com/GluuFederation/oxAuth/blob/master/Server/integrations/wikid/WikidExternalAuthenticator.py">Wikid authentication</a> script was also looked upon for examples on how to process the form.</p>

@@ -2,7 +2,7 @@
 
 ## Overview 
 This document will explain how to use Gluu's 
-[gplus interception script](https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations/gplus) to configure the Gluu Server to send users to Google for authentication. 
+[gplus interception script](./GooglePlusExternalAuthenticator.py) to configure the Gluu Server to send users to Google for authentication. 
 
 ## Configure Google
 

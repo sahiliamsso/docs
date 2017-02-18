@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2bbc52c-a659-4696-b1a8-cfeeb604c491" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/developer-guide/oxtrust-eclipse.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/authn-guide/BasicExternalAuthenticator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/authn-guide/OtpExternalAuthenticator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/authn-guide/PassportExternalAuthenticator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/authn-guide/U2fExternalAuthenticator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/authn-guide/WikidExternalAuthenticator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/authn-guide/oxPushExternalAuthenticator.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mkdocs.yml" afterPath="$PROJECT_DIR$/mkdocs.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/U2F.md" afterPath="$PROJECT_DIR$/source/authn-guide/U2F.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/customauthn.md" afterPath="$PROJECT_DIR$/source/authn-guide/customauthn.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/google.md" afterPath="$PROJECT_DIR$/source/authn-guide/google.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/installation-guide/install.md" afterPath="$PROJECT_DIR$/source/installation-guide/install.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/otp.md" afterPath="$PROJECT_DIR$/source/authn-guide/otp.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/passport.md" afterPath="$PROJECT_DIR$/source/authn-guide/passport.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/supergluu.md" afterPath="$PROJECT_DIR$/source/authn-guide/supergluu.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="oxtrust-eclipse.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="oxtrust-eclipse.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/developer-guide/oxtrust-eclipse.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -45,25 +52,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="install.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/installation-guide/install.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="170">
-                <caret line="10" column="95" lean-forward="true" selection-start-line="10" selection-start-column="95" selection-end-line="10" selection-end-column="95" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setup_py.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/installation-guide/setup_py.md">
+      <file leaf-file-name="otp.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/authn-guide/otp.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="51">
-                <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+                <caret line="3" column="90" lean-forward="false" selection-start-line="3" selection-start-column="90" selection-end-line="3" selection-end-column="90" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -71,12 +65,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uma-api.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/api-guide/uma-api.md">
+      <file leaf-file-name="OtpExternalAuthenticator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/authn-guide/OtpExternalAuthenticator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="565">
+              <caret line="621" column="53" lean-forward="false" selection-start-line="621" selection-start-column="53" selection-end-line="621" selection-end-column="53" />
+              <folding>
+                <element signature="e#502#576#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicExternalAuthenticator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/authn-guide/BasicExternalAuthenticator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="548">
+              <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+              <folding>
+                <element signature="e#162#198#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basic.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/authn-guide/basic.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="19210">
-                <caret line="1130" column="22" lean-forward="false" selection-start-line="1130" selection-start-column="22" selection-end-line="1130" selection-end-column="22" />
+              <first_editor relative-caret-position="556">
+                <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -84,12 +102,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uma.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/admin-guide/uma.md">
+      <file leaf-file-name="customauthn.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/authn-guide/customauthn.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="153">
-                <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+              <first_editor relative-caret-position="340">
+                <caret line="57" column="121" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="121" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -97,54 +115,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="saml.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/admin-guide/saml.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="5406">
-                <caret line="318" column="0" lean-forward="false" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="certificate.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/admin-guide/certificate.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="561">
-                <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="U2F.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/authn-guide/U2F.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="510">
-                <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="google.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/authn-guide/google.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="17">
-                <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="WikidExternalAuthenticator.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/authn-guide/WikidExternalAuthenticator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="548">
+              <caret line="251" column="19" lean-forward="false" selection-start-line="251" selection-start-column="19" selection-end-line="251" selection-end-column="19" />
+              <folding>
+                <element signature="e#162#236#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -175,17 +153,14 @@
         <option value="$PROJECT_DIR$/source/admin-guide/oxtrust-ui.md" />
         <option value="$PROJECT_DIR$/source/admin-guide/custom-script.md" />
         <option value="$PROJECT_DIR$/source/operation/intro.md" />
-        <option value="$PROJECT_DIR$/source/authn-guide/supergluu.md" />
         <option value="$PROJECT_DIR$/source/authn-guide/cert-auth.md" />
         <option value="$PROJECT_DIR$/source/authn-guide/duo.md" />
-        <option value="$PROJECT_DIR$/source/authn-guide/otp.md" />
         <option value="$PROJECT_DIR$/source/admin-guide/scim-uma.md" />
         <option value="$PROJECT_DIR$/source/integration/asimba.md" />
         <option value="$PROJECT_DIR$/source/admin-guide/asimba.md" />
         <option value="$PROJECT_DIR$/source/integration/oauth-js-implicit.md" />
         <option value="$PROJECT_DIR$/source/operation/custom-loginpage.md" />
         <option value="$PROJECT_DIR$/source/installation-guide/setup_py.md" />
-        <option value="$PROJECT_DIR$/source/authn-guide/passport.md" />
         <option value="$PROJECT_DIR$/source/reference/OpenLDAP-Schema.md" />
         <option value="$PROJECT_DIR$/../../Ldif-schema/openLDAP-schema/community-edition-setup/static/scripts/genSchemaMarkdown.py" />
         <option value="$PROJECT_DIR$/source/reference/openldap-schema.md" />
@@ -201,13 +176,22 @@
         <option value="$PROJECT_DIR$/source/api-guide/uma-api.md" />
         <option value="$PROJECT_DIR$/source/admin-guide/uma.md" />
         <option value="$PROJECT_DIR$/source/admin-guide/saml.md" />
-        <option value="$PROJECT_DIR$/source/authn-guide/U2F.md" />
-        <option value="$PROJECT_DIR$/source/authn-guide/customauthn.md" />
-        <option value="$PROJECT_DIR$/source/authn-guide/google.md" />
         <option value="$PROJECT_DIR$/source/installation-guide/install.md" />
         <option value="$PROJECT_DIR$/source/developer-guide/Oxtrust-eclipse.md" />
         <option value="$PROJECT_DIR$/mkdocs.yml" />
         <option value="$PROJECT_DIR$/source/developer-guide/oxtrust-eclipse.md" />
+        <option value="$PROJECT_DIR$/source/authn-guide/PassportExternalAuthenticator.py" />
+        <option value="$PROJECT_DIR$/source/authn-guide/passport.md" />
+        <option value="$PROJECT_DIR$/source/authn-guide/oxPushExternalAuthenticator.py" />
+        <option value="$PROJECT_DIR$/source/authn-guide/supergluu.md" />
+        <option value="$PROJECT_DIR$/source/authn-guide/U2F.md" />
+        <option value="$PROJECT_DIR$/source/authn-guide/U2fExternalAuthenticator.py" />
+        <option value="$PROJECT_DIR$/source/authn-guide/google.md" />
+        <option value="$PROJECT_DIR$/source/authn-guide/otp.md" />
+        <option value="$PROJECT_DIR$/source/authn-guide/OtpExternalAuthenticator.py" />
+        <option value="$PROJECT_DIR$/source/authn-guide/BasicExternalAuthenticator.py" />
+        <option value="$PROJECT_DIR$/source/authn-guide/customauthn.md" />
+        <option value="$PROJECT_DIR$/source/authn-guide/WikidExternalAuthenticator.py" />
       </list>
     </option>
   </component>
@@ -274,7 +258,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="installation-guide" />
+              <option name="myItemId" value="developer-guide" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -292,7 +276,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="developer-guide" />
+              <option name="myItemId" value="authn-guide" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -510,91 +494,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/integration/dropbox.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="85">
-            <caret line="5" column="58" lean-forward="false" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/integration/office.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="221">
-            <caret line="38" column="58" lean-forward="false" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/reference/JSON-oxtrust-prop.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="556">
-            <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/operation/intro.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/admin-guide/oxtrust-ui.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="3587">
-            <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/authn-guide/supergluu.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="442">
-            <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/authn-guide/duo.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="714">
-            <caret line="42" column="1" lean-forward="false" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/authn-guide/cert-auth.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="391">
             <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/authn-guide/otp.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2312">
-            <caret line="136" column="114" lean-forward="false" selection-start-line="136" selection-start-column="114" selection-end-line="136" selection-end-column="114" />
           </first_editor>
           <second_editor />
         </state>
@@ -689,16 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/authn-guide/passport.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1428">
-            <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/operation/LdapSchema.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -767,16 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/authn-guide/basic.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1207">
-            <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -870,65 +754,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/authn-guide/customauthn.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="17">
-            <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/authn-guide/U2F.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="510">
-            <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/authn-guide/google.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="17">
-            <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/installation-guide/setup_py.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="51">
-            <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/installation-guide/install.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="170">
-            <caret line="10" column="95" lean-forward="true" selection-start-line="10" selection-start-column="95" selection-end-line="10" selection-end-column="95" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mkdocs.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="471">
           <caret line="85" column="75" lean-forward="false" selection-start-line="85" selection-start-column="75" selection-end-line="85" selection-end-column="75" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/supergluu.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-36">
+            <caret line="4" column="73" lean-forward="false" selection-start-line="4" selection-start-column="73" selection-end-line="4" selection-end-column="73" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/oxPushExternalAuthenticator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="349" column="19" lean-forward="false" selection-start-line="349" selection-start-column="19" selection-end-line="349" selection-end-column="19" />
+          <folding>
+            <element signature="e#162#215#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/passport.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-3946">
+            <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+            <folding>
+              <marker date="1487421980794" expanded="true" signature="11664:11688" ph="..." />
+              <marker date="1487421980794" expanded="true" signature="11689:11777" ph="..." />
+              <marker date="1487421980794" expanded="false" signature="11742:11765" ph="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/PassportExternalAuthenticator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="246" column="76" lean-forward="false" selection-start-line="246" selection-start-column="76" selection-end-line="246" selection-end-column="76" />
+          <folding>
+            <element signature="e#161#197#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -940,6 +816,123 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/U2fExternalAuthenticator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="244" column="19" lean-forward="false" selection-start-line="244" selection-start-column="19" selection-end-line="244" selection-end-column="19" />
+          <folding>
+            <element signature="e#162#236#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/U2F.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-206">
+            <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/installation-guide/setup_py.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-359">
+            <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/google.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-391">
+            <caret line="4" column="64" lean-forward="false" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="64" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/installation-guide/install.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="170">
+            <caret line="10" column="95" lean-forward="false" selection-start-line="10" selection-start-column="95" selection-end-line="10" selection-end-column="95" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/otp.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="51">
+            <caret line="3" column="90" lean-forward="false" selection-start-line="3" selection-start-column="90" selection-end-line="3" selection-end-column="90" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/OtpExternalAuthenticator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="621" column="53" lean-forward="false" selection-start-line="621" selection-start-column="53" selection-end-line="621" selection-end-column="53" />
+          <folding>
+            <element signature="e#502#576#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/BasicExternalAuthenticator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+          <folding>
+            <element signature="e#162#198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/basic.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="556">
+            <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/customauthn.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="340">
+            <caret line="57" column="121" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="121" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/WikidExternalAuthenticator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="251" column="19" lean-forward="false" selection-start-line="251" selection-start-column="19" selection-end-line="251" selection-end-column="19" />
+          <folding>
+            <element signature="e#162#236#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

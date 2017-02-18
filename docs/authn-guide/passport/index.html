@@ -1303,7 +1303,7 @@ it also provides a standard mapping for user claims. </p>
 to call oxTrust APIs for its non-static configuration. Because its 
 configuration is stored centrally in LDAP, you can scale Passport even 
 in clustered topologies.</p>
-<p>The Gluu Server uses the <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations/passport">Passport interception script</a> to enable social login. This 
+<p>The Gluu Server uses the <a href="../PassportExternalAuthenticator.py">Passport interception script</a> to enable social login. This 
 script is included in our default distribution. Post-authentication,
 this script uses just-in-time provisioning to add users to the Gluu
 LDAP server if a local account does not already exist. In this way, 

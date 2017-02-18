@@ -1,7 +1,7 @@
 # One-Time Password (OTP) Authentication
 
 ## Overview
-This document will explain how to use Gluu's [One-Time Password (OTP) interception script](https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations/otp) to configure the Gluu Server for a two-step authentication process with username and password as the first step, and OTP as the second step.
+This document will explain how to use Gluu's [One-Time Password (OTP) interception script](./OtpExternalAuthenticator.py) to configure the Gluu Server for a two-step authentication process with username and password as the first step, and OTP as the second step.
 
 In order to use this authentication mechanism users will need to install a mobile app that supports HOTP/TOTP, like [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2).
 

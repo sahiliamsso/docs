@@ -54,7 +54,7 @@ Create the following files:
 
 There are many good examples of authentication interception scripts in Gluu's [oxAuth integrations folder](https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations). The respective `XHTML` and `XML` files are checked into the [auth folder](https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth). The interfaces for authentication interception scripts can be found in the [Gluu Documentation](http://www.gluu.org/docs/reference/interception-scripts/#authentication).
 
-We used the [Basic Script](https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/basic/BasicExternalAuthenticator.py) 
+We used the [Basic Script](./BasicExternalAuthenticator.py) 
 as a template. The [Wikid forms](https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth/wikid) 
 were also used as a template since it requires that we pass the value of the `code` obtained from Twilio to step 2 of the authentication to validate and authenticate the user.
 
