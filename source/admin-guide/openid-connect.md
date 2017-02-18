@@ -175,14 +175,14 @@ Out-of-the-box supported `acr` values include:
 
 |  ACR Value  	| Description			|
 |---------------|-------------------------------|
-|  u2f		| [FIDO U2F Device](../multi-factor/u2f)|
-|  super_gluu	| [Multi-factor authentication](../multi-factor/oxpush2)|
-|  duo		| [Duo soft-token authentication](../multi-factor/duo)|
+|  u2f		| [FIDO U2F Device](../authn-guide/U2F.md)|
+|  super_gluu	| [Multi-factor authentication](../authn-guide/supergluu.md)|
+|  duo		| [Duo soft-token authentication](../authn-guide/duo.md)|
 |  cert	| Smart card or web browser X509 personal certificates|
 |  cas	| External CAS server|
 |  cert	| Smart card or web browser X509 personal certificates|
-|  gplus	| [Google+ authentication](../customize/social-login-google)|
-|  OTP	| OATH one time password |
+|  gplus	| [Google+ authentication](../authn-guide/google.md)|
+|  OTP	| [OATH one time password](../authn-guide/otp.md) |
 |  asimba	| Use of the Asimba proxy for inbound SAML |
 |  twilio_sms	| Use of the Twilio Saas to send SMS one time passwords |
 |  passport	| Use of the Passport component for social login |
