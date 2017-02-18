@@ -123,8 +123,8 @@ mechanism is not perfect. If the end user's web browser is blocking third party 
 
 In OAuth, scopes are used to specify extents of access. For a sign-in 
 flow like OpenID Connect, scopes end up corresponding to the release of
-user claims. The Gluu Server supports the [standard scopes]
-(http://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims) defined 
+user claims. The Gluu Server supports the 
+[standard scopes](http://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims) defined 
 in the OpenID Connect specification. You can also define your own scopes,
 and map them to any user attributes which you have registered. 
 
