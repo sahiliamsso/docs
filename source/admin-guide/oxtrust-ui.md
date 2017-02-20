@@ -76,17 +76,11 @@ There are three tabs included in the `JSON Configuration` menu:
 
 ### oxTrust Configuration
 From this tab you can access and edit the oxtrust JSON configuration file. 
-Click the update button at the bottom of the changes to save any changes. 
+Click the update button at the bottom of the page to save any changes. 
 
 #### WhiteList/BlackList URIs
 
-##### Overview
-
-An administrator can allow or deny access to URI's. And this can be 
-performed with the help of OxTrust UI, you can whitelist or blacklist URIs, 
-which is required to be allowed and not allowed within the network.
-
-This could be configured using the JSON properties in the OxTrust UI
+An administrator can allow or deny access to URI's by updating JSON properties in the oxTrust UI
 
 ##### Configure WhiteList/BlackList of URIs
 
