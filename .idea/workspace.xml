@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2bbc52c-a659-4696-b1a8-cfeeb604c491" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/admin-guide/oxtrust-ui.md" afterPath="$PROJECT_DIR$/source/admin-guide/oxtrust-ui.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mkdocs.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mkdocs.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mkdocs.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="83" column="74" lean-forward="true" selection-start-line="83" selection-start-column="74" selection-end-line="83" selection-end-column="74" />
+            <state relative-caret-position="148">
+              <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -33,7 +32,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="272">
-                <caret line="16" column="50" lean-forward="true" selection-start-line="0" selection-start-column="1" selection-end-line="16" selection-end-column="50" />
+                <caret line="16" column="50" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="16" selection-end-column="50" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -41,12 +40,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="oxtrust-ui.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="oxtrust-ui.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/admin-guide/oxtrust-ui.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="168">
-                <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+              <first_editor relative-caret-position="15">
+                <caret line="217" column="3" lean-forward="true" selection-start-line="217" selection-start-column="3" selection-end-line="217" selection-end-column="3" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -828,7 +827,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="272">
-            <caret line="16" column="50" lean-forward="true" selection-start-line="0" selection-start-column="1" selection-end-line="16" selection-end-column="50" />
+            <caret line="16" column="50" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="16" selection-end-column="50" />
             <folding />
           </first_editor>
           <second_editor />
@@ -857,22 +856,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/admin-guide/oxtrust-ui.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="168">
-            <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="83" column="74" lean-forward="true" selection-start-line="83" selection-start-column="74" selection-end-line="83" selection-end-column="74" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/source/admin-guide/oxtrust-ui.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="217" column="3" lean-forward="true" selection-start-line="217" selection-start-column="3" selection-end-line="217" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

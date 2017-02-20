@@ -69,14 +69,14 @@ The Gluu Server needs a mail server in order to send notifications. All fields i
 
 From the oxTrust Settings page the administrator can find the oxTrust build date and number, and manage the organization name, logo, and favicon. This page also contains the name of the Gluu Server administrator group. Users added to this group will have administrator access to the Gluu Server.
 
-### JSON Configuration      
+## JSON Configuration      
 There are three tabs included in the `JSON Configuration` menu:
 
 ![json-config-head](../img/oxtrust/json-config-head.png "JSON Configuration Headers")
 
-## WhiteList/BlackList URIs
+#### WhiteList/BlackList URIs
 
-### Overview
+##### Overview
 
 An administrator can allow or deny access to URI's. And this can be 
 performed with the help of OxTrust UI, you can whitelist or blacklist URIs, 
@@ -84,22 +84,22 @@ which is required to be allowed and not allowed within the network.
 
 This could be configured using the JSON properties in the OxTrust UI
 
-### Configure WhiteList/BlackList of URIs
+##### Configure WhiteList/BlackList of URIs
 
 1. Click on `Configuration` > `JSON Properties`
 2. Click `OxTrust properties` tab and search for whitelist nad blacklist label.
 
 ![URI](../img/reference/whitelistblacklisturi.png)
 
-#### oxTrust Configuration
+### oxTrust Configuration
 From this tab you can access and edit the oxtrust JSON configuration file. 
 Click the update button at the bottom of the changes to save any changes. 
 
-#### oxAuth Configuration
+### oxAuth Configuration
 The oxAuth JSON configuration page gives easy access to the different endpoints used by Gluu Server CE. 
 This page also contains the supported response, grants, and algorithms. 
 
-#### oxTrust Import Person Configuration
+### oxTrust Import Person Configuration
 The oxTrust Import Person Configuration page contains the configuration for 
 the file method of importing users into the Gluu Server. The administrator 
 can import users from an `xls` file which must be defined in this tab to import 
@@ -111,7 +111,7 @@ data in the LDAP attributes. The default format should contain the following fie
 - firstname, 
 etc..
 
-### Manage Authentication
+## Manage Authentication
 
 #### Manage LDAP Authentication
 This section allows the Gluu Server administrator to define how and
@@ -182,7 +182,7 @@ of SSO protocols ( OpenID Connect, SAML, CAS )
 * Passport Support: This mode uses third-party authentication e.g. Google+, Twitter, Facebook to authenticate users in Gluu Server.
 * Custom Script Authenticaiton: This mode uses custom script and enabled in the oxTrust Admin UI.
 
-### Manage Custom Scripts
+## Manage Custom Scripts
 The Gluu Server exposes interception scripts in places where it is common 
 for organizations to implement custom workflows, or changes to the 
 look and feel of the Gluu Server. The most commonly used scripts are 
@@ -190,7 +190,7 @@ for authentication, authorization, and identity synchronization. Each
 type of script has its own interface--in other words, what methods are
 available. For more information, see the reference page detailing each type of [interception script](./custom-script.md).
 
-### Manage Registration
+## Manage Registration
 The Gluu Server is shipped with a very basic user registration feature. The registration page can be found at `https://<hostname>/identity/register`. For custom enrollment requirements we recommend that you write a registration page and use SCIM to add the user record to the Gluu Server. Also, in some cases oxTrust is not Internet facing, which makes it a bad option for user registration. Net-net, Use this feature only if you have very basic requirements! See [user registration](./user-group/#user-registration) for more. 
 
 The tab has two options:
@@ -208,7 +208,7 @@ This option adds a required CAPTCHA to the registration form.
 
 This section allows you to manage the list of attributes displayed in the registration form. Search, select, add, and order desired attributes here.
 
-### Attributes
+## Attributes
 Attributes are individual pieces of user data, like `uid` or `email`, that are required by applications in order to identify a user and grant access to protected resources. The user attributes that are available in your federation service can be found on this page. By default, only `active` attributes are visible. Use the `Show All Attributes` button to display the `inactive` attributes too. 
 
 Custom attributes can be added by clicking the `Add Attribute` button and completing the simple form. Note that custom attributes must already be present in the LDAP server in order for them to be available for release by the Gluu Server. Adding an attribute here is like registering it in the Gluu Server--in order to release an attribute during a SAML or OpenID Connect transaction, the Gluu Server needs to know it exists. 
