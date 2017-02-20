@@ -74,6 +74,10 @@ There are three tabs included in the `JSON Configuration` menu:
 
 ![json-config-head](../img/oxtrust/json-config-head.png "JSON Configuration Headers")
 
+### oxTrust Configuration
+From this tab you can access and edit the oxtrust JSON configuration file. 
+Click the update button at the bottom of the changes to save any changes. 
+
 #### WhiteList/BlackList URIs
 
 ##### Overview
@@ -90,10 +94,6 @@ This could be configured using the JSON properties in the OxTrust UI
 2. Click `OxTrust properties` tab and search for whitelist nad blacklist label.
 
 ![URI](../img/reference/whitelistblacklisturi.png)
-
-### oxTrust Configuration
-From this tab you can access and edit the oxtrust JSON configuration file. 
-Click the update button at the bottom of the changes to save any changes. 
 
 ### oxAuth Configuration
 The oxAuth JSON configuration page gives easy access to the different endpoints used by Gluu Server CE. 
