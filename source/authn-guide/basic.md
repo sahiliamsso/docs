@@ -1,7 +1,7 @@
 # Authentication against LDAP (AKA “Basic”, “Internal”)
 
 ## Overview
-The [Basic authentication script](./BasicExternalAuthenticator.py) is the default authentication method used by the Gluu Server. Basic authentication relies on a successful LDAP BIND operation against an LDAP directory--either the local LDAP included in the Gluu Server, or a backend LDAP server like Active Directory that has been configured for use with the Gluu Server via [Cache Refresh](../admin-guide/user-group.md/#ldap-synchronization). 
+The [Basic authentication script](./BasicExternalAuthenticator.py) is used to implement username / password authentication. Basic authentication relies on a successful LDAP BIND operation against an LDAP directory--either the local LDAP included in the Gluu Server, or a backend LDAP server like Active Directory that has been configured for use with the Gluu Server via [Cache Refresh](../admin-guide/user-group.md/#ldap-synchronization). 
 
 ## Configuring Basic Authentication
 Follow the steps below to configure the Basic authentication method:
@@ -9,62 +9,52 @@ Follow the steps below to configure the Basic authentication method:
 1. Click on `Configuration` > `Manage authentication` 
 ![basic](../img/user-authn/basicauthn.png)
 
-
-You can find a more detailed description of each field in 
-[manage authentication](../admin-guide/oxtrust-ui/#manage-authentication) 
-section under OxTrust admin UI. 
+You can find a more detailed description of each field in the
+[Manage Authentication](../admin-guide/oxtrust-ui/#manage-authentication) 
+section of the Gluu docs. 
 
 Let’s only touch concepts of `primary key` and `local primary key` for now:
 
-•Primary key - name of LDAP attribute used to look up user entries in backend LDAP directory. 
+- Primary key: name of LDAP attribute used to look up user entries in backend LDAP directory. 
 
-•Local primary key -  name of LDAP attribute used to look up user entries in Gluu’s 
+- Local primary key:  name of LDAP attribute used to look up user entries in Gluu’s 
 internal LDAP directory.
 
-_Note: A primary key can also be considered a `uid` (unique identifier)._
+!!! Note
+    A primary key can also be considered a `uid` (short for: unique identifier).
 
 ## Basic Authentication Flow
 
-Basic authentication flow can be divided into three set of phases:
-
-1.String provided by user in the “Login” field of the login form is treated as a local key. 
+Basic authentication flow can be divided into three phases:
+ 
+1. String provided by user in the “Login” field of the login form is treated as a local key. 
 It becomes a part of LDAP search filter similar to 
 `&(..set of predefined filter clauses..)(local_primary_key=provided_login_name)`. 
 If a user entry conforming to this filter is found in Gluu’s internal LDAP directory and 
 its `gluuStatus` attribute is set to `active`, login flow continues, 
-otherwise it’s deemed unsuccessful. That means that even in case when backend 
+otherwise it’s deemed unsuccessful. That means that even when a backend 
 directory is used for authentication, a mirrored user entry still must be present in 
-Gluu’s internal directory all the time
+Gluu’s internal directory.      
 
-2.String provided by user in the “Login” field of the login form is now treated as a 
+2. String provided by user in the “Login” field is now treated as a 
 primary key. It becomes a part of LDAP search filter similar to 
 `&(..set hardcoded clauses..)(primary_key=provided_login_name)`. 
 If a user entry conforming to this filter is found in specified backend LDAP directory 
-login flows continues, otherwise it’s deemed unsuccessful
+login flows continues, otherwise it’s deemed unsuccessful      
 
-3.LDAP BIND operation is initiated against backend LDAP directory with DN 
+3. LDAP BIND operation is initiated against backend LDAP directory with DN 
 of user entry found on step 2; for a password it will use string provided 
 by user in the “Password” field of the login form. If bind results in success, 
-login flow ends and user is treated as authenticated.
+login flow ends and user is treated as authenticated.     
 
-##Basic Authentication using LDAP backend(s)
+## Basic Authentication Using Remote LDAP backend(s)
 
-By default Gluu is configured to use its own internal LDAP directory instead of 
-some remote LDAP backend, so LDAP operations on steps 2 and 3 from the authentication flow 
-will be also executed against it. 
+By default the Gluu Server is configured to use its own internal LDAP directory as opposed to a remote LDAP backend. 
 
-As many organizations already have existing LDAP directories with users’ 
-data in their network which they would like to put to use, one of the first steps for 
-them will be changing this default behavior by providing their backend server’s DNS name 
-or ip address  in `Server` field. 
+Since many organizations already have an existing LDAP directory with user data, one of the first steps towards using the external LDAP for basic authentication is to change the default behavior by providing the backend server’s DNS name or IP address in the `Server` field. 
 
-As login name provided by user will be used as a search 
-term in searches both against remote and internal directories, that means there must be 
-strict relation between user entries in those directories, ensuring they both will succeed. 
+The login name provided by the user will be used as a search term against both the remote and internal directories, that means there must be a strict relation between user entries in those directories, ensuring they both will succeed. 
 
-Most simple way to achieve this is to employ Cache Refresh feature which allows to set 
-mappings for user attributes imported from a backend directory. 
-It also allows to customize default mapping behavior with Jython-based scripts. 
-You can find out more about Cache Refresh a.k.a 
-[LDAP Synchronization](../user-group/#ldap-synchronization).
+The simplest way to achieve this is to use the Gluu Server's Cache Refresh feature which allows the admin to set 
+mappings for user attributes imported from a backend directory. Cache Refresh also allows you to customize default mapping behavior with Jython-based scripts. Learn more about [Cache Refresh](../user-group/#ldap-synchronization) in the user management portion of these docs.
 
