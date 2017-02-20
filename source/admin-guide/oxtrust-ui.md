@@ -91,7 +91,7 @@ This could be configured using the JSON properties in the OxTrust UI
 ##### Configure WhiteList/BlackList of URIs
 
 1. Click on `Configuration` > `JSON Properties`
-2. Click `OxTrust properties` tab and search for whitelist nad blacklist label.
+2. Click `OxTrust properties` tab and search for whitelist and blacklist label.
 
 ![URI](../img/reference/whitelistblacklisturi.png)
 
