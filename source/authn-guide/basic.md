@@ -49,7 +49,7 @@ login flow ends and user is treated as authenticated.
 
 ## Basic Authentication Using Remote LDAP backend(s)
 
-By default the Gluu Server is configured to use its own internal LDAP directory as opposed to a remote LDAP backend. 
+By default the Gluu Server is configured to use its own internal LDAP directory for authentication (as opposed to a remote LDAP backend). 
 
 Since many organizations already have an existing LDAP directory with user data, one of the first steps towards using the external LDAP for basic authentication is to change the default behavior by providing the backend server’s DNS name or IP address in the `Server` field. 
 
