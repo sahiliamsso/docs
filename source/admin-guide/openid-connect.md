@@ -71,14 +71,14 @@ defines a standard API where clients can register themselves--
 [Dynamic Client Registration]
 (http://openid.net/specs/openid-connect-registration-1_0.html). You can
 find the registration URL by calling the configuration endpoint 
-(`/.well-known/openid-configuration`). 
+(`/.well-known/openid-configuration`).        
 
 You may not want clients to dynamically register themselves! To disable
 this endpoint, in the oxAuth JSON properties, set the 
-`dynamicRegistrationEnabled` value to False.
+`dynamicRegistrationEnabled` value to False.                 
 
 If you want to add a client through oxTrust, you can use the manual form:
-by click the `Add Client` button.
+by click the `Add Client` button.            
 
 ![add-client](../img/openid/add-client.png)
 
@@ -87,14 +87,16 @@ specified in the OpenID Connect [Dynamic Client Registration]
 (http://openid.net/specs/openid-connect-registration-1_0.html)specification.
 There are two configurations params which can only be configured via 
 oxTrust by an administrator. These include:
+
  - Pre-Authorization -- Use this if you want to suppress the end user
  authorization prompt. This is handy for SSO scenarios where the clients
  are your own (not third party), and there is no need to prompt the 
- person to approve the release of information.
+ person to approve the release of information.      
+ 
  - Persist Client Authorizations -- Use this option if you only want 
  to prompt the end user once to authorize the release of user 
  information. It will cause the data to be persisted under the person's
- entry in the Gluu LDAP server.
+ entry in the Gluu LDAP server.                
 
 ### Custom Client Registration
 
@@ -106,9 +108,9 @@ could even call API's to determine if you want to allow the
 registration at all. To access the interface for custom scripts in 
 oxTrust, navigate to Configuration --> Custom Scripts --> Client Registration.
 
-![custom-client](../img/openid/custom-client.png)
+![custom-client](../img/openid/custom-client.png)           
 
-The script is [available here](./sample-client-registration-script.py)
+The script is [available here](./sample-client-registration-script.py)                      
 
 ### Logout
 
@@ -130,18 +132,18 @@ and map them to any user attributes which you have registered.
 
 To add Scope and Claims in OpenID Connect
 
-1. Click on `Configuration` > `OpenID Connect`
-    
+1. Click on `Configuration` > `OpenID Connect`           
+     
     ![menu](../img/openid/clientmenu.png)
 
-2. Click on Add scope on the screen to the right
+2. Click on Add scope on the screen to the right            
     ![scopeadd](../img/openid/admin_oauth2_scope.png)
-3. You will presented the screen below to the enter the Scope Details
+3. You will presented the screen below to the enter the Scope Details                      
     
     ![scopedetails](../img/openid/add-scope1.png)
 
 4. To add more claims, simply click "Add Claim" and you will be presented
-with the following screen:
+with the following screen:                     
 
     ![Add Claims](../img/openid/add-scope-claim.png)
 
