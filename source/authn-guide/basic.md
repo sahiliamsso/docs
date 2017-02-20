@@ -51,9 +51,9 @@ login flow ends and user is treated as authenticated.
 
 By default the Gluu Server is configured to use its own internal LDAP directory for authentication (as opposed to a remote LDAP backend). 
 
-Since many organizations already have an existing LDAP directory with user data, one of the first steps towards using the external LDAP for basic authentication is to change the default behavior by providing the backend server’s DNS name or IP address in the `Server` field. 
+To use an external LDAP server like Active Directory instead, you need to provide the backend server's DNS name or IP address in the `Server` field. 
 
-The login name provided by the user will be used as a search term against both the remote and internal directories, that means there must be a strict relation between user entries in those directories, ensuring they both will succeed. 
+The login name provided by the user will be used as a search term against both the remote and internal directories, meaning there must be a strict relation between user entries in the two directories that ensures both searches will succeed. 
 
 The simplest way to achieve this is to use the Gluu Server's Cache Refresh feature which allows the admin to set 
 mappings for user attributes imported from a backend directory. Cache Refresh also allows you to customize default mapping behavior with Jython-based scripts. Learn more about [Cache Refresh](../user-group/#ldap-synchronization) in the user management portion of these docs.
