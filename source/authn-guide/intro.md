@@ -34,7 +34,7 @@ Review our [custom authentication script tutorial](./customauthn.md), where we d
 
 ##  Support Multiple Authentication Mechanisms
 
-All authentications that happen at the Gluu Server are routed through oxAuth, the software that includes the OpenID Connect Provider (OP) implementation. Using the OpenID Connect `acr_value`, an application can request a certain type of authentication at the Gluu Server. This allows you to support multiple authetication mechanisms, and allow applications to request a specific mechanism on a case-by-case basis. Learn more about the `acr_values` that are supported out-of-the-box by the Gluu Server in the [OpenID Connect docs](../admin-guide/openid-connect.md/#multi-factor-authentication-for-clients).
+All authentications that happen at the Gluu Server are routed through oxAuth, the software that includes Gluu's OpenID Connect Provider (OP) implementation. Using the OpenID Connect `acr_value`, an application can request a certain type of authentication at the Gluu Server. This allows you to support multiple authetication mechanisms, and allow applications to request a specific mechanism on a case-by-case basis. Learn more about the `acr_values` that are supported out-of-the-box by the Gluu Server in the [OpenID Connect docs](../admin-guide/openid-connect.md/#multi-factor-authentication-for-clients).
 
 !!! Note
     Since all authentications are routed through oxAuth, your Gluu Server can take an incoming SAML or CAS assertion from a 3rd party IDP, for example ADFS, and use that as the basis for an OIDC session, providing seamless SSO across all your apps regardless of protocol.
