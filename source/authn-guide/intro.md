@@ -16,13 +16,13 @@ variation of username and password.
 
 Learn how to [configure basic authentication](./basic.md).
 
-## Configuring Social Authentication
+## Configure Social Authentication
 
 During deployment of the Gluu Server you are presented with an option to deploy Passport.js. With over 300 existing "strategies", Passport.js provides a crowd-sourced approach to supporting social login at many popular consumer IDPs. Passport not only normalizes authentication, it also provides a standard mapping for user claims.
 
 Learn how to [configure social login](./passport.md). 
 
-## Configuring Multi-Factor Authentication
+## Configure Multi-Factor Authentication
 
 Interception scripts are used by the Gluu Server to implement multi-factor authentication. A number of scripts are included out-of-the-box, including scripts to support FIDO U2F tokens (like Vasco and Yubikey), Gluu's free Android and iOS two-factor authentication application called Super Gluu, certificate authentication, Duo Security, One-Time Passwords, and more. 
 
@@ -32,7 +32,11 @@ In addition, organizations frequently have custom requirements for authenticatio
 
 Learn more about how to [write a custom interception script](../admin-guide//custom-script.md).
 
-Review our [custom authentication script tutorial](./customauthn.md), where we demonstrate how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication mechanism.
+Review our [custom authentication script tutorial](./customauthn.md), where we demonstrate how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication mechanism. 
+
+##  Support Multiple Authentication Mechanisms
+
+All authentications that happen at the Gluu Server are routed through oxAuth, the software that includes the OpenID Connect Provider (OP) implementation. Note: this means that even during a SAML SSO authentication, the user is issued an OpenID Connect session also, enabling SSO across SAML and OpenID Connect applications. Using the OpenID Connect `acr_value`, an application can request a certain type of authentication at the Gluu Server. Learn more about which `acr_values` are supported out-of-the-box by the Gluu Server in the [OpenID Connect docs](../admin-guide/openid-connect.md/#multi-factor-authentication-for-clients).
 
 ## Configuring Account Lockout
 
