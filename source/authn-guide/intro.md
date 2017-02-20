@@ -26,9 +26,9 @@ Learn how to [configure social login](./passport.md).
 
 Interception scripts are used by the Gluu Server to implement multi-factor authentication. A number of scripts are included out-of-the-box, including scripts to support FIDO U2F tokens (like Vasco and Yubikey), Gluu's free Android and iOS two-factor authentication application called Super Gluu, certificate authentication, Duo Security, One-Time Passwords, and more. 
 
-Implementation guides for each pre-supported authentication mechanism can be found in the pages that follow in this User Authentication Guide.
+View all pre-written Gluu Server [custom authentication scripts](https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations). Implementation guides can be found in the pages that follow in this User Authentication Guide.
 
-In addition, organizations frequently have custom requirements for authentication. For instance, an admin may want to implement a policy that enforces two-factor authentication only for users from certain a group, like the IT Group. Or only when a user tries to access a protected resource from an unknown IP address. Custom interception scripts allow you to implement these types of policies, as well as any other business driven policy that can be scripted. 
+Organizations frequently have custom requirements for authentication. For instance, an organization may want to implement a policy that enforces two-factor authentication only for users from certain a group; or only when a user tries to access a protected resource from an unknown IP address. Custom interception scripts enable enforcement of these types of policies, as well as any other business driven policy that can be scripted. 
 
 Review our [custom authentication script tutorial](./customauthn.md), where we demonstrate how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication mechanism. 
 
