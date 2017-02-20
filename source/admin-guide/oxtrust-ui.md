@@ -75,7 +75,7 @@ There are three tabs included in the `JSON Configuration` menu:
 ![json-config-head](../img/oxtrust/json-config-head.png "JSON Configuration Headers")
 
 ### oxTrust Configuration
-From this tab you can access and edit the oxtrust JSON configuration file. 
+From this tab you can access and edit the oxTrust JSON configuration file. 
 Click the update button at the bottom of the page to save any changes. 
 
 #### WhiteList/BlackList URIs
@@ -85,7 +85,7 @@ An administrator can allow or deny access to URI's by updating JSON properties i
 ##### Configure WhiteList/BlackList of URIs
 
 1. Click on `Configuration` > `JSON Properties`
-2. Click `OxTrust properties` tab and search for whitelist and blacklist label.
+2. Click `oxTrust properties` tab and search for whitelist and blacklist label.
 
 ![URI](../img/reference/whitelistblacklisturi.png)
 
