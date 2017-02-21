@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2bbc52c-a659-4696-b1a8-cfeeb604c491" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/U2F.md" afterPath="$PROJECT_DIR$/source/authn-guide/U2F.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/cert-auth.md" afterPath="$PROJECT_DIR$/source/authn-guide/cert-auth.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/customauthn.md" afterPath="$PROJECT_DIR$/source/authn-guide/customauthn.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/google.md" afterPath="$PROJECT_DIR$/source/authn-guide/google.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/otp.md" afterPath="$PROJECT_DIR$/source/authn-guide/otp.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/passport.md" afterPath="$PROJECT_DIR$/source/authn-guide/passport.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/supergluu.md" afterPath="$PROJECT_DIR$/source/authn-guide/supergluu.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/intro.md" afterPath="$PROJECT_DIR$/source/authn-guide/intro.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,7 +53,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cert-auth.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cert-auth.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/authn-guide/cert-auth.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -77,8 +70,21 @@
         <entry file="file://$PROJECT_DIR$/source/admin-guide/openid-connect.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="3366">
+              <first_editor relative-caret-position="17">
                 <caret line="198" column="63" lean-forward="false" selection-start-line="198" selection-start-column="63" selection-end-line="198" selection-end-column="63" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="intro.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/authn-guide/intro.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="306">
+                <caret line="38" column="80" lean-forward="false" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -126,7 +132,6 @@
         <option value="$PROJECT_DIR$/source/authn-guide/basic.md" />
         <option value="$PROJECT_DIR$/source/admin-guide/user-group.md" />
         <option value="$PROJECT_DIR$/source/admin-guide/user-authentications.md" />
-        <option value="$PROJECT_DIR$/source/authn-guide/intro.md" />
         <option value="$PROJECT_DIR$/source/reference/oxldap.md" />
         <option value="$PROJECT_DIR$/source/admin-guide/certificate.md" />
         <option value="$PROJECT_DIR$/source/api-guide/uma-api.md" />
@@ -152,6 +157,7 @@
         <option value="$PROJECT_DIR$/mkdocs.yml" />
         <option value="$PROJECT_DIR$/source/reference/urilisting.md" />
         <option value="$PROJECT_DIR$/source/admin-guide/oxtrust-ui.md" />
+        <option value="$PROJECT_DIR$/source/authn-guide/intro.md" />
       </list>
     </option>
   </component>
@@ -616,16 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/authn-guide/intro.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-342">
-            <caret line="16" column="56" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/reference/oxldap.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -853,17 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/admin-guide/openid-connect.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="3366">
-            <caret line="198" column="63" lean-forward="false" selection-start-line="198" selection-start-column="63" selection-end-line="198" selection-end-column="63" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mkdocs.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
@@ -899,6 +884,28 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/admin-guide/openid-connect.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="17">
+            <caret line="198" column="63" lean-forward="false" selection-start-line="198" selection-start-column="63" selection-end-line="198" selection-end-column="63" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/intro.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="306">
+            <caret line="38" column="80" lean-forward="false" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
             <folding />
           </first_editor>
           <second_editor />
