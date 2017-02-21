@@ -4,7 +4,7 @@ The integration guide will help you integrate custom developed, open source, off
 
 ## SaaS Applications 
 
-SaaS integrations are fairly straightforward. Presumably the app already supports either SAML or OpenID Connect and provides documentation for configuring your IDP (Gluu Server) for SSO. We have documentation for configuring the Gluu Server for SSO to a few very popular SaaS applications like Google and Salesforce. If we do not have a guide for configuring the app in question, simply goolge `{SaaS Provider} SAML` or `{SaaS Provider} OpenID Connect`. Follow the provider's instructions for configuring your IDP for SSO and test. 
+SaaS integrations are fairly straightforward. Presumably the app already supports either SAML or OpenID Connect and provides documentation for configuring your IDP (Gluu Server) for SSO. We have documentation for configuring the Gluu Server for SSO to a few popular SaaS applications like Google and Salesforce. If we do not have a guide for configuring the app in question, simply goolge `{SaaS Provider} SAML` or `{SaaS Provider} OpenID Connect`. Follow the provider's instructions for configuring your IDP for SSO and test. 
 
 ## Non-SaaS Applications
 
