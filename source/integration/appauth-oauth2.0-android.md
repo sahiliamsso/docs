@@ -1,4 +1,4 @@
-# App-Auth (Android)
+# App Auth Android
 
 ## Overview
 
