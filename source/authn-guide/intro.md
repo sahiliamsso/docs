@@ -31,18 +31,18 @@ Implementation guides for a number of two-factor authentication mechanisms can b
 !!! Note
     View all pre-written Gluu Server [custom authentication scripts](https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations). 
 
-## Custom Authentication
-
-Organizations frequently have custom requirements for authentication. For instance, an organization may want to implement a policy that enforces two-factor authentication only for users from certain a group; or only when a user tries to access a protected resource from an unknown IP address. Custom interception scripts enable enforcement of these types of policies, as well as any other business driven policy that can be scripted. 
-
-Review our [custom authentication script tutorial](./customauthn.md), where we demonstrate how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication mechanism. 
-
 ##  Support Multiple Authentication Mechanisms
 
 All authentications that happen at the Gluu Server are routed through oxAuth, the software that includes Gluu's OpenID Connect Provider (OP) implementation. Using the OpenID Connect `acr_value`, an application can request a certain type of authentication at the Gluu Server. This allows you to support multiple authetication mechanisms, and allow applications to request a specific mechanism on a case-by-case basis. Learn more about the `acr_values` that are supported out-of-the-box by the Gluu Server in the [OpenID Connect docs](../admin-guide/openid-connect.md/#multi-factor-authentication-for-clients).
 
 !!! Note
     Since all authentications are routed through oxAuth, your Gluu Server can take an incoming SAML or CAS assertion from a 3rd party IDP, for example ADFS, and use that as the basis for an OIDC session, providing seamless SSO across all your apps regardless of protocol.
+
+## Custom Authentication
+
+Organizations frequently have custom requirements for authentication. For instance, an organization may want to implement a policy that enforces two-factor authentication only for users from certain a group; or only when a user tries to access a protected resource from an unknown IP address. Custom interception scripts enable enforcement of these types of policies, as well as any other business driven policy that can be scripted. 
+
+Review our [custom authentication script tutorial](./customauthn.md), where we demonstrate how to write a script to implement OTP authentication using Twilio to send an SMS code for a two-step out-of-band authentication mechanism. 
 
 ## Configuring Account Lockout
 
