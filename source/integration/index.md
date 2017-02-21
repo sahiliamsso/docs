@@ -22,5 +22,5 @@ The most commonly used approach for enterprise SSO has been the Web Server Filte
 The other integration option is to call the federation APIs directly in your application. In general, calling the API’s directly will enable the application to make “smarter” decisions, which can have a positive impact on usability and ultimately result in better security. Libraries exist for SAML, OpenID Connect and UMA in many languages. Due to the complexity associated with properly implementing the APIs, we recommend using one of the supported Client SDKs covered in our documentation to help with the heavy lifting. 
 
 !!! Note
-    Given the ongoing maintenance and security implications of getting the implementation correct, we strongly encourage you to use our commercial OAuth 2.0 client software: [oxd](./oauth2.md/). 
+    Given ongoing maintenance considerations, and the security implications of getting the implementation correct, we strongly encourage you to use our commercial OAuth 2.0 client software: [oxd](./oauth2.md/). 
     
