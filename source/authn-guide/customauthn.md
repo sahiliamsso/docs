@@ -6,7 +6,7 @@
 
 For example, you may want to only prompt users in a certain group for two-factor authentication. Or, you may want to only prompt a user for two-factor authentication if the request is coming from an unknown IP address. These types of policies can be incorporated into your authentication service by writing an interception script that uses the [methods](#methods) described below.
 
-This tutorial explains how to write a script to implement a two-step out-of-band authentication using Twilio to send an SMS with a one-time password. At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, you can review the completed Twilio custom authentication script [here](./twilio2FA.py). 
+This tutorial explains how to write a script to implement a two-step out-of-band authentication using Twilio to send an SMS with a one-time password. At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, you can review the completed Twilio custom authentication script [here](https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/twilio_sms/twilio2FA.py). 
 
 ## Suggested Development Environment
 
@@ -54,7 +54,7 @@ Create the following files:
 
 There are many good examples of authentication interception scripts in Gluu's [oxAuth integrations folder](https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations). The respective `XHTML` and `XML` files are checked into the [auth folder](https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth). The interfaces for authentication interception scripts can be found in the [Gluu Documentation](http://www.gluu.org/docs/reference/interception-scripts/#authentication).
 
-We used the [Basic Script](./BasicExternalAuthenticator.py) 
+We used the [Basic Script](https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/basic/BasicExternalAuthenticator.py) 
 as a template. The [Wikid forms](https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth/wikid) 
 were also used as a template since it requires that we pass the value of the `code` obtained from Twilio to step 2 of the authentication to validate and authenticate the user.
 
@@ -62,7 +62,8 @@ The [Wikid authentication](https://github.com/GluuFederation/oxAuth/blob/master/
 
 ## Implement methods - Using Twilio SMS
 
-Steps to add a custom template and pass values between 2 steps of authentication for our sample [Twilio script](./twilio2FA.py):
+Steps to add a custom template and pass values between 2 steps of authentication for our sample 
+[Twilio script](https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/twilio_sms/twilio2FA.py):
 
 1. Login to Gluu UI;
 2. Navigate to `Configuration` > `Manage Custom Scripts`;
@@ -132,7 +133,8 @@ Example: `abc = requestParameters.get("passcode")[0].strip()`
 Another method usually needed to implement is `getCountAuthenticationSteps`. This method normally just returns 1, 2, or 3. If implementing an adaptive authentication strategy, where the number of steps depends on the context. 
 
 !!! Note   
-	Check the [Duo script](./DuoExternalAuthenticator.py) for a good example of how `getCountAuthenticationSteps` can be used to implement adaptive authentication. The Duo script is scripted so that two-factor authentication is only presented for users in the IT group. The script checks for group membership and dynamically adjusts the number of steps. This can be implemented to check for any logic or attribute during the authentication, like "country" or "region".
+	Check the [Duo script](https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/duo/DuoExternalAuthenticator.py) 
+	for a good example of how `getCountAuthenticationSteps` can be used to implement adaptive authentication. The Duo script is scripted so that two-factor authentication is only presented for users in the IT group. The script checks for group membership and dynamically adjusts the number of steps. This can be implemented to check for any logic or attribute during the authentication, like "country" or "region".
 
 **getExtraParametersForStep():**     
 If required to save session variables between steps, use the `getExtraParametersForStep` method. The Gluu Server persists

@@ -782,26 +782,15 @@
         
           
           
-  <li class="md-nav__item">
-    
-      <a href="../../integration/" title="Introduction" class="md-nav__link">
-        Introduction
-      </a>
-    
-  </li>
-
-        
-          
-          
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
     
-    <label class="md-nav__link" for="nav-5-2">
+    <label class="md-nav__link" for="nav-5-1">
       Client SDKs
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-5-2">
+      <label class="md-nav__title" for="nav-5-1">
         Client SDKs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -838,13 +827,13 @@
           
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
     
-    <label class="md-nav__link" for="nav-5-3">
+    <label class="md-nav__link" for="nav-5-2">
       Web Server Integrations
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-5-3">
+      <label class="md-nav__title" for="nav-5-2">
         Web Server Integrations
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -881,13 +870,13 @@
           
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
     
-    <label class="md-nav__link" for="nav-5-4">
+    <label class="md-nav__link" for="nav-5-3">
       SaaS Integrations
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-5-4">
+      <label class="md-nav__title" for="nav-5-3">
         SaaS Integrations
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1406,7 +1395,7 @@
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
 <p><a href="../../admin-guide/custom-script/">Interception scripts</a> enable you to customize your Gluu authentication service. In an interception script you can call external APIs, like a commercial authentication service, a DDoS protection service, a fraud detection service, etc., to make your authentication process more secure. In addition, interception scripts give you the ability to implement business driven policies during authentication. </p>
 <p>For example, you may want to only prompt users in a certain group for two-factor authentication. Or, you may want to only prompt a user for two-factor authentication if the request is coming from an unknown IP address. These types of policies can be incorporated into your authentication service by writing an interception script that uses the <a href="#methods">methods</a> described below.</p>
-<p>This tutorial explains how to write a script to implement a two-step out-of-band authentication using Twilio to send an SMS with a one-time password. At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, you can review the completed Twilio custom authentication script <a href="../twilio2FA.py">here</a>. </p>
+<p>This tutorial explains how to write a script to implement a two-step out-of-band authentication using Twilio to send an SMS with a one-time password. At the end of this tutorial you should have a better understanding of how to write your own custom scripts. For reference, you can review the completed Twilio custom authentication script <a href="https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/twilio_sms/twilio2FA.py">here</a>. </p>
 <h2 id="suggested-development-environment">Suggested Development Environment<a class="headerlink" href="#suggested-development-environment" title="Permanent link">#</a></h2>
 <p>Gluu Server custom scripts are written in <a href="http://www.jython.org/">Jython</a>. We recommended using Eclipse for coding purposes.</p>
 <h2 id="custom-script-location">Custom Script Location<a class="headerlink" href="#custom-script-location" title="Permanent link">#</a></h2>
@@ -1474,12 +1463,13 @@ make development easier. To specify a path, select <code>File</code> from the <c
 </ul>
 <h2 id="samples-and-documentation">Samples and Documentation<a class="headerlink" href="#samples-and-documentation" title="Permanent link">#</a></h2>
 <p>There are many good examples of authentication interception scripts in Gluu's <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations">oxAuth integrations folder</a>. The respective <code>XHTML</code> and <code>XML</code> files are checked into the <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth">auth folder</a>. The interfaces for authentication interception scripts can be found in the <a href="http://www.gluu.org/docs/reference/interception-scripts/#authentication">Gluu Documentation</a>.</p>
-<p>We used the <a href="../BasicExternalAuthenticator.py">Basic Script</a> 
+<p>We used the <a href="https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/basic/BasicExternalAuthenticator.py">Basic Script</a> 
 as a template. The <a href="https://github.com/GluuFederation/oxAuth/tree/master/Server/src/main/webapp/auth/wikid">Wikid forms</a> 
 were also used as a template since it requires that we pass the value of the <code>code</code> obtained from Twilio to step 2 of the authentication to validate and authenticate the user.</p>
 <p>The <a href="https://github.com/GluuFederation/oxAuth/blob/master/Server/integrations/wikid/WikidExternalAuthenticator.py">Wikid authentication</a> script was also looked upon for examples on how to process the form.</p>
 <h2 id="implement-methods-using-twilio-sms">Implement methods - Using Twilio SMS<a class="headerlink" href="#implement-methods-using-twilio-sms" title="Permanent link">#</a></h2>
-<p>Steps to add a custom template and pass values between 2 steps of authentication for our sample <a href="../twilio2FA.py">Twilio script</a>:</p>
+<p>Steps to add a custom template and pass values between 2 steps of authentication for our sample 
+<a href="https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/twilio_sms/twilio2FA.py">Twilio script</a>:</p>
 <ol>
 <li>Login to Gluu UI;</li>
 <li>Navigate to <code>Configuration</code> &gt; <code>Manage Custom Scripts</code>;</li>
@@ -1532,7 +1522,8 @@ To retrieve the value of an attribute from LDAP, <code>getAttribute("LDAP Attrib
 Another method usually needed to implement is <code>getCountAuthenticationSteps</code>. This method normally just returns 1, 2, or 3. If implementing an adaptive authentication strategy, where the number of steps depends on the context. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Check the <a href="../DuoExternalAuthenticator.py">Duo script</a> for a good example of how <code>getCountAuthenticationSteps</code> can be used to implement adaptive authentication. The Duo script is scripted so that two-factor authentication is only presented for users in the IT group. The script checks for group membership and dynamically adjusts the number of steps. This can be implemented to check for any logic or attribute during the authentication, like "country" or "region".</p>
+<p>Check the <a href="https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/duo/DuoExternalAuthenticator.py">Duo script</a> 
+for a good example of how <code>getCountAuthenticationSteps</code> can be used to implement adaptive authentication. The Duo script is scripted so that two-factor authentication is only presented for users in the IT group. The script checks for group membership and dynamically adjusts the number of steps. This can be implemented to check for any logic or attribute during the authentication, like "country" or "region".</p>
 </div>
 <p><strong>getExtraParametersForStep():</strong>   <br />
 If required to save session variables between steps, use the <code>getExtraParametersForStep</code> method. The Gluu Server persists

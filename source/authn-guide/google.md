@@ -2,7 +2,7 @@
 
 ## Overview 
 This document will explain how to use Gluu's 
-[gplus interception script](./GooglePlusExternalAuthenticator.py) to configure the Gluu Server to send users to Google for authentication. 
+[gplus interception script](https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/gplus/GooglePlusExternalAuthenticator.py) to configure the Gluu Server to send users to Google for authentication. 
 
 ## Configure Google
 
@@ -77,7 +77,7 @@ Follow the steps below to configure the certificate authentication in the oxTrus
 2. Click the `Add Custom Scritp` button       
 [add-script-button](../img/admin-guide/multi-factor/add-script-button.png)       
 
-3. Fill in the form and add the [Google External Authenticator](./GooglePlusExternalAuthenticator.py) Script.       
+3. Fill in the form and add the [Google External Authenticator](https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/gplus/GooglePlusExternalAuthenticator.py) Script.       
 
 You'll also need to add some custom properties:       
 

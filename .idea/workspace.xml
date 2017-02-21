@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="b2bbc52c-a659-4696-b1a8-cfeeb604c491" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/admin-guide/oxtrust-ui.md" afterPath="$PROJECT_DIR$/source/admin-guide/oxtrust-ui.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/U2F.md" afterPath="$PROJECT_DIR$/source/authn-guide/U2F.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/cert-auth.md" afterPath="$PROJECT_DIR$/source/authn-guide/cert-auth.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/customauthn.md" afterPath="$PROJECT_DIR$/source/authn-guide/customauthn.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/google.md" afterPath="$PROJECT_DIR$/source/authn-guide/google.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/otp.md" afterPath="$PROJECT_DIR$/source/authn-guide/otp.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/passport.md" afterPath="$PROJECT_DIR$/source/authn-guide/passport.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/authn-guide/supergluu.md" afterPath="$PROJECT_DIR$/source/authn-guide/supergluu.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,7 +27,7 @@
       <file leaf-file-name="mkdocs.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mkdocs.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
+            <state relative-caret-position="969">
               <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
               <folding />
             </state>
@@ -41,12 +47,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="oxtrust-ui.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="oxtrust-ui.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/admin-guide/oxtrust-ui.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="423">
-                <caret line="93" column="62" lean-forward="false" selection-start-line="93" selection-start-column="62" selection-end-line="93" selection-end-column="62" />
+                <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cert-auth.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/authn-guide/cert-auth.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -58,8 +77,8 @@
         <entry file="file://$PROJECT_DIR$/source/admin-guide/openid-connect.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="17">
-                <caret line="198" column="72" lean-forward="false" selection-start-line="198" selection-start-column="72" selection-end-line="198" selection-end-column="72" />
+              <first_editor relative-caret-position="3366">
+                <caret line="198" column="63" lean-forward="false" selection-start-line="198" selection-start-column="63" selection-end-line="198" selection-end-column="63" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -157,6 +176,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -233,14 +254,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin-guide" />
+              <option name="myItemId" value="authn-guide" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -454,7 +473,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/admin-guide/asimba.md" />
     <entry file="file://$PROJECT_DIR$/source/integration/appauth-oauth2.0-android.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -784,16 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/authn-guide/basic.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="556">
-            <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/authn-guide/otp.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -840,7 +848,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="68">
             <caret line="4" column="65" lean-forward="false" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -849,8 +856,8 @@
     <entry file="file://$PROJECT_DIR$/source/admin-guide/openid-connect.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="17">
-            <caret line="198" column="72" lean-forward="false" selection-start-line="198" selection-start-column="72" selection-end-line="198" selection-end-column="72" />
+          <first_editor relative-caret-position="3366">
+            <caret line="198" column="63" lean-forward="false" selection-start-line="198" selection-start-column="63" selection-end-line="198" selection-end-column="63" />
             <folding />
           </first_editor>
           <second_editor />
@@ -859,9 +866,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mkdocs.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
+        <state relative-caret-position="969">
           <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/basic.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="556">
+            <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -869,7 +887,18 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="423">
-            <caret line="93" column="62" lean-forward="false" selection-start-line="93" selection-start-column="62" selection-end-line="93" selection-end-column="62" />
+            <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/authn-guide/cert-auth.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />

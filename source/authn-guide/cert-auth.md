@@ -22,7 +22,7 @@ Follow the steps below to configure the certificate authentication in the oxTrus
 2. Click on the `Person Authentication` tab.
 3. Click on the `Add Custom Scritp` button.
 ![add-script-button](../img/admin-guide/multi-factor/add-script-button.png)
-4. Fill up the from and add the [Certificate Authentication Script](./UserCertExternalAuthenticator.py)
+4. Fill up the from and add the [Certificate Authentication Script](https://raw.githubusercontent.com/GluuFederation/oxAuth/master/Server/integrations/cert/UserCertExternalAuthenticator.py)
 5. Enable the script by ticking the check box
 ![enable](../img/admin-guide/enable.png)
 6. Change the `Default Authentication Method` to `Cert`

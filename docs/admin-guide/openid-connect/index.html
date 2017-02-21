@@ -783,26 +783,15 @@
         
           
           
-  <li class="md-nav__item">
-    
-      <a href="../../integration/" title="Introduction" class="md-nav__link">
-        Introduction
-      </a>
-    
-  </li>
-
-        
-          
-          
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
     
-    <label class="md-nav__link" for="nav-5-2">
+    <label class="md-nav__link" for="nav-5-1">
       Client SDKs
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-5-2">
+      <label class="md-nav__title" for="nav-5-1">
         Client SDKs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -839,13 +828,13 @@
           
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
     
-    <label class="md-nav__link" for="nav-5-3">
+    <label class="md-nav__link" for="nav-5-2">
       Web Server Integrations
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-5-3">
+      <label class="md-nav__title" for="nav-5-2">
         Web Server Integrations
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -882,13 +871,13 @@
           
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
     
-    <label class="md-nav__link" for="nav-5-4">
+    <label class="md-nav__link" for="nav-5-3">
       SaaS Integrations
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-5-4">
+      <label class="md-nav__title" for="nav-5-3">
         SaaS Integrations
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1473,26 +1462,32 @@ defines a standard API where clients can register themselves--
 [Dynamic Client Registration]
 (http://openid.net/specs/openid-connect-registration-1_0.html). You can
 find the registration URL by calling the configuration endpoint 
-(<code>/.well-known/openid-configuration</code>). </p>
+(<code>/.well-known/openid-configuration</code>).        </p>
 <p>You may not want clients to dynamically register themselves! To disable
 this endpoint, in the oxAuth JSON properties, set the 
-<code>dynamicRegistrationEnabled</code> value to False.</p>
+<code>dynamicRegistrationEnabled</code> value to False.                 </p>
 <p>If you want to add a client through oxTrust, you can use the manual form:
-by click the <code>Add Client</code> button.</p>
+by click the <code>Add Client</code> button.            </p>
 <p><img alt="add-client" src="../../img/openid/add-client.png" /></p>
 <p>There are many client configuration parameters. Most of these are 
 specified in the OpenID Connect [Dynamic Client Registration]
 (http://openid.net/specs/openid-connect-registration-1_0.html)specification.
 There are two configurations params which can only be configured via 
-oxTrust by an administrator. These include:
- - Pre-Authorization -- Use this if you want to suppress the end user
+oxTrust by an administrator. These include:</p>
+<ul>
+<li>
+<p>Pre-Authorization -- Use this if you want to suppress the end user
  authorization prompt. This is handy for SSO scenarios where the clients
  are your own (not third party), and there is no need to prompt the 
- person to approve the release of information.
- - Persist Client Authorizations -- Use this option if you only want 
+ person to approve the release of information.      </p>
+</li>
+<li>
+<p>Persist Client Authorizations -- Use this option if you only want 
  to prompt the end user once to authorize the release of user 
  information. It will cause the data to be persisted under the person's
- entry in the Gluu LDAP server.</p>
+ entry in the Gluu LDAP server.                </p>
+</li>
+</ul>
 <h3 id="custom-client-registration">Custom Client Registration<a class="headerlink" href="#custom-client-registration" title="Permanent link">#</a></h3>
 <p>Using the Client Registration custom interception scripts,
 you can implement post-registration business logic. You have access to 
@@ -1501,8 +1496,8 @@ populate extra client claim, or modify the scope registrations. You
 could even call API's to determine if you want to allow the 
 registration at all. To access the interface for custom scripts in 
 oxTrust, navigate to Configuration --&gt; Custom Scripts --&gt; Client Registration.</p>
-<p><img alt="custom-client" src="../../img/openid/custom-client.png" /></p>
-<p>The script is <a href="../sample-client-registration-script.py">available here</a></p>
+<p><img alt="custom-client" src="../../img/openid/custom-client.png" />           </p>
+<p>The script is <a href="../sample-client-registration-script.py">available here</a>                      </p>
 <h3 id="logout">Logout<a class="headerlink" href="#logout" title="Permanent link">#</a></h3>
 <p>The OpenID Connect <a href="http://openid.net/specs/openid-connect-session-1_0.html">Session Management</a> specification is still marked as draft, and new mechanisms for logout are in the works. The current specification requires JavaScript to detect that the session has been ended in the browser. It works... unless the tab with the JavaScript happens to be closed when the logout event happens on another tab. Also, inserting JavaScript into every page is not feasible for some applications. </p>
 <p>The Gluu Server also support the draft for <a href="http://openid.net/specs/openid-connect-frontchannel-1_0.html">Front Channel Logout</a>. This
@@ -1519,20 +1514,20 @@ and map them to any user attributes which you have registered. </p>
 <p>To add Scope and Claims in OpenID Connect</p>
 <ol>
 <li>
-<p>Click on <code>Configuration</code> &gt; <code>OpenID Connect</code></p>
+<p>Click on <code>Configuration</code> &gt; <code>OpenID Connect</code>           </p>
 <p><img alt="menu" src="../../img/openid/clientmenu.png" /></p>
 </li>
 <li>
-<p>Click on Add scope on the screen to the right
-    <img alt="scopeadd" src="../../img/openid/admin_oauth2_scope.png" /></p>
+<p>Click on Add scope on the screen to the right          <br />
+<img alt="scopeadd" src="../../img/openid/admin_oauth2_scope.png" /></p>
 </li>
 <li>
-<p>You will presented the screen below to the enter the Scope Details</p>
+<p>You will presented the screen below to the enter the Scope Details                      </p>
 <p><img alt="scopedetails" src="../../img/openid/add-scope1.png" /></p>
 </li>
 <li>
 <p>To add more claims, simply click "Add Claim" and you will be presented
-with the following screen:</p>
+with the following screen:                     </p>
 <p><img alt="Add Claims" src="../../img/openid/add-scope-claim.png" /></p>
 </li>
 </ol>
