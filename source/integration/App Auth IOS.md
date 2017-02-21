@@ -1,4 +1,4 @@
-# App-Auth (Mobile)
+# App-Auth IOS
 
 ## Overview
 
