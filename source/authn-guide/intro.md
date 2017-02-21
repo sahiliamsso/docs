@@ -39,7 +39,7 @@ Using the OpenID Connect `acr_value`, an application can request a certain type 
 authentication at the Gluu Server. This allows you to support multiple authetication mechanisms, 
 and allow applications to request a specific mechanism on a case-by-case basis. 
 Learn more about the `acr_values` that are supported out-of-the-box by the 
-Gluu Server in the [OpenID Connect docs](../admin-guide/openid-connect/#multi-factor-authentication-for-clients).
+Gluu Server in the [OpenID Connect docs](../admin-guide/openid-connect.md#multi-factor-authentication-for-clients).
 
 !!! Note
     Since all authentications are routed through oxAuth, your Gluu Server can take an incoming SAML or CAS assertion from a 3rd party IDP, for example ADFS, and use that as the basis for an OIDC session, providing seamless SSO across all your apps regardless of protocol.
