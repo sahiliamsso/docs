@@ -13,7 +13,7 @@ Two design patterns have emerged for securing custom developed, open source, and
 1. [Use a web server filter / reverse proxy](#web-server-filter--reverse-proxy); or,
 2. [Call the federation APIs directly](#client-sdks).
 
-In the Web Server and Client SDKs sections of the integration guide we document how to use supported software to implement both approaches, respectively. Which approach to pick depends on a trade-off between easier devops (option 1), and how deeply you want to integrate centralized security policies into your application (option 2).
+In the Web Server and Client SDKs sections of the integration guide we document how to use supported software to implement each approach, respectively. Which approach to pick depends on a trade-off between easier devops (option 1), and how deeply you want to integrate centralized security policies into your application (option 2).
 
 ### Web Server Filter / Reverse Proxy
 The most commonly used approach for enterprise SSO has been the Web Server Filter / Reverse Proxy option where you install an Apache Web Server “mod”, or an IIS “ISAPI Filter” to enforce the presence of a token in a HTTP Request. If no token is present, the Web server may re-direct the person, or return a meaningful code or message to the application. The guides in the Web Server Integrations section of the docs include instructions for using software we have confirmed to work against the Gluu Server. 
