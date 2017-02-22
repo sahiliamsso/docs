@@ -2,7 +2,10 @@
 The integration guide will help you understand how to integrate custom developed, open source, off-the-shelf, and SaaS web and mobile applications with your Gluu Server access management platform.  
 
 ## SaaS Applications 
-SaaS integrations are fairly straightforward. Presumably the app already supports either SAML or OpenID Connect and provides documentation for configuring your IDP (Gluu Server) for SSO. We have documentation for configuring the Gluu Server for SSO to a few popular SaaS applications like Google and Salesforce. If we do not have a guide for configuring the app in question, simply goolge `{SaaS Provider} SAML` or `{SaaS Provider} OpenID Connect`. Follow the provider's instructions for configuring your IDP for SSO and test. 
+Integrating SaaS applications with your Gluu Server is fairly straightforward. Presumably the app already supports either SAML or OpenID Connect and provides documentation for configuring your IDP (Gluu Server) for SSO. We have documentation for configuring the Gluu Server for SSO to a few popular SaaS applications like Google and Salesforce. If we do not have a guide for configuring the app in question, simply goolge `{SaaS Provider} SAML` or `{SaaS Provider} OpenID Connect`. Follow the provider's instructions for configuring your IDP for SSO and test. 
+
+!!! Note
+    If the SaaS application in question does not already support a federation standard, our best advice is find a similar product or provider that does integrate with your standards based security infrastructure. 
 
 ## Non-SaaS Applications
 Two design patterns have emerged for securing custom developed, open source, and off-the-shelf applications:
@@ -19,6 +22,9 @@ The most commonly used approach for enterprise SSO has been the Web Server Filte
 The other integration option is to call the federation APIs directly in your application. In general, calling the API’s directly will enable the application to make “smarter” decisions, which can have a positive impact on usability and ultimately result in better security. Libraries exist for SAML, OpenID Connect and UMA in many languages. However, due to the complexity associated with properly implementing the APIs, we recommend using one of the supported Client SDKs covered in our documentation to help with the heavy lifting. 
 
 !!! Note
-    Given ongoing maintenance considerations, and the security implications of getting the implementation correct, we **strongly encourage** you to use our commercial OAuth 2.0 client software, [oxd](./oauth2.md/), to secure web applications. For mobile applications we recommend using the AppAuth OpenID Connect libraries for iOS and Android written by Google.
+    Given ongoing maintenance considerations, and the security implications of getting the implementation correct, we **strongly encourage** you to use our commercial OAuth 2.0 client software, [oxd](./oauth2.md/), to secure web applications. 
+    
+## Mobile Apps    
+To secure custom developed and open source mobile applications, use the AppAuth OpenID Connect libraries for iOS and Android written by Google.
     
 
