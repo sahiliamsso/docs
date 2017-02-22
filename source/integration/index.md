@@ -7,7 +7,7 @@ SaaS integrations are fairly straightforward. Presumably the app already support
 ## Non-SaaS Applications
 Two design patterns have emerged for securing custom developed, open source, and off-the-shelf applications:
 
-1. [Use a web server filter / reverse proxy](#web-server-filter-reverse-proxy); or,
+1. [Use a web server filter / reverse proxy](#web-server-filter--reverse-proxy); or,
 2. [Call the federation APIs directly](#client-sdks).
 
 In the Web Server and Client SDK sections of this integration guide we document how to use supported software to implement both approaches, respectively. Which approach to pick depends on a trade-off between easier devops (option 1), and how deeply you want to integrate centralized security policies into your application (option 2).
